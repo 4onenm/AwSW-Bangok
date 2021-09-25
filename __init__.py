@@ -2,6 +2,11 @@ from modloader import modinfo
 from modloader.modclass import Mod, loadable_mod
 
 def bryce1_afterparty(ml):
+    ml.find_label('_call_skiptut_8') \
+        .search_menu("Yes. I want to skip ahead.") \
+        .branch() \
+        .hook_to('bangok_four_bryce1_skipmenu')
+
     wake_menu = ml.find_label('waitmenu') \
         .search_menu("I would, but I don't think I can beat someone like you.") \
         .search_menu("I'm not buzzed.") \
@@ -15,7 +20,7 @@ def bryce1_afterparty(ml):
         .search_menu("I know when I've had enough, and it's now.") \
         .search_menu("Fine...") \
         .search_menu("Put some pepper on his nose.")
-    
+
     wake_menu.add_choice("Poke him someplace special.",jump='bangok_four_bryce1_poke',condition='persistent.nsfwtoggle == True')
 
     wake_menu.link_behind_from('bangok_four_bryce1_nevermind')
