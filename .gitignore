@@ -1,0 +1,4 @@
+*.pyo
+*.rpyc
+.vscode
+.DS_Store
