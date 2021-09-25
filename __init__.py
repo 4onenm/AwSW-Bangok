@@ -20,21 +20,18 @@ def bryce1_afterparty(ml):
 
     wake_menu.link_behind_from('bangok_four_bryce1_nevermind')
 
-class AWSWModNew(Mod):
-    @classmethod
-    def mod_info(cls):
-        if not all(hasattr(cls,attr) for attr in ['name','author','version']):
-            raise NotImplementedError("One of name, author, or version fields is missing!")
-        return (cls.name, cls.author, cls.version, getattr(cls,'nsfw',False))
-
 @loadable_mod
-class BangOk(AWSWModNew):
-    name = "BangOk?"
-    version = "v0.0"
-    author = "4onen"
-    nsfw = True
+class BangOkMod(Mod):
+    @staticmethod
+    def mod_info():
+        name = "BangOk?"
+        version = "v0.0"
+        author = "4onen"
+        nsfw = True
+        return (name,version,author,nsfw)
 
-    def mod_load(self):
+    @staticmethod
+    def mod_load():
         ml = modinfo.get_mods()["MagmaLink"].import_ml()
         bryce1_afterparty(ml)
 
