@@ -122,17 +122,15 @@ def bryce1_afterparty(ml):
 
 @loadable_mod
 class BangOkMod(Mod):
-    @staticmethod
-    def mod_info():
-        name = "BangOk?"
-        version = "v0.0"
-        author = "4onen"
-        nsfw = True
-        return (name,version,author,nsfw)
+    name = "BangOk?"
+    version = "v0.0"
+    author = "4onen"
+    nsfw = True
 
-    @staticmethod
-    def mod_load():
+    @classmethod
+    def mod_load(cls):
         ml = modinfo.get_mods()["MagmaLink"].import_ml()
+        ml.register_mod_settings(cls, screen='bangok_modsettings')
         anna12(ml)
         bryce1_afterparty(ml)
 
