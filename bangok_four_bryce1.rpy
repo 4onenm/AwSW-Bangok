@@ -1,7 +1,6 @@
 # Flags used:
 #  persistent.bangok_inflation - Inflation
 #  persistent.bangok_knot - Knotting
-#  persistent.bangok_rimming - Rimming
 #  persistent.bangok_watersports - Watersports
 
 
@@ -218,9 +217,6 @@ label bangok_four_bryce1_apartment:
         scene bangok_four_bryce1_apartment night at Pan((0,360), (0,360), 0.0) with dissolvemed
         $ renpy.pause (0.5)
         show bryce flirty dk with dissolve
-    $ persistent.bangok_watersports = True
-    $ persistent.bangok_inflation = True
-    $ persistent.bangok_knot = True
 
     play sound "fx/undress.ogg"
     m "I struggled out of my clothes as fast as my lust-drunk state would allow."
