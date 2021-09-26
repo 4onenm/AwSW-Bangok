@@ -103,7 +103,12 @@ init python:
     bangok_four_firsttime = True
     bangok_four_bryce1_unplayed = True
     bangok_four_bryce1_protected = False
+    bangok_four_bryce1_protected_a = False
+    bangok_four_bryce1_protected_b = False
+    bangok_four_bryce1_brycecame = False
     bangok_four_bryce1_playercame = False
-    bangok_four_bryce1_position = None
+    bangok_four_bryce1_position_picka = None
+    bangok_four_bryce1_position_pickb = None
     bangok_four_bryce1_wstiming = None
+    bangok_four_bryce1_oralspot = None
     bangok_four_bryce1_analknot = None
