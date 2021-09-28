@@ -107,6 +107,7 @@ init python:
     bangok_four_bryce1_protected_b = False
     bangok_four_bryce1_brycecame = False
     bangok_four_bryce1_playercame = False
+    bangok_four_bryce1_playerstuffed = False
     bangok_four_bryce1_position_picka = None
     bangok_four_bryce1_position_pickb = None
     bangok_four_bryce1_wstiming = None

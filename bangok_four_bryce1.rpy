@@ -31,18 +31,7 @@ label bangok_four_bryce1_ws_conversation:
         "Go take care of your business.":
             $ brycemood -= 1
             Br brow dk "Alright."
-            label bangok_four_bryce1_ws_emptying_the_tank:
-            hide bryce with dissolve
-            play sound "fx/door/door_open.wav"
-            $ renpy.pause (2.0)
-            m "You sit, naked, on a dragon's couch, holding a bottle of lube."
-            $ renpy.pause (3.0)
-            c "(Maybe I should have said something else? I don't know why I'm still thinking about it...)"
-            $ renpy.pause (3.0)
-            play sound "fx/door/doorclose3.wav"
-            show bryce normal dk with dissolve
-            $ renpy.pause (0.5)
-            Br flirty dk "Where were we?"
+            call bangok_four_bryce1_ws_emptying_the_tank(True)
         "I might be interested.":
             Br smirk dk "Before or after I blow?"
             menu:
@@ -64,12 +53,61 @@ label bangok_four_bryce1_ws_conversation:
                             $ brycemood -= 1
                             $ renpy.pause(0.8)
                             Br "If you say so. Let me go get it out, then."
-                            jump bangok_four_bryce1_ws_emptying_the_tank
+                            call bangok_four_bryce1_ws_emptying_the_tank(True)
+                            return
                 "Before.":
                     $ bangok_four_bryce1_wstiming = "before"
                 "After.":
                     $ bangok_four_bryce1_wstiming = "after"
             Br flirty dk "You got it."
+    return
+
+
+label bangok_four_bryce1_ws_emptying_the_tank(feelbad=False):
+    hide bryce with dissolve
+    c "(Now that I think about it, how do dragons use toilets?)"
+    play sound "fx/door/door_open.wav"
+    menu:
+        c "(Should I follow him to watch?)"
+        "Follow.":
+            m "Curiosity getting the better of me, I wandered over to Bryce's open bathroom door."
+            m "He stood up over the toilet, one forepaw on the tank, struggling to keep his balance and aim his erect cock into the bowl as he began to piss."
+            play sound "fx/pour.ogg"
+            m "Catching my footsteps, he looked gave me a wink."
+            play sound "fx/spray.ogg" fadein 0.5
+            play soundloop "fx/faucet2.ogg" fadein 1.0
+            m "In so doing, he lost focus on his aim and spattered the seat, the tank, and the floor with a stream of golden droplets."
+            Br stern dk "Damn."
+            Br flirty dk "Like to watch, huh?"
+            $ brycemood += 1
+            play sound "fx/spray.ogg"
+            m "My cheeks burned. Bryce arched his back, preening as adjusted his hips to get his cock back over the bowl for the last of his bladder's contents."
+            stop soundloop fadeout 2.0
+            Br "I'm guessing that's not how humans do it."
+            m "Bryce shook his penis to free any last, clinging drops, then dropped his forepaws back to the somewhat damper floor."
+            c "Depends on the toilet, but it's not that far off for peeing. Aim's a little better, when not drunk."
+            Br smirk dk "Huh."
+            m "I followed him back out into his apartment's main living space."
+        "Stay.":
+            if feelbad:
+                $ renpy.pause (2.0)
+                m "I sat, naked, on a dragon's couch, holding a bottle of lube."
+                $ renpy.pause (3.0)
+                c "(Maybe I should have said something else? I don't know why I'm still thinking about it...)"
+                $ renpy.pause (3.0)
+            else:
+                $ renpy.pause (2.0)
+                c "..."
+                $ renpy.pause (3.0)
+                if bangok_four_bryce1_playercame == True:
+                    m "I played with my soft dick a little to pass the time."
+                else:
+                    m "I played with my hard dick a little to pass the time."
+                $ renpy.pause (3.0)
+    play sound "fx/door/doorclose3.wav"
+    show bryce normal dk with dissolve
+    $ renpy.pause (0.5)
+    Br flirty dk "Where were we?"
     return
 
 label bangok_four_bryce1_position(pos):
@@ -450,98 +488,105 @@ label bangok_four_bryce1_m2:
                             label bangok_four_bryce1_oralbot_ws_before:
                             $ bangok_four_bryce1_wstiming = "before"
                             show bryce laugh dk flip with dissolve
-                            play soundloop ["fx/faucet1.ogg","fx/faucet2.ogg"] fadein 1.0
-                            m "I pushed as far forward as I could without triggering my gag reflex, then {i}sucked.{/i}{w=0.5} Bryce's maw fell open in ectasy as his bladder let go, delivering golden liquid into my throat."
                             if bangok_four_bryce1_protected:
-                                m "But something was wrong. The condom's reservoir was still in my throat, but now it was inflating and sagging downward with the fluid put into it. It was blocking up my throat, expanding further, blocking up this most-critical pipe!"
-                                stop soundloop fadeout 6.0
                                 menu:
-                                    "Pull out!":
+                                    "[[Throat.]":
+                                        play soundloop "fx/faucet1.ogg" fadein 1.0
+                                        queue soundloop "fx/faucet2.ogg"
+                                        m "I pushed as far forward as I could without triggering my gag reflex, then {i}sucked.{/i}{w=0.5} Bryce's maw fell open in ectasy as his bladder let go, delivering golden liquid into my throat."
+                                        m "But something was wrong. The condom's reservoir was still in my throat, but now it was inflating and sagging downward with the fluid put into it. It was blocking up my throat!"
+                                        stop soundloop fadeout 6.0
                                         m "I grabbed Bryce's cock with both hands to secure the condom, then yanked my head back."
                                         play sound "fx/water1.ogg"
                                         m "The condom's bloated reservoir slapped agaisnt the side of the couch with a lewd splat as Bryce finished pissing."
                                         Br flirty dk flip "Little too much?"
                                         m "I nodded, eyes watering, still trying to even my breathing and clear my throat of phlegm."
-                                    "Swallow deeper.":
-                                        play sound "fx/leather.ogg"
-                                        m "In a lust-addled snap decision, I ignored the good advice of my gag reflex, grabbed Bryce's hips, and pulled myself slightly further along his shaft, swallowing hard. My throat throbbed as the bolus of condom-enwrapped piss was forced lower, giving me heartburn somewhere in my chest as the fluid settled."
-                                        m "As Bryce finished urinating into my throat, I pulled back on his shaft, and could {i}just{/i} get tiny breaths through my nose, past the stretched condom tip in my throat, and past my burning, flapping larynx."
-                                        Br brow dk flip "[player_name]?"
-                                        Br stern dk flip "[player_name]! What did you do?!"
-                                        m "Any attempt to move my head either pulled the bolus of piss back up toward my larynx, blocking my windpipe, or shoved his tip back into my throat. My guts churned, trying to get the sac of urine down into my stomach."
+                                        Br stern dk flip "Wait, are you okay?"
+                                        c "Will be."
+                                        python:
+                                            brycemood -= 2
+                                            renpy.pause (1.5)
+                                        Br "Don't hurt yourself. I don't think either of us is sober enough to get you to a hospital."
+                                        c "..."
+                                        $ renpy.pause (0.8)
+                                    "[[Mouth.]":
+                                        play soundloop "fx/faucet1.ogg" fadein 1.0
+                                        queue soundloop "fx/faucet2.ogg"
+                                        m "I pulled back so that just Bryce's tip remained in my mouth, expecting what was coming as I continued to suckle.{w=0.5} Bryce's maw fell open in ectasy as his bladder let go, delivering golden liquid into the condom's reservoir."
+                                        m "I toyed with the expanding balloon of piss in my mouth for as long as that felt safe,{w=0.5}{nw}"
+                                        stop soundloop fadeout 6.0
+                                        play sound "fx/water1.ogg"
+                                        m "I toyed with the expanding balloon of piss in my mouth for as long as that felt safe,{fast} then let it plop out of my mouth against the side of the couch with a lewd splat as Bryce finished pissing."
+                                        Br flirty dk flip "Little too much?"
+                                        c "Yeah. But I kinda expected it. You're way larger than me."
+                                Br smirk dk flip "I think we're going to need a new condom."
+                                menu:
+                                    "[[Get a new condom.]":
+                                        m "After tugging off and tying off his piss balloon, I went back to the cabinet for another condom for the rest of our suck session."
+                                        m "The smell of urine was still strong on his cockhead when I returned, until I rolled the new rubberized safety over it. I stuck it back into my mouth anyway, imagining I could lick and suck out more golden results -- even if that wasn't safe."
+                                        $ renpy.pause(0.8)
+                                        Br brow dk flip "I don't think just the tip is going to do me."
+                                    "[[Cream from the tap.]":
+                                        $ bangok_four_bryce1_protected = False
+                                        c "Actually, fuck it. I've changed my mind."
+                                        $ brycemood += 1
+                                        Br smirk dk flip "Oh?"
+                                        m "I tugged off and tied off his piss balloon, then aimed his shaft and took his whole head into my mouth unprotected."
+                                        m "The unmistakeable tang of urine drowned out any other taste I could get, but a few drops still remained within his urethra, which I eagerly slurped out."
+                                        Br flirty dk flip "I-If that's what you want."
+                                        show bryce stern dk flip with dissolve
+                                        m "He strained, delivering me a little trickle more of urine.{w=0.5} I flushed, thinking about the golden load still in the condom on the floor next to me."
                                         menu:
-                                            "Gesture for him to cut the condom.":
-                                                m "With my dull fingers, I poked and sawed wildly at the condom where it met my lips and the material began to stretch. Taking the hint, Bryce curled forward and cut the material properly with his claws, being careful around his own anatomy."
-                                                play sound "fx/gorehit.ogg"
-                                                m "The torn condom snapped to the back of my mouth, then down my throat as I finally swallowed successfully. Warmth blossomed in my gut as his urine mixed with the contents of my stomach."
-                                                m "Bryce tugged the remains of the condom off his shaft, which was retreating slowly back inside his body."
-                                                label bangok_four_bryce1_pisscondom_safeswallow:
-                                                $ renpy.pause (0.5)
-                                                Br brow dk flip "Are you okay?"
-                                                m "I nodded, now able to breathe again, albeit wheezing."
-                                                Br stern dk flip "What, exactly, did you think you were going to do?"
-                                                m "I shrugged, dizzy from combined effects of exhaustion and oxygen deprivation."
-                                                Br "That's enough. You need to sleep this off."
-                                                m "I was in no position to argue as he stood from the couch, then pressed me into lying down with a paw."
-                                                Br "{size=-6}Damnit. If [player_name] gets complications from this...{size}"
-                                                $ bangok_four_bryce1_brycecame = True
-                                                jump bangok_four_bryce1_badmorning
-                                            "Pull the condom off his dick.":
-                                                m "I reached forward, gripping the condom ring at the base of his shaft and pulling it back toward my face. The material slid, enough to get his head out of my mouth and the ring off the end."
-                                                menu:
-                                                    "Tie it off and swallow.":
-                                                        m "I started trying to twist the condom end into a knot, vision going a little fuzzy."
-                                                        show bryce angry dk flip with dissolve
-                                                        m "Spotting what I was doing, Bryce lunged his upper body forward, stabbing his claws through the condom material."
-                                                        play sound "fx/gorehit.ogg"
-                                                        m "It tore, the stretched end snapping back inside my mouth and following Bryce's piss balloon into my stomach."
-                                                        Br "What were you thinking!"
-                                                        c "Y-"
-                                                        show bryce stern dk flip with dissolve
-                                                        play sound "fx/coughingfit.ogg"
-                                                        $ renpy.pause(3.0)
-                                                        stop sound fadeout 2.0
-                                                        Br "A sealed, inflated balloon in your stomach was going to do you a lot less good than my piss."
-                                                        Br brow dk flip "What were you thinking trying to swallow it?!"
-                                                        m "I shook my head."
-                                                        Br "That's enough. You need to sleep this off."
-                                                        m "I was in no position to argue as he stood from the couch, then pressed me into lying down with a paw."
-                                                        Br "{size=-6}Damnit. If [player_name] gets complications from this...{size}"
-                                                        $ bangok_four_bryce1_brycecame = True
-                                                        jump bangok_four_bryce1_badmorning
-                                                    "Swallow!":
-                                                        m "Not willing to risk any more damage, I let the condom snap back in my throat and swallowed Bryce's piss. Warmth blossomed in my gut as his urine mixed with the contents of my stomach."
-                                                        jump bangok_four_bryce1_pisscondom_safeswallow
-                                                    "Cough it up.":
-                                                        m "I took as much of a breath as I could, gripped the condom, and pulled."
-                                                        play sound "fx/water1.ogg"
-                                                        m "The condom's bloated reservoir slapped agaisnt the side of the couch with a lewd splat as it finally cleared my throat."
-                                                        jump bangok_four_bryce1_pisscondom_safeswallow
-                                            "Try to cough it out.":
-                                                m "I grabbed Bryce's cock with both hands to secure the condom, then yanked my head back."
-                                                play sound "fx/water1.ogg"
-                                                m "The condom's bloated reservoir came free, slapping against the side of the couch lewdly."
-                                                Br stern dk flip "..."
-                                $ renpy.error("TODO: Missing a few of these weird paths.")
+                                            "[[Drink it.]":
+                                                m "Bryce frowned as I abandoned his cock, until he saw what I was trying to do."
+                                                Br flirty dk flip "Like it that much, huh?"
+                                                m "He proffered one of his hindlegs. I used one of its claws to poke a hole higher up in the shaft part of the condom. Then I upturned it into my mouth."
+                                                show bryce smirk dk flip with dissolve
+                                                play sound "fx/water2.ogg"
+                                                if persistent.bangok_inflation == True:
+                                                    queue sound "fx/gulpslow2.ogg"
+                                                    $ renpy.pause (9.0)
+                                                    m "It was a huge volume. I had to pause and take a break partway through. When I finished, I felt packed with the warmth that had so recently left Bryce's bladder."
+                                                else:
+                                                    queue sound "fx/gulping.ogg"
+                                                    $ renpy.pause (3.0)
+                                                    stop sound fadeout 1.0
+                                                python:
+                                                    brycemood += 1
+                                                    bangok_four_bryce1_playerstuffed = True
+                                                Br flirty dk flip "That was hot to watch."
+                                                m "I wiped my mouth, then took his protruding cock in hand."
+                                                c "Not done yet."
+                                                m "Sucking on his head, I finally got to taste my first few drops of sweet, sweet pre from him, shockingly contrasting against the pallete-cleanser of piss."
+                                                Br laugh dk flip "Go for it."
+                                            "[[Move on.]":
+                                                pass
                             else:
+                                play soundloop "fx/faucet1.ogg" fadein 1.0
+                                queue soundloop "fx/faucet2.ogg"
+                                m "I pushed as far forward as I could without triggering my gag reflex, then {i}sucked.{/i}{w=0.5} Bryce's maw fell open in ectasy as his bladder let go, delivering golden liquid into my throat."
                                 m "It was almost more than I could swallow, the warm stream sloshing back and coating my mouth in that unique tang. My body warmed, heat from Bryce transferred directly into my stomach."
                                 stop soundloop fadeout 5.0
                                 m "Unfortunately, all good things had to come to an end. He finished, then gave me a satisfied wink."
+                                Br flirty dk "Might not have taken a piss since the shift started at the station. Hope you don't mind."
                                 Br flirty dk flip "Good?"
-                                m "I nodded, the head of his cock still in his mouth."
+                                m "I nodded, the head of his cock still in his mouth as I slurped at the tip."
                                 Br smirk dk flip "Feel free to keep going."
                         "[[Give him a second.]":
                             show bryce stern dk flip with dissolve
                             m "I stopped my ministrations, waiting for him to get a hold of himself."
                             $ renpy.pause(1.0)
                             Br flirty dk flip "Alright, think you're good."
-                else: # bangok_four_bryce1_wstiming == "before"
+                elif bangok_four_bryce1_wstiming == "before":
                     Br flirty dk flip "Mind if I take that leak now?"
                     jump bangok_four_bryce1_oralbot_ws_before
 
             show bryce normal dk flip with dissolve
             m "I popped my mouth free again, getting some full breaths in as I figured out what to do with my hands."
-            m "I started by spreading some of the mix of pre and saliva from his head down his length, easing the passage of my fingers."
+            if bangok_four_bryce1_protected:
+                m "I started by working up a fat dollop of spit to add to the surface of the condom, then spread it from his head down his length, easing the passage of my fingers."
+            else:
+                m "I started by spreading some of the mix of pre and saliva from his head down his length, easing the passage of my fingers slightly."
             m "Then I formed a tight ring with the thumb and index fingers of both hands, circling him."
             show bryce brow dk flip with dissolve
             m "I took his head in my mouth again, then began to pump my hands and mouth at once."
@@ -549,19 +594,62 @@ label bangok_four_bryce1_m2:
             m "Bryce threw his head back, lost in the sensations I was providing him."
             c "Mmm. Mmmph?"
             Br flirty dk flip "I don't know! N- Not long!"
-            m "I kept up my ministrations, treasuring every additional dollop of pre I worked forth, and seeking to wedge ever more shaft into my mouth with each thrust downward."
+            if bangok_four_bryce1_protected:
+                m "I kept up my ministrations, treasuring every additional dollop of pre I worked forth into the condom's reservoir, and seeking to wedge ever more shaft into my mouth with each thrust downward."
+            else:
+                m "I kept up my ministrations, treasuring every additional dollop of pre I worked forth, and seeking to wedge ever more shaft into my mouth with each thrust downward."
             show bryce laugh dk flip with dissolve
             $ bangok_four_bryce1_brycecame = True
             play sound "fx/snarl.ogg"
-            if not bangok_four_bryce1_protected:
+            if bangok_four_bryce1_protected:
+                m "Bryce's first spurt ballooned the condom's tip abruptly. I let most of his tip out of my mouth, just kissing the very end and giving the reservoir room to expand."
+                m "Even still, it was a formidable load, more and more love-cream pressing the condom against my tongue and mouth's roof."
+                play sound "fx/uncork.ogg"
+                m "I pulled the bloated reservoir out of my mouth, holding his cockhead against my cheek as I continued pumping him, milking out every last spurt of cum."
+                m "Eventually Bryce finished, slumping onto his back."
+                Br flirty dk flip "Damn... that was something else."
+                if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "after":
+                    $ brycemood -= 1
+                    Br stern dk flip "Oh. Didn't think the cum alone would be too much."
+                    c "I didn't either, but I can't exactly swallow the condom."
+                    Br laugh dk flip "True!"
+                    Br normal dk flip "Take it off? I really gotta go take that leak."
+                    m "I tugged the condom free, the smell of Bryce's cum hitting me immediately from what remained on his tip, even as I tied off the protection."
+                    menu:
+                        "[[Drink his leak.]":
+                            c "Ah, fuck it."
+                            m "I took his head again, grabbing his hips and tugging them as close as I could, nestling his tip at the back of my mouth and just into my throat. His cum, still smeared on his tip, tasted surprisingly sweet."
+                            $ brycemood += 1
+                            Br flirty dk flip "You sure?"
+                            m "A shiver ran through his body, and he winced."
+                            Br laugh dk flip "Too late now!"
+                            play soundloop "fx/faucet1.ogg" fadein 1.0
+                            queue soundloop "fx/faucet2.ogg"
+                            m "Warm, golden liquid flooded my throat. It was all I could do to swallow it down as Bryce used my mouth as a urinal."
+                            if persistent.bangok_inflation == True:
+                                m "Swallowing the rapid stream normally was impossible. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
+                                m "Not wanting to lose a drop around the seal of my lips, I shoved Bryce's cockhead further than I thought it could go, partway {i}into{/i} my throat, so that he could piss directly into my guts."
+                                $ bangok_four_bryce1_playerstuffed = True
+                            else:
+                                m "Swallowing the flow was nearly impossible. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
+                            jump bangok_four_bryce1_oralbot_afterpissend
+
+
+                        "[[Let him go.]":
+                            call bangok_four_bryce1_ws_emptying_the_tank(False)
+
+                else:
+                    m "I tugged the condom free, tying it off."
+            else:
                 m "Bryce's first spurt hit me in the back of the throat when I was pulling back, dousing my mouth in thick, creamy seed. I switched directions immediately, driving what I could and the next few spurts directly into my throat."
                 m "Even still, it was a formidable load, more and more love-cream leaking past his head and filling my mouth with each blast."
                 if persistent.bangok_inflation == True:
                     m "I felt light-headed, the seemingly endless stream of cum almost more than I could hold my breath through."
-                    if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
-                        m "There was no question I wouldn't need to eat or drink after this for quite some time. My belly bulged slightly, packed full with piss and cum."
+                    if persistent.bangok_watersports == True and bangok_four_bryce1_playerstuffed == True:
+                        m "There was no question I wouldn't need to eat or drink after this for quite some time. My belly bulged visibly, stomach and gut packed full with piss and cum."
                     else:
                         m "There was no question I wouldn't need to eat or drink after this for quite some time. My belly bulged slightly, stomach bloated with cum from a much larger partner."
+                $ bangok_four_bryce1_playerstuffed = True
                 m "Eventually Bryce finished, slumping onto his back."
                 Br flirty dk flip "Damn... that was something else."
                 if persistent.bangok_inflation == True:
@@ -577,7 +665,8 @@ label bangok_four_bryce1_m2:
                     Br "Ready?"
                     $ renpy.pause(0.5)
                     show bryce laugh dk flip with dissolve
-                    play soundloop ["fx/faucet1.ogg","fx/faucet2.ogg"] fadein 1.0
+                    play soundloop "fx/faucet1.ogg" fadein 1.0
+                    queue soundloop "fx/faucet2.ogg"
                     m "My appreciative hum was cut off by the stream of warm, golden liquid. I sank even a little bit further on his cock, needy and excited by having the big dragon use me as nothing more than a cum rag and urinal."
                     if persistent.bangok_inflation == True:
                         m "Swallowing the flow normally was impossible with my guts as full as they were. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
@@ -585,8 +674,10 @@ label bangok_four_bryce1_m2:
                         m "The pressure bulged out my belly as fluid shifted and flowed inside of me to accomodate."
                     else:
                         m "Swallowing the flow was nearly impossible. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
+                    label bangok_four_bryce1_oralbot_afterpissend:
                     stop soundloop fadeout 3.0
                     m "Unfortunately, all good things had to come to an end. He finished, then gave me a satisfied wink."
+                    Br flirty dk flip "Might not have taken a piss since the shift started at the station. Hope you don't mind."
                     Br flirty dk flip "Good?"
                     if persistent.bangok_inflation == True:
                         m "I nodded, the head of his cock still in my mouth to hold down the gifts he'd given."
@@ -595,16 +686,23 @@ label bangok_four_bryce1_m2:
                         m "I nodded, the head of his cock still in my mouth."
                         m "Bryce gave one last dribble of pee across my tongue as I let his shaft leave my mouth. I tried to suckle on his tip for just that little bit more."
                 if persistent.bangok_inflation == True:
-                    Br smirk dk flip "D-Don't. Gotta take a shower after this anyway, clean that tip off. You might need more than that."
+                    Br smirk dk flip "D-Don't. Gotta take a shower after this anyway, clean that tip off."
+                    Br flirty dk flip "You might need more than that."
                 else:
                     Br smirk dk flip "D-Don't. Gotta take a shower after this anyway, clean that tip off. You too, probably."
                 m "When I released his cock completely, it sank partway back into his body, just barely peeking out from his slit."
-            else:
-                $ renpy.error("TODO: Suck protected cum.")
 
-            play sound "fx/cartslide.ogg"
-            show bryce normal dk at center with dissolve
-            m "Bryce rolled off the couch, then turned to face me. I got up off my knees."
+            
+            if not bangok_four_bryce1_playercame and not bangok_four_bryce1_protected and not (persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "after"):
+                play sound "fx/cartslide.ogg"
+                show bryce normal dk at center with dissolve
+                if persistent.bangok_inflation == True and bangok_four_bryce1_playerstuffed:
+                    m "Bryce rolled off the couch, then turned to face me. I struggled up off my knees, added liquid weight putting me a little off-balance."
+                    Br flirty dk "Really filled you up, didn't I?"
+                    m "I patted my belly."
+                else:
+                    m "Bryce rolled off the couch, then turned to face me. I got up off my knees."
+            
             if not bangok_four_bryce1_playercame:
                 Br flirty dk "That's me. Now how about you?"
                 menu:
@@ -620,16 +718,31 @@ label bangok_four_bryce1_m2:
                         jump bangok_four_bryce1_m2_bsucc_merge
                     "Can I fuck you?":
                         jump bangok_four_bryce1_ptop
-                
+            
+            label bangok_four_bryce1_bothdone:
+            Br normal dk "Well, that's you and that's me."
+            c "Yeah."
+            if brycemood < 0:
+                Br brow dk "Floor's open, if you can't make it home."
+                c "Floor. Floor's good."
+                Br "Sure."
+                scene black with dissolveslow
+                jump bangok_four_bryce1_morningfloor
+            else:
+                Br "I'll sleep on the floor, then. You can have the couch."
+                label bangok_four_bryce1_couchsleepchoice:
+                menu:
+                    "Thanks.":
+                        pass
+                    "You don't have to sleep on the floor.":
+                        Br brow dk "The couch isn't {i}that{/i} spacious, I don't think."
+                        c "We can share."
+                        $ renpy.pause(0.9)
+                        $ brycemood += 1
+                        Br flirty dk "Alright."
+                scene black with dissolveslow
+                jump bangok_four_bryce1_morningcouch
 
-
-
-
-
-
-
-
-            $ renpy.error("TODO: End the evening nicely.")
 
         "I want you in me.":
             label bangok_four_bryce1_analbot:
@@ -756,7 +869,8 @@ label bangok_four_bryce1_m2:
             c "Y- You're so big!"
             Br flirty dk "I hear that a lot."
             if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
-                play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                play soundloop "fx/faucet1.ogg" fadein 1.0
+                queue soundloop "fx/faucet2.ogg"
                 if bangok_four_bryce1_protected == True:
                     m "Suddenly, I felt a warmth blossoming in my guts, along with the stretching of the condom's reservoir, spreading out from where I thought his tip might be."
                 else:
@@ -768,6 +882,8 @@ label bangok_four_bryce1_m2:
                 else:
                     m "I squirmed a little more, turned on as Bryce used my ass as a urinal."
                 stop soundloop fadeout 1.5
+                if persistent.bangok_inflation:
+                    m "Between his cock and piss, I felt stuffed. I was a little unsure how he'd even go about fucking with me this full."
                 $ renpy.pause(0.8)
                 Br flirty dk "Might not have taken a piss since the shift started at the station. Hope you don't mind."
                 $ renpy.pause(0.8)
@@ -794,6 +910,11 @@ label bangok_four_bryce1_m2:
             show bangok_four_bryce_underside_large:
                 ease 3.5 ypos (-2.05)
             m "Bryce tugged back just as slowly as he'd entered, keeping the lube even on his shaft, and my speared ass from feeling any significant shocks."
+            if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
+                if bangok_four_bryce1_protected:
+                    m "The condom's bloated reservoir followed through my innards, the sensation of dragging the shifting fluid mass utterly maddening."
+                else:
+                    m "Piss followed his cockhead as he pulled back, the sensation of fluid flowing through my innards adding yet another bubbling layer on top of the thickness of his shaft."
             m "He stopped at his tip, waiting again."
             menu:
                 "E-Easy.":
@@ -834,7 +955,7 @@ label bangok_four_bryce1_m2:
                     show bangok_four_bryce1_apartment night ceiling at Pan((0,0), (0,30), 0.5)
                     show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.05)
                     with ease
-                    m "I bucked my hips, almost popping the tip free."
+                    m "I bucked my hips, almost popping his tip free."
                     Br flirty dk "So that's what that was."
                     m "I moaned appreciatively."
                     Br smirk dk "Okay. Here we go."
@@ -844,7 +965,7 @@ label bangok_four_bryce1_m2:
                     show bangok_four_bryce1_apartment night ceiling at Pan((0,0), (0,30), 0.5)
                     show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.05)
                     with ease
-                    m "I thrust my ass back against his cock, taking back a little bit he'd taken away."
+                    m "I thrust my ass back against his cock, taking back a little bit of what he'd taken away."
                     Br flirty dk "If you say so."
 
             play soundloop "fx/rub2.ogg" fadein 1.0
@@ -853,6 +974,11 @@ label bangok_four_bryce1_m2:
                 ease 0.7 ypos (-2.1)
                 repeat
             m "Bryce began to fuck me for real, sliding in and out, in and out with movements that spread me wide each way."
+            if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
+                if bangok_four_bryce1_protected:
+                    m "His piss balloon was shoved deeper into my gut, sticking in place with his pulls out that stretched the condom lewdly inside me."
+                else:
+                    m "His piss was shoved deeper into my gut, wet squelches almost audible with each thrust."
             $ renpy.pause(3.0)
             m "It didn't take long before we were both emitting undignified noises."
             $ renpy.pause(0.9)
@@ -889,7 +1015,7 @@ label bangok_four_bryce1_m2:
                 $ bangok_four_bryce1_playercame = True
                 m "The twitching of his spurting cock pressed up against the pleasure button inside me. Before I could form coherent words, I, too, was over my edge and cumming onto both our chests."
             else:
-                m "The twitching of his spurting cock pressed up against the pleasure button inside me, the overstimulation after my recent orgasm leaving me writing."
+                m "The twitching of his spurting cock pressed up against the pleasure button inside me, the overstimulation after my recent orgasm leaving me writhing."
 
             if persistent.bangok_inflation == True:
                 m "Even after I was done, though, Bryce had a few spurts left in him."
@@ -897,6 +1023,7 @@ label bangok_four_bryce1_m2:
                     m "I realized with some alarm that I was feeling the condom continuing to bloat inside of me, pressing deeper down my canals into my guts."
                 else:
                     m "I realized with some alarm that I was feeling {i}very{/i} full."
+                    $ bangok_four_bryce1_playerstuffed = True
                 c "B-Bryce!"
                 Br flirty dk "A-Almost..."
                 m "Looking down, I found my belly was visually slightly larger than it should be."
@@ -915,6 +1042,7 @@ label bangok_four_bryce1_m2:
                     play sound "fx/bubbles.ogg"
                     m "The dam inside me burst, Bryce's cumload just a little more than the condom could take after his pissing in me."
                     m "Warmth suffused my insides, bubbling and sloshing as it spread to equilibrium within my guts, no longer contained."
+                    $ bangok_four_bryce1_playerstuffed = True
             if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "after":
                 Br flirty dk "Ready for part two?"
                 if persistent.bangok_inflation == True:
@@ -923,12 +1051,14 @@ label bangok_four_bryce1_m2:
                     c "Mhmm."
                 show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-1.5) with ease
                 m "With a grunt, Bryce leaned forward, then his cock twitched inside me again. A new, less viscous warmth began spreading in my guts."
-                play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                play soundloop "fx/faucet1.ogg" fadein 1.0
+                queue soundloop "fx/faucet2.ogg"
                 Br laugh dk "Ahhh..."
                 if persistent.bangok_inflation == True:
                     if bangok_four_bryce1_protected == True:
                         play sound "fx/bubbles.ogg"
                         m "The dam inside me burst, Bryce's additional pissload just a little more than the condom could take."
+                        $ bangok_four_bryce1_playerstuffed = True
                     m "I moaned, suffused with the feeling of fluid bubbling and sloshing within my innards to make room as yet more was drained in."
                     
                     stop soundloop fadeout 1.5
@@ -941,6 +1071,7 @@ label bangok_four_bryce1_m2:
                         m "I lay, breathing evening out, contented as Bryce used the condom inside me as a urinal."
                     else:
                         m "I lay, breathing evening out, contented as Bryce used my innards as a urinal."
+                stop soundloop fadeout 1.5
                 m "When he worked his way back down to eye level with me, I could almost hear the sloshing from all his fluids."
                 show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-0.7) with ease
                 Br flirty dk "Might not have taken a piss since the shift started at the station. Hope you don't mind."
@@ -995,6 +1126,7 @@ label bangok_four_bryce1_m2:
                         "You should have left it ouside, then!":
                             $ brycemood -= 2
                         "It's okay.":
+                            $ brycemood += 1
                             c "It was a misunderstanding. And as misunderstandings go, there are worse ones."
                             Br normal dk "Not much to be done about it now. We might as well sleep it off."
                             jump bangok_four_bryce1_tiedsleep
@@ -1076,9 +1208,10 @@ label bangok_four_bryce1_m2:
                         m "I nodded."
                         c "Not sure I can move after that. Damn."
                         Br flirty dk "Well, I'm about ready to pass out."
+                        scene black with dissolveslow
                         Br "Goodnight, [player_name]."
                         c "'night."
-                        jump bangok_four_bryce1_morningbed
+                        jump bangok_four_bryce1_morningcouch
 
 
 
@@ -1244,7 +1377,8 @@ label bangok_four_bryce1_m2:
                                             m "I steadied myself there, depositing my load into the condom's reservoir where it hung over Bryce's hindquarters."
                                             $ brycemood += 1
                                             if persistent.bangok_watersports == True:
-                                                play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                                                play soundloop "fx/faucet1.ogg" fadein 1.0
+                                                queue soundloop "fx/faucet2.ogg"
                                                 m "After a moment, I realized yet more fluid was draining out of me, ballooning the condom further."
                                                 c "Uh."
                                                 m "My cheeks flushed with embarassment."
@@ -1261,14 +1395,12 @@ label bangok_four_bryce1_m2:
                                                 Br flirty dk "Alright. Good call with the condom, there. Saves us a lot of cleanup."
                                                 c "Th- Thanks."
                                             m "Climbing off Bryce, I pulled off and tied off the condom, then sat heavily."
-                                            Br brow dk "No, don't. I'll take the floor."
-                                            $ renpy.error("TODO: Another morning hook.")
-                                                
                                         else:
                                             m "I didn't have time to find his ass. I came, spurting thin ropes across his hindquarters and chest."
                                             hide black with dissolvemed
                                             if persistent.bangok_watersports == True:
-                                                play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                                                play soundloop "fx/faucet1.ogg" fadein 1.0
+                                                queue soundloop "fx/faucet2.ogg"
                                                 m "After a moment, I realized yet more fluid was draining out of me, running down Bryce's belly plates."
                                                 c "Uh."
                                                 m "My cheeks flushed with embarassment."
@@ -1284,8 +1416,8 @@ label bangok_four_bryce1_m2:
                                             Br normal dk "We'll both have to take the floor."
                                             show bryce normal dk flip at center with dissolve
                                             m "Bryce rolled off the couch as I sat down, feeling light-headed from the exertion of fucking the big dragon."
-
-                                            $ renpy.error("TODO: Another morning hook idk.")
+                                        Br brow dk "No, don't. I'll take the floor."
+                                        jump bangok_four_bryce1_couchsleepchoice
                                     "Back in.":
                                         jump bangok_four_bryce1_docking_inside
                             "[[Cum inside.]":
@@ -1303,7 +1435,8 @@ label bangok_four_bryce1_m2:
                                     hide black with dissolvemed
                                     $ renpy.pause(0.3)
                                     if persistent.bangok_watersports == True:
-                                        play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                                        play soundloop "fx/faucet1.ogg" fadein 1.0
+                                        queue soundloop "fx/faucet2.ogg"
                                         show bryce brow dk with dissolve
                                         m "After a moment, I realized yet more fluid was draining out of me, bloating the condom and filling that tight space inside him."
                                         c "Uh."
@@ -1331,7 +1464,8 @@ label bangok_four_bryce1_m2:
                                     show bryce stern dk with dissolve
                                     $ renpy.pause(0.3)
                                     if persistent.bangok_watersports == True:
-                                        play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                                        play soundloop "fx/faucet1.ogg" fadein 1.0
+                                        queue soundloop "fx/faucet2.ogg"
                                         $ renpy.pause (0.5)
                                         m "After a moment, I realized yet more fluid was draining out of me, bloating filling that tight space inside him."
                                         c "Uh."
@@ -1405,7 +1539,8 @@ label bangok_four_bryce1_m2:
             hide black with dissolvemed
 
             if persistent.bangok_watersports == True:
-                play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                play soundloop "fx/faucet1.ogg" fadein 1.0
+                queue soundloop "fx/faucet2.ogg"
                 show bryce brow dk with dissolve
                 m "After a moment, I realized yet more fluid was draining out of me."
                 c "Uh."
@@ -1418,32 +1553,70 @@ label bangok_four_bryce1_m2:
                 m "He shifted his hips, my body's fluid output sloshing lewdly around my penis's head inside the condom."
             else:
                 m "He shifted his hips, my body's fluid output flowing lewdly around my penis, buried in his ass."
-            Br flirty dk "That's you. Now how about me?"
-            
-            if bangok_four_bryce1_protected == True:
-                m "I pulled out first, considering my options as I tugged off and tied up my condom. My head was clearer, but I also felt lightheaded from the effort I'd just expended."
+
+            if bangok_four_bryce1_brycecame:
+                if brycemood > 0:
+                    show bryce flirty dk with dissolve
+                else:
+                    show bryce brow dk with dissolve
+                m "I pulled out, the exhaustion of the evening's fucking finally catching up with me."
+                play sound "fx/cartslide.ogg"
+                show bryce at center with ease
+                m "Bryce rolled off the couch."
+                jump bangok_four_bryce1_bothdone
             else:
-                m "I pulled out first, considering my options. My head was clearer, but I also felt lightheaded from the effort I'd just expended."
-            label bangok_four_bryce1_preciprocity_menu:
-            menu:
-                "I... think I'm done.":
-                    Br brow dk "Excuse me?"
-                    c "I'm..."
-                    $ renpy.pause (0.8)
-                    c "I think I'm going to pass out now."
-                    Br stern dk "Hey!"
-                    scene black with fade
-                    play sound "fx/impact3.ogg"
-                    jump bangok_four_bryce1_badmorning
-                "Want to fuck me?":
-                    jump bangok_four_bryce1_analbot
-                "I guess I could suck you.":
-                    jump bangok_four_bryce1_oralbot
-                "[[Finish him by hand.]":
-                    $ renpy.error("TODO: S'more fucking.")
-                "I'm not sure I can fit you." if bangok_four_bryce1_m2_fit:
-                    call bangok_four_bryce1_m2_fit from bangok_four_bryce1_preciprocity_menu_fit
-                    jump bangok_four_bryce1_preciprocity_menu
+                Br flirty dk "That's you. Now how about me?"
+                
+                if bangok_four_bryce1_protected == True:
+                    m "I pulled out first, considering my options as I tugged off and tied up my condom. My head was clearer, but I also felt lightheaded from the effort I'd just expended."
+                else:
+                    m "I pulled out first, considering my options. My head was clearer, but I also felt lightheaded from the effort I'd just expended."
+                label bangok_four_bryce1_preciprocity_menu:
+                menu:
+                    "I... think I'm done.":
+                        Br brow dk "Excuse me?"
+                        c "I'm..."
+                        $ renpy.pause (0.8)
+                        c "I think I'm going to pass out now."
+                        Br stern dk "Hey!"
+                        scene black with fade
+                        play sound "fx/impact3.ogg"
+                        jump bangok_four_bryce1_badmorning
+                    "Want to fuck me?":
+                        jump bangok_four_bryce1_analbot
+                    "I guess I could suck you.":
+                        jump bangok_four_bryce1_oralbot
+                    "Handjob okay?":
+                        call bangok_four_bryce1_position("hand")
+                        show bryce brow with dissolve
+                        c "I'm just... you're a little large."
+                        Br "Of course. Handjob's fine if that's what you think is safe."
+                        if bangok_four_bryce1_protected == True:
+                            Br "Mind sheathing me in that condom you grabbed me?"
+                            Br laugh dk "Obviously my claws aren't a good idea for that."
+                            Br normal "And I don't want any more stains to clean out of my place."
+                            c "Sure."
+                        else:
+                            Br normal "Mind getting me a condom? Don't want any more stains to clean out of my place."
+                            c "Sure. Where?"
+                            Br "Drawers, over there. Top drawer, I think."
+                            $ renpy.pause(0.3)
+                            play sound "fx/rummage.wav"
+                            $ renpy.pause(2.0)
+                            stop sound fadeout 1.0
+                            m "The condoms weren't hard to find. I returned with one his size, which most of the boxes were."
+                        m "Sitting underneath him, I unrolled the condom along his length."
+                        Br smirk "Alright. Go to town."
+                        m "I gripped Bryce's shaft around the condom lightly near the base. I wasn't quite sure how rough I could be with it, with him being a different species."
+                        Br laugh dk "H-Hey! Don't {i}tickle{/i} it!"
+                        m "Tightening my grip, I gave an experimental pump up and down, before letting go and glancing back toward his head for approval."
+                        Br flirty dk "B-Better."
+                        $ renpy.error("TODO: Remainder of handjob.")
+
+                        
+                    "I'm not sure I can fit you." if bangok_four_bryce1_m2_fit:
+                        call bangok_four_bryce1_m2_fit from bangok_four_bryce1_preciprocity_menu_fit
+                        jump bangok_four_bryce1_preciprocity_menu
 
 
 
@@ -1588,7 +1761,8 @@ label bangok_four_bryce1_m2:
             hide black with dissolvemed
 
             if persistent.bangok_watersports == True:
-                play soundloop ["fx/faucet1.ogg", "fx/faucet2.ogg"]
+                play soundloop "fx/faucet1.ogg" fadein 1.0
+                queue soundloop "fx/faucet2.ogg"
                 show bryce brow dk with dissolve
                 m "After a moment, I realized yet more fluid was draining out of me."
                 c "Uh."
@@ -1604,10 +1778,17 @@ label bangok_four_bryce1_m2:
                 Br smirk dk "I have sex with drinking buddies all the time. You think you're the first one who's pissed in me?"
 
             show bryce at Position(ypos=1.0) with ease
-            show bryce flirty dk with dissolve
-            m "Getting back to his feet, Bryce shot me a wink."
-            Br flirty dk "That's you. Now how about me?"
-            jump bangok_four_bryce1_preciprocity_menu
+            if brycemood > 0:
+                show bryce flirty dk with dissolve
+                m "Getting back to his feet, Bryce shot me a wink."
+            else:
+                show bryce stern dk with dissolve
+                m "Bryce got back to his feet."
+            if bangok_four_bryce1_brycecame:
+                jump bangok_four_bryce1_bothdone
+            else:
+                Br flirty dk "That's you. Now how about me?"
+                jump bangok_four_bryce1_preciprocity_menu
 
 
 
@@ -1696,9 +1877,292 @@ label bangok_four_bryce1_badmorning:
 
 
 label bangok_four_bryce1_morningcouch:
-label bangok_four_bryce1_morningfloor:
     scene black with fade
-    $ renpy.pause(1.5)
-    play sound "fx/system3.ogg"
-    s "TODO: Morning scene"
-    $ renpy.error("TODO: Morning scene")
+    $ renpy.pause (1.5)
+    scene pad at Pan ((0, 0), (0,360), 5.0) with dissolveslow
+    play music "mx/campfire.ogg" fadein 2.0
+    nvl clear
+    window show
+    n "I awoke looking at an unfamiliar ceiling."
+    n "For a moment, I wondered where I was before the events of last night came back to me."
+    if bangok_four_bryce1_playerstuffed or "analbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
+        n "My innards complained loudly as I sat up, still disturbed by what I'd done to them. As I looked around, I realized I'd slept on Bryce's couch, naked."
+    else:
+        n "As I sat up and looked around, I realized I'd slept on Bryce's couch, naked."
+    show bryce laugh at Position(ypos=1.2, xpos=0.55, xanchor='center') with dissolvemed
+    n "Bryce sprawled in the gap between the couch and coffee table, drooling into the carpet. Some evidence of our wanton lust from the night before was still visible between his hindlegs, on his plates."
+    window hide
+    nvl clear
+
+    c "Hey, Bryce."
+    menu:
+        "You are salivating.":
+            $ brycemood -= 1
+            m "The dragon moved and let out a groan before he opened his eyes."
+            show bryce brow with dissolve
+            Br "Just as you do, occasionally, I bet."
+        "Wake up, fattie.":
+            $ brycemood -= 2
+            m "The dragon moved and let out a groan before he opened his eyes."
+            show bryce stern with dissolve
+            c "(That got him.)"
+            Br "For your information, my kind does tend to look a little bigger than the others, but it also makes us the strongest."
+            show bryce brow with dissolve
+        "Good morning, sunshine.":
+            $ brycemood += 1
+            m "The dragon moved and let out a groan before he opened his eyes."
+            show bryce normal with dissolve
+    $ renpy.pause(0.9)
+    show bryce brow with dissolve
+    $ renpy.pause(0.5)
+    m "Bryce seemed to mull his memories for a moment, then with a start began struggling to rise."
+    show bryce stern at Position(ypos=1.2, xpos=0.45, xanchor='center') with ease
+    show bryce at Position(ypos=1.2, xpos=0.55, xanchor='center') with ease
+    m "I pushed my way up from the couch myself, then tugged his coffee table aside so he'd have room to roll over."
+    show bryce at center with ease
+    Br normal "Thanks."
+    $ brycemood += 1
+    $ renpy.pause (0.9)
+
+
+    if False:
+        label bangok_four_bryce1_morningfloor:
+        scene black with fade
+        $ renpy.pause(1.5)
+        scene pad at Pan ((0, 0), (0,360), 5.0) with dissolveslow
+        play music "mx/campfire.ogg" fadein 2.0
+
+        nvl clear
+        window show
+        n "I awoke looking at an unfamiliar ceiling."
+        n "For a moment, I wondered where I was before the events of last night came back to me."
+        if bangok_four_bryce1_playerstuffed or "analbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
+            n "My innards complained loudly as I sat up, still disturbed by what I'd done to them. As I looked around, I realized I'd slept on Bryce's floor, naked."
+        else:
+            n "As I sat up and looked around, I realized I'd apparently slept on Bryce's floor, naked."
+        window hide
+        nvl clear
+
+        scene black with dissolve
+        $ renpy.pause (0.5)
+        scene cgbryce with dissolvemed
+        $ renpy.pause(2.0)
+
+        c "Hey, Bryce."
+        menu:
+            "You are salivating.":
+                $ brycemood -= 1
+                m "The dragon moved and let out a groan before he opened his eyes."
+                scene pad at Pan ((0, 360), (0,360), 0.0)
+                show bryce brow
+                with dissolve
+                Br "Just as you do, occasionally, I bet."
+            "Wake up, fattie.":
+                $ brycemood -= 2
+                m "The dragon moved and let out a groan before he opened his eyes."
+                scene pad at Pan ((0, 360), (0,360), 0.0)
+                show bryce stern
+                with dissolve
+                c "(That got him.)"
+                Br "For your information, my kind does tend to look a little bigger than the others, but it also makes us the strongest."
+                show bryce brow with dissolve
+            "Good morning, sunshine.":
+                $ brycemood += 1
+                m "The dragon moved and let out a groan before he opened his eyes."
+                scene pad at Pan ((0, 360), (0,360), 0.0)
+                show bryce normal
+                with dissolve
+                Br "Hey, [player_name]."
+        show bryce laugh with dissolve
+        m "The dragon rose from the couch with a nice morning stretch, rubbed his eyes, then held his head high as he let out a grunt and a big yawn."
+        show bryce stern with dissolve
+        m "Then he blinked, hard."
+
+
+
+    Br brow "How much about last night do you remember?"
+
+    menu:
+        "I remember Bryce, it's fine.":
+            c "We both chose to do that. And I, at least, had fun."
+            m "Bryce relaxed immediately."
+            Br normal "Ah."
+        "I walked you home and that's it, right?":
+            $ brycemood -= 1
+            Br stern "This isn't a joke, [player_name]. Do you remember what happened between us?"
+            c "Of course. I was just messing around."
+            $ renpy.pause (0.8)
+        "I can't believe that happened.":
+            Br "In what way?"
+            # menu:
+            #     "How could you do that to me?":
+            #         $ brycemood -= 3
+            #         c "I was drunk and you took advantage of that to get in my pants."
+            #         Br stern "That's not even close to how I remember it."
+            #         c "And who are they going to believe? Humanity's poor, victimized ambassador, or the horny chief of police that pushed them into a drinking contest and took them back to his apartment instead of theirs?"
+            #         Br brow "You were the one pushing things last night."
+            #         Br stern "Why would you make this up?"
+            #         c ""
+            #     "That was amazing.":
+            #         
+            c "That was amazing."
+            $ brycemood += 1
+            if brycemood > 2:
+                show bryce smirk with dissolve
+            else:
+                show bryce brow with dissolve
+            Br "It was definitely something."
+        "My ass still hurts." if "analbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
+            Br laugh "I'm not surprised."
+            Br normal "Are you going to be okay?"
+            c "I think so."
+        "Bryce, the condom is still hanging from my ass." if "analbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb] and bangok_four_bryce1_protected and persistent.bangok_knot and bangok_four_bryce1_analknot != "out" and not (persistent.bangok_watersports and persistent.bangok_inflation) and not bangok_four_bryce1_playerstuffed:
+            Br smirk "It is?"
+            m "Bryce looked."
+            Br brow "Oh. Damn. It is."
+            m "Leaning back on his couch, I tied off the slightly leaking end, then pulled the whole thing out of me."
+            play sound "fx/uncork.ogg"
+            $ renpy.pause (0.5)
+            $ brycemood += 2
+            Br laugh "I guess I forgot about that after knotting you, then passed out."
+            c "Guess so."
+
+    if (persistent.bangok_watersports or persistent.bangok_inflation) and bangok_four_bryce1_playerstuffed:
+        m "My hand went to my gut as I felt last night's fluid results shifting around."
+        if "analbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
+            m "Almost all of it was still inside!"
+        else: # "oralbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
+            m "What had been in my stomach had gone straight to my bladder while I'd slept!"
+        c "F-Fuck. Can I use your restroom?"
+        Br brow "Of course."
+        if brycemood > 0:
+            if persistent.bangok_watersports and "oralbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
+                Br flirty "Or you could let me have a taste."
+                menu:
+                    "[[Let Bryce drink your piss.]":
+                        $ brycemood += 1
+                        m "I stumbled over to Bryce, not sure how long I could hold it."
+                        show bryce at Position(ypos=1.3) with ease
+                        show bryce at Position(ypos=1.5) with ease
+                        m "He dropped, then opened his mouth wide, letting me piss right into the back of his throat."
+                        play soundloop "fx/faucet1.ogg" fadein 1.0
+                        queue soundloop "fx/faucet2.ogg"
+                        c "Ahh..."
+                        m "My golden stream spattered against the back of his throat, which I could see working to swallow it as I went."
+                        m "My cock hardened, aroused by getting to use the big, beefy police dragon as my own personal pisshole. As it twitched, a few rivulets ran down the sides of his muzzle."
+                        stop soundloop fadeout 3.0
+                        $ renpy.pause (2.5)
+                        show bryce at Position(ypos=1.3) with ease
+                        m "Bryce gave the tip of my dick a lick as he began to stand back up. {w=0.5}{nw}"
+                        show bryce at center with ease
+                        m "Bryce gave the tip of my dick a lick as he began to stand back up. {fast}Then wiped his mouth with a foreleg, licking that too."
+                        $ renpy.pause(0.8)
+                        c "So are we going for round two?"
+                        Br laugh "Not a chance!"
+                        Br smirk "I've gotta clean up, you've gotta do the same. People are going to notice if neither of us are at our jobs."
+                        c "Damn."
+                        Br normal "Hey. Don't be too sad about it."
+                        jump bangok_four_bryce1_morningcont
+                    "[[Restroom. Now.]":
+                        pass
+            # Feck. I don't know enough about rimming for this.
+            # elif "analbot" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
+            #     Br flirty "Or you could let me lick it out."
+            #     menu:
+            #         "[[Let Bryce rim you.]":
+            #             c "G- Gonna have to do it fast. I don't know how long I can..."
+            #             show bryce at Position(ypos=1.3) with ease
+            #             show bryce at Position(ypos=1.5) with ease
+            #             m "He moved over and bent down, head snaking between my legs, which I spread to give him better access."
+            #             c "H-Hey--"
+            #             m "My complaint was cut off when I felt his large tongue slither into my ass, disturbing the fluid in my rear."
+
+            #         "[[Restroom. Now.]":
+            #             pass
+        hide bryce with dissolve
+        scene black with dissolve
+        play sound "fx/door/doorclose3.wav"
+        m "I scrambled into the restroom and dumped my excess fluid weight into the toilet."
+        $ renpy.pause(1.8)
+        scene pad at Pan ((0, 360), (0,360), 0.0)
+        show bryce normal
+        with dissolvemed
+        Br "Better?"
+        c "Yeah."
+
+    label bangok_four_bryce1_morningcont:
+    $ renpy.pause (1.0)
+
+    if brycemood > 0:
+        if brycemood > 4:
+            Br flirty "You know, last night was up there with some of the best sex I've ever had."
+            c "Really?"
+            Br smirk "Really. You've got a lot of... unique properties."
+        elif brycemood > 2:
+            Br flirty "Last night was a good time."
+            Br normal "I'm glad we did that at the end."
+            c "I'm glad we did too."
+            Br smirk "You've got a lot of... unique properties."
+        else:
+            Br normal "So... last night. There were a few misunderstandings, but I think it worked out."
+            Br smirk "Certainly very unique."
+        menu:
+            "So it's just because I'm human.":
+                $ brycemood -= 1
+                Br brow "It's not just that."
+                c "..."
+                Br normal "Okay, so that was the major part of it."
+            "So do you.":
+                $ brycemood += 1
+                Br flirty "Is that so?"
+            "[[Say nothing.]":
+                pass
+        
+        Br brow "Thing is, I don't normally take relationships this fast. Not even when I plan for them to be one-night-stands."
+        c "So it takes you two nights to have a one-night stand?"
+        Br normal "Usually, yeah. That drinking contest was an especially stupid idea for me to propose, especially to you."
+        c "Well, it's not like you forced me to participate, so I suppose I share some of the blame..."
+        Br "Let's just pretend the drinking never happened, and maybe hold off on more sex until we've had time to cool off about what happened."
+        c "Deal."
+        Br normal "Don't take it the wrong way, though. I would like to invite you over sometime and show you there's more to the chief of police than getting drunk and having drunken sex."
+        c "Like sober sex?"
+        Br flirty "Not quite yet."
+        Br normal "Let's scale back to \"friends\" for at least one encounter."
+        c "Sure."
+        Br smirk "You can find all your layers?"
+        c "Yeah."
+        stop music fadeout 1.0
+        python:
+            renpy.pause(1.0)
+            brycestatus = "good"
+            brycescenesfinished = 1
+            persistent.bryce1skip = True
+        scene black with dissolveslow
+        jump _mod_fixjmp
+    else:
+        Br stern "Last night, you and I had some serious miscommunications."
+        c "Oh?"
+        Br brow "I'm not saying I'm upset we did it, or that I didn't have a good time, but we were definitely too drunk to communicate properly."
+        Br stern "The whole contest thing before that was a stupid idea too, and I shouldn't have suggested it, especially not to you"
+        c "Well, it's not like you forced me to participate, so I suppose I share some of the blame..."
+        show bryce normal with dissolve
+        Br "Let's just pretend the whole thing never happened."
+        menu:
+            "Including the sex?":
+                Br smirk "Let's just take some time to cool down on that front. That first time was a little too raunchy, even for me."
+                Br stern "And we definitely need our next time to be mostly sober. If we do decide to have a next time."
+                c "Deal."
+            "Deal.":
+                pass
+        show bryce brow with dissolve
+        Br "Wait... what time is it?"
+        Br "Damn, I should really get cleaning up. I think I'll be a few minutes late for work. You know how to get back to your apartment from here, right?"
+        c "I think so."
+        show bryce normal with dissolve
+        Br "Guess you should be going as well, kiddo. Maybe I'll see you some other time."
+        stop music fadeout 1.0
+        python:
+            brycestatus = "neutral"
+            brycescenesfinished = 1
+            persistent.bryce1skip = True
+        jump _mod_fixjmp
