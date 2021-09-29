@@ -51,6 +51,14 @@ def anna12(ml):
         .search_say("Maybe you should step down from your high horse for once.") \
         .link_from('bangok_four_anna1_badending_end')
 
+    ml.find_label('bryce2cont2') \
+        .search_say("Good question. If you're just talking about my species, some of us can. At least a little.") \
+        .search_say("The runners lean forward and use their big tails for balance, whereas you have yours tucked into whatever that is you are wearing.") \
+        .search_say("Are you kidding me?") \
+        .hook_to('bangok_four_bryce1_bryce2fix',condition='bangok_four_bryce1_unplayed == False', return_link=False) \
+        .search_menu("That's just the way we are.") \
+        .link_from('bangok_four_bryce1_bryce2fix_end')
+
     # Anna2
     sorrymenu = ml.find_label('anna2') \
         .search_menu("Go home.") \

@@ -2137,6 +2137,7 @@ label bangok_four_bryce1_morningcouch:
             brycestatus = "good"
             brycescenesfinished = 1
             persistent.bryce1skip = True
+            bangok_four_bryce1_unplayed = False
         scene black with dissolveslow
         jump _mod_fixjmp
     else:
@@ -2165,4 +2166,11 @@ label bangok_four_bryce1_morningcouch:
             brycestatus = "neutral"
             brycescenesfinished = 1
             persistent.bryce1skip = True
+            bangok_four_bryce1_unplayed = False
         jump _mod_fixjmp
+
+label bangok_four_bryce1_bryce2fix:
+    c "You didn't see the other night?"
+    Br flirty "I was a little more focused on other parts."
+    Br laugh "But seriously? Everything alive has a tail. How can you just not have one?"
+    jump bangok_four_bryce1_bryce2fix_end
