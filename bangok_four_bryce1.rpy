@@ -3,6 +3,19 @@
 #  persistent.bangok_knot - Knotting
 #  persistent.bangok_watersports - Watersports
 
+init python:
+    bangok_four_bryce1_unplayed = True
+    bangok_four_bryce1_protected = False
+    bangok_four_bryce1_protected_a = False
+    bangok_four_bryce1_protected_b = False
+    bangok_four_bryce1_brycecame = False
+    bangok_four_bryce1_playercame = False
+    bangok_four_bryce1_playerstuffed = False
+    bangok_four_bryce1_position_picka = None
+    bangok_four_bryce1_position_pickb = None
+    bangok_four_bryce1_wstiming = None
+    bangok_four_bryce1_oralspot = None
+    bangok_four_bryce1_analknot = None
 
 label bangok_four_bryce1_skipmenu:
     if persistent.nsfwtoggle == True:
@@ -568,7 +581,7 @@ label bangok_four_bryce1_m2:
                                 m "It was almost more than I could swallow, the warm stream sloshing back and coating my mouth in that unique tang. My body warmed, heat from Bryce transferred directly into my stomach."
                                 stop soundloop fadeout 5.0
                                 m "Unfortunately, all good things had to come to an end. He finished, then gave me a satisfied wink."
-                                Br flirty dk "Might not have taken a piss since the shift started at the station. Hope you don't mind."
+                                Br flirty dk flip "Might not have taken a piss since the shift started at the station. Hope you don't mind."
                                 Br flirty dk flip "Good?"
                                 m "I nodded, the head of his cock still in his mouth as I slurped at the tip."
                                 Br smirk dk flip "Feel free to keep going."
