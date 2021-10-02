@@ -100,7 +100,7 @@ def anna12(ml):
         .hook_to('bangok_four_anna2_romanticdate_conclusion', condition='persistent.nsfwtoggle == True') \
         .search_say("Yeah, let's go.") \
         .link_behind_from('bangok_four_anna2_romanticdate_conclusion_end')
-    
+
 
 
 
@@ -128,6 +128,58 @@ def bryce1_afterparty(ml):
 
     wake_menu.link_behind_from('bangok_four_bryce1_nevermind')
 
+
+
+
+def xipsum(ml):
+
+    ( ml.find_label('lorem2')
+        .search_menu("It's my pleasure.")
+        .search_menu("He looks friendly.")
+        .search_menu("Yeah.")
+        .search_menu("Interesting.")
+        .search_menu("Right.")
+        .search_menu("What's with the little horns?")
+        .search_menu("As long as they aren't hurting anyone...")
+        .search_menu("Can I still talk?")
+        .search_hide('meetingipsum')
+        .search_menu("I see how it is.")
+        .add_choice("I could take them off...", jump='bangok_four_xipsum_takeemoff')
+        .search_say("And my scientific curiosity shall remain unsatisfied.")
+        .link_from('bangok_four_xipsum_unsatisfied')
+        .search_say("We actually have a pretty big variety of \"vestments\". I could tell you about it.")
+        .link_from('bangok_four_xipsum_vestment_variety')
+        .search_menu("Sounds interesting.")
+        .search_menu("Same as mine, then.")
+        .add_choice("Cute.", jump='bangok_four_xipsum_cute', condition='bangok_four_xipsum.unplayed == False')
+        .link_behind_from('bangok_four_xipsum_cute_end')
+        .search_say("Alright, I'm done with this one. You can turn around.")
+        .hook_to('bangok_four_xipsum_donewithclothed',condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
+        .search_say("How dynamic are we talking about?")
+        .link_from('bangok_four_xipsum_dynamicdrawing')
+        .search_say("By the way, did you get the groceries when you came home from work?")
+        .link_from('bangok_four_xipsum_donewithclothed_end')
+        .search_say("I'm not even going to deny that. When I'm not working on something at the office, I do so here.")
+        .hook_to('bangok_four_xipsum_awkward',condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
+        .search_say("Are you familiar with the many-worlds interpretation of quantum mechanics?")
+        .search_say("Alright, maybe you shouldn't talk about your theories about how the world is going to end.")
+        .search_say("As a scientist, my professional opinion is that this part looks a little long.")
+        .search_say("Are you sure? Let me see.")
+        .search_say("If I wasn't sure, I wouldn't have said it.")
+        .hook_to('bangok_four_xipsum_littlelong', condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
+        .search_menu("He sounds fun.")
+        .add_choice("What about our...?", condition='bangok_four_xipsum.unplayed == False and persistent.nsfwtoggle == True', jump='bangok_four_xipsum_whataboutour')
+        .link_behind_from('bangok_four_xipsum_whataboutour_end')
+        .search_say("Anyway, looks like we're done here.")
+        .hook_to('bangok_four_xipsum_loremdone', condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
+        .search_if('lorem2mood >= 9')
+        .branch_else()
+        .search_say("I should be going now, anyway. It's getting late.")
+        .hook_to('bangok_four_xipsum_lorembad', condition='bangok_four_xipsum.unplayed == False and lorem2mood > 1 and persistent.nsfwtoggle == True')
+    )
+
+
+
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk?"
@@ -141,6 +193,7 @@ class BangOkMod(Mod):
         ml.register_mod_settings(cls, screen='bangok_modsettings')
         anna12(ml)
         bryce1_afterparty(ml)
+        xipsum(ml)
 
     @staticmethod
     def mod_complete():

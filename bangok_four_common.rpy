@@ -1,10 +1,4 @@
 init:
-    image bangok_four_bryce1_apartment night = "bg/in/apts/pad_night.png"
-    image bangok_four_bryce1_apartment night ceiling = "bg/in/apts/pad_night_ceil.png"
-
-    image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
-    image bangok_four_bryce_underside_large dk flip = im.Recolor(im.Flip("cr/bryce_underside_large.png",horizontal=True), 70, 70, 100, 255)
-
     screen bangok_modsettings tag smallscreen2:
         modal True
         window id "bangok_modsettings" at popup2:
@@ -96,6 +90,81 @@ init:
                         align (0.5,0.5)
 
             imagebutton idle "image/ui/close_idle.png" hover "image/ui/close_hover.png" action [Hide("my_cool_screen"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")] hovered Play("audio", "se/sounds/select.ogg") style "smallwindowclose" at nav_button
+
+    
+    image bangok_four_bryce1_apartment night = "bg/in/apts/pad_night.png"
+    image bangok_four_bryce1_apartment night ceiling = "bg/in/apts/pad_night_ceil.png"
+    image bangok_four_xipsum_bedroom = "bg/in/apts/ipsum_bedroom.png"
+
+    image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
+    image bangok_four_bryce_underside_large dk flip = im.Recolor(im.Flip("cr/bryce_underside_large.png",horizontal=True), 70, 70, 100, 255)
+
+    image lorem bangok normal = im.Composite(
+        (1240,650), 
+        (0,0),"cr/lorem_normal.png",
+        (626,591), "cr/lorem_bangok_peek.png"
+    )
+    image lorem bangok normal flip = im.Flip(renpy.display.image.ImageReference('lorem bangok normal'),horizontal=True)
+    image lorem bangok happy = im.Composite(
+        (1240,650), 
+        (0,0),"cr/lorem_happy.png",
+        (626,591), "cr/lorem_bangok_peek.png"
+    )
+    image lorem bangok happy flip = im.Flip(renpy.display.image.ImageReference('lorem bangok happy'),horizontal=True)
+    image lorem bangok sad = im.Composite(
+        (1240,650), 
+        (0,0),"cr/lorem_sad.png",
+        (626,591), "cr/lorem_bangok_peek.png"
+    )
+    image lorem bangok sad flip = im.Flip(renpy.display.image.ImageReference('lorem bangok sad'),horizontal=True)
+    image lorem bangok relieved = im.Composite(
+        (1240,650), 
+        (0,0),"cr/lorem_relieved.png",
+        (626,591), "cr/lorem_bangok_peek.png"
+    )
+    image lorem bangok relieved flip = im.Flip(renpy.display.image.ImageReference('lorem bangok relieved'),horizontal=True)
+    image lorem bangok shy = im.Composite(
+        (1240,650), 
+        (0,0),"cr/lorem_shy.png",
+        (626,591), "cr/lorem_bangok_peek.png"
+    )
+    image lorem bangok shy flip = im.Flip(renpy.display.image.ImageReference('lorem bangok shy'),horizontal=True)
+    image lorem bangok think = im.Composite(
+        (1240,650), 
+        (0,0),"cr/lorem_think.png",
+        (626,591), "cr/lorem_bangok_peek.png"
+    )
+    image lorem bangok think flip = im.Flip('lorem bangok think',horizontal=True)
+
+    image lorem bangok hidepeek = "cr/lorem_bangok_hidepeek.png"
+    image lorem bangok hidepeek flip = im.Flip("cr/lorem_bangok_hidepeek.png",horizontal=True)
+
+    image lorem bangok bedcut = "cr/lorem_bangok_bedcut.png"
+
+    image ipsum normal bangok = im.Composite(
+        (650,800),
+        (0,0), "cr/ipsum_normal.png",
+        (214,684),"cr/ipsum_bangok_pen.png"
+    )
+    image ipsum normal flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok'),horizontal=True)
+    image ipsum happy bangok = im.Composite(
+        (650,800),
+        (0,0), "cr/ipsum_happy.png",
+        (214,684),"cr/ipsum_bangok_pen.png"
+    )
+    image ipsum happy flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum happy bangok'),horizontal=True)
+    image ipsum sad bangok = im.Composite(
+        (650,800),
+        (0,0), "cr/ipsum_sad.png",
+        (214,684),"cr/ipsum_bangok_pen.png"
+    )
+    image ipsum sad flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum sad bangok'),horizontal=True)
+    image ipsum think bangok = im.Composite(
+        (650,800),
+        (0,0), "cr/ipsum_think.png",
+        (214,684),"cr/ipsum_bangok_pen.png"
+    )
+    image ipsum think flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum think bangok'),horizontal=True)
 
 
 init python:
