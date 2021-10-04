@@ -420,7 +420,7 @@ label bangok_four_xipsum_loremdone:
     if bangok_four_xipsum.loremin:
         show lorem sad flip with dissolve
         if bangok_four_xipsum.playerhasdick:
-            m "He tossed a condom packet across the bed to Lorem with a flick of the wrist, then proffered one to you."
+            m "He tossed a condom packet across the bed to Lorem with a flick of the wrist, then proffered one to me."
         else:
             m "He tossed a condom packet across the bed to Lorem with a flick of the wrist."
 
