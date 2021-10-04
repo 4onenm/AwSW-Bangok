@@ -7,6 +7,13 @@ init python in bangok_four_xipsum:
     playerhasdick = None
 
     loremin = False
+    fuckertarget = None
+    fuckeraction = None
+    suckingipsum = False
+
+    train = False
+
+
 
 label bangok_four_xipsum_takeemoff:
     $ renpy.pause (0.5)
@@ -359,12 +366,16 @@ label bangok_four_xipsum_loremdone:
     m "Ipsum gestured to his room."
     Ip happy "Shall we?"
 
-    scene bangok_four_xipsum_bedroom at Pan ((128, 228), (128, 228), 0.0)
+    scene bangok_four_xipsum_bedroom normal at Pan ((128, 228), (128, 228), 0.0)
     if bangok_four_xipsum.loremin == True:
-        show lorem bangok bedcut:
-            alignaround (0.0,0.0)
-            pos (423, 653)
-            size (620, 325)
+        show bangok_four_xipsum_bedroom_bed:
+            alignaround (0,0)
+            pos (-113,866)
+
+        show lorem shy flip at left behind bangok_four_xipsum_bedroom_bed:
+            xoffset 100
+            yoffset -20
+            zoom 0.7
     with wipeleft
 
     show ipsum happy at right:
@@ -378,7 +389,7 @@ label bangok_four_xipsum_loremdone:
         m "Lorem hid behind Ipsum's bed, while Ipsum shut the bedroom door."
     else:
         m "Ipsum shut the bedroom door behind us."
-    Ip "Stand forward from there, unless you want your bare backside exposed to some dangerous chemicals."
+    Ip "Stand forward of the line there, unless you want your bare backside exposed to some dangerous chemicals."
     m "Turning around, I recognized the large, humming piece of equipment behind me as a fume hood, full of dozens of beakers and flasks."
     c "Oh, oops."
     show ipsum normal flip with dissolve
@@ -391,9 +402,10 @@ label bangok_four_xipsum_loremdone:
     Ip think flip "Yes. Is that a problem?"
     m "I shrugged."
     c "You do you."
+    $ renpy.pause(0.8)
     show ipsum happy bangok with dissolve
     Ip "Actually, I believe now I do you."
-    m "Ipsum had turned around from his desk, revealing twin penises already sheathed in condoms."
+    m "Ipsum had turned around from his desk, revealing twin penises now sheathed in condoms."
     menu:
         "Oh my.":
             python in bangok_four_xipsum:
@@ -405,7 +417,199 @@ label bangok_four_xipsum_loremdone:
             c "Yeah, I think it's pretty much unheard of."
             Ip normal bangok "Well, in dragon society it's a little rare, but hardly uncommon."
 
+    if bangok_four_xipsum.loremin:
+        show lorem sad flip with dissolve
+        if bangok_four_xipsum.playerhasdick:
+            m "He tossed a condom packet across the bed to Lorem with a flick of the wrist, then proffered one to you."
+        else:
+            m "He tossed a condom packet across the bed to Lorem with a flick of the wrist."
+
+        Ip think bangok "Now, how you're okay with Lorem interacting with you is going to limit exactly what positions we can do."
+        Ip normal bangok "What do you think?"
+        show lorem think flip with dissolve
+        menu:
+            "Sucking me?" if bangok_four_xipsum.playerhasdick:
+                python in bangok_four_xipsum:
+                    renpy.pause(0.5)
+                    fuckeraction = "oral"
+                    fuckertarget = "cock"
+                Lo think flip "Alright, I can do that."
+                Ip happy bangok "I can confirm that statement."
+                Lo shy flip "H-Hey!"
+            "Eating me out?":
+                python in bangok_four_xipsum:
+                    renpy.pause(0.5)
+                    fuckeraction = "oral"
+                    if playerhasdick == True:
+                        fuckertarget = "ass"
+                Lo "I'm relatively inexperienced at that, but I can try. Are you sure?"
+                Lo normal flip "Ipsum's a lot better at it."
+                $ renpy.pause(0.5)
+                Lo shy flip "Er, I mean..."
+                menu:
+                    "How would you know, Lorem?":
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xipsum.mood -= 1
+                        Ip happy bangok "We're roommates. He's merely heard the reviews from my other satisfied customers."
+                        c "Wait, you sell yourself out as a business?"
+                        Lo relieved flip "That was a joke, [player_name]."
+                        c "Oh."
+                        menu:
+                            "Sounds like I'm good practice, then.":
+                                jump bangok_four_xipsum_loremin_eatout_loremstart
+                            "In that case, maybe Ipsum should start there.":
+                                jump bangok_four_xipsum_loremin_eatout_ipsumstart
+                    "Sounds like I'm good practice, then.":
+                        label bangok_four_xipsum_loremin_eatout_loremstart:
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xipsum.mood += 1
+                        Lo shy flip "Oh. Okay."
+                        Ip think flip "Let me get you two a dental dam, then."
+                    "In that case, maybe Ipsum should start there.":
+                        label bangok_four_xipsum_loremin_eatout_ipsumstart:
+                        $ renpy.pause(0.5)
+                        Lo sad flip "Oh. Alright."
+                        Ip think flip "Let me get out a dental dam, then."
+                        jump todo_out_of_content
+            "First fuck?":
+                $ bangok_four_xipsum.fuckeraction = "fuck"
+                $ renpy.pause (0.5)
+                if bangok_four_firsttime == True:
+                    c "What do you think, Lorem? Want to be the very first dragon to fuck a human?"
+                    show lorem shy flip with dissolve
+                    Ip think bangok "You mean you haven't done this with other dragons, yet?"
+                    Ip happy bangok "Intriguing."
+                    $ renpy.pause(0.5)
+                    Lo happy flip "You'd let me do that?"
+                    Lo shy flip "Nobody will believe me."
+                    Ip normal bangok "You will have two witnesses able to attest to the fact."
+                    Lo normal flip "W-Wow. Okay."
+                else:
+                    c "What do you think, Lorem? Want to fuck a human before Ipsum does, for the bragging rights?"
+                    Lo shy flip "O-Oh?"
+                    Lo normal flip "Okay."
+                jump bangok_four_xipsum_loremin_firstfuck
+            "Train?":
+                python in bangok_four_xipsum:
+                    renpy.pause(0.5)
+                    fuckeraction = "fuck"
+                    train = True
+                c "You both want a piece of me, right? Why don't I just lie back and let the two of you have at it? Whatever order you'd like?"
+                if bangok_four_firsttime == True:
+                    c "Either way, you two are about to be the first two dragons to fuck a human."
+                    show lorem shy flip with dissolve
+                    Ip think bangok "You mean you haven't done this with other dragons, yet?"
+                    Ip happy bangok "Intriguing."
+                Ip happy bangok "Works for me."
+                scene bangok_four_xipsum_bedroom ceiling:
+                    alignaround (0,0)
+                    pos (0, -456)
+                    ease 3.0 pos (-128,0)
+                with dissolve
+                $ renpy.pause(2.0)
+                Ip normal "Lorem, would you like to do the honors?"
+                Lo shy "M-Me?"
+                Ip happy "Of course. I wouldn't want to stand in the way of one of your rare instances of sexual conquest."
+                Ip think "I am also larger than you, so if we want to ease [player_name] into this..."
+                Lo think "Alright."
+                jump bangok_four_xipsum_loremin_firstfuck_loremclimbs
+            "Shouldn't Lorem choose?":
+                python in bangok_four_xipsum:
+                    renpy.pause(0.5)
+                    fuckeraction = "fuck"
+                $ bangok_four_xipsum.mood += 1
+                c "I'm just saying. Of the three of us, he's the most nervous. So... whatever makes him comfortable, right?"
+                Lo shy flip "I..."
+                Ip happy "Whatever you want, Lorem."
+                Ip normal "Within reason, of course."
+                show lorem sad flip with dissolve
+                $ renpy.pause(0.8)
+                Lo think flip "I guess... if you're offering..."
+                Lo shy flip "Can I... your, ah..."
+                if bangok_four_xipsum.playerhasdick == True:
+                    $ bangok_four_xipsum.fuckertarget = "ass"
+                    Lo "... ass?"
+                else:
+                    $ bangok_four_xipsum.fuckertarget = "vag"
+                    Lo "... vagina?"
+                c "Sure."
+
+        label bangok_four_xipsum_loremin_firstfuck:
+            scene bangok_four_xipsum_bedroom ceiling:
+                alignaround (0,0)
+                pos (0, -456)
+                ease 3.0 pos (-128,0)
+            with dissolve
+            $ renpy.pause(2.0)
+        label bangok_four_xipsum_loremin_firstfuck_loremclimbs:
+            show lorem shy at Position(yanchor='top',ypos=1080-195):
+                yanchor 0.0
+                ypos (1080-200)
+                zoom 1.5
+            with easeinbottom
+            m "I felt Lorem's warm scales and leathery wings as he scaled the bed between my legs. Even with me on the bed, thighs spread for him, he still seemed to hesitate."
+            if bangok_four_xipsum.playerhasdick == True:
+                if persistent.bangok_cloacas == True:
+                    Lo "W-wait, your penis doesn't come out of a hole where your..."
+                    Ip "That was implied by the external scrotum, yes."
+                    Lo "Huh."
+                else:
+                    $ renpy.pause(0.8)
+                    c "I wouldn't be lying on the bed if I didn't want this."
+                    show lorem sad with dissolve
+                    $ renpy.pause(0.5)
+                    Lo normal "Okay."
+            else:
+                Lo "W-wait, you have two holes down here. Which one should I be...?"
+                if bangok_four_xipsum.fuckertarget == "vag":
+                    c "My vagina is the one in front."
+                    Lo "O-Oh."
+                else:
+                    menu:
+                        "Lady bits.":
+                            python in bangok_four_xipsum:
+                                renpy.pause(0.5)
+                                fuckertarget = "vag"
+                            c "The one toward my front."
+                        "Ass.":
+                            python in bangok_four_xipsum:
+                                renpy.pause(0.5)
+                                fuckertarget = "ass"
+                            c "The one toward my back."
+                Lo "O-Okay."
+            m "Lorem's stubby claws were much colder than his hands, like icy pinpricks on my thighs."
+            play sound "fx/slide.ogg"
+            show bangok_four_xipsum_bedroom:
+                alignaround (0,0)
+                pos (-128, 0)
+                easeout 0.4 pos (-128,-50)
+            with None
+            m "Before he could begin, Ipsum tugged the bed away from the wall."
+            show ipsum normal flip:
+                zoom 1.8
+                alignaround (0.5,0.5)
+                rotate 90
+                ypos -0.5
+                xpos -1000
+            with easeinleft
+            Ip "Your mouth won't be occupied while he's down there, will it?"
+            menu:
+                "One at a time, please.":
+                    python in bangok_four_xipsum:
+                        renpy.pause(0.5)
+                        suckingipsum = False
+                    Ip think "If you insist."
+                    hide ipsum with easeoutleft
+                "I suppose you might occupy it...":
+                    python in bangok_four_xipsum:
+                        renpy.pause(0.5)
+                        mood += 1
+                        suckingipsum = True
+                    show ipsum happy flip with dissolve
+                    $ renpy.pause(0.5)
+                    show black with dissolvemed
 
 
+label todo_out_of_content:
 s "TODO: OUT OF CONTENT."
 $ renpy.error("TODO: Out of content.")

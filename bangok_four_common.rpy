@@ -1,4 +1,5 @@
 init:
+    # Settings menu
     screen bangok_modsettings tag smallscreen2:
         modal True
         window id "bangok_modsettings" at popup2:
@@ -91,11 +92,17 @@ init:
 
             imagebutton idle "image/ui/close_idle.png" hover "image/ui/close_hover.png" action [Hide("my_cool_screen"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")] hovered Play("audio", "se/sounds/select.ogg") style "smallwindowclose" at nav_button
 
-    
+    # Locations
     image bangok_four_bryce1_apartment night = "bg/in/apts/pad_night.png"
     image bangok_four_bryce1_apartment night ceiling = "bg/in/apts/pad_night_ceil.png"
-    image bangok_four_xipsum_bedroom = "bg/in/apts/ipsum_bedroom.png"
 
+
+    image bangok_four_xipsum_bedroom normal = "bg/in/apts/ipsum_bedroom.png"
+    image bangok_four_xipsum_bedroom_bed = "bg/in/apts/ipsum_bedroom_bed.png"
+    image bangok_four_xipsum_bedroom ceiling = "bg/in/apts/ipsum_bedroom_ceiling.png"
+
+
+    # People
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
     image bangok_four_bryce_underside_large dk flip = im.Recolor(im.Flip("cr/bryce_underside_large.png",horizontal=True), 70, 70, 100, 255)
 
@@ -138,8 +145,6 @@ init:
 
     image lorem bangok hidepeek = "cr/lorem_bangok_hidepeek.png"
     image lorem bangok hidepeek flip = im.Flip("cr/lorem_bangok_hidepeek.png",horizontal=True)
-
-    image lorem bangok bedcut = "cr/lorem_bangok_bedcut.png"
 
     image ipsum normal bangok = im.Composite(
         (650,800),
