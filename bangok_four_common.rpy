@@ -101,6 +101,8 @@ init:
     image bangok_four_xipsum_bedroom_bed = "bg/in/apts/ipsum_bedroom_bed.png"
     image bangok_four_xipsum_bedroom ceiling = "bg/in/apts/ipsum_bedroom_ceiling.png"
 
+    # CGs
+    image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
     # People
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
