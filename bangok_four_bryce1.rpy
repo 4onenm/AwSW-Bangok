@@ -1353,6 +1353,15 @@ label bangok_four_bryce1_m2:
                 else:
                     m "I let his cock pop free of my lips, swallowing the thick cream accumulated in every nook and cranny of my mouth.{w=0.5} Then, taking his shaft in hand, I began to lick at some of what I'd left stuck to his tip."
 
+                if persistent.bangok_knot == True:
+                    m "While he'd cum, a bulge had emerged near the base of his cock, one I hadn't noticed in the heat of the moment."
+                    menu:
+                        "[[Squeeze it.]":
+                            Br laugh dk flip "H-Hey!"
+                            Br smirk dk flip "A bit soon to try to get me going again."
+                        "[[Leave it.]":
+                            pass
+
                 show bryce smirk dk flip with dissolve
                 if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "after":
                     c "Got anything to wash this down with?"
@@ -2532,6 +2541,17 @@ label bangok_four_bryce1_m2:
                             "[[Take it off.]":
                                 m "I pinched off his condom near the tip, then took the ring at the base and slid the whole thing off. The smell of cum was thick."
                                 m "Tying it off, I set the condom out of the way, where it wouldn't be stepped on."
+
+                        if persistent.bangok_knot == True:
+                            m "While he'd cum, a bulge had emerged near the base of his cock, one I hadn't noticed in the heat of the moment."
+                            menu:
+                                "[[Squeeze it.]":
+                                    Br laugh dk "H-Hey!"
+                                    Br smirk dk "A bit soon to try to get me going again."
+                                "[[Leave it.]":
+                                    pass
+
+
                         jump bangok_four_bryce1_bothdone
 
 
