@@ -337,7 +337,7 @@ label bangok_four_bryce1_f:
     menu:
         "Fuck yes.":
             $ brycemood += 1
-            pass
+            jump bangok_four_bryce1_f_fuck
         "Mm. Actually...":
             show bryce brow dk with dissolve
             $ bangok_four_bryce1_m2_size = True
@@ -349,13 +349,269 @@ label bangok_four_bryce1_f:
                 "I want you in my ass.":
                     jump bangok_four_bryce1_analbot
                 "I want your tongue in me.":
-                    $ renpy.error("TODO: Unwritten.")
+                    Br flirty dk "Sure. But turnabout is fair play."
+                    jump bangok_four_bryce1_f_tonguefuck
                 "I'm not sure I can fit you." if bangok_four_bryce1_m2_fit:
                     call bangok_four_bryce1_m2_fit from bangok_four_bryce1_f_menu_fit
                     jump bangok_four_bryce1_f_menu
                 "Okay, sure. Fuck me.":
                     show bryce smirk dk with dissolve
+                    jump bangok_four_bryce1_f_fuck
+
+label bangok_four_bryce1_f_tonguefuck:
+    call bangok_four_bryce1_position("oraltop")
+    show bryce flirty dk with dissolve
+    show bryce at Position(ypos=1.3) with ease
+    show bryce at Position(ypos=1.5) with ease
+    m "Bryce got low in front of my crotch, hot breath washing over my dampening lips."
+    menu:
+        "W-Wait! Protection!":
+            $ brycemood -= 1
+            show bryce brow dk at Position(ypos=1.3) with ease
+            Br "Are you kidding me?"
+            c "We don't know what my stuff might do to you."
+            Br stern dk "Well, I've got some bad news for you. Oral so rarely causes complications for anyone here, I don't buy dental dams."
+            Br "Ones my size aren't exactly cheap anyway."
+            m "I paused a moment, considering my options."
+            menu:
+                "Fuck it. Eat me anyway.":
+                    Br brow dk "You're sure?"
+                    c "Yeah."
+                    Br smirk dk "You got it."
+                    show bryce at Position(ypos=1.5) with ease
+                    show bryce flirty dk
+                "Skip this, then. I want you in my ass.":
+                    $ bangok_four_bryce1_position_picka = "analbot"
+                    Br smirk dk "Alright. I've got condoms over there. Top drawer."
+                    jump bangok_four_bryce1_analbot_fetchcondom
+                "Skip this, then. I want you in my cunt.":
+                    $ bangok_four_bryce1_position_picka = "vag"
+                    Br smirk dk "Alright. I've got condoms over there. Top drawer."
+                    jump bangok_four_bryce1_f_fuck_getprotection
+                "Maybe I'll suck you instead.":
+                    $ bangok_four_bryce1_position_picka = "oralbot"
+                    Br flirty dk "Oh?"
+                    play sound "fx/cartslide.ogg"
+                    show bryce normal dk at Position(xpos=0.4,xanchor='center') with dissolve
+                    show bryce at Position(xpos=0.45,xanchor='center',ypos=1.05) with ease
+                    m "Bryce settled back on the couch, bunching the rug and tugging the coffee table as his tail caught for a moment."
+                    m "He splayed one hindleg out, giving me easy access to his shaft from beside the couch."
+                    Br smirk dk "Alright. I've got condoms over there. Top drawer."
+                    jump bangok_four_bryce1_oralbot_getprotection
+        "[[Enjoy.]":
+                pass
+    show bryce at Position(ypos=1.51) with ease
+    m "Pressing forward, Bryce opened his maw wide, surrounding my crotch as his tongue aimed for my love canal."
+    m "The abrupt feeling of tongue and pinpricks of teeth was too much. I stumbled back, tripping and falling on the edge of the rug."
+    play sound "fx/impact3.ogg"
+    show bryce brow dk at Position(ypos=1.2)
+    show bangok_four_bryce1_apartment night at Pan((0,120), (0,120), 0.0)
+    with vpunch
+    Br "Whoops."
+    c "Ow."
+    Br "You okay?"
+    c "Yeah."
+    show bryce normal dk at Position(ypos=1.2)
+    show bangok_four_bryce1_apartment night at Pan((0,360), (0,360), 0.0)
+    with ease
+    m "Picking myself up, I looked around the room for something to brace against for our next try."
+    menu:
+        "Wall.":
+            $ bangok_four_bryce1_oralspot = "wall"
+            c "Here, up against the wall."
+            Br smirk dk "If you say so."
+            m "I leaned back against the wall slightly, spreading my legs to give Bryce easy access to my groin."
+            $ renpy.pause (0.3)
+        "Couch.":
+            $ bangok_four_bryce1_oralspot = "couch"
+            c "Here, what if I sit on your couch?"
+            $ renpy.pause (0.5)
+            Br brow dk "A little further forward. I don't want my chin horn tearing my cushions."
+            $ renpy.pause (0.3)
+    Br flirty dk "Alright. Now to see what a human tastes like."
+    show bryce smirk dk at Position(ypos=1.3) with ease
+    show bryce smirk dk at Position(ypos=1.5) with ease
+    $ renpy.pause(0.3)
+    m "Bryce nestled between my legs, the scales on his snout rubbing against my thighs."
+    m "The cold air of the room was, in my crotch, replaced with warmth as he exhaled."
+    show bryce smirk dk at Position(ypos=1.51) with ease
+    m "He opened his mouth again, doing a better job of keeping his teeth from my skin. I shuddered as his long tongue rubbed over my vaginal lips."
+    c "W-Wow."
+    show bryce flirty dk with dissolve
+    $ renpy.pause(0.3)
+    show bryce flirty dk at Position(ypos=1.52) with ease
+    m "He dug deeper in, shoving his tongue into my private spaces and tasting around."
+    m "His scaly lips rubbed my thighs and belly, the sharp points of his teeth just ghosting behind."
+    if bangok_four_bryce1_oralspot == "couch":
+        m "The pallete of sensations and hint of danger had my lower body numb and limp, sliding a little further out on his couch and onto his eager tonguefucking."
+    else:
+        m "The pallete of sensations and hint of danger had my legs weak, letting me slide a little further down the wall onto his eager tonguefucking."
+
+    if persistent.bangok_watersports == True:
+        m "As his tongue pulled forward and up, exploring toward the top of my lips, I felt a pouch of fluid within me compress, then begin to spill out into his mouth."
+        play soundloop "fx/faucet1.ogg" fadein 1.0
+        queue soundloop "fx/faucet2.ogg"
+        show bryce brow dk with dissolve
+        c "O-Oh fuck, Bryce I--"
+        show bryce laugh dk with dissolve
+        play sound "fx/gulping.wav"
+        m "I couldn't stop once I'd started. My cheeks flushed with embarassment. I was sure Bryce could tell what was going on, yet he continued to tonguefuck me, gulping down what I was pissing out."
+        stop soundloop fadeout 1.5
+        stop sound fadeout 0.5
+        $ renpy.pause (1.5)
+        m "Only when I was completely done did he withdraw his tongue, rising to give me a wink."
+        show bryce flirty dk with dissolve
+        show bryce at Position(ypos=1.4) with ease
+        Br smirk dk "I have sex with drinking buddies all the time. You think you're the first one who's pissed in me?"
+        Br flirty dk "My tongue might even fit up there. Mind if I...?"
+        # Just gonna borrow bangok_four_bryce1_wstiming != None here because it's no big deal. I'm sure I'll remember to set it back. :bryce_laugh:
+        menu:
+            "[[Let Bryce into your urethra.]":
+                $ bangok_four_bryce1_wstiming = "before"
+                c "I... sure."
+                show bryce at Position(ypos=1.5) with ease
+                m "Bryce sank back down to my crotch, hot breath meeting my flushed skin as his tongue poked around my vaginal entrance, looking for the smaller hole he wanted."
+                m "I shuddered, electric sparks of pleasure dancing up my belly as he teased my clit."
+                m "Then he found my pisshole."
+                c "O-OH!"
+                m "The fullness in my crotch was an altogether different kind as his tongue stretched wide a hole not meant for stretching."
+            "[[Refuse.]":
+                show bryce brow dk with dissolve
+                c "In humans, that's a Urinary Tract Infection waiting to happen. Is that more common among dragons?"
+                Br "Quite a bit, yes. What's a...?"
+                show bryce stern dk with dissolve
+                $ renpy.pause (0.3)
+                m "He shook his head."
+                Br normal dk "Oh well."
+                show bryce at Position(ypos=1.5) with ease
+                m "Giving me just a moment to prepare, Bryce dove back into my crotch."
+
+    show bryce laugh dk with dissolve
+    m "I arched my back, lost in what he was doing to my lower body. He carefully pressed even deeper, wet maw mating up against my lower body as he devoted as much tongue as he could inside me."
+
+
+    if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming is not None:
+        m "The feeling of needing to pee returned as his tongue easily wormed through my bladder's entrance, tasting me where no human could ever go."
+        c "(I need to piss a dragon's tongue. Oh this is incredible.)"
+    else:
+        c "Ah!"
+        m "My entire belly twinged, electrified as the tip of his tongue just barely flicked my cervix, the inner gate to my womb."
+    
+    if bangok_four_bryce1_oralspot == "wall":
+        m "I slid a little further down the wall, getting so incredibly close. I wanted him just a little deeper."
+    else:
+        m "I was almost beyond conscious thought. I was so close, I just needed him a little deeper."
+    menu:
+        "[[Grab his horns.]":
+            $ bangok_four_bryce1.hornincident = True
+            $ brycemood -= 2
+            if bangok_four_bryce1_oralspot == "couch":
+                play sound ["fx/hit2.ogg", "fx/cartdown.ogg"]
+                show bryce stern dk at Position(ypos=1.3) with vpunch
+                m "Bryce jerked, yanking his tongue from inside me before slamming his nose into my stomach, shaking the couch. It was only luck that I wasn't cut by one of his teeth or by his nose horn."
+            else: # bangok_four_bryce1_oralspot == "wall":
+                play sound ["fx/hit2.ogg", "fx/impact3.ogg"]
+                show bryce stern dk at Position(ypos=1.3) with vpunch
+                m "Bryce jerked, yanking his tongue from inside me before slamming his nose into my stomach, crushing me against the wall. It was only luck that I wasn't cut by one of his teeth or by his nose horn."
+            c "F- Fuck!"
+            $ renpy.pause (1.2)
+            m "I shuddered as he glared at me, my near-orgasm ebbing slowly as my groin remained flushed with heat."
+            c "Okay, don't touch the horns. Got it."
+            Br brow dk "No. Do. But {i}tell{/i} me. That's a delicate spot for us. Something yanking our horns the wrong way could tear them off our skull."
+            c "I don't think I'm that strong."
+            Br stern dk "Neither do I. But I'm still going to respond if I'm not expecting that."
+            m "After a moment longer of stern look, Bryce sank back down between my thighs."
+            show bryce at Position(ypos=1.5) with ease
+            show bryce laugh dk with dissolve
+
+            if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming is not None:
+                m "He found my urethra again easily. The feeling of him sliding in a second time, un-pissing through my already stretched urethra, pushed me right back to where I had been and even a moment closer."
+            else:
+                m "His tongue slithered inside me again. It snaked around, sampling my arousal from my walls, but it wasn't as deep as it had been -- it wasn't at my womb's gate, like no human tongue ever could be."
+            menu:
+                "C-Can I grab your...":
+                    $ brycemood += 1
+                    m "His brief affirmative hum was all the approval I needed. I grabbed his horns, pulled his face and tongue just that little bit deeper, and came."
+                "[[Push downward.]":
                     pass
+        "[[Push downward.]":
+            pass
+
+    show black with fadequick
+    if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming is not None:
+        m "My empty love channel spasmed, juices of my arousal dripping down into the bottom of his maw as he speared my bladder on his tongue."
+        hide black with dissolveslow
+        m "He withdrew slowly, cautious not to cause any pain in my urethra now that my arousal was mostly drained. Even still the sensation left me a squirming mess."
+        m "Then he slipped back into my vagina, licking up my juices."
+    else:
+        m "My love canal clenched around his tongue, milking his saliva as his tip once again made that cervical kiss."
+        hide black with dissolveslow
+        m "He remained at that depth a long moment, spasms inside of me prodding my cervix against his tongue again and again."
+        m "Then he withdrew to lesser depths, licking up the fresh vaginal juices from my orgasm."
+    c "C-Careful. I might... might still..."
+    show bryce flirty dk with dissolve
+    show bryce normal dk at Position(ypos=1.3) with ease
+    m "Shooting me a wink, he withdrew completely."
+    
+    if bangok_four_bryce1_oralspot == "wall":
+        m "My legs could barely hold me up against the wall. My mind was a scattered mess."
+    else: # couch
+        m "I slumped back against the couch, momentarily completely spent."
+
+    m "A thin half-circle of red pinpricks circled my belly just over my navel, small scratches from the points of his teeth."
+
+    show bryce brow dk with dissolve
+    show bryce at center with ease
+    Br "You okay?"
+
+    menu:
+        "I'm never getting tongue from a human again.":
+            Br stern dk "What? What's wrong?"
+            c "That... that was incredible."
+            $ brycemood += 1
+            Br flirty dk "Oh."
+            $ renpy.pause (0.5)
+            Br smirk dk "You going to be able to get up?"
+            c "Might take me a moment."
+        "Wh- You bit me!":
+            $ brycemood -= 2
+            Br stern dk "I did not bite down. You drove your crotch into my teeth."
+            Br brow dk "I was doing my best to keep you safe from my them, but there was only so much I could do."
+        "Recovering.":
+            pass
+    m "Catching my breath, I struggled up."
+    $ bangok_four_bryce1_wstiming = None
+
+    Br smirk dk "Now, I believe it's my turn?"
+    label bangok_four_bryce1_f_preciprocity_menu:
+    menu:
+        "Oh, fuck me.":
+            jump bangok_four_bryce1_f_fuck
+        "Yep. Time for me to taste you.":
+            jump bangok_four_bryce1_oralbot
+        "Take my ass.":
+            jump bangok_four_bryce1_analbot
+        "Handjob okay?":
+            jump bangok_four_bryce1_hand
+        "I'm not sure I can fit you." if bangok_four_bryce1_m2_fit:
+            call bangok_four_bryce1_m2_fit from bangok_four_bryce1_f_preciprocity_menu_fit
+            jump bangok_four_bryce1_f_preciprocity_menu
+        "I... think I'm done.":
+            Br brow dk "Excuse me?"
+            c "I'm..."
+            $ renpy.pause (0.8)
+            c "I think I'm going to pass out now."
+            Br stern dk "Hey!"
+            scene black with fade
+            play sound "fx/impact3.ogg"
+            jump bangok_four_bryce1_badmorning
+
+
+
+
+
+
+
 
 
 label bangok_four_bryce1_f_fuck:
@@ -381,6 +637,7 @@ label bangok_four_bryce1_f_fuck:
                     show bryce stern dk with dissolve
                     m "Bryce groaned, then gestured to a nearby chest of drawers."
                     Br "Top, I think. Just hurry up."
+                    label bangok_four_bryce1_f_fuck_getprotection:
                     play sound "fx/rummage.ogg"
                     m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one at random."
                     m "Tearing into the packaging, I returned with the necessary equipment and knelt to roll it down over his cock."
@@ -758,7 +1015,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
             play sound "fx/bubbles.ogg"
             c "Ah!"
             m "The condom burst, cum and piss rushing immediately to pack my tubes, saturating my womb, flooding my most sacred places with nothing but Bryce's fluids."
-            m "I looked clearly pregnant now, belly bulging upward with a blob of pure fluid and man meat."
+            m "I looked clearly pregnant now, belly bulging upward with a blob of fluid and man meat."
             $ bangok_four_bryce1_playerstuffed = True
 
     $ renpy.pause(0.8)
@@ -834,7 +1091,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
                         play sound "fx/bubbles.ogg"
                         c "Ah!"
                         m "The condom burst, cum and piss rushing immediately to pack my tubes, saturating my womb, flooding my most sacred places with nothing but Bryce's fluids."
-                        m "I looked clearly pregnant now, belly bulging upward with a blob of pure fluid and man meat."
+                        m "I looked clearly pregnant now, belly bulging upward with a blob of fluid and man meat."
                         Br sad dk "Sorry."
                 stop soundloop fadeout 1.0
                 menu:
@@ -879,7 +1136,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
             $ bangok_four_bryce1_playerstuffed = True
             m "I moaned, body numb but for the feeling of bryce pissing in my innermost temple until it was nothing but his urine."
         if persistent.bangok_inflation == True:
-            m "I looked clearly pregnant now, belly bulging upward with a blob of pure fluid and man meat."
+            m "I looked clearly pregnant now, belly bulging upward with a blob of fluid and man meat."
         
         stop soundloop fadeout 1.5
         m "Bryce worked his way back down to look me in the eyes."
@@ -1074,6 +1331,7 @@ label bangok_four_bryce1_m2:
                         show bryce stern dk with dissolve
                         m "Bryce groaned, then gestured at a chest of drawers in a corner."
                         Br "Top. I think. Just hurry up."
+                        label bangok_four_bryce1_oralbot_getprotection:
                         $ bangok_four_bryce1_protected = True
                         play sound "fx/rummage.ogg"
                         if bangok_four_bryce1.playerhasdick == True:
@@ -1505,6 +1763,7 @@ label bangok_four_bryce1_m2:
                         show bryce stern dk with dissolve
                         m "Bryce groaned, then gestured to a nearby chest of drawers."
                         Br "Top, I think. Just hurry up."
+                        label bangok_four_bryce1_analbot_fetchcondom:
                         $ bangok_four_bryce1_protected = True
                         play sound "fx/rummage.ogg"
                         if bangok_four_bryce1.playerhasdick == True:
@@ -2364,6 +2623,7 @@ label bangok_four_bryce1_m2:
 
 
                     "Handjob okay?":
+                        label bangok_four_bryce1_hand:
                         call bangok_four_bryce1_position("hand")
                         show bryce brow dk with dissolve
                         c "I'm just... you're a little large."
