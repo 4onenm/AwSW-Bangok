@@ -180,6 +180,13 @@ def xipsum(ml):
 
 
 
+def xkatsu(ml):
+    ( ml.find_label(katsuskip)
+        .search_if('persistent.playedkatsu == False')
+        .hook_to('bangok_four_xkatsu_wait', return_link = False)
+
+
+
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk?"
@@ -194,6 +201,7 @@ class BangOkMod(Mod):
         anna12(ml)
         bryce1_afterparty(ml)
         xipsum(ml)
+        xkatsu(ml)
 
     @staticmethod
     def mod_complete():
