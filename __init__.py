@@ -144,7 +144,7 @@ def xipsum(ml):
         .search_menu("Can I still talk?")
         .search_hide('meetingipsum')
         .search_menu("I see how it is.")
-        .add_choice("I could take them off...", jump='bangok_four_xipsum_takeemoff')
+        .add_choice("I could take them off...", condition='persistent.nsfwtoggle == True', jump='bangok_four_xipsum_takeemoff')
         .search_say("And my scientific curiosity shall remain unsatisfied.")
         .link_from('bangok_four_xipsum_unsatisfied')
         .search_say("We actually have a pretty big variety of \"vestments\". I could tell you about it.")
@@ -181,9 +181,10 @@ def xipsum(ml):
 
 
 def xkatsu(ml):
-    ( ml.find_label(katsuskip)
+    ( ml.find_label('katsuskip')
         .search_if('persistent.playedkatsu == False')
-        .hook_to('bangok_four_xkatsu_wait', return_link = False)
+        .hook_to('bangok_four_xkatsu', condition='persistent.nsfwtoggle == True', return_link = False)
+    )
 
 
 
