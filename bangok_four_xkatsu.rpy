@@ -479,7 +479,7 @@ label bangok_four_xkatsu_help:
             Ka normal "I don't buy the things. I get any customers of the same species as me, we just take a few more precautions."
             Ka smile "Not that that's a problem here."
             jump bangok_four_xkatsu_sexmenu
-        "I'm... not so keen on helping now." if bangok_four_xkatsu.protection == False:
+        "I'm... not so keen on helping now." if bangok_four_xkatsu.protection == False or bangok_four_xkatsu.playercame == True:
             jump bangok_four_xkatsu_wait
 
 
