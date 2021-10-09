@@ -177,4 +177,6 @@ init:
 init python:
     # First time per run, obv.
     bangok_four_firsttime = True
+    bangok_four_malepartners = 0
+    bangok_four_femalepartners = 0
     bangok_four_playerhasdick = None
