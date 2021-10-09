@@ -909,6 +909,16 @@ label bangok_four_xipsum_loremdone:
                 stop music fadeout 2.0
                 $ renpy.pause (0.8)
                 scene black with dissolveslow
+                $ renpy.pause (0.8)
+                nvl clear
+                window show
+                n "Ipsum took all the barriers and packed them away in a freezer with little paper labels while Lorem and I recovered."
+                n "Then he said something about a large lunch and left me and Lorem to make and consume our own dinner."
+                window hide
+                nvl clear
+                if renpy.has_label('loremEX2kitchen'):
+                    jump loremEX2kitchen
+                $ renpy.pause(1.0)
                 $ loremstatus = "good"
                 $ loremscenesfinished = 2
                 $ persistent.lorem2skip = True
