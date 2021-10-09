@@ -105,6 +105,12 @@ init:
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
     # People
+    image anna blush = "cr/anna_blush.png"
+    image anna orgasm = "cr/anna_orgasm.png"
+    image anna blushpalm = "cr/anna_blushpalm.png"
+    image anna lipbite = "cr/anna_lipbite.png"
+
+
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
     image bangok_four_bryce_underside_large dk flip = im.Recolor(im.Flip("cr/bryce_underside_large.png",horizontal=True), 70, 70, 100, 255)
 
