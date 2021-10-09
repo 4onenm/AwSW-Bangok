@@ -487,6 +487,7 @@ label bangok_four_xipsum_loremdone:
                 Ip sad bangok "Then stop saying hard \"t\"s with your teeth. Your tongue against the roof of your mouth can provide a similar glottal without risking the barrier."
             "First fuck?":
                 $ bangok_four_xipsum.fuckeraction = "fuck"
+                $ bangok_four_xipsum.fuckertarget = "ass" if bangok_four_xipsum.playerhasdick else "vag"
                 $ renpy.pause (0.5)
                 if bangok_four_firsttime == True:
                     c "What do you think, Lorem? Want to be the very first dragon to fuck a human?"
@@ -507,6 +508,7 @@ label bangok_four_xipsum_loremdone:
                 python in bangok_four_xipsum:
                     renpy.pause(0.5)
                     fuckeraction = "fuck"
+                    fuckertarget = "ass" if playerhasdick else "vag"
                     train = True
                 c "You both want a piece of me, right? Why don't I just lie back and let the two of you have at it? Whatever order you'd like?"
                 if bangok_four_firsttime == True:
