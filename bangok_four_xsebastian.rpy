@@ -55,8 +55,8 @@ label bangok_four_xsebastian_path2:
     hide black
     show sebastian shy b sleep dk
     with dissolveslow
-    m "I'm not sure how long I was out for, but I definitely managed at least a few winks."
-    m "Sebastian, behind me, is like a space heater, shifting a little in his sleep, squeezing me close."
+    m "I was not sure how long I was out for, but I definitely had managed at least a few winks."
+    m "Sebastian, behind me, was like a space heater, shifting a little in his sleep, squeezing me close."
     m "His arm had tugged up my shirt, and in the small of my back, something moist prodded me."
     menu:
         "[[Touch it.]":
@@ -66,7 +66,7 @@ label bangok_four_xsebastian_path2:
             m "Sebastian thrust back against my explorations, once, twice. Then he stiffened abruptly."
             m "I froze too, recognizing what I'd been doing tiptoed across the line of something wrong."
             $ renpy.pause (0.8)
-            show sebastian drop b dk with dissolve
+            show sebastian drop b flip dk with dissolve
             m "Sebastian rolled away, scrambling for a little distance."
             Sb "D-Damnit!"
             Sb "This is all my fault. I- I took what you were saying the wrong way and... I- I didn't mean..."
@@ -191,19 +191,202 @@ label bangok_four_xsebastian_path2_1_1:
             repeat
         play soundloop "fx/rub2.ogg" fadein 1.0
         m "Before long he was moving, fucking himself deeper onto my shaft."
-        m "I was all but lost in the sensations, but I didn't want this to be about just getting me off."
+        m "I was all but lost in the sensations, but I didn't want this to be about just him getting me off."
         menu:
             "[[Stroke him.]":
-                pass
+                $ renpy.pause(0.5)
+                m "It took me a moment to find in the dark even as it slapped against my stomach, but I managed to get my hand around Sebastian's dick. His up-and-down motions fucked it forward and backward in my grip, stimulating him for every motion he made."
+                m "Sebastian picked up his pace slightly, leaning forward into the sensations."
+                $ renpy.pause(1.2)
+                c "(If he cums, he's going to get it all over my only shirt.)"
+                m "With my free hand, I went at the buttons, trying to clear a runway for him to shoot into."
+                $ renpy.pause(0.8)
+                m "Before I could manage the highest buttons, Seb's clenching dragged me over my own peak."
+                show sebastian shy b dk:
+                    ease 0.3 ypos 1.1
+                with None
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                $ renpy.pause(0.2)
+                show black with fadequick
+                $ renpy.pause(1.0)
+                show sebastian smile b dk
+                hide black
+                with dissolvemed
+                m "When I came back down, Seb was still moving his hips a little, lightly fucking my hand as his ass milked me for every drop."
+                m "Now that he wasn't moving up and down, I could manage to give him more direct pumps with my hand."
             "[[Fuck him back.]":
-                pass
+                $ renpy.pause(0.5)
+                m "Reaching up, I got my hands onto his hips, pulling myself up and him further down with each thrust, so every one hilted me inside him and slapped his cock against my chest."
+                show sebastian shy b dk with dissolve
+                $ renpy.pause(0.8)
+                show sebastian smile b dk with dissolve
+                m "He kept up his pace, meeting my mating thrusts with all the same enthusiasm."
+                $ renpy.pause(1.2)
+                c "(If he cums, he's going to get it all over my only shirt.)"
+                m "I took one of my hands away, tugging at my buttons to try to clear a runway for him to shoot into."
+                $ renpy.pause(0.8)
+                m "Before I could manage the highest buttons, Seb's clenching dragged me over my own peak."
+                show sebastian shy b dk:
+                    ease 0.3 ypos 1.1
+                with None
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                $ renpy.pause(0.2)
+                show black with fadequick
+                $ renpy.pause(1.0)
+                show sebastian smile b dk
+                hide black
+                with dissolvemed
+                m "When I came back down, Seb was still moving his hips a little, frotting against my belly as his ass milked me for every drop."
+                m "I took his shaft in hand, pumping him in thanks for what he'd given me."
             "[[Kiss his hand.]":
-                pass
+                $ renpy.pause(0.5)
+                show sebastian shy b dk with dissolve
+                m "I caught his hand in the dark, tugging him slightly forward as I brought it and my lips together."
+                m "His heat immediately flooded the spot, and I had little doubt a flush would be visible there if either of us could see in the darkness."
+                $ renpy.pause(0.8)
+                m "I kissed his hand, again and again, practically suckling on his rough scales."
+                $ renpy.pause(0.9)
+                c "(If he cums, he's going to get it all over my only shirt.)"
+                m "With my free hand, I went at the buttons, trying to clear a runway for him to shoot into."
+                $ renpy.pause(0.8)
+                m "Before I could manage the highest buttons, Seb's clenching dragged me over my own peak."
+                show sebastian shy b dk:
+                    ease 0.3 ypos 1.1
+                with None
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                $ renpy.pause(0.2)
+                show black with fadequick
+                $ renpy.pause(1.0)
+                show sebastian smile b dk
+                hide black
+                with dissolvemed
+                m "When I came back down, Seb was still moving his hips a little, frotting against my belly as his ass milked me for every drop."
+                m "I took his shaft in hand, pumping him in thanks for what he'd given me."
+
+        m "Apparently, that was all the endurance he had left."
+        show sebastian shy b dk
+        $ renpy.pause(0.3)
+        play sound "fx/extinguish.ogg"
+        Sb "Ah!"
+        m "Sticky spurts splattered across my mostly-bare chest, hitting my pecs, my shirt collar, neck, and even stringing across my mouth."
+        m "I licked my lips, finding his cum sweeter than I understood humans' to be. I kept pumping, tugging more of the creamy treat onto my chest."
+        $ renpy.pause(0.8)
+        Sb drop b dk "S-Sorry. I didn't mean to get it all over your..."
+        c "I think you missed most of my shirt."
+        $ renpy.pause(0.8)
+        m "Sebastian's weight rested completely on me, my softening shaft still buried inside him. I gave one of his legs a pat with my hand that wasn't sticky with his cum."
+        c "You weren't kidding about those strong legs."
+        Sb shy b dk "Yeah..."
+        $ renpy.pause(1.2)
+        show sebastian shy b dk at Position(ypos=1.0) with ease
+        m "He pushed back to his feet in one easy motion, leaving my shaft to plop free."
+        Sb "... I just had a human cum inside me. I... I just came on a human."
     else:
         m "He found his target when one of his claws sank into my folds, up to his first knuckle, before he realized he was inside me. My small gasp made him pull back immediately."
+        Sb "I... You're sure you're okay with this?"
+        c "Absolutely."
+        $ renpy.pause (0.5)
+        m "Cautiously, he slid a single claw back into my folds, the rough scales on his hand leaving shivers in my thighs."
+        m "He searched up and down, exploring just barely inside. The icy surface of his claw brushed my clit. My legs tensed, fresh lubrication dribbling around his claw as I prepared for more."
+        if persistent.bangok_cloacas == True:
+            Sb drop b dk "Wait, your ass isn't in here too?"
+            c "No. It's further back."
+            Sb smile b dk "Hm."
+        else:
+            show sebastian smile b dk with dissolve
+        m "He slipped a second claw in with his first. The contrast between the one my body had warmed and the one that had been chilling outside sent fresh sparks of pleasure up my canal, and I moaned quietly."
+        show sebastian shy b dk with dissolve
+        $ renpy.pause (0.8)
+        c "No. Feel free to keep going."
+        Sb "I wanted to ask. May I... take you with..."
+        $ renpy.pause(0.5)
+        m "He needn't have asked; in my lust-addled state I was all for it."
+        c "Yes."
+        play sound "fx/undress.ogg"
+        m "I kicked my pants the rest of the way off one of my legs, giving him room to get in."
+        show sebastian at Position(xpos=0.5, ypos=1.1, xanchor='center') with ease
+        m "Sebastian climbed on top of me, the claws he'd prodded with leaving cold trails on my thighs as he spread me apart. Something wet poked just under the hem of my shirt, smearing a trail from my navel to my love passage as he tried to line up."
+        m "As soon as I felt his head against my lips, I pushed my hips onto it with what little leverage I had."
+        Sb drop b dk "Oh!"
+        show sebastian at Position(xpos=0.48, ypos=1.13) with ease
+        m "He slid in, his arousal and mine making the passage of his cock easy. I panted, sparks flying inside."
+        $ renpy.pause(0.8)
+        show sebastian at Position(xpos=0.45, ypos=1.15) with ease
+        m "After giving me a moment, Sebastian pushed further in, his slit pressing into my own. My legs spread wide to reach around his, rough scales against my smooth thighs."
+        $ renpy.pause(0.8)
+        show sebastian smile b dk:
+            ease 0.15 xpos 0.45 ypos 1.15
+            ease 0.5 xpos 0.48 ypos 1.13
+            repeat
+        play soundloop "fx/rub2.ogg" fadein 2.0
+        m "Seb began to move, pulling out to his tip then sliding back to his base."
+        $ renpy.pause(1.2)
+        if bangok_four_malepartners > 0:
+            m "I clenched around him, massaging his cock inside of me. His smooth, slick shaft was a completely different experience to anything I'd had before."
+        else:
+            m "I clenched around him, massaging his cock inside of me. His smooth, slick shaft was a completely different experience to anything but other dragons."
+        $ renpy.pause(1.3)
+        m "My peak crept up without warning."
+        c "I- I'm close--!"
+        $ renpy.pause(0.2)
+        show black with fadequick
+        m "My lower body squeezed, sucking and milking Sebastian for his seed even as he continued thrusting."
+        $ renpy.pause(0.5)
+        stop soundloop fadeout 0.5
+        play sound "fx/extinguish.ogg"
+        m "Warmth blossomed inside of me a moment later, as I dragged Seb over his peak with me."
+        show sebastian shy b sleep dk at Position(xpos=0.48, ypos=1.15)
+        hide black
+        with dissolveslow
+        $ renpy.pause(0.3)
+        if persistent.bangok_inflation == True:
+            m "His cock kept twitching, rope after rope spurting inside until it was spilling into my womb."
+            c "S-Seb!"
+            show sebastian smile b dk with dissolve
+            $ renpy.pause(0.4)
+            show sebastian shy b dk with dissolve
+            Sb "S-Shoot, S-sorry I--"
+            show sebastian at Position(xpos=0.5, ypos=1.1) with ease
+            m "He pulled back, remaining spurts coating my passage and outer lips, dribbling a pool between my thighs."
+            m "I put a hand on my warm belly, now slightly larger than it had been when we'd started."
+        else:
+            show sebastian smile b dk with dissolve
+            m "Sebastian smiled down at me, then realized what he'd done."
+            show sebastian shy b dk with dissolve
+            Sb "S-Shoot, S-sorry I--"
+            show sebastian at Position(xpos=0.5, ypos=1.1) with ease
+            m "He pulled back, the retreat of his cock leaving me colder and empty."
+        show sebastian at Position(xpos=0.6, ypos=1.1) with ease
+        Sb "Oh no. Nonono. What have I done?"
+        c "Hey, relax. We both wanted this. I can find a morning-after pill or something."
+        Sb drop b dk "I mean, most dragon species aren't genetically compatible. That's even more likely with the differences between my species and yours."
+        Sb shy b dk "But I can't get over the fact: I just came in a human."
+
+    c "Yep."
+    m "Before he could start to overthink it like when we'd woken up, I set a hand on his shoulder."
+    c "And you were adorable throughout."
+    $ renpy.pause(1.3)
+    Sb drop b dk "I'm not sure that's the word I want applying to my sexcapades."
+    c "Last I checked, we're not applying any words to it, because we're leaving it out of our reports."
+    Sb "R-Right."
+    $ renpy.pause (0.8)
+    show sebastian normal b dk:
+        xanchor 0.5
+        yanchor 1.0
+        zoom 1.7
+        xpos 0.8
+        ypos 1.4
+    with ease
+    m "After a moment, Sebastian lay back down next to me."
+    jump bangok_four_xsebastian_aftersex
 
 
-
+label bangok_four_xsebastian_aftersex:
+    s "TODO: Implement aftersex."
+    jump bangok_four_xsebastian_todaywasgreat_return
 
 
 
