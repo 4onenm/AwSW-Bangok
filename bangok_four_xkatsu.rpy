@@ -209,7 +209,7 @@ label bangok_four_xkatsu_help:
             m "Getting under his tail, I hoisted it and his hindquarters up."
             c "We have a saying in our world: It's not your size, it's how you use it."
             Ka smile "Didn't say we couldn't try it."
-            if persistent.bangok_cloacas == True and bangok_four_firsttime == True:
+            if persistent.bangok_cloacas == True and bangok_four_malepartners + bangok_four_femalepartners < 1:
                 $ renpy.pause (0.8)
                 m "Looking down at Katsuharu's rear under his tail, I quickly realized a problem."
                 c "Uh. Where {i}is{/i} your ass?"
@@ -248,6 +248,7 @@ label bangok_four_xkatsu_help:
             c "That's... me."
             Ka normal "Mm. Well if you did a bit more of that, you might have a chance."
             $ bangok_four_xkatsu.whatcum = True
+            $ bangok_four_malepartners += 1
             label bangok_four_xkatsu_assfuckmenu:
             menu:
                 "[[Stroke him.]":

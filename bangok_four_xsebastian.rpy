@@ -815,6 +815,7 @@ label bangok_four_xsebastian_path2_1_1:
 
 
 label bangok_four_xsebastian_aftersex:
+    $ bangok_four_malepartners += 1
     # TODO: Real aftersex
     $ renpy.pause (2.0)
     Sb smile b dk "That was..."

@@ -199,8 +199,6 @@ init:
     image sebastian shy b sleep dk = im.Recolor("cr/sebastian_shy_b_sleep.png", 70, 70, 100, 255)
 
 init python:
-    # First time per run, obv.
-    bangok_four_firsttime = True
     bangok_four_malepartners = 0
     bangok_four_femalepartners = 0
     bangok_four_playerhasdick = None

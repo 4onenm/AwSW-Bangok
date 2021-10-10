@@ -6,6 +6,8 @@ init python in bangok_four_xipsum:
     # Player has a dick or a vagina. Sorry Lorems of the world.
     playerhasdick = None
 
+    loremfirst = False
+
     loremin = False
     fuckertarget = None
     fuckeraction = None
@@ -489,7 +491,7 @@ label bangok_four_xipsum_loremdone:
                 $ bangok_four_xipsum.fuckeraction = "fuck"
                 $ bangok_four_xipsum.fuckertarget = "ass" if bangok_four_xipsum.playerhasdick else "vag"
                 $ renpy.pause (0.5)
-                if bangok_four_firsttime == True:
+                if bangok_four_malepartners + bangok_four_femalepartners < 1:
                     c "What do you think, Lorem? Want to be the very first dragon to fuck a human?"
                     show lorem shy flip with dissolve
                     Ip think bangok "You mean you haven't done this with other dragons, yet?"
@@ -499,6 +501,7 @@ label bangok_four_xipsum_loremdone:
                     Lo shy flip "Nobody will believe me."
                     Ip normal bangok "You will have two witnesses able to attest to the fact."
                     Lo normal flip "W-Wow. Okay."
+                    $ bangok_four_xipsum.loremfirst = True
                 else:
                     c "What do you think, Lorem? Want to fuck a human before Ipsum does, for the bragging rights?"
                     Lo shy flip "O-Oh?"
@@ -511,11 +514,12 @@ label bangok_four_xipsum_loremdone:
                     fuckertarget = "ass" if playerhasdick else "vag"
                     train = True
                 c "You both want a piece of me, right? Why don't I just lie back and let the two of you have at it? Whatever order you'd like?"
-                if bangok_four_firsttime == True:
+                if bangok_four_malepartners + bangok_four_femalepartners < 1:
                     c "Either way, you two are about to be the first two dragons to fuck a human."
                     show lorem shy flip with dissolve
                     Ip think bangok "You mean you haven't done this with other dragons, yet?"
                     Ip happy bangok "Intriguing."
+                    $ bangok_four_xipsum.loremfirst = True
                 Ip happy bangok "Works for me."
                 scene bangok_four_xipsum_bedroom ceiling:
                     alignaround (0,0)
@@ -558,6 +562,7 @@ label bangok_four_xipsum_loremdone:
             with dissolve
             $ renpy.pause(2.0)
         label bangok_four_xipsum_loremin_firstfuck_loremclimbs:
+            $ bangok_four_malepartners += 2
             show lorem shy at Position(yanchor='top',ypos=1080-195):
                 yanchor 0.0
                 ypos (1080-200)
@@ -778,7 +783,7 @@ label bangok_four_xipsum_loremdone:
                 c "Sh- Shoot. Lorem, are you okay?"
                 Lo sad "Yeah. But that was... that was a bit much."
                 c "..."
-                if bangok_four_firsttime == True:
+                if bangok_four_xipsum.loremfirst == True:
                     c "Well, congratulations on being the first dragon to tonguefuck a human to orgasm."
                     Lo shy "O- Oh?"
                     Lo "I don't know if that's a title I needed in my life."
@@ -833,7 +838,7 @@ label bangok_four_xipsum_loremdone:
                         Lo relieved "Sorry."
                         Lo sad "I don't often..."
                         Lo relieved "..."
-                if bangok_four_firsttime == True:
+                if bangok_four_xipsum.loremfirst == True:
                     c "Well, with that you're officially the first dragon to fuck a human."
                     Lo shy "... Wow."
                     $ renpy.pause (1.0)
@@ -939,6 +944,7 @@ label bangok_four_xipsum_loremdone:
             m "He handed me a condom packet of my own."
         Ip normal bangok "I know you've been standing a while. Why not lie down? I still have to get a tray set up for barrier disposal."
         c "Sure."
+        $ bangok_four_malepartners += 1
         scene bangok_four_xipsum_bedroom ceiling:
             alignaround (0,0)
             pos (0, -456)

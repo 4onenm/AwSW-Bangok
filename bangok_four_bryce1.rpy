@@ -312,7 +312,7 @@ label bangok_four_bryce1_apartment:
 
     play sound "fx/undress.ogg"
     m "I struggled out of my clothes as fast as my lust-drunk state would allow."
-    if bangok_four_firsttime == True:
+    if bangok_four_malepartners + bangok_four_femalepartners < 1:
         c "(Is this really happening? Am I really going to fuck a dragon?)"
     show bryce at Position(ypos=1.1) with ease
     m "Bryce rolled his lower body onto its side, revealing the worryingly large shaft emerging between his legs."
@@ -336,6 +336,7 @@ label bangok_four_bryce1_f:
     Br smirk dk "Want to keep things simple and just go for it?"
     menu:
         "Fuck yes.":
+            $ bangok_four_malepartners += 1
             $ brycemood += 1
             jump bangok_four_bryce1_f_fuck
         "Mm. Actually...":
@@ -345,16 +346,20 @@ label bangok_four_bryce1_f:
             label bangok_four_bryce1_f_menu:
             menu:
                 "I want to taste you.":
+                    $ bangok_four_malepartners += 1
                     jump bangok_four_bryce1_oralbot
                 "I want you in my ass.":
+                    $ bangok_four_malepartners += 1
                     jump bangok_four_bryce1_analbot
                 "I want your tongue in me.":
+                    $ bangok_four_malepartners += 1
                     Br flirty dk "Sure. But turnabout is fair play."
                     jump bangok_four_bryce1_f_tonguefuck
                 "I'm not sure I can fit you." if bangok_four_bryce1_m2_fit:
                     call bangok_four_bryce1_m2_fit from bangok_four_bryce1_f_menu_fit
                     jump bangok_four_bryce1_f_menu
                 "Okay, sure. Fuck me.":
+                    $ bangok_four_malepartners += 1
                     show bryce smirk dk with dissolve
                     jump bangok_four_bryce1_f_fuck
 
@@ -1302,6 +1307,7 @@ label bangok_four_bryce1_m2:
     label bangok_four_bryce1_m2_menu:
     menu:
         "I want to taste you.":
+            $ bangok_four_malepartners += 1
             label bangok_four_bryce1_oralbot:
             call bangok_four_bryce1_position("oralbot")
             Br smirk dk "Would you, now?"
@@ -1714,6 +1720,7 @@ label bangok_four_bryce1_m2:
 
 
         "I want you in me.":
+            $ bangok_four_malepartners += 1
             label bangok_four_bryce1_analbot:
             call bangok_four_bryce1_position("analbot")
             if bangok_four_bryce1.playerhasdick == True:
@@ -2252,6 +2259,7 @@ label bangok_four_bryce1_m2:
 
 
         "I want to stick it in you.":
+            $ bangok_four_malepartners += 1
             label bangok_four_bryce1_ptop:
             call bangok_four_bryce1_position("ptop")
             Br flirty dk "Fine by me."
@@ -2829,6 +2837,7 @@ label bangok_four_bryce1_m2:
 
 
         "I want you to suck me.":
+            $ bangok_four_malepartners += 1
             Br flirty dk "Sure. But turnabout is fair play."
             if False:
                 label bangok_four_bryce1_m2_bsucc_merge:

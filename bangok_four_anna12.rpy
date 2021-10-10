@@ -58,7 +58,7 @@ label bangok_four_anna1_goodending:
 
 label bangok_four_anna1_goodending_nvl:
     n "Even though my bet of forcing her to have sex with me with me was more to get back at her for her earlier rudeness, I had not expected this outcome. I was not even sure what I expected from this meeting in the first place, but now I was locked into sex with her and being her own, personal guinea pig."
-    if bangok_four_firsttime == True:
+    if bangok_four_malepartners + bangok_four_femalepartners < 1:
         n "I hadn't tried anything with a dragon before. Would I even be able to get it up when the time came?"
     else:
         n "I had bed a dragon before, but Anna seemed like a whole new experience."
@@ -71,7 +71,7 @@ label bangok_four_anna1_medending:
 label bangok_four_anna1_medending_nvl:
     n "After all, proposing a sex was my way of sticking it to her for being rude."
     n "Even though I lost the bet, she didn't seem to mind having sex with me, as long as she got what she wanted. Whether I would follow up on it was up to me, though."
-    if bangok_four_firsttime == True:
+    if bangok_four_malepartners + bangok_four_femalepartners < 1:
         n "I hadn't tried anything with a dragon before. Would I even be able to get it up when the time came?"
     else:
         n "I had bed a dragon before, but Anna seemed like a whole new experience."
@@ -451,6 +451,7 @@ label bangok_four_anna2_apartment:
     m "Now in this position, I could clearly make out her single vertical slit, hidden on a slight mound between her legs."
     if persistent.bangok_cloacas == False:
         m "A small rosebud winked up at me from an inch or two further down."
+    $ bangok_four_femalepartners += 1
     label bangok_four_anna2_apartment_startingmenu:
     menu:
         "Finger." if bangok_four_anna2.finger == True:
