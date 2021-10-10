@@ -106,9 +106,13 @@ init:
 
     # People
     image anna blush = "cr/anna_blush.png"
+    image anna blush flip = im.Flip("cr/anna_blush.png", horizontal = True)
     image anna orgasm = "cr/anna_orgasm.png"
+    image anna orgasm flip = im.Flip("cr/anna_orgasm.png", horizontal = True)
     image anna blushpalm = "cr/anna_blushpalm.png"
+    image anna blushpalm flip = im.Flip("cr/anna_blushpalm.png", horizontal = True)
     image anna lipbite = "cr/anna_lipbite.png"
+    image anna lipbite flip = im.Flip("cr/anna_lipbite.png", horizontal = True)
 
 
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
