@@ -101,6 +101,8 @@ init:
     image bangok_four_xipsum_bedroom_bed = "bg/in/apts/ipsum_bedroom_bed.png"
     image bangok_four_xipsum_bedroom ceiling = "bg/in/apts/ipsum_bedroom_ceiling.png"
 
+    image bangok_four_xsebastian_cave2_dk = im.Recolor("bg/in/cave2_dk.png", 70, 70, 100, 255)
+
     # CGs
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
@@ -183,6 +185,18 @@ init:
     )
     image ipsum think flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum think bangok'),horizontal=True)
 
+    image sebastian normal b dk = im.Recolor("cr/sebastian_normal_b.png", 70, 70, 100, 255)
+    image sebastian shy dk = im.Recolor("cr/sebastian_shy.png", 70, 70, 100, 255)
+    image sebastian shy b dk = im.Recolor("cr/sebastian_shy_b.png", 70, 70, 100, 255)
+    image sebastian shy b flip dk = im.Recolor(im.Flip("cr/sebastian_shy_b.png", horizontal=True), 70, 70, 100, 255)
+    image sebastian drop dk = im.Recolor("cr/sebastian_drop.png", 70, 70, 100, 255)
+    image sebastian drop b dk = im.Recolor("cr/sebastian_drop_b.png", 70, 70, 100, 255)
+    image sebastian drop b flip dk = im.Recolor(im.Flip("cr/sebastian_drop_b.png", horizontal=True), 70, 70, 100, 255)
+    image sebastian smile dk = im.Recolor("cr/sebastian_smile.png", 70, 70, 100, 255)
+    image sebastian smile b dk = im.Recolor("cr/sebastian_smile_b.png", 70, 70, 100, 255)
+
+    image sebastian shy b sleep = "cr/sebastian_shy_b_sleep.png"
+    image sebastian shy b sleep dk = im.Recolor("cr/sebastian_shy_b_sleep.png", 70, 70, 100, 255)
 
 init python:
     # First time per run, obv.

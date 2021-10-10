@@ -203,6 +203,17 @@ def xkatsu(ml):
 
 
 
+def xsebastian(ml):
+    ( ml.find_label('sebastianskip')
+        .search_menu("It's pretty cold.")
+        .branch()
+        .search_menu("I'll take it.")
+        .branch()
+        .search_say("Sure.")
+        .hook_to('bangok_four_xsebastian_todaywasgreat')
+    )
+
+
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk?"
@@ -218,6 +229,7 @@ class BangOkMod(Mod):
         bryce1_afterparty(ml)
         xipsum(ml)
         xkatsu(ml)
+        xsebastian(ml)
 
     @staticmethod
     def mod_complete():
