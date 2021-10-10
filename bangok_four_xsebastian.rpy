@@ -1,6 +1,8 @@
 init python:
     bangok_four_xsebastian_depth = 0
     bangok_four_xsebastian_playerfirst = False
+    bangok_four_xsebastian_sebpissed = False
+    
 
 label bangok_four_xsebastian_todaywasgreat:
     $ mp.sebastianromance = True
@@ -286,8 +288,22 @@ label bangok_four_xsebastian_path1_1:
     m "It took a few breaths to relax after my clenching. When I did, he slipped in the rest of the way, until his thighs rested on mine."
     $ renpy.pause(0.8)
     Sb smile b dk "Alright."
-    play soundloop "fx/rub2.ogg" fadein 2.0
-    m "He picked up a smooth pace, in and out."
+    if persistent.bangok_watersports == True:
+        play soundloop "fx/faucet1.ogg" fadein 2.0
+        queue soundloop "fx/faucet2.ogg"
+        Sb drop b dk "Oh f-fuck."
+        m "It took me a moment to realize what was spilling into me was not, in fact, ropes of sticky cum."
+        Sb drop b dk "Sorry, I-- You're like someone else I know and I thought I could hold it..."
+        m "Realizing Sebastian was using my ass to relieve himself, I pushed back, encouraging him."
+        Sb shy b dk "O-Oh?"
+        stop soundloop fadeout 1.0
+        m "He finished a few moments later, but his piss remained, nestled safely inside me."
+        Sb shy b dk "I... guess I should get moving..."
+        play soundloop "fx/rub2.ogg" fadein 2.0
+        m "He picked up a smooth pace, in and out, inward thrusts pushing his piss further into my guts with lewd squelches."
+    else:
+        play soundloop "fx/rub2.ogg" fadein 2.0
+        m "He picked up a smooth pace, in and out."
     $ renpy.pause (0.8)
     m "I leaned forward into the bed of rocks, taking the assfucking to repay Sebastian for his glorious oral."
     $ renpy.pause (1.5)
@@ -428,6 +444,32 @@ label bangok_four_xsebastian_path1_2:
             c "You'll tell them about how won at Bastion Breach now, right?"
             $ renpy.pause (1.2)
             Sb "Maybe."
+        if persistent.bangok_watersports == True:
+            menu:
+                "Now, should I flood the fortress?":
+                    $ renpy.pause (0.5)
+                    Sb shy b dk "But you already came. What do you mean?"
+                    Sb drop b dk "Oh. You're just like..."
+                    $ renpy.pause(0.9)
+                    Sb smile b dk "Sure. I can take it."
+                    c "On you or in you?"
+                    show sebastian normal b dk with dissolve
+                    $ renpy.pause(0.6)
+                    Sb drop b dk "In. Easier to deal with cleanup and won't leave much evidence."
+                    $ renpy.pause(0.4)
+                    play soundloop "fx/faucet1.ogg" fadein 2.0
+                    queue soundloop "fx/faucet2.ogg"
+                    show sebastian shy b dk with dissolve
+                    c "Ahh..."
+                    $ renpy.pause(0.5)
+                    m "I let my bladder go in Sebastian's ass, washing deeper the cum I'd already deposited in him."
+                    $ renpy.pause(1.2)
+                    stop soundloop fadeout 1.0
+                    $ renpy.pause(1.6)
+                    Sb smile b dk "Better?"
+                    c "Yeah."
+                "[[Pull out.]":
+                    $ renpy.pause (0.5)
     else:
         c "Well, there you have it."
     jump bangok_four_xsebastian_aftersex
