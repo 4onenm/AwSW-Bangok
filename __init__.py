@@ -59,6 +59,21 @@ def anna12(ml):
         .search_menu("That's just the way we are.") \
         .link_from('bangok_four_bryce1_bryce2fix_end')
 
+    # Chap2store
+    ( ml.find_label('chap2storebrowsemenu')
+        .search_menu("Look at the health aisle.")
+        .branch()
+        .search_say("(I think these ones could fit on my arm.)")
+        .hook_to('bangok_four_chap2storehealth_anna12', condition='bangok_four_anna1_sexrequested == True')
+    )
+
+    ( ml.find_label('chap2storeques')
+        .search_menu("[[Leave.]")
+        .branch()
+        .search_say("(I suppose that's all I can do here.)")
+        .hook_to('bangok_four_chap2storehealth_checkout_anna12', condition='bangok_four_anna1_sexrequested == True and chap2storehealth == False')
+    )
+
     # Anna2
     sorrymenu = ml.find_label('anna2') \
         .search_menu("Go home.") \
