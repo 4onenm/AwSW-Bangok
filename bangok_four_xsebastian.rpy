@@ -1,7 +1,8 @@
 init python:
+    bangok_four_xsebastian_unplayed = True
     bangok_four_xsebastian_depth = 0
     bangok_four_xsebastian_playerfirst = False
-    bangok_four_xsebastian_sebpissed = False
+    bangok_four_xsebastian_badtouch = False
     
 
 label bangok_four_xsebastian_todaywasgreat:
@@ -488,6 +489,7 @@ label bangok_four_xsebastian_path2:
     m "His arm had tugged up my shirt, and in the small of my back, something moist prodded me."
     menu:
         "[[Touch it.]":
+            $ bangok_four_xsebastian_badtouch = True
             m "I didn't need my biology degree to figure out what it was, after our conversation earlier in the evening."
             m "Curiosity getting the better of me, I reached back, gently taking hold of his member and prying it away from my back."
             m "It was smooth, slightly tapered with a wider base than head, and a tip that bulged just slightly from the shaft, enough to give it a noticeable ridge, but not enough for said ridge to impede anything."
@@ -521,6 +523,51 @@ label bangok_four_xsebastian_path2:
                     c "If that's what you want, I mean, sure."
                     c "We don't have to tell anyone. I'll leave it out of my reports if you leave it out of yours."
                     jump bangok_four_xsebastian_path2_1_1
+                "[[Hug him.]" if bangok_four_xsebastian_badtouch == True:
+                    $ renpy.pause (0.5)
+                    play sound "fx/undress.ogg"
+                    show sebastian drop b flip dk:
+                        ease 1.0 xpos 0.6
+                    with None
+                    $ renpy.pause(0.3)
+                    play sound "fx/undress.ogg"
+                    $ renpy.pause(0.7)
+                    m "I knelt behind Sebastian, wrapping my arms around him to try to calm him down."
+                    show sebastian shy b flip dk:
+                        ease 0.4 xpos 0.7
+                    with None
+                    m "He jerked away, throwing my arms off."
+                    Sb "I-I can't do this... I'm sorry."
+                    c "Wait--!"
+                    show sebastian shy b dk with dissolve
+                    hide sebastian with easeoutleft
+                    m "Before I could lay another hand on him, Sebastian bolted from the cave, strong legs pounding into the earth, claws leaving scratches on the exposed rock."
+                    m "I tried to get up and follow, but immediately found myself tripping over the rough stone floor in the dark."
+                    c "(No way I'll be able to follow him outside if I can't even get there.)"
+                    $ renpy.pause(0.8)
+                    play sound "fx/undress.ogg"
+                    m "I sat back down on our bed of rocks, waiting. For what, I wasn't sure."
+                    $ renpy.pause(3.0)
+                    show sebastian normal b flip dk at left with easeinleft
+                    m "Then I saw a shadow darker than the darkness of the cave, keeping its distance from me, moving slowly."
+                    show sebastian normal b flip dk:
+                        xanchor 0.5
+                        ease 1.0 xpos 0.4
+                        ease 1.0 xpos 0.6
+                        ease 1.0 xpos 0.8
+                    with None
+                    $ renpy.pause(3.5)
+                    show sebastian normal b dk with dissolve
+                    c "Sebastian?"
+                    m "He sat against the wall, as far from me as he could be while still being as deep in the cave as I was."
+                    c "Sebastian, I..."
+                    Sb "Just sleep."
+                    $ renpy.pause(0.5)
+                    m "I lay back down on the bed of rocks."
+                    $ renpy.pause(0.5)
+                    c "Goodnight."
+                    $ persistent.sebastianfail = True
+                    jump bangok_four_xsebastian_todaywasgreat_return
                 "[[Pretend to be asleep.]":
                     $ renpy.pause (0.5)
                     m "I lay still, realizing how frightening this must be for him and not wanting to make it any worse."
@@ -815,6 +862,7 @@ label bangok_four_xsebastian_path2_1_1:
 
 
 label bangok_four_xsebastian_aftersex:
+    $ bangok_four_xsebastian_unplayed = False
     $ bangok_four_malepartners += 1
     Sb drop b dk "Whew... who would have thought us and humans can be this compatible."
     c "It was certainly a wonderful experience. I'm glad you said yes to it."
