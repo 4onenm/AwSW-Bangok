@@ -816,16 +816,29 @@ label bangok_four_xsebastian_path2_1_1:
 
 label bangok_four_xsebastian_aftersex:
     $ bangok_four_malepartners += 1
-    # TODO: Real aftersex
-    $ renpy.pause (2.0)
-    Sb smile b dk "That was..."
-    c "Yeah."
-    $ renpy.pause (0.4)
-    c "Really gonna have to sleep that one off."
-    $ renpy.pause (0.4)
-    Sb "No argument here."
-    $ renpy.pause (0.8)
-    Sb "Goodnight, [player_name]."
+    Sb drop b dk "Whew... who would have thought us and humans can be this compatible."
+    c "It was certainly a wonderful experience. I'm glad you said yes to it."
+    c "Speaking of, how come you got so relaxed about it so quickly?"
+    Sb smile b dk "Heh, you see, fooling around with certain friends is quite a common thing for me."
+    c "Oh? Is that how most dragons are?"
+    Sb normal b dk "Not really. I've just been lucky to have met one or two... like-minded friends in this town."
+    c "Ooh, is it someone I know?"
+    Sb shy b dk "I won't comment on that."
+    Sb "But yeah, I was still worried at first because, quite frankly, you're a huge responsibility. It's not every day that a human shows up in our town, you know. And with everything else going on..."
+    $ renpy.pause(1.2)
+    Sb drop b dk "I was tasked with guarding you and I need to do my job right. This definitely isn't how you're supposed to treat an ambassador."
+    c "Hey, the ambassador has felt very safe and cared for this entire time. You did a {i}fantastic{/i} job, Seb."
+    Sb shy b dk "I'm flattered."
+    Sb normal b dk "But still... please don't tell anyone about what happened here. I'm certainly not gonna mention it in my report."
+    c "If anyone asks, I'll say you went above and beyond in your service."
+    Sb smile b dk "Heh. And I'll say you did great at improving the tense relations between our species."
+    c "Sounds like a deal."
+    Sb normal b dk "But we really should get some actual sleep now."
+    play sound "fx/undress.ogg"
+    scene black with dissolve
+    m "Sebastian tugged me closer, wrapping more of his smaller body over my exposed flesh."
+    Sb "Good night."
+    c "Sweet dreams."
     jump bangok_four_xsebastian_todaywasgreat_return
 
 # TODO: Morning scene? Watersports?
