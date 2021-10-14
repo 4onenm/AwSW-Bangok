@@ -3,6 +3,10 @@ init python in bangok_four_xkatsu:
     protection = True
     playercame = False
     playerstuffed = False
+    target = None
+
+    safety = True
+    flavor = 0
 
     # Fill
     # 0 - Haven't gotten Katsu off yet, or he (tried) to get himself off
@@ -164,7 +168,7 @@ label bangok_four_xkatsu_help:
     Ka exhausted "Give me a minute to get the old baculum moving on out."
     $ renpy.pause (0.5)
     m "He strained, but it was clear whatever he was thinking and whatever he was doing together weren't going to be enough."
-    m "I knelt by the buckets, inspecing the spot where the tip of something was just peeking between two of his underbelly plates, back between his legs."
+    m "I knelt by the buckets, inspecting the spot where the tip of something was just peeking between two of his underbelly plates, back between his legs."
     Ka normal "Well, if you want to help move things along, I won't stop you."
     m "With his tacit permission, I reached up between his legs and poked his peeking tip."
     Ka excited "That's a bit more like it!"
@@ -195,11 +199,14 @@ label bangok_four_xkatsu_help:
         "I didn't expect to go beyond a handjob.":
             pass
         "I guess I could suck you off.":
-            pass
+            $ bangok_four_xkatsu.target = "mouth"
+            jump bangok_four_xkatsu_get_underneath
         "I suppose I could help you with my ass.":
-            pass
+            $ bangok_four_xkatsu.target = "ass"
+            jump bangok_four_xkatsu_get_underneath
         "If that's what it takes, I could help you with my vagina." if bangok_four_playerhasdick == False:
-            pass
+            $ bangok_four_xkatsu.target = "vag"
+            jump bangok_four_xkatsu_get_underneath
         "What if I fit inside you?" if bangok_four_playerhasdick == True and bangok_four_xkatsu.playercame == False:
             Ka exhausted "Eh?"
             show katsu at Position(xpos=0.45,xanchor='center') with ease
@@ -394,6 +401,7 @@ label bangok_four_xkatsu_help:
                         m "It was already almost full!"
                     Ka exhausted "Ha! G-Gotta switch, can't overfill 'em!"
                     m "Pulling free, I ducked under Katsuharu, pulling the first bucket aside and the second bucket into the line of fire."
+                    label bangok_four_xkatsu_fill3:
                     m "Then I grabbed his shaft with both hands, milking for every drop of cream we could get."
                     if persistent.bangok_inflation == True:
                         m "I needn't have bothered. The inner buckets seemed to be pint-sized, and Katsuharu was putting out well over a quart!"
@@ -409,8 +417,29 @@ label bangok_four_xkatsu_help:
                                 m "I could do nothing to respond, as all my focus had to go to swallowing Katsu's thick, creamy seed without drowning in it."
                                 m "I sank more of his soft cockflesh into my mouth, finding it pliable enough to compress and bend down my throat as he directly stuffed my stomach with cum."
                                 $ bangok_four_xkatsu.playerstuffed = True
-                                m "When the pulses finally stopped and I came up for air, my shirt felt noticeably tighter. I wiped off the few thick ropes stuck to my face, licking my fingers clean."
+                                if bangok_four_xkatsu.target is None:
+                                    m "When the pulses finally stopped and I came up for air, my shirt felt noticeably tighter. I wiped off the few thick ropes stuck to my face, licking my fingers clean."
+                                else:
+                                    m "When the pulses finally stopped and I came up for air, my belly bulged slightly. I wiped off the few thick ropes stuck to my face, licking my fingers clean."
                                 hide black with dissolvemed
+                            "Ass." if bangok_four_xkatsu.target == "ass":
+                                m "Lacking other containers immediately at hand under Katsuharu's body, I turned and presented my ass again, right next to the bucket."
+                                c "It's almost full!"
+                                Ka exhausted "Well then--"
+                                show katsu smile with dissolve
+                                m "Spotting what I wanted, he stepped over and obliged."
+                                show katsu excited at Position(xpos=0.5, ypos=1.04) with ease
+                                c "Ah!"
+                                if persistent.bangok_knot == True:
+                                    m "Cum flooded my ass, backing up inside me, then was abruptly shoved even deeper as Katsuharu used the added lubrication of his seed to shove his cock further in, until a bulge near his base was pressed between my cum-spattered cheeks, against my spread asshole."
+                                else:
+                                    m "Cum flooded my ass, backing up inside me, then was abruptly shoved even deeper as Katsuharu used the added lubrication of his seed to shove his cock further in, until his genital slit was pressed to my cum-spattered cheeks."
+                                show katsu excited at Position(xpos=0.49, ypos=1.05) with ease
+                                $ bangok_four_xkatsu.playerstuffed = True
+                                m "I dropped my face to the floor, putting hand on my belly. I could feel the pulses in my ass translating directly to my gut, flooding me with an extra dose of cream than he'd promised."
+                                m "Eventually the pulses stopped, leaving me noticeably heavier than before. At first, I wasn't sure I'd be able to get up again."
+                                show katsu excited at Position(xpos=0.53, ypos=1.0) with ease
+                                m "Then Katsuharu lifted the weight of his hindquarters off of mine, pulling out with a dribble of cum down my taint."
                             "Bowl.":
                                 m "Spotting a mixing bowl within arm's reach on a low shelf, I grabbed it and swapped it out with the bucket."
                                 m "Katsu groaned, making a pool in it as deep as my hand was wide before finally running out."
@@ -433,6 +462,7 @@ label bangok_four_xkatsu_help:
                     hide black
                     show katsu exhausted
                     with dissolveslow
+                    label bangok_four_xkatsu_fill2:
                     $ bangok_four_xkatsu.playercame = True
                     $ bangok_four_xkatsu.fill = 2
                     m "Katsuharu looked between his legs, watching his progress in the first bucket, even as his legs shook."
@@ -444,13 +474,19 @@ label bangok_four_xkatsu_help:
                     $ renpy.pause(1.0)
                     Ka "That's... hah... that's it."
 
+            label bangok_four_xkatsu_filldone:
             show katsu at left with ease
             show katsu exhausted flip with dissolve
             m "He took a few shaky steps away from the buckets, then sat down."
             Ka "I... ah... might need some help finishing up the recipe."
             if bangok_four_xkatsu.fill == 3 and persistent.bangok_inflation == True and bangok_four_xkatsu.playerstuffed == False:
                 Ka "First, put that bowl away in the icebox. Don't want it to spoil too fast."
-            c "Sure."
+            if bangok_four_xkatsu.playerstuffed == True:
+                c "M-Might need a minute to recover first. You, ah, pumped quite a bit into me."
+                Ka smile flip "Did you have fun, at least?"
+                c "Oh yeah."
+            else:
+                c "Sure."
             
             show black with dissolvemed
             $ renpy.pause (0.5)
@@ -488,6 +524,299 @@ label bangok_four_xkatsu_outofcontent:
 play sound "fx/system3.wav"
 s "TODO: Out of content."
 $ renpy.error ("TODO: Out of content.")
+
+
+
+
+
+
+label bangok_four_xkatsu_get_underneath:
+    show katsu smile with dissolve
+    $ renpy.pause (1.4)
+    Ka "What do you expect me to say? No?"
+    $ renpy.pause (0.3)
+    play sound "fx/undress.ogg"
+    m "Feeling self-conscious, I stripped out of my clothes and set them well out of the way by the door, trying to keep them clear of our activities."
+    Ka normal "Why d'you wear all that, anyway?"
+    c "It's not normal among humans to expose yourself to others. It indicates, ah, sexual openness."
+    Ka "So is that what you're seeing from everyone 'round these parts?"
+    Ka smile "Hope I didn't get you going too much with the day-long show."
+    c "No, er, it's different because none of you wear clothes in the first place."
+    Ka normal "Hrm."
+    $ renpy.pause(0.5)
+    m "I got onto my hands and knees next to Katsuharu, reaching out to steady his shaft, estimating his height off the ground and my own."
+    show katsu normal at Position(ypos=1.01) with ease
+    m "Katsuharu bent his hindlegs slightly, his tip bobbing over one of the ice buckets."
+    m "I hesitated, a couple more questions coming to mind."
+    label bangok_four_xkatsu_underneath_questions:
+    menu:
+        "Safe to eat?" if bangok_four_xkatsu.safety == True:
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.safety = False
+            c "We're exposing the key ingredient to an ?"
+            Ka exhausted "Haven't had any health complaints yet."
+            Ka normal "And I do have more than a few customers for this flavor."
+            c "Huh."
+            jump bangok_four_xkatsu_underneath_questions
+        "Will it taste like my...?" if bangok_four_xkatsu.flavor == 0:
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.flavor = 1
+            c "Is my, uh, flavor going to affect how it tastes?"
+            Ka exhausted "I know how to pull out."
+            jump bangok_four_xkatsu_underneath_questions
+        "What if I want it inside me first?" if bangok_four_xkatsu.flavor == 1:
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.flavor = 2
+            if bangok_four_xkatsu.target == "mouth":
+                Ka exhausted "I'm not so sure the ice cream recipe will work if it comes back up from your stomach with any other stuff in there."
+                Ka normal "Best not."
+            else:
+                Ka smile "Do you?"
+                menu:
+                    "Yes.":
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xkatsu.flavor = 3
+                        Ka normal "Been a while since I've tried it. Alright."
+                    "No.":
+                        $ renpy.pause(0.5)
+                        Ka normal "Then I'll pull out and how you taste won't matter."
+            jump bangok_four_xkatsu_underneath_questions
+        "Okay. Let's do this.":
+            $ renpy.pause(0.5)
+    if bangok_four_xkatsu.target == "mouth":
+        jump bangok_four_xkatsu_outofcontent
+    show katsu smile with dissolve
+    play sound "fx/slide.ogg"
+    m "I shoved the second bucket out of my way, then shuffled sideways over the first until I felt Katsuharu's cockflesh dragging a moist trail across one of my thighs, then bounce to the space between them."
+    m "The chill air wafting off the ice bucket sent shivers up my arms and legs."
+    if bangok_four_xkatsu.target == "ass":
+        m "Reaching back, I guided his cockhead up to my rosebud, my arm rubbing between my back and his hard belly plates."
+    elif bangok_four_xkatsu.target == "vag":
+        m "Reaching back, I guided his cockhead up to my vaginal lips, my arm rubbing between my back and his hard belly plates."
+    else:
+        $ renpy.error("There are no third options between a human's legs.")
+    m "It barely took a moment to realize his few smears of pre wouldn't be enough lubrication for him to fit inside me with any degree of comfort."
+    c "Uh. Lube?"
+    Ka normal "Sure I have some around here somewhere. Why? Need it?"
+    c "I think it'd be safest, yeah."
+    show katsu normal flip with dissolve
+    m "Rather than give me a chance to shuffle out from under him, Katsuharu just stepped away, leaving me on hands and knees over the icy bucket."
+    hide katsu with easeoutright
+    $ renpy.pause(0.8)
+    c "Should I help you look, or...?"
+    Ka "No, no. Should just be a moment."
+    play sound "fx/rummage.ogg"
+    $ renpy.pause(1.2)
+    show katsu normal at Position(xpos=0.8,xanchor='center') with easeinright
+    m "Katsuharu's footsteps returned. I heard a squeeze bottle plunger, then cold gel spilled on one of my cheeks and into my crack."
+    m "I shuffled forward sligthly from the sensation, my legs bumping into the freezing metal of the outer bucket."
+    c "H-Hey! That's pretty cold!"
+    play sound "fx/box.ogg"
+    $ renpy.pause(0.5)
+    Ka exhausted "Odd. Didn't keep it anywhere near the icebox."
+    c "I don't think cold for me and cold for you is the same."
+    Ka normal "Doesn't matter if it does its job."
+    m "He inspected my backside."
+    Ka normal "You've got two holes here. Which one this stuff supposed to go into?"
+    if bangok_four_xkatsu.target == "ass":
+        c "Top."
+        m "Katsuharu scooped the lube that had spilled down my cheek, rubbing it deeper into my crack. He pushed it into my asshole with a single claw, cold keratin causing a hitch in my breathing."
+    elif bangok_four_xkatsu.target == "vag":
+        c "Bottom."
+        m "Katsuharu scooped the loob that had spilled down my cheek, pushing it down past my ass and over my crotch. He pushed it past my lips with a single claw, cold keratin causing a hitch in my breathing."
+    else:
+        $ renpy.error("There are no third options between a human's legs.")
+    menu:
+        "Ooh.":
+            $ renpy.pause (0.5)
+            show katsu smile with dissolve
+        "I-I think that's enough.":
+            $ renpy.pause (0.5)
+        "Are your claws clean?":
+            $ renpy.pause (0.5)
+            Ka "Are you going to complain about everything?"
+            Ka exhausted "Hold still. Claws get brittle as I get older. Can't dull them like I used to."
+    m "He withdrew his claw carefully, then stepped back overtop me."
+    show katsu normal at Position(xpos=0.5,ypos=1.01) with ease
+    m "I caught his cock, guiding it back toward the hole we both wanted it to fill."
+
+    # TODO: Should lube be behind a menu option?
+
+    Ka smile "Now. Will I push forward, or will you push back?"
+    Ka normal "Can't sit here forever."
+
+    if bangok_four_xkatsu.target == "ass":
+        jump bangok_four_xkatsu_underneath_ass
+    elif bangok_four_xkatsu.target == "vag":
+        jump bangok_four_xkatsu_underneath_vag
+    else:
+        $ renpy.error("There are no third options between a human's legs.")
+
+label bangok_four_xkatsu_underneath_ass:
+    m "I pushed, taking advantage of the lube to spear myself on his massive tip."
+    m "Taking that as a sign, he pushed forward, squishing his big cockhead through my sphincter and shoving my legs a little forward, into contact again with the ice bucket."
+    m "The shock of cold on my legs had me clenching, halting all our movement."
+    Ka excited "Ha! Really did need that lube, didn't we? You're not all that big."
+    show katsu normal with dissolve
+    c "You're a lot bigger than I am!"
+    Ka normal "Well. I'll let you handle it until we're deep enough. Not like you need to take all of me."
+    m "I shuffled back again, getting a little distance from the bucket and trying to get more pressure on, to get over my clenching."
+    $ renpy.pause (0.5)
+    show katsu excited at Position(ypos=1.04) with ease
+    m "My ass released suddenly, a few inches of Katsuharu's cock sliding in all at once. I instantly felt full. His thick, malleable cock expanded to press against my inner walls in a soft, spongy way I'd never felt before."
+    Ka smile "That's enough for me to work with. Feeling okay down there?"
+    menu:
+        "Y-Yeah.":
+            $ renpy.pause(0.5)
+        "So full...":
+            $ renpy.pause(0.5)
+        "This is really unusual.":
+            $ renpy.pause(0.5)
+            Ka normal "You know much about normal for dragons?"
+            if bangok_four_malepartners < 1:
+                c "I guess not..."
+            elif bangok_four_malepartners < 3:
+                c "A little..."
+            else:
+                c "You'd be surprised."
+    $ renpy.pause (1.5)
+    Ka normal "Best get moving, then."
+    play soundloop "fx/rub2.ogg" fadein 0.5
+    show katsu normal:
+        ease 0.5 xpos 0.55
+        ease 0.15 xpos 0.5
+        repeat
+    with None
+    m "Without further warning, Katsuharu pulled back, cockflesh dragging on my sphincter until he plunged back inside to the same depth."
+    m "I slid backward a little with his first pull before catching myself. The feeling of his soft dick compressing to squeeze back and forth through my hole was completely new to me, and maddenning in sensation."
+    $ renpy.pause(1.0)
+    Ka exhausted "You slid a bit. Need you to move forward if we're going to fill the bucket."
+    menu:
+        "B-Be careful!":
+            $ renpy.pause (0.5)
+            Ka exhausted "What else can I do? Not move?"
+            $ renpy.pause (0.8)
+            m "I opened my mouth to answer, but now that he was reaming my ass, I didn't want him to stop."
+            Ka normal "Then move up a bit."
+        "I-I'll t-try.":
+            $ renpy.pause (0.5)
+            show katsu smile with dissolve
+        "[[Moan.]":
+            $ renpy.pause (0.5)
+            show katsu smile with dissolve
+    if bangok_four_playerhasdick == True:
+        Ka "And get your dick out. You get off, we don't want that in our mix."
+    m "On weak knees, I shuffled forward under his fucking until my thighs bumped the freezing bucket. I clenched again, legs warmed by the fucking abruptly shocked again by the cold."
+    stop soundloop fadeout 0.5
+    show katsu excited at Position(xpos=0.5, ypos=1.04) with ease
+    Ka "Ha! That's one way to get me closer."
+    show katsu normal with dissolve
+    if bangok_four_playerhasdick == True:
+        m "It was doing the same for me. Sheepishly, I spread my legs a little further around the bucket so that our mating point was overtop. Then I pulled my achingly hard dick up out of the bucket, laying it over the ice so it pointed outside."
+    else:
+        m "It was doing the same for me. Sheepishly, I spread my legs a little further around the bucket so that our mating point was overtop. My lower belly brushed over the ice, empty lips aching as an area so nearby was stimulated."
+    m "I struggled to calm my body and unclench while so wrapped around the cold bucket. The moment I had, Katsuharu began moving again."
+    play soundloop "fx/rub2.ogg" fadein 0.5
+    show katsu normal:
+        ease 0.5 xpos 0.55
+        ease 0.15 xpos 0.5
+        repeat
+    with None
+    if bangok_four_playerhasdick == True:
+        m "My cock frotted over the ice from the force of his thrusts, the harsh stimulation abrupt and mind-melting."
+        m "Between the soft, warm cockflesh repeatedly filling and emptying my ass and the hard, cold metal and ice rubbing under my shaft, I barely lasted a few more thrusts."
+        show katsu excited with dissolve
+        play sound "fx/extinguish.ogg"
+        show black with fadequick
+        m "Sticky ropes spattered across my chest and the ground, forced from me by the unyielding fucking even as my ass clenched around Katsuharu."
+        hide black with dissolvemed
+    else:
+        m "His thrusts forced me forward and downward, brushing the front of my lips against the cold metal, oh so maddenningly close to my clit."
+        m "I spread my legs slightly and lowered myself still further, rutting against the inner bucket's lip with each of Katsuharu's entries into my ass."
+        m "I barely lasted a few more thrusts."
+        show katsu excited with dissolve
+        play sound "fx/extinguish.ogg"
+        show black with fadequick
+        m "My love canal clenched and spasmed around nothing, but my ass grabbed hold of Katsuharu. He ignored the added force, unyielding in his fucking of my ass."
+    $ bangok_four_xkatsu.playercame = True
+    show katsu exhausted
+    hide black with dissolvemed
+    m "When I came back down, Katsuharu was panting."
+    $ bangok_four_xkatsu.fill = 2
+    if bangok_four_xkatsu.flavor == 3:
+        $ bangok_four_xkatsu.fill = 3
+        Ka "You're sure you want it in you, human?"
+        menu:
+            "Y-Yes!":
+                stop soundloop fadeout 0.5
+                show katsu smile at Position(xpos=0.50, ypos=1.05) with ease
+                play sound "fx/snarl.ogg"
+                m "Katsuharu plowed into my ass, shoving me down against the top of the ice bucket."
+                m "Immediately pulses pressed through my sphincter, spurts of seed making their way to his tip to flood my guts."
+                show katsu normal at Position(xpos=0.53, ypos=1.03) with ease
+                $ renpy.pause (0.8)
+                m "He backed out a moment, backing up the beginning of my colon with a thick soup of his seed."
+                show katsu excited at Position(xpos=0.49, ypos=1.05) with ease
+                if persistent.bangok_knot == True:
+                    m "Then he pressed in hard and fast, shoving the cum deep into me fast enough that some spurted back around his cock, lubricating him as he speared me all the way to a thick bulge at his base."
+                else:
+                    m "Then he pressed in hard and fast, shoving the cum deep into me fast enough that some spurted back around his cock, lubricating him as he speared me all the way to his genital slit."
+                m "The fluid shifted deep inside of me, pushed still deeper as more jets came to fill me up. Feeling full, I pushed the ice bucket out from under me, setting my face on the floor to better take my deep penetration."
+                show katsu exhausted with dissolve
+                if persistent.bangok_inflation == True:
+                    m "From this new angle, I could watch as these spurts that packed me solid began to press my belly outward, inflating me with Katsuharu's creamy seed."
+                    $ bangok_four_xkatsu.playerstuffed = True
+                    m "No matter how full I felt, still more was coming."
+                m "Then, gently, the pulses came to an end, leaving me packed full of Katsuharu's cum, as I'd wanted."
+                $ renpy.pause (0.8)
+                show katsu exhausted at Position(xpos=0.53) with ease
+                show katsu exhausted at Position(xpos=0.56, ypos=1.0) with ease
+                show katsu exhausted at Position(xpos=0.65) with ease
+                m "Katsuharu took a few shaky steps off of me, dick pulling free with a small river of cum from my ass."
+                Ka "No time to rest with it! We need to get it into the buckets to chill!"
+                play sound "fx/slide.ogg"
+                $ renpy.pause(0.5)
+                m "A freezing bucket was slid between my legs, then Katsuharu grabbed my shoulder and pulled me back until I was sitting on it."
+                c "A-Ah! D-Damn!"
+                play sound "fx/pour.ogg"
+                $ renpy.pause(3.0)
+                stop sound fadeout 0.5
+                m "With how full I was, gravity was the only prompting our creamy end-goal needed to escape me into the bucket. Katsuharu set me back down when he decided the bucket was full enough, then dragged it away only to replace it with the second."
+                play sound "fx/pour.ogg"
+                $ renpy.pause(2.5)
+                stop sound fadeout 0.5
+                m "I didn't have quite as much to drain this time, before the stores so easily reached within me came to an end. I was sure much of my gut was still painted white, even after my draining."
+                if persistent.bangok_inflation == True:
+                    m "That didn't even account for what had been stuffed beyond my colon. My belly still bulged slightly, packed with cum."
+                $ bangok_four_xkatsu.fill = 2 # Lost some. But did you have fun?
+                jump bangok_four_xkatsu_filldone
+            "Uh-":
+                pass
+    stop soundloop fadeout 0.5
+    show katsu normal at Position(xpos=0.55, ypos=1.0) with ease
+    m "Moving one of his forelegs under one of my arms, Katsuharu yanked his cock free of my ass, then pushed me forward to shove his cock where my crotch had been."
+    play sound "fx/snarl.ogg"
+    if bangok_four_xkatsu.fill == 2:
+        m "I got myself turned around quickly, ready to help his aim and not waste our combined efforts. Luckily, he was well on-target."
+        show katsu exhausted with dissolve
+        jump bangok_four_xkatsu_fill2
+    else:
+        m "I got myself turned around quickly, ready to help his aim and not waste our combined efforts if he wasn't quite spurting into the bucket."
+        if persistent.bangok_inflation == True:
+            m "I found said bucket almost already full!"
+        else:
+            m "He was spot on, the inner bucket filling alarmingly quickly."
+        Ka exhausted "Ha! G-Gotta switch, can't overfill 'em!"
+        m "Ducking back under Katsuharu, I pulled the first bucket aside and the second bucket into the line of fire."
+        jump bangok_four_xkatsu_fill3
+
+
+
+label bangok_four_xkatsu_underneath_vag:
+
+jump bangok_four_xkatsu_outofcontent
+
+
 
 label bangok_four_xkatsu_ready:
     Ka "Alright human. It's ready."
