@@ -813,6 +813,44 @@ label bangok_four_xkatsu_underneath_ass:
 
 
 label bangok_four_xkatsu_underneath_vag:
+    m "I pushed, parting my lubed-up lips around his massive tip."
+    m "Taking that as a sign, he pushed forward, soft cockfleash spreading my canal like a hand filling a glove."
+    show katsu excited:
+        ease 1.5 ypos 1.04
+    with None
+    $ renpy.pause(1.3)
+    m "I gasped as I ran out of room, every inch of my inner walls pressed against by his thick, warm, malleable shaft. Leaning forward to try to get a little more room, my belly pressed against the icy rim of the layered buckets."
+    show katsu smile with dissolve
+    m "My canal clenched and squeezed, massaging his length for his heady warmth, to fight off the cold shock."
+    Ka normal "That as deep as you can go?"
+    menu:
+        c "(He's right up against my cervix. {i}Can{/i} I take him deeper?)"
+        "Fuck me deeper.":
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.target = "womb"
+            Ka smile "If you insist."
+            show katsu smile at Position(ypos=1.03) with ease
+
+
+        "I-I think I can take it...":
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.target = "womb"
+        "Can't fit any more.":
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.target = "vag"
+            Ka "Of course."
+        "I-It's already so much!":
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.target = "vag"
+            show katsu exhausted with dissolve
+            show katsu exhausted at Position(ypos=1.03)
+            m "Katsuharu carefully slid back a little, taking the pressure off the wall at the end of my canal."
+            Ka "There?"
+            c "B-Better."
+
+
+
+
 
 jump bangok_four_xkatsu_outofcontent
 
