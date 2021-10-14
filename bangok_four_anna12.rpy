@@ -10,8 +10,8 @@ init python in bangok_four_anna2:
     finger = True
     lick = True
 
-    fist = False
-
+    position = None
+    hornsgrabbed = None
 
     annacame = False
 
@@ -447,14 +447,14 @@ label bangok_four_anna2_apartment:
         pos (0.8, 1.3)
         rotate 15
     with dissolve
-    m "Anna stepped back up to the couch, then sat back, swinging her tail between her legs to sit on it and exposing her underside."
+    m "Anna stepped back up to the couch, then sat back, swinging her tail between her legs to sit on it, exposing her underside."
     m "Now in this position, I could clearly make out her single vertical slit, hidden on a slight mound between her legs."
     if persistent.bangok_cloacas == False:
         m "A small rosebud winked up at me from an inch or two further down."
     $ bangok_four_femalepartners += 1
     label bangok_four_anna2_apartment_startingmenu:
     menu:
-        "Finger." if bangok_four_anna2.finger == True:
+        "[[Finger her.]" if bangok_four_anna2.finger == True:
             $ bangok_four_anna2.finger = False
             m "I stepped in closer, reaching out to caress her opening."
             An sad "Are those hands of yours clean?"
@@ -624,7 +624,7 @@ label bangok_four_anna2_apartment:
                     m "I froze."
                     c "(Yes?)"
                     show anna lipbite flip with dissolve
-                    $ bangok_four_anna2.fist = True
+                    $ bangok_four_anna2.position = "fist"
                 "[[Spread your fingers.]":
                     $ renpy.pause (0.5)
                     $ anna2mood -= 3
@@ -750,7 +750,7 @@ label bangok_four_anna2_apartment:
             m "Taking some faltering steps over to the couch, Anna fell back onto it. Her slit was still slightly open, glistening inside from her arousal."
             An smirk "Stick your arm back in."
             show anna lipbite with dissolve
-            if bangok_four_anna2.fist == True:
+            if bangok_four_anna2.position == "fist":
                 m "I obliged, reforming my fist (being careful to keep my fingernails in) and working it back into her. Once through her outer opening, it spread her walls, rubbing every which way until I reached her inner gate."
             else:
                 m "I obliged, working my hand through her outer opening, then sliding the short distance through her passage to her inner gate."
@@ -797,7 +797,7 @@ label bangok_four_anna2_apartment:
             with dissolvemed
             m "After a long moment, Anna's canal relaxed its grip and she dropped her arms to her sides, releasing me."
             $ renpy.pause (0.5)
-            An smirk "Holy fuckeroly. That... that was good. Twice in one night."
+            An smirk "Holy fuckeroly. That... that was good.{w=0.8} Twice in one night."
             menu:
                 "You came earlier?":
                     $ renpy.pause (0.5)
@@ -810,7 +810,7 @@ label bangok_four_anna2_apartment:
                     An blush "Yes. Your turn."
             m "I withdrew my sopping wet arm from her now-loosened passage, considering my next move."
             jump bangok_four_anna2_apartment_startingmenu
-        "Lick." if bangok_four_anna2.lick == True:
+        "[[Lick her.]" if bangok_four_anna2.lick == True:
             $ anna2mood -= 1
             $ bangok_four_anna2.lick = False
             m "I knelt down next to Anna, bringing my face closer."
@@ -823,9 +823,206 @@ label bangok_four_anna2_apartment:
                 An face "What do you think the condom is for?"
             m "I got back to my feet."
             jump bangok_four_anna2_apartment_startingmenu
-        "Straight into her ass.":
-            pass
-        "Straight into her pussy.":
+        "[[Use her mouth.]":
+            c "Actually..."
+            m "I sat on the couch, spreading my legs."
+            c "Why don't you use that mouth of yours on me?"
+            if bangok_four_anna2.annacame == True:
+                show anna smirk with dissolve
+                An "I suppose fair's fair after your arm."
+                hide anna with None
+                $ renpy.pause(0.0)
+                show anna blush at Position(xpos=0.8,ypos=1.0, xanchor='center')
+            else:
+                show anna sad with dissolve
+                $ renpy.pause(0.9)
+                if anna2mood < 4:
+                    show anna face with dissolve
+                An "Fine."
+                hide anna with None
+                $ renpy.pause(0.0)
+                show anna sad at Position(xpos=0.8,ypos=1.0, xanchor='center')
+            show anna at Position(xpos=0.7) with ease
+            show anna at Position(xpos=0.6, ypos=1.1) with ease
+            show anna at Position(ypos=1.3) with ease
+            m "Anna got back off the couch, then sank to her knees in front of me."
+            $ renpy.pause(0.3)
+            show anna normal with dissolve
+            m "She stroked one hand down my shaft, pressing the condom's ring all the way to the base. The rough scales of her hand and cold claws were an exciting and new sensation, bringing my shaft to twitching readiness."
+            $ renpy.pause (0.8)
+            show anna orgasm at Position(ypos=1.5) with ease
+            m "Then she descended on my crotch with an open maw, the brief flash of teeth giving me a thrill of danger deep in my gut."
+            menu:
+                "C-Careful with the teeth!":
+                    $ anna2mood -= 1
+                    show anna face with dissolve
+                    show anna at Position(ypos=1.4) with ease
+                    m "Before she'd even really begun anything, Anna retreated with claws over her face."
+                    An "You've had ample opportunity to see what my mouth looks like. What did you think I was going to do? Bite into you? Cause an incident with your blood all over my face?"
+                    An sad "Do you want this blowjob or not?"
+                    $ renpy.pause(0.8)
+                    c "I mean, I do--"
+                    An normal "Then no buts about it. I know what I'm doing."
+                    show anna orgasm at Position(ypos=1.5) with ease
+                    m "She didn't give me another chance to protest, diving back down."
+                "O-hoohh...":
+                    pass
+            m "Anna's tongue slithered around my shaft, tugging and milking it toward the back of her maw."
+            m "She closed her lips, teeth ghosting over the lower portion of my shaft as her scaly lips slid downward."
+            m "Her rough tastebuds held my length hostage, twisting and tugging like she was sucking, but without any vacuum seal."
+            $ renpy.pause(0.6)
+            m "I threw my head back, momentarily lost in the brand new sensations."
+            $ renpy.pause(0.6)
+            show anna blush at Position(ypos=1.49) with ease
+            m "The tip of her tongue pulled back from my base, the windings tightening as she pulled back toward my cockhead. Her lips went with it, and for a moment I was worried she was pulling away."
+            m "Then I felt her tongue tighten just beneath my tip, forming a squeezing ring around the condom."
+            show anna blush at Position(ypos=1.52) with ease
+            m "She pushed her head back down, lips and teeth ghosting over my length before the tongue ring squeezed in their absence."
+            m "I almost lost my hold right there. But Anna uncoiled her tongue at my base, pulling back with parted lips as she arranged her tongue for a second thrust."
+            show anna blush at Position(ypos=1.5) with ease
+            menu:
+                "[[Grab her horns.]" if bangok_four_hornincident == False:
+                    if anna2mood < 1:
+                        m "This pushing-only pace wasn't going to work for me. Luckily, nature had given me the perfect pair of handles to explain what I want to Anna."
+                    else:
+                        m "What Anna was doing to my shaft was incredible, but I wanted a slightly more active role."
+                    m "I clasped Anna's horns with both hands when her tongue was formed into a ring again, tugging her back into my groin faster."
+                    $ anna2mood -= 1
+                    $ bangok_four_anna2.hornsgrabbed = True
+                    show anna disgust at Position(ypos=1.52) with ease
+                    m "Her teeth were quite a bit tighter on this descent, enough that I almost couldn't focus on her tongue as the thrill of danger returned, the worry I was sticking my thing someplace dangerous."
+                "M-May I use your horns to...?":
+                    $ anna2mood += 1
+                    $ bangok_four_anna2.hornsgrabbed = False
+                    m "Anna nodded, causing my cock to bob as she slurped at my tip."
+                    m "I gave her a moment to reform her tight tongue ring, then pulled her head down my shaft by both horns."
+                    show anna orgasm at Position(ypos=1.52) with ease
+                "[[Moan.]":
+                    pass
+            m "I thrust into her face a little as she came down. It felt like fucking some kind of exotic, teeth-ringed pussy, the sensation unlike anything I'd felt before."
+            $ renpy.pause (0.5)
+            m "Anna braced her forearms against my thighs, keeping me in place against the couch."
+            $ renpy.pause(0.3)
+            if bangok_four_anna2.hornsgrabbed is not None:
+                m "I held Anna against my crotch a moment, enjoying as she lashed her tongue around my shaft. Then I drew her back, feeling her tongue uncoiling around my tip."
+                show anna sad at Position(ypos=1.50) with ease
+                m "I tugged her horns, indicating that I'd be picking up the pace. After giving her a moment to prepare her tongue, I dragged her back down."
+                play soundloop "fx/rub2.ogg" fadein 0.5
+                show anna:
+                    ease 0.25 ypos 1.51
+                    ease 0.4 ypos 1.50
+                    repeat
+                with None
+            else:
+                show anna lipbite at Position(ypos=1.50) with ease
+                m "Anna drew back again, keeping the ring with her tongue this time, milking me through the condom."
+                play soundloop "fx/rub2.ogg" fadein 0.5
+                show anna:
+                    ease 0.25 ypos 1.51
+                    ease 0.4 ypos 1.50
+                    repeat
+                with None
+                m "Confident now in her control over my member, she started up a faster pace, facefucking herself onto my cock."
+            $ renpy.pause(2.0)
+            menu:
+                "I-I'm about to...":
+                    pass
+                "[[Cum.]":
+                    pass
+            if bangok_four_anna2.hornsgrabbed is not None:
+                show anna blush at Position(ypos=1.53) with ease
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                show black with fadequick
+                m "I pulled Anna deep into my crotch, sheathing my shaft between her scaly lips."
+                m "Her tongue kept moving, searching and tugging against our rubber barrier."
+                $ renpy.pause(0.5)
+                hide black with dissolveslow
+                $ renpy.pause(0.5)
+                m "I released Anna's horns, leaving her free to let my cock fall from her lips"
+                show anna normal at Position(ypos=1.4) with ease
+                m "Anna flicked the condom's reservoir with her tongue as she moved back."
+            else:
+                show anna blush at Position(ypos=1.4) with ease
+                m "Anna pulled off immediately, using a hand to finish pushing me to climax."
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                show black with fadequick
+                $ renpy.pause(0.5)
+                hide black with dissolveslow
+                $ renpy.pause(0.5)
+                m "She kept pumping until my shaft began to soften, my liquid load expended. Then she flicked the condom's reservoir with her thumb."
+
+            $ blood = False
+            if blood == False:
+                An "Well. With this sample, I suppose I don't need your blood anymore, do I?"
+                m "She pinched just at my cock's tip and the ring, then began to tug it off."
+                menu:
+                    "I didn't agree to that!":
+                        $ anna2mood -= 1
+                        An sad "No. You agreed to far more detailed procedures a few days from now. This is basically nothing."
+                        menu:
+                            "Take her hands off.":
+                                $ anna2mood -= 2
+                                m "Grabbing her wrists, I yanked her hands off of my cock."
+                                c "It's my DNA. That's not \"nothing\" to me!"
+                                An face "Are you kidding me?"
+                                An sad "It's a few kilometers of basic molecules chained together, replicated over and over. There's literally no point to protecting it. I can probably get most of it from skin cells you've shed on my arms tonight."
+                                c "You're just doing this to get the information to clone me?"
+                                An disgust "Why the fuck would I even want to do that?"
+                                An face "No. This is all about figuring out how you work. And I don't need this to do it, but it makes it a lot easier to know what to expect and do when I bring you into my lab."
+                                menu:
+                                    "Concede the point.":
+                                        $ renpy.pause(0.5)
+                                        $ anna2mood += 2
+                                        c "Okay. Look, I'm sorry. Giving samples of ourselves away isn't really normal among humans."
+                                        An sad "That's not what I'd expect from the liberal opinion on sex."
+                                        c "If you're just going to take it another way anyway, I guess there's no point to forcing you to do all that work. Go ahead and take it."
+                                        show anna normal with dissolve
+                                        $ renpy.pause(0.8)
+                                        An "Thank you."
+                                    "Refuse.":
+                                        $ anna2mood -= 1
+                                        stop music fadeout 2.0
+                                        c "I don't care. You're not keeping samples of my cum like some sick souveneir."
+                                        An disgust "Fine."
+                                        An sad "In that case, I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
+                                        stop music fadeout 0.5
+                                        if anna2mood > -2:
+                                            c "Anna..."
+                                        hide anna with dissolvemed
+                                        $ renpy.pause(0.3)
+                                        play sound "fx/door/doorclose.ogg"
+                                        $ renpy.pause(1.0)
+                                        m "Without another word, Anna left."
+                                        $ renpy.pause(1.0)
+                                        scene black with dissolvemed
+                                        $ renpy.pause(0.5)
+                                        $ annastatus = "bad"
+                                        $ annascenesfinished = 2
+                                        jump _mod_fixjmp
+                            "Puncture the condom.":
+                                pass
+                            "Piss in the condom." if persistent.bangok_watersports:
+                                pass
+                            "Let her.":
+                                pass
+                    "[[Let her.]":
+                        pass
+                m "Pulling the condom completely free, she tied it off and palmed it."
+            else:
+                pass
+
+
+
+
+
+
+
+        "[[Use her ass.]":
+            $ bangok_four_anna2.position = "ass"
+        "[[Use her pussy.]":
+            $ bangok_four_anna2.position = "vag"
             if bangok_four_anna2.annacame == True:
                 m "Anna's slit remained slightly parted after my arm-fucking, and like my arm still glistening with her arousal. I gave my dick a pump with the same arm I'd fucked her with, lubricating the condom, then got between her legs."
                 m "As I slipped inside, I realized my gusto had spread her out to the point where there was disappointingly little resistance."
@@ -839,6 +1036,24 @@ label bangok_four_anna2_apartment:
                     m "Her slit was a thin line, I got between her legs, aiming my condom-wrapped dick directly into it."
                     m "She tensed up, fighting my entry for a moment as I pressed all the way in. Once inside, though, the pressure disappeared, her passage clearly made for larger mates."
             m "I paused, hilted, as I felt her passage moving around me, muscles massaging my shaft like an all-around warm caress even if not squeezing tightly."
+            $ renpy.pause(0.8)
+            c "Can you feel me in there?"
+            if anna2mood < 0:
+                An disgust "What kind of question is that, \"can I feel it?\" It's in my body, isn't it?"
+                An face "Just do your thing and cum already."
+                c "Geez. Fine."
+            elif anna2mood < 3:
+                An sad "Yes. But you're rather small."
+                c "Ah. Well, I'll do what I can."
+            else:
+                An smirk "You're adorable. But there's simply no way you'll get me off with just that thing."
+                c "Is that a challenge?"
+                An blush "A statement of fact."
+
+            m "Taking her words as a challenge, I began to pump my hips, "
+
+
+
         "Wait, it's vertical?" if bangok_four_anna2.waitvert == True and bangok_four_malepartners > 0:
             $ bangok_four_anna2.waitvert = False
             An sad "Obviously."
