@@ -21,8 +21,6 @@ init python in bangok_four_bryce1:
     fuckwomb = False
     knotpos = None
 
-    hornincident = False
-
 label bangok_four_bryce1_skipmenu:
     if persistent.nsfwtoggle == True:
         play sound "fx/system3.wav"
@@ -508,7 +506,7 @@ label bangok_four_bryce1_f_tonguefuck:
         m "I was almost beyond conscious thought. I was so close, I just needed him a little deeper."
     menu:
         "[[Grab his horns.]":
-            $ bangok_four_bryce1.hornincident = True
+            $ bangok_four_hornincident = True
             $ brycemood -= 2
             if bangok_four_bryce1_oralspot == "couch":
                 play sound ["fx/hit2.ogg", "fx/cartdown.ogg"]
@@ -2929,7 +2927,7 @@ label bangok_four_bryce1_m2:
             m "It was decadant. But he wasn't all the way down in my groin; a tiny bit of my shaft remained outside his heavenly maw."
             menu:
                 "[[Grab his horns.]":
-                    $ bangok_four_bryce1.hornincident = True
+                    $ bangok_four_hornincident = True
                     $ brycemood -= 2
                     if bangok_four_bryce1_oralspot == "couch":
                         play sound ["fx/hit2.ogg", "fx/cartdown.ogg"]
@@ -3312,7 +3310,7 @@ label bangok_four_bryce1_morningcouch:
                                     show bryce flirty with dissolve
                                     m "Bryce winked up at me, knowing exactly what he was doing."
                                     jump bangok_four_bryce1_morningride
-                                "C-Can I grab your horns?" if bangok_four_bryce1.hornincident == True:
+                                "C-Can I grab your horns?" if bangok_four_hornincident == True:
                                     $ brycemood += 1
                                     show bryce flirty with dissolve
                                     m "Bryce winked up at me. Taking that as approval, I grabbed his horns and pulled his face deeper into my crotch."
@@ -3365,7 +3363,7 @@ label bangok_four_bryce1_morningcouch:
                                     Br normal "Unfortunately, we've both got work."
                                     Br smirk "I've gotta clean up, you've gotta do the same. People are going to notice if neither of us are at our jobs."
                                     c "O-oh. Damn."
-                                "[[Grab his horns and ride.]" if bangok_four_bryce1.hornincident == False:
+                                "[[Grab his horns and ride.]" if bangok_four_hornincident == False:
                                     $ brycemood -= 2
                                     play sound ["fx/hit2.ogg", "fx/impact3.ogg"]
                                     show bryce angry with vpunch

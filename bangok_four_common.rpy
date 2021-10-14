@@ -202,3 +202,4 @@ init python:
     bangok_four_malepartners = 0
     bangok_four_femalepartners = 0
     bangok_four_playerhasdick = None
+    bangok_four_hornincident = False
