@@ -15,5 +15,6 @@ Resource credits:
 + `cr/ipsum_bangok_pen.png`: 4onen, cutting `cg/lorem-x-ipsum_purpleroom.png`
 + `cr/lorem_bangok_hidepeek.png`: 4onen, editing base-game assets
 + `cr/lorem_bangok_peek.png`: 4onen
++ `cr/sebastian_shy_b_sleep.png`: 4onen, editing base-game assets
 + `fx/2buckets.ogg`: 4onen, editing base-game `fx/2glasses.ogg`
 + `fx/digice.ogg`: 4onen, editing base-game `fx/dig.ogg`
