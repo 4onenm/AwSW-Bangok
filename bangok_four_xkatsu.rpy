@@ -823,18 +823,46 @@ label bangok_four_xkatsu_underneath_vag:
     show katsu smile with dissolve
     m "My canal clenched and squeezed, massaging his length for his heady warmth, to fight off the cold shock."
     Ka normal "That as deep as you can go?"
+    c "(He's right up against my cervix. {i}Can{/i} I take him deeper?)"
     menu:
-        c "(He's right up against my cervix. {i}Can{/i} I take him deeper?)"
+        c "(He's right up against my cervix. {i}Can{/i} I take him deeper?){fast}"
         "Fuck me deeper.":
             $ renpy.pause(0.5)
             $ bangok_four_xkatsu.target = "womb"
             Ka smile "If you insist."
             show katsu smile at Position(ypos=1.03) with ease
-
-
+            m "Katsuharu pulled back a moment, leaving a tiny well of emptiness inside me between his tip and my inner gate."
+            show katsu excited:
+                ease 0.3 xpos 0.47 ypos 1.05
+            with None
+            m "Then he filled that space and then some, squeezing through into my most sacred temple."
         "I-I think I can take it...":
             $ renpy.pause(0.5)
             $ bangok_four_xkatsu.target = "womb"
+            Ka normal "You just let me know if it's too much."
+            show katsu normal:
+                ease 1.3 xpos 0.495 ypos 1.05
+            with None
+            m "He applied more pressure oh-so-gradually, leaning weight on his shaft with a slow ease that spoke to countless years of experience."
+            m "The pressure on my innermost gate increased, the ache increasing in step as his tip burrowed milimeters deeper, squeezed by a hole out of reach of humans."
+            menu:
+                "S-Stop!":
+                    $ renpy.pause(0.5)
+                    $ bangok_four_xkatsu.target = "vag"
+                    show katsu normal:
+                        ease 0.5 xpos 0.5 ypos 1.03
+                    with None
+                    m "Katsuharu and I both let out panting breaths as he pulled back."
+                    c "Y-You're too big. There's no way..."
+                    Ka exhausted "I could tell. Are you hurt?"
+                    c "I don't think so. As long as we don't try that again."
+                    Ka normal "Of course."
+                "So close...":
+                    $ renpy.pause(0.8)
+                    show katsu excited:
+                        ease 0.3 xpos 0.47 ypos 1.05
+                    with None
+                    m "His head popped in, squeezing through into my most sacred temple."
         "Can't fit any more.":
             $ renpy.pause(0.5)
             $ bangok_four_xkatsu.target = "vag"
@@ -847,6 +875,129 @@ label bangok_four_xkatsu_underneath_vag:
             m "Katsuharu carefully slid back a little, taking the pressure off the wall at the end of my canal."
             Ka "There?"
             c "B-Better."
+    if bangok_four_xkatsu.target == "womb":
+        m "I collapsed atop the bucket, knees giving out as my lower body shuddered with sparks of pain and pleasure ricocheting everywhere."
+        show katsu smile:
+            ease 0.6 ypos 1.055
+        with None
+        m "He slid deeper gradually, easing more spongy cockflesh inside. His length pressed up against my belly, sandwiching his heat right up against the freezing ice through the walls of my most hidden place."
+        show katsu smile:
+            ease 0.6 ypos 1.06
+        with None
+        m "Then I felt his thighs against mine."
+        c "H-Holy fuck."
+        Ka exhausted "Is that a good expression or a bad one."
+        c "{i}Good.{/i}"
+        $ renpy.pause(0.3)
+        show katsu smile with dissolve
+        $ renpy.pause(0.3)
+        show katsu smile:
+            ease 1.0 xpos 0.495 ypos 1.05
+            ease 1.0 xpos 0.47 ypos 1.06
+            repeat
+        m "Katsuharu began moving gradually, taking things slowly as his cockflesh, slickened by my arousal and a healthy dose of lube, squeezed back through my inner gate and spread my canal with a massive pillar of meat and bone."
+        m "Pulling back, his tugging at my lips found my clit. That, combined with his presence so deep inside, sent me catapulting over my peak."
+        show black with fadequick
+        $ bangok_four_xkatsu.playercame = True
+        $ renpy.pause(1.0)
+        m "I couldn't move, couldn't think as he took my clenching, spasming walls as a sign of encouragement and picked up his pace."
+        play soundloop "fx/rub2.ogg" fadein 0.5
+        show katsu normal:
+            ease 0.5 xpos 0.55
+            ease 0.15 xpos 0.5
+            repeat
+        with None
+        $ renpy.pause(0.8)
+        hide black with dissolveslow
+    else:
+        $ renpy.pause(0.5)
+        show katsu normal with dissolve
+        $ renpy.pause(0.8)
+        play soundloop "fx/rub2.ogg" fadein 0.5
+        show katsu normal:
+            ease 0.5 xpos 0.55
+            ease 0.15 xpos 0.5
+            repeat
+        with None
+        m "Katsuharu began to move, dragging his spreading cockflesh back through my canal, rubbing every nook and cranny like a million soft caresses, as rich and smooth as the ice cream I'd been promised, and the cream he'd soon deliver."
+        m "His meat tugging at my lips found my clit, rubbing against it as he pushed harder on the inward thrusts, stopping short of my innermost gate so as not to hurt me, but still filling my innermost space."
+        m "The stimulation of my clit and spreading of my love passage sent me catapulting over my peak."
+        show black with fadequick
+        $ bangok_four_xkatsu.playercame = True
+        $ renpy.pause(1.8)
+        show katsu exhausted
+        hide black with dissolveslow
+        m "Coming back down took exquisite ages, as throughout he kept filling my vagina and dragging back out, drops of my arousal running down my legs in a stream from our mating point."
+    Ka exhausted "Not long now."
+    $ bangok_four_xkatsu.fill = 2
+    if bangok_four_xkatsu.flavor == 3:
+        $ bangok_four_xkatsu.fill = 3
+        Ka "You're sure you want it in you, human?"
+        menu:
+            "Y-Yes!":
+                stop soundloop fadeout 0.5
+                show katsu smile at Position(xpos=0.51, ypos=1.06) with ease
+                play sound "fx/snarl.ogg"
+                if bangok_four_xkatsu.target == "womb":
+                    if persistent.bangok_knot == True:
+                        m "Katsuharu speared me almost the way, tail slapping down between my legs as he pressed his tip and my sacred place against the bucket and stopped."
+                    else:
+                        m "Katsuharu speared me all the way, tail slapping down between my legs as he pressed his tip and my sacred place against the bucket and stopped."
+                    m "Pulses pressed through my innermost gate, expanding his girth at my tightest point before spraying from his tip within me."
+                    play sound "fx/slide.ogg"
+                    m "I had to shove the ice bucket out of the way, as the contrast between warm fluid and frozen spikes became painful. Face on the floor, I moaned as he defiled my innermost place, sowing his seed within me."
+                else:
+                    show katsu smile at Position(xpos=0.5, ypos=1.04) with ease
+                    m "Katsuharu jerked back as he began to cum, keeping himself from pressing deeper than I could take. Even still, his first spurts spattered against my innermost gate like thrusts, leaving me crying out from the overstimulation."
+                    m "Rapidly, what space there was within my canal packed with his seed. With his wide girth blocking my entrance, pouring more inside, the cum had nowhere to go but through my innermost gate, pouring into my womb."
+                    m "Even still, I felt rivulets running down my legs, leaking around his rod."
+                    show katsu smile at Position(xpos=0.50, ypos=1.05) with ease
+                    show katsu smile at Position(xpos=0.51, ypos=1.05) with ease
+                    m "He pressed forward carefully, like a plunger in a syringe, injecting his seed into my deepest temple and leaving me weak enough to collapse onto the bucket beneath me."
+                    play sound "fx/slide.ogg"
+                    m "I shoved the bucket aside, putting my face to the floor as I moaned around his deep cream filling."
+
+                if persistent.bangok_inflation == True:
+                    m "My womb was packed solid with nothing but him. As yet more pulses poured inside, my belly was forced to acommodate, expanding past two months, then the first trimester."
+                    $ bangok_four_xkatsu.playerstuffed = True
+                    m "By the time his fluid injection began to slow, my navel reached out to kiss the cold floor where the bucket had been."
+
+                show katsu exhausted with dissolvemed
+
+                if bangok_four_xkatsu.target == "womb":
+                    m "As Katsuharu's pulses through my cervix slowed, he pulled back, filling the space his cock abandoned with yet more seed."
+                    m "When he pulled free of my flooded womb, I could feel his liquid gift draining through the spread terminus of my love canal."
+                else:
+                    m "Katsuharu's pulses finally slowed, leaving me stuffed full of his liquid gift."
+
+                $ renpy.pause (0.8)
+                m "He panted heavily."
+                show katsu exhausted at Position(xpos=0.53) with ease
+                show katsu exhausted at Position(xpos=0.56, ypos=1.0) with ease
+                show katsu exhausted at Position(xpos=0.65) with ease
+                m "Katsuharu took a few shaky steps off of me, dick pulling free with a small river of cum from my vagina."
+                Ka "No time to rest with it! We need to get it into the buckets to chill!"
+                play sound "fx/slide.ogg"
+                $ renpy.pause(0.5)
+                m "A freezing bucket was slid between my legs, then Katsuharu grabbed my shoulder and pulled me back until I was sitting on it."
+                c "A-Ah! D-Damn!"
+                play sound "fx/pour.ogg"
+                $ renpy.pause(3.0)
+                stop sound fadeout 0.5
+                m "With how full I was, gravity was the only prompting our creamy end-goal needed to escape me into the bucket. Katsuharu set me back down when he decided the bucket was full enough, then dragged it away only to replace it with the second."
+                play sound "fx/pour.ogg"
+                $ renpy.pause(2.5)
+                stop sound fadeout 0.5
+                m "I didn't have quite as much to drain this time, before the stores so easily reached within me came to an end. I was sure much of my love passage was still painted white, even after my draining."
+                if persistent.bangok_inflation == True:
+                    m "That didn't even account for all of what had been stuffed into my womb. My belly still bulged slightly, a couple months pregnant with Katsuharu's gift."
+                $ bangok_four_xkatsu.fill = 2 # Lost some. But did you have fun?
+                jump bangok_four_xkatsu_filldone
+
+
+
+
+
 
 
 
