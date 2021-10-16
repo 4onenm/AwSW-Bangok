@@ -197,7 +197,7 @@ label bangok_four_xkatsu_help:
     label bangok_four_xkatsu_sexmenu:
     menu:
         "I didn't expect to go beyond a handjob.":
-            pass
+            jump bangok_four_xkatsu_outofcontent
         "I guess I could suck you off.":
             $ bangok_four_xkatsu.target = "mouth"
             jump bangok_four_xkatsu_get_underneath
@@ -600,10 +600,15 @@ label bangok_four_xkatsu_get_underneath:
                         $ renpy.pause(0.5)
                         Ka normal "Then I'll pull out and how you taste won't matter."
             jump bangok_four_xkatsu_underneath_questions
+        "Please?" if bangok_four_xkatsu.flavor == 2 and bangok_four_xkatsu.target == "mouth":
+            $ renpy.pause(1.5)
+            Ka exhausted "I suppose, if that's what you really want."
+            $ bangok_four_xkatsu.flavor = 3
+            jump bangok_four_xkatsu_underneath_questions
         "Okay. Let's do this.":
             $ renpy.pause(0.5)
     if bangok_four_xkatsu.target == "mouth":
-        jump bangok_four_xkatsu_outofcontent
+        jump bangok_four_xkatsu_underneath_mouth
     show katsu smile with dissolve
     play sound "fx/slide.ogg"
     m "I shoved the second bucket out of my way, then shuffled sideways over the first until I felt Katsuharu's cockflesh dragging a moist trail across one of my thighs, then bounce to the space between them."
@@ -1041,6 +1046,153 @@ label bangok_four_xkatsu_underneath_vag:
 
 
 
+label bangok_four_xkatsu_underneath_mouth:
+    show katsu smile with dissolve
+    play sound "fx/slide.ogg"
+    m "I shoved the second bucket out of my way, then shuffled sideways over the first until Katsuharu's cockhead was just next to my cheek, a glistening drop of pre glinting in the corner of my vision as I peered up his shaft, toward the slit from which it emerged."
+    show black with dissolvemed
+    m "Cautiously, I took his tip into my mouth, licking up the pre. {w=0.5}It was delicious! Saccharine sweet, I was sure in a more viscous form, it would be an incredibly lucrative flavor of taffy."
+    show katsu exhausted with dissolve
+    m "Seeking out more of it, my tongue explored just inside his urethra, eliciting a small gasp from Katsuharu, a twitch from his shaft, and another dollop for me."
+    m "I shuffled closer, until my knees were up against the first bucket. Bracing against his hindlegs with one hand and holding his shaft from beneath with the other, I pushed more of his head into my mouth, his spongy cockflesh compressing so I could do so without hurting my jaw."
+    m "I began to pump, trying to draw more pre down his tube. Encouraging the production of more, my tongue explored around what it could reach, digging and licking behind his head."
+    $ renpy.pause(0.5)
+    m "Katsuharu kept himself steady, content to let me do the work in this position, and keeping himself from moving in a way that might hurt me."
+    $ renpy.pause(0.5)
+    m "Even despite my efforts, though, his drops of pre were few and far between. It certainly didn't sound like he was getting any closer."
+    c "(Maybe there's something more I can do?)"
+    menu:
+        c "(Maybe there's something more I can do?){fast}"
+        "Deepthroat.":
+            $ bangok_four_xkatsu.target = "throat"
+            $ renpy.pause(0.5)
+            c "(He's so spongy. Can I fit his cock down my throat?)"
+            m "Remembering his comment about a baculum, I took a moment to arrange myself, leaning my head back to get my mouth and throat in line while getting back on my knees to have control over his depth."
+            $ renpy.pause(0.8)
+            m "Then, with a deep breath, I took Katsuharu to the back of my mouth."
+            show katsu excited with dissolve
+            $ renpy.pause(0.3)
+            hide black with fadequick
+            show katsu exhausted with dissolve
+            m "It was impossible not to gag the first time. His cock's slightly spongy nature meant it pressed against every part of my mouth and throat, leaving no way to control where he went to keep him from more sensitive parts of my gag reflex."
+            m "I spent a moment recovering with just a hand on his shaft, drawing a concerned grumble from Katsuharu."
+            Ka "You're not hurting yourself with it back there, are you human?"
+            c "N-No. I can do this."
+            Ka normal "If you say so."
+            $ renpy.pause(0.8)
+            show black with dissolvemed
+            m "Taking things more slowly the second time, I eased his head into my mouth after his breath, sinking lower slowly, focusing on each place my gag reflex responded and telling myself that, no, I really wasn't going to choke and I was doing this on purpose."
+            $ renpy.pause(0.8)
+            hide black with fadequick
+            m "I got him into my throat this time, just barely. When I pulled back, another drop of heady pre waited on his tip for my tongue."
+            show katsu smile with dissolve
+            $ renpy.pause(0.5)
+            show black with dissolve
+            m "I dove back down with less recovery time, eager both to prove myself and to reach the creamy treat I knew waited if I could stimulate him enough."
+            m "Easing him in, once I felt his head in my throat I kept going, consuming as much cockflesh as I could this go."
+            Ka smile "Ha. Halfway."
+            m "Katsuharu's words vibrated through his shaft, passing his warning along to my gag reflex."
+            hide black with fadequick
+            m "I pulled back until his head popped free of my mouth, my breath going with it until I could suck down another lungful to cough with."
+            $ renpy.pause(0.8)
+            Ka exhausted "Are you sure you're not hurting yourself?"
+            show black with dissolve
+            m "I answered his question by taking his cock into my mouth again. Rather than brace against his hindlegs, I put both hands on his cock, hanging between it and my knees on the floor as I pumped what my throat couldn't take."
+            Ka excited "Ha! Keep that up!"
+            m "I hung on, telling my gag reflex I was in control and had nothing to worry about. It worked, mostly, as I kept the depth I'd gotten, even if it was less than last time."
+            m "Then I paused my pumping and sank deeper, seeking out more of his thick shaft, testing my limits."
+            show katsu smile
+            hide black
+            with dissolve
+            m "When I pulled back for air, the farthest point on his shaft dampened by my saliva was still only just past halfway."
+            $ renpy.pause(0.8)
+            Ka "Going to take a few more of those to get what we're after."
+            m "I pumped his shaft with a hand, completely catching my breath before I took him again."
+            $ renpy.pause(1.2)
+            Ka normal "If you need help, you could ask."
+            c "Huh?"
+            Ka "If you need me to move forward. I know there's only so far you can lever yourself on your knees like that. Runners have the same problem."
+            c "Oh. Alright."
+            $ renpy.pause(1.2)
+            m "After a few more seconds of recovery, I arranged myself again, staring down his shaft."
+            show katsu smile with dissolve
+            show black with dissolvemed
+            m "Then I took him into my mouth again, pressing directly for depth. I saw his length and I wanted it {i}all{/i}."
+            m "When I couldn't press myself forward any further, I tugged on one of Katsuharu's hindlegs."
+            Ka excited "Alright!"
+            c "Urk!"
+            m "In one step forward, he had me sitting back as if I hadn't begun taking his shaft, all of my control gone. My head was bent back, face pressed directly into his genital slit as his rod straightened and bulged my neck."
+            m "My chest burned. I realized a moment later it wasn't from lack of air, but instead heartburn as his tip popped into my stomach, completely spearing my throat with malleable cockflesh."
+            m "He lifted his hips, freeing my face from his genital slit, only to drop back down, fucking my mouth."
+            Ka excited "Ah!{w=0.5} Not going to last long like this!"
+            m "With nothing else I could do, my hands went to my neck, as if that would clear the girthy obstruction lifting to fuck my throat again. I could feel bumps and wrinkles in his cockflesh sliding by through my own skin!"
+            m "I squeezed, feeling faint as he slid to mate with my mouth again, trying to get a message through to him."
+            Ka smile "That's the spot!"
+            m "I gestured a bit more widely, as he clearly misinterpreted my throat squeeze."
+            Ka normal "Hm?"
+            Ka exhausted "Oh! Air!"
+            hide black with dissolve
+            m "He stepped back. I collapsed against the ice bucket, lungs convulsing as they tried to get oxygen back into my system."
+            m "While I recovered I stroked his shaft, not wanting to lose the progress we'd made pushing him toward his peak."
+            $ renpy.pause(0.8)
+            m "He panted as my saliva-slicked fingers ran over his fully-dampened length."
+            $ renpy.pause(0.8)
+        "Spread affection.":
+            jump bangok_four_xkatsu_outofcontent
+    
+    if bangok_four_xkatsu.flavor == 3:
+        Ka "If you still want it inside you... Not sure how much more I've got before it comes out."
+        menu:
+            "In.":
+                $ renpy.pause (0.5)
+                $ bangok_four_xkatsu.playerstuffed = True
+                show black with dissolve
+                play sound "fx/snarl.ogg"
+                m "No sooner was I stroking him into my mouth again than he twitched in my hands, his first pulse prying my jaw slightly wider before exploding against the back of my throat."
+                if bangok_four_xkatsu.target == "throat":
+                    if persistent.bangok_knot == True:
+                        m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind. {w=0.5}He obliged me by stepping forward, ramming his cock down my throat, packing my neck solid with twitching meat but for a bulge at his base that wouldn't fit past my jaw."
+                    else:
+                        m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind. {w=0.5}He obliged me by stepping forward, ramming his cock down my throat, packing my neck solid with his twitching meat."
+                    m "After the meat came dessert, rope after rope of warm seed injected directly into my stomach, flooding me with nutritious, creamy protein."
+                    if persistent.bangok_inflation == True:
+                        m "It was seconds before my belly was filled, stuffed with as much as I'd ever eaten in one go. Yet the flood continued. My guts gurgled audibly as they made room for what Katsuharu was feeding me, my stomach insufficient to contain the gift. Then I began to expand, my stuffed intestines needing somewhere to go themselves."
+                    m "My hands went to my belly, knowing even when I gave some of it back for the ice cream recipe, I still wouldn't need to eat for some time."
+                    m "As my neck spasmed back against his pulsing cock, the feeling of warm, stuffed contentment faded. Much as I wanted to sit back and rest, filled with his shaft, I needed to breathe. He didn't seem to be slowing down!"
+                    m "I pushed against his hips, trying to get him to back off. He did, stepping back and stuffing my throat with his seed. The moment he popped free with a spurt in my face, I bent over the bucket. His cock and my mouth competed to fill it faster."
+                else:
+                    m "The sweet richness almost made me lose my seal as my tongue darted to seek it all out. Some small drops leaked from my lips, so I nestled his tip against my throat to force him that little bit deeper and get the drops back in."
+                    m "His next spurts went directly into my throat as I basked in the aftertaste of his first few. Rope after rope of seed backed up in my throat, each forcing the previous down into my stomach as I stubbornly pumped his cock for more."
+                    if persistent.bangok_inflation == True:
+                        m "It was seconds before my belly was filled, stuffed with as much as I'd ever eaten in one go. Yet the flood continued. My guts gurgled audibly as they made room for what Katsuharu was feeding me, my stomach insufficient to contain the gift. Then I began to expand, my stuffed intestines needing somewhere to go themselves."
+                    m "One hand went to my belly, knowing even when I gave some of it back for the ice cream recipe, I still wouldn't need to eat for some time with the liquid gift Katsuharu had stuffed into me."
+                    m "Yet, it didn't seem to end. The feeling of warm, stuffed contentment faded with my ability to swallow, my stomach too packed to take any more. But more was coming!"
+                    m "Remembering the bucket, I yanked him free with a spray of cum in my face. Then I bent over the bucket, his cock and my mouth competing to fill it faster."
+                $ renpy.pause(0.8)
+                show katsu exhausted with dissolve
+                play sound "fx/slide.ogg"
+                hide black with dissolve
+                m "I won, gasping for air as I dragged the second bucket over. His spurts were already slowing, though, and left a sad puddle in the bottom of the second bucket."
+                $ renpy.pause(1.0)
+                $ bangok_four_xkatsu.fill = 1 # Oops. You swallowed a lot.
+                Ka smile "Good meal?"
+                m "I patted my belly."
+                c "Oh yeah. I'm... I'm not sure I'll even be able to eat the ice cream after that."
+                Ka normal "You will."
+                jump bangok_four_xkatsu_filldone
+            "Out.":
+                $ renpy.pause (0.5)
+                $ bangok_four_xkatsu.flavor = 2
+                $ bangok_four_xkatsu.fill = 3
+                c "Changed my mind."
+                Ka "Probably best."
+    Ka "I... ah. Think I'm not far from--"
+    play sound "fx/snarl.ogg"
+    m "He thrust through my hands and I quickly aimed him into the bucket."
+    if bangok_four_xkatsu.fill == 3:
+        jump bangok_four_xkatsu_fill3
+    else:
+        jump bangok_four_xkatsu_fill2
 
 
 
@@ -1078,6 +1230,8 @@ label bangok_four_xkatsu_ready:
         menu:
             "It looks good, though. Thanks.":
                 pass
+            "Sorry for swallowing so much." if bangok_four_xkatsu.target in ["mouth","throat"] and bangok_four_xkatsu.flavor == 3:
+                pass
             "Can't wait to try it!":
                 pass
         show katsu smile with dissolve
@@ -1099,7 +1253,7 @@ label bangok_four_xkatsu_ready:
             "I can't wait to try it!":
                 pass
     else:
-        jump bangok_four_xkatsu_outofcontent
+        $ renpy.error("Invalid fill value: "+str(bangok_four_xkatsu.fill))
     $ renpy.pause (0.5)
     Ka "All that's left is to serve up. Cup or cone?"
 
@@ -1173,13 +1327,13 @@ label bangok_four_xkatsu_ready:
         "Thanks for this, Katsuharu.":
             pass
     Ka smile "Don't go thanking me, now. You saved my business."
-    if bangok_four_xkatsu.fill < 2:
+    if bangok_four_xkatsu.fill < 2 or bangok_four_xkatsu.flavor == 3:
         Ka exhausted "It was the least I could do."
     else:
         Ka excited "It was the least I could do."
     c "I think I need to head back to my apartment now, but I'll definitely keep an eye out for you on Tatsu Avenue."
     Ka smile "Sure, human."
-    if bangok_four_xkatsu.fill > 1:
+    if bangok_four_xkatsu.fill > 1 or bangok_four_xkatsu.flavor == 3:
         Ka smile "And if you want any more special, just ask."
         c "I will."
 
