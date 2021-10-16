@@ -520,6 +520,14 @@ label bangok_four_xkatsu_help:
             n "We took turns operating the foot pedals that provided it the energy it needed to mix and chill our creamy goodness."
             window hide
             nvl clear
+            if persistent.bangok_watersports == True:
+                window show
+                n "Katsuharu asked me to bring him bowls of water a few times, throughout the recipe-making."
+                n "I obliged, unsurprised he needed to rehydrate after what he'd just done."
+                n "Toward the end of our prep, he began to look a little uncomfortable, and I could see his man-meet peeking from his slit again."
+                n "He couldn't be ready for another round, could he?"
+                window hide
+                nvl clear
             show katsu excited with None
             jump bangok_four_xkatsu_ready
 
@@ -1255,10 +1263,105 @@ label bangok_four_xkatsu_ready:
     else:
         $ renpy.error("Invalid fill value: "+str(bangok_four_xkatsu.fill))
     $ renpy.pause (0.5)
+    if persistent.bangok_watersports == True and bangok_four_xkatsu.fill > 1 or bangok_four_xkatsu.target in ["mouth","throat"]:
+        show katsu exhausted with dissolve
+        $ renpy.pause (0.8)
+        c "Something wrong?"
+        $ renpy.pause (0.3)
+        Ka normal "No, no. Just that water is going straight through me."
+        Ka smile "I'll be right back to serve up."
+        menu:
+            "I could use a palette cleanser...":
+                $ renpy.pause (0.5)
+                Ka "Could you, now?"
+                m "Katsuharu's cock emerged a little further from his slit."
+                jump bangok_four_xkatsu_ws_mouth
+                # if bangok_four_xkatsu.target in ["ass","vag","womb"]:
+                #     Ka "Are you sure that's where you want it?"
+                #     menu:
+                #         "Shower.":
+                #             jump bangok_four_xkatsu_outofcontent
+                #         "Mouth.":
+                #             jump bangok_four_xkatsu_ws_mouth
+                #         "Ass." if bangok_four_xkatsu.target == "ass":
+                #             jump bangok_four_xkatsu_ws_underneath
+                #         "Vagina." if bangok_four_xkatsu.target == "vag":
+                #             jump bangok_four_xkatsu_ws_underneath
+            "Oh, yeah, go take care of that.":
+                $ renpy.pause (0.5)
+                show katsu exhausted flip with dissolve
+                $ renpy.pause (0.3)
+                hide katsu with easeoutright
+                $ renpy.pause (1.0)
+                m "He headed off to another part of the house, leaving me alone in the kitchen."
+                $ renpy.pause (2.0)
+                c "(Been waiting all day for this ice cream. What's a few more minutes?)"
+                $ renpy.pause (3.0)
+                c "(Nope. Not going to do it.)"
+                $ renpy.pause (4.0)
+                c "(Really! I can wait. I'm definitely going to get it this time.)"
+                $ renpy.pause (3.0)
+                c "(Okay, maybe just a taste to--){w=0.8}{nw}"
+                show katsu smile at right with easeinright
+                Ka "Apologies for that."
+                $ renpy.pause(0.3)
+
     Ka "All that's left is to serve up. Cup or cone?"
-
     $ renpy.pause(0.8)
+    jump bangok_four_xkatsu_ending
 
+label bangok_four_xkatsu_ws_mouth:
+    # c "Doesn't cleanse my palette if it goes somewhere else."
+    # Ka smile "Suppose it doesn't."
+    m "Stepping away from the buckets to protect our creamy treat, I sank to my knees."
+    show katsu smile at center with ease
+    if bangok_four_xkatsu.target == "throat":
+        Ka normal "This about taste to you? Or do you want a direct injection?"
+        menu:
+            "Deepthroat.":
+                $ renpy.pause(0.5)
+                c "All the way."
+                show black with dissolve
+                m "I ducked underneath him, coming again face-to-face with his shaft."
+                Ka smile "Full service. Sounds good to me."
+                m "The feel of his cockhead in my mouth was familiar now. What was less so was the fresh tang that came with it as he began to dribble a fluid less viscous than his cum."
+                m "I nestled his tip down into my throat, struggling only slightly. Then Katsuharu stepped forward, ramming all the way home in my face and releasing the floodgates."
+                play soundloop "fx/faucet1.ogg" fadein 1.0
+                queue soundloop "fx/faucet2.ogg"
+                m "I did my best to be a full-service urinal, lapping at his genital slit with what little I could move of my tongue, but I was too overwhelmed by the sensations inside me."
+                if bangok_four_xkatsu.playerstuffed == False:
+                    m "My stomach filled rapidly with warmth from Katsuharu's bladder as he pissed like a hose down my throat."
+                    if persistent.bangok_inflation == True:
+                        m "It was beyond anything I could drink without the assistance of his shaft, my stomach filled so completely my intestines began to flood, belly expanding under the load."
+                if bangok_four_xkatsu.playerstuffed == True:
+                    m "My guts churned, Katsuharu's piss pushing the cum from my stomach and deeper into my intestines."
+                    if persistent.bangok_inflation == True:
+                        m "It was beyond anything I could drink without the assistance of his shaft. I expanded, the fluid bulge in my belly growing to a nearly painful degree, enough that I was sure I couldn't walk."
+
+
+                stop soundloop fadeout 1.0
+                $ renpy.pause(0.8)
+                m "Katsuharu's shaft shrank slightly as he finally finished packing me with piss."
+                $ renpy.pause(0.3)
+                m "Then he pulled back, the space his tip had occupied in my stomach immediately replaced with urine by fluid pressure."
+                hide black with dissolvemed
+                m "I could barely keep it all down as he withdrew completely, leaving me gasping on my knees, flushed with the warmth of my urinal use."
+                $ bangok_four_xkatsu.playerstuffed = True
+            "Mouthwash.":
+                jump bangok_four_xkatsu_outofcontent
+    else:
+        jump bangok_four_xkatsu_outofcontent
+
+    Ka "All that's left is to serve up. Cup or cone?"
+    $ renpy.pause(0.8)
+    c "H-How about a half hour rest first?"
+    Ka normal "If you insist."
+    jump bangok_four_xkatsu_ending
+
+
+
+
+label bangok_four_xkatsu_ending:
     scene black with dissolveslow
     $ renpy.pause(0.5)
     m "After serving up and putting the remainder into the icebox to stay cool, we wandered back out into the summer heat to enjoy the fruits of our labor and Katsuharu's loins."
