@@ -197,7 +197,68 @@ label bangok_four_xkatsu_help:
     label bangok_four_xkatsu_sexmenu:
     menu:
         "I didn't expect to go beyond a handjob.":
-            jump bangok_four_xkatsu_outofcontent
+            $ renpy.pause(0.5)
+            Ka exhausted "Well, that's better than no help."
+            $ renpy.pause (0.3)
+            show katsu normal with dissolve
+            m "I knelt back down next to Katsuharu's hindquarters, his bright hide and the shiny bucket on the floor making me feel a little like I was getting down to milk a cow."
+            m "As I took hold of his shaft again, it twitched, a tiny, glinting dollop of pre peeking out of the end. I was half curious to taste it, to find out what I was getting myself into flavor-wise."
+            menu:
+                "Mouth.":
+                    $ renpy.pause(0.5)
+                    $ bangok_four_xkatsu.target = "mouth"
+                    c "I, ah, I think I might help with my mouth after all."
+                    jump bangok_four_xkatsu_get_underneath
+                "Hands.":
+                    $ renpy.pause(0.5)
+            play soundloop "fx/massage.ogg" fadein 1.5
+            m "Putting the droplet from my mind, I aimed Katsuharu's cockhead into the first bucket and began to pump with both hands."
+            $ renpy.pause(1.0)
+            Ka exhausted "You know, dry pumping tugs at my skin a lot. Would help if you spread my pre around. Or played with my tip a bit more."
+            stop soundloop fadeout 1.0
+            c "Do you have lube? That'd probably be an easier way to get you more slick."
+            Ka "Sure, sure."
+            show katsu normal flip with dissolve
+            m "Katsuharu stepped back over the buckets, cock pulling free from my hand with a smear of pre across my palm."
+            hide katsu with easeoutright
+            m "Then he wandered off to another part of the kitchen."
+            $ renpy.pause(0.8)
+            c "Should I help you look, or...?"
+            Ka "No, no. Should just be a moment."
+            play sound "fx/rummage.wav"
+            $ renpy.pause(1.0)
+            m "The wet smear on my hand drew my attention, but I tried to fight the urge to take this ice cream date to weird places like sucking off the old man."
+            m "We were harvesting an ice cream ingredient. Nothing more."
+            show katsu normal at Position(xpos=0.8,xanchor='center') with easeinright
+            play sound "fx/box.wav"
+            $ renpy.pause(0.8)
+            show katsu normal at Position(xpos=0.5,xanchor='center') with ease
+            m "Katsuharu returned, dropping a heavy bottle of lube with a plunger head next to me before taking up his position over the buckets once more."
+            m "Squirting a slippery layer over the pre-stain on my hand, I set back to work."
+            play soundloop "fx/rub2.ogg" fadein 1.0
+            $ renpy.pause(3.0)
+            show katsu exhausted with dissolvemed
+            Ka exhausted "Getting there. Closer to my tip, maybe?"
+            show katsu normal at Position(xpos=0.49,xanchor='center') with ease
+            m "I moved my ministrations downward. As I passed over the slight ridge to Katsuharu's head, he thrust a little in my hands and began to pant."
+            $ renpy.pause(1.0)
+            Ka exhausted "Almost..."
+            $ renpy.pause(1.0)
+            stop soundloop fadeout 0.5
+            play sound "fx/snarl.ogg"
+            show katsu smile at Position(xpos=0.49,ypos=1.03,xanchor='center') with ease
+            m "Katsuharu thrust through my hands and began to cum, dumping thick, creamy ropes into the bottom of the bucket."
+            show katsu exhausted with dissolve
+            m "At first I thought he'd have a dozen shots and that'd be it, but as the cum kept coming and even began to splatter a bit inside the pint-sized inner bucket, I let go of his length and shuffled back to protect my clothing."
+            $ renpy.pause(0.5)
+            $ bangok_four_xkatsu.fill = 1
+            m "Katsuharu's spurts came to an end before he'd filled that first bucket."
+            $ renpy.pause(0.8)
+            c "Wow. That..."
+            $ renpy.pause(0.8)
+            Ka "Eh."
+            $ renpy.pause(0.3)
+            jump bangok_four_xkatsu_filldone
         "I guess I could suck you off.":
             $ bangok_four_xkatsu.target = "mouth"
             jump bangok_four_xkatsu_get_underneath
@@ -520,7 +581,7 @@ label bangok_four_xkatsu_help:
             n "We took turns operating the foot pedals that provided it the energy it needed to mix and chill our creamy goodness."
             window hide
             nvl clear
-            if persistent.bangok_watersports == True:
+            if persistent.bangok_watersports == True and bangok_four_xkatsu.fill > 1 or bangok_four_xkatsu.target in ["mouth","throat"]:
                 window show
                 n "Katsuharu asked me to bring him bowls of water a few times, throughout the recipe-making."
                 n "I obliged, unsurprised he needed to rehydrate after what he'd just done."
