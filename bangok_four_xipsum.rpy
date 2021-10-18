@@ -15,6 +15,8 @@ init python in bangok_four_xipsum:
     
     playercame = False
 
+    depth = None
+
 
 
 label bangok_four_xipsum_takeemoff:
@@ -702,6 +704,12 @@ label bangok_four_xipsum_loremdone:
                         python in bangok_four_xipsum:
                             renpy.pause(0.5)
                             mood -= 1
+
+                show lorem shy at Position(yanchor='top',ypos=1080):
+                    yanchor 0.0
+                    ypos (1080-200)
+                    zoom 1.5
+                with ease
             elif bangok_four_xipsum.fuckeraction == "oral" and (bangok_four_xipsum.fuckertarget == "vag" or bangok_four_xipsum.fuckertarget == "cock"):
                 m "Lorem pulled back a moment."
                 Lo shy "C-can I fuck your ass while I...?"
@@ -727,6 +735,11 @@ label bangok_four_xipsum_loremdone:
                     m "In an impressive display of flexibility, Lorem engulfed my cock in his muzzle again, then curled to stick his cock into my ass."
                 else:
                     m "In an impressive display of flexibility, Lorem drove his tongue back into my cunt, then curled to stick his cock into my ass."
+                show lorem shy at Position(yanchor='top',ypos=1080):
+                    yanchor 0.0
+                    ypos (1080-200)
+                    zoom 1.5
+                with ease
 
             label bangok_four_xipsum_loremin_firstfuck_stagethree:
 
@@ -812,6 +825,11 @@ label bangok_four_xipsum_loremdone:
             if bangok_four_xipsum.fuckeraction == "fuck" or (bangok_four_xipsum.fuckeraction == "both" and bangok_four_xipsum.suckingipsum == False):
                 label bangok_four_xipsum_loremin_premature:
                 $ renpy.pause (2.0)
+                show lorem shy at Position(yanchor='top',ypos=1080-195):
+                    yanchor 0.0
+                    ypos (1080-200)
+                    zoom 1.5
+                with ease
                 m "Lorem's head abruptly snapped up."
                 Lo shy "W-Wai--"
                 stop soundloop fadeout 1.0
@@ -938,6 +956,10 @@ label bangok_four_xipsum_loremdone:
         hide lorem with easeoutbottom
 
         $ renpy.pause (1.5)
+        $ loremstatus = "good"
+        $ loremscenesfinished = 2
+        $ persistent.lorem2skip = True
+        play sound "fx/door/close2.wav"
         m "When Ipsum returned, he had on two fresh condoms."
     else:
         if bangok_four_xipsum.playerhasdick:
@@ -971,17 +993,279 @@ label bangok_four_xipsum_loremdone:
         Ip think "You have a penis and I have two. Would you like me to try to fit both of mine in you, one of mine in you, or just take you inside me?"
         menu:
             "Both.":
-                pass
-            "One.":
-                pass
-            "Your ass.":
-                pass
+                $ renpy.pause(0.5)
+                Ip happy "If you think you can manage."
+                hide ipsum with easeoutbottom
+                $ renpy.pause(0.8)
+                m "He stepped away a moment, getting a healthy dollop of lube to stroke over both his shafts."
+                show ipsum normal:
+                    zoom 1.8
+                    alignaround (0.5,0)
+                    xpos 0.18
+                    ypos 0.6
+                with easeinbottom
+                m "Then he returned. He parted my cheeks, then hiked my legs a little wider around him. Then I felt two cold tips prodding at the muscle around my hole."
+                $ renpy.pause(0.5)
+                Ip think "You're sure you want to try both? I'm not familiar with your level of experience, but I doubt this will be easy."
+                menu:
+                    "That's what I asked for, isn't it?":
+                        $ renpy.pause(0.5)
+                    "Okay, maybe that's too much.":
+                        $ renpy.pause(0.5)
+                        Ip sad "That's what I think as well."
+                        show ipsum normal with dissolve
+                        jump bangok_four_xipsum_one_cock_ass_fuck
+                show ipsum happy with dissolve
+                $ renpy.pause(0.5)
+                m "He adjusted his position, squeezing his tips together closer to my hole."
+                m "Then he pressed."
+                show ipsum normal:
+                    ease 2.0 ypos 0.58
+                with None
+                m "My asshole spread, admitting both tips, then slowly even more. It felt bizzare, having hy hole spread by two bulges rather than one. The elongation of my ass was unlike any other fucking I'd had, size irregardless."
+                $ renpy.pause(1.0)
+                c "Ha. Oh. W-Wow."
+                $ renpy.pause(0.5)
+                c "Is- Is that all of it?"
+                Ip think "That's a little over halfway."
+                if persistent.bangok_knot == True:
+                    Ip "Like almost all dragons, I have a knotting instinct during climax. I had thought it would be best to have this conversation before giving you the false assumption my full depth would be safe."
+                    c "L-Little late!"
+                    m "I gasped for air, finding it hard to think with the strange, unfamiliar stretching in my ass."
+                    menu:
+                        "Knot me.":
+                            $ renpy.pause (0.5)
+                            $ bangok_four_xipsum.mood += 1
+                            $ bangok_four_xipsum.fuckertarget = "deep"
+                            Ip sad "Are you sure? It could be some time before it releases."
+                            c "Y-Yes!"
+                        "S-So this is as deep as we'll go?":
+                            $ renpy.pause (0.5)
+                            Ip sad "Well, with both knots expanding just outside my genital slit, adjacent to one another, there is some risk to me as well as to you if you're too tight, as you feel now."
+                            Ip think "Inside is a different situation; you feel less tight past that initial sphincter."
+                            Ip sad "But then it may be some time before the knots release."
+                            menu:
+                                "Knot me.":
+                                    $ renpy.pause(0.5)
+                                    $ bangok_four_xipsum.mood += 1
+                                    $ bangok_four_xipsum.fuckertarget = "deep"
+                                    Ip think "You're sure?"
+                                    c "Yeah. Let's not half-ass it now that we're this far."
+                                    Ip happy "Fair enough."
+                                "D-Don't knot me.":
+                                    $ renpy.pause(0.5)
+                                    $ bangok_four_xipsum.fuckertarget = "shallow"
+                                    Ip normal "Of course."
+                else:
+                    Ip "Like almost all dragons, I have slight taper to my penises, meaning both are wider at my base. I had thought it would be best to have this conversation before assuming my full depth would be safe."
+                    m "I gasped for air, finding it hard to think with the strange, unfamiliar stretching in my ass."
+                    menu:
+                        "All the way.":
+                            $ renpy.pause (0.5)
+                            Ip think "You're sure? I would like to avoid damaging you."
+                            c "I- I can take it."
+                            $ bangok_four_xipsum.mood += 1
+                            $ bangok_four_xipsum.fuckertarget = "deep"
+                        "S-So this is as deep as we'll go?":
+                            $ renpy.pause (0.5)
+                            Ip think "Well, I believe this is sufficiently deep for me. And from the sounds you're making, it is more than deep enough for you as well."
+                            menu:
+                                "Deeper.":
+                                    $ renpy.pause(0.5)
+                                    $ bangok_four_xipsum.mood += 1
+                                    $ bangok_four_xipsum.fuckertarget = "deep"
+                                    Ip think "You're sure?"
+                                    c "Yeah. Let's not half-ass it now that we're this far."
+                                    Ip happy "Fair enough."
+                                "Yeah. Th-This is too new.":
+                                    $ renpy.pause(0.5)
+                                    $ bangok_four_xipsum.fuckertarget = "shallow"
+                                    Ip normal "Of course."
 
+                if bangok_four_xipsum.fuckertarget == "deep":
+                    show ipsum happy:
+                        ease 2.0 ypos 0.56
+                    with None
+                    m "Leaning forward, Ipsum applied more pressure to his shafts in my ass, easing deeper inside."
+                    $ renpy.pause(1.0)
+                    m "I squirmed, feeling him spread me a little wider with every millimeter we got further down."
+                    $ renpy.pause(0.3)
+                    show ipsum happy:
+                        ease 0.3 ypos 0.55
+                    with None
+                    m "He picked my balls up out of the way, then pressed the last little distance, bringing his genital slit right up against my hole."
+                    show ipsum happy:
+                        ease 1.0 zoom 2.2 ypos 0.3
+                    with None
+                    m "Then he leaned in closer to me, my cock rubbing across the plates on his belly."
+                    $ renpy.pause(0.5)
+                    Ip "{cps=*0.4}Feel good?{/cps}"
+                    m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
+                    show ipsum normal with dissolve
+                    play soundloop "fx/rub2.ogg" fadein 0.5
+                    m "He took my shaft in one hand, rough scales and short, dulled claws closing around my hardened cock. Then he began to pump, the condom protecting me from the worst of the scraping and leaving me with just the handjob and the mind-numbing sensation of my hilted, double-dicked ass."
+                    $ renpy.pause(2.0)
+                    m "After a few long seconds, I felt his ministrations on my arousal beginning to relax my hole."
+                    show ipsum happy:
+                        ease 2.0 ypos 0.35
+                    with None
+                    $ renpy.pause(0.5)
+                    m "He eased out extremely slowly, with full awareness I was still adjusting to his strange penetration. My legs were weak, crotch afire with need as he stroked me toward my inevitable peak."
+                    show ipsum happy:
+                        ease 2.0 ypos 0.30
+                    with None
+                    m "Letting go of my leg with his other hand, he switched direction, filling me again with wide pressure. Then I felt his hand on my belly, under my cock and his handjob, massaging my skin and that electric need in my groin."
+                    $ renpy.pause(1.12)
+                    m "I couldn't help it."
+                    stop soundloop fadeout 0.5
+                    play sound "fx/extinguish.ogg"
+                    show black with fadequick
+                    m "My ass clenching with all the strength it had left, Ipsum's caresses threw me over my peak."
+                    m "Blissed out, I thrust into his hands as much as I could move with most of his weight on me and his cocks in my ass pinning my hips."
+                    show ipsum happy:
+                        ypos 0.7
+                    with None
+                    play sound "fx/snarl.ogg" fadein 0.5
+                    hide black with dissolveslow
+                    $ renpy.pause (0.5)
+                    $ bangok_four_xipsum.playercame = True
+                    m "When I came back from my climax, I found Ipsum with his head down, hot breath washing over my chest as he made tiny thrusts into my ass."
+                    if persistent.bangok_knot == True:
+                        m "Then I felt the twitching of his shafts, the pool of warmth in my gut, and the reason he couldn't pull out very far."
+                    else:
+                        m "Then I felt the twitching of his shafts and the pool of warmth in my gut."
+                    if persistent.bangok_inflation == True:
+                        m "Both condoms stretched, each filling with more than a human could produce. I let out a small gasp as they pushed deeper into my colon, pressing back against Ipsum's hand on my belly."
+                        m "I felt stuffed, and wondered a little how it would feel without the condoms, to have two shafts going off inside me at the same time."
+                    m "I lay back, basking in coital afterglow as Ipsum came in me."
+                    $ renpy.pause (0.5)
+                    show ipsum happy:
+                        ease 0.5 zoom 2.0 ypos 0.4
+                    with None
+                    m "Then he popped his head up with a grin."
+                    Ip "Does that satisfy our arrangement, ambassador?"
+                    menu:
+                        "I could go for another round...":
+                            $ renpy.pause (0.5)
+                            if persistent.bangok_knot == True:
+                                Ip sad "I'm afraid that could be rather difficult. I did warn you I'd be knotting you when I came, didn't I?"
+                                c "You did. I was making a joke."
+                            else:
+                                Ip sad "I'm afraid that could be rather difficult. Us dragons have a refractory period of--"
+                                c "I'm kidding. I was making a joke."
+                            Ip think "Ah."
+                        "Very much so.":
+                            $ renpy.pause (0.5)
+                            Ip normal "Good."
+                else: # bangok_four_xipsum.fuckertarget == "shallow":
+                    jump todo_out_of_content
+
+
+                hide ipsum with easeoutbottom
+                if bangok_four_xipsum.loremin == True:
+                    m "Ipsum leaned back with a remarkable display of his thin body's flexibility, swiping a metal tray with Lorem's condom off a table next to his fume hood without disturbing his cocks in my ass."
+                else:
+                    m "Ipsum leaned back with a remarkable display of his thin body's flexibility, swiping an empty metal tray off a table next to his fume hood without disturbing his cocks in my ass."
+                show ipsum normal:
+                    zoom 1.8
+                    alignaround (0.5,0)
+                    xpos 0.18
+                    ypos 0.55
+                with easeinbottom
+                m "He set it next to me on the bed. Then he stripped off my condom in one smooth motion, tying it off with what looked like practiced ease. He set my load on the tray."
+                if persistent.bangok_knot == True and bangok_four_xipsum.fuckertarget == "deep":
+                    m "Finally, he set the tray aside."
+                    hide ipsum with dissolvemed
+                    m "Hiking my hips up a little higher, Ipsum lay across one of my legs, all along my body. My ass clenched, put on edge by the slight force his new position applied to my hole via his cocks, even as the warmth of his body relaxed the rest of me."
+                    c "So... how long?"
+                    Ip think "Twenty, maybe thirty minutes."
+                    Ip normal "I believe you'll be staying for dinner, now. And don't worry; Lorem will have factored our delay into the cooking time for his choice of dish."
+                    c "That's nice of him."
+                    Ip normal "Indeed."
+                    stop music fadeout 1.0
+                    scene black with dissolveslow
+                    $ renpy.pause(1.0)
+                    jump _mod_fixjmp
+                elif bangok_four_xipsum.fuckertarget == "deep":
+                    m "Finally he set the tray aside, before bracing against my legs and beginning to pull slowly out of my ass."
+                    c "A-hah!"
+                    show ipsum normal:
+                        zoom 1.8
+                        alignaround (0.5,0)
+                        xpos 0.18
+                        ease 2.5 ypos 0.59
+                    with None
+                    m "It was painfully slow going, my ass hypersensitive after the unusual spreading."
+                    $ renpy.pause(2.3)
+                    play sound "fx/uncork.ogg"
+                    show ipsum normal:
+                        zoom 1.8
+                        alignaround (0.5,0)
+                        xpos 0.18
+                        ease 0.3 ypos 0.6
+                    with None
+                    m "Eventually he popped free, condom-enwrapped loads going with him."
+                else: # "shallow":
+                    jump todo_out_of_content
+            "One.":
+                $ renpy.pause(0.5)
+                Ip normal "Of course."
+                hide ipsum with easeoutbottom
+                $ renpy.pause(0.8)
+                m "He stepped away a moment, getting a healthy dollop of lube to stroke over both his shafts."
+                show ipsum normal:
+                    zoom 1.8
+                    alignaround (0.5,0)
+                    xpos 0.18
+                    ypos 0.6
+                with easeinbottom
+                m "Then he returned. He parted my cheeks, then hiked my legs a little wider around him. Then I felt two cold tips prodding at the muscle around my hole."
+                c "Uh."
+                Ip normal "Just getting positioned."
+                label bangok_four_xipsum_one_cock_ass_fuck:
+                m "One of his cold, lubricated shafts he pushed down, into the small gap between my crack and his bedcovers. The other he pressed right up against my pucker."
+                jump todo_out_of_content
+            "Your ass.":
+                $ renpy.pause(0.5)
+                if bangok_four_xipsum.loremfirst == True:
+                    Ip happy "So you'd like me to be the first dragon to have a human cum in them?"
+                    Ip normal "I can't find any reason to say no."
+                jump todo_out_of_content
+
+
+
+        scene black with dissolve
+        m "Then he wandered around the bed, sitting down above my head while I lay recovering."
+        show bangok_four_xipsum_afterglow at Pan((0,0),(640,8),8.0) with dissolve
+        $ renpy.pause(4.0)
+        c "That... that was great."
+        Ip think "Indeed."
+        $ renpy.pause(1.0)
+        c "Was it good for you as well?"
+        Ip think "Yes."
+        $ renpy.pause(1.0)
+        menu:
+            "Are you paying any attention to what I'm saying?":
+                $ renpy.pause(1.0)
+                Ip think "I am... a little distracted thinking about the experiment I was working on before you came in."
+                c "..."
+                Ip sad "It's not your fault. It's just that these things tend to capture my attention."
+                $ renpy.pause(0.5)
+                c "Maybe I should go."
+            "I should probably get going.":
+                pass
+        $ renpy.pause(0.5)
+        Ip think "Of course. Don't let me keep you."
+        stop music fadeout 1.0
+        scene black with dissolvemed
+        $ renpy.pause(1.0)
+        jump _mod_fixjmp
 
 
 
 
 
 label todo_out_of_content:
+play sound "fx/system3.wav"
 s "TODO: OUT OF CONTENT."
 $ renpy.error("TODO: Out of content.")
