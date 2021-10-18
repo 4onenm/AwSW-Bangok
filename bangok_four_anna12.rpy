@@ -15,6 +15,8 @@ init python in bangok_four_anna2:
 
     annacame = False
 
+    tail = False
+
 label bangok_four_anna1_skipmenu:
     play sound "fx/system3.wav"
     s "Bet with Anna for sex?"
@@ -345,7 +347,8 @@ label bangok_four_anna2_apartment:
                     "Yes. I'd like to skip ahead.":
                         play sound "fx/system3.wav"
                         s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-                        jump bangok_four_anna2_apartment_skip
+                        hide black with dissolveslow
+                        jump bangok_four_anna2_apartment_done
                     "No. Don't skip ahead.":
                         play sound "fx/system3.wav"
                         s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
@@ -810,6 +813,9 @@ label bangok_four_anna2_apartment:
                     An blush "Yes. Your turn."
             m "I withdrew my sopping wet arm from her now-loosened passage, considering my next move."
             jump bangok_four_anna2_apartment_startingmenu
+
+
+
         "[[Lick her.]" if bangok_four_anna2.lick == True:
             $ anna2mood -= 1
             $ bangok_four_anna2.lick = False
@@ -823,6 +829,9 @@ label bangok_four_anna2_apartment:
                 An face "What do you think the condom is for?"
             m "I got back to my feet."
             jump bangok_four_anna2_apartment_startingmenu
+
+
+
         "[[Use her mouth.]":
             c "Actually..."
             m "I sat on the couch, spreading my legs."
@@ -953,139 +962,7 @@ label bangok_four_anna2_apartment:
                 $ renpy.pause(0.5)
                 m "She kept pumping until my shaft began to soften, my liquid load expended. Then she flicked the condom's reservoir with her thumb."
 
-            $ blood = False
-            if blood == False:
-                An "Well. With this sample, I suppose I don't need your blood anymore, do I?"
-                m "She pinched just at my cock's tip and the ring, then began to tug it off."
-                menu:
-                    "I didn't agree to that!":
-                        $ anna2mood -= 1
-                        An sad "No. You agreed to far more detailed procedures a few days from now. This is basically nothing."
-                        menu:
-                            "Take her hands off.":
-                                $ anna2mood -= 2
-                                m "Grabbing her wrists, I yanked her hands off of my cock."
-                                c "It's my DNA. That's not \"nothing\" to me!"
-                                An face "Are you kidding me?"
-                                An sad "It's a few kilometers of basic molecules chained together, replicated over and over. There's literally no point to protecting it. I can probably get most of it from skin cells you've shed on my arms tonight."
-                                c "You're just doing this to get the information to clone me?"
-                                An disgust "Why the fuck would I even want to do that?"
-                                An face "No. This is all about figuring out how you work. And I don't need this to do it, but it makes it a lot easier to know what to expect and do when I bring you into my lab."
-                                menu:
-                                    "Concede the point.":
-                                        $ renpy.pause(0.5)
-                                        $ anna2mood += 2
-                                        c "Okay. Look, I'm sorry. Giving samples of ourselves away isn't really normal among humans."
-                                        An sad "That's not what I'd expect from the liberal opinion on sex."
-                                        c "If you're just going to take it another way anyway, I guess there's no point to forcing you to do all that work. Go ahead and take it."
-                                        show anna normal with dissolve
-                                        $ renpy.pause(0.8)
-                                        An "Thank you."
-                                    "Refuse.":
-                                        $ anna2mood -= 1
-                                        stop music fadeout 2.0
-                                        c "I don't care. You're not keeping samples of my cum like some sick souveneir."
-                                        An disgust "Fine."
-                                        An sad "In that case, I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
-                                        label bangok_four_anna2_apartment_abruptdeparture:
-                                        stop music fadeout 0.5
-                                        if anna2mood > -2:
-                                            c "Anna..."
-                                        hide anna with dissolvemed
-                                        $ renpy.pause(0.3)
-                                        play sound "fx/door/doorclose.ogg"
-                                        $ renpy.pause(1.0)
-                                        m "Without another word, Anna left."
-                                        $ renpy.pause(1.0)
-                                        scene black with dissolvemed
-                                        $ renpy.pause(0.5)
-                                        $ annastatus = "bad"
-                                        $ annascenesfinished = 2
-                                        jump _mod_fixjmp
-                            "Puncture the condom.":
-                                $ anna2mood -= 1
-                                m "Grabbing her wrists, I forced her hands together, driving her claws through the condom's walls to puncture the sample she was after."
-                                An disgust "What the fuck?!"
-                                c "It's my DNA. That's not \"nothing\" to me!"
-                                An "So you're going to spill it all over my hands?"
-                                An sad "You do know that's exactly the same as just handing it to me, don't you? I need a few cells, not the whole sample."
-                                An sad "It's a few kilometers of basic molecules chained together, replicated over and over. There's literally no point to protecting it."
-                                c "You're just doing this to get the information to clone me?"
-                                An disgust "Why the fuck would I even want to do that?"
-                                An sad "No. This is all about figuring out how you work. And I don't need this to do it, but it makes it a lot easier to know what to expect and do when I bring you into my lab."
-                                menu:
-                                    "Apologize.":
-                                        $ renpy.pause(0.5)
-                                        $ anna2mood += 1
-                                        c "Okay. Look, I'm sorry. Giving samples of ourselves away isn't really normal among humans."
-                                        An sad "That's not what I'd expect from the liberal opinion on sex."
-                                        c "If you're just going to take it another way anyway, I guess there's no point to forcing you to do all that work. Go ahead and take it."
-                                        show anna normal with dissolve
-                                        $ renpy.pause(0.8)
-                                        An "Thank you."
-                                        m "She tugged off the condom's remains, balling it in one hand."
-                                    "Threaten.":
-                                        $ anna2mood -= 2
-                                        stop music fadeout 2.0
-                                        c "Take that sample and I won't come into your lab."
-                                        An disgust "Fine."
-                                        m "She wiped my cum on my bare legs."
-                                        An "There. Happy now? Or do you want me to wash my hands to prove myself to you?"
-                                        $ renpy.pause(1.5)
-                                        An sad "Then I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
-                                        stop music fadeout 0.5
-                                        if anna2mood > -2:
-                                            c "Anna..."
-                                        hide anna with dissolvemed
-                                        $ renpy.pause(0.3)
-                                        play sound "fx/door/doorclose.ogg"
-                                        $ renpy.pause(1.0)
-                                        m "Without another word, Anna left."
-                                        $ renpy.pause(1.0)
-                                        scene black with dissolvemed
-                                        $ renpy.pause(0.5)
-                                        $ annastatus = "bad"
-                                        $ annascenesfinished = 2
-                                        jump _mod_fixjmp
-                            "Piss in the condom." if persistent.bangok_watersports:
-                                $ anna2mood -= 2
-                                play soundloop "fx/faucet1.ogg" fadein 1.0
-                                queue soundloop "fx/faucet2.ogg"
-                                $ renpy.pause(0.5)
-                                show anna disgust with dissolve
-                                An disgust "What the fuck are you...?"
-                                m "She dropped the condom's bloating reservoir against the couch."
-                                An rage "You {i}know{/i} the PH difference will destroy the sample! How {i}dare{/i} you!"
-                                c "How dare {i}I{/i}? You were trying to take my DNA. That's not \"nothing\" to me!"
-                                stop soundloop fadeout 0.5
-                                An rage "It's a few kilometers of basic molecules chained together, replicated over and over. There's literally no point to protecting it!"
-                                c "Well it's done now. What are you going to do about it?"
-                                $ renpy.pause(0.8)
-                                show anna sad with dissolve
-                                $ renpy.pause(0.5)
-                                An sad "Then I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
-                                stop music fadeout 0.5
-                                hide anna with dissolvemed
-                                $ renpy.pause(0.3)
-                                play sound "fx/door/doorclose.ogg"
-                                $ renpy.pause(1.0)
-                                m "Without another word, Anna left."
-                                $ renpy.pause(1.0)
-                                scene black with dissolvemed
-                                $ renpy.pause(0.5)
-                                $ annastatus = "bad"
-                                $ annascenesfinished = 2
-                                jump _mod_fixjmp
-                            "Let her.":
-                                pass
-                    "[[Let her.]":
-                        pass
-                m "Pulling the condom completely free, she tied it off and palmed it."
-            else:
-                c "So are you going to take a sample of this, too?"
-                An normal "No point. Sequencing your full DNA from sexual gametes would be a bunch of extra work with no benefit after you gave me your blood sample. At least if your chromosomes behave at all like ours."
-                c "I see."
-                m "She pinched at my cock's tip and the ring, then tugged my condom off of my limpening shaft, tying it off to set it aside."
+            call bangok_four_anna2_apartment_harvest from bangok_four_anna2_apartment_bjdone
 
             if bangok_four_anna2.hornsgrabbed is None:
                 show anna at center with ease
@@ -1096,7 +973,7 @@ label bangok_four_anna2_apartment:
                     label bangok_four_anna2_apartment_hornincident_description:
                     c "What do you mean?"
                     An sad "It's a sensitive area. There's a biological drive to keep them from getting ripped off our heads, so using them to control our head's motion is... undesireable."
-                    An blush "Unless we see it coming."
+                    An blush "Unless we see it coming. But that's not for everybody."
                     c "I see."
                 else:
                     show anna blush at center with ease
@@ -1107,39 +984,85 @@ label bangok_four_anna2_apartment:
                         jump bangok_four_anna2_apartment_hornincident_description
                 $ bangok_four_hornincident = True
 
-            if bangok_four_anna2.annacame == False:
-                An sad "That's that, then. Are you satisfied?"
-                if anna2mood > 2:
-                    c "Are you? I haven't done anything for you yet."
-                    An "I suppose not, but there are really some things I need to take care of back at the lab."
-                else:
-                    c "More than."
-                    An normal "Glad to hear it. In that case, I should get back to the lab. I have a few more things to finish up."
-            else:
-                An smirk "I suppose that's that, then. Are you satisfied?"
-                c "Yeah. You?"
-                An "Yeah."
-                $ renpy.pause(0.8)
-                An blush "I should get back to the lab. I have a few more things to finish up."
-            c "At this time of night?"
-            $ renpy.pause(0.8)
-            An normal "If you're so worried about me, walk me there."
-            $ renpy.pause(0.8)
-            c "Just give me a second to put my clothes back on."
-            An sad "That was a joke. Are you actually serious?"
-            c "Sure. Why not? It's good chivalry not to make you take a walk of shame after a night like that."
-            $ renpy.pause(0.8)
-            An face "Fine."
-            scene facin3 at Pan ((128, 250), (128, 250), 0.0)
-            show anna normal
-            with Fade(0.5,1.0,0.5)
-            jump anna2skip
+            jump bangok_four_anna2_apartment_done
+
+
+
         "[[Use her ass.]":
             $ bangok_four_anna2.position = "ass"
+            if persistent.bangok_cloacas == True:
+                if bangok_four_anna2.annacame == True:
+                    m "Anna's slit remained slightly parted after my arm-fucking, and like my arm still glistened with her arousal. I gave my dick a pump with the same arm I'd fucked her with, lubricating the condom, then got between her legs."
+                    c "During the, ah, arm fucking, you said you usually take larger partners."
+                    c "Could I try your ass, then? Since I assume it's going to be less..."
+                    An smirk "Fine by me."
+                else:
+                    if anna2mood > 0:
+                        show anna blush with dissolve
+                        m "Her slit was a thin, glistening line. I got between her legs, aiming my condom-wrapped dick directly into it."
+                        c "I assume your ass is further back in your slit, here? Since you're a reptile and..."
+                        An "Yes. And yes, you can go there."
+                    else:
+                        show anna sad with dissolve
+                        m "Her slit was a thin line. I got between her legs, aiming my condom-wrapped dick toward the bottom of it, where I assumed her ass would be."
+            else:
+                if bangok_four_anna2.annacame == True:
+                    m "Anna's slit remained slightly parted after my arm-fucking, and like my arm still glistened with her arousal. I gave my dick a pump with the same arm I'd fucked her with, lubricating the condom, in preparation to enter the smaller hole slightly further back between her legs."
+                    c "During the, ah, arm fucking, you said you usually take larger partners."
+                    c "Could I try your ass, then? Since I assume it's going to be less..."
+                    An smirk "Fine by me."
+                else:
+                    if anna2mood > 0:
+                        show anna blush with dissolve
+                        m "Her pucker was denoted by a few small rings of scales, an inch or two below the thin, glistening line of her slit. I got between her legs, aiming my condom-wrapped dick directly into it."
+                        m "I just tapped my tip against it first, looking up at her in quesstion."
+                        An "Oh, you..."
+                        An smirk "Fine by me."
+                    else:
+                        show anna sad with dissolve
+                        m "Her pucker was denoted by a few small rings of scales, an inch or two below the thin line of her slit, I got between her legs, aiming my condom-wrapped dick directly into it."
+
+            if anna2mood < 1:
+                $ anna2mood -= 1
+                show anna disgust with dissolve
+                m "She clenched up hard the moment I pushed inside, anger flashing across her features."
+                An "For fuck's sake. Can't you {i}ask{/i} first?"
+                if bangok_four_anna2.lick == True:
+                    c "Oh, are you going to tell me I can't do this either?"
+                    An sad "Normally sex is between a penis and a vagina, in case you can't remember biology 101. Other holes get involved after discussing it."
+                    c "We're discussing it now. Yes or no?"
+                else:
+                    c "Okay, I'll ask now. Yes or no?"
+                $ renpy.pause (0.8)
+                An sad "Fine. Go ahead."
+                m "Even after she conceded the point, it took her a few moments to relax enough to let my dick move again, sliding with aching slowness into her warm, enveloping rectum."
+            else:
+                show anna blush with dissolve
+                m "Her ass clenched and tugged at my shaft as I entered, but in a way that spoke of experience, rather than spasms or pain."
+                m "Her motions caused me to slow my entry, sliding with aching tingles of need into her warm, enveloping rectum."
+
+            $ renpy.pause (0.8)
+
+            m "I paused, hilted, enjoying her ass squeezing my base in a tight ring."
+
+            $ renpy.pause (0.8)
+            if anna2mood < 1:
+                An sad "You're not cumming already, are you?"
+            else:
+                c "Do you need time to adjust?"
+                An smirk "Not in the least. I've done anal before, [player_name]. With people larger than you, even."
+                if anna2mood < 2:
+                    An normal "Now do your thing."
+                else:
+                    An blush "Now, start moving."
+            jump bangok_four_anna2_apartment_vaganal_merge
+
+
+
         "[[Use her pussy.]":
             $ bangok_four_anna2.position = "vag"
             if bangok_four_anna2.annacame == True:
-                m "Anna's slit remained slightly parted after my arm-fucking, and like my arm still glistening with her arousal. I gave my dick a pump with the same arm I'd fucked her with, lubricating the condom, then got between her legs."
+                m "Anna's slit remained slightly parted after my arm-fucking, and like my arm still glistened with her arousal. I gave my dick a pump with the same arm I'd fucked her with, lubricating the condom, then got between her legs."
                 m "As I slipped inside, I realized my gusto had spread her out to the point where there was disappointingly little resistance."
             else:
                 if anna2mood > 2:
@@ -1148,7 +1071,7 @@ label bangok_four_anna2_apartment:
                     m "Entering her had disappointingly little resistance, her slit clearly meant to take larger partners."
                 else:
                     show anna sad with dissolve
-                    m "Her slit was a thin line, I got between her legs, aiming my condom-wrapped dick directly into it."
+                    m "Her slit was a thin line. I got between her legs, aiming my condom-wrapped dick directly into it."
                     m "She tensed up, fighting my entry for a moment as I pressed all the way in. Once inside, though, the pressure disappeared, her passage clearly made for larger mates."
             m "I paused, hilted, as I felt her passage moving around me, muscles massaging my shaft like an all-around warm caress even if not squeezing tightly."
             $ renpy.pause(0.8)
@@ -1165,7 +1088,80 @@ label bangok_four_anna2_apartment:
                 c "Is that a challenge?"
                 An blush "A statement of fact."
 
-            m "Taking her words as a challenge, I began to pump my hips, "
+            label bangok_four_anna2_apartment_vaganal_merge:
+            play soundloop "fx/rub2.ogg" fadein 2.0
+            
+            if anna2mood < 0:
+                show anna sad with dissolve
+            else:
+                show anna blush with dissolve
+            $ renpy.pause(1.2)
+            m "Taking her words as a challenge, I began to pump my hips, pulling out just beyond my tip before sliding back home."
+            $ renpy.pause(0.8)
+            if annamood >= 0:
+                show anna smirk with dissolve
+            m "As we fucked, I felt Anna's tail curling up between my legs, caressing my rear and encouraging my pace."
+            m "Then the tip of her tail prodded into my crack, between my cheeks."
+            menu:
+                "O-Oh!":
+                    $ renpy.pause(0.5)
+                    $ bangok_four_anna2.tail = True
+                "Uh. Please don't.":
+                    $ renpy.pause(0.5)
+                    show anna blush with dissolve
+                "[[Smack it away.]":
+                    $ renpy.pause(0.5)
+                    $ anna2mood -= 1
+                    show anna sad with dissolve
+                    c "What the hell was that?"
+                    An "I take it you're not interested, then."
+                    c "No. No I'm not."
+
+            if bangok_four_anna2.tail == True:
+                $ anna2mood += 1
+                show anna blush with dissolve
+                m "Her tail rode against my rosebud for a few thrusts, in and out, before holding in place abruptly when I was in her."
+                c "Ah!"
+                m "My breath caught, pulling back out of her fucking her tail into my ass, and vice versa when I pressed forward."
+                $ renpy.pause(0.8)
+                c "Wh-Where did you-- How did you find out your tail could...?"
+                An smirk "Practice."
+            else:
+                m "Retreating from my back, her tail followed the curve of one of my thighs, down my leg, just riding along while I filled its owner's hole."
+
+            $ renpy.pause(2.0)
+
+            m "As the combination of sensations pushed me toward my peak, Anna crossed her ankles behind my back, reducing the depth of my thrusts as she pulled me closer."
+
+            if bangok_four_anna2.tail == True:
+                m "Then her tail explored a little deeper."
+                c "W--"
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                show black with fadequick
+                m "Finding that pleasure button within me, she pressed, pushing me over my edge inside her."
+                $ renpy.pause(0.5)
+                hide black with dissolvemed
+                $ renpy.pause(0.5)
+                m "She withdrew her tail from my ass and uncrossed her legs, leaving me free to rise on shaky legs."
+            else:
+                show anna blush with dissolve
+                m "I leaned in closer to her smooth scales, breath coming hot and heavy as her warmth increased, hide flushing in a clear blush."
+                m "Then she tightened her legs against my back, pulling me in, and I couldn't hold off my climax any longer."
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                show black with fadequick
+                $ renpy.pause(1.0)
+                hide black with dissolvemed
+                $ renpy.pause(0.5)
+                m "Once I'd come down from my peak, she uncrossed her legs, leaving me free to rise on slightly unsteady legs."
+
+            hide anna with None
+            $ renpy.pause(0.0)
+            show anna blush at Position(xpos=0.8,ypos=1.2, xanchor='center')
+            m "Then she rose from the couch, giving the condom's filled reservoir a poke with the flat top of one of her claws."
+            call bangok_four_anna2_apartment_harvest from bangok_four_anna2_apartment_vaganaldone
+            jump bangok_four_anna2_apartment_done
 
 
 
@@ -1178,12 +1174,195 @@ label bangok_four_anna2_apartment:
                 An sad "Now will we get on with this?"
             else:
                 An smirk "Now, could you get on with this?"
+            jump bangok_four_anna2_apartment_startingmenu
 
 
 
 
 
+label bangok_four_anna2_apartment_harvest:
+    if blood == False:
+        An "Well. With this sample, I suppose I don't need your blood anymore, do I?"
+        m "She pinched just at my cock's tip and the ring, then began to tug it off."
+        menu:
+            "I didn't agree to that!":
+                $ anna2mood -= 1
+                An sad "No. You agreed to far more detailed procedures a few days from now. This is basically nothing."
+                menu:
+                    "Take her hands off.":
+                        $ anna2mood -= 2
+                        m "Grabbing her wrists, I yanked her hands off of my cock."
+                        c "It's my DNA. That's not \"nothing\" to me!"
+                        An face "Are you kidding me?"
+                        An sad "It's a few kilometers of basic molecules chained together, replicated over and over. There's literally no point to protecting it. I can probably get most of it from skin cells you've shed on my arms tonight."
+                        c "You're just doing this to get the information to clone me?"
+                        An disgust "Why the fuck would I even want to do that?"
+                        An face "No. This is all about figuring out how you work. And I don't need this to do it, but it makes it a lot easier to know what to expect and do when I bring you into my lab."
+                        menu:
+                            "Concede the point.":
+                                $ renpy.pause(0.5)
+                                $ anna2mood += 2
+                                c "Okay. Look, I'm sorry. Giving samples of ourselves away isn't really normal among humans."
+                                An sad "That's not what I'd expect from the liberal opinion on sex."
+                                c "If you're just going to take it another way anyway, I guess there's no point to forcing you to do all that work. Go ahead and take it."
+                                show anna normal with dissolve
+                                $ renpy.pause(0.8)
+                                An "Thank you."
+                            "Refuse.":
+                                $ anna2mood -= 1
+                                stop music fadeout 2.0
+                                c "I don't care. You're not keeping samples of my cum like some sick souveneir."
+                                An disgust "Fine."
+                                An sad "In that case, I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
+                                label bangok_four_anna2_apartment_abruptdeparture:
+                                stop music fadeout 0.5
+                                if anna2mood > -2:
+                                    c "Anna..."
+                                hide anna with dissolvemed
+                                $ renpy.pause(0.3)
+                                play sound "fx/door/doorclose.ogg"
+                                $ renpy.pause(1.0)
+                                m "Without another word, Anna left."
+                                $ renpy.pause(1.0)
+                                scene black with dissolvemed
+                                $ renpy.pause(0.5)
+                                $ annastatus = "bad"
+                                $ annascenesfinished = 2
+                                jump _mod_fixjmp
+                    "Puncture the condom.":
+                        $ anna2mood -= 1
+                        m "Grabbing her wrists, I forced her hands together, driving her claws through the condom's walls to puncture the sample she was after."
+                        An disgust "What the fuck?!"
+                        c "It's my DNA. That's not \"nothing\" to me!"
+                        An "So you're going to spill it all over my hands?"
+                        An sad "You do know that's exactly the same as just handing it to me, don't you? I need a few cells, not the whole sample."
+                        An sad "It's a few kilometers of basic molecules chained together, replicated over and over. There's literally no point to protecting it."
+                        c "You're just doing this to get the information to clone me?"
+                        An disgust "Why the fuck would I even want to do that?"
+                        An sad "No. This is all about figuring out how you work. And I don't need this to do it, but it makes it a lot easier to know what to expect and do when I bring you into my lab."
+                        menu:
+                            "Apologize.":
+                                $ renpy.pause(0.5)
+                                $ anna2mood += 1
+                                c "Okay. Look, I'm sorry. Giving samples of ourselves away isn't really normal among humans."
+                                An sad "That's not what I'd expect from the liberal opinion on sex."
+                                c "If you're just going to take it another way anyway, I guess there's no point to forcing you to do all that work. Go ahead and take it."
+                                show anna normal with dissolve
+                                $ renpy.pause(0.8)
+                                An "Thank you."
+                                m "She tugged off the condom's remains, balling it in one hand."
+                            "Threaten.":
+                                $ anna2mood -= 2
+                                stop music fadeout 2.0
+                                c "Take that sample and I won't come into your lab."
+                                An disgust "Fine."
+                                m "She wiped my cum on my bare legs."
+                                An "There. Happy now? Or do you want me to wash my hands to prove myself to you?"
+                                $ renpy.pause(1.5)
+                                An sad "Then I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
+                                stop music fadeout 0.5
+                                if anna2mood > -2:
+                                    c "Anna..."
+                                hide anna with dissolvemed
+                                $ renpy.pause(0.3)
+                                play sound "fx/door/doorclose.ogg"
+                                $ renpy.pause(1.0)
+                                m "Without another word, Anna left."
+                                $ renpy.pause(1.0)
+                                scene black with dissolvemed
+                                $ renpy.pause(0.5)
+                                $ annastatus = "bad"
+                                $ annascenesfinished = 2
+                                jump _mod_fixjmp
+                    "Piss in the condom." if persistent.bangok_watersports:
+                        $ anna2mood -= 2
+                        play soundloop "fx/faucet1.ogg" fadein 1.0
+                        queue soundloop "fx/faucet2.ogg"
+                        $ renpy.pause(0.5)
+                        show anna disgust with dissolve
+                        An disgust "What the fuck are you...?"
+                        m "She dropped the condom's bloating reservoir against the couch."
+                        An rage "You {i}know{/i} the PH difference will destroy the sample! How {i}dare{/i} you!"
+                        c "How dare {i}I{/i}? You were trying to take my DNA. That's not \"nothing\" to me!"
+                        stop soundloop fadeout 0.5
+                        An rage "It's a few kilometers of basic molecules chained together, replicated over and over. There's literally no point to protecting it!"
+                        c "Well it's done now. What are you going to do about it?"
+                        $ renpy.pause(0.8)
+                        show anna sad with dissolve
+                        $ renpy.pause(0.5)
+                        An sad "Then I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
+                        stop music fadeout 0.5
+                        hide anna with dissolvemed
+                        $ renpy.pause(0.3)
+                        play sound "fx/door/doorclose.ogg"
+                        $ renpy.pause(1.0)
+                        m "Without another word, Anna left."
+                        $ renpy.pause(1.0)
+                        scene black with dissolvemed
+                        $ renpy.pause(0.5)
+                        $ annastatus = "bad"
+                        $ annascenesfinished = 2
+                        jump _mod_fixjmp
+                    "Let her.":
+                        pass
+            "[[Let her.]":
+                pass
+        m "Pulling the condom completely free, she tied it off and palmed it."
+    else:
+        c "So are you going to take a sample of this, too?"
+        An normal "No point. Sequencing your full DNA from sexual gametes would be a bunch of extra work with no benefit after you gave me your blood sample. At least if your chromosomes behave at all like ours."
+        c "I see."
+        m "She pinched at my cock's tip and the ring, then tugged my condom off of my limpening shaft, tying it off to set it aside."
+    return
 
-label bangok_four_anna2_apartment_skip:
-s "TODO: Out of content."
-$ renpy.error("TODO: Out of content.")
+
+
+
+
+label bangok_four_anna2_apartment_done:
+    show anna at center with ease
+    if bangok_four_anna2.annacame == False:
+        An sad "That's that, then. Are you satisfied?"
+        if anna2mood > 2:
+            c "Are you? I haven't done anything for you yet."
+            An "I suppose not, but there are really some things I need to take care of back at the lab."
+        else:
+            c "More than."
+            An normal "Glad to hear it. In that case, I should get back to the lab. I have a few more things to finish up."
+    else:
+        An smirk "I suppose that's that, then. Are you satisfied?"
+        c "Yeah. You?"
+        An "Yeah."
+        $ renpy.pause(0.8)
+        An blush "I should get back to the lab. I have a few more things to finish up."
+    c "At this time of night?"
+    $ renpy.pause(0.8)
+    An normal "If you're so worried about me, walk me there."
+    $ renpy.pause(0.8)
+    c "Just give me a second to put my clothes back on."
+    An sad "That was a joke. Are you actually serious?"
+    c "Sure. Why not? It's good chivalry not to make you take a walk of shame after a night like that."
+    $ renpy.pause(0.8)
+    if persistent.bangok_watersports == True:
+        An face "Fine. While you do that, I'll borrow your government-funded restroom."
+        menu:
+            "I might not need to put my clothes back on for that...":
+                $ renpy.pause (0.5)
+                An sad "What exactly are you...?"
+                An blush "Oh."
+                An smirk "If you say so."
+                scene black with dissolvemed
+                $ renpy.pause (0.5)
+                play sound "fx/door/doorclose3.wav"
+                $ renpy.pause (1.5)
+            "Okay.":
+                hide anna with dissolve
+                $ renpy.pause (0.5)
+                play sound "fx/door/doorclose3.wav"
+    else:
+        An face "Fine."
+    $ renpy.pause(0.5)
+    scene facin3 at Pan ((128, 250), (128, 250), 0.0)
+    show anna normal
+    with Fade(0.5,1.0,0.5)
+    jump anna2skip
