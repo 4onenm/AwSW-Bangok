@@ -2,7 +2,7 @@ init python in bangok_four_xkatsu:
     whatcum = True
     protection = True
     playercame = False
-    playerstuffed = False
+    playerstuffed = None
     target = None
 
     safety = True
@@ -416,7 +416,7 @@ label bangok_four_xkatsu_help:
                                 Ka smile "Ha. Yep."
                                 m "I could do nothing to respond, as all my focus had to go to swallowing Katsu's thick, creamy seed without drowning in it."
                                 m "I sank more of his soft cockflesh into my mouth, finding it pliable enough to compress and bend down my throat as he directly stuffed my stomach with cum."
-                                $ bangok_four_xkatsu.playerstuffed = True
+                                $ bangok_four_xkatsu.playerstuffed = "mouth"
                                 if bangok_four_xkatsu.target is None:
                                     m "When the pulses finally stopped and I came up for air, my shirt felt noticeably tighter. I wiped off the few thick ropes stuck to my face, licking my fingers clean."
                                 else:
@@ -435,7 +435,7 @@ label bangok_four_xkatsu_help:
                                 else:
                                     m "Cum flooded my ass, backing up inside me, then was abruptly shoved even deeper as Katsuharu used the added lubrication of his seed to shove his cock further in, until his genital slit was pressed to my cum-spattered cheeks."
                                 show katsu excited at Position(xpos=0.49, ypos=1.05) with ease
-                                $ bangok_four_xkatsu.playerstuffed = True
+                                $ bangok_four_xkatsu.playerstuffed = "ass"
                                 m "I dropped my face to the floor, putting hand on my belly. I could feel the pulses in my ass translating directly to my gut, flooding me with an extra dose of cream than he'd promised."
                                 m "Eventually the pulses stopped, leaving me noticeably heavier than before. At first, I wasn't sure I'd be able to get up again."
                                 show katsu excited at Position(xpos=0.53, ypos=1.0) with ease
@@ -455,7 +455,7 @@ label bangok_four_xkatsu_help:
                                 else:
                                     m "He stopped just short of my innermost gate, but with my vagina blocked by his pillar of flesh, his seed had nowhere to go but through as he packed still more inside. My passage spasmed as I felt my womb defiled by a rich, viscous flood of his seed."
                                 m "I dropped my face to the floor, putting hand on my belly. I could feel the pulses in my passage translating directly to an expansion, milimeters at a time, making me look over two months pregnant with his extra dose of cream."
-                                $ bangok_four_xkatsu.playerstuffed = True
+                                $ bangok_four_xkatsu.playerstuffed = "vag"
                                 m "Eventually the pulses stopped, leaving me noticeably heavier than before. At first, I wasn't sure I'd be able to get up again."
                                 show katsu excited at Position(xpos=0.53, ypos=1.0) with ease
                                 m "Then Katsuharu lifted the weight of his shaft out of my body, pulling out with a dribble of cum down my thighs."
@@ -498,9 +498,9 @@ label bangok_four_xkatsu_help:
             show katsu exhausted flip with dissolve
             m "He took a few shaky steps away from the buckets, then sat down."
             Ka "I... ah... might need some help finishing up the recipe."
-            if bangok_four_xkatsu.fill == 3 and persistent.bangok_inflation == True and bangok_four_xkatsu.playerstuffed == False:
+            if bangok_four_xkatsu.fill == 3 and persistent.bangok_inflation == True and not bangok_four_xkatsu.playerstuffed:
                 Ka "First, put that bowl away in the icebox. Don't want it to spoil too fast."
-            if bangok_four_xkatsu.playerstuffed == True:
+            if bangok_four_xkatsu.playerstuffed:
                 c "M-Might need a minute to recover first. You, ah, pumped quite a bit into me."
                 Ka smile flip "Did you have fun, at least?"
                 c "Oh yeah."
@@ -797,7 +797,7 @@ label bangok_four_xkatsu_underneath_ass:
                 show katsu exhausted with dissolve
                 if persistent.bangok_inflation == True:
                     m "From this new angle, I could watch as these spurts that packed me solid began to press my belly outward, inflating me with Katsuharu's creamy seed."
-                    $ bangok_four_xkatsu.playerstuffed = True
+                    $ bangok_four_xkatsu.playerstuffed = "ass"
                     m "No matter how full I felt, still more was coming."
                 m "Then, gently, the pulses came to an end, leaving me packed full of Katsuharu's cum, as I'd wanted."
                 $ renpy.pause (0.8)
@@ -992,7 +992,7 @@ label bangok_four_xkatsu_underneath_vag:
 
                 if persistent.bangok_inflation == True:
                     m "My womb was packed solid with nothing but him. As yet more pulses poured inside, my belly was forced to acommodate, expanding past two months, then the first trimester."
-                    $ bangok_four_xkatsu.playerstuffed = True
+                    $ bangok_four_xkatsu.playerstuffed = "vag"
                     m "By the time his fluid injection began to slow, my navel reached out to kiss the cold floor where the bucket had been."
 
                 show katsu exhausted with dissolvemed
@@ -1153,7 +1153,7 @@ label bangok_four_xkatsu_underneath_mouth:
         menu:
             "In.":
                 $ renpy.pause (0.5)
-                $ bangok_four_xkatsu.playerstuffed = True
+                $ bangok_four_xkatsu.playerstuffed = "mouth"
                 show black with dissolve
                 play sound "fx/snarl.ogg"
                 m "No sooner was I stroking him into my mouth again than he twitched in my hands, his first pulse prying my jaw slightly wider before exploding against the back of my throat."
@@ -1256,7 +1256,7 @@ label bangok_four_xkatsu_ready:
         menu:
             "Looks good. Thanks.":
                 pass
-            "I think I got enough topping earlier." if bangok_four_xkatsu.playerstuffed == True:
+            "I think I got enough topping earlier." if bangok_four_xkatsu.playerstuffed:
                 pass
             "I can't wait to try it!":
                 pass
@@ -1377,7 +1377,7 @@ label bangok_four_xkatsu_ending:
 
     c "It's amazing!"
 
-    if bangok_four_xkatsu.fill > 1:
+    if bangok_four_xkatsu.fill > 0:
         if persistent.c1liquid == True:
                 c "..."
                 c "You know, I think I've had it before."
