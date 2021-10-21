@@ -1099,6 +1099,7 @@ label bangok_four_xipsum_loremdone:
                     with None
                     m "Then he leaned in closer to me, my cock rubbing across the plates on his belly."
                     $ renpy.pause(0.5)
+                    # TODO: This feels off too...
                     Ip "{cps=*0.4}Feel good?{/cps}"
                     m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
                     show ipsum normal with dissolve
@@ -1158,6 +1159,10 @@ label bangok_four_xipsum_loremdone:
                             $ renpy.pause (0.5)
                             Ip normal "Good."
                 else: # bangok_four_xipsum.fuckertarget == "shallow":
+                    show ipsum normal:
+                        ease 2.0 ypos 0.59
+                    with None
+                    m "Ipsum pulled back slowly, "
                     jump todo_out_of_content
 
 
@@ -1237,6 +1242,7 @@ label bangok_four_xipsum_loremdone:
         scene black with dissolve
         m "Then he wandered around the bed, sitting down above my head while I lay recovering."
         show bangok_four_xipsum_afterglow at Pan((0,0),(640,8),8.0) with dissolve
+        # TODO: Please someone help me rewrite this. This is definitely not Ipsum.
         $ renpy.pause(4.0)
         c "That... that was great."
         Ip think "Indeed."
