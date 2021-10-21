@@ -147,17 +147,8 @@ def bryce1_afterparty(ml):
 
 
 def xipsum(ml):
-
     ( ml.find_label('lorem2')
-        .search_menu("It's my pleasure.")
-        .search_menu("He looks friendly.")
-        .search_menu("Yeah.")
-        .search_menu("Interesting.")
-        .search_menu("Right.")
-        .search_menu("What's with the little horns?")
-        .search_menu("As long as they aren't hurting anyone...")
-        .search_menu("Can I still talk?")
-        .search_hide('meetingipsum')
+        .search_hide('meetingipsum', depth=400)
         .search_menu("I see how it is.")
         .add_choice("I could take them off...", condition='persistent.nsfwtoggle == True', jump='bangok_four_xipsum_takeemoff')
         .search_say("And my scientific curiosity shall remain unsatisfied.")
@@ -176,21 +167,17 @@ def xipsum(ml):
         .link_from('bangok_four_xipsum_donewithclothed_end')
         .search_say("I'm not even going to deny that. When I'm not working on something at the office, I do so here.")
         .hook_to('bangok_four_xipsum_awkward',condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
-        .search_say("Are you familiar with the many-worlds interpretation of quantum mechanics?")
-        .search_say("Alright, maybe you shouldn't talk about your theories about how the world is going to end.")
-        .search_say("As a scientist, my professional opinion is that this part looks a little long.")
-        .search_say("Are you sure? Let me see.")
-        .search_say("If I wasn't sure, I wouldn't have said it.")
+        .search_say("If I wasn't sure, I wouldn't have said it.",depth=400)
         .hook_to('bangok_four_xipsum_littlelong', condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
         .search_menu("He sounds fun.")
         .add_choice("What about our...?", condition='bangok_four_xipsum.unplayed == False and persistent.nsfwtoggle == True', jump='bangok_four_xipsum_whataboutour')
         .link_behind_from('bangok_four_xipsum_whataboutour_end')
         .search_say("Anyway, looks like we're done here.")
-        .hook_to('bangok_four_xipsum_loremdone', condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
+        .hook_to('bangok_four_xipsum_loremdone', condition='bangok_four_xipsum.unplayed == False and persistent.nsfwtoggle == True')
         .search_if('lorem2mood >= 9')
         .branch_else()
         .search_say("I should be going now, anyway. It's getting late.")
-        .hook_to('bangok_four_xipsum_lorembad', condition='bangok_four_xipsum.unplayed == False and lorem2mood > 1 and persistent.nsfwtoggle == True')
+        .hook_to('bangok_four_xipsum_lorembad', condition='bangok_four_xipsum.unplayed == False and persistent.nsfwtoggle == True')
     )
 
 

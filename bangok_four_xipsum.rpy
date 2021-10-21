@@ -138,6 +138,7 @@ label bangok_four_xipsum_donewithclothed:
             Lo bangok shy "Plus, I don't want my game to be {i}about{/i} that."
         "See something you like, Ipsum?":
             python in bangok_four_xipsum:
+                renpy.pause(0.5)
                 mood += 1
             Ip "You could certainly say that."
     show ipsum think with dissolve
@@ -166,7 +167,7 @@ label bangok_four_xipsum_donewithclothed:
         m "He reached out, as if to prod it open."
     menu:
         "No touching, please.":
-            jump bangok_four_xipsum_donewithclothed_notouch
+            label bangok_four_xipsum_donewithclothed_notouch:
             show ipsum think with dissolve
             $ renpy.pause (0.5)
             show ipsum at Position(ypos=1.1) with ease
@@ -202,6 +203,16 @@ label bangok_four_xipsum_donewithclothed:
             Ip normal "Bloodflow arousal. Not uncommon among mammals, as I understand."
             if bangok_four_xipsum.unplayed == True:
                 Ip happy "Are you sure about \"nothing more\"?"
+                menu:
+                    "Accept.":
+                        $ renpy.pause (0.9)
+                        $ bangok_four_xipsum.unplayed = False
+                        c "Okay, I have to admit I'm curious."
+                        Ip "Curious enough to try?"
+                        c "... Yes."
+                    "Reject.":
+                        $ renpy.pause (0.5)
+                        c "Yes, I'm sure."
 
     stop soundloop fadeout 1.0
     Lo relieved flip "Ipsum, I'm trying to draw [player_name], not you."
@@ -247,6 +258,7 @@ label bangok_four_xipsum_whataboutour:
 label bangok_four_xipsum_lorembad:
     c "If Ipsum's going to make me wait here naked, maybe I don't need the sex after all."
     m "I stomped over to my clothes, fed up with the mess Lorem had talked me into."
+    $ bangok_four_xipsum.unplayed = True
     jump bangok_four_xipsum_lorembad_return
 
 label bangok_four_xipsum_loremdone:
@@ -529,10 +541,10 @@ label bangok_four_xipsum_loremdone:
                     ease 3.0 pos (-128,0)
                 with dissolve
                 $ renpy.pause(2.0)
-                Ip normal "Lorem, would you like to do the honors?"
+                Ip normal bangok "Lorem, would you like to do the honors?"
                 Lo shy "M-Me?"
-                Ip happy "Of course. I wouldn't want to stand in the way of one of your rare instances of sexual conquest."
-                Ip think "I am also larger than you, so if we want to ease [player_name] into this..."
+                Ip happy bangok "Of course. I wouldn't want to stand in the way of one of your rare instances of sexual conquest."
+                Ip think bangok "I am also larger than you, so if we want to ease [player_name] into this..."
                 Lo think "Alright."
                 jump bangok_four_xipsum_loremin_firstfuck_loremclimbs
             "Shouldn't Lorem choose?":
@@ -542,8 +554,8 @@ label bangok_four_xipsum_loremdone:
                 $ bangok_four_xipsum.mood += 1
                 c "I'm just saying. Of the three of us, he's the most nervous. So... whatever makes him comfortable, right?"
                 Lo shy flip "I..."
-                Ip happy "Whatever you want, Lorem."
-                Ip normal "Within reason, of course."
+                Ip happy bangok "Whatever you want, Lorem."
+                Ip normal bangok "Within reason, of course."
                 show lorem sad flip with dissolve
                 $ renpy.pause(0.8)
                 Lo think flip "I guess... if you're offering..."
@@ -920,9 +932,9 @@ label bangok_four_xipsum_loremdone:
                 m "Lorem clambered over my leg, then collapsed onto his back against the bed's pillows."
                 m "Ipsum took a moment longer to take a seat, pulling his legs up, then tugging off one of his condoms."
 
-                scene black with None
-                show bangok_four_xipsum_afterglow at Pan((0,400),(640,0),8.0) with dissolve
+                scene bangok_four_xipsum_afterglow at Pan((0,400),(0,400),0.0) with dissolve
                 Lo relieved "Wow."
+                scene bangok_four_xipsum_afterglow at Pan((0,400),(640,0),8.0) with None
                 Ip think "That was... most excellent."
                 c "I think I'm going to need a while to recover from that."
                 c "Mind if I stay for dinner?"
