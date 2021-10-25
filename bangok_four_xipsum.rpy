@@ -1151,38 +1151,104 @@ label bangok_four_xipsum_loremdone:
                         m "Both condoms stretched, each filling with more than a human could produce. I let out a small gasp as they pushed deeper into my colon, pressing back against Ipsum's hand on my belly."
                         m "I felt stuffed, and wondered a little how it would feel without the condoms, to have two shafts going off inside me at the same time."
                     m "I lay back, basking in coital afterglow as Ipsum came in me."
-                    $ renpy.pause (0.5)
-                    show ipsum happy:
-                        ease 0.5 zoom 2.0 ypos 0.4
-                    with None
-                    m "Then he popped his head up with a grin."
-                    Ip "Does that satisfy our arrangement, ambassador?"
-                    menu:
-                        "I could go for another round...":
-                            $ renpy.pause (0.5)
-                            if persistent.bangok_knot == True:
-                                Ip sad "I'm afraid that could be rather difficult. I did warn you I'd be knotting you when I came, didn't I?"
-                                c "You did. I was making a joke."
-                            else:
-                                Ip sad "I'm afraid that could be rather difficult. Us dragons have a refractory period of--"
-                                c "I'm kidding. I was making a joke."
-                            Ip think "Ah."
-                        "Very much so.":
-                            $ renpy.pause (0.5)
-                            Ip normal "Good."
                 else: # bangok_four_xipsum.fuckertarget == "shallow":
                     show ipsum normal:
                         ease 2.0 ypos 0.59
                     with None
-                    m "Ipsum pulled back slowly, "
-                    jump todo_out_of_content
+                    $ renpy.pause(0.3)
+                    m "Ipsum pulled back slowly, twin cocks tugging at my elongated sphincter. His heads brought him to a stop, the tiny ridge of flesh that had felt so much smaller on the way in now an impediment to Ipsum's teasing retreat."
+                    $ renpy.pause(0.5)
+                    show ipsum normal:
+                        ease 0.2 ypos 0.591
+                        pause 0.5
+                        ease 0.2 ypos 0.59
+                    with None
+                    $ renpy.pause(0.9)
+                    m "Getting a better grip on my waist, Ipsum used the lubrication on his condoms to tug his his heads out. He switched direction, pushing back inside before his tips popped completely free."
+                    show ipsum happy:
+                        ease 1.0 zoom 2.2 ypos 0.4
+                    with None
+                    m "Then he leaned in closer to me, my cock rubbing across the plates on his belly."
+                    $ renpy.pause(0.5)
+                    # TODO: This feels off too...
+                    Ip "{cps=*0.4}Feel good?{/cps}"
+                    m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
+                    show ipsum normal with dissolve
+                    play soundloop "fx/rub2.ogg" fadein 0.5
+                    m "He took my shaft in one hand, rough scales and short, dulled claws closing around my hardened cock. Then he began to pump, the condom protecting me from the worst of the scraping and leaving me with just the handjob and the mind-numbing sensation of my spread, double-dicked ass."
+                    $ renpy.pause(2.0)
+                    m "After a few long seconds, I felt his ministrations on my arousal beginning to relax my hole."
+                    show ipsum happy:
+                        ease 2.0 ypos 0.41
+                    with None
+                    $ renpy.pause(0.5)
+                    m "He tugged his heads out again extremely slowly, with full awareness I was still adjusting to his strange penetration. My legs were weak, crotch afire with need as he stroked me toward my inevitable peak."
+                    show ipsum happy:
+                        ease 0.3 ypos 0.40
+                        block:
+                            ease 0.15 ypos 0.41
+                            ease 0.5 ypos 0.40
+                            repeat
+                    with None
+                    m "Then he began to move again, fucking back and forth, inside and outside my rosebud with his twin cockheads at the same rate he pumped me."
+                    $ renpy.pause(1.12)
+                    m "I couldn't help it."
+                    stop soundloop fadeout 0.5
+                    play sound "fx/extinguish.ogg"
+                    show black with fadequick
+                    m "As my ass clenched with all the strength it had left, Ipsum's caresses threw me over my peak."
+                    m "Blissed out, I thrust into his hands as much as I could move with most of his weight on me. His cockheads popped free, then one alone pressed back inside while the other ran along my crack."
+                    show ipsum happy:
+                        ypos 0.7
+                    with None
+                    play sound "fx/snarl.ogg" fadein 0.5
+                    $ renpy.pause(0.6)
+                    hide black with dissolveslow
+                    $ renpy.pause (0.5)
+                    $ bangok_four_xipsum.playercame = True
+                    m "When I came back from my climax, I found Ipsum with his head down, hot breath washing over my chest as he made tiny thrusts with the one cock in my ass."
+                    m "Then I felt the twitching of his shafts and the pool of warmth in my gut."
+                    m "I lay back, basking in coital afterglow as Ipsum came in me, and in the condom reservoir in the small of my back."
+
+                $ renpy.pause (0.5)
+                show ipsum happy:
+                    ease 0.5 zoom 2.0 ypos 0.4
+                with None
+                m "Then he popped his head up with a grin."
+                Ip "Does that satisfy our arrangement, ambassador?"
+                menu:
+                    "I could go for another round...":
+                        $ renpy.pause (0.5)
+                        if bangok_four_xipsum.fuckertarget=="deep" and persistent.bangok_knot == True:
+                            Ip sad "I'm afraid that could be rather difficult. I did warn you I'd be knotting you when I came, didn't I?"
+                            c "You did. I was making a joke."
+                        else:
+                            Ip sad "I'm afraid that could be rather difficult. Us dragons have a refractory period of--"
+                            c "I'm kidding. I was making a joke."
+                        Ip think "Ah."
+                    "Very much so.":
+                        $ renpy.pause (0.5)
+                        Ip normal "Good."
 
 
-                hide ipsum with easeoutbottom
-                if bangok_four_xipsum.loremin == True:
-                    m "Ipsum leaned back with a remarkable display of his thin body's flexibility, swiping a metal tray with Lorem's condom off a table next to his fume hood without disturbing his cocks in my ass."
+                if bangok_four_xipsum.fuckertarget == "deep":
+                    hide ipsum with easeoutbottom
+                    if bangok_four_xipsum.loremin == True:
+                        m "Ipsum leaned back with a remarkable display of his thin body's flexibility, swiping a metal tray with Lorem's condom off a table next to his fume hood without disturbing his cocks in my ass."
+                    else:
+                        m "Ipsum leaned back with a remarkable display of his thin body's flexibility, swiping an empty metal tray off a table next to his fume hood without disturbing his cocks in my ass."
                 else:
-                    m "Ipsum leaned back with a remarkable display of his thin body's flexibility, swiping an empty metal tray off a table next to his fume hood without disturbing his cocks in my ass."
+                    $ renpy.pause(0.5)
+                    show ipsum think with dissolve
+                    show ipsum think at Position(ypos=0.56) with ease
+                    $ renpy.pause(0.3)
+                    hide ipsum with easeoutbottom
+                    m "Ipsum tugged out of me, taking a step back."
+                    if bangok_four_xipsum.loremin == True:
+                        m "Then he turned to fetch a metal tray with Lorem's condom off a table next to his fume hood."
+                    else:
+                        m "Then he turned to fetch an empty metal tray off a table next to his fume hood."
+
                 show ipsum normal:
                     zoom 1.8
                     alignaround (0.5,0)
@@ -1223,7 +1289,7 @@ label bangok_four_xipsum_loremdone:
                     with None
                     m "Eventually he popped free, condom-enwrapped loads going with him."
                 else: # "shallow":
-                    jump todo_out_of_content
+                    pass
             "One.":
                 $ renpy.pause(0.5)
                 Ip normal "Of course."
