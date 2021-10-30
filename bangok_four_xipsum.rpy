@@ -1575,27 +1575,41 @@ label bangok_four_xipsum_loremdone:
 
     scene black with dissolve
     m "Then he wandered around the bed, sitting down above my head while I lay recovering."
-    show bangok_four_xipsum_afterglow at Pan((0,0),(640,8),8.0) with dissolve
-    # TODO: Please someone help me rewrite this. This is definitely not Ipsum.
-    $ renpy.pause(4.0)
-    c "That... that was great."
-    Ip think "Indeed."
-    $ renpy.pause(1.0)
-    c "Was it good for you as well?"
-    Ip think "Yes."
-    $ renpy.pause(1.0)
-    menu:
-        "Are you paying any attention to what I'm saying?":
-            $ renpy.pause(1.0)
-            Ip think "I am... a little distracted thinking about the experiment I was working on before you came in."
-            c "..."
-            Ip sad "It's not your fault. It's just that these things tend to capture my attention."
-            $ renpy.pause(0.5)
-            c "Maybe I should go."
-        "I should probably get going.":
-            pass
-    $ renpy.pause(0.5)
-    Ip think "Of course. Don't let me keep you."
+    show bangok_four_xipsum_afterglow at Pan((0,0),(640,8),6.0) with dissolve
+    $ renpy.pause(5.0)
+    scene bangok_four_xipsum_bedroom normal at Pan ((128, 228), (128, 228), 0.0)
+    show bangok_four_xipsum_bedroom_bed:
+        alignaround (0,0)
+        pos (-113,866)
+    show ipsum happy flip behind bangok_four_xipsum_bedroom_bed:
+        zoom 0.85
+        alignaround (0.0,1.0)
+        pos (0,0.35)
+    with Fade(0.5,1.0,0.5)
+
+    Ip "That was excellent indeed."
+    Ip normal flip "Now, as I didn't mention taking samples until after you'd agreed, I assume your interest was real and not just curiosity?"
+    c "Is this your way of asking to meet up again?"
+    Ip think flip "That depends, is it working?"
+    if bangok_four_xipsum.playerhasdick == False:
+        c "After you hurt yourself?"
+        Ip "Well, mistakes always happen."
+        Ip happy flip "Good scientists run the experiment over again when they do."
+    c "Maybe."
+    Ip happy flip "If it sweetens the deal, I'm planning to use your samples to determine the risk of us copulating unprotected. Up to you, of course."
+    Ip normal flip "I'll give you my number and leave it to you to decide when you think is appropriate."
+    Ip think flip "Wouldn't want your busy ambassadorial schedule to get in the way."
+    Ip sad flip "Though I may be in the lab quite a bit in the immediate near-future."
+    c "I see. So at least a few days from now."
+    Ip normal flip "Yes."
+    c "I'll give you a call when I have time."
+    Ip happy flip "Excellent."
+
+    if bangok_four_xipsum.playerpiss == True:
+        Ip sad "Now I'd better go get something to clean up the mess we've made."
+    
+    $ renpy.pause(1.5)
+
     stop music fadeout 1.0
     scene black with dissolvemed
     $ renpy.pause(1.0)
