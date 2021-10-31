@@ -1552,14 +1552,58 @@ label bangok_four_xipsum_loremdone:
                 c "We can always give it a go and just back off if we go too far, somehow."
                 Ip happy "Encouraging to hear."
                 Ip think "But not quite what I meant. I meant safely for me; my penises can only bend so far apart."
-                Ip happy "But practical experimentation does yield better results than theorizing. "
-
+                Ip happy "But practical experimentation does yield better results than theorizing."
 
                 show ipsum normal:
                     ease 2.0 ypos 0.58
                 with None
-                m "My asshole spread, admitting Ipsum's cockhead while his other shaft ."
-                $ renpy.pause(1.0)
+                m "Ipsum began to push. My asshole spread, admitting Ipsum's cockhead while his other shaft rubbed up into the small of my back."
+                $ renpy.pause(1.4)
+                m "He stopped a moment, pulling my cheeks a little wider, then pushed more inside me."
+                show ipsum normal:
+                    ease 2.0 ypos 0.56
+                with None
+                $ renpy.pause(2.0)
+                show ipsum happy:
+                    ease 0.3 ypos 0.57
+                with None
+                $ renpy.pause(0.3)
+                m "Picking my balls up out of the way, he pressed the last little distance, to the point I could feel the separation of his cocks squeezing both sides of the base of my spine."
+                show ipsum happy:
+                    ease 1.0 zoom 2.2 ypos 0.3
+                with None
+                m "Then he leaned in closer to me, my cock rubbing across the plates on his belly."
+                $ renpy.pause(0.5)
+                # TODO: This feels off too...
+                Ip "{cps=*0.4}Feel good?{/cps}"
+                m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
+                show ipsum normal with dissolve
+                play soundloop "fx/rub2.ogg" fadein 0.5
+                m "He took my shaft in one hand, rough scales and short, dulled claws closing around my hardened cock. Then he began to pump, the condom protecting me from the worst of the scraping and leaving me with just the handjob and the mind-numbing sensation of my hilted, double-dicked ass."
+                $ renpy.pause(2.0)
+                m "After a few long seconds, I felt his ministrations on my arousal beginning to relax my hole."
+                show ipsum happy:
+                    ease 0.6 ypos 0.35
+                    ease 0.3 ypos 0.30
+                    ease 0.6 ypos 0.35
+                    ease 0.3 ypos 0.30
+                    block:
+                        ease 0.5 ypos 0.35
+                        ease 0.15 ypos 0.30
+                        repeat
+                with None
+                $ renpy.pause(0.5)
+                m "With a grin, Ipsum gave my ass a few lighter thrusts, then began to pump in and out in time to his strokes of my cock."
+                $ renpy.pause(1.5)
+                show ipsum normal with dissolve
+                show ipsum:
+                    ypos 0.3
+                with ease
+                $ renpy.pause(0.5)
+                show ipsum:
+                    ypos 0.35
+                with ease
+
 
 
 
