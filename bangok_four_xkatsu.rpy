@@ -704,9 +704,12 @@ label bangok_four_xkatsu_get_underneath:
     c "I don't think cold for me and cold for you is the same."
     Ka normal "Doesn't matter if it does its job."
     m "He inspected my backside."
+    if bangok_four_playerhasdick == True:
+        jump bangok_four_xkatsu_assfuck_lube_ass
     Ka normal "You've got two holes here. Which one this stuff supposed to go into?"
     if bangok_four_xkatsu.target == "ass":
         c "Top."
+        label bangok_four_xkatsu_assfuck_lube_ass:
         m "Katsuharu scooped the lube that had spilled down my cheek, rubbing it deeper into my crack. He pushed it into my asshole with a single claw, cold keratin causing a hitch in my breathing."
     elif bangok_four_xkatsu.target == "vag":
         c "Bottom."

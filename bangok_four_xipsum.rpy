@@ -2,9 +2,6 @@ init python in bangok_four_xipsum:
     unplayed = True
     mood = 0
     clothesoff = False
-    
-    # Player has a dick or a vagina. Sorry Lorems of the world.
-    playerhasdick = None
 
     loremfirst = False
 
@@ -104,23 +101,29 @@ label bangok_four_xipsum_donewithclothed:
     $ renpy.pause (0.8)
     Ip "So those dots hanging off your upper chest, I take it those are nipples, for milk feeding in mammals like yourself. And that divot in your belly would then be your navel."
     Ip normal "Excuse my confusion, but are you male or female?"
-    menu:
-        "Male.":
-            $ bangok_four_xipsum.playerhasdick = True
-        "Female.":
-            $ bangok_four_xipsum.playerhasdick = False
-        "That's actually somewhat of an awkward question...":
-            $ renpy.pause (0.5)
-            $ lorem2mood += 1
-            $ bangok_four_xipsum.mood -= 1
-            Ip sad "Oh, is it?"
-            Ip think "Then how should I phrase it..."
-            Ip normal "What's between your legs?"
-            menu:
-                "Show him your dick.":
-                    $ bangok_four_xipsum.playerhasdick = True
-                "Show him your lack of dick.":
-                    $ bangok_four_xipsum.playerhasdick = False
+    if bangok_four_playerhasdick is not None:
+        if bangok_four_playerhasdick == True:
+            c "I have a penis."
+        else:
+            c "I have a vagina."
+    else:
+        menu:
+            "Male.":
+                $ bangok_four_playerhasdick = True
+            "Female.":
+                $ bangok_four_playerhasdick = False
+            "That's actually somewhat of an awkward question...":
+                $ renpy.pause (0.5)
+                $ lorem2mood += 1
+                $ bangok_four_xipsum.mood -= 1
+                Ip sad "Oh, is it?"
+                Ip think "Then how should I phrase it..."
+                Ip normal "What's between your legs?"
+                menu:
+                    "Show him your dick.":
+                        $ bangok_four_playerhasdick = True
+                    "Show him your lack of dick.":
+                        $ bangok_four_playerhasdick = False
 
     play sound "fx/undress.ogg"
     $ renpy.pause (0.5)
@@ -149,7 +152,7 @@ label bangok_four_xipsum_donewithclothed:
     with None
     $ renpy.pause(1.2)
     m "Ipsum strolled closer, inspecting me."
-    if bangok_four_xipsum.playerhasdick == True:
+    if bangok_four_playerhasdick == True:
         Ip "Based on what's between your legs, then, I assume your nipples don't actually produce milk."
         Ip normal "A shame. I would have liked to get samples as to what young humans find nutritious."
         Ip think "What about this? I'm not seeing any sort of slitting around your penis; does it always hang unprotected like this?"
@@ -185,7 +188,7 @@ label bangok_four_xipsum_donewithclothed:
             $ bangok_four_xipsum.mood -= 1
             jump bangok_four_xipsum_donewithclothed_notouch
         "[[Let him.]":
-            if bangok_four_xipsum.playerhasdick == True:
+            if bangok_four_playerhasdick == True:
                 m "Ipsum nudged my shaft aside with smooth tops of his cold claws."
                 Ip happy "That {i}is{/i} an external scrotum."
                 Ip think "It looks so strange without fur."
@@ -366,7 +369,7 @@ label bangok_four_xipsum_loremdone:
             $ bangok_four_xipsum.mood += 1
             $ renpy.pause (0.5)
             Ip happy "I'd be curious to hear those sometime."
-        "You want to keep my sperm in a freezer?" if bangok_four_xipsum.playerhasdick == True:
+        "You want to keep my sperm in a freezer?" if bangok_four_playerhasdick == True:
             $ bangok_four_xipsum.mood -= 1
             $ renpy.pause (0.5)
             c "I better not find out years from now you cloned kids of me."
@@ -440,7 +443,7 @@ label bangok_four_xipsum_loremdone:
 
     if bangok_four_xipsum.loremin:
         show lorem sad flip with dissolve
-        if bangok_four_xipsum.playerhasdick:
+        if bangok_four_playerhasdick:
             m "He tossed a condom packet across the bed to Lorem with a flick of the wrist, then proffered one to me."
         else:
             m "He tossed a condom packet across the bed to Lorem with a flick of the wrist."
@@ -449,7 +452,7 @@ label bangok_four_xipsum_loremdone:
         Ip normal bangok "What do you think?"
         show lorem think flip with dissolve
         menu:
-            "Sucking me?" if bangok_four_xipsum.playerhasdick:
+            "Sucking me?" if bangok_four_playerhasdick:
                 python in bangok_four_xipsum:
                     renpy.pause(0.5)
                     fuckeraction = "oral"
@@ -458,11 +461,11 @@ label bangok_four_xipsum_loremdone:
                 Ip happy bangok "I can confirm that statement."
                 Lo shy flip "H-Hey!"
             "Eating me out?":
-                python in bangok_four_xipsum:
+                python:
                     renpy.pause(0.5)
-                    fuckeraction = "oral"
-                    if playerhasdick == True:
-                        fuckertarget = "ass"
+                    bangok_four_xipsum.fuckeraction = "oral"
+                    if bangok_four_playerhasdick == True:
+                        bangok_four_xipsum.fuckertarget = "ass"
                 Lo "I'm relatively inexperienced at that, but I can try. Are you sure?"
                 Lo normal flip "Ipsum's a lot better at it."
                 $ renpy.pause(0.5)
@@ -499,7 +502,7 @@ label bangok_four_xipsum_loremdone:
                 Ip sad bangok "Then stop saying hard \"t\"s with your teeth. Your tongue against the roof of your mouth can provide a similar glottal without risking the barrier."
             "First fuck?":
                 $ bangok_four_xipsum.fuckeraction = "fuck"
-                $ bangok_four_xipsum.fuckertarget = "ass" if bangok_four_xipsum.playerhasdick else "vag"
+                $ bangok_four_xipsum.fuckertarget = "ass" if bangok_four_playerhasdick else "vag"
                 $ renpy.pause (0.5)
                 if bangok_four_malepartners + bangok_four_femalepartners < 1:
                     c "What do you think, Lorem? Want to be the very first dragon to fuck a human?"
@@ -518,10 +521,10 @@ label bangok_four_xipsum_loremdone:
                     Lo normal flip "Okay."
                 jump bangok_four_xipsum_loremin_firstfuck
             "Train?":
-                python in bangok_four_xipsum:
+                python:
                     renpy.pause(0.5)
-                    fuckeraction = "fuck"
-                    fuckertarget = "ass" if playerhasdick else "vag"
+                    bangok_four_xipsum.fuckeraction = "fuck"
+                    bangok_four_xipsum.fuckertarget = "ass" if bangok_four_playerhasdick else "vag"
                     train = True
                 c "You both want a piece of me, right? Why don't I just lie back and let the two of you have at it? Whatever order you'd like?"
                 if bangok_four_malepartners + bangok_four_femalepartners < 1:
@@ -556,7 +559,7 @@ label bangok_four_xipsum_loremdone:
                 $ renpy.pause(0.8)
                 Lo think flip "I guess... if you're offering..."
                 Lo shy flip "Can I... your, ah..."
-                if bangok_four_xipsum.playerhasdick == True:
+                if bangok_four_playerhasdick == True:
                     $ bangok_four_xipsum.fuckertarget = "ass"
                     Lo "... ass?"
                 else:
@@ -579,7 +582,7 @@ label bangok_four_xipsum_loremdone:
                 zoom 1.5
             with easeinbottom
             m "I felt Lorem's warm scales and leathery wings as he scaled the bed between my legs. Even with me on the bed, thighs spread for him, he still seemed to hesitate."
-            if bangok_four_xipsum.playerhasdick == True:
+            if bangok_four_playerhasdick == True:
                 if persistent.bangok_cloacas == True:
                     Lo "W-wait, your penis doesn't come out of a hole where your..."
                     Ip "That was implied by the external scrotum, yes."
@@ -675,7 +678,7 @@ label bangok_four_xipsum_loremdone:
             label bangok_four_xipsum_loremin_firstfuck_stagetwo:
 
             if bangok_four_xipsum.fuckeraction == "oral" or bangok_four_xipsum.fuckeraction == "both":
-                if bangok_four_xipsum.fuckertarget == "cock" or (bangok_four_xipsum.fuckeraction == "both" and bangok_four_xipsum.playerhasdick == True):
+                if bangok_four_xipsum.fuckertarget == "cock" or (bangok_four_xipsum.fuckeraction == "both" and bangok_four_playerhasdick == True):
                     m "Lorem engulfed my cock in his mouth, tongue and scaly lips sliding downward without resistance."
                 else:
                     m "More of the barrier rubbed against my thighs as Lorem pressed his tongue inside me, exploring."
@@ -692,7 +695,7 @@ label bangok_four_xipsum_loremdone:
             elif bangok_four_xipsum.fuckertarget == "vag":
                 m "The slow pace left me drenched in anticipation of the real fucking."
 
-            if bangok_four_xipsum.fuckeraction == "fuck" and bangok_four_xipsum.fuckertarget == "ass" and bangok_four_xipsum.playerhasdick == True:
+            if bangok_four_xipsum.fuckeraction == "fuck" and bangok_four_xipsum.fuckertarget == "ass" and bangok_four_playerhasdick == True:
                 Lo shy "Would you mind if I a-also licked your cock? It's just right there."
                 if bangok_four_xipsum.suckingipsum == True:
                     m "I let go of Ipsum's shaft I'd been suckling on, both of his cocks slapping against my face."
@@ -739,7 +742,7 @@ label bangok_four_xipsum_loremdone:
                             mood -= 1
                         jump bangok_four_xipsum_loremin_firstfuck_stagethree
 
-                if bangok_four_xipsum.playerhasdick == True:
+                if bangok_four_playerhasdick == True:
                     m "In an impressive display of flexibility, Lorem engulfed my cock in his muzzle again, then curled to stick his cock into my ass."
                 else:
                     m "In an impressive display of flexibility, Lorem drove his tongue back into my cunt, then curled to stick his cock into my ass."
@@ -758,7 +761,7 @@ label bangok_four_xipsum_loremdone:
 
             if bangok_four_xipsum.fuckeraction == "both":
                 play soundloop "fx/rub2.ogg" fadein 1.0
-                if bangok_four_xipsum.playerhasdick == True:
+                if bangok_four_playerhasdick == True:
                     m "As he began to move in my ass, I felt undulations around my cockhead and realized the small dragon must have taken me all the way to his throat!"
                     m "He nuzzled his snout into my groin as if he didn't need to breathe, tongue now dancing around my base."
                     if bangok_four_xipsum.suckingipsum == True:
@@ -782,7 +785,7 @@ label bangok_four_xipsum_loremdone:
                         m "I let go of Ipsum's cocks for a moment to give him a warning, my saliva smearing on my face."
                     c "G-Gentle with that!"
                 elif bangok_four_xipsum.fuckertarget == "ass":
-                    if bangok_four_xipsum.playerhasdick == True:
+                    if bangok_four_playerhasdick == True:
                         m "Lorem dug deeper, jaw wide open against my rear, snout shoving my balls up out of his way as his teeth ghosted over my taint."
                     else:
                         m "Lorem dug deeper, jaw wide open against my rear, teeth ghosting against my outer lips."
@@ -805,7 +808,7 @@ label bangok_four_xipsum_loremdone:
                     m "That, atop the slight thrill of danger of his teeth at my groin, pushed me over the edge."
                 c "Mmph!"
                 show black with fadequick
-                if bangok_four_xipsum.playerhasdick == True:
+                if bangok_four_playerhasdick == True:
                     play sound "fx/extinguish.ogg"
                     m "Before I could think through whether it was a good idea, my legs wrapped around Lorem's head and pulled him in tight as I shot my load into my condom, spasming around his tongue."
                 else:
@@ -833,7 +836,7 @@ label bangok_four_xipsum_loremdone:
                     Lo shy "O- Okay."
                     if bangok_four_xipsum.suckingipsum == True:
                         show ipsum happy flip with dissolve
-                    if bangok_four_xipsum.fuckertarget == "ass" and bangok_four_xipsum.playerhasdick == False:
+                    if bangok_four_xipsum.fuckertarget == "ass" and bangok_four_playerhasdick == False:
                         Lo think "The same spot?"
                         menu:
                             "You went to all that trouble preparing it.":
@@ -911,7 +914,7 @@ label bangok_four_xipsum_loremdone:
             else:
                 m "Ipsum shifted his position, tugging me sideways by my shoulders so my head went over the edge of the bed. Then he tugged my mouth off of his cocks."
                 Ip happy "Would you like to try that again? And, if so, how hard?"
-                if bangok_four_xipsum.playerhasdick == True:
+                if bangok_four_playerhasdick == True:
                     m "It was hard to think with Lorem going at my ass and so deeply taking my own shaft."
                 else:
                     m "It was hard to think with Lorem going at my ass and so thoroughly working my cunt with his tongue."
@@ -938,7 +941,7 @@ label bangok_four_xipsum_loremdone:
                         m "I swooned, the double-ended fucking and Lorem's tounging more than my brain could take. Each thrust of Ipsum's hips sent his other cock bouncing lewdly off my face or throat."
                         $ renpy.pause(1.0)
                 
-                if bangok_four_xipsum.playerhasdick == True:
+                if bangok_four_playerhasdick == True:
                     play sound "fx/extinguish.ogg"
                     m "I came first, blasting my load into the condom deep in the undulating depths of Lorem's throat."
                     m "Even still, the sensations kept coming as Lorem held on until I was completely done, and starting to limpen."
@@ -1007,7 +1010,7 @@ label bangok_four_xipsum_loremdone:
         play sound "fx/door/close2.wav"
         m "When Ipsum returned, he had on two fresh condoms."
     else:
-        if bangok_four_xipsum.playerhasdick:
+        if bangok_four_playerhasdick:
             m "He handed me a condom packet of my own."
         Ip normal bangok "I know you've been standing a while. Why not lie down? I still have to get a tray set up for barrier disposal."
         c "Sure."
@@ -1031,7 +1034,7 @@ label bangok_four_xipsum_loremdone:
         ypos 0.6
     with easeinbottom
 
-    if bangok_four_xipsum.playerhasdick == False:
+    if bangok_four_playerhasdick == False:
         Ip happy "You have two holes, I have two penises. What say we keep things simple?"
         c "I'm in."
         hide ipsum with easeoutbottom
@@ -1635,7 +1638,7 @@ label bangok_four_xipsum_loremdone:
     Ip normal flip "Now, as I didn't mention taking samples until after you'd agreed, I assume your interest was real and not just curiosity?"
     c "Is this your way of asking to meet up again?"
     Ip think flip "That depends, is it working?"
-    if bangok_four_xipsum.playerhasdick == False:
+    if bangok_four_playerhasdick == False:
         c "After you hurt yourself?"
         Ip "Well, mistakes always happen."
         Ip happy flip "Good scientists run the experiment over again when they do."

@@ -851,9 +851,9 @@ label bangok_four_anna2_apartment:
                 hide anna with None
                 $ renpy.pause(0.0)
                 show anna sad at Position(xpos=0.8,ypos=1.0, xanchor='center')
-            show anna at Position(xpos=0.7) with ease
-            show anna at Position(xpos=0.6, ypos=1.1) with ease
-            show anna at Position(ypos=1.3) with ease
+            show anna normal at Position(xpos=0.7) with ease
+            show anna normal at Position(xpos=0.6, ypos=1.1) with ease
+            show anna normal at Position(ypos=1.3) with ease
             m "Anna got back off the couch, then sank to her knees in front of me."
             $ renpy.pause(0.3)
             show anna normal with dissolve

@@ -17,7 +17,6 @@ init python:
     bangok_four_bryce1_oralspot = None
 
 init python in bangok_four_bryce1:
-    playerhasdick = True
     fuckwomb = False
     knotpos = None
 
@@ -125,7 +124,7 @@ label bangok_four_bryce1_ws_emptying_the_tank(feelbad=False, condom=False):
                 $ renpy.pause (2.0)
                 c "..."
                 $ renpy.pause (3.0)
-                if bangok_four_bryce1.playerhasdick:
+                if bangok_four_playerhasdick:
                     if bangok_four_bryce1_playercame == True:
                         m "I played with my soft dick a little to pass the time."
                     else:
@@ -320,13 +319,17 @@ label bangok_four_bryce1_apartment:
     Br "It's always hard."
     c "Huh."
     Br smirk dk "That's mine. Now show me yours."
-    menu:
-        "Show him your dick.":
-            $ bangok_four_bryce1.playerhasdick = True
-            jump bangok_four_bryce1_m
-        "Show him your lack of dick.":
-            $ bangok_four_bryce1.playerhasdick = False
-            jump bangok_four_bryce1_f
+    if bangok_four_playerhasdick is None:
+        menu:
+            "Show him your dick.":
+                $ bangok_four_playerhasdick = True
+            "Show him your lack of dick.":
+                $ bangok_four_playerhasdick = False
+
+    if bangok_four_playerhasdick == True:
+        jump bangok_four_bryce1_m
+    else:
+        jump bangok_four_bryce1_f
 
 label bangok_four_bryce1_f:
     m "Teasing my vaginal lips apart, I gave him a winking look at my cunt."
@@ -1318,7 +1321,7 @@ label bangok_four_bryce1_m2:
             if bangok_four_bryce1_protected == False and not bangok_four_bryce1_playercame:
                 m "My addled brain managed to push through an important thought before I followed his order."
                 c "Wait, what about protection?"
-                if bangok_four_bryce1.playerhasdick == True:
+                if bangok_four_playerhasdick == True:
                     Br brow dk "You're kidding, right? Kids don't happen from oral. And we're both guys."
                 else:
                     Br brow dk "You're kidding, right? Kids don't happen from oral."
@@ -1338,7 +1341,7 @@ label bangok_four_bryce1_m2:
                         label bangok_four_bryce1_oralbot_getprotection:
                         $ bangok_four_bryce1_protected = True
                         play sound "fx/rummage.ogg"
-                        if bangok_four_bryce1.playerhasdick == True:
+                        if bangok_four_playerhasdick == True:
                             m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one labeled safe for oral, then dug a little deeper for one my size, in case things went further."
                             m "Only after I dug to the bottom did I finally find a box of condoms closer to my scale, unopened."
                         else:
@@ -1406,7 +1409,7 @@ label bangok_four_bryce1_m2:
             menu:
                 "Suction.":
                     c "Human lips can seal pretty well. Guess you haven't felt that before, huh?"
-                    Br flirt dk "Guess not. But I'd like to feel it again."
+                    Br flirty dk "Guess not. But I'd like to feel it again."
                 "You'll find out.":
                     $ brycemood += 1
                     Br flirty dk "Feels good, whatever it is."
@@ -1685,11 +1688,11 @@ label bangok_four_bryce1_m2:
                         $ brycemood -= 1
                         Br normal dk "If you say so."
                         pass
-                    "Want to suck me back?" if bangok_four_bryce1.playerhasdick == True:
+                    "Want to suck me back?" if bangok_four_playerhasdick == True:
                         jump bangok_four_bryce1_m2_bsucc_merge
-                    "Can I fuck you?" if bangok_four_bryce1.playerhasdick == True:
+                    "Can I fuck you?" if bangok_four_playerhasdick == True:
                         jump bangok_four_bryce1_ptop
-                    "Eat me out?" if bangok_four_bryce1.playerhasdick == False:
+                    "Eat me out?" if bangok_four_playerhasdick == False:
                         jump bangok_four_bryce1_f_eatout_merge
 
             label bangok_four_bryce1_bothdone:
@@ -1721,7 +1724,7 @@ label bangok_four_bryce1_m2:
             $ bangok_four_malepartners += 1
             label bangok_four_bryce1_analbot:
             call bangok_four_bryce1_position("analbot")
-            if bangok_four_bryce1.playerhasdick == True:
+            if bangok_four_playerhasdick == True:
                 Br brow dk "We can try. But, ah, where? I didn't see anything behind your \"balls\" when I was down there looking."
             elif persistent.bangok_cloacas == True:
                 Br brow dk "We can try. But, ah, is there really a difference? 's going in your cloaca either way."
@@ -1734,7 +1737,7 @@ label bangok_four_bryce1_m2:
             show bangok_four_bryce_underside_large dk flip at Position(yanchor='top',ypos=0.8) with dissolve
             Br "Huh. So it is."
             show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-0.6) with ease
-            if bangok_four_bryce1.playerhasdick == True or persistent.bangok_cloacas == True:
+            if bangok_four_playerhasdick == True or persistent.bangok_cloacas == True:
                 Br flirty dk "Can't say I've ever seen that before."
             scene bangok_four_bryce1_apartment night at Pan((0,360), (0,360), 0.0)
             show bryce normal dk at Position(ypos=1.1)
@@ -1750,12 +1753,12 @@ label bangok_four_bryce1_m2:
                 Br stern dk "Is that really necessary?"
                 if bangok_four_bryce1_wstiming is not None:
                     Br smirk dk "I thought you wanted my fluids inside you."
-                    if bangok_four_bryce1.playerhasdick == True:
+                    if bangok_four_playerhasdick == True:
                         Br brow dk "Besides, we're both guys. Kids aren't happening."
                     else:
                         Br brow dk "Besides, we're different species. Kids aren't happening."
                 else:
-                    if bangok_four_bryce1.playerhasdick == True:
+                    if bangok_four_playerhasdick == True:
                         Br "We're both guys. Kids aren't happening."
                     else:
                         Br "We're different species. Kids aren't happening."
@@ -1771,7 +1774,7 @@ label bangok_four_bryce1_m2:
                         label bangok_four_bryce1_analbot_fetchcondom:
                         $ bangok_four_bryce1_protected = True
                         play sound "fx/rummage.ogg"
-                        if bangok_four_bryce1.playerhasdick == True:
+                        if bangok_four_playerhasdick == True:
                             m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one, then dug a little deeper for one my size, in case things went further."
                             m "Only after I dug to the bottom did I finally find a box of condoms closer to my scale, unopened."
                         else:
@@ -1821,7 +1824,7 @@ label bangok_four_bryce1_m2:
             show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-1.5) with ease
             m "Bryce clambered overtop me, hindlegs still on the floor while he braced his forelegs against the couch. The warmth radiating off his underbelly suffused my naked skin."
             show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-1.7) with ease
-            if bangok_four_bryce1.playerhasdick == True:
+            if bangok_four_playerhasdick == True:
                 m "The cold lube on the tip of his cock bumped up against my thighs, then slapped my balls as he tried to find my asshole."
             else:
                 m "The cold lube on the tip of his cock bumped up against my thighs, then prodded my vagina as he tried to find my asshole."
@@ -1854,7 +1857,7 @@ label bangok_four_bryce1_m2:
             m "Following my inner thighs, he managed to get his rigid cock nestled in my taint."
             c "Close."
             show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-1.9) with ease
-            if bangok_four_bryce1.playerhasdick == True:
+            if bangok_four_playerhasdick == True:
                 m "He pushed and I yelped, the delicate patch of skin between my balls and ass pressing inward."
             else:
                 m "He pushed and I yelped, the delicate patch of skin between my cunt and ass pressing inward."
@@ -1884,7 +1887,7 @@ label bangok_four_bryce1_m2:
                 ease 4.0 ypos (-2.2)
             $ renpy.pause (4.0)
             m "Bryce sank in slowly, showing the uptmost care despite our shared inebriation. The plates on his belly scraped past my own penis, the harsh stimulation adding yet more to the experience."
-            m "As the warm scales on his legs pressed up against my skin, I squirmed to try to part my own legs further, get that little big closer to take him fully."
+            m "As the warm scales on his legs pressed up against my skin, I squirmed to try to part my own legs further, get that little bit closer to take him fully."
             Br laugh dk "So tight!"
             c "Y- You're so big!"
             Br flirty dk "I hear that a lot."
@@ -1971,7 +1974,7 @@ label bangok_four_bryce1_m2:
                     show bangok_four_bryce_underside_large:
                         ease 5.0 ypos (-2.0)
                     $ renpy.pause (5.0)
-                    if bangok_four_bryce1.playerhasdick == True:
+                    if bangok_four_playerhasdick == True:
                         m "As he did, he twitched his cock along the way, eventually finding that one pleasure button deep inside me."
                         show bangok_four_bryce1_apartment night ceiling at Pan((0,0), (0,30), 0.5)
                         show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.05)
@@ -2037,11 +2040,11 @@ label bangok_four_bryce1_m2:
                     m "Bryce came, prying my legs further apart as he jerked to a stop, coming a few inches short of hilting while he coated my insides white."
 
             
-            if bangok_four_bryce1.playerhasdick == True:
+            if bangok_four_playerhasdick == True:
                 if not bangok_four_bryce1_playercame:
                     m "The twitching of his spurting cock pressed up against the pleasure button inside me. Before I could form coherent words, I, too, was over my edge and cumming onto both our chests."
                 else:
-                    if bangok_four_bryce1.playerhasdick == True:
+                    if bangok_four_playerhasdick == True:
                         m "The twitching of his spurting cock pressed up against the pleasure button inside me, the overstimulation after my recent orgasm leaving me writhing."
             else:
                 if not bangok_four_bryce1_playercame:
@@ -3282,7 +3285,7 @@ label bangok_four_bryce1_morningcouch:
                         m "He dropped, then opened his mouth wide, letting me piss right into the back of his throat."
                         play soundloop "fx/faucet1.ogg" fadein 1.0
                         queue soundloop "fx/faucet2.ogg"
-                        if bangok_four_bryce1.playerhasdick == True:
+                        if bangok_four_playerhasdick == True:
                             c "Ahh..."
                             m "My golden stream spattered against the back of his throat, which I could see working to swallow it as I went."
                             m "My cock hardened, aroused by getting to use the big, beefy police dragon as my own personal pisshole. As it twitched, a few rivulets ran down the sides of his muzzle."
