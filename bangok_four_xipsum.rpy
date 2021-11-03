@@ -1435,6 +1435,7 @@ label bangok_four_xipsum_loremdone:
                     show black with fadequick
                     m "As my ass clenched with all the strength it had left, Ipsum's caresses threw me over my peak."
                     m "Blissed out, I thrust into his hands as much as I could move with most of his weight on me. His cockheads popped free, then one alone pressed back inside while the other ran along my crack."
+                    label bangok_four_xipsum_one_merge:
                     show ipsum happy:
                         ypos 0.7
                     with None
@@ -1528,6 +1529,7 @@ label bangok_four_xipsum_loremdone:
                 else: # "shallow":
                     pass
             "One.":
+                $ bangok_four_xipsum.fuckertarget = "shallow"
                 $ renpy.pause(0.5)
                 Ip normal "Of course."
                 label bangok_four_xipsum_one_cock_ass_fuck_getlube:
@@ -1540,7 +1542,7 @@ label bangok_four_xipsum_loremdone:
                     xpos 0.18
                     ypos 0.6
                 with easeinbottom
-                m "Then he returned. He parted my cheeks, then hiked my legs a little wider around him. Then I felt two cold tips prodding at the muscle around my hole."
+                m "Then he returned. He parted my cheeks, then hiked my legs a little wider around him. I felt two cold tips prodding at the muscle around my hole."
                 c "Uh."
                 Ip normal "Just getting positioned."
                 label bangok_four_xipsum_one_cock_ass_fuck:
@@ -1582,7 +1584,7 @@ label bangok_four_xipsum_loremdone:
                 m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
                 show ipsum normal with dissolve
                 play soundloop "fx/rub2.ogg" fadein 0.5
-                m "He took my shaft in one hand, rough scales and short, dulled claws closing around my hardened cock. Then he began to pump, the condom protecting me from the worst of the scraping and leaving me with just the handjob and the mind-numbing sensation of my hilted, double-dicked ass."
+                m "He took my shaft in one hand, rough scales and short, dulled claws closing around my hardened cock. Then he began to pump, the condom on my dick and lube still on his hand protecting me from the worst of the scraping and leaving me with smooth sliding of the handjob."
                 $ renpy.pause(2.0)
                 m "After a few long seconds, I felt his ministrations on my arousal beginning to relax my hole."
                 show ipsum happy:
@@ -1599,18 +1601,57 @@ label bangok_four_xipsum_loremdone:
                 m "With a grin, Ipsum gave my ass a few lighter thrusts, then began to pump in and out in time to his strokes of my cock."
                 $ renpy.pause(1.5)
                 show ipsum normal with dissolve
-                show ipsum:
+                show ipsum normal:
                     ypos 0.3
                 with ease
-                $ renpy.pause(0.5)
-                show ipsum:
+                m "Abruptly, Ipsum pulled all the way out, still stroking my shaft."
+                show ipsum happy with dissolve
+                show ipsum happy:
                     ypos 0.35
                 with ease
-
-
-
-
-                jump todo_out_of_content
+                m "I barely had a moment to adjust as he lined his tip back up and thrust."
+                m "It took me a moment to realize why his shaft rubbing up my crack and the small of my back felt different. {w=0.5}He'd switched to his {i}other{/i} cock in my ass!"
+                show ipsum happy:
+                    ease 0.3 ypos 0.30
+                    block:
+                        ease 0.5 ypos 0.35
+                        ease 0.15 ypos 0.30
+                        repeat
+                with None
+                m "Giving one slower thrust to make sure everything was lined up, Ipsum picked up right where he'd left off in his fast pace."
+                $ renpy.pause(1.2)
+                Ip happy "Feeling close?"
+                menu:
+                    "O-Oh god.":
+                        pass
+                    "Mmh.":
+                        pass
+                    "Swwitch again?":
+                        $ renpy.pause(0.5)
+                        Ip "Sure."
+                        show ipsum normal with dissolve
+                        show ipsum normal:
+                            ypos 0.3
+                        with ease
+                        m "The momentary pause in the assfucking left all my attention on my shaft, now achingly close to release."
+                        show ipsum happy with dissolve
+                        show ipsum happy:
+                            ypos 0.35
+                        with ease
+                        m "His press back inside with his other shaft was maddening. Once he began to move again, there was nothing I could do."
+                        show ipsum happy:
+                            ease 0.3 ypos 0.30
+                            block:
+                                ease 0.5 ypos 0.35
+                                ease 0.15 ypos 0.30
+                                repeat
+                        with None
+                $ renpy.pause(0.8)
+                stop soundloop fadeout 0.5
+                play sound "fx/extinguish.ogg"
+                show black with fadequick
+                m "I rocketed over my peak. My ass clenched down on his cock and I thrust a little into his hands, spurting into the reservoir of my condom."
+                jump bangok_four_xipsum_one_merge
             "Your ass.":
                 $ renpy.pause(0.5)
                 if bangok_four_xipsum.loremfirst == True:
@@ -1649,7 +1690,7 @@ label bangok_four_xipsum_loremdone:
     Ip sad flip "Though I may be in the lab quite a bit in the immediate near-future."
     c "I see. So at least a few days from now."
     Ip normal flip "Yes."
-    c "I'll give you a call when I have time."
+    c "I'll give you a call if I have time."
     Ip happy flip "Excellent."
 
     if bangok_four_xipsum.playerpiss == True:
