@@ -46,7 +46,7 @@ label bangok_four_xipsum_takeemoff:
             python in bangok_four_xipsum:
                 clothesoff = True
                 renpy.pause (0.5)
-            Ip normal "I'll take what I can get."
+            Ip normal "Of course. Whatever you're comfortable with."
     Lo "Just let me finish drawing you with your \"vestments\" {i}on{/i} first, alright?"
     c "Am I going to have to stand like this again once they're off?"
     Lo think flip "I guess that depends on how different you look."
