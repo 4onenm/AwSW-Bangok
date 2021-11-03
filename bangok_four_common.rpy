@@ -123,37 +123,37 @@ init:
     image lorem bangok normal = im.Composite(
         (1240,650), 
         (0,0),"cr/lorem_normal.png",
-        (626,591), "cr/lorem_bangok_peek.png"
+        (626,579), "cr/lorem_bangok_peek.png"
     )
     image lorem bangok normal flip = im.Flip(renpy.display.image.ImageReference('lorem bangok normal'),horizontal=True)
     image lorem bangok happy = im.Composite(
         (1240,650), 
         (0,0),"cr/lorem_happy.png",
-        (626,591), "cr/lorem_bangok_peek.png"
+        (626,579), "cr/lorem_bangok_peek.png"
     )
     image lorem bangok happy flip = im.Flip(renpy.display.image.ImageReference('lorem bangok happy'),horizontal=True)
     image lorem bangok sad = im.Composite(
         (1240,650), 
         (0,0),"cr/lorem_sad.png",
-        (626,591), "cr/lorem_bangok_peek.png"
+        (626,579), "cr/lorem_bangok_peek.png"
     )
     image lorem bangok sad flip = im.Flip(renpy.display.image.ImageReference('lorem bangok sad'),horizontal=True)
     image lorem bangok relieved = im.Composite(
         (1240,650), 
         (0,0),"cr/lorem_relieved.png",
-        (626,591), "cr/lorem_bangok_peek.png"
+        (626,579), "cr/lorem_bangok_peek.png"
     )
     image lorem bangok relieved flip = im.Flip(renpy.display.image.ImageReference('lorem bangok relieved'),horizontal=True)
     image lorem bangok shy = im.Composite(
         (1240,650), 
         (0,0),"cr/lorem_shy.png",
-        (626,591), "cr/lorem_bangok_peek.png"
+        (626,579), "cr/lorem_bangok_peek.png"
     )
     image lorem bangok shy flip = im.Flip(renpy.display.image.ImageReference('lorem bangok shy'),horizontal=True)
     image lorem bangok think = im.Composite(
         (1240,650), 
         (0,0),"cr/lorem_think.png",
-        (626,591), "cr/lorem_bangok_peek.png"
+        (626,579), "cr/lorem_bangok_peek.png"
     )
     image lorem bangok think flip = im.Flip('lorem bangok think',horizontal=True)
 
