@@ -13,7 +13,7 @@ init:
                     text "Fetishes:":
                         align (0.5, 0.5)
 
-                    text "If you do not know what an option means, look it up or leave it deselected."
+                    text "If you do not know what an option means, leave it deselected (or look it up at your own peril)."
 
                     null
 
