@@ -581,7 +581,7 @@ label bangok_four_xkatsu_help:
             n "We took turns operating the foot pedals that provided it the energy it needed to mix and chill our creamy goodness."
             window hide
             nvl clear
-            if persistent.bangok_watersports == True and bangok_four_xkatsu.fill > 1 or bangok_four_xkatsu.target in ["mouth","throat"]:
+            if persistent.bangok_watersports == True and (bangok_four_xkatsu.fill > 1 or bangok_four_xkatsu.target in ["mouth","throat"]):
                 window show
                 n "Katsuharu asked me to bring him bowls of water a few times, throughout the recipe-making."
                 n "I obliged, unsurprised he needed to rehydrate after what he'd just done."
@@ -635,7 +635,7 @@ label bangok_four_xkatsu_get_underneath:
         "Safe to eat?" if bangok_four_xkatsu.safety == True:
             $ renpy.pause(0.5)
             $ bangok_four_xkatsu.safety = False
-            c "We're exposing the key ingredient to an ?"
+            c "We're exposing the key ingredient to my insides at your tip. Is that really safe?"
             Ka exhausted "Haven't had any health complaints yet."
             Ka normal "And I do have more than a few customers for this flavor."
             c "Huh."
@@ -713,7 +713,7 @@ label bangok_four_xkatsu_get_underneath:
         m "Katsuharu scooped the lube that had spilled down my cheek, rubbing it deeper into my crack. He pushed it into my asshole with a single claw, cold keratin causing a hitch in my breathing."
     elif bangok_four_xkatsu.target == "vag":
         c "Bottom."
-        m "Katsuharu scooped the loob that had spilled down my cheek, pushing it down past my ass and over my crotch. He pushed it past my lips with a single claw, cold keratin causing a hitch in my breathing."
+        m "Katsuharu scooped the lube that had spilled down my cheek, pushing it down past my ass and over my crotch. He pushed it past my lips with a single claw, cold keratin causing a hitch in my breathing."
     else:
         $ renpy.error("There are no third options between a human's legs.")
     menu:
@@ -1344,7 +1344,7 @@ label bangok_four_xkatsu_ready:
     else:
         $ renpy.error("Invalid fill value: "+str(bangok_four_xkatsu.fill))
     $ renpy.pause (0.5)
-    if persistent.bangok_watersports == True and bangok_four_xkatsu.fill > 1 or bangok_four_xkatsu.target in ["mouth","throat"]:
+    if persistent.bangok_watersports == True and (bangok_four_xkatsu.fill > 1 or bangok_four_xkatsu.target in ["mouth","throat"]):
         show katsu exhausted with dissolve
         $ renpy.pause (0.8)
         c "Something wrong?"
