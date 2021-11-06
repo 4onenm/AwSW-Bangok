@@ -519,7 +519,7 @@ label bangok_four_bryce1_f_tonguefuck:
                 play sound ["fx/hit2.ogg", "fx/impact3.ogg"]
                 show bryce stern dk at Position(ypos=1.3) with vpunch
                 m "Bryce jerked, yanking his tongue from inside me before slamming his nose into my stomach, crushing me against the wall. It was only luck that I wasn't cut by one of his teeth or by his nose horn."
-            c "F- Fuck!"
+            c "F-Fuck!"
             $ renpy.pause (1.2)
             m "I shuddered as he glared at me, my near-orgasm ebbing slowly as my groin remained flushed with heat."
             c "Okay, don't touch the horns. Got it."
@@ -582,7 +582,7 @@ label bangok_four_bryce1_f_tonguefuck:
         "Wh- You bit me!":
             $ brycemood -= 2
             Br stern dk "I did not bite down. You drove your crotch into my teeth."
-            Br brow dk "I was doing my best to keep you safe from my them, but there was only so much I could do."
+            Br brow dk "I was doing my best to keep you safe from them, but there was only so much I could do."
         "Recovering.":
             pass
     m "Catching my breath, I struggled up."
@@ -899,7 +899,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
         else:
             m "Then he pulled back, leaving my canal wide and aching for him."
             Br "Ready?"
-    c "Y- Yeah."
+    c "Y-Yeah."
 
     $ renpy.pause(0.5)
 
@@ -1557,7 +1557,7 @@ label bangok_four_bryce1_m2:
             show bryce laugh dk flip with dissolve
             m "Bryce threw his head back, lost in the sensations I was providing him."
             c "Mmm. Mmmph?"
-            Br flirty dk flip "I don't know! N- Not long!"
+            Br flirty dk flip "I don't know! N-Not long!"
             if bangok_four_bryce1_protected:
                 m "I kept up my ministrations, treasuring every additional dollop of pre I worked forth into the condom's reservoir, and seeking to wedge ever more shaft into my mouth with each thrust downward."
             else:
@@ -1886,10 +1886,13 @@ label bangok_four_bryce1_m2:
             show bangok_four_bryce_underside_large:
                 ease 4.0 ypos (-2.2)
             $ renpy.pause (4.0)
-            m "Bryce sank in slowly, showing the uptmost care despite our shared inebriation. The plates on his belly scraped past my own penis, the harsh stimulation adding yet more to the experience."
+            if bangok_four_playerhasdick == True:
+                m "Bryce sank in slowly, showing the uptmost care despite our shared inebriation. The plates on his belly scraped past my own penis, the harsh stimulation adding yet more to the experience."
+            else:
+                m "Bryce sank in slowly, showing the uptmost care despite our shared inebriation. The plates on his belly scraped past my belly just centimeters from the lips of my front entrance, the harsh stimulation and anticipation of more to come adding to the experience."
             m "As the warm scales on his legs pressed up against my skin, I squirmed to try to part my own legs further, to get that little bit closer to take him fully."
             Br laugh dk "So tight!"
-            c "Y- You're so big!"
+            c "Y-You're so big!"
             Br flirty dk "I hear that a lot."
             if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
                 play soundloop "fx/faucet1.ogg" fadein 1.0
@@ -2431,7 +2434,7 @@ label bangok_four_bryce1_m2:
                                                 label bangok_four_bryce1_ptop_protectedslitcum:
                                                 m "Bryce bopped the full condom reservoir with a paw."
                                                 Br flirty dk "Alright. Good call with the condom, there. Saves us a lot of cleanup."
-                                                c "Th- Thanks."
+                                                c "Th-Thanks."
                                             m "Climbing off Bryce, I pulled off and tied off the condom, then sat heavily."
                                         else:
                                             m "I didn't have time to find his ass. I came, spurting thin ropes across his hindquarters and chest."
@@ -2940,7 +2943,7 @@ label bangok_four_bryce1_m2:
                         play sound ["fx/hit2.ogg", "fx/impact3.ogg"]
                         show bryce stern dk at Position(ypos=1.3) with ease
                         m "Bryce jerked, releasing my cock as he slammed his muzzle into my chest, crushing me against the wall. It was only luck that I wasn't cut by one of his small chin and nose horns."
-                    c "F- Fuck!"
+                    c "F-Fuck!"
                     $ renpy.pause (1.2)
                     c "Okay, don't touch the horns. Got it."
                     Br brow dk "No. Do. But {i}tell{/i} me. That's a delicate spot for us. Something yanking our horns the wrong way could tear them off our skull."
@@ -2964,7 +2967,7 @@ label bangok_four_bryce1_m2:
                     c "C-Careful!"
                     m "He made an uninteligible noise, the sound vibrating in his mouth around my cock."
                     m "That was all the endurance I had left."
-                "I- I'm close!":
+                "I-I'm close!":
                     pass
             
             play sound "fx/extinguish.ogg"
@@ -3067,7 +3070,7 @@ label bangok_four_bryce1_badmorning:
     c "That's easy to say after the fact."
     Br brow "Says the reason things went sideways."
     c "Excuse me? We were both drunk."
-    Br stern "When we started last night, I thought I communicated pretty clearly that I thought things would be reciprocal."
+    Br stern "When we started last night, I thought I communicated pretty clearly that I expected things would be reciprocal."
     c "That communication would have come across a lot better if I {i}hadn't been drunk.{/i}"
     Br "And that's somehow my fault?"
     stop music fadeout 3.0
@@ -3421,7 +3424,7 @@ label bangok_four_bryce1_morningcouch:
             #     Br flirty "Or you could let me lick it out."
             #     menu:
             #         "[[Let Bryce rim you.]":
-            #             c "G- Gonna have to do it fast. I don't know how long I can..."
+            #             c "G-Gonna have to do it fast. I don't know how long I can..."
             #             show bryce at Position(ypos=1.3) with ease
             #             show bryce at Position(ypos=1.5) with ease
             #             m "He moved over and bent down, head snaking between my legs, which I spread to give him better access."
@@ -3458,12 +3461,12 @@ label bangok_four_bryce1_morningcouch:
             Br normal "So... last night. There were a few misunderstandings, but I think it worked out."
             Br smirk "Certainly very unique."
         menu:
-            "So it's just because I'm human.":
+            "So you liked it just because I'm human.":
                 $ brycemood -= 1
                 Br brow "It's not just that."
                 c "..."
-                Br normal "Okay, so that was the major part of it."
-            "So do you.":
+                Br normal "Okay, so that may have been a major part of it."
+            "You were great too.":
                 $ brycemood += 1
                 Br flirty "Is that so?"
             "[[Say nothing.]":
