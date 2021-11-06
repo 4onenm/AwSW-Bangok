@@ -115,7 +115,6 @@ label bangok_four_xipsum_donewithclothed:
             "That's actually somewhat of an awkward question...":
                 $ renpy.pause (0.5)
                 $ lorem2mood += 1
-                $ bangok_four_xipsum.mood -= 1
                 Ip sad "Oh, is it?"
                 Ip think "Then how should I phrase it..."
                 Ip normal "What's between your legs?"
@@ -1348,7 +1347,6 @@ label bangok_four_xipsum_loremdone:
                     with None
                     m "Then he leaned in closer to me, my cock rubbing across the plates on his belly."
                     $ renpy.pause(0.5)
-                    # TODO: This feels off too...
                     Ip "{cps=*0.4}Feel good?{/cps}"
                     m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
                     show ipsum normal with dissolve
@@ -1407,7 +1405,6 @@ label bangok_four_xipsum_loremdone:
                     with None
                     m "Then he leaned in closer to me, my cock rubbing across the plates on his belly."
                     $ renpy.pause(0.5)
-                    # TODO: This feels off too...
                     Ip "{cps=*0.4}Feel good?{/cps}"
                     m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
                     show ipsum normal with dissolve
@@ -1579,7 +1576,6 @@ label bangok_four_xipsum_loremdone:
                 with None
                 m "Then he leaned in closer to me, my cock rubbing across the plates on his belly."
                 $ renpy.pause(0.5)
-                # TODO: This feels off too...
                 Ip "{cps=*0.4}Feel good?{/cps}"
                 m "His voice was low and seductive, a different tone from his usual clinical talk. I moaned, cock twitching against his chest in response. He'd clearly practiced being sexy with someone."
                 show ipsum normal with dissolve
@@ -1652,17 +1648,229 @@ label bangok_four_xipsum_loremdone:
                 show black with fadequick
                 m "I rocketed over my peak. My ass clenched down on his cock and I thrust a little into his hands, spurting into the reservoir of my condom."
                 jump bangok_four_xipsum_one_merge
-            "Your ass.":
+            "Your ass." if bangok_four_xipsum.playercame == False:
                 $ renpy.pause(0.5)
+                $ bangok_four_xipsum.position = "iass"
                 if bangok_four_xipsum.loremfirst == True:
                     Ip happy "So you'd like me to be the first dragon to have a human cum in them?"
                 Ip normal "I can't find any reason to say no."
-                jump todo_out_of_content
 
+                hide ipsum with easeoutbottom
+                $ renpy.pause(0.8)
+                m "He stepped away a moment, getting a healthy dollop of lube onto the the rough scales of his hand."
+                show ipsum normal:
+                    zoom 1.8
+                    alignaround (0.5,0)
+                    xpos 0.18
+                    ypos 0.6
+                with easeinbottom
+                m "Then he returned, spreading the cold lube around on my tip before pumping his hand down my length."
+                menu:
+                    "I, ah, think I should be on top.":
+                        $ renpy.pause(0.5)
+                        Ip think "I'm happy to take care of things. Are you sure?"
+                        menu:
+                            "I'd prefer the control.":
+                                $ renpy.pause(0.5)
+                                $ bangok_four_xipsum.mood -= 1
+                                jump bangok_four_xipsum_hisass_top
+                            "If you insist...":
+                                $ renpy.pause(0.5)
+                                jump bangok_four_xipsum_hisass_bot
+                    "Mm. You're going to do all the work?":
+                        $ renpy.pause(0.5)
+                        jump bangok_four_xipsum_hisass_bot
+
+                label bangok_four_xipsum_hisass_bot:
+                    Ip happy "It's no trouble at all."
+                    show ipsum happy:
+                        ypos 0.45
+                    with ease
+                    m "Giving my shaft a few more pumps, Ipsum clambered onto the bed, straddling my thighs."
+                    show ipsum happy:
+                        ypos 0.42
+                    with ease
+                    m "He shuffled forward, his twin shafts bumping mine until he took hold of mine and aimed it back at his hole."
+                    m "Then Ipsum spread his knees out wider, sinking down onto me."
+                    show ipsum happy:
+                        ease 3.0 ypos 0.45
+                    with None
+                    m "He was incredibly tight, but kept sufficient control of his depth that he didn't put a worrying amount of weight on my member. Instead, he held his position, loosening slowly until my lubricated tip popped in, gradually followed by more of my member."
+                    m "The slow movement of an entrance of hard plates giving way to his warm, clenching innards left me aching to pick up the pace."
+                    show ipsum happy:
+                        ypos 0.46
+                    with ease
+                    m "I gave a small thrust and Ipsum dropped with me, his twin cocks slapping down onto my belly."
+
+                    if persistent.bangok_knot == True:
+                        $ renpy.pause(0.8)
+                        Ip think "Hm. Perhaps I should have considered this earlier. Humans do not form knots upon ejaculation, do they?"
+                        c "Uh, what? No."
+                        Ip normal "Excellent."
+                    show ipsum normal with dissolve
+                    $ renpy.pause(1.2)
+                    m "Ipsum took a moment to rest with me hilted inside him, adjusting. His sphincter clenched around my base. The warm plates of his underbelly rested his weight on my belly, legs, and balls."
+
+
+
+
+
+
+                    jump todo_out_of_content
+                
+                label bangok_four_xipsum_hisass_top:
+                    Ip happy "Of course."
+                    $ renpy.pause(0.3)
+                    play sound "fx/undress.ogg"
+                    scene bangok_four_xipsum_bedroom normal at Pan ((128, 228), (128, 228), 0.0)
+                    show ipsum normal flip bangok:
+                        rotate -42
+                        pos (-0.12,0.4)
+                    with dissolvemed
+                    m "Ipsum stepped back to let me get up off the bed, then lay back in my place."
+                    if persistent.bangok_cloacas == True:
+                        m "Reaching between his shafts with his lubricated hand, he poked one claw into the lower part of his slit, sinking it inside his hole."
+                    else:
+                        m "Reaching between his shafts with his lubricated hand, he poked one claw between the next pair of plates down, nudging them aside to reveal a thin strip of un-scaled flesh and a tight hole."
+                        m "He sank his claw inside, then grinned up at me."
+                    Ip happy flip bangok "Right there."
+
+                    m "Spreading Ipsum's legs a little wider, I stepped over his tail to get better access to his hole."
+                    show ipsum sad flip bangok with dissolve
+                    m "Ipsum's ass was tight, resisting anything more than the end of my tip, despite my lubrication. The dragon's breath caught, and he wiggled his hips to better take the weight I put on him."
+                    menu:
+                        "You alright?":
+                            $ renpy.pause(0.5)
+                            $ bangok_four_xipsum.mood += 1
+                            Ip "I will be. Just give me a few moments."
+                            Ip normal flip bangok "I'm also used to being on top. For various reasons."
+                            show ipsum sad flip bangok with dissolve
+                            $ renpy.pause(1.0)
+                            m "I held still for a for a few seconds, keeping my weight where it was."
+                            show ipsum normal flip bangok with dissolve
+                            m "Ipsum's breathing raised and lowered the wave of plates down his chest as he began to relax."
+                        "Need a minute?":
+                            $ renpy.pause(0.5)
+                            Ip "Not nearly that long. Just give me a few moments."
+                            Ip normal flip bangok "I'm also used to being on top. For various reasons."
+                            show ipsum sad flip bangok with dissolve
+                            $ renpy.pause(1.0)
+                            m "I held still for a for a few seconds, keeping my weight where it was."
+                            show ipsum normal flip bangok with dissolve
+                            m "Ipsum's breathing raised and lowered the wave of plates down his chest as he began to relax."
+                        "[[Push harder.]":
+                            $ bangok_four_xipsum.mood -= 1
+                            show ipsum sad flip bangok:
+                                rotate -42
+                                pos (-0.13,0.4)
+                            with ease
+                            Ip "Urgh!"
+                            m "I sunk deeper, forcing an inch of my length into Ipsum's ass, before he clenched his thighs against my hips to keep me from encroaching further."
+                            Ip "Th-That's too much!"
+                            show ipsum sad flip bangok:
+                                rotate -42
+                                pos (-0.12,0.4)
+                            with ease
+                            m "I pulled back, leaving Ipsum's rosebud shuddering and winking up at me, glittering with the lubrication I'd smeared on it."
+                            Ip "I will need a bit more time to adjust. I'm not used to being on the bottom."
+                            c "You could have mentioned that."
+                            Ip think flip bangok "I had assumed you would take matters with more caution and consideration."
+                            $ renpy.pause(1.0)
+                            m "I gave him his few seconds to adjust, fitting my tip again to his tailhole and waiting for him to relax."
+                            $ renpy.pause(1.0)
+                            show ipsum normal flip bangok with dissolve
+                            m "It took some moments for the rise and fall of the plates down his chest to return to a more regular cadence. Only then did his hole begin to loosen to my intrusion."
+
+                    Ip happy flip bangok "I believe I am prepared."
+
+                    m "I drew back slowly, enjoying Ipsum's hole tugging back to keep me inside. At my cockhead I switched directions, pushing back inside."
+                    show ipsum normal flip bangok with dissolve
+                    c "How's that?"
+                    Ip "I'm pleased if it's sufficient for you. But I could stand you going a bit faster."
+                    m "Leaning over Ipsum, I began to let more vigor into my fucking of his hole, pressing down into the bed with my hands on either side of him."
+                    play soundloop "fx/rub2.ogg" fadein 2.0
+                    show ipsum normal flip bangok:
+                        ease 0.15 xpos -0.1225
+                        ease 0.5 xpos -0.12
+                        ease 0.15 xpos -0.125
+                        ease 0.5 xpos -0.12
+                        ease 0.15 xpos -0.1275
+                        ease 0.5 xpos -0.12
+                        block:
+                            ease 0.15 xpos -0.13
+                            ease 0.5 xpos -0.12
+                            repeat
+                    with None
+                    m "The rough scales of his thighs rubbed mine as I pushed to the hilt each thrust, pace slowly increasing as he hadn't told me to stop, and every thrust felt better than the last."
+                    $ renpy.pause(0.5)
+                    m "My balls slapped lewdly into his plates now, double dicks bouncing off my belly as I plowed into his yielding rear."
+                    $ renpy.pause(0.5)
+                    show ipsum happy flip bangok with dissolve
+                    m "Not wanting to leave him completely out of the fun, I took hold of his shafts, doing my best to pump them both one-handed while my other hand supported my hard pace."
+                    m "I felt his fluff tickling my bare skin as his tail wrapped around one of my legs, pulling me into a closer, faster pace."
+
+                    $ renpy.pause(0.5)
+
+                    Ip normal flip bangok "I forgot how nice it could be to lie back and enjoy sometimes."
+
+                    m "I panted, beyond words, so very close to my peak."
+
+                    $ renpy.pause(0.5)
+
+                    stop soundloop fadeout 0.5
+                    play sound "fx/extinguish.ogg"
+                    show black with fadequick
+                    m "Hilting myself in Ipsum's ass, I came, spurt after spurt of my cum filling the condom's reservoir inside him."
+                    $ renpy.pause(0.5)
+                    hide black
+                    show ipsum normal flip bangok:
+                        xpos -0.14
+                    with dissolvemed
+                    m "When I returned to my senses, Ipsum's tail was still holding me close, keeping me buried inside him even as I began to limpen."
+                    Ip happy flip bangok "If you could help me out first."
+                    m "Ipsum's shafts twitched against my belly, still hard and raring to go."
+                    m "I leaned back slightly, getting my balance on weak legs. Then taking one shaft in each hand, I set to pumping."
+                    play soundloop "fx/rub2.ogg" fadein 0.5
+                    Ip sad flip bangok "Mmh."
+                    m "His tail began to loosen immediately, legs limpening around my sore thighs as I stroked his members."
+                    m "He thrust his hips back against my groin, seeking out a little bit more stimulation from my spent cock."
+                    m "Then he thrust upward into my hands."
+                    stop soundloop fadeout 0.5
+                    play sound "fx/snarl.ogg" fadein 0.5
+                    show ipsum happy flip bangok with dissolve
+                    m "Both of Ipsum's condoms' reservoirs bloated as he spurted through my hands, getting off on the handjob and the dick in his ass."
+                    m "Once his fluffy tail slipped from my leg, I took a step backward, tugging myself free."
+                    m "Then I lay on the bed next to him, giving my leg muscles a rest."
+
+                    scene bangok_four_xipsum_bedroom ceiling:
+                        alignaround (0,0)
+                        pos (0, -456)
+                        ease 3.0 pos (-128,0)
+                    with dissolve
+                    $ renpy.pause(2.0)
+                    play sound "fx/dishes.wav"
+
+                    if bangok_four_xipsum.loremin == True:
+                        m "As I lay down, Ipsum got up, moving on unsteady legs to collect a metal tray with Lorem's condom off a table next to his fume hood."
+                    else:
+                        m "As I lay down, Ipsum got up, moving on unsteady legs to collect an empty metal tray off a table next to his fume hood."
+                    stop sound fadeout 0.5
+
+                    jump bangok_four_xipsum_hisass_done
+
+                label bangok_four_xipsum_hisass_done:
+                show ipsum normal:
+                    zoom 1.8
+                    alignaround (0.5,0)
+                    xpos 0.18
+                    ypos 0.55
+                with easeinbottom
+                m "He set it next to me on the bed. Then he stripped off my condom in one smooth motion, tying it off with what looked like practiced ease. He set my load on the tray."
 
 
     scene black with dissolve
     m "Then he wandered around the bed, sitting down above my head while I lay recovering."
+    label bangok_four_xipsum_afterglow:
     show bangok_four_xipsum_afterglow at Pan((0,0),(640,8),6.0) with dissolve
     $ renpy.pause(5.0)
     scene bangok_four_xipsum_bedroom normal at Pan ((128, 228), (128, 228), 0.0)
@@ -1684,7 +1892,7 @@ label bangok_four_xipsum_loremdone:
         Ip "Well, mistakes always happen."
         Ip happy flip "Good scientists run the experiment over again when they do."
     c "Maybe."
-    Ip happy flip "If it sweetens the deal, I'm planning to use your samples to determine the risk of us copulating unprotected. Up to you, of course."
+    Ip happy flip "If it sweetens the deal, I'm planning to use your samples to determine the risk of us copulating unprotected. Among some other activities you may want to join in on. Up to you, of course."
     Ip normal flip "I'll give you my number and leave it to you to decide when you think is appropriate."
     Ip think flip "Wouldn't want your busy ambassadorial schedule to get in the way."
     Ip sad flip "Though I may be in the lab quite a bit in the immediate near-future."
