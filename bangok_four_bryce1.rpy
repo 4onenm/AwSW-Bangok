@@ -207,7 +207,7 @@ label bangok_four_bryce1_poke:
                 jump _mod_fixjmp
         "I was just curious.":
             $ brycemood -= 2
-            c "I haven't seen exactly what dragon... you know. Looks like."
+            c "I haven't seen exactly what a dragon... you know. Looks like."
             Br "..."
             c "On humans it kinda hangs out. I was just looking for..."
             Br "..."
@@ -1236,7 +1236,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
             Br flirty dk "Well, I'm about ready to pass out."
             scene black with dissolveslow
             Br "Goodnight, [player_name]."
-            c "'night."
+            c "G'night."
             jump bangok_four_bryce1_morningcouch
 
 
@@ -1887,7 +1887,7 @@ label bangok_four_bryce1_m2:
                 ease 4.0 ypos (-2.2)
             $ renpy.pause (4.0)
             m "Bryce sank in slowly, showing the uptmost care despite our shared inebriation. The plates on his belly scraped past my own penis, the harsh stimulation adding yet more to the experience."
-            m "As the warm scales on his legs pressed up against my skin, I squirmed to try to part my own legs further, get that little bit closer to take him fully."
+            m "As the warm scales on his legs pressed up against my skin, I squirmed to try to part my own legs further, to get that little bit closer to take him fully."
             Br laugh dk "So tight!"
             c "Y- You're so big!"
             Br flirty dk "I hear that a lot."
@@ -2247,7 +2247,7 @@ label bangok_four_bryce1_m2:
                         Br flirty dk "Well, I'm about ready to pass out."
                         scene black with dissolveslow
                         Br "Goodnight, [player_name]."
-                        c "'night."
+                        c "G'night."
                         jump bangok_four_bryce1_morningcouch
 
 
@@ -3067,7 +3067,7 @@ label bangok_four_bryce1_badmorning:
     c "That's easy to say after the fact."
     Br brow "Says the reason things went sideways."
     c "Excuse me? We were both drunk."
-    Br stern "I was communicating my needs pretty damn clearly."
+    Br stern "When we started last night, I thought I communicated pretty clearly that I thought things would be reciprocal."
     c "That communication would have come across a lot better if I {i}hadn't been drunk.{/i}"
     Br "And that's somehow my fault?"
     stop music fadeout 3.0
