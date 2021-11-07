@@ -1,5 +1,7 @@
 An Angels with Scaly Wings lewd mod
 
+### USERS DOWNLOAD [HERE: https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/stable.zip](https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/stable.zip)
+
 Contributions welcome.
 
 
