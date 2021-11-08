@@ -154,6 +154,8 @@ def bryce3_afterparty(ml):
     ( ml.find_label('bryce3')
         .search_say("Yeah, I should also be heading off. You know I'm starting early tomorrow.", depth=1800)
         .hook_to('bangok_four_bryce3_intro', condition='persistent.nsfwtoggle == True', return_link=False)
+        .search_say("I suppose I should be heading off as well.")
+        .link_from('bangok_four_bryce3_playershouldleave')
     )
 
 
@@ -226,7 +228,6 @@ class BangOkMod(Mod):
         anna12(ml)
         bryce1_afterparty(ml)
         bryce3_afterparty(ml)
-        lorem3(ml)
         xipsum(ml)
         xkatsu(ml)
         xsebastian(ml)
