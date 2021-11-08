@@ -144,6 +144,17 @@ def bryce1_afterparty(ml):
     wake_menu.link_behind_from('bangok_four_bryce1_nevermind')
 
 
+def bryce3_afterparty(ml):
+    ( ml.find_label('_call_skiptut_26')
+        .search_menu("Yes. I want to skip ahead.")
+        .branch()
+        .hook_to('bangok_four_bryce3_skipmenu')
+    )
+
+    ( ml.find_label('bryce3')
+        .search_say("Yeah, I should also be heading off. You know I'm starting early tomorrow.", depth=1800)
+        .hook_to('bangok_four_bryce3_intro', condition='persistent.nsfwtoggle == True', return_link=False)
+    )
 
 
 def xipsum(ml):
@@ -214,6 +225,8 @@ class BangOkMod(Mod):
         ml.register_mod_settings(cls, screen='bangok_modsettings')
         anna12(ml)
         bryce1_afterparty(ml)
+        bryce3_afterparty(ml)
+        lorem3(ml)
         xipsum(ml)
         xkatsu(ml)
         xsebastian(ml)
