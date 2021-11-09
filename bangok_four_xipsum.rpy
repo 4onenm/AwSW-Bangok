@@ -791,13 +791,18 @@ label bangok_four_xipsum_loremdone:
                     if bangok_four_xipsum.suckingipsum == True:
                         m "I let go of Ipsum's cocks for a moment to give him a warning, my saliva smearing on my face."
                     c "G-Getting close!"
+                elif bangok_four_xipsum.fuckertarget == "cock":
+                    m "I felt undulations around my cockhead and realized the small dragon must have taken me all the way to his throat!"
+                    m "He nuzzled his snout into my groin as if he didn't need to breathe, tongue now dancing around my base."
+                    if bangok_four_xipsum.suckingipsum == True:
+                        m "I let go of Ipsum's cocks for a moment to give him a warning, my saliva smearing on my face."
+                    c "G-Getting close!"
                 else:
                     jump bangok_four_xipsum_impossible_loremin
             else:
                 jump bangok_four_xipsum_impossible_loremin
 
-
-            if bangok_four_xipsum.fuckeraction == "oral" and bangok_four_xipsum.fuckertarget in ["vag","ass"]:
+            if bangok_four_xipsum.fuckeraction == "oral" and bangok_four_xipsum.fuckertarget in ["vag","ass","cock"]:
                 if bangok_four_xipsum.fuckertarget == "vag":
                     $ renpy.pause(0.8)
                     m "His gentler ministrations of my clit ran the maddening borderline between teasing and stimulating."
@@ -805,9 +810,13 @@ label bangok_four_xipsum_loremdone:
                     $ renpy.pause(0.8)
                     m "Lorem made a confused noise, hot breath coming from the sides of his mouth, around the barrier, to wash over my thighs."
                     m "That, atop the slight thrill of danger of his teeth at my groin, pushed me over the edge."
+                elif bangok_four_xipsum.fuckertarget == "cock":
+                    m "Lorem pulled back, getting himself a breath before sinking all the way back down."
                 c "Mmph!"
                 show black with fadequick
-                if bangok_four_playerhasdick == True:
+                if bangok_four_xipsum.fuckertarget == "cock":
+                    m "Before I could think through whether it was a good idea, my legs wrapped around Lorem's head and held him there as I shot my load into his throat, twitching in his throat."
+                elif bangok_four_playerhasdick == True:
                     play sound "fx/extinguish.ogg"
                     m "Before I could think through whether it was a good idea, my legs wrapped around Lorem's head and pulled him in tight as I shot my load into my condom, spasming around his tongue."
                 else:
@@ -823,7 +832,10 @@ label bangok_four_xipsum_loremdone:
                 c "..."
                 $ renpy.pause(0.8)
                 if bangok_four_xipsum.loremfirst == True:
-                    c "Well, congratulations on being the first dragon to tonguefuck a human to orgasm."
+                    if bangok_four_xipsum.fuckertarget == "cock":
+                        c "Well, congratulations on being the first dragon to suck a human to orgasm."
+                    else:
+                        c "Well, congratulations on being the first dragon to tonguefuck a human to orgasm."
                     Lo shy "O-Oh?"
                     Lo "I don't know if that's a title I needed in my life."
                     Lo normal "But thanks."
@@ -861,7 +873,7 @@ label bangok_four_xipsum_loremdone:
                         m "As lubricated as I was, Lorem's cock slipped inside me without the slightest resistance."
                     else:
                         m "Lorem's shaft tugged slightly at my sphincter as he entered, but he was small enough and the condom pre-lubricated enough that the resistance disappeared within a single cycle of his length."
-                    m "He pistoned in and out, plowing my passage right up to his hips with every thrust."
+                    m "He pistoned in and out, plowing my hole right up to his hips with every thrust."
                     if bangok_four_xipsum.suckingipsum == True:
                         show black with dissolvemed
                         m "I tapped Ipsum's side to bring him closer to me again, then took one of his cocks in my mouth, losing myself in the spitroast at both ends."
