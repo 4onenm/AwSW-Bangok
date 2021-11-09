@@ -324,7 +324,7 @@ label bangok_four_xsebastian_path1_1:
         c "You, ah, could have mentioned that."
         Sb drop b dk "Sorry."
     else:
-        m "Sebastian pulled out, still hugging me, a small dribble running down my tain."
+        m "Sebastian pulled out, still hugging me, a small dribble running down my taint."
     m "We rolled to one side, leaving him once again up against my back."
     show sebastian normal b dk:
         xanchor 0.5
