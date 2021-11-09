@@ -240,7 +240,7 @@ label bangok_four_xipsum_awkward:
     c "(I guess it is every day for them. Other than Lorem's post office uniform, I don't think they wear clothes.)"
     jump bangok_four_xipsum_awkward_return
 
-label bangok_four_xipsum_littlelong:
+label bangok_four_xipsum_littlelong: # if bangok_four_playerhasdick
     menu:
         "You probably don't have to change it.":
             $ renpy.pause(0.5)
@@ -278,7 +278,7 @@ label bangok_four_xipsum_loremdone:
     menu:
         "Are you interested in joining us?":
             $ renpy.pause(0.5)
-            Lo bangok sad flip "What? N- No."
+            Lo bangok sad flip "What? N-No."
             m "He seemed to finally notice what I'd picked up on."
             Lo bangok hidepeek flip "No. No I--"
             show lorem at Position(ypos=1.1) with ease
@@ -291,7 +291,7 @@ label bangok_four_xipsum_loremdone:
                 "[[Listen at the door.]":
                     $ renpy.pause (0.5)
                     m "The door was made of a pretty light paper with wood reinforcement. The voices of the room's two occupants were pretty clearly audible."
-                    Lo shy "H- How do I say no?"
+                    Lo shy "H-How do I say no?"
                     Ip sad "You just say \"no\", Lorem. This isn't difficult."
                     Lo shy "But [player_name] {i}saw{/i} that I'm... you know. Interested."
                     Ip think "If you are, then what's the problem? Why not say \"yes\"?"
@@ -447,7 +447,7 @@ label bangok_four_xipsum_loremdone:
         else:
             m "He tossed a condom packet across the bed to Lorem with a flick of the wrist."
 
-        Ip think bangok "Now, how you're okay with Lorem interacting with you is going to limit exactly what positions we can do."
+        Ip think bangok "Now, how Lorem is okay interacting with you is going to limit exactly what positions we can do."
         Ip normal bangok "What do you think?"
         show lorem think flip with dissolve
         menu:
@@ -817,14 +817,14 @@ label bangok_four_xipsum_loremdone:
                     show ipsum think flip
                 hide black
                 with dissolveslow
-                c "Sh- Shoot. Lorem, are you okay?"
+                c "Sh-Shoot. Lorem, are you okay?"
                 Lo sad "Yeah. But that was... that was a bit much."
                 $ renpy.pause(0.8)
                 c "..."
                 $ renpy.pause(0.8)
                 if bangok_four_xipsum.loremfirst == True:
                     c "Well, congratulations on being the first dragon to tonguefuck a human to orgasm."
-                    Lo shy "O- Oh?"
+                    Lo shy "O-Oh?"
                     Lo "I don't know if that's a title I needed in my life."
                     Lo normal "But thanks."
                 c "Want to actually fuck me now?"
@@ -1114,7 +1114,7 @@ label bangok_four_xipsum_loremdone:
         if persistent.bangok_watersports == True:
             m "His cock popped free of my lips with my ass still half full, his head dragging a drop of golden liquid from my urethra as he dragged it over the upper part of my lips."
             m "He poked and prodded his head all around my upper hole, rubbing the small dribble of pee into my clit before returning to my urethra for more."
-            c "I- I don't think you'll fit in there!"
+            c "I-I don't think you'll fit in there!"
             Ip normal "I'm aware."
             show ipsum normal:
                 ease 0.5 ypos 0.58
@@ -1311,7 +1311,7 @@ label bangok_four_xipsum_loremdone:
                         "All the way.":
                             $ renpy.pause (0.5)
                             Ip think "You're sure? I would like to avoid damaging you."
-                            c "I- I can take it."
+                            c "I-I can take it."
                             $ bangok_four_xipsum.mood += 1
                             $ bangok_four_xipsum.fuckertarget = "deep"
                         "S-So this is as deep as we'll go?":
@@ -1765,7 +1765,7 @@ label bangok_four_xipsum_loremdone:
                         "Enjoy.":
                             $ renpy.pause(0.5)
                             show ipsum sad with dissolve
-                            m "Ipsum continued to fuck himself onto my ass, pace becoming just slightly more ragged as he focused on one small area in his ass."
+                            m "Ipsum continued to fuck himself onto my cock, pace becoming just slightly more ragged as he focused on one small area in his ass."
                             $ renpy.pause(0.8)
                             m "The smacks of his cockflesh against my belly and hiss of his labored breathing filled the room. The lust-charged atmosphere had me panting in time, even if I wasn't doing anything close to Ipsum's level of exertion."
                             $ renpy.pause(0.8)

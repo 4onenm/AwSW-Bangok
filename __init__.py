@@ -188,7 +188,7 @@ def xipsum(ml):
         .search_say("I'm not even going to deny that. When I'm not working on something at the office, I do so here.")
         .hook_to('bangok_four_xipsum_awkward',condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
         .search_say("If I wasn't sure, I wouldn't have said it.",depth=400)
-        .hook_to('bangok_four_xipsum_littlelong', condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True')
+        .hook_to('bangok_four_xipsum_littlelong', condition='bangok_four_xipsum.clothesoff == True and persistent.nsfwtoggle == True and bangok_four_playerhasdick == True')
         .search_menu("He sounds fun.")
         .add_choice("What about our...?", condition='bangok_four_xipsum.unplayed == False and persistent.nsfwtoggle == True', jump='bangok_four_xipsum_whataboutour')
         .link_behind_from('bangok_four_xipsum_whataboutour_end')
