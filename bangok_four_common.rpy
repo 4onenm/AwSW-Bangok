@@ -103,6 +103,9 @@ init:
 
     image bangok_four_xsebastian_cave2_dk = im.Recolor("bg/in/cave2_dk.png", 70, 70, 100, 255)
 
+    image bangok_four_forest_clearing = "bg/bangok_forest_clearing.png"
+    image bangok_four_forest_treehole = "bg/bangok_tree_hole.png"
+
     # CGs
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 

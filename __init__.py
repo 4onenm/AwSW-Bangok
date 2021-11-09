@@ -159,6 +159,13 @@ def bryce3_afterparty(ml):
     )
 
 
+def lorem3(ml):
+    ( ml.find_label('lorem3skip')
+        .search_say("I'm not sure, exactly.")
+        .hook_to('bangok_four_lorem3_intro', condition='(persistent.nsfwtoggle == True) and (bangok_four_xipsum.loremin == True)')
+    )
+
+
 def xipsum(ml):
     ( ml.find_label('lorem2')
         .search_hide('meetingipsum', depth=400)
@@ -228,6 +235,7 @@ class BangOkMod(Mod):
         anna12(ml)
         bryce1_afterparty(ml)
         bryce3_afterparty(ml)
+        lorem3(ml)
         xipsum(ml)
         xkatsu(ml)
         xsebastian(ml)
