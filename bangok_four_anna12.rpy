@@ -5,6 +5,9 @@ init python:
 init python in bangok_four_anna2:
     havecondoms = False
 
+    havestrapon = False
+
+    havefauxcum = False
 
     waitvert = True
     finger = True
@@ -142,25 +145,60 @@ label bangok_four_anna2_whatnow:
     An "Well, we're not doing this here in the lab. I suppose we could go back to your government-funded apartment."
     menu:
         "Why not?":
+            $ renpy.pause(0.5)
             $ anna2mood -= 1
             An face "Because it's virtually guaranteed we'll break something."
             An sad "Not to mention the sanitary issues."
             c "Alright, alright. My place it is."
+            if anna2mood >= 0:
+                An normal "That said, I would like to get something I stashed in my lab for this."
         "Sure.":
+            $ renpy.pause(0.5)
             $ anna2mood += 1
+            if anna2mood >= 0:
+                An smirk "Ah, almost forgot. I left something in my lab for this."
         "All that waiting left me kinda hungry...":
+            $ renpy.pause(0.5)
             An face "Was that supposed to be an \"eating out\" joke? Because I have bad news for you."
             menu:
                 "That's exactly what it was.":
+                    $ renpy.pause(0.5)
                     c "What do you mean by bad news?"
                     An normal "I don't like dental dams. And you, in particular, aren't putting your mouth on my genitals without one."
                     c "Oh."
                     An "Forget about it. Let's go do this."
+                    if anna2mood >= 0:
+                        An face "Oh, damnit. Almost forgot. I put something in my lab for this."
                 "No, I meant that literally.":
                     An sad "What do you expect me to do about that, magic up food for you?"
                     c "It's not that crazy to go out for dinner, especially since I assume you haven't eaten either."
                     An "Fine. Maybe the coffee place is still open. I don't know."
                     jump bangok_four_anna2_alley
+
+    if anna2mood >= 0:
+        c "Oh?"
+        hide anna with dissolve
+        play sound "fx/door/door_open.wav"
+        $ renpy.pause (3.0)
+        show anna normal with dissolve
+        m "She returned with a leather hand-satchel, closing the lab door behind herself."
+        $ bangok_four_anna2.havestrapon = True
+        menu:
+            "What's in that?":
+                $ renpy.pause(0.5)
+                $ anna2mood += 1
+                An smirk "I'll show you in private."
+            "Ready?":
+                $ renpy.pause(0.5)
+                An normal "Yes."
+            "Is that your purse?":
+                $ renpy.pause(0.5)
+                $ anna2mood -= 1
+                c "Does the big famous scientist carry around a little lady purse?"
+                An sad "It's not a purse."
+                c "Then what's in it?"
+                An normal "Keep making annoying comments like that and maybe I won't show you."
+
     $ renpy.pause(0.9)
     jump bangok_four_anna2_apartment
 
@@ -325,6 +363,77 @@ label bangok_four_anna2_apartment:
     show anna normal
     with dissolvemed
 
+    if bangok_four_anna2.havestrapon == True:
+        $ renpy.pause(0.5)
+        c "So. What's in the bag?"
+        show anna smirk with dissolve
+        play sound "fx/undress.ogg"
+        show anna smirk dildohand with dissolve
+
+        $ renpy.pause(0.8)
+
+        menu:
+            "Is that a double-ended dildo?":
+                $ renpy.pause(0.5)
+                c "What's all that extra strapping for?"
+            "Is that a strapon?":
+                $ renpy.pause(0.5)
+                An smirk dildohand "It is."
+            "Oh my.":
+                $ renpy.pause(0.5)
+            "No.":
+                $ renpy.pause(0.5)
+                show anna sad dildohand with dissolve
+                c "Whatever that is, we're not using it."
+                label bangok_four_anna2_apartment_nostrapon:
+                An sad dildohand "I see. Would you mind telling me why?"
+                menu:
+                    "Not my thing.":
+                        $ renpy.pause(0.5)
+                        An normal dildohand "Fair enough."
+                        play sound "fx/undress.ogg"
+                        show anna normal with dissolve
+                    "It's huge!":
+                        $ renpy.pause(0.5)
+                        An sad dildohand "The larger end wouldn't be going in {i}you{/i}."
+                        c "Even still."
+                        An normal dildohand "Fair enough."
+                        play sound "fx/undress.ogg"
+                        show anna normal with dissolve
+                    "Why did you go and make this weird?":
+                        $ renpy.pause(0.5)
+                        $ anna2mood -= 1
+                        play sound "fx/undress.ogg"
+                        An face "Fine, I'll put it away."
+                    "No.":
+                        $ renpy.pause(0.5)
+                        $ anna2mood -= 1
+                        play sound "fx/undress.ogg"
+                        An face "Fine, I'll put it away."
+
+                m "Anna put the toy away in the satchel and set it aside."
+                $ bangok_four_anna2.havestrapon = False
+                jump bangok_four_anna2_apartment_under_layers
+
+        An normal dildohand "I bought this to use with an ex, but I never could talk him into it."
+        An smirk dildohand "It's intended to be used as a strapon for pegging, but there's a few other ways I'm sure we could use it."
+        menu:
+            "Sounds like fun.":
+                $ renpy.pause(0.5)
+                $ anna2mood += 1
+            "I... guess we could try it.":
+                $ renpy.pause(0.5)
+            "I'm not sure about that thing.":
+                $ renpy.pause(0.5)
+                jump bangok_four_anna2_apartment_nostrapon
+            "Okay, no way.":
+                $ renpy.pause(0.5)
+                $ anna2mood -= 1
+                jump bangok_four_anna2_apartment_nostrapon
+        show anna normal with dissolve
+        m "Anna set the toy aside on the coffee table."
+
+    label bangok_four_anna2_apartment_under_layers:
     $ renpy.pause (0.5)
     if anna2mood > 0:
         An smirk "I suppose now we see what's under all those layers."
@@ -335,110 +444,207 @@ label bangok_four_anna2_apartment:
             "Show her your dick.":
                 $ bangok_four_playerhasdick = True
             "Show her your lack of dick.":
-                label bangok_four_anna2_apartment_nodick:
-                show black with None
-                play sound "fx/system3.wav"
-                s "Apologies, but the author of this mod leans more toward the gay male side of things, and does not intend to attempt to write F/F."
-                play sound "fx/system3.wav"
-                s "You may feel free to contribute an F/F script to the mod's development if that is your preference."
-                play sound "fx/system3.wav"
-                s "Meanwhile, would you like to skip to the end? Or can you accept continuing this scene as a male?"
-                menu:
-                    "Yes. I'd like to skip ahead.":
-                        play sound "fx/system3.wav"
-                        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-                        hide black with dissolveslow
-                        jump bangok_four_anna2_apartment_done
-                    "No. Don't skip ahead.":
-                        play sound "fx/system3.wav"
-                        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-                        hide black with dissolvemed
-    elif bangok_four_playerhasdick == False:
-        jump bangok_four_anna2_apartment_nodick
+                $ bangok_four_playerhasdick = False
 
     play sound "fx/undress.ogg"
     $ renpy.pause (1.5)
 
-    An normal "Definitely a mammal. Definitely a male."
-    menu:
-        "Actually, I prefer a different set of pronouns...":
-            An "Fine. We don't need pronouns to use that thing of yours."
-        "[[Say nothing.]":
-            pass
+    if bangok_four_playerhasdick == True:
+        label bangok_four_anna2_apartment_maleshow:
+        An normal "Definitely a mammal. Definitely a male."
+        menu:
+            "Actually, I prefer a different set of pronouns...":
+                An "Fine. We don't need pronouns to use that thing of yours."
+            "[[Say nothing.]":
+                pass
 
-    if bangok_four_anna1_sexrequested == True:
-        An "Now, you did buy condoms for the occasion, right?"
-        if chap2storehealth == False:
-            $ bangok_four_anna2.havecondoms = True
-            c "Of course."
-            m "I retrieved the box I'd purchased during my visit to the store, removing one small foil-wrapped barrier device."
-        else:
-            c "Uh..."
-            An face "Oh for crying out loud."
-            menu:
-                "I thought you would bring something.":
-                    c "I'm the visitor from another world, after all."
-                    An sad "That's why it was your responsibility to pick one that's safe for you."
-                    c "Let's look around. I'm sure some are stocked."
-                "I thought this place would be stocked.":
-                    c "It's had everything else I've needed."
-                    An "And did you look for them?"
-                    c "..."
-                    An "I see."
-                "Let's look around. I'm sure some are stocked.":
-                    pass
-    else:
-        An face "Damnit."
-        c "What?"
-        An sad "I didn't expect to do anything like this, so I didn't bring any condoms."
-        An normal "And before you ask, no, I won't be having sex outside my phylogenic group without one."
-        $ renpy.pause (0.8)
-        c "Well, let's look around. I'm sure some are stocked."
-
-    if bangok_four_anna2.havecondoms == False:
-        An normal "Fine. I'll check the bathroom, you check the bedroom."
-        hide anna with dissolve
-        $ renpy.pause (0.5)
-        play sound "fx/rummage.ogg"
-        m "A box of condoms was in the first drawer I checked in the nightstand next to my bed, shoved near the back."
-        m "I returned, holding it aloft, only to find Anna already seated on the couch with one next to her."
-        show anna normal at center with dissolve
-        c "Wait, you found some in there, too?"
-        An smirk "Of course. I'm sure they have them all over the apartment. Better to avoid a health incident with an ambassador from another world, right?"
-        c "Oh."
-        An "Here. Use this brand instead of that one."
-        m "Setting the box I'd found aside, I took the single condom she offered."
-
-    m "It took a couple pumps by hand to get going enough to put the condom on."
-    show anna sad with dissolve
-    m "Anna looked on with some concern."
-    An "Is it supposed to start limp like that? Most dragons -- most species in general -- have a baculum to keep it from being too soft for insertion."
-    menu:
-        "What's a baculum?":
-            $ anna2mood -= 1
-            An face "Nevermind."
-            An sad "I suppose as long as you go in hard, it doesn't matter."
-        "Yeah, that's normal for us.":
-            An normal "I see."
-        "It gets hard when we see someone or something sexually stimulating.":
-            if anna2mood > 2:
-                An smirk "I see."
-            else:
-                An "I see."
-    c "What about for you?"
-    An normal "Haven't you looked in a science textbook yet?"
-    c "Not really. I'd prefer to get to know these things from people, make connections."
-    if anna2mood > 3:
-        An smirk "Connections like this?"
-        c "I have to say it's unexpected, but I think it'll be a good thing."
-    else:
-        An face "Connections like this?"
-        c "Absolutely."
         if bangok_four_anna1_sexrequested == True:
-            An sad "Let's just get it over with."
+            An "Now, you did buy condoms for the occasion, right?"
+            if chap2storehealth == False:
+                $ bangok_four_anna2.havecondoms = True
+                c "Of course."
+                m "I retrieved the box I'd purchased during my visit to the store, removing one small foil-wrapped barrier device."
+            else:
+                c "Uh..."
+                An face "Oh for crying out loud."
+                menu:
+                    "You didn't bring any in your bag?" if bangok_four_anna2.havestrapon == True:
+                        $ renpy.pause(0.5)
+                        $ bangok_four_anna2.havecondoms = True
+                        An normal "I did, but I assumed you'd do some shopping around to determine what's safe for you to use."
+                        c "Oh. Well, how hard is it to make a safe condom? I'm sure it'll be fine."
+                        An "Your choice."
+                        m "She handed one over."
+                    "I thought you would bring something.":
+                        $ renpy.pause(0.5)
+                        c "I'm the visitor from another world, after all."
+                        An sad "That's why it was your responsibility to pick one that's safe for you."
+                        c "Let's look around. I'm sure some are stocked."
+                    "I thought this place would be stocked.":
+                        $ renpy.pause(0.5)
+                        c "It's had everything else I've needed."
+                        An "And did you look for them?"
+                        c "..."
+                        An "I see."
+                    "Let's look around. I'm sure some are stocked.":
+                        $ renpy.pause(0.5)
         else:
-            show anna normal with dissolve
+            An face "Damnit."
+            c "What?"
+            An sad "I didn't expect to do anything like this, so I didn't bring any condoms."
+            An normal "And before you ask, no, I won't be having sex outside my phylogenic group without one."
+            $ renpy.pause (0.8)
+            c "Well, let's look around. I'm sure some are stocked."
 
+        if bangok_four_anna2.havecondoms == False:
+            An normal "Fine. I'll check the bathroom, you check the bedroom."
+            hide anna with dissolve
+            $ renpy.pause (0.5)
+            play sound "fx/rummage.ogg"
+            m "A box of condoms was in the first drawer I checked in the nightstand next to my bed, shoved near the back."
+            m "I returned, holding it aloft, only to find Anna already seated on the couch with one next to her."
+            show anna normal at center with dissolve
+            c "Wait, you found some in there, too?"
+            An smirk "Of course. I'm sure they have them all over the apartment. Better to avoid a health incident with an ambassador from another world, right?"
+            c "Oh."
+            An "Here. Use this brand instead of that one."
+            m "Setting the box I'd found aside, I took the single condom she offered."
+
+        m "It took a couple pumps by hand to get going enough to put the condom on."
+        show anna sad with dissolve
+        m "Anna looked on with some concern."
+        An "Is it supposed to start limp like that? Most dragons -- most species in general -- have a baculum to keep it from being too soft for insertion."
+        menu:
+            "What's a baculum?":
+                $ anna2mood -= 1
+                An face "Nevermind."
+                An sad "I suppose as long as you go in hard, it doesn't matter."
+            "Yeah, that's normal for us.":
+                An normal "I see."
+            "It gets hard when we see someone or something sexually stimulating.":
+                if anna2mood > 2:
+                    An smirk "I see."
+                else:
+                    An "I see."
+        c "What about for you?"
+        An normal "Haven't you looked in a science textbook yet?"
+        c "Not really. I'd prefer to get to know these things from people, make connections."
+        if anna2mood > 3:
+            An smirk "Connections like this?"
+            c "I have to say it's unexpected, but I think it'll be a good thing."
+        else:
+            An face "Connections like this?"
+            c "Absolutely."
+            if bangok_four_anna1_sexrequested == True:
+                An sad "Let's just get it over with."
+            else:
+                show anna normal with dissolve
+
+
+        if bangok_four_anna2.havestrapon == True:
+            An smirk dildohand "Or do you want to be receiving first?"
+    else:
+        An normal "Definitely a mammal. I'm guessing female, as I'm sure as a male your dick would already be visible at the prospect of sex."
+        menu:
+            "Actually, I prefer a different set of pronouns...":
+                An "Fine. We don't need pronouns to enjoy what you have attached to you."
+            "[[Say nothing.]":
+                pass
+
+        if bangok_four_anna2.havestrapon == False:
+            label bangok_four_anna2_apartment_nodick:
+            show black with None
+            play sound "fx/system3.wav"
+            s "Apologies, but the author of this mod leans more toward the gay male side of things, and does not intend to attempt to write F/F."
+            play sound "fx/system3.wav"
+            s "You may feel free to contribute an F/F script to the mod's development if that is your preference."
+            play sound "fx/system3.wav"
+            s "Meanwhile, would you like to skip to the end? Or can you accept continuing this scene as a male?"
+            menu:
+                "Yes. I'd like to skip ahead.":
+                    play sound "fx/system3.wav"
+                    s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                    hide black with dissolveslow
+                    jump bangok_four_anna2_apartment_done
+                "No. Don't skip ahead.":
+                    play sound "fx/system3.wav"
+                    s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                    hide black with dissolvemed
+                    jump bangok_four_anna2_apartment_maleshow
+
+        An normal "Well, I doubt the strapon's strapping will work with your pelvic structure."
+        An smirk dildohand "I suppose that means you'll have to be receiving."
+
+
+
+    if bangok_four_anna2.havestrapon == True:
+        label bangok_four_anna2_apartment_strapon_consideringmenu:
+        menu:
+            "I think I'd like that.":
+                $ renpy.pause(0.5)
+                $ bangok_four_anna2.position == "strapon"
+                An blush "Excellent."
+            "I can try, I guess.":
+                $ renpy.pause(0.5)
+                $ bangok_four_anna2.position = "strapon"
+                An blush "Excellent."
+            "How about we just use it as a dildo?":
+                $ renpy.pause(0.5)
+                $ bangok_four_anna2.position = "dildo"
+                c "I'm not so sure about having that inside me, but it sounds like you want to use it."
+                An blush "I can work with that."
+            "I'm actually not so sure about using that now...":
+                $ renpy.pause(0.5)
+                $ anna2mood -= 1
+                An face "Oh for--"
+                An normal "Fine."
+                if bangok_four_playerhasdick == False:
+                    jump bangok_four_anna2_apartment_nodick
+                jump bangok_four_anna2_apartment_annaliesdown
+
+        
+        An blush "There's another fun feature this has, if you're interested. Faux cum."
+        if bangok_four_anna2.position == "strapon":
+            c "For in me or for in you?"
+            An "No reason it can't be both. It comes in a powder form, so we can make basically as much as we want. It's also configurable, so we can choose later who gets the load."
+            An smirk "Even while inside people."
+        c "I see."
+
+        An normal dildohand "I should go fill the faux cum now if we're going to use it later."
+        menu:
+            "Let's not.":
+                $ renpy.pause(0.5)
+                $ bangok_four_anna2.havefauxcum = False
+                c "I'm not sure I want to play with that. Plus, what's the cleanup like?"
+                An "Fair enough."
+            "Sure.":
+                $ renpy.pause(0.5)
+                $ bangok_four_anna2.havefauxcum = True
+                show anna normal with dissolve
+                play sound "fx/rummage.ogg"
+                $ renpy.pause(0.8)
+                stop sound fadeout 1.0
+                $ renpy.pause(0.8)
+                hide anna with dissolve
+                m "Anna rummaged through the satchel, grabbing a large bladder, thin hose, and a couple unmarked packets.{w=0.3} Then she disappeared into the bathroom."
+                $ renpy.pause(0.5)
+                play soundloop "fx/faucet1.ogg"
+                queue soundloop "fx/faucet2.ogg"
+                $ renpy.pause(1.0)
+                menu:
+                    "How much are you making?":
+                        $ renpy.pause(0.5)
+                        An normal "A fun amount."
+                    "[[Wait.]":
+                        pass
+                $ renpy.pause(1.0)
+                stop soundloop fadeout 0.5
+                show anna blush with dissolve
+                An blush "Shall we?"
+
+
+
+label bangok_four_anna2_apartment_annaliesdown:
     # hide anna with dissolve
     # $ renpy.pause(0.3)
     show anna:
@@ -455,7 +661,191 @@ label bangok_four_anna2_apartment:
     if persistent.bangok_cloacas == False:
         m "A small rosebud winked up at me from an inch or two further down."
     $ bangok_four_femalepartners += 1
-    label bangok_four_anna2_apartment_startingmenu:
+
+    if bangok_four_anna2.havestrapon == False:
+        jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
+    else:
+        An normal "Do you want to put a condom on it first? I have a few for fitting its larger end in my bag."
+        c "Why?"
+        An blush "In case you want to cum through it, if you're feeling inadequate about your size."
+        if persistent.bangok_watersports == True:
+            An smirk "Or play with other fluids."
+        An normal "Changes basically nothing about the feel of it, so I don't care either way. We just aren't playing with your output without a barrier."
+        # The player has put his personal condom on already if he's male, so reusing this variable is fine.
+        menu:
+            "Put a condom on the toy.":
+                $ bangok_four_anna2.havecondoms = True
+            "Don't.":
+                $ bangok_four_anna2.havecondoms = False
+
+    show anna blush with dissolve
+    m "Anna spread her legs a little wider as I approached with the toy."
+    An "Now, get me ready with your fingers. But watch your claws. I don't want you to cut me in there."
+    menu:
+        "I doubt that will be a problem.":
+            c "Unless you're way more delicate than a human in there..."
+            An normal "Unlikely. Still, don't do anything too stupid."
+        "Do you want it lubed first?":
+            An normal "I didn't bring any, and I didn't see any in your restroom."
+            c "Oh."
+        "Pussy or your ass?":
+            An "Vagina. Let's not regress to slang terminology around here."
+            An blush "And I'm sorry to say it doesn't fit in my anus without lube, which I didn't bring, nor did I see in your restroom."
+            c "Oh."
+    
+    $ bangok_four_anna2.finger = False
+    m "I stepped in closer, reaching out to caress her opening."
+    m "After a few moments, I slowly pressed two fingers inside, continuing my small, gentle circles with the rest of my hand. Anna's legs shuddered slightly, where they were sticking up in the air."
+    $ renpy.pause (0.8)
+    if anna2mood > -1:
+        An smirk "You can keep going with that."
+    else:
+        show anna sad with dissolve
+    $ renpy.pause (0.5)
+    m "After giving her another moment with this gentle teasing, I added a third finger, finding it slipping in even more easily than the first two as her natural lubrication began to slicken her lips."
+    if anna2mood < 1:
+        An face "Okay, stop."
+        c "Huh? I thought you liked this."
+        An sad "Just move on to the strapon."
+    else:
+        An smirk "You were right. Your claws aren't a problem."
+        An blush "And your skin is much softer than any dragon's scales."
+        menu:
+            "[[Add a fourth finger.]":
+                m "This finger resisted slightly more. But with her natural lubrication it fit, followed by most of my palm."
+                $ anna2mood += 1
+                An lipbite "Mm."
+                c "Keep going with this?"
+                if anna2mood > 2:
+                    $ renpy.pause(0.5)
+                    An "Yes."
+                    m "Gently, I worked my hand in and out, drawing Anna's breath slightly faster with each motion."
+                    $ renpy.pause(0.8)
+                    An lipbite "Mm. Now you're in for it."
+                    c "Huh?"
+                    call bangok_four_anna2_apartment_yourarm from bangok_four_anna2_apartment_strapon_fourthfinger
+                else:
+                    An blush "Let's move on to getting the strapon in."
+            "[[Move on to the strapon.]":
+                pass
+
+    m "Taking the toy from the coffee table, I spread some of her wetness from my fingers to the tip of the larger end."
+    if bangok_four_anna2.position == "dildo":
+        c "You're sure you can take this larger end?"
+        An blush "I have plenty of practice in my free time. I can't see why that would have changed."
+        if bangok_four_anna2.annacame == True:
+            An smirk "Especially after you stretched me out that much."
+
+    if bangok_four_anna2.annacame == True:
+        m "Anna's slit remained slightly parted after my arm-fucking, and like my arm still glistened with her arousal."
+        if bangok_four_anna2.position == "dildo":
+            m "Sliding off the strapping meant to keep it in her and leaving just the double-ended shaft, I fit the tip of the larger end of the toy to her lips."
+        else:
+            m "Holding the strapping meant to keep it in her out of the way, I fit the tip of the larger end of the toy to her lips."
+        show anna lipbite with dissolve
+        m "It slid in smoothly, despite the fact I could see it stretching her almost as much as my arm had."
+        show anna orgasm with dissolve
+        m "Anna gasped as her resistance to the intrusion abruptly increased, though not quite to the point of body-shuddering shake I'd observed before. Then the shaft was through her inner gate, her outer lips wrapping around where the toy decreased in width. My fingers brushed against her filled slit as I held the toy steady."
+        c "Did you get off on just it going in?"
+        An lipbite "N-Not quite. But it won't take me long."
+    else:
+        m "Anna's slit glistened with arousal from my finger-fucking."
+        if bangok_four_anna2.position == "dildo":
+            m "Sliding off the strapping meant to keep it in her and leaving just the double-ended shaft, I fit the tip of the larger end of the toy to her lips."
+        else:
+            m "Holding the strapping meant to keep it in her out of the way, I fit the tip of the larger end of the toy to her lips."
+        show anna lipbite with dissolve
+        m "It speared her open wide, taking a bit of force to slide, but Anna seemed only further aroused by stretching to accomodate it."
+        m "Even still, she ran out of lubrication around the halfway point on the toy's larger end, her scaly lips tugging inward with it as I failed to slide it any deeper."
+        An blush "In and out. Obviously."
+        c "You're completely {i}sure{/i} this thing fits in you?"
+        An normal "Would I be asking you to put it in me if I thought it didn't?"
+        An blush "Just pump it."
+
+        m "Doing as she'd asked, I slid the toy back out until the tip tugged past her lips. It was almost dripping with her wet, dollops running down the head to slick her lips."
+        An lipbite "And back in..."
+        m "I pushed it back inside her, watching with fascination as the slickness on her lips spread further up the toy, from her tightness."
+        m "The toy stopped abruptly with three quarters of the larger end inside her, and not because she was out of lubrication."
+        An "Keep going."
+        menu:
+            "What's stopping it?":
+                pass
+            "If you're out of room, Anna, you're out of room!":
+                $ anna2mood -= 1
+            "If you say so...":
+                $ renpy.pause(0.5)
+                m "I leaned more weight on the toy, assuming it would give with just a little more pressure. It didn't seem to."
+        $ renpy.pause(0.5)
+        An blushpalm "Oh for fuck's sake."
+        show anna lipbite with dissolve
+        m "Taking my wrist, she pushed back against the toy, indicating I should pull it out of her."
+        m "Then she reversed her tug, stopping me."
+        An lipbite "Now shove in. Hard."
+        menu:
+            "Didn't you want me to not hurt you in there?":
+                $ renpy.pause(0.5)
+                $ anna2mood -= 1
+                An blushpalm "I'll be fine. For crying out loud, fuck me with it already!"
+            "[[Obey.]":
+                pass
+        $ renpy.pause(0.5)
+        m "I shoved the toy in, hard, up to the resistance inside of her, but still hesitated."
+        An blushpalm "Again. Follow through!"
+        m "Withdrawing a little, I shoved at the resistance again."
+        show anna orgasm with dissolve
+        m "I wasn't sure if it was my imagination, but the toy felt about half the length of the tip further inside."
+        show anna lipbite with dissolve
+        An "Deeper. Come on, [player_name]."
+        m "Taking her words as encouragement, I tugged the toy back slightly and pushed inside over again, all-but leaning my bodyweight on it."
+        An blushpalm "C-Closer."
+        show anna lipbite:
+            ease 0.8 xpos 0.8
+            ease 0.15 xpos 0.81
+            repeat
+        with None
+        m "I pulled and pushed another time, then again. The toy sank ever-so-slightly deeper, but it apparently still wasn't enough for the insatiable dragonness."
+        $ renpy.pause(0.8)
+        play sound "fx/tableslap.wav"
+        play sound2 "fx/snarl.ogg"
+        $ bangok_four_anna2.annacame = True 
+        show anna orgasm:
+            xpos 0.8
+        with hpunch
+        m "Then, abruptly, the toy kept sinking inside and Anna became a snarling, shuddering mess, her tail slapping the table."
+        m "I almost let go from my surprise, but I kept my grip as I held her legs apart, trying to keep the dangerous-looking claws on her feet away from my body."
+        show anna smirk with dissolve
+        $ renpy.pause(0.5)
+        m "Anna came down from her orgasm with a grin."
+        $ renpy.pause(0.5)
+        An "Finally. So hard to get that force when I'm on my own."
+        menu:
+            "Are you okay?":
+                $ renpy.pause (0.9)
+                $ anna2mood += 1
+                An smirk flip "Excellent, actually."
+            "What just happened?":
+                $ renpy.pause (0.6)
+                An "You finally worked that toy through my cervix."
+            "Is that toy sticking into your womb right now?":
+                $ renpy.pause (0.5)
+                An smirk flip "Yes. Yes it is."
+        An blush "I tend toward larger partners. Why do you think that strapon is so big?"
+        An normal "Technically it's designed to be worn the other way, for someone my size to please a quadrupedal dragon. But it was trivial enough to make it reversible."
+        show anna lipbite with dissolve
+        m "She tugged on my hand, bringing the toy just a little deeper, until her outer lips wrapped around where the toy decreased in width. My fingers brushed against her filled slit as I held the toy steady."
+
+    if bangok_four_anna2.position == "dildo":
+        m "With it up inside her, it looked a little like I was holding onto a penis emerging from her slit, apart from it being a grey, flexible material"
+        An smirk "I think I could use getting off one more time."
+    else:
+        m "With it up inside her, it looked a little like I was holding onto a penis emerging from her slit, apart from it being a grey, flexible material and ringed by the straps that would hold it in place."
+
+    play sound "fx/system3.wav"
+    s "Out of content. Load a save or prepare to crash."
+    $ renpy.error("TODO: ")
+
+
+label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
     menu:
         "[[Finger her.]" if bangok_four_anna2.finger == True:
             $ bangok_four_anna2.finger = False
@@ -477,7 +867,7 @@ label bangok_four_anna2_apartment:
             else:
                 show anna sad with dissolve
             $ renpy.pause (0.5)
-            m "After giving her another moment with this gentle teasing, I added a third finger, finding it slipping in even more easily than the first two as lubrication began to slicken her lips."
+            m "After giving her another moment with this gentle teasing, I added a third finger, finding it slipping in even more easily than the first two as her natural lubrication began to slicken her lips."
             $ renpy.pause (0.8)
             if anna2mood < 1:
                 An face "Okay, stop."
@@ -515,9 +905,9 @@ label bangok_four_anna2_apartment:
                                 rotate 15
                             with dissolve
                             m "Anna lay back down, still looking like she'd tear me open if I angered her again."
-                            jump bangok_four_anna2_apartment_startingmenu
+                            jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
                     "If you insist.":
-                        jump bangok_four_anna2_apartment_startingmenu
+                        jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
             else:
                 An smirk "You were right. Your claws aren't a problem."
                 An blush "And your skin is much softer than any dragon's scales."
@@ -532,7 +922,12 @@ label bangok_four_anna2_apartment:
                         $ renpy.pause(0.3)
                         show anna normal with dissolve
                         m "Anna's folds tugged at my fingers as I withdrew, but she made no comment on my decision."
-                        jump bangok_four_anna2_apartment_startingmenu
+                        jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
+
+            call bangok_four_anna2_apartment_yourarm from bangok_four_anna2_apartment_male_nostrapon_startingmenu_finger
+            jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
+
+            label bangok_four_anna2_apartment_yourarm:
             An smirk "I want your arm. Let's see what the rest of that soft flesh feels like."
             menu:
                 "What, like, detached from my body?":
@@ -540,14 +935,22 @@ label bangok_four_anna2_apartment:
                     An blush "Fine, you can have it back."
                     An smirk "But first I want it as deep inside me as you can push it."
                     c "O-Oh."
-                "No way.":
+                "No way." if bangok_four_anna2.position not in ["dildo","strapon"]:
                     $ anna2mood -= 2
                     c "I was just exploring. I didn't think you'd..."
                     show anna sad with dissolve
                     $ renpy.pause(1.2)
                     An blushpalm "Seriously?"
                     An sad "Fine. Take your hand out and fuck me, if that's all you want."
-                    jump bangok_four_anna2_apartment_startingmenu
+                    return
+                "I'd rather move on to the strapon." if bangok_four_anna2.position in ["dildo","strapon"]:
+                    $ anna2mood -= 1
+                    c "I was just exploring. I didn't think you'd..."
+                    show anna sad with dissolve
+                    $ renpy.pause(1.2)
+                    An blushpalm "Seriously?"
+                    An sad "Fine. Take your hand out stick the strapon in, if that's all you want."
+                    return
                 "Okay.":
                     An smirk "Good little human."
 
@@ -812,7 +1215,7 @@ label bangok_four_anna2_apartment:
                     $ anna2mood -= 1
                     An blush "Yes. Your turn."
             m "I withdrew my sopping wet arm from her now-loosened passage, considering my next move."
-            jump bangok_four_anna2_apartment_startingmenu
+            return
 
 
 
@@ -828,7 +1231,7 @@ label bangok_four_anna2_apartment:
                 c "Are you going to use this as an excuse for anything I try to do?"
                 An face "What do you think the condom is for?"
             m "I got back to my feet."
-            jump bangok_four_anna2_apartment_startingmenu
+            jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
 
 
 
@@ -1174,7 +1577,7 @@ label bangok_four_anna2_apartment:
                 An sad "Now will we get on with this?"
             else:
                 An smirk "Now, could you get on with this?"
-            jump bangok_four_anna2_apartment_startingmenu
+            jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
 
 
 
