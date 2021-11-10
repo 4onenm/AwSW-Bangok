@@ -688,7 +688,7 @@ label bangok_four_bryce3_mcbottom_train:
                 Sb shy "G-Glad you're having fun."
             "[[Thrust back.]":
                 pass
-        m "Putting some of his weight on my shoulders, Sebastain leaned forward, increasing the depth of shaft he moved with each thrust, all-but pulling out of me with each withdrawl before spearing all the way back down."
+        m "Putting some of his weight on my shoulders, Sebastain leaned forward, increasing the depth of shaft he moved with each thrust, all but pulling out of me with each withdrawl before spearing all the way back down."
         if bangok_four_bryce3.sebtarget == "vag":
             m "My inner walls spasmed, kneading at his cock when they could, before rapidly losing their hold and being left with the ghost of sensation."
 
@@ -791,7 +791,6 @@ label bangok_four_bryce3_mcbottom_train:
             $ bangok_four_bryce3.brycetarget = "ass"
         else:
             Br smirk "So, Seb's already gotten you a little ready there. Do you want me to take the same hole, or the other one?"
-            Br flirty "Same hole? Or the other one?"
             menu:
                 Br "Same hole? Or the other one?{fast}"
                 "Same.":
@@ -846,7 +845,7 @@ label bangok_four_bryce3_mcbottom_train:
     else:
         m "I took deep breaths, inner walls shivering in anticipation as they waited for Bryce to spread me enough to pass my outer lips"
         
-    m "I had to lean forward, all-but planting my face in the sand, before Bryce wedged his tip inside."
+    m "I had to lean forward, all but planting my face in the sand, before Bryce wedged his tip inside."
     Br laugh "Ha! Damn!"
     Br flirty "Alright down there?"
     menu:
@@ -937,13 +936,13 @@ label bangok_four_bryce3_mcbottom_train:
 
         m "He'd clearly pushed a little too far forward on his balance, as the rest of his shaft slid inside me in one long, electrifying, maddenning slide."
     elif bangok_four_bryce3.brycetarget == "ass":
-        jump todo_out_of_content_bangok_four_bryce3
+        m "He slid smoothly now that he was in, the lube I'd applied earlier doing its job. His thick, meaty pillar filled out my hole."
 
 
     if bangok_four_bryce3.brycetarget in ["womb","ass"]:
         m "His groin molded my hindquarters, hard plates against soft, yielding flesh mating to form a tight seal."
 
-    if persistent.bangok_watersports == True:
+    if persistent.bangok_watersports == True and bangok_four_bryce3.brycetarget in ["womb","ass"]:
         m "Hilted inside me, Bryce leaned down over my shoulder."
         if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming is not None:
             Br smirk "You know, had a few drinks during that BBQ."
@@ -1003,10 +1002,7 @@ label bangok_four_bryce3_mcbottom_train:
                 m "Bryce tugged back a little, shifting his feet as he found a more comfortable angle to piss in my passage."
                 play soundloop "fx/faucet1.ogg" fadein 1.0
                 queue soundloop "fx/faucet2.ogg"
-                if bangok_four_bryce3.protection == True:
-                    m "Then I felt his shaft twitch, and a hot stream forced his condom's reservoir agaisnt my innermost gate, then through the miniscule hole available."
-                else:
-                    m "Then I felt his shaft twitch, and a hot stream battered against my innermost gate. It packed the space remaining in my canal in a moment, then went the only direction it could."
+                m "Then I felt his shaft twitch, and a hot stream battered against my innermost gate. It packed the space remaining in my canal in a moment, then went the only direction it could."
             else: # "womb":
                 m "Bryce tugged back a little, the feeling electric through my cervix. He shifted his feet, looking for a more comfortable angle to piss inside my most sacred temple."
                 play soundloop "fx/faucet1.ogg" fadein 1.0
@@ -1025,7 +1021,7 @@ label bangok_four_bryce3_mcbottom_train:
                 else:
                     m "Using me as a living urinal, Bryce defiled my womb with his piss, saturating my walls and deepest recesses."
                     if persistent.bangok_inflation == True:
-                        m "The pool deepening inside me as gravity let it coalesce, pressing outward as the liquid pressure increased."
+                        m "The pool deepened inside me as gravity let it coalesce, pressing outward as the liquid pressure increased."
             stop soundloop fadeout 2.0
             m "After a few more seconds, Bryce's leak came to an end, leaving me comfortably warmed by his pissload."
             $ renpy.pause(0.8)
@@ -1054,10 +1050,7 @@ label bangok_four_bryce3_mcbottom_train:
         if bangok_four_bryce3.brycetarget == "ass":
             m "Each slam of Bryce's crotch into my hindquarters sent the liquid load inside me sloshing, heightening the experience."
         elif bangok_four_bryce3.brycetarget == "vag":
-            if bangok_four_bryce3.protection == True:
-                m "He plunged in and out through my passage, thick shaft weakening my muscles. His piss balloon stretched from my womb to his tip, the thin tube of material tugging through my cervix a mindblowing experience."
-            else:
-                m "He plunged in and out through my passage, thick shaft weakening my muscles. Piss leaked from my womb each time he pulled out, only to be forced back by his return, the repeated motion saturating my vaginal walls."
+            m "He plunged in and out through my passage, thick shaft weakening my muscles. Piss leaked from my womb each time he pulled out, only to be forced back by his return, the repeated motion saturating my vaginal walls."
         else: # womb
             m "He plunged in and out of my womb, forcing my cervix wide with the repeated penetrations. Each time in he forced my womb to expand, cockhead displacing some of his piss and increasing the pressure on the walls of my defiled sacred place."
     else:
@@ -1079,8 +1072,8 @@ label bangok_four_bryce3_mcbottom_train:
         Mv "Did you really have to piss inside?"
         Br normal "H-Hey. [player_name] wanted it."
         $ renpy.pause(0.5)
-        Br smirk "[player_name] might want yours too, if you need to go."
-        Br flirty "What do you say, [player_name]?"
+        Br smirk "[player_name] might... want yours too... if you need to go."
+        Br flirty "What... do you say... [player_name]?"
         menu:
             "[[Moan.]":
                 Br laugh "That's it!"
@@ -1156,12 +1149,25 @@ label bangok_four_bryce3_mcbottom_train:
                 if persistent.bangok_inflation == True:
                     m "I moaned as yet more jets came, packing my colon before forcing his liquid load even deeper into my inards."
                     m "The pressure of his seed gave my guts no choice but to expand, distending my belly as he came deep inside."
-    if bangok_four_bryce3.brycetarget in ["vag", "womb"]:
-        if bangok_four_bryce3.brycetarget == "vag":
-            m "Barely able to control his depth, Bryce kissed my cervix with his tip, then began to twitch and pulse thick ropes directly into my deepest center."
-        elif persistent.bangok_knot == True: # womb, avoiding knotting
+    elif bangok_four_bryce3.brycetarget == "vag":
+        m "Barely able to control his depth, Bryce kissed my cervix with his tip, then tugged back again to give room as he began to twitch and pulse thick ropes against my inner gate."
+
+        if bangok_four_bryce3.protection == True:
+            # No ws in vaginal-depth protected. Trying to remove cum-through-cervix-with-condom so...
+            m "His cum spilled into the condom, packing the reservoir in the tip with his load."
+            if persistent.bangok_inflation == True:
+                m "I moaned as yet more jets came, forcing the reservoir to bloat and expand, until it pressed against every wall of my canal."
+                m "He pulled back further, giving more room for his cum before the membrane's pressure against my cervix could cause me real pain."
+                m "Even still, my vagina was forced to expand, every inner fold stretched flat and my belly pushed slightly out by the cumload."
+        else:
+            m "There was too much cum to stop. After packing the end of my vagina, it spurted through my cervix, hot and heavy as it defiled my sacred temple, saturating my walls and deepest recesses."
+            if persistent.bangok_inflation == True:
+                m "I moaned as the pulses continued, until my womb was out of room, packed solid with Bryce's seed."
+                m "The pressure gave my womb no choice but to expand, distending my belly until I appeared slightly pregnant with nothing but his cum."
+    else: # if bangok_four_bryce3.brycetarget == "womb"
+        if persistent.bangok_knot == True: # avoiding knotting
             m "Bryce stopped short of hilting me, then began to twitch and pulse thick ropes directly into my womb."
-        else: # womb, no knotting risk
+        else: # no knotting risk
             m "Bryce speared my canal and cervix through, tip hanging deep inside my womb. Then he began to twitch and pulse thick, hot ropes directly inside."
 
         if persistent.bangok_watersports == True and bangok_four_bryce3.brycews == "before":
@@ -1224,18 +1230,13 @@ label bangok_four_bryce3_mcbottom_train:
                 else:
                     m "The barrier broke, tearing open in an instant and exposing my guts to Bryce's thick load of cum."
                 c "Urp!"
-                m "Without the added tension of the condom, the fluids shifted to equilibrium, flooding even deeper into my innards before settling in my distended stomach."
+                m "Without the added tension of the condom, the fluids shifted to equilibrium, flooding even deeper into my innards before settling in my distended belly."
             elif bangok_four_bryce3.brycetarget == "vag":
-                m "I could feel that the large balloon stuffed with his fluids wasn't coming with him, instead stretching painfully taught through the small hole in my cervix."
+                $ bangok_four_bryce3.brycebroke = False
+                m "I could feel that the large balloon stuffed with his fluids wasn't coming with him, held in place by my taut vaginal walls."
                 c "B-Bryce--!"
-                play sound "fx/bubbles.ogg"
-                if persistent.bangok_watersports == True and bangok_four_bryce3.bryecws == "before":
-                    m "The barrier broke, tearing open in an instant, defiling and saturating my innermost temple with Bryce's slurry of cum and piss."
-                else:
-                    m "The barrier broke, tearing open in an instant, defiling and saturating my innermost temple with Bryce's thick load of cum."
-                c "Urp!"
-                m "Without the added tension of the condom, the fluids shifted to equilibrium, reaching into my deepest recesses."
-                m "I gasped, the small stream of liquid dribbling from my womb into my vagina enough to return the heat of arousal to my groin by itself."
+                m "My inner walls let go at what felt like the last moment, his bloated condom reservoir pouring from my folds."
+                jump bangok_four_bryce3_mcbottom_train_bryce_condom_pullout_success
             else: # "womb":
                 m "I could feel that the large balloon stuffed with his fluids wasn't coming with him, instead stretching taught through my still-distended cervix."
                 c "B-Bryce--!"
@@ -1277,6 +1278,7 @@ label bangok_four_bryce3_mcbottom_train:
                 m "I pushed myself up against Bryce's belly to make the journey flat, then clenched what inner muscles I still could."
                 play sound "fx/pour.ogg" fadein 0.5
                 m "It was gravity that did the work, though. Bryce's load poured through my innermost gate, until the remaining blob could pop through and join the rest spilling between my legs on the sand in one big blob."
+            label bangok_four_bryce3_mcbottom_train_bryce_condom_pullout_success:
             stop sound fadeout 1.0
             m "I slumped back down as it spilled clear, too exhausted and empty to move."
         
@@ -1298,7 +1300,7 @@ label bangok_four_bryce3_mcbottom_train:
     Br smirk "Maverick?"
     $ renpy.pause(1.2)
     m "Bryce retreated a few more steps, but I didn't hear Maverick's footsteps approaching."
-    m "I wiggled my rear, trying to entice him to finish off the night."
+    m "I wiggled my rear slightly, trying to entice him to finish off the night."
 
     Mv normal "..."
     m "Slowly, I felt his presence arrive. He stepped over me carefully, as if afraid my naked, used body might be concealing a weapon I'd use against him."
@@ -1314,14 +1316,16 @@ label bangok_four_bryce3_mcbottom_train:
     Mv nice "Is this at all painful?"
     m "After Bryce's fucking, just being spread around a thick shaft was a non-issue. I shook my head."
     c "F-Feels good."
-    if persistent.bangok_watersports == True:
-        if bangok_four_bryce3.brycews == "before":
+    if persistent.bangok_watersports == True and bangok_four_bryce3.brycews == "before":
+        if bangok_four_bryce3.mavws == False:
             Br smirk "You know, [player_name], Maverick does this whole piss thing for me all the time."
             Br flirty "You sure you don't want his too?"
 
-        Mv angry "It's not \"all the time.\""
-        Mv nice "I know Bryce can be pushy with his..."
-        Mv normal "fetish."
+            Mv angry "It's not \"all the time.\""
+            Mv nice "I know Bryce can be pushy with his..."
+            Mv normal "fetish."
+        else:
+            $ renpy.pause(0.8)
         Mv nice "Do you actually want me to urinate in you?"
 
         menu:
@@ -1355,13 +1359,13 @@ label bangok_four_bryce3_mcbottom_train:
                     m "Then his cock twitched and a hot ballon of fresh piss took shape, bloating in my canal just beyond his tip."
 
                 if persistent.bangok_inflation == True:
-                    m "I moaned as I felt my belly pressed out a little yet again, stretched from the start over again by the fluid of a different dragon."
+                    m "I moaned as I felt my belly pressed out a little yet again, stretched once more from empty by the fluid of a different dragon."
             else:
                 m "Then his cock twitched and a hot stream of fresh piss flooded my insides."
                 if persistent.bangok_inflation == True:
-                    m "I moaned as I felt my belly grow still further, the fresh urine stretching me even larger than before."
+                    m "I moaned as I felt my belly grow still further, the fresh urine pouring in stretching me even larger than before."
             stop soundloop fadeout 0.5
-            m "Maverick finished in me faster than Bryce had. Even still, I writhed in ecstacy, the pressure feeling like he'd pissed even more than Bryce."
+            m "Maverick finished in me faster than Bryce had. Even still, I writhed in ecstacy, the pressure feeling like he'd pissed even more than Bryce had."
             m "I had to wonder at how lucky I was, travelling to another world to get to serve as a urinal for these magnificent beasts."
             Mv nice "Satisfied?"
             m "I nodded languidly, his hot urine suffusing my whole body with warmth."
@@ -1404,16 +1408,21 @@ label bangok_four_bryce3_mcbottom_train:
         else:
             Br brow "..."
             Br laugh "Man. I really have to not buy that brand again."
-            c "Are you kidding me?"
-            Mv angry "You asked us to engage in risky behaviour pissing in it."
-            Br normal "Condoms aren't really designed for it. It's a little on you, [player_name]."
-            $ renpy.pause(0.8)
-            c "Fine."
+            menu:
+                "Are you kidding me?":
+                    Mv angry "You asked us to engage in risky behaviour pissing in it."
+                    Br normal "Condoms aren't really designed for it. It's a little on you, [player_name]."
+                    $ renpy.pause(0.8)
+                    c "Fine."
+                "[[Moan.]":
+                    Br smirk "Well, it looks like [player_name] is happy with it."
+                    Br normal "I guess you should keep going."
+
 
         m "After a few moments hesitation, Maverick resumed pushing."
 
     if bangok_four_bryce3.mavtarget in ["vag","womb"]:
-        m "His large head spread my inner walls, feeling almost like a fist as it pushed deeper. It flattened out my inner folds, stretching my muscles and scraping deeper every drop of fluid within."
+        m "His large head spread my inner walls, feeling almost like a fist as it pushed deeper. It flattened out my inner folds, stretching my muscles and scraping deeper every drop of fluid within me."
         if bangok_four_bryce3.mavtarget == "vag":
             m "I gasped, crotch already afire with overstimulation as he kissed my cervix with his tip."
         else: # "womb":
@@ -1432,13 +1441,16 @@ label bangok_four_bryce3_mcbottom_train:
             m "He leaned, my dilated cervix still not wide enough to take his head."
             show black with fadequick
             if persistent.bangok_inflation == True:
-                m "Then he slipped through, displacing one thick shaft's cockhead worth of Bryce's load. I blasted over my peak, stimulated both by my innermost gate bending yet wider, and the forced pressure on my inner walls, leaving my belly bigger than ever before."
+                m "Then he slipped through, displacing one thick shaft's cockhead worth of Bryce's load."
+                m "I blasted over my peak, stimulated both by my innermost gate bending yet wider, and the forced pressure on my inner walls, leaving my belly bigger than ever before."
+                $ renpy.pause(1.0)
             else:
                 if bangok_four_bryce3.protection and (not bangok_four_bryce3.brycebroke) and (not bangok_four_bryce3.mavbroke) :
                     m "Then he slipped through, sinking fully into my womb."
                 else:
                     m "Then he slipped through, sinking fully into my defiled womb."
                 m "I came again, the fresh popping of my cervix more than my mind was prepared to handle."
+                $ renpy.pause(1.0)
             hide black with dissolveslow
             $ renpy.pause(0.5)
             m "Maverick waited, patiently, for me to come back down."
@@ -1482,20 +1494,20 @@ label bangok_four_bryce3_mcbottom_train:
             m "I could feel my uterus bulge out, a month or two of pregnancy growth passing in a second-long thrust as I was forced to expand."
         else:
             m "He didn't slow as my guts gurgled, fluid rammed deeper than ever before."
-            m "I could feel my belly bulge out, a half dozen full meals of weight stuffed inside me in a second-long thrust as I was forced to expand."
+            m "I could feel my belly bulge out, a half dozen full meals of weight stuffed deep in my gut in a second-long thrust as I was forced to expand."
     else:
         m "Then he dragged back, long and slow, until the the ridge of skin around his head tugged at my hole, just a bit of force from popping out."
         m "He thrust back in, harder, molding me to his shape by force."
 
     m "I had thought his thrust had been a one time test, a bit of stimulation and stretching before a longer, slower fuck."
-    m "The next thrust went the same distance, but faster, splitting me open around his cock."
-    c "Ah!"
-    play sound "fx/rub2.ogg"
+    m "The next thrust went the same distance, but faster."
+    play soundloop "fx/rub2.ogg"
     show beachx:
         linear 0.15 zoom 1.1
         ease 0.5 zoom 1.0
         repeat
     with None
+    c "Ah!"
     m "Held in place by Maverick's paw, I could do nothing but hold on to consciousness through Maverick's rough fucking, as the sensations rapidly threatened me with climax after climax."
 
     if bangok_four_bryce3.mavtarget == "vag":
@@ -1503,14 +1515,14 @@ label bangok_four_bryce3_mcbottom_train:
     elif bangok_four_bryce3.mavtarget == "womb":
         m "The muscles in my love passage gave up, falling limp and pliable as Maverick treated my hole like a sleeve to get to my cervix. That he popped through again, bottoming out so hard I worried he was kissing the far end of my womb."
     else:
-        m "My sphincter gave up, stretched wide enough by Maverick's abuse to simply remain that way as, more than once, Maverick pulled the ring of his tip out before plunging back inside."
+        m "My sphincter gave up, stretched wide enough by Maverick's abuse to simply remain that way as, more than once, Maverick pulled the ring of his tip out before plunging back inside to his hilt."
 
-    if ((not bangok_four_bryce3.protection) or bangok_four_bryce3.brycebroke or bangok_four_bryce3.mavbroke):
+    if (bangok_four_bryce3.mavtarget in ["womb", "ass"]) and ((not bangok_four_bryce3.protection) or bangok_four_bryce3.brycebroke or bangok_four_bryce3.mavbroke):
         m "Some of the fluid that had been deposited inside me spattered out as we fucked, scooped out by Maverick's head or sprayed out by his rough inward thrusts."
 
     if bangok_four_playerhasdick == False:
         show black with fadequick
-        m "I flew over yet another peak, falling completely limp as Maverick held me in place to ram me."
+        m "I flew over yet another peak, arms dropping limp with my head lying on the sand as Maverick held me in place to ram me."
         $ renpy.pause(1.0)
         hide black with dissolveslow
         $ renpy.pause(0.5)
@@ -1520,7 +1532,29 @@ label bangok_four_bryce3_mcbottom_train:
         m "The intense overstimulation left me swooning."
 
     $ renpy.pause(1.2)
-    m "Finally, Maverick"
+
+    stop soundloop fadeout 0.5
+    show beachx:
+        linear 0.15 zoom 1.0
+    with None
+    play sound "fx/rub1.ogg"
+
+    if bangok_four_bryce3.mavtarget == "ass":
+        m "Finally, Maverick stopped, abruptly, halfway into me. Then his hips bucked, fucking my asshole fast and shallow with a few more short thrusts."
+        play sound "fx/dragonpain.ogg"
+        $ renpy.pause(1.0)
+    elif bangok_four_bryce3.mavtarget == "vag":
+        m "Finally, Maverick stopped, abruptly, halfway down my canal. Then his hips bucked, fucking my pussy fast and shallow with a few more short thrusts."
+        play sound "fx/dragonpain.ogg"
+        $ renpy.pause(1.0)
+    else:
+        m "Finally, Maverick stopped, abruptly, just short of my cervix. Then his hips bucked, fucking my womb fast and shallow with a few more short thrusts."
+        play sound "fx/dragonpain.ogg"
+        $ renpy.pause(1.0)
+        if bangok_four_bryce3.protection and not bangok_four_bryce3.mavbroke:
+            m ""
+
+
 
     jump todo_out_of_content_bangok_four_bryce3
 
