@@ -901,7 +901,7 @@ label bangok_four_bryce3_mcbottom_train:
 
     if bangok_four_bryce3.brycetarget == "womb":
         m "Gradually, Bryce applied more and more pressure to my innermost gate, opening me millimeter by millimeter."
-        m "It was nigh impossible to keep from tensing up, the mounting tension rising to the point of feeling like it'd tear me in half."
+        m "It was nigh impossible to keep from tensing up, the stress on my vagina rising to the point of feeling like it'd tear me in half."
         menu:
             "Take Bryce's hand.":
                 m "Dropping my face into the sand, I gave up on holding myself up, instead reaching out to intertwine my fingers with the claws on one of Bryce's forepaws."
@@ -1012,7 +1012,7 @@ label bangok_four_bryce3_mcbottom_train:
                 play soundloop "fx/faucet1.ogg" fadein 1.0
                 queue soundloop "fx/faucet2.ogg"
                 if bangok_four_bryce3.protection == True:
-                    m "Then I felt his shaft twitch, and a hot stream forced my condom's reservoir to expand in my innermost center."
+                    m "Then I felt his shaft twitch, and a hot stream forced his condom's reservoir to expand deep inside me."
                 else:
                     m "Then I felt his shaft twitch, and a hot stream battered my innermost center."
 
@@ -1315,7 +1315,7 @@ label bangok_four_bryce3_mcbottom_train:
     m "After Bryce's fucking, just being spread around a thick shaft was a non-issue. I shook my head."
     c "F-Feels good."
     if persistent.bangok_watersports == True:
-        if bangok_four_bryce3.bryecws == "before":
+        if bangok_four_bryce3.brycews == "before":
             Br smirk "You know, [player_name], Maverick does this whole piss thing for me all the time."
             Br flirty "You sure you don't want his too?"
 
