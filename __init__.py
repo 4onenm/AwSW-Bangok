@@ -156,7 +156,24 @@ def bryce3_afterparty(ml):
         .hook_to('bangok_four_bryce3_intro', condition='persistent.nsfwtoggle == True', return_link=False)
         .search_say("I suppose I should be heading off as well.")
         .link_from('bangok_four_bryce3_playershouldleave')
+        .search_say("Hey, do you want to know where I got these scars? I bet you're curious.")
+        .link_from('bangok_four_bryce3_wannaknowscars')
+        .search_say("Guess that's all of the trash. Thanks for the help.")
+        .hook_to('bangok_four_bryce3_mcbottom_train_epilogue', return_link=False, condition='(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)')
     )
+
+    clothes_fix = ( ml.find_label('bryce3skip')
+        .search_menu("There's no need for you to sleep on the floor.")
+        .branch()
+        .search_menu("The couch is big enough for both of us.")
+        .branch()
+        .search_say("There we go.")
+    )
+
+    clothes_fix.search_say("Is it okay for you to sleep like this?") \
+        .link_from('bangok_four_bryce3_oktosleep') \
+    
+    clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition='(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)')
 
 
 def lorem3(ml):

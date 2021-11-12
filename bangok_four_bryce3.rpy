@@ -15,7 +15,6 @@ init python in bangok_four_bryce3:
 
     mc_bottom = True
     protection = False
-    leave_protection_in = False
 
     # Menu options
     top_mav = True
@@ -1860,7 +1859,8 @@ label bangok_four_bryce3_mcbottom_train:
             pass
 
     $ renpy.pause(0.8)
-    Br normal "You wouldn't mind sticking around to help me clean up, would you?"
+    Br brow "Damn, now everyone left without cleaning up their trash."
+    Br normal "You wouldn't mind sticking around to help, would you?"
     menu:
         "Not at all.":
             pass
@@ -1888,11 +1888,64 @@ label bangok_four_bryce3_mcbottom_train:
 
     m "Picking up my clothes with his maw, Bryce carried them up and set them within my reach."
     show bryce normal with dissolve
+    menu:
+        "Thanks, Bryce.":
+            pass
+        "I don't think I should put those on yet.":
+            Br brow "Then don't. I had just assumed you might get cold, being without scales, and want to drape those over you."
+            c "Oh. Thanks."
+        "[[Say nothing.]":
+            pass
+    hide bryce with dissolve
+    m "Bryce started to clean up, starting first with our foodscraps. But with the amount of trash left by five people, it was clear it would take a while."
 
-    jump todo_out_of_content_bangok_four_bryce3
+    $ bangok_four_bryce3.unplayed = False
+    $ bangok_four_bryce3.mc_bottom = True
+
+    show bryce brow with dissolve
+
+    jump bangok_four_bryce3_wannaknowscars
 
 label bangok_four_bryce3_mctop:
     jump todo_out_of_content_bangok_four_bryce3
+
+label bangok_four_bryce3_mcbottom_train_epilogue:
+    Br normal "I suppose I'll have to tell you about the second scar some other time."
+    Br brow "Your apartment is on the other side of town, and if you're not moving on your own yet, I don't think we should be taking you that far."
+    m "I pulled my knees in and struggled to push myself up off the rocks, but only managed a few inches before pain in my midriff had me slumping back."
+    c "What do you want me to do, then? Sleep here?"
+    Br laugh "I wouldn't do that to you. You can sleep over at my place."
+    menu:
+        "Thanks.":
+            show bryce normal with dissolve
+        "If you insist.":
+            show bryce brow with dissolve
+        "Is this an excuse to sneak in a round two?":
+            Br flirty "Depends, would you want that?"
+            menu:
+                "Please, no.":
+                    Br laugh "Sorry, sorry. I was kidding."
+                "Oh yes.":
+                    Br laugh "Maybe."
+                    Br smirk "I don't know if I'm recovered from the first one yet."
+                    $ renpy.pause(0.3)
+                    show bryce stern with dissolve
+                    $ renpy.pause(0.8)
+                    Br normal "Yeah. Make that a prolly not."
+    c "You're not going to drag me on the ground to your apartment though, right?"
+    Br brow "I hope not. Came up with a couple ideas while packing the trash."
+    m "He lay down in front of me."
+    Br normal "Here. Try getting on my back."
+
+    $ renpy.pause (0.3)
+    scene black with dissolvemed
+    $ renpy.pause (1.0)
+    scene padx at Pan ((0, 240), (0,360), 3.0) with dissolveslow
+    $ renpy.pause (1.3)
+    show bryce brow with dissolve
+    if (bangok_four_bryce3.protection == False) or (bangok_four_bryce3.brycebroke == True) or (bangok_four_bryce3.mavbroke == True):
+        Br "I think I've got a towel around here somewhere for any leaks."
+    jump bryce3skip
 
 label todo_out_of_content_bangok_four_bryce3:
     play sound "fx/system3.wav"
