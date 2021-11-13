@@ -150,12 +150,12 @@ label bangok_four_anna2_whatnow:
             An face "Because it's virtually guaranteed we'll break something."
             An sad "Not to mention the sanitary issues."
             c "Alright, alright. My place it is."
-            if anna2mood >= 0:
+            if anna2mood >= 0 and persistent.bangok_dev == True:
                 An normal "That said, I would like to get something I stashed in my lab for this."
         "Sure.":
             $ renpy.pause(0.5)
             $ anna2mood += 1
-            if anna2mood >= 0:
+            if anna2mood >= 0 and persistent.bangok_dev == True:
                 An smirk "Ah, almost forgot. I left something in my lab for this."
         "All that waiting left me kinda hungry...":
             $ renpy.pause(0.5)
@@ -167,7 +167,7 @@ label bangok_four_anna2_whatnow:
                     An normal "I don't like dental dams. And you, in particular, aren't putting your mouth on my genitals without one."
                     c "Oh."
                     An "Forget about it. Let's go do this."
-                    if anna2mood >= 0:
+                    if anna2mood >= 0 and persistent.bangok_dev == True:
                         An face "Oh, damnit. Almost forgot. I put something in my lab for this."
                 "No, I meant that literally.":
                     An sad "What do you expect me to do about that, magic up food for you?"
@@ -175,7 +175,7 @@ label bangok_four_anna2_whatnow:
                     An "Fine. Maybe the coffee place is still open. I don't know."
                     jump bangok_four_anna2_alley
 
-    if anna2mood >= 0:
+    if anna2mood >= 0 and persistent.bangok_dev == True:
         c "Oh?"
         hide anna with dissolve
         play sound "fx/door/door_open.wav"

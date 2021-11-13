@@ -80,6 +80,29 @@ init:
                             hovered Play("audio", "se/sounds/select.ogg")
                             focus_mask None
                         text "Cloacas"
+
+                    text "Development":
+                        align (0.5, 0.5)
+
+                    hbox:
+                        align (0.5, 0.5)
+                        spacing 10
+                        imagebutton:
+                            xcenter 0.5
+                            ycenter 0.5
+                            idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
+                            hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
+                            selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
+                            selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
+                            action [MTSTogglePersistentBool("bangok_dev"),
+                                    Play("audio", "se/sounds/yes.wav")]
+                            hovered Play("audio", "se/sounds/select.ogg")
+                            focus_mask None
+                        text "In-Development Scenes"
+
+                    if persistent.bangok_dev == True:
+                        text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes."
+
                 else:
                     text "This mod's content is primarily":
                         align (0.5,0.5)

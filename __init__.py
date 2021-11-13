@@ -1,6 +1,10 @@
 from modloader import modinfo
 from modloader.modclass import Mod, loadable_mod
 
+def make_dev(cond):
+    return '('+cond+') and (persistent.bangok_dev == True)'
+
+
 def anna12(ml):
     # Anna1
     ml.find_label('_call_skiptut_7') \
@@ -148,18 +152,18 @@ def bryce3_afterparty(ml):
     ( ml.find_label('_call_skiptut_26')
         .search_menu("Yes. I want to skip ahead.")
         .branch()
-        .hook_to('bangok_four_bryce3_skipmenu')
+        .hook_to('bangok_four_bryce3_skipmenu', condition=make_dev('persistent.nsfwtoggle == True'))
     )
 
     ( ml.find_label('bryce3')
         .search_say("Yeah, I should also be heading off. You know I'm starting early tomorrow.", depth=1800)
-        .hook_to('bangok_four_bryce3_intro', condition='persistent.nsfwtoggle == True', return_link=False)
+        .hook_to('bangok_four_bryce3_intro', return_link=False, condition=make_dev('persistent.nsfwtoggle == True'))
         .search_say("I suppose I should be heading off as well.")
         .link_from('bangok_four_bryce3_playershouldleave')
         .search_say("Hey, do you want to know where I got these scars? I bet you're curious.")
         .link_from('bangok_four_bryce3_wannaknowscars')
         .search_say("Guess that's all of the trash. Thanks for the help.")
-        .hook_to('bangok_four_bryce3_mcbottom_train_epilogue', return_link=False, condition='(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)')
+        .hook_to('bangok_four_bryce3_mcbottom_train_epilogue', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)'))
     )
 
     clothes_fix = ( ml.find_label('bryce3skip')
@@ -173,13 +177,13 @@ def bryce3_afterparty(ml):
     clothes_fix.search_say("Is it okay for you to sleep like this?") \
         .link_from('bangok_four_bryce3_oktosleep') \
     
-    clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition='(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)')
+    clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)'))
 
 
 def lorem3(ml):
     ( ml.find_label('lorem3skip')
         .search_say("I'm not sure, exactly.")
-        .hook_to('bangok_four_lorem3_intro', condition='(persistent.nsfwtoggle == True) and (bangok_four_xipsum.loremin == True)')
+        .hook_to('bangok_four_lorem3_intro', condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_xipsum.loremin == True)'))
     )
 
 
