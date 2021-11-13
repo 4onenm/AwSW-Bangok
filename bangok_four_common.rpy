@@ -133,14 +133,14 @@ init:
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
     # People
-    image anna blush = "cr/anna_blush.png"
-    image anna blush flip = im.Flip("cr/anna_blush.png", horizontal = True)
-    image anna orgasm = "cr/anna_orgasm.png"
-    image anna orgasm flip = im.Flip("cr/anna_orgasm.png", horizontal = True)
-    image anna blushpalm = "cr/anna_blushpalm.png"
-    image anna blushpalm flip = im.Flip("cr/anna_blushpalm.png", horizontal = True)
-    image anna lipbite = "cr/anna_lipbite.png"
-    image anna lipbite flip = im.Flip("cr/anna_lipbite.png", horizontal = True)
+    image anna bangok blush = "cr/anna_blush.png"
+    image anna bangok blush flip = im.Flip("cr/anna_blush.png", horizontal = True)
+    image anna bangok orgasm = "cr/anna_orgasm.png"
+    image anna bangok orgasm flip = im.Flip("cr/anna_orgasm.png", horizontal = True)
+    image anna bangok blushpalm = "cr/anna_blushpalm.png"
+    image anna bangok blushpalm flip = im.Flip("cr/anna_blushpalm.png", horizontal = True)
+    image anna bangok lipbite = "cr/anna_lipbite.png"
+    image anna bangok lipbite flip = im.Flip("cr/anna_lipbite.png", horizontal = True)
 
 
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
