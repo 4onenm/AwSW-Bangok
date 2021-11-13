@@ -262,7 +262,7 @@ label bangok_four_xsebastian_path1_1:
                 show black with dissolvemed
                 m "I lay down on the rocks with my head over one edge, and Seb pressed his moist cock back up against my lips."
                 m "I suckled on his head as he pushed it in. He stopped abruptly."
-                Sb shy b dk "Wh- What is that?"
+                Sb shy b dk "Wh-What is that?"
                 m "I let his cock pop free of my mouth."
                 c "Suction?"
                 $ renpy.pause (0.3)
@@ -387,7 +387,7 @@ label bangok_four_xsebastian_path1_2:
     with dissolve
     $ renpy.pause(0.8)
     show sebastian smile b dk with dissolve
-    Sb "Wow, I... I never thought a human would want to do such a thing with a dragon. Let alone be so good at it"
+    Sb "Wow, I... I never thought a human would want to do such a thing with a dragon. Let alone be so good at it."
     if bangok_four_playerhasdick == True and bangok_four_xsebastian_playerfirst == False:
         show sebastian at Position(xpos=0.6) with ease
         m "I pushed myself up, unsatisfied cock twitching."
@@ -471,6 +471,10 @@ label bangok_four_xsebastian_path1_2:
                     c "Yeah."
                 "[[Pull out.]":
                     $ renpy.pause (0.5)
+    elif bangok_four_playerhasdick == False and bangok_four_xsebastian_playerfirst == False:
+        c "Yeah..."
+        Sb drop b dk "Oh. Did you...? I don't think I heard you get off did I--"
+        c "Don't worry about it."
     else:
         c "Well, there you have it."
     jump bangok_four_xsebastian_aftersex
@@ -499,7 +503,7 @@ label bangok_four_xsebastian_path2:
             show sebastian drop b flip dk with dissolve
             m "Sebastian rolled away, scrambling for a little distance."
             Sb "D-Damnit!"
-            Sb "This is all my fault. I- I took what you were saying the wrong way and... I- I didn't mean..."
+            Sb "This is all my fault. I-I took what you were saying the wrong way and... I-I didn't mean..."
             m "He curled into himself against the rockface."
             $ renpy.pause (0.8)
             Sb "(I propose one easy guard duty night and now I'm going to lose my job. I can't believe I did that.)"
@@ -802,7 +806,7 @@ label bangok_four_xsebastian_path2_1_1:
             m "I clenched around him, massaging his cock inside of me. His smooth, slick shaft was a completely different experience to anything but other dragons."
         $ renpy.pause(1.3)
         m "My peak crept up without warning."
-        c "I- I'm close--!"
+        c "I-I'm close--!"
         $ renpy.pause(0.2)
         show black with fadequick
         m "My lower body squeezed, sucking and milking Sebastian for his seed even as he continued thrusting."
