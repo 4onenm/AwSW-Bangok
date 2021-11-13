@@ -182,14 +182,14 @@ label bangok_four_bryce3_intro:
     menu:
         "Wait, bottom all three of you?" if (bangok_four_bryce3.mc_bottom == True) and (bangok_four_bryce3.sebastian_in == True):
             show sebastian normal flip with dissolve
-            $ bangok_four_bryce3.bottom_choice_clarification = False
+            $ bangok_four_bryce3.mc_bottom = False
             if bangok_four_bryce1_unplayed == False:
                 Br smirk "I think you can manage it."
             else:
                 Br normal "It's just a thought. You don't have to take it seriously."
             jump bangok_four_bryce3_bottom_choice
         "Wait, bottom both of you?" if (bangok_four_bryce3.mc_bottom == True) and (bangok_four_bryce3.sebastian_in == False):
-            $ bangok_four_bryce3.bottom_choice_clarification = False
+            $ bangok_four_bryce3.mc_bottom = False
             if bangok_four_bryce1_unplayed == False:
                 Br smirk "I think you can manage it."
             else:
@@ -213,7 +213,8 @@ label bangok_four_bryce3_intro:
                 Sb "You sure, [player_name]? That's not a statement to be made lightly."
                 Sb drop flip "At least Bryce is in the size class to take Maverick."
                 Sb shy flip "You're, ah..."
-                Br smirk flip "[player_name] will be fine. I stashed some supplies up here in the rocks. And if it's too much, I'll take over."
+                Br smirk "[player_name] will be fine."
+                Br smirk flip "I stashed some supplies up here in the rocks. And if it's too much, I'll take over."
                 hide bryce with easeoutright
             else:
                 show bryce flirty
@@ -244,7 +245,6 @@ label bangok_four_bryce3_intro:
             $ renpy.pause(1.2)
             m "I waited, but Maverick did not elaborate."
 
-
     show bryce normal at Position(xanchor = 1.0, xpos = 1.175) with easeinright
     m "Bryce returned with an open-top wicker basket, handle clenched in his teeth. A sizeable bottle of lube and four open boxes of condoms peeked out."
     Br "So. We've got condoms and lube. Should fit everyone."
@@ -252,8 +252,8 @@ label bangok_four_bryce3_intro:
         if bangok_four_bryce3.mc_bottom == False:
             Br laugh "Personally I don't care, but Seb, if you want to skip cleaning yourself up later."
         else:
-            Br "Seb, if you want to use one and skip most of the cleanup from ass and sloppy seconds..."
-        Br smirk "Or you could take a dip in the ocean."
+            Br "Seb, if you want to use one and skip cleaning yourself up later..."
+        Br smirk "Or you could take a dip in the ocean when you're done tonight."
         Sb disapproval flip "I'd rather use protection than have sand up there, thanks."
     else:
         if bangok_four_bryce3.mc_bottom == False:
@@ -1906,9 +1906,6 @@ label bangok_four_bryce3_mcbottom_train:
 
     jump bangok_four_bryce3_wannaknowscars
 
-label bangok_four_bryce3_mctop:
-    jump todo_out_of_content_bangok_four_bryce3
-
 label bangok_four_bryce3_mcbottom_train_epilogue:
     Br normal "I suppose I'll have to tell you about the second scar some other time."
     Br brow "Your apartment is on the other side of town, and if you're not moving on your own yet, I don't think we should be taking you that far."
@@ -1946,6 +1943,11 @@ label bangok_four_bryce3_mcbottom_train_epilogue:
     if (bangok_four_bryce3.protection == False) or (bangok_four_bryce3.brycebroke == True) or (bangok_four_bryce3.mavbroke == True):
         Br "I think I've got a towel around here somewhere for any leaks."
     jump bryce3skip
+
+
+label bangok_four_bryce3_mctop:
+    jump todo_out_of_content_bangok_four_bryce3
+
 
 label todo_out_of_content_bangok_four_bryce3:
     play sound "fx/system3.wav"
