@@ -9,6 +9,7 @@ init python in bangok_four_lorem3:
     lorem_protected = False # bool
     lorem_wormsin = 0 # Z[0, ???)
 
+    know_protected_fails = False
 
     abort_target = None
 
@@ -37,6 +38,7 @@ label bangok_four_lorem3_intro:
     $ renpy.pause (0.8)
     Lo "It's for decreasing, um, sexual sensitivity."
     Lo sad "I wanted to last a little longer the other day. Ipsum recommended this spot to me."
+    Lo think "He also said humans are basically just another dragon species when it comes to sexual compatibility, so it {i}should{/i} be safe for you too."
     menu:
         "How does it work?":
             $ renpy.pause (0.5)
@@ -67,9 +69,8 @@ label bangok_four_lorem3_intro:
         "I'm in.":
             $ renpy.pause (0.5)
     Lo shy "O-Oh? Okay."
-    Lo normal "Great."
     c "Lead on."
-    Lo "Sure."
+    Lo normal "Sure."
 
 label bangok_four_lorem3_wormscene:
     scene bangok_four_forest_clearing at Pan((716, 0), (0, 520), 6.0) with Fade(0.5,1.0,1.0)
@@ -127,6 +128,7 @@ label bangok_four_lorem3_wormscene:
         "Let's forget about it.":
             $ renpy.pause (0.5)
             Lo sad "Oh. Thanks."
+            label bangok_four_lorem3_leave:
             hide lorem with dissolve
             play sound "fx/slide.ogg"
             m "Lorem put the guide back in the box, shut the lid, then slid it back into its hiding place under the tree."
@@ -174,8 +176,8 @@ label bangok_four_lorem3_wormscene:
                         if bangok_four_lorem3.mc_protected == True:
                             m "Lorem handed me a condom packet from the box, but I found it concerningly small."
                             c "Are you sure this is a size that'll fit over my...?"
-                            Lo think bangok "W-Well, the guide says if you're going to use one, you need to use the smallest that'll fit."
-                            Lo shy bangok "O-Or they'll go underneath it and... y'know."
+                            Lo think bangok "W-Well, the guide doesn't say anything, but if you're going to use one, you probably need the smallest that'll fit."
+                            Lo shy bangok "O-Or they might go underneath it and... y'know."
                             m "After a couple tries, and spreading a bit of my pre, I managed to wedge the condom ring over my head and start to unroll it down my shaft."
                         jump bangok_four_lorem3_mcgoes_stick_dick_in_crazy
                     "Ass.":
@@ -233,7 +235,9 @@ label bangok_four_lorem3_mcgoes_stick_dick_in_crazy:
             $ bangok_four_lorem3.mc_wormsin = 3
             m "The one at my tip entered, followed immediately by another from directly inside the tree."
         else:
-            jump todo_out_of_content_bangok_four_lorem3
+            m "Then, after a few moments, I felt the first drop off, falling back inside the hole."
+            m "The lack of stimulation was itself stimulating, but not nearly as much as having the worm crawling around my cockhead. Then, soon, the others did the same, ignoring my penis in favor of their wooden home."
+            jump bangok_four_lorem3_mcgoes_stick_dick_in_crazy_protected_fail
     else: # smooth:
         if bangok_four_lorem3.mc_protected == False:
             m "It reared back, then touched to the side of my cockhead, feeling cold and slimy on my exposed skin."
@@ -266,35 +270,34 @@ label bangok_four_lorem3_mcgoes_stick_dick_in_crazy:
             $ bangok_four_lorem3.mc_wormsin = 3
             m "The one at my tip entered, followed immediately by another from directly inside the tree."
         else:
-            jump todo_out_of_content_bangok_four_lorem3
+            m "Then, after a few moments, I felt the first drop off, falling back inside the hole."
+            m "The lack of stimulation was itself stimulating, but not nearly as much as having the worm sliming my cockhead. Then, soon, the others did the same, ignoring my penis in favor of their wooden home."
+            jump bangok_four_lorem3_mcgoes_stick_dick_in_crazy_protected_fail
 
     m "I sank in deeper, hips against the bark as the wriggling mass pleasuring me thus far drove up my arousal."
     Lo relieved bangok "H-Hey! Now I can't see!"
 
-    if bangok_four_lorem3.mc_protected == False:
-        $ bangok_four_lorem3.mc_wormsout = 26
-        m "Dozens more wriggled about my head inside the tree, fighting for the chance to crawl inside me."
-        $ bangok_four_lorem3.mc_wormsin = 10
-        m "A fourth and a fifth worked into my tip. Then I lost count, as the worms moved one after another after another to sink inside."
-        if bangok_four_lorem3.wormtype == "legged":
-            m "The first, now deep inside my body, pushed my pleasure button from the inside out, with a series of tight pinpricks that drove me over my peak."
-        else:
-            m "The first, now deep inside my body, pushed my pleasure button from the inside out, wriggling in against it with tight undulations that drove me over my peak."
-        scene black with dissolve
-        c "Ah!"
-        m "... but no cum, no release came forth from my shaft."
-        $ bangok_four_lorem3.mc_wormsout = 42
-        $ bangok_four_lorem3.mc_wormsin = 15
-        m "I writhed, unable to get release as yet more worms joined the task of pleasuring me."
-        m "They crawled over each other on the surface of my shaft, spilling down toward my base as each struggled to be the next to join the long train worming yet deeper inside me."
-        $ bangok_four_lorem3.mc_wormsin = 21
-        m "Then I felt two push in at once, and swooned against the bark of the tree."
-        Lo shy bangok "W-Woah. Your, uh, your \"scrotum\"..."
-        m "I could feel what Lorem was referencing, as the first of the little worms squeezed from the tiny tubes deep in my body and into my balls."
+    $ bangok_four_lorem3.mc_wormsout = 26
+    m "Dozens more wriggled about my head inside the tree, fighting for the chance to crawl inside me."
+    $ bangok_four_lorem3.mc_wormsin = 10
+    m "A fourth and a fifth worked into my tip. Then I lost count, as the worms moved one after another after another to sink inside."
+    if bangok_four_lorem3.wormtype == "legged":
+        m "The first, now deep inside my body, pushed my pleasure button from the inside out, with a series of tight pinpricks that drove me over my peak."
     else:
-        jump todo_out_of_content_bangok_four_lorem3
+        m "The first, now deep inside my body, pushed my pleasure button from the inside out, wriggling in against it with tight undulations that drove me over my peak."
+    scene black with dissolve
+    c "Ah!"
+    m "... but no cum, no release came forth from my shaft."
+    $ bangok_four_lorem3.mc_wormsout = 42
+    $ bangok_four_lorem3.mc_wormsin = 15
+    m "I writhed, unable to get release as yet more worms joined the task of pleasuring me."
+    m "They crawled over each other on the surface of my shaft, spilling down toward my base as each struggled to be the next to join the long train worming yet deeper inside me."
+    $ bangok_four_lorem3.mc_wormsin = 21
+    m "Then I felt two push in at once, and swooned against the bark of the tree."
+    Lo shy bangok "W-Woah. Your, uh, your \"scrotum\"..."
+    m "I could feel what Lorem was referencing, as the first of the little worms squeezed from the tiny tubes deep in my body and into my balls."
 
-    if (bangok_four_lorem3.mc_protected == True) or (persistent.bangok_inflation == False):
+    if persistent.bangok_inflation == False:
         label bangok_four_lorem3_mcgoes_stick_dick_in_crazy_done:
         hide screen bangok_four_lorem3_abortscreen
         m "That was when my legs gave out from the intense sensations in my groin, dropping me from the hole in the tree."
@@ -335,7 +338,7 @@ label bangok_four_lorem3_mcgoes_stick_dick_in_crazy:
     with dissolvemed
 
     if persistent.bangok_watersports == True:
-        m "My bladder wasn't enough to contain the wriggling tide. As more worms forced their way in, I felt the bottom of my stomach begin to distend, navel pushed up and out by a bulging mass."
+        m "My bladder wasn't enough to contain the wriggling tide. As more worms forced their way in, I felt the bottom of my stomach begin to distend, navel pushed up and out by a living mass."
 
     m "I wasn't sure I could pull out now if I wanted to, the nerves in my legs failing from the unprecedented, stimulating use of my organs. Only leaning against the tree kept me upright and in place."
 
@@ -355,7 +358,7 @@ label bangok_four_lorem3_mcgoes_stick_dick_in_crazy:
     menu:
         "{i}H-Help mee s-stoooop.{/i}":
             Lo shy bangok "Oh! Oh you're not--"
-            m "He clawed his way up the tree next to me, then planted his feet on my shoulder. With a shove using his whole body, he pried my limp, blissed-out form off the tree bark where I could fall to the ground."
+            m "He clawed his way up the tree next to me, then planted his feet on my shoulder. With a shove using his whole body, he pried my limp, blissed-out form off the tree bark to where I could fall to the ground."
             scene bangok_four_forest_clearing at Pan((0, 520), (0, 520), 0.0)
             show lorem sad bangok at center
             with vpunch
@@ -363,11 +366,169 @@ label bangok_four_lorem3_mcgoes_stick_dick_in_crazy:
         "{i}Please.{/i}":
             pass
 
+    m "Clinging to my waist, Lorem pushed upwawrd, fucking between my bulging balls until his cockhead entered the living mass swarming mine."
+    m "He gasped immediately, likely from some trying to get inside his genitals as they'd so thoroughly filled mine."
+    m "I didn't have the mindspace to devote, as his twitching shaft against my wriggling sack gave me yet another mindblowing orgasm."
+    $ renpy.pause(0.8)
+    if bangok_four_lorem3.wormtype == "legged":
+        Lo shy bangok "H-Ah! Th-That-- They tickle! A-And they're in m-my--"
+        m "Lorem thrust against the cleft between my balls a few times, scraping more of the legged worms off the bottom of my shaft and onto his own."
+    else:
+        Lo shy bangok "H-Ah! Th-That-- They're s-so wet! A-And they're in m-my--"
+        m "Lorem thrust against the cleft between my balls a few times, scraping more of the slimy, wriggling blob off the bottom of my shaft and onto his own."
 
+    m "Then, without warning, he plunged into my ass to his hilt, journey aided by lubrication, though whether natural or artificial I couldn't tell."
+    Lo relieved bangok "Ahhh!"
+    if bangok_four_lorem3.wormtype == "legged":
+        m "There was no release of warmth in my rectum, no seed, just a release of more pinpricks of tiny legs."
+    else:
+        m "There was no release of warmth in my rectum, no seed, just a release of more wriggling, slimy bodies."
 
-    jump todo_out_of_content_bangok_four_lorem3
+    if persistent.bangok_knot == True:
+        m "A hard knob of flesh pulled my ass wide as Lorem yanked out of me. Then his twitching shaft was between my balls again, collecting another direct injection from the mass fighting to bloat my genitalia."
+    else:
+        m "After a moment, Lorem yanked out of me. Then his twitching shaft was between my balls again, collecting another direct injection from the mass fighting to bloat my genitalia."
+
+    m "I flew over another peak, wriggling sack squeezing as I tried and failed to cum even a few of the worms inside me back from where they'd come."
+
+    if persistent.bangok_watersports == True:
+        m "A new sensation ripped from my distended bladder, then a moment later across my bulging lower belly."
+        if bangok_four_lorem3.wormtype == "legged":
+            m "Pinpricks becan crawling between the skin of my stomach and the treebark, the sensations centered on my belly button."
+        else:
+            m "Slimy trails began slithering between the skin of my stomach and the treebark, the sensations centered on my belly button."
+        m "As the worms wriggling out of my bladder found the fading sunlight, they turned back, fighting against others to return through my belly button to pack my abused bladder."
+
+    if persistent.bangok_knot == True:
+        m "Having collected another cockful of worms, Lorem plunged into my ass again. His knot popped in forcefully as his shaft began to twitch."
+    else:
+        m "Having collected another cockful of worms, Lorem plunged into my ass again. His shaft twitched and pulsed, dumping wriggling bodies into my rectum"
+    Lo shy bangok "Nnnnh!"
+
+    m "I whimpered as I felt the worms he deposited working deeper up my ass. I couldn't take being completely stuffed!"
+
+    Lo relieved bangok "Th-This-- It's too much!"
+
+    if persistent.bangok_knot == True:
+        m "Lorem popped his knot out of my ass, then back in."
+        Lo relieved bangok "Ahnnn!"
+        m "He came again, pulsing yet more worms into my guts."
+        Lo relieved bangok "Ah-Ahmnn!"
+        m "He thrust while his shaft twitched, knotfucking my tight hole with a shivering cock."
+    else:
+        m "Lorem pulled back, then thrust right back into my ass."
+        Lo relieved bangok "Ahnnn!"
+        m "He came again, pulsing yet more worms into my guts."
+        Lo relieved bangok "Ah-Ahmnn!"
+        m "He thrust while his shaft twitched, fucking my tight hole with a shivering cock."
+    m "It was my turn to cum, next, as his shaft slapped my pleasure button from the correct side, sending a rhythmic pulse through all the worms in and around it. It still wasn't enough for my stretched genitals and overexerted muscles to force any worms back out."
+    Lo happy bangok "Ah! There!"
+    m "Yanking out of my ass, Lorem began to monkey up my limp body and the tree's side."
+    "He planted his feet on my shoulder. Then with a shove that used his whole body, he pried my limp, blissed-out form off the tree bark to where I could fall to the ground."
+    scene bangok_four_forest_clearing at Pan((0, 520), (0, 520), 0.0)
+    show lorem shy bangok at center
+    with vpunch
+    jump bangok_four_lorem3_mcgoes_stick_dick_in_crazy_abort
+
+label bangok_four_lorem3_mcgoes_stick_dick_in_crazy_protected_fail:
+    hide screen bangok_four_lorem3_abortscreen
+    scene bangok_four_forest_clearing at Pan((0, 520), (0, 520), 0.0)
+    show lorem think bangok at center
+    with dissolve
+    m "I stepped back."
+    c "Apparently they're not a fan of condoms."
+    $ know_protected_fails = True
+    Lo think bangok "But then they'd {i}definitely{/i} get inside."
+    Lo shy bangok "Is that really safe?"
+    Lo relieved bangok "I don't know if I trust this guide..."
+    menu:
+        "I'll try it.":
+            $ renpy.pause(0.5)
+            show lorem shy bangok with dissolve
+            m "Lorem blushed as I removed my condom."
+            $ bangok_four_lorem3.mc_protected = False
+            jump bangok_four_lorem3_mcgoes_stick_dick_in_crazy
+        "How about you try it?":
+            $ renpy.pause(0.5)
+            Lo relieved "I'm not doing it if you won't!"
+            c "Then I guess neither of us are doing it."
+            Lo shy "I think I'm okay with that."
+            c "..."
+            c "Yeah, okay. Let's just go."
+            jump bangok_four_lorem3_leave
+        "Let's not risk it.":
+            $ renpy.pause(0.5)
+            Lo sad "Probably best if we just leave."
+            jump bangok_four_lorem3_leave
+        "I'll give them my ass instead.":
+            $ renpy.pause(0.5)
+            Lo shy bangok "R-Really?"
+            c "Yeah. Besides, then you can go at my ass and feel them."
+            Lo think bangok "I guess that's true..."
+            jump bangok_four_lorem3_mcgoes_hole_filler
 
 label bangok_four_lorem3_mcgoes_stick_dick_in_crazy_abort:
+    if bangok_four_lorem3.mc_wormsout < 1 and bangok_four_lorem3.mc_wormsin < 1:
+        scene bangok_four_forest_clearing at Pan((0, 520), (0, 520), 0.0)
+        show lorem shy bangok at center
+        with dissolve
+        m "I stumbled back before the worm could latch on too tightly, leaving it in its hole."
+        label bangok_four_lorem3_mcgoes_stick_dick_in_crazy_abort_none:
+        Lo sad bangok "W-We don't have to do this if you don't want to."
+        menu:
+            "Let's just leave.":
+                $ renpy.pause(0.5)
+                Lo normal "Ok."
+                jump bangok_four_lorem3_leave
+            "You do it first.":
+                $ renpy.pause(0.5)
+                Lo relieved "I'm not doing it if you won't!"
+                c "Then I guess neither of us are doing it."
+                Lo shy "I think I'm okay with that."
+                c "..."
+                c "Yeah, okay. Let's just go."
+                jump bangok_four_lorem3_leave
+            "Let me put on protection." if bangok_four_lorem3.mc_protected == False and bangok_four_lorem3.know_protected_fails == False:
+                $ renpy.pause(0.5)
+                Lo think bangok "Probably a good idea."
+                $ bangok_four_lorem3.mc_protected = True
+            "Actually, I think I want to go without protection." if bangok_four_lorem3.mc_protected == True:
+                $ renpy.pause(0.5)
+                Lo shy bangok "O-Oh?"
+                $ bangok_four_lorem3.mc_protected = False
+        jump bangok_four_lorem3_mcgoes_stick_dick_in_crazy
+    elif bangok_four_lorem3.mc_wormsout == 1 and bangok_four_lorem3.mc_wormsout < 1:
+        scene bangok_four_forest_clearing at Pan((0, 520), (0, 520), 0.0)
+        show lorem shy bangok at center
+        with dissolve
+        if bangok_four_lorem3.mc_protected == True:
+            m "I stumbled back, unwilling to risk more than a single worm, even with the condom."
+        else:
+            m "I stumbled back, unwilling to risk more than a single worm on my exposed cock."
+        m "After a few moments feeling it wriggling around by itself, I flicked it back inside the tree."
+        jump bangok_four_lorem3_mcgoes_stick_dick_in_crazy_abort_none
+    elif bangok_four_lorem3.mc_protected == False and bangok_four_lorem3.mc_wormsin < 5:
+        scene bangok_four_forest_clearing at Pan((0, 520), (0, 520), 0.0)
+        show lorem shy bangok at center
+        with dissolve
+        m "I stumbled back, the sensation of the few worms already inside my shaft more stimulation than I knew what to do with."
+        m "The remaining couple on the outside sprung into action, rapidly wriggling up to my tip, then forcing themselves in as well."
+        $ bangok_four_lorem3.mc_wormsin += bangok_four_lorem3.mc_wormsout
+        $ bangok_four_lorem3.mc_wormsout = 0
+        m "Lorem watched the underside of my cock, entranced as he saw the bumps of each worm work their way down my channel."
+        
+        if bangok_four_lorem3.wormtype == "legged":
+            m "The first, now deep inside my body, pushed my pleasure button from the inside out, with a series of tight pinpricks that drove me to my knees."
+        else:
+            m "The first, now deep inside my body, pushed my pleasure button from the inside out, wriggling in against it with tight undulations that drove me to my knees."
+
+        c "Aaaahnn!"
+        m "I came, hard, hard enough my twitching cock managed to push one of the worms back out of me onto the ground."
+        m "But no cum came with my load, and my erection didn't fade, nor did my arousal."
+
+
+
+
     jump todo_out_of_content_bangok_four_lorem3
 
 
