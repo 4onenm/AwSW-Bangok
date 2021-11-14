@@ -226,6 +226,7 @@ label bangok_four_bryce3_intro:
             $ bangok_four_bryce3.mc_bottom = False
             show maverick normal
             show bryce laugh
+            with dissolve
             Br "It's not my usual thing."
             Br normal "But I don't mind."
             Br normal flip "Alright. Let me go get the supplies I stashed."
@@ -233,7 +234,8 @@ label bangok_four_bryce3_intro:
 
     hide bryce with easeoutright
     $ renpy.pause (0.5)
-    Sb drop flip "Of course you brought supplies, even without talking it over with any of us."
+    if bangok_four_bryce3.sebastian_in == True:
+        Sb drop flip "Of course you brought supplies, even without talking it over with any of us."
     menu:
         "Maverick, are you okay with this?":
             Mv angry "It changes nothing."
@@ -261,13 +263,7 @@ label bangok_four_bryce3_intro:
             Br laugh "Gotta clean myself up later anyway."
             Br normal "But if either of you want 'em."
             
-    if bangok_four_bryce3.mc_bottom == False:
-        menu:
-            "Take a condom.":
-                $ bangok_four_bryce3.protection = True
-            "Go without.":
-                $ bangok_four_bryce3.protection = False
-    else:
+    if bangok_four_bryce3.mc_bottom == True:
         Br normal "So [player_name], normally we'd just go at it without protection. But I'm guessing you weren't expecting two dragonloads tonight, so if you'd like us to use them..."
         menu:
             "I'd prefer if you used condoms.":
@@ -296,12 +292,26 @@ label bangok_four_bryce3_intro:
         m "The cool night air tickled my dick, eliciting a small rush of blood and a twitch."
         if bangok_four_bryce1_unplayed == True:
             Br smirk "Guessing you're a guy, then."
+
+        menu:
+            "Take a condom.":
+                $ bangok_four_bryce3.protection = True
+            "Go without.":
+                $ bangok_four_bryce3.protection = False
     else:
         m "The cool night air teased my lower lips, eliciting a small rush of blood that left my groin flushed and warm."
         if bangok_four_bryce1_unplayed == True:
             Br brow "Does something come out of that, or...?"
             c "No. It's not a slit for a penis."
             Br flirty "Oh."
+        
+        if bangok_four_bryce3.mc_bottom == False:
+            Br smirk "You know, I'm not sure exactly how you're going to top me if you haven't got anything to stick inside."
+            menu:
+                "You'll just have to find out.":
+                    Br smirk "Can't wait to find out."
+                "Well, you'll be on your back...":
+                    Br flirty "Now I almost don't want the surprise spoiled."
 
     if bangok_four_bryce3.mc_bottom == True:
         jump bangok_four_bryce3_mcbottom
@@ -1946,8 +1956,345 @@ label bangok_four_bryce3_mcbottom_train_epilogue:
 
 
 label bangok_four_bryce3_mctop:
+    scene beachx at Pan ((300, 0), (300, 0), 0.0) with dissolve
+    show bryce smirk flip at right with dissolve
+    m "Bryce wandered a few steps away from his basket of supplies, then lifted his tail to expose his hindquarters."
+    
+    if bangok_four_bryce3.sebastian_in == True:
+        Br "Sebastian? I know you want to keep things short."
+        Br smirk flip "Plus, it's not like you're leaving anyone sloppy seconds."
+        show sebastian drop flip at center behind bryce with dissolve
+        Sb "Alright, alright."
+        show sebastian disapproval flip:
+            xpos 0.51
+            ypos 1.15
+        with ease
+        Sb normal flip "What if I want to make you a little sloppy first?"
+        Br laugh flip "Damn, you and licking people."
+        if bangok_four_playerhasdick == True:
+            Br normal flip "I don't know. [player_name]? You're the only one I can think of who might object."
+            Br smirk flip "You fine with sticking it in a bit of dragon saliva?"
+            menu:
+                "I'd love to have your mouth.":
+                    c "Thanks so much for offering."
+                    Br flirty flip "Oh?"
+                    Br laugh flip "Not what I was saying, but I'm in."
+                    jump todo_out_of_content_bangok_four_bryce3
+                "No objection here.":
+                    Br normal flip "Alright. Have fun back there."
+                "I might have a taste myself.":
+                    Br laugh flip "Let's let Sebastian finish up first."
+                "I'd rather not.":
+                    show bryce brow flip with dissolve
+                    Sb disapproval flip "Then I suppose I can skip it."
+                    jump bangok_four_bryce3_mctop_seb_rimming_skip
+        show bryce normal flip with dissolve
+        hide sebastian with easeoutbottom
+        m "Bryce laid his tail over Sebastian's head and down his back, as the small runner got on his knees under Bryce's thighs."
+        m "Sebastian ran his snout up Bryce's shaft, the tip of his tongue sticking out to lap at Bryce's length."
+        if persistent.bangok_cloacas == True:
+            m "Then, at the base of Bryce's large cock, Sebastian dug his muzzle into Bryce's slit."
+        else:
+            m "He kept going, running his tongue one plate back on Bryce's underside, before digging his muzzle into another, better-hidden slit."
+        show bryce laugh flip with dissolve
+        Br "You can't be that hungry; you just ate!"
+        show bryce smirk flip with dissolve
+        m "Sebastian's licking continued for a few seconds more before he pulled back, horns nestling Bryce's tail on his head."
+        show sebastian smile flip behind bryce:
+            yanchor 1.0
+            xanchor 0.5
+            xpos 0.51
+            ypos 1.2
+        with easeinbottom
+        Sb smile flip "What can I say? I know what I like."
+        $ renpy.pause(0.5)
+        label bangok_four_bryce3_mctop_seb_rimming_skip:
+        show sebastian normal flip:
+            yanchor 1.0
+            xanchor 0.5
+            xpos 0.51
+            ypos 1.05
+        with ease
+        show bryce normal flip:
+            ypos 1.05
+        with ease
+        m "Hugging Bryce's tail, Sebastian lifted it up while guiding Bryce's hindquarters until the larger dragon knelt on the sand."
+        m "Then Sebastian lined up with Bryce's ass."
+        show sebastian smile flip:
+            xpos 0.52
+            ypos 1.05
+        with ease
+        show bryce smirk flip with dissolve
+        show bryce smirk flip:
+            xpos 0.99
+        with ease
+        show sebastian smile flip:
+            xpos 0.51
+            ypos 1.05
+        with ease
+        play soundloop "fx/rub2.ogg" fadein 0.5
+        show sebastian smile flip:
+            ease 0.15 xpos 0.52 ypos 1.05
+            ease 0.5 xpos 0.51 ypos 1.05
+            repeat
+        show bryce normal flip:
+            ease 0.15 xpos 0.995
+            ease 0.5 xpos 0.99
+            repeat
+        with None
+        $ renpy.pause(0.5)
+        Br laugh flip "Ah, fuck I needed this."
+        Sb shy flip "You won't be saying that when it's Maverick's turn."
+        Sb smile flip "He's probably the reason Zhong sits each of these out."
+        Mv angry "I'm not that rough."
+        Br "Whatever you say!"
+        $ renpy.pause(1.2)
+        Br smirk flip "You know, Sebastian, I can almost feel you back there."
+        Sb smile flip "I'd say \"fuck you, Bryce,\" but, well..."
+        Br laugh flip "You've got that covered!"
+        $ renpy.pause(0.5)
+        Sb normal flip "Mm."
+        $ renpy.pause(0.8)
+        Sb shy flip "A-About to--"
+        show bryce smirk flip with dissolve
+        show sebastian shy flip:
+            ease 0.15 xpos 0.52 ypos 1.05
+        show bryce smirk flip:
+            ease 0.15 xpos 0.995
+        with None
+        stop soundloop fadeout 0.5
+        play sound "fx/snarl.ogg"
+        m "Sebastian pulled Bryce's hips and tail flush against himself and stiffened."
+        m "Bryce threw a smile back over his shoulder as Sebastian came."
+        if persistent.bangok_knot == True:
+            $ renpy.pause(0.8)
+            Br "Up for a bit of knotfucking?"
+            if bangok_four_playerhasdick == False:
+                $ bangok_four_bryce3.knotfuck = True
+            else:
+                Sb drop flip "I don't want to stretch you out even more than usual for [player_name]."
+                Br flirty flip "Oh come on. I'm tight."
+                Br laugh flip "As if you could stretch me out."
+                menu:
+                    "This I'd like to see.":
+                        $ bangok_four_bryce3.knotfuck = True
+                        show bryce smirk flip with dissolve
+                        Br smirk flip "Well, Sebastian?"
+                    "That sounds... weird.":
+                        $ bangok_four_bryce3.knotfuck = False
+                        show bryce brow flip with dissolve
+
+            if bangok_four_bryce3.knotfuck == False:
+                Sb drop flip "I think I'm too sensitive to do that right now anyway."
+                show sebastian drop flip:
+                    xpos 0.51
+                    ypos 1.05
+                with ease
+                m "Sebastian tugged free of Bryce, a bulb of flesh at his base momentarily spreading Bryce's underbelly plates further."
+            else:
+                show sebastian disapproval flip with dissolve
+                $ renpy.pause(0.3)
+                show sebastian disapproval flip:
+                    ease 2.0 xpos 0.515 ypos 1.05
+                with None
+                m "Sebastian eased back extremely slowly."
+                m "Where his hips separated from Bryce's, I saw a bulb of flesh at his base spreading Bryce's underbelly plates, stretching the hide beneath."
+                show bryce bangok pant flip with dissolve
+                Br "There's a good stretch! Mmh!"
+                show sebastian disapproval flip:
+                    xpos 0.518 ypos 1.05
+                with ease
+                show sebastian drop flip with dissolve
+                show sebastian drop flip:
+                    xpos 0.51 ypos 1.05
+                with ease
+                m "Sebastian pushed his knot back in, faster, then yanked all the way out to his tip with a gasp."
+                Br brow flip "That's it?"
+                Br flirty flip "C'mon. I know you can knotfuck better than that."
+                Sb drop flip "N-Not right now. I'm feeling {i}really{/i} sensitive after that."
+                Br normal flip "If you say so."
+                m "With a wince, Sebastian pulled his cockhead out."
+        else:
+            m "After a few long seconds, Sebastian relaxed, then began to pull himself out."
+            show sebastian smile flip with dissolve
+            show sebastian smile flip:
+                xpos 0.51
+            with ease
+
+        if persistent.bangok_inflation == True:
+            play sound "fx/uncork.ogg"
+            m "Sebastian's blob of cum followed, condom reservoir inflated to as large as my fist as it popped free of Bryce's hindquarters."
+        else:
+            m "His meagre cumload wrapped in its condom reservoir plopped free of Bryce, making Sebastian's shaft bob and wiggle."
+        show sebastian drop flip:
+            xpos 0.49
+        with ease
+        m "Then Sebastian stepped completely out of the way."
+        Sb disapproval "I think I need to call it a night now. Take this off and get some rest."
+        Sb smile "Thanks for that, Bryce."
+        show bryce normal flip with dissolve
+        show bryce normal:
+            ypos 1.0
+        with ease
+        show bryce normal with dissolve
+        m "Bryce shook out his tail, then turned to give Sebastian a nod."
+        Br "Have a good walk home now."
+        hide sebastian with dissolve
+        $ renpy.pause(0.5)
+        show bryce normal flip with dissolve
+        show bryce at right with ease
+        m "Then Bryce turned and lifted his tail for me and Maverick."
+
+    Br "So, Maverick, [player_name], which of you wants first?"
+    $ bangok_four_bryce3.top_mav = True
+    label bangok_four_bryce3_mctop_mavfirst_menu:
+    menu:
+        "What'll happen if Maverick goes before me?" if bangok_four_bryce3.top_mav == True:
+            $ bangok_four_bryce3.top_mav = False
+            Br laugh flip "I'll be loose and sloppy is what'll happen!"
+            Br smirk flip "There's always the chance Maverick could get me off with the assfucking too. Not a big chance, but a chance."
+            Mv normal "It's common when we take this position."
+            Br laugh flip "Hey!"
+            if bangok_four_playerhasdick == False:
+                Br normal flip "Anyway. If I do get off, refractory period means I might not be able to go fucking anyone. If that's what you had planned because of your... y'know... not having a penis, then keep that in mind."
+            else:
+                Br normal flip "Anyway. I could still take your cock, but refractory period means playing with mine'll be a little too intense for me. Just keep that in mind."
+            jump bangok_four_bryce3_mctop_mavfirst_menu
+        "I'll go first?":
+            $ bangok_four_bryce3.top_mav = False
+            Mv nice "..."
+            Br flirty flip "Works for me."
+        "Maverick? If you'd like to go.":
+            $ bangok_four_bryce3.top_mav = True
+            Mv normal "..."
+            Br flirty flip "Works for me."
+
+    if persistent.bangok_watersports == True:
+        Br flirty flip "You know, speaking of {i}go{/i}ing..."
+        Mv angry "Really, Bryce?"
+        Br laugh flip "What? If you or [player_name] happen to have urinary needs to exercise..."
+        Br flirty flip "I'm not opposed to doing my part to keep it out of our beautiful natural locations."
+        Br smirk flip "And by that I mean--"
+        Mv normal "We know what you mean, Bryce."
+        menu:
+            "Okay. Ew.":
+                label bangok_four_bryce3_mctop_nows:
+                Br brow flip "Oh."
+                Br stern flip "Nevermind then. I guess we'll just skip that part of the fun."
+                $ bangok_four_bryce3.brycews = None
+                $ bangok_four_bryce3.mavws = False
+            "I'm not sure I want to fuck you after someone's pissed in you.":
+                jump bangok_four_bryce3_mctop_nows
+            "I'm going to be sloppy in {i}Maverick's{/i} piss?" if bangok_four_bryce3.top_mav == True:
+                Br flirty flip "Like the idea?"
+                menu:
+                    "No!":
+                        jump bangok_four_bryce3_mctop_nows
+                    "Kinda...":
+                        pass
+                    "Yes.":
+                        pass
+                $ bangok_four_bryce3.brycews = "before"
+                $ bangok_four_bryce3.mavws = True
+            "Thanks. Could use someplace to go.":
+                Br flirty flip "Happy to be of service."
+                $ bangok_four_bryce3.brycews = "before"
+                $ bangok_four_bryce3.mavws = True
+
+    if bangok_four_bryce3.top_mav == True:
+        jump bangok_four_bryce3_mctop_mavgoes
+    else:
+        jump bangok_four_bryce3_mctop_mcgoes
+
+label bangok_four_bryce3_mctop_mcgoes:
+    show bryce normal flip at center with ease
+    m "Walking over to Bryce, I considered my options."
+    menu:
+        "Fuck Bryce's ass." if bangok_four_bryce3.top_mav == False:
+            jump todo_out_of_content_bangok_four_bryce3
+        "Fuck Bryce's gaping, sloppy ass." if bangok_four_bryce3.top_mav == True:
+            jump todo_out_of_content_bangok_four_bryce3
+        "Fuck Bryce's mouth.":
+            jump todo_out_of_content_bangok_four_bryce3
+        "Ride Bryce.":
+            jump todo_out_of_content_bangok_four_bryce3
     jump todo_out_of_content_bangok_four_bryce3
 
+label bangok_four_bryce3_mctop_mavgoes:
+    show maverick normal flip at center behind bryce with dissolve
+    m "Maverick watched me with suspicion as he walked over to Bryce."
+    m "Only when he'd nearly stepped on Bryce's tail did he focus on his partner."
+    show maverick nice flip with dissolve
+    show bryce smirk flip:
+        transform_anchor True
+        ease 0.8 rotate 20 xpos 0.93 ypos 1.3
+    with None
+    m "After having his tail nudged out of the way, Bryce dropped to his chest, folding his forelegs as he presented his ass."
+    show maverick nice flip:
+        xpos 0.55
+    with ease
+    m "Maverick stepped over him, bending Bryce's tail back against his underbelly. I could now see Maverick's shaft emerging, thick and long enough to be visible between his hindlegs even with him standing normally."
+    show bryce stern flip with dissolve
+    m "Then Bryce's face fell."
+    Br "Fuck. [player_name], would you mind lubing me and Maverick? This isn't going to work otherwise."
+    c "Sure."
+    show bryce normal flip with dissolve
+    show maverick normal flip with dissolve
+    m "I slid Bryce's basket of supplies over, then took a large spurt of lube into my hands to spread over Maverick."
+    show maverick angry flip with dissolve
+    m "Maverick stiffened, but otherwise refused to show discomfort at my proximity. His shaft twitched as I rubbed on the lube, excited by the physical contact."
+    m "I gave Maverick another two spurts, then rubbed the mess on my hands off on Bryce's ass. The rest I wiped off on his underbelly plates, all around his slit."
+    Br laugh flip "Alright, get some distance and enjoy the show."
+    show maverick normal flip with dissolve
+
+    m "After I sat the supplies and myself a little further up the beach, Bryce wiggled his hips under Maverick."
+    Br flirty flip "Alright, Mavers. Plow me."
+    if persistent.bangok_watersports == True and bangok_four_bryce3.mavws == True:
+        Mv normal flip "And your urination fetish?"
+        Br "If you don't mind."
+        $ renpy.pause(0.3)
+        play soundloop "fx/faucet1.ogg" fadein 0.5
+        queue soundloop "fx/faucet2.ogg"
+        m "With a twitch of his shaft, Maverick began to piss, clear stream in the moonlight spattering Bryce's slit and running down his underbelly plates, over the tip of his shaft."
+        show maverick nice flip:
+            xpos 0.555
+        show bryce flirty flip:
+            xpos 0.9325
+        with ease
+        m "Then Maverick pushed his tip into Bryce's ass, still pissing."
+        Br bangok pant flip "Haaahhh!"
+        m "I watched, mesmerised as Maverick held his position. I could still hear the stream of liquid pooling inside Bryce."
+        stop soundloop fadeout 0.8
+        $ renpy.pause(0.8)
+        m "Finally, Maverick ran dry. He switched to feeding Bryce's ass cockflesh instead."
+        show maverick nice flip:
+            ease 1.5 xpos 0.57
+        with None
+        $ renpy.pause(0.8)
+        m "Bryce's guts audibly settled slightly as Maverick worked his whole shaft inside, until he was lying on Maverick's tail and back."
+    else:
+        show maverick nice flip:
+            xpos 0.555
+        show bryce flirty flip:
+            xpos 0.9325
+        with ease
+        m "Maverick pushed his tip into Bryce's ass, quickly. Bryce's maw fell open, exhaling abruptly."
+        Br bangok pant flip "Haaahhh!"
+        m "After giving Bryce a few moments to adjust, Maverick kept pushing, feeding Bryce's ass all the cockflesh he had to give."
+        show maverick nice:
+            ease 1.5 xpos 0.57
+        with None
+        $ renpy.pause(0.8)
+        m "Maverick lay on Bryce's tail and back a moment, both of them catching their breath."
+
+    m "Bryce's tail tip flicked against Maverick's neck."
+    Br bangok pantflirt flip "Y-You're, ah, crushing my circulation there."
+
+
+
+
+
+    jump todo_out_of_content_bangok_four_bryce3
 
 label todo_out_of_content_bangok_four_bryce3:
     play sound "fx/system3.wav"
