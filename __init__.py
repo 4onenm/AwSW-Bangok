@@ -1,3 +1,6 @@
+import renpy.exports
+import renpy.display.im as im
+
 from modloader import modinfo
 from modloader.modclass import Mod, loadable_mod
 
@@ -242,15 +245,44 @@ def xsebastian(ml):
     )
 
 
+def add_side_images():
+    def clip_anna_side_image(imagefile):
+        return im.Flip(im.Scale(im.Crop(imagefile,(30,35,500,600)),250,300),horizontal=True)
+
+    for expression in ["blush","orgasm","blushpalm","lipbite"]:
+        renpy.exports.image('side anna bangok %s'%expression, clip_anna_side_image('cr/anna_%s.png'%expression))
+
+    def clip_bryce_side_image(imagefile):
+        return im.Scale(im.Crop(imagefile,(400,40,500,600)),250,300)
+
+    for expression in ["pant","pantflirt"]:
+        renpy.exports.image('side bryce bangok %s'%expression, clip_bryce_side_image('cr/bryce_%s_flip.png'%expression))
+
+    def clip_ipsum_side_image(imagefile):
+        return im.Flip(im.Scale(im.Crop(imagefile,(100,40,500,600)),250,300),horizontal=True)
+    
+    for expression in ["normal","happy","sad"]:
+        renpy.exports.image('side ipsum %s flip notail'%expression, clip_ipsum_side_image('cr/ipsum_%s_notail.png'%expression))
+
+    def clip_sebastian_side_image(imagefile):
+        return im.Flip(im.Scale(im.Crop(imagefile,(70,0,500,600)),250,300),horizontal=True)
+    
+    renpy.exports.image('side sebastian shy b sleep', clip_sebastian_side_image('cr/sebastian_shy_b_sleep.png'))
+
+
+
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk?"
     version = "v0.0"
     author = "4onen"
     nsfw = True
+    dependencies = ["MagmaLink", "?Side Images"]
 
     @classmethod
     def mod_load(cls):
+        if "Side Images" in modinfo.get_mods():
+            add_side_images()
         ml = modinfo.get_mods()["MagmaLink"].import_ml()
         ml.register_mod_settings(cls, screen='bangok_modsettings')
         anna12(ml)
