@@ -45,6 +45,7 @@ label bangok_four_remy_c4postsections_sebintro:
         ypos 1.1
     with dissolve
     c "Remy?"
+    play music "mx/bangok_quiet_campfire.ogg" fadein 5.0
     Ry "Wh- [player_name]?! What are you doing here? H-How did you get in?!"
     m "Remy's legs splayed awkwardly as he struggled to arrange them under himself, as if he'd just fallen from his side. The noises also stopped upon him spotting me and me spotting him."
     c "The front door to the library was unlocked."
@@ -126,6 +127,7 @@ label bangok_four_remy_c4postsections_sebintro:
                 Ry look dk "What... is a horse?"
                 c "Well, you have the PDA now. Look it up."
                 Ry sad dk "Ah, yes. I had forgotten."
+                stop music fadeout 8.0
                 $ renpy.pause(1.2)
                 Ry shy dk "I truly am sorry that--"
                 c "That you were imagining having sex with me? And masturbating to that?"
@@ -150,6 +152,9 @@ label bangok_four_remy_c4postsections_sebintro:
                         c "Sure. Have a good night's sleep."
                         $ renpy.pause(0.8)
                         c "And don't think about me that way."
+                        python:
+                            if remystatus == "good":
+                                remystatus = "neutral"
                         jump bangok_four_remy_c4postsections_epilogue
             "I... I don't know.":
                 c "Maybe going all the way there this fast is too soon."
@@ -169,6 +174,7 @@ label bangok_four_remy_c4postsections_sebintro:
                 pass
             "Been fucking waiting!":
                 c "I'll be honest: I've wanted to get under your tail since I first saw you."
+                stop music fadeout 5.0
                 c "Now to find out that you've been wanting to get in my pants?"
                 Ry look dk "I..."
                 c "It's not even a question. In fact, we can lock the library doors properly now, and you had a good spot back there. How about we just give it a go right now?"
