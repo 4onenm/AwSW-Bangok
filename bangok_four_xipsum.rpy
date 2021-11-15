@@ -16,6 +16,8 @@ init python in bangok_four_xipsum:
 
     playerpiss = False
 
+    took_ipsum_both = False
+
 
 
 label bangok_four_xipsum_takeemoff:
@@ -1295,6 +1297,7 @@ label bangok_four_xipsum_loremdone:
                                     jump bangok_four_xipsum_one_cock_ass_fuck
                         else:
                             jump bangok_four_xipsum_one_cock_ass_fuck
+                $ bangok_four_xipsum.took_ipsum_both = True
                 show ipsum happy with dissolve
                 $ renpy.pause(0.5)
                 m "He adjusted his position, squeezing his tips together closer to my hole."

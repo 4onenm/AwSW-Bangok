@@ -1,3 +1,8 @@
+init python in bangok_four_remy_c4postsections_store:
+    remy_insertion = False
+
+
+
 label bangok_four_remy_c4postsections_sebintro:
     menu:
         "Offer to bring a PDA to Remy.":
@@ -195,6 +200,56 @@ label bangok_four_remy_c4postsections_sebintro:
     else:
         c "Why wait to take that step? If it makes both of us happier."
 
+    show remy look dk with dissolve
+    m "Considering the question, Remy led the way outside."
+    hide remy with dissolve
+
+    scene bangok_four_library outside night with dissolvemed
+    $ renpy.pause(0.3)
+    play sound "fx/door/lock.ogg"
+    $ renpy.pause(0.8)
+    show remy look dk with dissolve
+
+    $ renpy.pause (0.5)
+    Ry look dk "Simple anatomy could very well get in the way of us taking that step. I-I'm not sure if you've done research on the matter."
+    Ry shy dk "My species is, ah, {size=+8}larger{/size} than most in that area. To, erm, help... {i}directly{/i}... could be dangerous for your health. I don't..."
+
+    menu:
+        "That's not necessary.":
+            c "I don't need that to make this work. And I'm sure we can find some other way to satisfy you."
+            Ry shy dk "Ah. Okay."
+        "I've had large partners." if ((bangok_four_bryce1_unplayed == False and (bangok_four_bryce1_position_picka in ["vag","analbot"] or bangok_four_bryce1_position_pickb in ["vag","analbot"]))
+            or (bangok_four_bryce3.unplayed == False and bangok_four_bryce3.mc_bottom == True)
+            or (bangok_four_xipsum.unplayed == False and bangok_four_xipsum.took_ipsum_both == True)
+            or (bangok_four_xkatsu.unplayed == False and bangok_four_xkatsu.target in ["throat","vag","womb","ass"])):
+            $ bangok_four_remy_c4postsections_store.remy_insertion = True
+            Ry look dk "[player_name], I'm not sure you understand..."
+            
+            if (bangok_four_bryce1_unplayed == False and (bangok_four_bryce1_position_picka in ["vag","analbot"] or bangok_four_bryce1_position_pickb in ["vag","analbot"])):
+                c "No, Remy, I mean {size=+8}large{/size}. And of your species."
+            elif (bangok_four_bryce3.unplayed == False and bangok_four_bryce3.mc_bottom == True):
+                c "No, Remy, I mean another quadrupedal dragon."
+            elif (bangok_four_xkatsu.unplayed == False and bangok_four_xkatsu.target in ["throat","vag","womb","ass"]):
+                c "No, Remy, I mean another quadrupedal dragon."
+            elif (bangok_four_xipsum.unplayed == False and bangok_four_xipsum.took_ipsum_both == True):
+                c "No, Remy, I mean a dragon with two penises. And I took both in one hole."
+            else:
+                play sound "fx/system3.wav"
+                s "Missing case for player banging previous large partner. (Ignore this to continue.)"
+                $ renpy.error("Missing case for player banging previous large partner. (Ignore this to continue.)")
+            Ry shy dk "Oh. Oh my."
+            Ry shy dk "Well, perhaps I should take your word on that point."
+            Ry shy dk "Would you actually want me to... to... inside you?"
+            c "Yeah. At least, we can consider it an option."
+        "I've done some research.":
+            if bangok_four_malepartners > 0:
+                c "Some of it of an intimate variety."
+            c "I don't think it'll be unreasonable, size-wise."
+            Ry shy dk "I... I don't think that's sufficient, [player_name]."
+            Ry look dk "I think whatever we end up doing, if we end up doing anything, you should take full control and pay close attention to your limits."
+            c "That's fair enough."
+
+    $ renpy.pause(0.5)
 
     jump todo_out_of_content_bangok_four_remy_c4postsections
 

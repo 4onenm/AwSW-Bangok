@@ -1,4 +1,5 @@
 init python in bangok_four_xkatsu:
+    unplayed = True
     whatcum = True
     protection = True
     playercame = False
@@ -140,6 +141,7 @@ label bangok_four_xkatsu:
             jump bangok_four_xkatsu_wait
 
 label bangok_four_xkatsu_wait:
+    $ bangok_four_xkatsu.unplayed = True
     $ renpy.pause(0.5)
     Ka exhausted "Ah."
     Ka normal "Well, sitting room's that way. Go take a nap or something while I get this ready."
@@ -162,6 +164,7 @@ label bangok_four_xkatsu_wait:
     jump bangok_four_xkatsu_ready
 
 label bangok_four_xkatsu_help:
+    $ bangok_four_xkatsu.unplayed = False
     Ka smile "Thought you were the kind who might."
     show katsu at center with ease
     m "He moved over top of one of the buckets, nudging them closer together, then arranging his hindlegs on either side."
