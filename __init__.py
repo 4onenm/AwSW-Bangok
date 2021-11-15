@@ -189,6 +189,14 @@ def lorem3(ml):
         .hook_to('bangok_four_lorem3_intro', condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_xipsum.loremin == True)'))
     )
 
+def remy_c4postsections(ml):
+    ( ml.find_label('c4postsections')
+        .search_say("I'll take care of the remaining tasks, so you can take the rest of the day off. I'm sure you have things to do other than helping the police department.")
+        .hook_to('bangok_four_remy_c4postsections_sebintro', condition=make_dev('(persistent.nsfwtoggle == True) and (c4libraryavailable == True) and (remy3unplayed == False) and (remystatus == "good" or remystatus == "neutral")'))
+        .search_say("When I returned to the living room, I suddenly found my strength leaving me and collapsed to the floor.")
+        .link_behind_from('bangok_four_remy_c4postsections_epilogue_admin')
+    )
+
 
 def xipsum(ml):
     ( ml.find_label('lorem2')
@@ -289,6 +297,7 @@ class BangOkMod(Mod):
         bryce1_afterparty(ml)
         bryce3_afterparty(ml)
         lorem3(ml)
+        remy_c4postsections(ml)
         xipsum(ml)
         xkatsu(ml)
         xsebastian(ml)
