@@ -1,5 +1,7 @@
 init python in bangok_four_remy_c4postsections_store:
-    remy_insertion = False
+    remy_top = False
+    remy_tail_player = None
+    remy_tail_remy = None
 
 
 
@@ -228,12 +230,12 @@ label bangok_four_remy_c4postsections_sebintro:
             or (bangok_four_bryce3.unplayed == False and bangok_four_bryce3.mc_bottom == True)
             or (bangok_four_xipsum.unplayed == False and bangok_four_xipsum.took_ipsum_both == True)
             or (bangok_four_xkatsu.unplayed == False and bangok_four_xkatsu.target in ["throat","vag","womb","ass"])):
-            $ bangok_four_remy_c4postsections_store.remy_insertion = True
+            $ bangok_four_remy_c4postsections_store.remy_top = True
             Ry look dk "[player_name], I'm not sure you understand..."
             
-            if (bangok_four_bryce1_unplayed == False and (bangok_four_bryce1_position_picka in ["vag","analbot"] or bangok_four_bryce1_position_pickb in ["vag","analbot"])):
+            if (bangok_four_bryce3.unplayed == False and bangok_four_bryce3.mc_bottom == True):
                 c "No, Remy, I mean {size=+8}large{/size}. And of your species."
-            elif (bangok_four_bryce3.unplayed == False and bangok_four_bryce3.mc_bottom == True):
+            elif (bangok_four_bryce1_unplayed == False and (bangok_four_bryce1_position_picka in ["vag","analbot"] or bangok_four_bryce1_position_pickb in ["vag","analbot"])):
                 c "No, Remy, I mean another quadrupedal dragon."
             elif (bangok_four_xkatsu.unplayed == False and bangok_four_xkatsu.target in ["throat","vag","womb","ass"]):
                 c "No, Remy, I mean another quadrupedal dragon."
@@ -244,18 +246,113 @@ label bangok_four_remy_c4postsections_sebintro:
                 s "Missing case for player banging previous large partner. (Ignore this to continue.)"
                 $ renpy.error("Missing case for player banging previous large partner. (Ignore this to continue.)")
             Ry shy dk "Oh. Oh my."
-            Ry shy dk "Well, perhaps I should take your word on that point."
+            Ry shy dk "Well, perhaps I should take your word on that point. I'm not sure I want the details."
             Ry shy dk "Would you actually want me to... to... inside you?"
             c "Yeah. At least, we can consider it an option."
         "I've done some research.":
             if bangok_four_malepartners > 0:
                 c "Some of it of an intimate variety."
-            c "I don't think it'll be unreasonable, size-wise."
+            c "I don't think it'll be unreasonable, size-wise. Humans are pretty stretchy if you take it slow."
             Ry shy dk "I... I don't think that's sufficient, [player_name]."
             Ry look dk "I think whatever we end up doing, if we end up doing anything, you should take full control and pay close attention to your limits."
             c "That's fair enough."
 
     $ renpy.pause(0.5)
+
+    c "Where do we go from here?"
+    Ry shy dk "I-In terms of act, or?"
+    c "Not quite. I assume you don't want to do this out in the open in town, or in the wilderness, so..."
+    Ry look dk "Your apartment or my house."
+    $ renpy.pause(0.5)
+    show remy sad dk with dissolve
+    $ renpy.pause(0.5)
+    c "Let's go to my apartment. I'm sure you don't want to think about bringing anyone over to your house for... this sort of thing."
+    Ry "Right."
+    $ renpy.pause(0.8)
+    Ry look dk "Hold on. What if the guard assigned to your apartment sees us?"
+    c "What guard? The police have been stretched too thin to have one since the first victim."
+    Ry shy dk "Ah. I had forgotten."
+    Ry look dk "Then... then your apartment is fine."
+
+    $ renpy.pause(0.3)
+    play sound "fx/steps/rough_gravel.wav"
+    scene np4 with dissolveslow
+    $ renpy.pause(0.5)
+    m "As we walked, Remy seemed more and more reluctant to remain close to me, perhaps having second thoughts about our night."
+    show remy sad flip dk at left with dissolve
+    $ renpy.pause(0.3)
+    m "Trying to keep his mind off Amelia, I changed the subject to looking ahead."
+    c "So, ah, what usually gets you going?"
+    Ry look flip dk "Going?"
+    c "Aroused. Excited. Like... what were you imagining earlier in the library?"
+    Ry shy flip dk "Oh. Oh I--"
+    m "His tail flicked sharply."
+    Ry look flip dk "[player_name], I think we should be focused on what's safe and enjoyable for both of us."
+    m "His long, smooth, tapered tail kept swaying, then stiffened abruptly when I looked back at it."
+    Ry shy flip dk "Er, [player_name]..."
+    stop sound fadeout 0.5
+    m "I hadn't noticed, but I'd stopped walking."
+    c "So, you’re a fan of putting that tail to good use, I'm guessing?"
+    $ renpy.pause(0.7)
+    m "Remy's blush glowed brighter in the moonlight."
+
+    python in bangok_four_remy_c4postsections_store:
+        remy_tail_player = None
+        remy_tail_remy = None
+    label bangok_four_remy_c4postsections_tailmenu:
+    menu:
+        "What about putting it in me?" if bangok_four_remy_c4postsections_store.remy_tail_player is None and bangok_four_remy_c4postsections_store.remy_tail_remy == True:
+            jump bangok_four_remy_c4postsections_tailmenu_tail_player
+        "I'm up for it." if bangok_four_remy_c4postsections_store.remy_tail_player is None and bangok_four_remy_c4postsections_store.remy_tail_remy is None:
+            label bangok_four_remy_c4postsections_tailmenu_tail_player:
+            Ry "W-We couldn't possibly. [player_name], it's {i}much{/i} larger than... than my..."
+            c "We could take it only as far as it's safe. I trust you, Remy, and we'll feel out my limits."
+            if bangok_four_remy_c4postsections_store.remy_top == True:
+                $ bangok_four_remy_c4postsections_store.remy_tail_player = True
+                Ry "I... I suppose we might try."
+            else:
+                $ bangok_four_remy_c4postsections_store.remy_tail_player = False
+                show remy look flip dk
+                m "He flicked his tail aside, then held it further away from me."
+                Ry look flip dk "\"Feeling out limits\" does not seem safe."
+                c "Remy..."
+                Ry "No. My tail will not be involved with your body. Not... not right now."
+                c "Okay."
+            if bangok_four_remy_c4postsections_store.remy_tail_remy is None:
+                jump bangok_four_remy_c4postsections_tailmenu
+        "What about with your body?" if bangok_four_remy_c4postsections_store.remy_tail_player is not None and bangok_four_remy_c4postsections_store.remy_tail_remy is None:
+            c "Do you like having it inside you?"
+            jump bangok_four_remy_c4postsections_tailmenu_tail_remy
+        "Do you like having it inside you?" if bangok_four_remy_c4postsections_store.remy_tail_remy is None and bangok_four_remy_c4postsections_store.remy_tail_player is None:
+            label bangok_four_remy_c4postsections_tailmenu_tail_remy:
+            Ry shy flip dk "I..."
+            Ry "[player_name]..."
+            $ renpy.pause(0.8)
+            Ry "Yes. A little. I mean--"
+            c "Say no more."
+            menu:
+                "Happy to help.":
+                    $ renpy.pause(0.8)
+                    $ bangok_four_remy_c4postsections_store.remy_tail_remy = True
+                    if bangok_four_remy_c4postsections_store.remy_tail_player is None:
+                        jump bangok_four_remy_c4postsections_tailmenu
+                "That's too weird for me.":
+                    c "So let's just forget I asked that."
+                    $ bangok_four_remy_c4postsections_store.remy_tail_remy = False
+                    show remy look flip dk with dissolve
+                    $ renpy.pause(0.8)
+        "Sorry, forget I asked.":
+            Ry shy flip dk "Th-Thank you."
+
+    m "We resumed walking toward my apartment."
+    play sound "fx/steps/rough_gravel.wav"
+    show np5e with dissolvemed
+
+
+
+
+
+
 
     jump todo_out_of_content_bangok_four_remy_c4postsections
 
