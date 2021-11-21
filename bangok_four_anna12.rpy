@@ -583,16 +583,16 @@ label bangok_four_anna2_apartment:
             "I think I'd like that.":
                 $ renpy.pause(0.5)
                 $ bangok_four_anna2.position == "strapon"
-                An blush "Excellent."
+                An bangok blush "Excellent."
             "I can try, I guess.":
                 $ renpy.pause(0.5)
                 $ bangok_four_anna2.position = "strapon"
-                An blush "Excellent."
+                An bangok blush "Excellent."
             "How about we just use it as a dildo?":
                 $ renpy.pause(0.5)
                 $ bangok_four_anna2.position = "dildo"
                 c "I'm not so sure about having that inside me, but it sounds like you want to use it."
-                An blush "I can work with that."
+                An bangok blush "I can work with that."
             "I'm actually not so sure about using that now...":
                 $ renpy.pause(0.5)
                 $ anna2mood -= 1
@@ -603,7 +603,7 @@ label bangok_four_anna2_apartment:
                 jump bangok_four_anna2_apartment_annaliesdown
 
         
-        An blush "There's another fun feature this has, if you're interested. Faux cum."
+        An bangok blush "There's another fun feature this has, if you're interested. Faux cum."
         if bangok_four_anna2.position == "strapon":
             c "For in me or for in you?"
             An "No reason it can't be both. It comes in a powder form, so we can make basically as much as we want. It's also configurable, so we can choose later who gets the load."
@@ -640,7 +640,7 @@ label bangok_four_anna2_apartment:
                 $ renpy.pause(1.0)
                 stop soundloop fadeout 0.5
                 show anna bangok blush with dissolve
-                An blush "Shall we?"
+                An bangok blush "Shall we?"
 
 
 
@@ -667,7 +667,7 @@ label bangok_four_anna2_apartment_annaliesdown:
     else:
         An normal "Do you want to put a condom on it first? I have a few for fitting its larger end in my bag."
         c "Why?"
-        An blush "In case you want to cum through it, if you're feeling inadequate about your size."
+        An bangok blush "In case you want to cum through it, if you're feeling inadequate about your size."
         if persistent.bangok_watersports == True:
             An smirk "Or play with other fluids."
         An normal "Changes basically nothing about the feel of it, so I don't care either way. We just aren't playing with your output without a barrier."
@@ -690,7 +690,7 @@ label bangok_four_anna2_apartment_annaliesdown:
             c "Oh."
         "Pussy or your ass?":
             An "Vagina. Let's not regress to slang terminology around here."
-            An blush "And I'm sorry to say it doesn't fit in my anus without lube, which I didn't bring, nor did I see in your restroom."
+            An bangok blush "And I'm sorry to say it doesn't fit in my anus without lube, which I didn't bring, nor did I see in your restroom."
             c "Oh."
     
     $ bangok_four_anna2.finger = False
@@ -709,30 +709,30 @@ label bangok_four_anna2_apartment_annaliesdown:
         An sad "Just move on to the strapon."
     else:
         An smirk "You were right. Your claws aren't a problem."
-        An blush "And your skin is much softer than any dragon's scales."
+        An bangok blush "And your skin is much softer than any dragon's scales."
         menu:
             "[[Add a fourth finger.]":
                 m "This finger resisted slightly more. But with her natural lubrication it fit, followed by most of my palm."
                 $ anna2mood += 1
-                An lipbite "Mm."
+                An bangok lipbite "Mm."
                 c "Keep going with this?"
                 if anna2mood > 2:
                     $ renpy.pause(0.5)
                     An "Yes."
                     m "Gently, I worked my hand in and out, drawing Anna's breath slightly faster with each motion."
                     $ renpy.pause(0.8)
-                    An lipbite "Mm. Now you're in for it."
+                    An bangok lipbite "Mm. Now you're in for it."
                     c "Huh?"
                     call bangok_four_anna2_apartment_yourarm from bangok_four_anna2_apartment_strapon_fourthfinger
                 else:
-                    An blush "Let's move on to getting the strapon in."
+                    An bangok blush "Let's move on to getting the strapon in."
             "[[Move on to the strapon.]":
                 pass
 
     m "Taking the toy from the coffee table, I spread some of her wetness from my fingers to the tip of the larger end."
     if bangok_four_anna2.position == "dildo":
         c "You're sure you can take this larger end?"
-        An blush "I have plenty of practice in my free time. I can't see why that would have changed."
+        An bangok blush "I have plenty of practice in my free time. I can't see why that would have changed."
         if bangok_four_anna2.annacame == True:
             An smirk "Especially after you stretched me out that much."
 
@@ -747,7 +747,7 @@ label bangok_four_anna2_apartment_annaliesdown:
         show anna bangok orgasm with dissolve
         m "Anna gasped as her resistance to the intrusion abruptly increased, though not quite to the point of body-shuddering shake I'd observed before. Then the shaft was through her inner gate, her outer lips wrapping around where the toy decreased in width. My fingers brushed against her filled slit as I held the toy steady."
         c "Did you get off on just it going in?"
-        An lipbite "N-Not quite. But it won't take me long."
+        An bangok lipbite "N-Not quite. But it won't take me long."
     else:
         m "Anna's slit glistened with arousal from my finger-fucking."
         if bangok_four_anna2.position == "dildo":
@@ -757,13 +757,13 @@ label bangok_four_anna2_apartment_annaliesdown:
         show anna bangok lipbite with dissolve
         m "It speared her open wide, taking a bit of force to slide, but Anna seemed only further aroused by stretching to accomodate it."
         m "Even still, she ran out of lubrication around the halfway point on the toy's larger end, her scaly lips tugging inward with it as I failed to slide it any deeper."
-        An blush "In and out. Obviously."
+        An bangok blush "In and out. Obviously."
         c "You're completely {i}sure{/i} this thing fits in you?"
         An normal "Would I be asking you to put it in me if I thought it didn't?"
-        An blush "Just pump it."
+        An bangok blush "Just pump it."
 
         m "Doing as she'd asked, I slid the toy back out until the tip tugged past her lips. It was almost dripping with her wet, dollops running down the head to slick her lips."
-        An lipbite "And back in..."
+        An bangok lipbite "And back in..."
         m "I pushed it back inside her, watching with fascination as the slickness on her lips spread further up the toy, from her tightness."
         m "The toy stopped abruptly with three quarters of the larger end inside her, and not because she was out of lubrication."
         An "Keep going."
@@ -776,28 +776,28 @@ label bangok_four_anna2_apartment_annaliesdown:
                 $ renpy.pause(0.5)
                 m "I leaned more weight on the toy, assuming it would give with just a little more pressure. It didn't seem to."
         $ renpy.pause(0.5)
-        An blushpalm "Oh for fuck's sake."
+        An bangok blushpalm "Oh for fuck's sake."
         show anna bangok lipbite with dissolve
         m "Taking my wrist, she pushed back against the toy, indicating I should pull it out of her."
         m "Then she reversed her tug, stopping me."
-        An lipbite "Now shove in. Hard."
+        An bangok lipbite "Now shove in. Hard."
         menu:
             "Didn't you want me to not hurt you in there?":
                 $ renpy.pause(0.5)
                 $ anna2mood -= 1
-                An blushpalm "I'll be fine. For crying out loud, fuck me with it already!"
+                An bangok blushpalm "I'll be fine. For crying out loud, fuck me with it already!"
             "[[Obey.]":
                 pass
         $ renpy.pause(0.5)
         m "I shoved the toy in, hard, up to the resistance inside of her, but still hesitated."
-        An blushpalm "Again. Follow through!"
+        An bangok blushpalm "Again. Follow through!"
         m "Withdrawing a little, I shoved at the resistance again."
         show anna bangok orgasm with dissolve
         m "I wasn't sure if it was my imagination, but the toy felt about half the length of the tip further inside."
         show anna bangok lipbite with dissolve
         An "Deeper. Come on, [player_name]."
         m "Taking her words as encouragement, I tugged the toy back slightly and pushed inside over again, all-but leaning my bodyweight on it."
-        An blushpalm "C-Closer."
+        An bangok blushpalm "C-Closer."
         show anna bangok lipbite:
             ease 0.8 xpos 0.8
             ease 0.15 xpos 0.81
@@ -829,7 +829,7 @@ label bangok_four_anna2_apartment_annaliesdown:
             "Is that toy sticking into your womb right now?":
                 $ renpy.pause (0.5)
                 An smirk flip "Yes. Yes it is."
-        An blush "I tend toward larger partners. Why do you think that strapon is so big?"
+        An bangok blush "I tend toward larger partners. Why do you think that strapon is so big?"
         An normal "Technically it's designed to be worn the other way, for someone my size to please a quadrupedal dragon. But it was trivial enough to make it reversible."
         show anna bangok lipbite with dissolve
         m "She tugged on my hand, bringing the toy just a little deeper, until her outer lips wrapped around where the toy decreased in width. My fingers brushed against her filled slit as I held the toy steady."
@@ -910,12 +910,12 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                         jump bangok_four_anna2_apartment_male_nostrapon_startingmenu
             else:
                 An smirk "You were right. Your claws aren't a problem."
-                An blush "And your skin is much softer than any dragon's scales."
+                An bangok blush "And your skin is much softer than any dragon's scales."
                 menu:
                     "[[Add a fourth finger.]":
                         m "This finger resisted slightly more. But with her natural lubrication it fit, followed by most of my palm."
                         $ anna2mood += 1
-                        An lipbite "Mm. Now you're in for it."
+                        An bangok lipbite "Mm. Now you're in for it."
                         c "Huh?"
                     "[[Move on to something else.]":
                         show anna sad with dissolve
@@ -932,7 +932,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             menu:
                 "What, like, detached from my body?":
                     c "I'd like to keep my arms, thanks."
-                    An blush "Fine, you can have it back."
+                    An bangok blush "Fine, you can have it back."
                     An smirk "But first I want it as deep inside me as you can push it."
                     c "O-Oh."
                 "No way." if bangok_four_anna2.position not in ["dildo","strapon"]:
@@ -940,7 +940,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     c "I was just exploring. I didn't think you'd..."
                     show anna sad with dissolve
                     $ renpy.pause(1.2)
-                    An blushpalm "Seriously?"
+                    An bangok blushpalm "Seriously?"
                     An sad "Fine. Take your hand out and fuck me, if that's all you want."
                     return
                 "I'd rather move on to the strapon." if bangok_four_anna2.position in ["dildo","strapon"]:
@@ -948,7 +948,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     c "I was just exploring. I didn't think you'd..."
                     show anna sad with dissolve
                     $ renpy.pause(1.2)
-                    An blushpalm "Seriously?"
+                    An bangok blushpalm "Seriously?"
                     An sad "Fine. Take your hand out stick the strapon in, if that's all you want."
                     return
                 "Okay.":
@@ -958,18 +958,18 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             m "I slid in and out the four fingers I had so far, getting her used to the size until my hand was soaked and buried right up to the base of my thumb."
             $ renpy.pause(0.5)
             c "You're sure?"
-            An blushpalm "Would I be asking you to do it if I wasn't?"
+            An bangok blushpalm "Would I be asking you to do it if I wasn't?"
             m "I pulled back out to the tips of my fingers, then folded my thumb into my palm and pressed my whole hand inside of her."
-            An lipbite "Ngh..."
+            An bangok lipbite "Ngh..."
             m "Her slit clenched around my wrist, insides undulating as they milked my hand for a substance it could not provide."
             c "You okay?"
-            An blush "Could you stop asking me that and push deeper already?"
+            An bangok blush "Could you stop asking me that and push deeper already?"
             c "What should I do when I do run out of room?"
-            An blushpalm "I'll tell you when you get there."
+            An bangok blushpalm "I'll tell you when you get there."
             show anna bangok blush with dissolve
             m "Heeding her instructions, I sank more of my arm inside of her. Very quickly, the section that had been lubricated by her fluids thus far ended, and resistance to my force increased dramatically."
-            An blushpalm "Should've thought about lube."
-            An blush "Doesn't matter. Pull out."
+            An bangok blushpalm "Should've thought about lube."
+            An bangok blush "Doesn't matter. Pull out."
             show anna bangok lipbite with dissolve
             m "I did so, retrieving the small part of my wrist and entirety of my hand I'd gotten in. Anna bit her lip the whole way out, then sighed with relief."
             hide anna with None
@@ -997,11 +997,11 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             An "Nnh!"
             m "The muscles in Anna's passage pressed in lewdly around my hand, squeezing more of her natural lubricant around my wrist and sending it running in small rivulets down my arm."
             $ renpy.pause (0.4)
-            An blush flip "Spread that around."
+            An bangok blush flip "Spread that around."
             m "I did as ordered, trying to more evenly distribute her juices on the next part of my arm. Anna shivered as the fingers of my other hand brushed her slit."
             An smirk flip "You're still braced against the table, right?"
             c "Yeah."
-            An blush flip "Good."
+            An bangok blush flip "Good."
             show anna bangok lipbite flip at Position(xpos=0.7,ypos=1.0) with ease
             show anna bangok lipbite flip at Position(xpos=0.7,ypos=1.04) with ease
             m "Anna lifted herself up, her clenching almost tugging my arm with her. Just before my fingers were about to leave, she reversed direction and pressed back down, fucking herself onto my hand as if it were a dildo."
@@ -1015,7 +1015,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     $ renpy.pause (0.5)
                     An sad flip "What are you...?"
                     m "Shifting around me, Anna felt the additional room I'd bought her to take my arm."
-                    An blush flip "Hm."
+                    An bangok blush flip "Hm."
                     show anna bangok lipbite flip:
                         ease 1.0 ypos 1.02
                     with None
@@ -1073,7 +1073,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     An "I've gone far harder than this."
                 "Hey, don't break my hand!":
                     $ anna2mood -= 1
-                    An blushpalm flip "Are... you humans... really... so fragile...?"
+                    An bangok blushpalm flip "Are... you humans... really... so fragile...?"
                     show anna bangok lipbite flip with dissolve
                 "[[Say nothing.]":
                     pass
@@ -1105,7 +1105,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             if bangok_four_playerhasdick == True:
                 An "Most of my previous partners have been... larger than you are."
                 An smirk flip "But your arm? Now that's something."
-            An blush flip "This wouldn't be safe to do with any dragon. Not without a protective cover, because of the scales and sharp claws."
+            An bangok blush flip "This wouldn't be safe to do with any dragon. Not without a protective cover, because of the scales and sharp claws."
             An smirk flip "Now, though?"
             show anna bangok orgasm flip:
                 ease 1.5 ypos 1.1
@@ -1164,7 +1164,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             menu:
                 "Just punch it?":
                     $ anna2mood += 1
-                    An blush "How do you think I just did it?"
+                    An bangok blush "How do you think I just did it?"
                     An smirk "I've done this a few times with big-dicked lovers. They're a lot less gentle than you try to be."
                     m "I drew back a little, then shoved."
                     show anna bangok lipbite with dissolve
@@ -1179,14 +1179,14 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     m "It spread around my hand like her outermost opening had."
                 "I'll try pushing first...":
                     m "I leaned more of the weight of my upper body onto my arm, pressing on her gate."
-                    An blush "Seriously, [player_name]. Repeated force is more effective than--"
+                    An bangok blush "Seriously, [player_name]. Repeated force is more effective than--"
                     show anna bangok orgasm with dissolve
                     $ renpy.pause (0.4)
                     show anna bangok blushpalm with dissolve
                     An "Nevermind."
 
 
-            An lipbite "Well done. Now fuck me."
+            An bangok lipbite "Well done. Now fuck me."
             m "I started moving, pushing my arm almost to the elbow, then pulling back out until her cervix was about to let go of me, popping my knuckles through."
             m "Anna writhed in ecstacy."
             $ renpy.pause(0.5)
@@ -1213,7 +1213,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     An smirk "Yes. Your turn."
                 "Hey! What about me?":
                     $ anna2mood -= 1
-                    An blush "Yes. Your turn."
+                    An bangok blush "Yes. Your turn."
             m "I withdrew my sopping wet arm from her now-loosened passage, considering my next move."
             return
 
@@ -1376,7 +1376,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     label bangok_four_anna2_apartment_hornincident_description:
                     c "What do you mean?"
                     An sad "It's a sensitive area. There's a biological drive to keep them from getting ripped off our heads, so using them to control our head's motion is... undesireable."
-                    An blush "Unless we see it coming. But that's not for everybody."
+                    An bangok blush "Unless we see it coming. But that's not for everybody."
                     c "I see."
                 else:
                     show anna bangok blush at center with ease
@@ -1457,7 +1457,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                 if anna2mood < 2:
                     An normal "Now do your thing."
                 else:
-                    An blush "Now, start moving."
+                    An bangok blush "Now, start moving."
             jump bangok_four_anna2_apartment_vaganal_merge
 
 
@@ -1489,7 +1489,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             else:
                 An smirk "You're adorable. But there's simply no way you'll get me off with just that thing."
                 c "Is that a challenge?"
-                An blush "A statement of fact."
+                An bangok blush "A statement of fact."
 
             label bangok_four_anna2_apartment_vaganal_merge:
             play soundloop "fx/rub2.ogg" fadein 2.0
@@ -1737,7 +1737,7 @@ label bangok_four_anna2_apartment_done:
         c "Yeah. You?"
         An "Yeah."
         $ renpy.pause(0.8)
-        An blush "I should get back to the lab. I have a few more things to finish up."
+        An bangok blush "I should get back to the lab. I have a few more things to finish up."
     c "At this time of night?"
     $ renpy.pause(0.8)
     An normal "If you're so worried about me, walk me there."
@@ -1752,7 +1752,7 @@ label bangok_four_anna2_apartment_done:
             "I might not need to put my clothes back on for that...":
                 $ renpy.pause (0.5)
                 An sad "What exactly are you...?"
-                An blush "Oh."
+                An bangok blush "Oh."
                 An smirk "If you say so."
                 scene black with dissolvemed
                 $ renpy.pause (0.5)
