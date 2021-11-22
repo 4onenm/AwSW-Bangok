@@ -1418,7 +1418,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     if anna2mood > 0:
                         show anna bangok blush with dissolve
                         m "Her pucker was denoted by a few small rings of scales, an inch or two below the thin, glistening line of her slit. I got between her legs, aiming my condom-wrapped dick directly into it."
-                        m "I just tapped my tip against it first, looking up at her in quesstion."
+                        m "I just tapped my tip against it first, looking up at her in question."
                         An "Oh, you..."
                         An smirk "Fine by me."
                     else:
