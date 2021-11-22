@@ -21,3 +21,5 @@ Resource credits:
 + `cr/sebastian_shy_b_sleep.png`: 4onen, editing base-game assets
 + `fx/2buckets.ogg`: 4onen, editing base-game `fx/2glasses.ogg`
 + `fx/digice.ogg`: 4onen, editing base-game `fx/dig.ogg`
++ `fx/bangok_panting_*.ogg`: 4onen, editing base game `fx/breathing.ogg`
++ `mx/bangok_quiet_campfire.ogg`: 4onen, editing base game `mx/campfire.ogg`
