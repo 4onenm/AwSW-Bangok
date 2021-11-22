@@ -3,6 +3,8 @@ init python in bangok_four_remy_c4postsections_store:
     remy_tail_player = None
     remy_tail_remy = None
 
+    protection = None
+
 
 
 label bangok_four_remy_c4postsections_sebintro:
@@ -346,7 +348,43 @@ label bangok_four_remy_c4postsections_sebintro:
 
     m "We resumed walking toward my apartment."
     play sound "fx/steps/rough_gravel.wav"
-    show np5e with dissolvemed
+    scene black with dissolvemed
+    $ renpy.pause(1.0)
+    scene np5e with dissolvemed
+    $ renpy.pause(1.0)
+    play sound "fx/door/handle.wav"
+    $ renpy.pause(0.3)
+    scene o2 at Pan((0, 150), (0, 250), 1.5) with dissolve
+    $ renpy.pause(1.2)
+    show remy normal at center with dissolve
+    c "You know, this is a little like when you brought me here my first night."
+    Ry shy "I... I suppose."
+    Ry shy "I-I'm going to retrieve some things your apartment is stocked with."
+    c "Oh?"
+    hide remy with dissolve
+    $ renpy.pause(0.3)
+    play sound "fx/rummage.ogg"
+    m "Remy disappeared into the bathroom. I heard some light boxes falling from inside my bathroom cabinet's low shelves, plus something heavier."
+    $ renpy.pause(1.0)
+    play sound "fx/slide.ogg"
+    show remy shy at center with dissolve
+    m "Remy returned nosing three boxes of condoms and a bottle of lube along the floor."
+
+    c "Protection?"
+    Ry "It's not strictly necessary, with us being not just different species but of wildly differing taxonomic classes. But I'm not sure if you..."
+    menu:
+        "Probably a good idea.":
+            $ bangok_four_remy_c4postsections_store.protection = True
+        "Nah, don't worry about it.":
+            $ bangok_four_remy_c4postsections_store.protection = False
+
+    Ry "The, ah, lube is strictly necessary. No question."
+    c "Alright."
+
+    $ renpy.pause (0.8)
+    m "We stood, staring at each other for a few moments."
+    $ renpy.pause (0.8)
+    
 
 
 
@@ -367,7 +405,7 @@ label bangok_four_remy_c4postsections_epilogue:
     $ renpy.pause (0.5)
     scene black with dissolvemed
     $ renpy.pause (0.5)
-    scene o at Pan((0, 100), (0, 250), 3.0) with dissolveslow
+    scene o3 at Pan((0, 100), (0, 250), 3.0) with dissolveslow
     $ renpy.pause (1.3)
 
     m "I returned home utterly spent after the long night. After this fateful day, I was glad to finally have some sort of respite."
