@@ -1090,9 +1090,9 @@ label bangok_four_bryce3_mcbottom_train:
     Br laugh "As if anyone could take this as part of some sort of evil plan."
     if persistent.bangok_watersports == True and bangok_four_bryce3.brycews == "before":
         Mv "Did you really have to piss inside?"
-        Br normal "H-Hey. [player_name] wanted it."
+        Br bangok pant "H-Hey. [player_name] wanted it."
         $ renpy.pause(0.5)
-        Br smirk "[player_name] might... want yours too... if you need to go."
+        Br bangok pantflirt "[player_name] might... want yours too... if you need to go."
         Br flirty "What... do you say... [player_name]?"
         menu:
             "[[Moan.]":
@@ -1120,7 +1120,7 @@ label bangok_four_bryce3_mcbottom_train:
         Mv angry "Calling humans what they are is not an insult."
         Br stern "I... Mmmh..."
         m "Bryce hit the ground, kicking up a small cascade of sand next to my head."
-    Br flirty "N-not long...!"
+    Br bangok pantflirt "N-not long...!"
 
     $ renpy.pause(1.2)
     m "I could feel his thrusts get more uneven, more needy."
@@ -1315,7 +1315,7 @@ label bangok_four_bryce3_mcbottom_train:
         if bangok_four_bryce3.protection == True:
             m "Stepping back, Bryce pulled out, his condom's reservoir of cum popping free with him to leave me gaping and achingly empty."
         else:
-            m "Stepping back, Bryce pulled out. I sighed, achingly empty but for the mess he'd left behind, but knowing another cock was coming soon."
+            m "Stepping back, Bryce pulled out. I sighed, achingly empty but for the mess he'd left behind, but warm in the knowledge another cock was coming soon."
 
     Br smirk "Maverick?"
     $ renpy.pause(1.2)
@@ -1332,6 +1332,32 @@ label bangok_four_bryce3_mcbottom_train:
         m "Then his claws dug into the sand to either side of my head, and I felt his tip at my lower lips."
         m "His cockhead flared wider than Bryce's! At first I worried there was no way for it to fit, until he began to apply pressure and I felt his head compress slightly to nestle just inside my parted and stretched outer folds."
 
+    menu:
+        "This-- Y-You're too big. I can't...":
+            Br stern "Damnit. Maverick--"
+            m "Maverick pulled out immediately, stepping away and leaving me to slump onto the ground."
+            jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
+        "H-Hah! Oh, this'll be fun.":
+            jump bangok_four_bryce3_mcbottom_train_mav_turn
+
+label bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn:
+    show bryce brow at right with dissolve
+    Br "I'll take over. You going to be okay, [player_name]?"
+    c "Y-Yeah. I-I think I will now."
+    show maverick nice flip at left with dissolve
+    Mv "I did not intend you any harm."
+    c "I-I know. You're just... big."
+    Br smirk "Well, relax. I'm big enough to handle big."
+    show bryce smirk flip with dissolve
+    m "Bryce wandered a few steps away, then lifted his tail to expose his hindquarters."
+    if bangok_four_bryce3.protection == True:
+        m "After one more almost apologetic look back at me, Maverick tugged his condom off with a claw, then moved over to Bryce."
+    else:
+        m "After one more almost apologetic look back at me, Maverick moved over to Bryce."
+    show maverick nice flip at center behind bryce with ease
+    jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mavgoes_merge
+
+label bangok_four_bryce3_mcbottom_train_mav_turn:
     m "He pressed forward, spreading me open wider than Bryce had. Then he stopped, once his whole cockhead was in."
     Mv nice "Is this at all painful?"
     m "After Bryce's fucking, just being spread around a thick shaft was a non-issue. I shook my head."
@@ -1410,13 +1436,20 @@ label bangok_four_bryce3_mcbottom_train:
                     Br stern "What happened?"
                     Br brow "Oh. Did it break?"
                     c "Yes it broke!"
-                    m "Maverick hurriedly pulled out completely. The torn end of the condom left a dribbling golden trail down my thighs."
+                    m "Maverick hurriedly pulled out completely. The torn end of the condom left dribbling golden trails down my thighs."
                     Br normal "Oh. Oh well. That could honestly be a lot worse."
                     c "Worse? I asked you two to use protection!"
                     Mv angry "You then asked us to risk it. These clearly aren't designed with urination in mind."
                     c "How is it my fault that--"
                     m "I turned to try to look back at Maverick, but slumped to the ground, my abused lower body protesting at the suggestion of movement."
-                    jump todo_out_of_content_bangok_four_bryce3
+                    show bryce normal at right with dissolve
+                    Br "[player_name], just calm down. It was an accident. I'll take over bottoming, okay?"
+                    c "..."
+                    show bryce smirk flip with dissolve
+                    m "Bryce wandered a few steps away, then lifted his tail to expose his hindquarters."
+                    m "After one more irritated look back at me, Maverick pulled off the remains of his condom with a claw, then moved over to Bryce."
+                    show maverick normal flip at center behind bryce with dissolve
+                    jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mavgoes_merge
                 "Ohhh...":
                     c "That felt... that felt good."
                     Br brow "What? What did?"
@@ -1495,6 +1528,16 @@ label bangok_four_bryce3_mcbottom_train:
             c "I'll be fine."
             $ renpy.pause(0.8)
             Mv "..."
+        "I can't. I-I can't.":
+            m "I could tell from his size and force that this {i}wasn't{/i} going to be the good time I had thought it would be. I repeated the two words like a mantra, praying it wasn't too late to back out."
+            Br stern "Maverick."
+            m "Maverick put a paw on my shoulder, sand and scales digging into my back as held me against the surface of the beach."
+            if persistent.bangok_inflation == True and ((not bangok_four_bryce3.protection) or bangok_four_bryce3.brycebroke or bangok_four_bryce3.mavbroke):
+                m "Then he dragged back, long and slow, my insides gurgling as fluid flowed and shifted to follow him. His head popped free with a wet spatter down my legs."
+            else:
+                m "Then he dragged back, long and slow. His head popping out sent a wave of relaxation through my innards, as my hole spasmed against the cool night air."
+            m "Finally, he lifted his paw from my shoulderblades, releasing me from my service to his cock. I gasped as I slumped to the ground, thanking my lucky stars I'd avoided that internal organ rearrangement."
+            jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
     Br laugh "Any time you want to start."
     $ renpy.pause(0.8)
     m "Maverick put one paw on my shoulder, sand and scales digging into my back as he held me against the surface of the beach."
@@ -1613,7 +1656,6 @@ label bangok_four_bryce3_mcbottom_train:
         if bangok_four_bryce3.protection:
             m "As his condom reservoir bloated he yanked himself, then it out of me."
             m "My juices ran down my legs, rubbed in by his shaft and the condom tip as both twitched and bobbed between my thighs."
-            jump todo_out_of_content_bangok_four_bryce3 # JUMP TO PULLOUT DONE
         else:
             m "His reticence to move did nothing to stop his spurts of cum. My lower body swam in and out of electric sparks of sensation, tossed about on the tide of Maverick's pulses against my innermost gate."
             if persistent.bangok_inflation == True:
@@ -2235,6 +2277,7 @@ label bangok_four_bryce3_mctop_mavgoes:
     show maverick normal flip at center behind bryce with dissolve
     m "Maverick watched me with suspicion as he walked over to Bryce."
     m "Only when he'd nearly stepped on Bryce's tail did he focus on his partner."
+    label bangok_four_bryce3_mcbottom_train_bryce_takeover_mavgoes_merge:
     show maverick nice flip with dissolve
     show bryce smirk flip:
         transform_anchor True
@@ -2245,22 +2288,24 @@ label bangok_four_bryce3_mctop_mavgoes:
         xpos 0.55
     with ease
     m "Maverick stepped over him, bending Bryce's tail back against his underbelly. I could now see Maverick's shaft emerging, thick and long enough to be visible between his hindlegs even with him standing normally."
-    show bryce stern flip with dissolve
-    m "Then Bryce's face fell."
-    Br "Fuck. [player_name], would you mind lubing me and Maverick? This isn't going to work otherwise."
-    c "Sure."
-    show bryce normal flip with dissolve
-    show maverick normal flip with dissolve
-    m "I slid Bryce's basket of supplies over, then took a large spurt of lube into my hands to spread over Maverick."
-    show maverick angry flip with dissolve
-    m "Maverick stiffened, but otherwise refused to show discomfort at my proximity. His shaft twitched as I rubbed on the lube, excited by the physical contact."
-    m "I gave Maverick another two spurts, then rubbed the mess on my hands off on Bryce's ass. The rest I wiped off on his underbelly plates, all around his slit."
-    Br laugh flip "Alright, get some distance and enjoy the show."
-    show maverick normal flip with dissolve
+    
+    if bangok_four_bryce3.mc_bottom == False:
+        show bryce stern flip with dissolve
+        m "Then Bryce's face fell."
+        Br "Fuck. [player_name], would you mind lubing me and Maverick? This isn't going to work otherwise."
+        c "Sure."
+        show bryce normal flip with dissolve
+        show maverick normal flip with dissolve
+        m "I slid Bryce's basket of supplies over, then took a large spurt of lube into my hands to spread over Maverick."
+        show maverick angry flip with dissolve
+        m "Maverick stiffened, but otherwise refused to show discomfort at my proximity. His shaft twitched as I rubbed on the lube, excited by the physical contact."
+        m "I gave Maverick another two spurts, then rubbed the mess on my hands off on Bryce's ass. The rest I wiped off on his underbelly plates, all around his slit."
+        Br laugh flip "Alright, get some distance and enjoy the show."
+        show maverick normal flip with dissolve
 
-    m "After I sat the supplies and myself a little further up the beach, Bryce wiggled his hips under Maverick."
+        m "After I sat the supplies and myself a little further up the beach, Bryce wiggled his hips under Maverick."
     Br flirty flip "Alright, Mavers. Plow me."
-    if persistent.bangok_watersports == True and bangok_four_bryce3.mavws == True:
+    if persistent.bangok_watersports == True and bangok_four_bryce3.mavws == True and bangok_four_bryce3.mavbroke == False:
         Mv normal flip "And your urination fetish?"
         Br "If you don't mind."
         $ renpy.pause(0.3)
