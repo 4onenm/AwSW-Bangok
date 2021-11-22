@@ -249,7 +249,7 @@ def xsebastian(ml):
         .search_menu("I'll take it.")
         .branch()
         .search_say("Sure.")
-        .hook_to('bangok_four_xsebastian_todaywasgreat')
+        .hook_to('bangok_four_xsebastian_todaywasgreat', condition='persistent.nsfwtoggle == True')
     )
 
 
