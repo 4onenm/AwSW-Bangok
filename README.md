@@ -19,6 +19,7 @@ Resource credits:
 + `cr/ipsum_*_notail.png`: 4onen, editing base-game assets
 + `cr/lorem_bangok_hidepeek.png`: 4onen, editing base-game assets
 + `cr/lorem_bangok_peek.png`: 4onen
++ `cr/remy/remy_*_n.png`: 4onen, editing base-game assets
 + `cr/sebastian_shy_b_sleep.png`: 4onen, editing base-game assets
 + `fx/2buckets.ogg`: 4onen, editing base-game `fx/2glasses.ogg`
 + `fx/digice.ogg`: 4onen, editing base-game `fx/dig.ogg`
