@@ -7,7 +7,8 @@ Contributions welcome.
 
 
 Resource credits:
-+ `bg/*`: 4onen, editing base-game assets
++ `bg/in/*`: 4onen, editing base-game assets
++ `bg/bangok_*.png`: 4onen
 + `cg/lorem-x-ipsum_purpleroom.png`:
     + Linework: [Yaroul](https://www.furaffinity.net/user/Yaroul/) (Original: https://www.furaffinity.net/view/23028281/)
     + Comissioner: [haloudoval](https://www.furaffinity.net/user/haloudoval)
