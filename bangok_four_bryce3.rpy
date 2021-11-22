@@ -631,7 +631,10 @@ label bangok_four_bryce3_mcbottom_tp:
 
 label bangok_four_bryce3_mcbottom_train:
     scene beachx:
-        xpos -300
+        xanchor 0.5
+        yanchor 1.0
+        xpos 0.5
+        ypos 1.0
     with dissolve
     m "I moved further from the basket, finding an empty spot on the beach so that any kicked up sand wouldn't wind up in Bryce's protection supplies."
     m "Then, thinking about the dragons' limited articulation, I got on all fours, presenting my ass back at them."
@@ -642,14 +645,14 @@ label bangok_four_bryce3_mcbottom_train:
         if bangok_four_playerhasdick == True:
             $ bangok_four_bryce3.sebtarget = "ass"
         else:
-            Sb "Front or back?"
+            Sb normal "Front or back?"
             menu:
                 Sb "Front or back?{fast}"
                 "Anal.":
                     $ bangok_four_bryce3.sebtarget = "ass"
                 "Vaginal.":
                     $ bangok_four_bryce3.sebtarget = "vag"
-        Sb "Mind if I have a taste, first?"
+        Sb smile "Mind if I have a taste, first?"
         menu:
             "Go for it.":
                 if bangok_four_bryce3.sebtarget == "ass":
@@ -667,7 +670,7 @@ label bangok_four_bryce3_mcbottom_train:
                 m "Then Sebastian pulled back, panting."
 
             "Let's skip to the next step.":
-                Sb "Sure."
+                Sb disapproval "Sure."
 
         m "Holding onto my back, Sebastian worked his way forward, condom-wrapped cock bouncing off one of my cheeks."
         if bangok_four_bryce3.sebtarget == "ass":
@@ -683,7 +686,7 @@ label bangok_four_bryce3_mcbottom_train:
         m "I thrust back against him, heady with the first taste of cock this evening, what I knew would be the first of many."
         play soundloop "fx/rub2.ogg" fadein 0.5
         show beachx:
-            linear 0.15 zoom 1.1
+            linear 0.15 zoom 1.008
             ease 0.5 zoom 1.0
             repeat
         with None
@@ -1061,7 +1064,7 @@ label bangok_four_bryce3_mcbottom_train:
 
     play soundloop "fx/rub2.ogg" fadein 2.0
     show beachx:
-        linear 0.15 zoom 1.1
+        linear 0.15 zoom 1.01
         ease 0.5 zoom 1.0
         repeat
     with None
@@ -1125,7 +1128,9 @@ label bangok_four_bryce3_mcbottom_train:
     $ renpy.pause(1.2)
     m "I could feel his thrusts get more uneven, more needy."
     m "That slight uncertainty was the last thing my endurance could take."
-    scene black with fadequick
+    show beachx:
+        ease 0.5 zoom 1.0
+    show black with fadequick
     if bangok_four_bryce3.brycetarget == "ass":
         if bangok_four_playerhasdick == True:
             play sound "fx/extinguish.ogg"
@@ -1213,7 +1218,7 @@ label bangok_four_bryce3_mcbottom_train:
                     m "I moaned as the pulses continued, until my womb was out of room, packed solid with Bryce's seed."
                     m "The pressure gave my womb no choice but to expand, distending my belly until I appeared pregnant with nothing but his cum."
     $ renpy.pause(0.5)
-    scene beachx at Pan ((300, 0), (300, 0), 0.0) with dissolveslow
+    hide black with dissolveslow
     m "Bryce and I came down from our peaks together, breathing hard."
 
     if persistent.bangok_inflation == True:
@@ -1336,6 +1341,7 @@ label bangok_four_bryce3_mcbottom_train:
         "This-- Y-You're too big. I can't...":
             Br stern "Damnit. Maverick--"
             m "Maverick pulled out immediately, stepping away and leaving me to slump onto the ground."
+            scene beachx at Pan ((300, 0), (300, 0), 0.0) with hpunch
             jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
         "H-Hah! Oh, this'll be fun.":
             jump bangok_four_bryce3_mcbottom_train_mav_turn
@@ -1442,6 +1448,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                     Mv angry "You then asked us to risk it. These clearly aren't designed with urination in mind."
                     c "How is it my fault that--"
                     m "I turned to try to look back at Maverick, but slumped to the ground, my abused lower body protesting at the suggestion of movement."
+                    scene beachx at Pan ((300, 0), (300, 0), 0.0) with hpunch
                     show bryce normal at right with dissolve
                     Br "[player_name], just calm down. It was an accident. I'll take over bottoming, okay?"
                     c "..."
@@ -1537,6 +1544,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             else:
                 m "Then he dragged back, long and slow. His head popping out sent a wave of relaxation through my innards, as my hole spasmed against the cool night air."
             m "Finally, he lifted his paw from my shoulderblades, releasing me from my service to his cock. I gasped as I slumped to the ground, thanking my lucky stars I'd avoided that internal organ rearrangement."
+            scene beachx at Pan ((300, 0), (300, 0), 0.0) with hpunch
             jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
     Br laugh "Any time you want to start."
     $ renpy.pause(0.8)
@@ -1566,7 +1574,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
     m "The next thrust went the same distance, but faster."
     play soundloop "fx/rub2.ogg"
     show beachx:
-        linear 0.15 zoom 1.1
+        linear 0.15 zoom 1.02
         ease 0.5 zoom 1.0
         repeat
     with None
