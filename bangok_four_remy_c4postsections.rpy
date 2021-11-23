@@ -384,9 +384,88 @@ label bangok_four_remy_c4postsections_sebintro:
     $ renpy.pause (0.8)
     m "We stood, staring at each other for a few moments."
     $ renpy.pause (0.8)
-    
 
+    c "I guess I'll undress first?"
+    Ry "Th-That would be an instrumental step in--"
+    play sound "fx/undress.ogg"
+    show remy look with dissolve
+    m "I lifted my shirt up over my head, setting it aside on a couch."
+    Ry shy "..."
+    Ry "... Er..."
+    if bangok_four_remy_c4postsections_store.remy_top == False:
+        show remy sad with dissolve
+        m "Remy looked down at his tie. His face fell, attention swallowed by the strip of fabric."
+        $ renpy.pause(0.8)
+        c "Remy?"
+        Ry "I-I can't."
+        Ry "I can't do this, [player_name]. I'm sorry, I..."
+        menu:
+            "I understand.":
+                Ry look "You do?"
+                c "Yeah. We don't have to take this any faster than you're comfortable with, or anywhere at all if you're not comfortable sharing what you were thinking in the library."
+                label bangok_four_remy_c4postsections_reshirt:
+                play sound "fx/undress.ogg"
+                m "I shrugged back into my shirt, in an effort to make Remy more comfortable."
+                $ renpy.pause(0.8)
+                Ry normal "Thank you, [player_name]."
+                Ry shy "I think, then, I'll, ah, bid you good night and be on my way."
+                c "Sure."
+                $ renpy.pause(0.5)
+                hide remy with dissolve
+                $ renpy.pause(0.3)
+                play sound "fx/door/handle.wav"
+                $ renpy.pause(1.0)
+            "Are you sure?":
+                c "You seemed pretty into whatever you were thinking at the library. If you--"
+                Ry shy "[player_name], {i}please.{/i}"
+                Ry look "I-I'm just not comfortable with... that right now. Not like this. Not..."
+                c "Alright, alright."
+                jump bangok_four_remy_c4postsections_reshirt
+            "[[Keep undressing.]":
+                stop music fadeout 2.0
+                play sound "fx/undress.ogg"
+                show remy shy with dissolve
+                $ renpy.pause(0.5)
+                m "I toyed with my genitalia, showing it off."
+                c "C'mon, Remy. I heard you at the library. You can't tell me you weren't thinking about this."
+                hide remy with dissolve
+                c "Remy?"
+                play sound "fx/door/handle.wav"
+                $ renpy.pause(1.0)
+                python:
+                    remystatus = "bad"
+                    if persistent.remygoodending == False:
+                        remydead = True
+                if bangok_four_playerhasdick == True:
+                    m "Remy left abruptly, leaving me literally dick-in-hand."
+                else:
+                    m "Remy left abruptly, leaving me figuratively with my dick in my hand."
+                play sound "fx/undress.ogg"
+                m "Annoyed, I shrugged back into my clothes."
+                $ renpy.pause(1.0)
+        stop music fadeout 2.0
+        $ renpy.pause (0.5)
+        m "After this fateful day, I was glad to finally have some sort of respite. I wandered into the kitchen as I considered tonight's dinner."
+        c "(It's too late to order out. Should I cook something? Or just go to sleep?)"
+        m "When I returned to the living room, I suddenly found my strength leaving me and collapsed to the floor."
+        jump bangok_four_remy_c4postsections_epilogue_admin
 
+    c "I'd ask you to take off your shirt too, but you're just wearing a shirt collar."
+    c "Speaking of which, I've never actually seen you without your tie."
+    Ry "Well..."
+    hide remy with dissolve
+    $ renpy.pause(0.3)
+    play sound "fx/undress.ogg"
+    $ renpy.pause(2.0)
+    show remy normal b with dissolve
+    m "Heaving a sigh, Remy undid his tie and draped it on the couch next to my shirt."
+
+    menu:
+        "You are pretty cute, you know that?":
+            pass
+        "That's a lot of neck.":
+            pass
+    Ry shy b "I... suppose."
 
 
 
