@@ -2,6 +2,10 @@ An Angels with Scaly Wings lewd mod
 
 ### USERS DOWNLOAD [HERE: https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/main.zip](https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/main.zip)
 
+### Mandatory Requirements:
+
++ **MagmaLink**: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2594080243) or [GitLab](https://gitlab.com/jakzie2/awsw-magmalink)
+
 Contributions welcome.
 
 
