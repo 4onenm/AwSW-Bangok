@@ -378,20 +378,14 @@ label bangok_four_remy_c4postsections_sebintro:
         "Nah, don't worry about it.":
             $ bangok_four_remy_c4postsections_store.protection = False
 
-    Ry "The, ah, lube is strictly necessary. No question."
+    Ry normal "The, ah, lube is strictly necessary. No question."
     c "Alright."
 
     $ renpy.pause (0.8)
     m "We stood, staring at each other for a few moments."
     $ renpy.pause (0.8)
 
-    c "I guess I'll undress first?"
-    Ry "Th-That would be an instrumental step in--"
-    play sound "fx/undress.ogg"
-    show remy look with dissolve
-    m "I lifted my shirt up over my head, setting it aside on a couch."
     Ry shy "..."
-    Ry "... Er..."
     if bangok_four_remy_c4postsections_store.remy_top == False:
         show remy sad with dissolve
         m "Remy looked down at his tie. His face fell, attention swallowed by the strip of fabric."
@@ -404,8 +398,6 @@ label bangok_four_remy_c4postsections_sebintro:
                 Ry look "You do?"
                 c "Yeah. We don't have to take this any faster than you're comfortable with, or anywhere at all if you're not comfortable sharing what you were thinking in the library."
                 label bangok_four_remy_c4postsections_reshirt:
-                play sound "fx/undress.ogg"
-                m "I shrugged back into my shirt, in an effort to make Remy more comfortable."
                 $ renpy.pause(0.8)
                 Ry normal "Thank you, [player_name]."
                 Ry shy "I think, then, I'll, ah, bid you good night and be on my way."
@@ -421,7 +413,7 @@ label bangok_four_remy_c4postsections_sebintro:
                 Ry look "I-I'm just not comfortable with... that right now. Not like this. Not..."
                 c "Alright, alright."
                 jump bangok_four_remy_c4postsections_reshirt
-            "[[Keep undressing.]":
+            "[[Undress.]":
                 stop music fadeout 2.0
                 play sound "fx/undress.ogg"
                 show remy shy with dissolve
@@ -450,23 +442,41 @@ label bangok_four_remy_c4postsections_sebintro:
         m "When I returned to the living room, I suddenly found my strength leaving me and collapsed to the floor."
         jump bangok_four_remy_c4postsections_epilogue_admin
 
-    c "I'd ask you to take off your shirt too, but you're just wearing a shirt collar."
-    c "Speaking of which, I've never actually seen you without your tie."
-    Ry "Well..."
     hide remy with dissolve
+    $ renpy.pause(0.5)
+    play sound "fx/undress.ogg"
+    $ renpy.pause(1.5)
+    show remy normal b with dissolve
+    m "Remy removed his tie, setting it aside on the couch."
+
+    menu:
+        "Want any help with the collar or glasses?":
+            Ry shy b "No, I..."
+            $ renpy.pause(1.8)
+            Ry "Yes."
+            hide remy with dissolve
+            $ renpy.pause(0.5)
+            play sound "fx/undress.ogg"
+            $ renpy.pause(1.5)
+            show remy shy ud with dissolve
+        "[[Say nothing.]":
+            $ renpy.pause(0.8)
+            hide remy with dissolve
+            play sound "fx/undress.ogg"
+            $ renpy.pause(1.5)
+            show remy normal ud with dissolve
+            m "His collar and glasses joined it, glasses falling over the back and onto the seat."
+    $ renpy.pause(0.3)
+    menu:
+        "You are pretty cute, you know that?":
+            Ry shy ud "Th-Thank you."
+        "That's a lot of neck.":
+            Ry look ud "I'll have to return some of it to the store."
+
+    Ry normal ud "And you, [player_name]?"
     $ renpy.pause(0.3)
     play sound "fx/undress.ogg"
     $ renpy.pause(2.0)
-    show remy normal b with dissolve
-    m "Heaving a sigh, Remy undid his tie and draped it on the couch next to my shirt."
-
-    menu:
-        "You are pretty cute, you know that?":
-            pass
-        "That's a lot of neck.":
-            pass
-    Ry shy b "I... suppose."
-
 
 
 
