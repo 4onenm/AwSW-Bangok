@@ -478,6 +478,37 @@ label bangok_four_remy_c4postsections_sebintro:
     play sound "fx/undress.ogg"
     $ renpy.pause(2.0)
 
+    show remy shy ud with dissolve
+    $ renpy.pause(0.5)
+    Ry shy ud "My, ah, eyesight isn't ideal without my glasses. Between your legs, i-is that a...?"
+    if bangok_four_playerhasdick is None:
+        menu:
+            "Penis.":
+                $ bangok_four_playerhasdick = True
+            "Vagina.":
+                $ bangok_four_playerhasdick = False
+    elif bangok_four_playerhasdick == True:
+        c "Penis."
+    else:
+        c "Vagina."
+
+    if bangok_four_playerhasdick == True:
+        Ry look ud "Ah. That... seems below the average for runners."
+        Ry shy ud "And I, ah, think the runner average is a little small to do... th-things for me. And I can't say I have much experience with oral on small males--"
+        if bangok_four_remy_c4postsections_store.remy_tail_remy == True:
+            c "Well, we have your tail for satisfying your, ah, hole."
+            Ry "Er..."
+            Ry normal ud "I suppose that is true."
+        else:
+            menu:
+                "I want you in me, so don't worry about it.":
+                    Ry "Er..."
+                    Ry normal ud "I suppose that makes sense."
+                "We'll figure something out.":
+                    Ry "I..."
+                    Ry normal ud "Okay. Of course."
+    else:
+        Ry shy ud "Ah. Th-That... I see."
 
 
 
