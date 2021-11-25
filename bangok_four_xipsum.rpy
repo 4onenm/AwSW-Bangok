@@ -2007,12 +2007,12 @@ label bangok_four_xipsum_loremdone:
                     $ renpy.pause(0.5)
                     show ipsum happy flip with dissolve
                     m "Not wanting to leave him completely out of the fun, I took hold of his shafts, doing my best to pump them both one-handed while my other hand supported my hard pace."
-                    show ipsum happy flip notail with dissolve
+                    show ipsum happy notail flip with dissolve
                     m "I felt his fluff tickling my bare skin as his tail wrapped around one of my legs, pulling me into a closer, faster pace."
 
                     $ renpy.pause(0.5)
 
-                    Ip normal flip notail "I forgot how nice it could be to lie back and enjoy sometimes."
+                    Ip normal notail flip "I forgot how nice it could be to lie back and enjoy sometimes."
 
                     m "I panted, beyond words, so very close to my peak."
 
@@ -2024,21 +2024,21 @@ label bangok_four_xipsum_loremdone:
                     m "Hilting myself in Ipsum's ass, I came, spurt after spurt of my cum filling the condom's reservoir inside him."
                     $ renpy.pause(0.5)
                     hide black
-                    show ipsum normal flip notail:
+                    show ipsum normal notail flip:
                         xpos -0.14
                     with dissolvemed
                     m "When I returned to my senses, Ipsum's tail was still holding me close, keeping me buried inside him even as I began to limpen."
-                    Ip happy flip notail "If you could help me, now."
+                    Ip happy notail flip "If you could help me, now."
                     m "Ipsum's shafts twitched against my belly, still hard and raring to go."
                     m "I leaned back slightly, getting my balance on weak legs. Then taking one shaft in each hand, I set to pumping."
                     play soundloop "fx/rub2.ogg" fadein 0.5
-                    Ip sad flip notail "Mmh."
+                    Ip sad notail flip "Mmh."
                     m "His tail began to loosen immediately, legs limpening around my sore thighs as I stroked his members."
                     m "He thrust his hips back against my groin, seeking out a little bit more stimulation from my spent cock."
                     m "Then he thrust upward into my hands."
                     stop soundloop fadeout 0.5
                     play sound "fx/snarl.ogg" fadein 0.5
-                    show ipsum happy flip notail with dissolve
+                    show ipsum happy notail flip with dissolve
                     m "Both of Ipsum's condoms' reservoirs bloated as he spurted through my hands, getting off on the handjob and the dick in his ass."
                     m "Once his fluffy tail slipped from my leg, I took a step backward, tugging myself free."
                     m "Then I lay on the bed next to him, giving my leg muscles a rest."
