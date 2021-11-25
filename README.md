@@ -20,7 +20,6 @@ Resource credits:
     + Coloring-in: 4onen
 + `cr/anna_*.png`: yoshisman8 from [mod-nsfw-anna](https://github.com/AWSW-Modding/AWSW-Modtools/tree/mod-nsfw-anna) (Used without permission; unable to contact.)
 + `cr/bryce_underside_large.png`: 4onen, editing base-game assets
-+ `cr/bryce_pant*.png`: Azryn Folf, editing base-game assets
 + `cr/ipsum_bangok_pen.png`: 4onen, cutting `cg/lorem-x-ipsum_purpleroom.png`
 + `cr/ipsum_*_notail.png`: 4onen, editing base-game assets
 + `cr/lorem_bangok_hidepeek.png`: 4onen, editing base-game assets
