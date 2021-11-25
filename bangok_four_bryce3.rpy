@@ -13,6 +13,9 @@ init python in bangok_four_bryce3:
     mavws = False
     mavbroke = False
 
+    # MP variables
+    mavcondomleftin = False
+
     mc_bottom = True
     protection = False
 
@@ -678,6 +681,27 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
                 Sb drop "That amount of sore doesn't sound like fun, Bryce."
         "I think I'll take stock once I'm done tonight.":
             Br flirty "Can't wait for more, huh?"
+
+    # if persistent.bangok_watersports == True:
+    #     Br smirk "Hm. Y'know, Maverick and I had a few drinks in that party."
+    #     if bangok_four_bryce3.sebastian_in == True:
+    #         Sb normal "Oh, here we go."
+
+    m "Maverick began carefully to pull out, large girth tugging on my limp inner muscles."
+    menu:
+        "N-No...":
+            Br brow "No? What's wrong?"
+            m "Maverick paused, leaving me spread around him."
+            menu:
+                "L-Leave the condom in?" if bangok_four_bryce3.protected == True:
+                    Br laugh "Ha! Damn, that's kinky."
+                    Br flirty "I'd appreciate it if you did, Mavers."
+                    Mv normal "Fine."
+                    $ bangok_four_bryce3.mavcondomleftin = True
+                "G-Go more slowly.":
+                    Mv normal "I'm taking this as slowly as I can."
+        "Ohhh...":
+            pass
 
 
 
