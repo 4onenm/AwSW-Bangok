@@ -229,13 +229,13 @@ label bangok_four_remy_c4postsections_sebintro:
             c "I don't need that to make this work. And I'm sure we can find some other way to satisfy you."
             Ry shy dk "Ah. Okay."
         "I've had large partners." if ((bangok_four_bryce1_unplayed == False and (bangok_four_bryce1_position_picka in ["vag","analbot"] or bangok_four_bryce1_position_pickb in ["vag","analbot"]))
-            or (bangok_four_bryce3.unplayed == False and bangok_four_bryce3.mc_bottom == True)
+            or (bangok_four_bryce3_store.unplayed == False and bangok_four_bryce3_store.mc_bottom == True)
             or (bangok_four_xipsum.unplayed == False and bangok_four_xipsum.took_ipsum_both == True)
             or (bangok_four_xkatsu.unplayed == False and bangok_four_xkatsu.target in ["throat","vag","womb","ass"])):
             $ bangok_four_remy_c4postsections_store.remy_top = True
             Ry look dk "[player_name], I'm not sure you understand..."
             
-            if (bangok_four_bryce3.unplayed == False and bangok_four_bryce3.mc_bottom == True):
+            if (bangok_four_bryce3_store.unplayed == False and bangok_four_bryce3_store.mc_bottom == True):
                 c "No, Remy, I mean {size=+8}large{/size}. And of your species."
             elif (bangok_four_bryce1_unplayed == False and (bangok_four_bryce1_position_picka in ["vag","analbot"] or bangok_four_bryce1_position_pickb in ["vag","analbot"])):
                 c "No, Remy, I mean another quadrupedal dragon."
