@@ -384,20 +384,49 @@ label bangok_four_bryce3_mcbottom:
             "You know, I should be able to take all three of you." if bangok_four_playerhasdick == False:
                 c "If you got on top of the pile, Maverick?"
                 Mv nice "..."
-                jump bangok_four_bryce3_mcbottom_tp
+                Br flirty "I'm into it if you think you can take it."
+                Sb drop "Seems a little extreme."
+                jump bangok_four_bryce3_mcbottom_mav_bryce_dp_opt_tp
     else:
+        Br normal "I assume you want me first, to ease up to Maverick's size."
+        if bangok_four_playerhasdick == True:
+            c "Yeah."
+        else:
+            $ bangok_four_bryce3.top_mav = True
+            label bangok_four_bryce3_mcbottom_train_or_mp:
+            menu:
+                "Yeah, Bryce first.":
+                    show bryce normal
+                    show maverick nice
+                    with dissolve
+                "How about Maverick first?" if bangok_four_bryce3.top_mav == True:
+                    $ bangok_four_bryce3.top_mav = False
+                    show bryce brow with dissolve
+                    Mv angry "I won't be responsible for severely injuring you if you're too small to take either of us."
+                    Br brow "Really, [player_name]. At your size, you don't want to jump up to Maverick's in one go unless you're way more malleable than you look. Not when there's someone my size to ease the way."
+                    jump bangok_four_bryce3_mcbottom_train_or_mp
+                "Why not both of you?":
+                    c "If you got on top of the pile, Maverick?"
+                    show maverick nice
+                    show bryce smirk
+                    with dissolve
+                    Mv nice "..."
+                    Br flirty "Both? Damn. I'm into it if you think you can take it."
+                    jump bangok_four_bryce3_mcbottom_mav_bryce_mp
         jump bangok_four_bryce3_mcbottom_train
 
-label bangok_four_bryce3_mcbottom_tp:
-    Br flirty "I'm into it."
+label bangok_four_bryce3_mcbottom_mav_bryce_mp:
     hide bryce with dissolve
     m "Bryce rolled onto his back, cock swinging proudly into the air as his tail kicked up sand."
     hide maverick with dissolve
-    m "Swallowing as I considered what I'd just agreed to, I went to the basket for one more handful of lube, then went back to Bryce to spread it over his length."
+    m "Swallowing as I considered what I'd just decided to do, I went to the basket for one more handful of lube, then went back to Bryce to spread it over his length."
     Br flirty "Climb on up."
     scene stars at Pan((0, 360), (0, 0), 6.0) with dissolvemed
     $ renpy.pause (5.0)
-    m "I climbed onto Bryce's belly and lay back, trying to find the position I'd need once Maverick and Sebastian joined the party."
+    if bangok_four_bryce3.sebastian_in == True:
+        m "I climbed onto Bryce's belly and lay back, trying to find the position I'd need once Maverick and Sebastian joined the party."
+    else:
+        m "I climbed onto Bryce's belly and lay back, trying to find the position I'd need once Maverick joined the party."
     m "I nestled into his chest easily, the position comfortable enough to sleep in."
     m "But I was looking for something much more fun."
     m "Picking myself up on my feet, straddling his belly, I lifted his cockhead to my rear entrance."
@@ -435,13 +464,14 @@ label bangok_four_bryce3_mcbottom_tp:
     Br laugh "Think I can feel you, there!"
     Br flirty "You coming in?"
 
-    Sb disapproval "If it hurts, [player_name], say something."
+    if bangok_four_bryce3.sebastian_in == True:
+        Sb disapproval "If it hurts, [player_name], say something."
 
-    Br normal "[player_name] will be fine. Probably."
-    Br normal "You ready for Maverick?"
+        Br normal "[player_name] will be fine. Probably."
+        Br normal "You ready for Maverick?"
 
-    $ renpy.pause(0.5)
-    c "Yeah."
+        $ renpy.pause(0.5)
+        c "Yeah."
 
     Mv "..."
     Mv "I'm not trying to hurt you. Tell me if I need to stop."
@@ -474,26 +504,36 @@ label bangok_four_bryce3_mcbottom_tp:
     c "Y-Yeah. Ow."
     Br normal "Y'know, Mav's ex would take it through there."
     Mv angry "You don't need to share that with [player_name]!"
-    Sb drop "[player_name] isn't Maverick's ex, Bryce."
+    if bangok_four_bryce3.sebastian_in == True:
+        Sb drop "[player_name] isn't Maverick's ex, Bryce."
     menu:
         "I want it all.":
-            Sb drop "You can't be serious."
+            if bangok_four_bryce3.sebastian_in == True:
+                Sb drop "You can't be serious."
+            else:
+                Mv normal "..."
             Br flirty "I mean, worth a shot, right?"
             Mv normal "..."
-            Sb drop "Bryce, maybe. But Maverick? Without preparation? I don't know how anyone runner size or smaller can take that."
-            Br smirk "You take that."
-            Sb disapproval "I don't have a cervix, Bryce."
+            if bangok_four_bryce3.sebastian_in == True:
+                Sb drop "Bryce, maybe. But Maverick? Without preparation? I don't know how anyone runner size or smaller can take that."
+                Br smirk "You take that."
+                Sb disapproval "I don't have a cervix, Bryce."
+            else:
+                Br smirk "Just think about it. Sebastian can take all of you. Why not [player_name]?"
             Mv normal "Are you sure, [player_name]?"
             menu:
                 "Fuck yes!":
                     $ bangok_four_bryce3.mavtarget = "womb"
-                    Sb drop "Oh damn."
+                    if bangok_four_bryce3.sebastian_in == True:
+                        Sb drop "Oh damn."
+                    Br smirk "This is gonna feel great."
                 "Er...":
                     $ bangok_four_bryce3.mavtarget = "vag"
                     Mv normal "Then we won't."
         "I can't take more than this.":
             $ bangok_four_bryce3.mavtarget = "vag"
-            Sb normal "That's good. Keep your limits in mind."
+            if bangok_four_bryce3.sebastian_in == True:
+                Sb normal "That's good. Keep your limits in mind."
             Br laugh "Fair enough."
 
     if bangok_four_bryce3.mavtarget == "womb":
@@ -510,7 +550,10 @@ label bangok_four_bryce3_mcbottom_tp:
         $ renpy.pause(0.3)
         m "When I came back down, Bryce and Maverick both were hilted in me. I could feel their cocks rubbing together within me through my inner walls, as my body shifted. I rose and fell with Bryce's breathing, sandwiched between his belly and Maverick's and stuffed inside with their man meat."
         $ renpy.pause(0.5)
-        Sb drop "Are you okay, [player_name]? You, ah, made a lot of noise when Maverick went in."
+        if bangok_four_bryce3.sebastian_in == True:
+            Sb drop "Are you okay, [player_name]? You, ah, made a lot of noise when Maverick went in."
+        else:
+            Br smirk "Cock to cock in you."
         m "I slid a hand between my belly and Maverick's hard plates, feeling the contour of his cock through my skin and womb. Most of the pain at my innermost gate was gone, blanketed under a statickey feeling of arousal at every twitch in Maverick's length."
         c "That... was... incredible."
         Br laugh "Was it, now?"
@@ -521,34 +564,37 @@ label bangok_four_bryce3_mcbottom_tp:
         m "I slid a hand between my belly and Maverick's hard plates, feeling the contour of his cock through my skin and vagina. My inner walls squeezed back at every twitch in Maverick's length, unable to gather the strength to contract properly around the massive penetration without the stimulation."
         c "So, now..."
 
-    m "Maverick backed his head up and Bryce lolled his back, exposing my face to the cold nighttime air."
-    m "Then a concerned-looking Sebastian stepped over Bryce's head, condom-enwrapped cock not far from my face."
-    Sb disapproval "Are you sure you're prepared for this? I'm worried you might have trouble getting these two's attention if--"
-    m "Bryce nudged Sebastian's hindquarters with his snout, pushing him closer to me."
-    Br normal "If something goes wrong, [player_name] will get your attention and you'll get ours."
-    Br smirk "But the hard part is already over. We fit."
-    Sb drop "I don't recall that being the hard part."
-    $ renpy.pause(0.8)
-    Sb normal "[player_name], how deep are you okay with me going in your mouth?"
-    menu:
-        "Mouth.":
-            $ bangok_four_bryce3.sebtarget = "mouth"
-        "Throat.":
-            $ bangok_four_bryce3.sebtarget = "throat"
-    Sb smile "Alright."
+    if bangok_four_bryce3.sebastian_in == True:
+        m "Maverick backed his head up and Bryce lolled his back, exposing my face to the cold nighttime air."
+        m "Then a concerned-looking Sebastian stepped over Bryce's head, condom-enwrapped cock not far from my face."
+        Sb disapproval "Are you sure you're prepared for this? I'm worried you might have trouble getting these two's attention if--"
+        m "Bryce nudged Sebastian's hindquarters with his snout, pushing him closer to me."
+        Br normal "If something goes wrong, [player_name] will get your attention and you'll get ours."
+        Br smirk "But the hard part is already over. We fit."
+        Sb drop "I don't recall that being the hard part."
+        $ renpy.pause(0.8)
+        Sb normal "[player_name], how deep are you okay with me going in your mouth?"
+        menu:
+            "Mouth.":
+                $ bangok_four_bryce3.sebtarget = "mouth"
+            "Throat.":
+                $ bangok_four_bryce3.sebtarget = "throat"
+        Sb smile "Alright."
 
-    $ renpy.pause (0.8)
+        $ renpy.pause (0.8)
 
-    m "Sebastian stepped close enough I could accept his condom-wrapped tip into my mouth. Then he pushed a little further, filling my mouth with the warmth of his length and the taste of the condom. I began to slurp and lick, preparing for the next step."
+        m "Sebastian stepped close enough I could accept his condom-wrapped tip into my mouth. Then he pushed a little further, filling my mouth with the warmth of his length and the taste of the condom. I began to slurp and lick, preparing for the next step."
 
     $ renpy.pause (0.5)
     play soundloop "fx/rub2.ogg"
     m "The gangbang began for real with Maverick pulling back and taking his first thrust, then his next, and his next, at a rough cadence."
-    m "Bryce rolled his hips, fucking my ass lightly with what little room he could move. He hardly needed to do more, as Maverick's thrusting above drove through my body, stimulating all three of us."
-    if bangok_four_bryce3.sebtarget == "throat":
-        m "Pushing lightly against each of Maverick's thrusts, Sebastian worked to the back of my mouth, then began gently holding himself in place as I was shoved to take him in my throat, slightly deeper each time."
-    else:
-        m "Pushing lightly agaisnt each of Maverick's thrusts, Sebastian explored the nooks and crannies of my mouth, brushing over, under, and around my tongue as I tried my best to suck him with all the mindblowing sensations in my lower half."
+    m "Bryce rolled his hips, fucking my ass lightly with what little room he could move. He hardly needed to do more, as Maverick's thrusting above drove through my body, stimulating both of us."
+
+    if bangok_four_bryce3.sebastian_in == True:
+        if bangok_four_bryce3.sebtarget == "throat":
+            m "Pushing lightly against each of Maverick's thrusts, Sebastian worked to the back of my mouth, then began gently holding himself in place as I was shoved to take him in my throat, slightly deeper each time."
+        else:
+            m "Pushing lightly agaisnt each of Maverick's thrusts, Sebastian explored the nooks and crannies of my mouth, brushing over, under, and around my tongue as I tried my best to suck him with all the mindblowing sensations in my lower half."
 
     $ renpy.pause (0.8)
     m "I swooned, the thick meat stuffing me from every angle more than a human mind could take."
@@ -565,12 +611,16 @@ label bangok_four_bryce3_mcbottom_tp:
         $ renpy.pause(0.8)
         stop soundloop fadeout 0.3
         if persistent.bangok_knot == True:
-            if bangok_four_bryce3.sebtarget == "throat":
+            if bangok_four_bryce3.sebastian_in == False:
+                m "Abruptly, Maverick stuttered to a stop, through my cervix but a little short of hilting me. Even still, the violent thrust pushed me up Bryce's cock a distance I could feel sliding out."
+            elif bangok_four_bryce3.sebtarget == "throat":
                 m "Abruptly, Maverick stuttered to a stop, through my cervix but a little short of hilting me. Even still, the violent thrust pushed me up Bryce's cock, and shoved Sebastian's slit into my face as his cock hilted in my neck."
             else:
                 m "Abruptly, Maverick stuttered to a stop, through my cervix but a little short of hilting me. Even still, the violent shove pushed me up Bryce's cock, and shoved Sebastian's shaft to the back of my mouth."
         else:
-            if bangok_four_bryce3.sebtarget == "throat":
+            if bangok_four_bryce3.sebastian_in == False:
+                m "Abruptly, Maverick slammed me into his hips, hilting me as deep as he could go, spearing my womb and stretching my vagina around his dragonhood like a toy. The violent thrust pushed me up Bryce's cock a distance I could feel."
+            elif bangok_four_bryce3.sebtarget == "throat":
                 m "Abruptly, Maverick slammed me into his hips, hilting me as deep as he could go, spearing my womb and stretching my vagina around his dragonhood like a toy. The violent thrust pushed me up Bryce's cock and shoved Sebastian's slit into my face as his cock hilted in my neck."
             else:
                 m "Abruptly, Maverick slammed me into his hips, hilting me as deep as he could go, spearing my womb and stretching my vagina around his dragonhood like a toy. The violent thrust pushed me up Bryce's cock and shoved Sebastian's shaft to the back of my mouth."
@@ -578,7 +628,7 @@ label bangok_four_bryce3_mcbottom_tp:
         $ renpy.pause(1.0)
         
         if bangok_four_bryce3.protection == True:
-            m "Maverick's condom's tip bloated in my womb, flooded with Maverick's seed, expanding to fill my most sacred place. His cock twitched and pulsed against my stretched canal and dilated cervix, dragging out my peak as he poured into me."
+            m "Maverick's condom's tip bloated in my womb, flooded with his seed, expanding to fill my most sacred place. His cock twitched and pulsed against my stretched canal and dilated cervix, dragging out my peak as he poured into me."
             scene black with dissolvemed
             if persistent.bangok_inflation == True:
                 m "His load kept coming, the condom filling like a balloon, forcing my womb to expand around it, pressing back against Bryce's cock in my ass and Maverick's belly above me."
@@ -586,7 +636,7 @@ label bangok_four_bryce3_mcbottom_tp:
         m "When I came back to my senses, it was to Maverick's thrusts increasing in depth and urgency. His head kissed and tapped my cervix, not pressing, but reaching just deep enough to trigger the electric sparks of pain and pleasure."
         m "On each pull out, Maverick withdrew closer and closer to my entrance, his head tugging back on my spread outer folds. The stretching of my lips dealing with his large head rubbed my clit, flooding my head with yet more waves of arousal."
         stop soundloop fadeout 0.5
-        m "Then Maverick popped his head all the way out of my passage, the explosion of sensation in my lips bringing me just within grasping distance of my peak. I reached for it, heady on the sensations from my other holes."
+        m "Then Maverick popped his head all the way out of my passage, the explosion of sensation in my lips bringing me just within grasping distance of my peak. I reached for it."
         play soundloop "fx/rub1.ogg"
         scene white with fadequick
         m "When Maverick redoubled his pace, spearing my entire canal and kissing my cervix with every thrust, I was blown away."
@@ -610,8 +660,11 @@ label bangok_four_bryce3_mcbottom_tp:
         if persistent.bangok_inflation == True:
             m "His load kept coming, seed packing my tubes and womb until no room remained. Yet more cum came, forcing my womb to expand around it, pressing back against Bryce's cock in my ass and Maverick's belly above me."
     play soundloop "fx/breathing.ogg" fadein 1.0
-    m "His pulses slowed, {w=0.3}then {w=0.3}finally came to an end."
-    m "Sebastian withdrew his cock from my mouth, and Bryce stilled, giving everyone a chance to check on me."
+    m "His pulses slowed, {w=0.3}then {w=0.3}finally came to an end. Maverick panted above me, tired out by the angle he'd had to take to work on top of Bryce."
+    if bangok_four_bryce3.sebastian_in == True:
+        m "Sebastian withdrew his cock from my mouth, and Bryce stilled, giving everyone a chance to check on me."
+    else:
+        m "Bryce stilled, taking the moment after Maverick's climax to check on me."
     Br flirty "That felt amazing, and I'm not even you."
     Br normal "How are you feeling?"
     menu:
@@ -621,7 +674,8 @@ label bangok_four_bryce3_mcbottom_tp:
             Br smirk "You know he's still inside you, right?"
         "Gonna be really sore.":
             Br smirk "Kinda unavoidable. Did you have fun, though?"
-            Sb drop "That amount of sore doesn't sound like fun, Bryce."
+            if bangok_four_bryce3.sebastian_in == True:
+                Sb drop "That amount of sore doesn't sound like fun, Bryce."
         "I think I'll take stock once I'm done tonight.":
             Br flirty "Can't wait for more, huh?"
 
@@ -822,6 +876,13 @@ label bangok_four_bryce3_mcbottom_train:
                     $ bangok_four_bryce3.brycetarget = "ass"
                 "Vaginal.":
                     $ bangok_four_bryce3.brycetarget = "vag"
+                "Both.":
+                    $ bangok_four_bryce3.sebastian_in = False
+                    Br brow "Both? I don't know what you've heard or read, [player_name], but I was only born with the one."
+                    c "I've changed my mind. Let's not make Maverick wait."
+                    Mv nice "..."
+                    Br flirty "Damn. I'm into it if you think you can take it."
+                    jump bangok_four_bryce3_mcbottom_mav_bryce_mp
     else:
         m "Bryce trudged up, admiring my rear."
         if bangok_four_playerhasdick == True:
