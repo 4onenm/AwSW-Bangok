@@ -386,10 +386,10 @@ label bangok_four_bryce3_mcbottom:
                 jump bangok_four_bryce3_mcbottom_bryceseb_dp
             "You know, I should be able to take all three of you." if bangok_four_playerhasdick == False:
                 c "If you got on top of the pile, Maverick?"
-                Mv nice "..."
+                Mv nice flip "..."
                 Br flirty "I'm into it if you think you can take it."
                 Sb drop "Seems a little extreme."
-                jump bangok_four_bryce3_mcbottom_mav_bryce_dp_opt_tp
+                jump bangok_four_bryce3_mcbottom_mav_bryce_mp
     else:
         Br normal "I assume you want me first, to ease up to Maverick's size."
         if bangok_four_playerhasdick == True:
@@ -405,7 +405,7 @@ label bangok_four_bryce3_mcbottom:
                 "How about Maverick first?" if bangok_four_bryce3_store.top_mav == True:
                     $ bangok_four_bryce3_store.top_mav = False
                     show bryce brow with dissolve
-                    Mv angry "I won't be responsible for severely injuring you if you're too small to take either of us."
+                    Mv angry flip "I won't be responsible for severely injuring you if you're too small to take either of us."
                     Br brow "Really, [player_name]. At your size, you don't want to jump up to Maverick's in one go unless you're way more malleable than you look. Not when there's someone my size to ease the way."
                     jump bangok_four_bryce3_mcbottom_train_or_mp
                 "Why not both of you?":
@@ -688,21 +688,117 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
     #         Sb normal "Oh, here we go."
 
     m "Maverick began carefully to pull out, large girth tugging on my limp inner muscles."
-    menu:
-        "N-No...":
-            Br brow "No? What's wrong?"
-            m "Maverick paused, leaving me spread around him."
-            menu:
-                "L-Leave the condom in?" if bangok_four_bryce3_store.protection == True:
-                    Br laugh "Ha! Damn, that's kinky."
-                    Br flirty "I'd appreciate it if you did, Mavers."
-                    Mv normal "Fine."
-                    $ bangok_four_bryce3_store.mavcondomleftin = True
-                "G-Go more slowly.":
-                    Mv normal "I'm taking this as slowly as I can."
-        "Ohhh...":
-            pass
+    if bangok_four_bryce3_store.protection == True:
+        menu:
+            "N-No...":
+                Br brow "No? What's wrong?"
+                m "Maverick paused, leaving me spread around him."
+                menu:
+                    "L-Leave the condom in?" if bangok_four_bryce3_store.protection == True:
+                        Br laugh "Ha! Damn, that's kinky."
+                        Br flirty "I'd appreciate it if you did, Mavers."
+                        $ renpy.pause(0.8)
+                        Mv normal "Fine."
+                        $ bangok_four_bryce3_store.mavcondomleftin = True
+                        m "Working backward with his forelegs, Maverick arched his back until he could reach one sandy paw back. He wiped his paw on my leg, ridding it most of the grains before squeezing and tugging at the condom material."
+                        m "Inching maddeningly slowly back out of me, Maverick slid his length from the condom, leaving the long protective sheath and his liquid gift both resting inside me."
+                        if bangok_four_bryce3_store.sebastian_in == True:
+                            m "Before Maverick pulled out completely, Sebastian knelt down next to our joining."
+                            Sb normal "Here. Let me tie it off with actual hands."
+                            m "He squeezed off the condom material just after Maverick's head tugged back through my folds. The cold keratin of his claws scraped my thighs."
+                            m "I felt the stretching and twisting as he tugged slightly more of the condom out of me to tie it off. Then it relaxed, as Sebastian dropped the knot back against my folds."
+                            Sb smile "There. That what you were going for, [player_name]?"
+                        else:
+                            m "When his head tugged back through my folds, Maverick pinched off the condom with a squeeze and a twist, the cold keratin of his claws scraping the insides of my thighs."
+                            m "Then he worked his way back until he could get his muzzle between my legs. With a combination of his scaly lips, paw, and tugging and holding the condom against the side of my leg, he managed to get it tied off."
+                            m "The stretched material snapped the knot against my abused folds when he let it go."
 
+                        if bangok_four_bryce3_store.mavtarget == "womb":
+                            if persistent.bangok_inflation == True:
+                                m "I sighed with contentment, my pregnancy of cum full, round, and undisturbed."
+                            else:
+                                m "I sighed with contentment, feeling Maverick's balloon of seed resting deeper inside me than any human could hope to deliver."
+                        else:
+                            if persistent.bangok_inflation == True:
+                                m "I sighed happily, my vagina feeling just as stuffed by Maverick's bloated cum balloon as when he himself had been inside."
+                            else:
+                                m "I sighed happily, feeling Maverick's load resting deep inside my canal, almost at my inner gate."
+                    "G-Go more slowly.":
+                        Mv normal "I'm taking this as slowly as I can."
+            "Ohhh...":
+                pass
+
+    if bangok_four_bryce3_store.mavcondomleftin == False:
+        if bangok_four_bryce3_store.mavtarget == "womb":
+            if bangok_four_bryce3_store.protection == True:
+                if persistent.bangok_inflation == True:
+                    m "The balloon of cum pulled at my inner gate, thick, heavy, and unwilling to move from my bloated belly."
+                    m "Maverick stopped, cognizant he couldn't make any more progress without hurting me or breaking the condom."
+                    menu:
+                        "J-Just tear it.":
+                            Mv "You are sure?"
+                            m "I nodded, knowing that as my cervix began to recover, it'd make getting the uncooperative balloon of cum out of me all the more painful."
+                            m "Maverick tugged harder, managing to stretch the condom material to the point his head had almost pulled through my folds."
+                            play sound "fx/bubbles.ogg"
+                            play sound2 "fx/spray.ogg"
+                            $ bangok_four_bryce3_store.mavbroke == True
+                            m "He pulled out, tearing the condom material and leaving my cunt lips empty and gaped in one pull. I gasped as the barrier's stretching force disappeared, a river of cum leaking from my breached inner gate to spatter over my legs and Bryce's cock and hindquarters."
+                            Br laugh "Hey! I didn't think I'd be getting the mess!"
+                        "H-How do we get it out?":
+                            m "Gently, Maverick curled his tail around, then pressed it against my distended belly."
+                            m "I gasped, feeling almost like I was pissing as Maverick's cum flowed from the reservoir of his condom to pool in and around his tip, forced out by the added pressure of Maverick's tail."
+                            m "Then the rest of the reservoir popped through, the blob of cum shoving Maverick's cock out of me."
+                            play sound "fx/uncork.ogg"
+                            m "The bloated condom plopped out onto Bryce's tail, before Maverick dragged it away to the ground."
+                else:
+                    m "When his head tugged out of my fuck-hole it gaped, easily allowing his condom's reservoir to pop free and bounce off Bryce's cock."
+            else:
+                m "As he pulled back through my cervix, fluid splashed from my womb, saturating my canal's walls."
+                if persistent.bangok_inflation == True:
+                    m "When his head tugged out of my fuck-hole it gaped, letting a river of cum pour from inside me onto Bryce's cock and hindquarters."
+                    Br laugh "Hey! I didn't think I'd be getting the mess!"
+                else:
+                    m "When Maverick's head tugged through my lips, I remained gaped open. A dribble of cum spilled from my canal onto where Bryce's cock speared my ass, the rest still trapped much deeper inside me."
+        else:
+            if bangok_four_bryce3_store.protection == True:
+                m "Maverick's condom popped free of my abused folds, bouncing off where Bryce's cock still speared my ass."
+            else:
+                m "When Maverick's head tugged through my lips, I remained gaped open. A dribble of cum spilled from my canal onto where Bryce's cock speared my ass, the rest still trapped much deeper inside me."
+
+    stop soundloop fadeout 3.0
+    scene stars at Pan((0, 20), (0, 20), 0.0) with dissolvemed
+    if bangok_four_bryce3_store.sebastian_in == True:
+        Sb disapproval "Maverick? Where are you going?"
+    else:
+        Br brow "Maverick? Going somewhere?"
+    Mv normal "Home."
+    Br stern "After {i}that{/i}? There's no way [player_name] is walking after that. You're kinda big, and that was not nearly enough prep."
+    if bangok_four_bryce3_store.sebastian_in == True:
+        Sb drop "I'm not going to be able to stay and help, so if Bryce needs help getting [player_name] home..."
+        Mv normal "No. I think Bryce has that covered."
+    else:
+        Br brow "If I need help getting [player_name] home..."
+        Mv normal "No. I think you have that covered."
+
+    $ renpy.pause(0.5)
+    Br stern "Maverick!"
+    m "Bryce's shout vibrated through my back, and his cock still in my ass. I slumped, unable to contribute to the situation."
+    $ renpy.pause(1.2)
+    Br "He left."
+
+    $ renpy.pause(0.8)
+    Sb drop "Not to be that asshole, but I do have to go sooner rather than later."
+    if bangok_four_bryce3_store.mavcondomleftin == True:
+        Sb normal "[player_name], it looks like there's room to fuck you past Maverick's condom. Or we could finish the way we started. Or if Maverick's actions didn't really leave you in the mood... Up to you."
+    else:
+        Sb normal "[player_name], I'm happy with wherever you want me to finish. Or if Maverick's actions didn't really leave you in the mood... Up to you."
+    menu:
+        "Fuck me.":
+            pass
+        "Finish in my mouth.":
+            pass
+        "I'm done. N-No more.":
+            pass
 
 
     jump todo_out_of_content_bangok_four_bryce3
@@ -2380,6 +2476,7 @@ label bangok_four_bryce3_mctop_mavgoes:
     m "Maverick watched me with suspicion as he walked over to Bryce."
     m "Only when he'd nearly stepped on Bryce's tail did he focus on his partner."
     label bangok_four_bryce3_mcbottom_train_bryce_takeover_mavgoes_merge:
+    $ bangok_four_bryce3_store.mavtarget = "bryce"
     show maverick nice flip with dissolve
     show bryce smirk flip:
         transform_anchor True
