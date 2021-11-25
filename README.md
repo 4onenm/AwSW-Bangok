@@ -5,6 +5,7 @@ An Angels with Scaly Wings lewd mod
 ### Mandatory Requirements:
 
 + **MagmaLink**: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2594080243) or [GitLab](https://gitlab.com/jakzie2/awsw-magmalink)
++ **Community Resource Assets Pack (CRAP)**: ~~[Steam Workshop]()~~ or [GitLab](https://gitlab.com/jakzie2/awsw-crap)
 
 Contributions welcome.
 
@@ -24,7 +25,6 @@ Resource credits:
 + `cr/ipsum_*_notail.png`: 4onen, editing base-game assets
 + `cr/lorem_bangok_hidepeek.png`: 4onen, editing base-game assets
 + `cr/lorem_bangok_peek.png`: 4onen
-+ `cr/remy/remy_*_n.png`: 4onen, editing base-game assets
 + `cr/sebastian_shy_b_sleep.png`: 4onen, editing base-game assets
 + `fx/2buckets.ogg`: 4onen, editing base-game `fx/2glasses.ogg`
 + `fx/digice.ogg`: 4onen, editing base-game `fx/dig.ogg`

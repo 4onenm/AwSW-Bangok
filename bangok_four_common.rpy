@@ -223,11 +223,6 @@ init:
     image ipsum happy flip notail = im.Flip("cr/ipsum_happy_notail.png",horizontal=True)
     image ipsum sad flip notail = im.Flip("cr/ipsum_sad_notail.png",horizontal=True)
 
-    image remy normal ud = "cr/remy_normal_ud.png"
-    image remy shy ud = "cr/remy_shy_ud.png"
-    image remy look ud = "cr/remy_look_ud.png"
-    image remy smile ud = "cr/remy_smile_ud.png"
-
     image sebastian normal b dk = im.Recolor("cr/sebastian_normal_b.png", 70, 70, 100, 255)
     image sebastian shy dk = im.Recolor("cr/sebastian_shy.png", 70, 70, 100, 255)
     image sebastian shy b dk = im.Recolor("cr/sebastian_shy_b.png", 70, 70, 100, 255)
