@@ -285,7 +285,7 @@ class BangOkMod(Mod):
     version = "v0.0"
     author = "4onen"
     nsfw = True
-    dependencies = ["MagmaLink", "?Side Images"]
+    dependencies = ["MagmaLink", "?Side Images", "?CRAP"] # TODO: Make CRAP mandatory when Bryce and Ipsum assets move.
 
     @classmethod
     def mod_load(cls):
