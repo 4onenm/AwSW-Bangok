@@ -441,7 +441,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
     m "It was a struggle until the tip was in. I held myself for a moment, gasping as I adjusted to the wide spread. Then the long, slow slide down his lubricated length left me panting with need and want."
     $ renpy.pause(1.2)
     m "With Bryce hilted inside me, I leaned back again, splaying across Bryce's belly, legs spread to reveal where his cock held me in place, and my dribbling cunt where Maverick's would soon go."
-    Br bangok pant "W-Wow."
+    Br pant "W-Wow."
     m "He curled his head over, exhaling over my shoulder and upper body."
     Br flirty "Alright Maverick."
     Br laugh "Try not to step on me too much!"
@@ -1274,9 +1274,9 @@ label bangok_four_bryce3_mcbottom_train:
     Br laugh "As if anyone could take this as part of some sort of evil plan."
     if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
         Mv "Did you really have to piss inside?"
-        Br bangok pant "H-Hey. [player_name] wanted it."
+        Br pant "H-Hey. [player_name] wanted it."
         $ renpy.pause(0.5)
-        Br bangok pantflirt "[player_name] might... want yours too... if you need to go."
+        Br pantflirt "[player_name] might... want yours too... if you need to go."
         Br flirty "What... do you say... [player_name]?"
         menu:
             "[[Moan.]":
@@ -1304,7 +1304,7 @@ label bangok_four_bryce3_mcbottom_train:
         Mv angry "Calling humans what they are is not an insult."
         Br stern "I... Mmmh..."
         m "Bryce hit the ground, kicking up a small cascade of sand next to my head."
-    Br bangok pantflirt "N-not long...!"
+    Br pantflirt "N-not long...!"
 
     $ renpy.pause(1.2)
     m "I could feel his thrusts get more uneven, more needy."
@@ -2341,7 +2341,7 @@ label bangok_four_bryce3_mctop:
                 with None
                 m "Sebastian eased back extremely slowly."
                 m "Where his hips separated from Bryce's, I saw a bulb of flesh at his base spreading Bryce's underbelly plates, stretching the hide beneath."
-                show bryce bangok pant flip with dissolve
+                show bryce pant flip with dissolve
                 Br "There's a good stretch! Mmh!"
                 show sebastian disapproval flip:
                     xpos 0.518 ypos 1.05
@@ -2517,7 +2517,7 @@ label bangok_four_bryce3_mctop_mavgoes:
             xpos 0.9325
         with ease
         m "Then Maverick pushed his tip into Bryce's ass, still pissing."
-        Br bangok pant flip "Haaahhh!"
+        Br pant flip "Haaahhh!"
         m "I watched, mesmerised as Maverick held his position. I could still hear the stream of liquid pooling inside Bryce."
         stop soundloop fadeout 0.8
         $ renpy.pause(0.8)
@@ -2534,7 +2534,7 @@ label bangok_four_bryce3_mctop_mavgoes:
             xpos 0.9325
         with ease
         m "Maverick pushed his tip into Bryce's ass, quickly. Bryce's maw fell open, exhaling abruptly."
-        Br bangok pant flip "Haaahhh!"
+        Br pant flip "Haaahhh!"
         m "After giving Bryce a few moments to adjust, Maverick kept pushing, feeding Bryce's ass all the cockflesh he had to give."
         show maverick nice flip:
             ease 1.5 xpos 0.57
@@ -2543,7 +2543,7 @@ label bangok_four_bryce3_mctop_mavgoes:
         m "Maverick lay on Bryce's tail and back a moment, both of them catching their breath."
 
     m "Bryce's tail tip flicked against Maverick's neck."
-    Br bangok pantflirt flip "Y-You're, ah, crushing my circulation there."
+    Br pantflirt flip "Y-You're, ah, crushing my circulation there."
 
 
 

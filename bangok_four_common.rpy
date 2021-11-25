@@ -149,10 +149,6 @@ init:
 
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
     image bangok_four_bryce_underside_large dk flip = im.Recolor(im.Flip("cr/bryce_underside_large.png",horizontal=True), 70, 70, 100, 255)
-    image bryce bangok pant = "cr/bryce_pant.png"
-    image bryce bangok pant flip = "cr/bryce_pant_flip.png"
-    image bryce bangok pantflirt = "cr/bryce_pantflirt.png"
-    image bryce bangok pantflirt flip = "cr/bryce_pantflirt_flip.png"
 
     image lorem bangok normal = im.Composite(
         (1240,650), 

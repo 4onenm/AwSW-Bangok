@@ -260,12 +260,6 @@ def add_side_images():
     for expression in ["blush","orgasm","blushpalm","lipbite"]:
         renpy.exports.image('side anna bangok %s'%expression, clip_anna_side_image('cr/anna_%s.png'%expression))
 
-    def clip_bryce_side_image(imagefile):
-        return im.Scale(im.Crop(imagefile,(400,40,500,600)),250,300)
-
-    for expression in ["pant","pantflirt"]:
-        renpy.exports.image('side bryce bangok %s'%expression, clip_bryce_side_image('cr/bryce_%s_flip.png'%expression))
-
     def clip_ipsum_side_image(imagefile):
         return im.Flip(im.Scale(im.Crop(imagefile,(100,40,500,600)),250,300),horizontal=True)
     
