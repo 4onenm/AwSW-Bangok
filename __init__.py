@@ -260,12 +260,6 @@ def add_side_images():
     for expression in ["blush","orgasm","blushpalm","lipbite"]:
         renpy.exports.image('side anna bangok %s'%expression, clip_anna_side_image('cr/anna_%s.png'%expression))
 
-    def clip_ipsum_side_image(imagefile):
-        return im.Flip(im.Scale(im.Crop(imagefile,(100,40,500,600)),250,300),horizontal=True)
-    
-    for expression in ["normal","happy","sad"]:
-        renpy.exports.image('side ipsum %s flip notail'%expression, clip_ipsum_side_image('cr/ipsum_%s_notail.png'%expression))
-
     def clip_sebastian_side_image(imagefile):
         return im.Flip(im.Scale(im.Crop(imagefile,(70,0,500,600)),250,300),horizontal=True)
     
