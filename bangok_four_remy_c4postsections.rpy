@@ -3,7 +3,19 @@ init python in bangok_four_remy_c4postsections_store:
     remy_tail_player = None
     remy_tail_remy = None
 
-    protection = None
+    protection_agreed = False
+
+    tail_protection = False
+    shaft_protection = False
+    mc_protection = False
+
+    tail_lube = False
+    shaft_lube = False
+    ass_lube = False
+
+    tail_in_remy = False
+    tail_in_player = None
+
 
 
 
@@ -374,9 +386,9 @@ label bangok_four_remy_c4postsections_sebintro:
     Ry "It's not strictly necessary, with us being not just different species but of wildly differing taxonomic classes. But I'm not sure if you..."
     menu:
         "Probably a good idea.":
-            $ bangok_four_remy_c4postsections_store.protection = True
+            $ bangok_four_remy_c4postsections_store.protection_agreed = True
         "Nah, don't worry about it.":
-            $ bangok_four_remy_c4postsections_store.protection = False
+            $ bangok_four_remy_c4postsections_store.protection_agreed = False
 
     Ry normal "The, ah, lube is strictly necessary. No question."
     c "Alright."
@@ -471,7 +483,7 @@ label bangok_four_remy_c4postsections_sebintro:
         "You are pretty cute, you know that?":
             Ry shy ud "Th-Thank you."
         "That's a lot of neck.":
-            Ry look ud "I'll have to return some of it to the store."
+            Ry look ud "I'll have to return some of it to the shop."
 
     Ry normal ud "And you, [player_name]?"
     $ renpy.pause(0.3)
@@ -510,10 +522,176 @@ label bangok_four_remy_c4postsections_sebintro:
     else:
         Ry shy ud "Ah. Th-That... I see."
 
+    $ renpy.pause(0.5)
+    c "And you? From what you said earlier..."
+    Ry normal ud "Ah. Let me... I'll just get positioned first and then..."
+    $ renpy.pause(0.3)
+    hide remy with dissolve
+    scene o2:
+        ypos -250
+        ease 1.5 xpos -128
+    with None
+    $ renpy.pause(1.8)
+    scene o2:
+        ypos -250 xpos -128
+    with None
+    show remy shy ud:
+        xanchor 0.5
+        yanchor 1.0
+        transform_anchor True
+        rotate 30
+        xpos 0.7
+        ypos 1.36
+    with dissolve
+    $ renpy.pause(0.5)
+    if persistent.bangok_cloacas == True:
+        m "With Remy lying on his back, I could see a single horizontal slit, exposed between his hindlegs. The scales rimming the hole looked ever so slightly damp and shiny."
+    else:
+        m "With Remy lying on his back, I oculd see a single large horizontal slit, and a smaller one further down, exposed between his hindlegs. The scales rimming the upper looked ever so slightly damp and shiny."
 
+    if bangok_four_malepartners < 1 and (persistent.bangok_cloacas == False or bangok_four_femalepartners < 1):
+        c "Wait, I thought you were male. Do you not have a penis?"
+        Ry normal ud "I do. It's just..."
+
+    m "After a few moments, Remy clenched some muscles in his lower body. A {size=+8}large{/size}, pinkish shaft slid out into the light of the room."
+    show remy normal ud with dissolve
+    $ renpy.pause(0.5)
+    c "Oh my."
+    Ry look ud "If that's too large, we really should call this off now."
+    c "No, no, I think I'll be fine."
+    Ry shy ud "Then... what would you like to do? I, ah, believe we should probably get any prep work done before we... go further."
+    m "Moving the bottle of lube and boxes of condoms closer by, I considered our options."
+    jump bangok_four_remy_c4postsections_keymenu
+
+label bangok_four_remy_c4postsections_keymenu:
+    menu:
+        "Put a condom on yourself." if bangok_four_remy_c4postsections_store.mc_protection == False and bangok_four_playerhasdick == True and bangok_four_remy_c4postsections_store.protection_agreed == True:
+            $ bangok_four_remy_c4postsections_store.mc_protection = True
+            show remy shy ud with dissolve
+            call bangok_four_remy_c4postsections_keymenu_getcondom
+            jump bangok_four_remy_c4postsections_keymenu
+        "Put a condom on his cock." if bangok_four_remy_c4postsections_store.shaft_protection == False and bangok_four_remy_c4postsections_store.shaft_lube == False and bangok_four_remy_c4postsections_store.protection_agreed == True:
+            $ bangok_four_remy_c4postsections_store.shaft_protection = True
+            show remy shy ud with dissolve
+            call bangok_four_remy_c4postsections_keymenu_getcondom
+            jump bangok_four_remy_c4postsections_keymenu
+        "Lube his cock." if bangok_four_remy_c4postsections_store.shaft_lube == False:
+            $ bangok_four_remy_c4postsections_store.shaft_lube = True
+            if bangok_four_remy_c4postsections_store.protection_agreed == True:
+                show remy look ud with dissolve
+                m "As I lifted the bottle of lube over Remy's shaft, he gave me a look."
+                Ry "[player_name], you, ah, said protection was probably a good idea. Lube underneath it can make it slip easily, making it unsafe."
+                Ry shy ud "Did you change your mind about using a condom?"
+                menu:
+                    "Yeah. I changed my mind.":
+                        $ bangok_four_remy_c4postsections_store.protection_agreed = False
+                        Ry normal ud "Whatever you prefer."
+                    "I'll put a condom on you.":
+                        call bangok_four_remy_c4postsections_keymenu_getcondom
+                        $ bangok_four_remy_c4postsections_store.shaft_protection = True
+
+            m "I squirted a big dollop of lube onto his shaft, then set the bottle aside and began to spread it with my hands."
+            play soundloop "fx/massage2.ogg"
+            show remy shysleep ud with dissolve
+            $ renpy.pause(2.0)
+            stop soundloop fadeout 0.3
+            $ renpy.pause(0.5)
+            Ry shy ud "Ah. Th-That's... well applied."
+
+            menu:
+                "Keep going with your hands and mouth.":
+                    jump bangok_four_remy_c4postsections_oral
+                "Do something else.":
+                    pass
+            jump bangok_four_remy_c4postsections_keymenu
+        "Lube his ass." if bangok_four_remy_c4postsections_store.ass_lube == False and (bangok_four_playerhasdick == True or bangok_four_remy_c4postsections_store.remy_tail_remy == True) and bangok_four_remy_c4postsections_store.tail_in_remy == False:
+            $ bangok_four_remy_c4postsections_store.ass_lube = True
+            if persistent.bangok_cloacas == True:
+                c "Rear of your cloaca is your ass, right?"
+                show remy shy ud with dissolve
+                m "I squeezed out a large dollop of lube onto Remy's slit, sliding some of it down the bottom of his cock, then set the bottle aside and reached to work my fingers in, to make sure it permeated his rear entrance."
+            else:
+                show remy shy ud with dissolve
+                m "I squeezed out a large dollop of lube onto Remy's ass, then set the bottle aside and reached to work my fingers in, to make sure it permeated his rear entrance."
+            Ry shysleep ud "O-Ohhhh."
+            m "It didn't take long to spread the lube in, but just prodding at the outside of Remy's hole seemed to get him going a little more, his cock twitching."
+            menu:
+                "Push a few fingers in.":
+                    jump bangok_four_remy_c4postsections_fisting
+                "Put Remy's tail in." if bangok_four_remy_c4postsections_store.remy_tail_remy == True:
+                    jump bangok_four_remy_c4postsections_keymenu_tailinsert
+                "Do something else.":
+                    show remy shy ud with dissolve
+                    m "I withdrew my fingers and Remy sighed."
+            jump bangok_four_remy_c4postsections_keymenu
+        "Lube his tail." if bangok_four_remy_c4postsections_store.tail_lube == False and bangok_four_remy_c4postsections_store.tail_in_remy == False and (bangok_four_remy_c4postsections_store.remy_tail_remy == True or bangok_four_remy_c4postsections_store.remy_tail_player == True):
+            $ bangok_four_remy_c4postsections_store.tail_lube = True
+            if bangok_four_remy_c4postsections_store.remy_tail_remy == True and bangok_four_remy_c4postsections_store.remy_tail_player == True:
+                m "As I moved down toward Remy's tail with the lube, he spoke up."
+                Ry look ud "Are you doing that for putting it into me or into you?"
+                menu:
+                    "Me.":
+                        label bangok_four_remy_c4postsections_keymenu_tailcondom_check:
+                        Ry look ud "I'm... I'm unsure of your durability in that... area. My scales are far from perfectly smooth. If you want to do that, it will be far safer for you to use a condom over my tail. And to use a condom, you can't really have lube underneath it, especially with the way my tail tapers..."
+                        menu:
+                            "I want you as you are.":
+                                Ry shy ud "Er... I-if you insist."
+                            "I'll put a condom on your tail.":
+                                call bangok_four_remy_c4postsections_keymenu_getcondom
+                                $ bangok_four_remy_c4postsections_store.tail_protection = True
+                    "You.":
+                        Ry shy ud "I... Oh."
+            elif bangok_four_remy_c4postsections_store.remy_tail_player == True:
+                jump bangok_four_remy_c4postsections_keymenu_tailcondom_check
+
+            show remy shy ud with dissolve
+            $ renpy.pause(0.3)
+            play soundloop "fx/massage2.ogg"
+            $ renpy.pause(2.0)
+            stop soundloop fadeout 0.3
+            if bangok_four_remy_c4postsections_store.tail_protection == True:
+                m "The condom over half of Remy's tail glistened with globs of lube, the entire surface coated."
+            else:
+                m "Remy's tail glistened with lube all the way to halfway down, coating over every scale and flowing down inbetween."
+            Ry smile ud "Looks good."
+            Ry normal ud "Er. I think. Again, glasses."
+            if bangok_four_remy_c4postsections_store.remy_tail_remy == True:
+                menu:
+                    "Put Remy's tail in his ass.":
+                        label bangok_four_remy_c4postsections_keymenu_tailinsert:
+                        Ry shy ud "What are you...?"
+                        $ renpy.pause(0.3)
+                        Ry shysleep ud "Mmnh."
+                        $ bangok_four_remy_c4postsections_store.tail_in_remy = True
+                        $ renpy.pause(0.3)
+                        m "When he realized what I was doing, Remy's tail stopped resisting my attempt to move it, curling over and almost guiding itself to his rear entrance before burrowing in, sliding easily enough with the lubrication I'd added."
+                        if bangok_four_remy_c4postsections_store.tail_lube == True and bangok_four_remy_c4postsections_store.ass_lube == True:
+                            m "The double layer of lube from his tail and ass squished and spattered over his backside in glistening droplets."
+                        Ry shy ud "Could you... Would you mind pushing on it? My own muscles can only bend it over so far, and when it gets wider..."
+                        if bangok_four_remy_c4postsections_store.tail_protection == True:
+                            m "I took hold of Remy's tail where it curved over, just before the condom began, then gently began to push, feeding more into his spreading asshole."
+                        else:
+                            m "I took hold of Remy's tail where it curved over, then gently began to push, feeding more into his spreading asshole."
+                        Ry shysleep ud "Nnh..."
+                        if bangok_four_remy_c4postsections_store.shaft_protection == True:
+                            m "His cock twitched noticeably as I felt his tail move inside him."
+                        else:
+                            m "His cock twitched noticeably, a small dribble of pre leaking from the tip as I felt his tail move inside him."
+                        Ry shy ud "I... think that's as far as I'll take it, u-unless you plan to push me over my peak this way."
+                        m "I let go, considering my remaining options."
+                        jump bangok_four_remy_c4postsections_keymenu
+                    "Later.":
+                        pass
+            jump bangok_four_remy_c4postsections_keymenu
 
     jump todo_out_of_content_bangok_four_remy_c4postsections
 
+label bangok_four_remy_c4postsections_keymenu_getcondom:
+    play sound "fx/rummage.ogg"
+    $ renpy.pause(0.6)
+    stop sound fadeout 0.5
+    $ renpy.pause(0.5)
+    return
 
 label todo_out_of_content_bangok_four_remy_c4postsections:
     play sound "fx/system3.wav"
