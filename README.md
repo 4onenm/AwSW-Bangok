@@ -5,7 +5,7 @@ An Angels with Scaly Wings lewd mod
 ### Mandatory Requirements:
 
 + **MagmaLink**: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2594080243) or [GitLab](https://gitlab.com/jakzie2/awsw-magmalink)
-+ **Community Resource Assets Pack (CRAP)**: ~~[Steam Workshop]()~~ or [GitLab](https://gitlab.com/jakzie2/awsw-crap)
++ **Community Resource Assets Pack (CRAP)**: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2665870882) or [GitLab](https://gitlab.com/jakzie2/awsw-crap)
 
 Contributions welcome.
 
