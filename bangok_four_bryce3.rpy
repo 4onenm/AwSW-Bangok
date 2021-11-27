@@ -593,26 +593,161 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
     m "The gangbang began for real with Maverick pulling back and taking his first thrust, then his next, and his next, at a rough cadence."
     m "Bryce rolled his hips, fucking my ass lightly with what little room he could move. He hardly needed to do more, as Maverick's thrusting above drove through my body, stimulating both of us."
 
+    # Going to borrow `top_mav` here again to decide if Mav uses you and gets off before everyone else or if he and Bryce go at the same time.
+
     if bangok_four_bryce3_store.sebastian_in == True:
         if bangok_four_bryce3_store.sebtarget == "throat":
             m "Pushing lightly against each of Maverick's thrusts, Sebastian worked to the back of my mouth, then began gently holding himself in place as I was shoved to take him in my throat, slightly deeper each time."
         else:
             m "Pushing lightly agaisnt each of Maverick's thrusts, Sebastian explored the nooks and crannies of my mouth, brushing over, under, and around my tongue as I tried my best to suck him with all the mindblowing sensations in my lower half."
 
-    $ renpy.pause (0.8)
-    m "I swooned, the thick meat stuffing me from every angle more than a human mind could take."
+
+        $ renpy.pause (0.8)
+        m "Abruptly Sebastian thrust at a slightly odd angle. I gagged and Sebastian pulled out. Bryce's head nearly bumped into mine as he nuzzled into Sebastian's crotch with me."
+        Sb drop "Ha. Ah. How are you holding up?"
+        menu:
+            "{i}More{/i}":
+                $ bangok_four_bryce3_store.top_mav = False
+                Sb smile "Sure."
+                m "Bryce's tongue flicked my nose as he licked Sebastian's length, even while Sebastian slipped back into my mouth."
+                if bangok_four_bryce3_store.sebtarget == "throat":
+                    m "Then the cock in my mouth was back in my throat, fucking deeper."
+                m "Bryce lolled his head back, slapping his tail to the ground, thrusting harder into my ass, pressing me up against Maverick with his hips."
+            "I-- Agh-- Ngh--":
+                $ bangok_four_bryce3_store.top_mav = True
+                Sb disapproval "Do you need help?"
+                m "I couldn't deny the rough fuck hurt, but my inflamed nerves desperately didn't want the sensations to end. If they pulled out, I wasn't sure I'd push through the pain to let them back in."
+                c "N-No."
+                m "Even still Bryce slowed, easing up on the pressing angles in my ass. Maverick didn't change his pace in the slightest. Sebastian's condom tip bapped against my face."
+                Sb normal "May I?"
+                if bangok_four_bryce3_store.sebtarget == "throat":
+                    m "I accepted him back into my mouth, took a breath, then took him deeper, plugging all three of my holes with cock."
+                else:
+                    m "I accepted him back into my mouth, licking and slurping his head to try to give him a fraction of what I was feeling, while Bryce licked his base."
+        $ renpy.pause (0.8)
+        m "I swooned, the thick meat stuffing me from every angle more than a human mind could take."
+    else:
+        $ renpy.pause (0.8)
+        Br pantflirt "Ngh. Hah. You ok there?"
+        menu:
+            "{i}More{/i}":
+                $ bangok_four_bryce3_store.top_mav = False
+                Br pant "You got it."
+                m "Bracing his tail on the ground, Bryce pushed harder into my ass, pressing me up against Maverick with his hips."
+            "I-- Agh-- Ngh--":
+                $ bangok_four_bryce3_store.top_mav = True
+                m "I couldn't deny the rough fuck hurt, but my inflamed nerves desperately didn't want the sensations to end. If they pulled out, I wasn't sure I'd push through the pain to let them back in."
+                m "Bryce slowed, easing up on the pressing angles in my ass. Maverick didn't change his pace in the slightest."
+        $ renpy.pause (0.8)
+        m "I swooned, the thick meat stuffing me from both sides more than a human mind could take."
+
     m "More than a dozen thrusts passed with my mind numb, my body limp, experience of the world awash with arousal and heat shared by the dragons filling me."
 
     if bangok_four_bryce3_store.mavtarget == "womb":
-        m "When I came back to my senses, it was to Maverick's thrusts increasing in depth and urgency. The slit between his horizontal plates pressed up against my spread outer folds on every thrust, pushing my legs wider and shoving me a little ways up Bryce's cock."
+        if bangok_four_bryce3_store.top_mav == True:
+            m "When I came back to my senses, it was to Maverick's thrusts increasing in depth and urgency. The slit between his horizontal plates pressed up against my spread outer folds on every thrust, pushing my legs wider and shoving me a little ways up Bryce's cock."
+        else:
+            m "When I came back to my senses, it was to Maverick's and Bryce's thrusts both increasing in depth and urgency. The slit between Maverick's horizontal plates pressed up against my spread outer folds on every thrust. Bryce pressed on my shoulder, holding me down so each of his thrusts spread my cheeks against his hard plates."
         m "On each pull out, Maverick withdrew closer and closer to my cervix, his head tugging back on my gate and sending electric shocks through my lower body."
         stop soundloop fadeout 0.5
         m "Then Maverick's head popped out of my womb, the explosion of sensation bringing me just within grasping distance of another peak. I reached for it."
         play soundloop "fx/rub1.ogg"
         scene white with fadequick
         m "When Maverick redoubled his pace, punching through my cervix with every thrust, I was blown away."
-        $ renpy.pause(0.8)
-        stop soundloop fadeout 0.3
+    else:
+        m "When I came back to my senses, it was to Maverick's thrusts increasing in depth and urgency. His head kissed and tapped my cervix, not pressing, but reaching just deep enough to trigger the electric sparks of pain and pleasure."
+        m "On each pull out, Maverick withdrew closer and closer to my entrance, his head tugging back on my spread outer folds. The stretching of my lips dealing with his large head rubbed my clit, flooding my head with yet more waves of arousal."
+        stop soundloop fadeout 0.5
+        m "Then Maverick popped his head all the way out of my passage, the explosion of sensation in my lips bringing me just within grasping distance of my peak. I reached for it."
+        play soundloop "fx/rub1.ogg"
+        scene white with fadequick
+        m "When Maverick redoubled his pace, spearing my entire canal and kissing my cervix with every thrust, I was blown away."
+
+    $ renpy.pause(0.8)
+    stop soundloop fadeout 0.3
+    if bangok_four_bryce3_store.top_mav == True:
+        jump bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav
+    else:
+        jump bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax
+
+label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
+    Br pant "Ohh-h d-damn!"
+    if bangok_four_bryce3_store.mavtarget == "womb":
+        if persistent.bangok_knot == True:
+            m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. Both of them avoided slamming all the way inside me as they worked their way over their now-inevitable peaks."
+        else:
+            m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. With Bryce's paw on my shoulder, both of them bottomed out, sheathing inside me in prepearation for their now-inevitable peaks."
+    else:
+        if persistent.bangok_knot == True:
+            m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. Both of them avoided slamming all the way inside me as they worked their way over their now-inevitable peaks."
+        else:
+            m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. With Bryce's paw on my shoulder, he held me in place, using Maverick's reticence to breach my innermost gate to lift his hips high enough to bottom out in my ass for his now-inevitable peak."
+
+    play sound "fx/dragonpain.ogg"
+    $ renpy.pause(0.3)
+    play sound2 "fx/snarl.ogg"
+    $ renpy.pause(1.0)
+
+    m "Squeezing my lower body between them, Bryce and Maverick came to twitching, roaring orgasm inside me."
+    if bangok_four_bryce3_store.mavtarget == "womb":
+        if bangok_four_bryce3_store.protection == True:
+            m "Jets of hot seed bloated their condoms, one expanding to fill my womb, the other deep in my rear. The cocks twitched and pulsed against each other, squeezing my stretched canal and dilated cervix, dragging out my own peak as they poured into me."
+            scene black with dissolvemed
+            if persistent.bangok_inflation == True:
+                if bangok_four_bryce3_store.sebastian_in == True:
+                    m "Their loads kept coming, condoms filling like balloons, forcing my womb and colon to expand around them. My breath left me in a rush around Sebastian's cock as my belly bloated with condom-contained cum, prying my two draconic fillers apart."
+                else:
+                    m "Their loads kept coming, condoms filling like balloons, forcing my womb and colon to expand around them. My breath left me in a rush as my belly bloated with condom-contained cum, prying my two draconic fillers apart."
+    else:
+        if bangok_four_bryce3_store.protection == True:
+            m "Jets of hot seed spilled into their condoms, one rapidly filling in my stretched canal, the other deep in my rear. The cocks twitched and pulsed, against each other, squeezing my stretched canal and dragging out my peak as they poured into me."
+            scene black with dissolve
+            if persistent.bangok_inflation == True:
+                m "Maverick pulled back to the limit before his head popped free, tugging his condom reservoir and Bryce's hindquarters back. Even still his load kept coming, the condom filling like a balloon in my tight channel until it was pressing against my every inner wall for an escape."
+                m "The combined expansion of my love passage and colon pressed my belly outward with condom-contained cum, prying my two draconic fillers apart."
+        else:
+            m "Maverick's first jet of cum spattered against my innermost gate. The second pushed the first through."
+
+    if bangok_four_bryce3_store.protection == False:
+        m "Rope after rope of cum spilled into my womb and guts, flooding my most and least sacred places with hot dragon seed. Their cocks twitched and pulsed against each other, squeezing my stretched and abused love canal, dragging out my own peak as they poured into me."
+        scene black with dissolvemed
+        if persistent.bangok_inflation == True:
+            m "The load in my womb kept coming, seed packing my tubes and womb until no room remained. Yet more cum came, forcing my womb to expand around it. My guts filled too, colon packed with Bryce's seed, before more pulsing jets forced the seed even deeper."
+            m "My belly bloated, pregnant and stuffed with twin dragonloads."
+    play soundloop "fx/breathing.ogg" fadein 1.0
+    m "Their pulses slowed, {w=0.3}then {w=0.3}finally came to an end. Maverick panted above me, tired out by having to lift Bryce's hindquarters with his thrusts toward their last few moments."
+    if bangok_four_bryce3_store.sebastian_in == True:
+        m "Sebastian withdrew his cock from my mouth, and Bryce uncoiled his tail from Maverick's to slump slightly out of my ass."
+    else:
+        m "Bryce uncoiled his tail from Maverick's, the weight of his hindquarters falling pulling some of his cock out of my ass."
+    Br pantflirt "H-Hot damn."
+    Br pant "I'm spent. That... ahh."
+    Br pantflirt "[player_name]? We, ah, didn't hurt you, right?"
+    menu:
+        "Amazing.":
+            Br pant "Alright!"
+        "Can't... move...":
+            Br smirk "You know we're still inside you, right?"
+        "Gonna be really sore.":
+            Br smirk "Kinda unavoidable. Did you have fun, though?"
+            if bangok_four_bryce3_store.sebastian_in == True:
+                Sb drop "That amount of sore doesn't sound like fun, Bryce."
+        "I think I'll take stock once I'm done tonight.":
+            if bangok_four_bryce3_store.sebastian_in == True:
+                Br pant "I don't think finishing Sebastian will make things much worse."
+                Sb disapproval "If this has been too much, I'm not going to force that on [player_name]."
+            else:
+                Br pant "You are done. Just... gotta get us back out."
+
+
+
+
+
+
+
+
+label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
+    if bangok_four_bryce3_store.mavtarget == "womb":
         if persistent.bangok_knot == True:
             if bangok_four_bryce3_store.sebastian_in == False:
                 m "Abruptly, Maverick stuttered to a stop, through my cervix but a little short of hilting me. Even still, the violent thrust pushed me up Bryce's cock a distance I could feel sliding out."
@@ -636,14 +771,6 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
             if persistent.bangok_inflation == True:
                 m "His load kept coming, the condom filling like a balloon, forcing my womb to expand around it, pressing back against Bryce's cock in my ass and Maverick's belly above me."
     else:
-        m "When I came back to my senses, it was to Maverick's thrusts increasing in depth and urgency. His head kissed and tapped my cervix, not pressing, but reaching just deep enough to trigger the electric sparks of pain and pleasure."
-        m "On each pull out, Maverick withdrew closer and closer to my entrance, his head tugging back on my spread outer folds. The stretching of my lips dealing with his large head rubbed my clit, flooding my head with yet more waves of arousal."
-        stop soundloop fadeout 0.5
-        m "Then Maverick popped his head all the way out of my passage, the explosion of sensation in my lips bringing me just within grasping distance of my peak. I reached for it."
-        play soundloop "fx/rub1.ogg"
-        scene white with fadequick
-        m "When Maverick redoubled his pace, spearing my entire canal and kissing my cervix with every thrust, I was blown away."
-        $ renpy.pause(0.8)
         m "Abruptly, Maverick stuttered to a stop, in the middle of my passage, twitching enough to lift me partly up Bryce's length."
         play sound "fx/dragonpain.ogg"
         $ renpy.pause(1.0)
@@ -1353,7 +1480,7 @@ label bangok_four_bryce3_mcbottom_train:
             else:
                 m "His cum spilled into my guts, hot and heavy as it slid down my upturned body to the top of my colon."
                 if persistent.bangok_inflation == True:
-                    m "I moaned as yet more jets came, packing my colon before forcing his liquid load even deeper into my inards."
+                    m "I moaned as yet more jets came, packing my colon before forcing his liquid load even deeper into my innards."
                     m "The pressure of his seed gave my guts no choice but to expand, distending my belly as he came deep inside."
     elif bangok_four_bryce3_store.brycetarget == "vag":
         m "Barely able to control his depth, Bryce kissed my cervix with his tip, then tugged back again to give room as he began to twitch and pulse thick ropes against my inner gate."
