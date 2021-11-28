@@ -565,7 +565,7 @@ label bangok_four_remy_c4postsections_sebintro:
 
 label bangok_four_remy_c4postsections_keymenu:
     menu:
-        "Put a condom on yourself." if bangok_four_remy_c4postsections_store.mc_protection == False and bangok_four_playerhasdick == True and bangok_four_remy_c4postsections_store.protection_agreed == True:
+        "Put a condom on myrself." if bangok_four_remy_c4postsections_store.mc_protection == False and bangok_four_playerhasdick == True and bangok_four_remy_c4postsections_store.protection_agreed == True:
             $ bangok_four_remy_c4postsections_store.mc_protection = True
             show remy shy ud with dissolve
             call bangok_four_remy_c4postsections_keymenu_getcondom
@@ -689,7 +689,7 @@ label bangok_four_remy_c4postsections_keymenu:
                     "Later.":
                         pass
             jump bangok_four_remy_c4postsections_keymenu
-        "Take his shaft between your legs." if bangok_four_remy_c4postsections_store.shaft_lube == True:
+        "Take his shaft between my legs." if bangok_four_remy_c4postsections_store.shaft_lube == True:
             show remy shy ud with dissolve
             m "As I straddled Remy's chest just in front of his hindlegs, he blushed."
             Ry "I, ah, are you ready?"
