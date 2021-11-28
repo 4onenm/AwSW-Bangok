@@ -585,7 +585,13 @@ label bangok_four_remy_c4postsections_keymenu:
                 menu:
                     "Yeah. I changed my mind.":
                         $ bangok_four_remy_c4postsections_store.protection_agreed = False
-                        Ry normal ud "Whatever you prefer."
+                        if bangok_four_remy_c4postsections_store.mc_protection == True:
+                            Ry normal ud "Then I'm fine with taking your shaft unprotected as well."
+                            Ry shy ud "I mean, it would be a little odd for you to be protected and me unprotected."
+                            m "Agreeing with his logic, I tugged off my own condom as well."
+                            $ bangok_four_remy_c4postsections_store.mc_protection = False
+                        else:
+                            Ry normal ud "Whatever you prefer."
                     "I'll put a condom on you.":
                         call bangok_four_remy_c4postsections_keymenu_getcondom
                         $ bangok_four_remy_c4postsections_store.shaft_protection = True
@@ -683,6 +689,36 @@ label bangok_four_remy_c4postsections_keymenu:
                     "Later.":
                         pass
             jump bangok_four_remy_c4postsections_keymenu
+        "Take his shaft between your legs." if bangok_four_remy_c4postsections_store.shaft_lube == True:
+            show remy shy ud with dissolve
+            m "As I straddled Remy's chest just in front of his hindlegs, he blushed."
+            Ry "I, ah, are you ready?"
+            if bangok_four_remy_c4postsections_store.tail_lube == False and bangok_four_remy_c4postsections_store.tail_in_remy == False and bangok_four_remy_c4postsections_store.remy_tail_player == True
+                menu:
+                    "Wait, I want to prep your tail." if bangok_four_remy_c4postsections_store.tail_lube == False and bangok_four_remy_c4postsections_store.tail_in_remy == False and bangok_four_remy_c4postsections_store.remy_tail_player == True:
+                        jump bangok_four_remy_c4postsections_keymenu_tailcondom_check
+                    "Yeah.":
+                        pass
+            else:
+                c "Yeah."
+            Ry "B-Before you start..."
+            Ry look ud "I'm... I'm not small compared to you. Please don't feel... obligated to keep going if this is too much."
+            c "Remy, would I be here on top of you if I didn't think I could handle this?"
+            Ry shy ud "Just k-keep that in mind."
+            if bangok_four_playerhasdick == False:
+                if bangok_four_remy_c4postsections_store.tail_lube == True and bangok_four_remy_c4postsections_store.remy_tail_player == True:
+                    Ry shy ud "I know you wanted to play into my, ah, tail... interests. With dragons, it's the reproductive entrance that is more, er, malleable and damage resistant. It's also slightly dangerous to change openings, if you understand what I mean."
+                    c "Oh. If your tail is going anywhere in me, it's going in my pussy."
+                    Ry normal ud "That would be safest. And would mean you need to take my penis in your... alimentary canal. Anus."
+                    c "Right."
+
+                menu:
+                    m "Take Remy's shaft..."
+                    "Anally.":
+                        jump bangok_four_remy_c4postsections_mctop_anal
+                    "Vaginally.":
+                        jump bangok_four_remy_c4postsections_mctop_vag
+
 
     jump todo_out_of_content_bangok_four_remy_c4postsections
 
@@ -692,6 +728,23 @@ label bangok_four_remy_c4postsections_keymenu_getcondom:
     stop sound fadeout 0.5
     $ renpy.pause(0.5)
     return
+
+label bangok_four_remy_c4postsections_fisting:
+    jump todo_out_of_content_bangok_four_remy_c4postsections
+
+label bangok_four_remy_c4postsections_oral:
+    jump todo_out_of_content_bangok_four_remy_c4postsections
+
+label bangok_four_remy_c4postsections_mctop_anal:
+    if bangok_four_remy_c4postsections_store.shaft_protection == True:
+        m "I turned around, facing Remy's condom-wrapped, lubed-up, glistening shaft."
+    else:
+        m "I turned around, facing Remy's lubed-up, glistening shaft."
+
+    jump todo_out_of_content_bangok_four_remy_c4postsections
+
+label bangok_four_remy_c4postsections_mctop_vag:
+    jump todo_out_of_content_bangok_four_remy_c4postsections
 
 label todo_out_of_content_bangok_four_remy_c4postsections:
     play sound "fx/system3.wav"
