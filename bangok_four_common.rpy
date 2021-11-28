@@ -215,6 +215,8 @@ init:
     )
     image ipsum think flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum think bangok'),horizontal=True)
 
+    image remy shysleep ud = "cr/remy_shysleep_ud.png"
+
     image sebastian normal b dk = im.Recolor("cr/sebastian_normal_b.png", 70, 70, 100, 255)
     image sebastian shy dk = im.Recolor("cr/sebastian_shy.png", 70, 70, 100, 255)
     image sebastian shy b dk = im.Recolor("cr/sebastian_shy_b.png", 70, 70, 100, 255)
