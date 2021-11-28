@@ -693,7 +693,7 @@ label bangok_four_remy_c4postsections_keymenu:
             show remy shy ud with dissolve
             m "As I straddled Remy's chest just in front of his hindlegs, he blushed."
             Ry "I, ah, are you ready?"
-            if bangok_four_remy_c4postsections_store.tail_lube == False and bangok_four_remy_c4postsections_store.tail_in_remy == False and bangok_four_remy_c4postsections_store.remy_tail_player == True
+            if bangok_four_remy_c4postsections_store.tail_lube == False and bangok_four_remy_c4postsections_store.tail_in_remy == False and bangok_four_remy_c4postsections_store.remy_tail_player == True:
                 menu:
                     "Wait, I want to prep your tail." if bangok_four_remy_c4postsections_store.tail_lube == False and bangok_four_remy_c4postsections_store.tail_in_remy == False and bangok_four_remy_c4postsections_store.remy_tail_player == True:
                         jump bangok_four_remy_c4postsections_keymenu_tailcondom_check
@@ -702,13 +702,13 @@ label bangok_four_remy_c4postsections_keymenu:
             else:
                 c "Yeah."
             Ry "B-Before you start..."
-            Ry look ud "I'm... I'm not small compared to you. Please don't feel... obligated to keep going if this is too much."
+            Ry look ud "I'm... I'm not small compared to you. Please don't feel obligated to keep going if this is too much."
             c "Remy, would I be here on top of you if I didn't think I could handle this?"
             Ry shy ud "Just k-keep that in mind."
             if bangok_four_playerhasdick == False:
                 if bangok_four_remy_c4postsections_store.tail_lube == True and bangok_four_remy_c4postsections_store.remy_tail_player == True:
                     Ry shy ud "I know you wanted to play into my, ah, tail... interests. With dragons, it's the reproductive entrance that is more, er, malleable and damage resistant. It's also slightly dangerous to change openings, if you understand what I mean."
-                    c "Oh. If your tail is going anywhere in me, it's going in my pussy."
+                    c "Oh. What you're saying is, if your tail is going anywhere in me, it's going in my pussy."
                     Ry normal ud "That would be safest. And would mean you need to take my penis in your... alimentary canal. Anus."
                     c "Right."
 
