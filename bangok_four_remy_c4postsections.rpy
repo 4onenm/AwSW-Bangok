@@ -18,6 +18,8 @@ init python in bangok_four_remy_c4postsections_store:
 
     remy_kissed = False
 
+    knot_pos = None
+
 
 
 
@@ -994,7 +996,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
             m "Taking his shirt collar from the couch, I bound his tail against its base with his shirt collar, keeping him from getting any more tail to slip into me."
             Ry shy ud leye "O-Oh. Th-That works. Very tight, though."
         elif bangok_four_remy_c4postsections_store.tail_in_player == "womb":
-            m "I doubled over, holding my belly, legs limp as I sat with Remy's cock in his ass and his tail tip deep in my canal, prodding my deepest gate as he sought the entryway yet deeper."
+            m "I doubled over, holding my belly, legs limp as I sat with Remy's cock in my ass and his tail tip deep in my canal, prodding my deepest gate as he sought the entryway yet deeper."
             m "Then he found the tiny opening, his poke spreading it wider around his tapered tip."
             if bangok_four_remy_c4postsections_store.tail_protection == True:
                 m "I grabbed his tail and pulled, swooning as his condom-wrapped, lubed taper smoothly spread my cervix. He resisted slightly, worried, but I encouraged him onward as the thickening slide through my outer lips and inner gate drove me up toward my peak."
@@ -1034,24 +1036,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
                     "Can you relax your tail? Coil it inside me?":
                         Ry shy ud leye "I... I can try..."
                         $ bangok_four_remy_c4postsections_store.tail_in_player = "wombfold"
-                        m "After a moment, I felt his tail twist a little, then rub against the walls of my deepest center. My spread cervix felt every motion, electric sparks dancing through my lower body."
-                        if bangok_four_remy_c4postsections_store.tail_protection == False:
-                            m "I winced, his scales not gentle so deep inside of me. But the pain only served to feed the pleasure, like fuel to the fire, hieghtening the experience."
-                        show remy shysleep ud with dissolve
-                        m "With a little more confidence he could safely navigate my womb, Remy began to gently sink more tail into me, his taper spreading my outer folds now larger than any human shaft."
-                        m "My inner gate widened further, forced open by the inevitable taper of his tail. What he had inside me began to circle back, pressing outward on my womb's walls."
-                        if bangok_four_remy_c4postsections_store.tail_protection == True:
-                            m "My channel spread, a sleeve for his tail, slipped on like the condom had been as he spread my innermost center with his limb of smooth, protected meat."
-                        else:
-                            m "My channel spread, a sleeve for his tail, slipped on like any other article of clothing as he spread my innermost center with a limb of scaly meat."
-                        m "I felt myself forced to expand, belly pressed outward by the long, sinuous muscle slithering into my womb. Looking down, I could see my belly bulging slightly, pregnant with Remy's tail as it snaked inside me."
-                        m "Finally, he stopped, leaving me stuffed with tail. Between my legs, it spread me wider than his shaft spread my ass, wide enough I couldn't close my legs if I'd wanted to."
-                        if bangok_four_remy_c4postsections_store.tail_protection == True:
-                            m "I could barely make out the ring of the condom, under an inch from disappearing within me."
-
-                        m "I rested a hand on my belly."
-                        Ry shy ud "H-How's that?"
-                        m "With his shaft in my ass twitching against my new pregnancy of dragon tail, I wasn't sure how long I could hold off another orgasm."
+                        jump bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail
             else:
                 c "We, ah, need some way to control your depth."
                 jump bangok_four_remy_c4postsections_mcpowerbottom_anal_taildepthcontrol
@@ -1076,6 +1061,166 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
 
 
     jump todo_out_of_content_bangok_four_remy_c4postsections
+
+label bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail:
+    m "After a moment, I felt his tail twist a little, then rub against the walls of my deepest center. My spread cervix felt every motion, electric sparks dancing through my lower body."
+    if bangok_four_remy_c4postsections_store.tail_protection == False:
+        m "I winced, his scales not gentle so deep inside of me. But the pain only served to feed the pleasure, like fuel to the fire, hieghtening the experience."
+    show remy shysleep ud with dissolve
+    m "With a little more confidence he could safely navigate my womb, Remy began to gently sink more tail into me, his taper spreading my outer folds now larger than any human shaft."
+    m "My inner gate widened further, forced open by the inevitable taper of his tail. What he had inside me began to circle back, pressing outward on my womb's walls."
+    if bangok_four_remy_c4postsections_store.tail_protection == True:
+        m "My channel spread, a sleeve for his tail, slipped on like the condom had been as he spread my innermost center with his long, prehensile limb of smooth, protected meat."
+    else:
+        m "My channel spread, a sleeve for his tail, slipped on like any other article of clothing as he spread my innermost center with a long, prehensile limb of scaly meat."
+    m "I felt myself forced to expand, belly pressed outward by the long, sinuous muscle slithering into my womb. Looking down, I could see my belly bulging slightly, pregnant with Remy's tail as it snaked inside me."
+    m "Finally, he stopped, leaving me stuffed with tail. Between my legs, it spread me wider than his shaft spread my ass, wide enough I couldn't close my legs if I'd wanted to."
+    if bangok_four_remy_c4postsections_store.tail_protection == True:
+        m "I could barely make out the ring of the condom, under an inch from disappearing within me."
+
+    m "I rested a hand on my belly."
+    Ry shy ud "H-How's that?"
+    m "With his shaft in my ass twitching against my new pregnancy of dragon tail, I wasn't sure how long I could hold off another orgasm."
+    $ renpy.pause(0.5)
+    c "I... ah... don't think I can move enough to help you..."
+    $ renpy.pause(0.8)
+    Ry look ud "..."
+    c "Little help?"
+    m "Maneuvering his hindlegs, Remy awkwardly got a grip on my sides."
+    Ry normal ud "Tell me if I need to stop, please."
+    m "Then he began to lift me a little off his manhood."
+    show remy shysleep ud with dissolve
+    m "His tail had to slide a little out of my widened pussy to give him the slack to lift me, the coils inside twisting and tightening as a few inches pulled back through my cervix."
+    show black with fadequick
+    m "When he stopped to switch directions, I came again, my spread cunt trying with spasming muscles to squeeze off the pregnancy of dragon tail and keep it inside."
+    $ renpy.pause(1.0)
+    hide black
+    show remy shy ud leye
+    with dissolvemed
+    $ renpy.pause(0.5)
+    m "I came back to Remy holding me carefully in place, riding out my orgasm and clenched ass."
+    c "S-Sorry."
+    m "I struggled to relax. Then, gradually, Remy let me sink back down his length, spreading my cheeks and spearing my sphincter with a log of cock."
+    m "The knot of tail in my womb held its place, not getting any deeper, denying me the sliding motion of tailfucking that might get me to another orgasm."
+    m "Remy lifted me again, then let me back down, this thrust easier on my ass than the last as my muscle grew weaker and more tired."
+    m "Then his tail shifted a little, coils shifting toward my back, pressing against his shaft for his next thrust."
+    play soundloop "fx/bangok_panting_1dot8.ogg" fadein 8.0
+    show remy shysleep ud with dissolve
+    m "The fucking increased slightly in tempo, as much as Remy could manage having to lift me bodily with each thrust. He panted, those same noises I'd heard back in the library, now undeniably because of me and my body."
+    m "He began to move his tail again, coiling and uncoiling just a little bit deep inside me, slack sliding through my cervix and canal, dragging me toward another peak whether I was ready or not."
+    if persistent.bangok_knot == True:
+        Ry "K-Knot inside?"
+        menu:
+            "Fill me.":
+                $ bangok_four_remy_c4postsections_store.knot_pos = True
+            "W-Wait, don't--!":
+                $ bangok_four_remy_c4postsections_store.knot_pos = False
+    stop soundloop fadeout 0.5
+    show black with fadequick
+    m "I came, conscious thought abandoning me as I tugged on his tail, trying to fit yet more inside my expanded belly."
+    play sound "fx/snarl.ogg" fadein 0.3
+    if (persistent.bangok_knot == True and bangok_four_remy_c4postsections_store.knot_pos == True) or persistent.bangok_knot == False:
+        m "Two faster thrusts, his tail twitching inside me, then Remy pulled me all the way down to the base of his shaft, spreading me as wide as my ass could possibly go."
+    else:
+        m "Two faster thrusts, his tail twitching inside me, then Remy stopped abruptly only halfway in."
+
+    if bangok_four_remy_c4postsections_store.shaft_protection == True:
+        m "His length twitched, then began delivering spurt after hot spurt into the condom tip, deeper than any human could ever cum."
+    else:
+        m "His length twitched, then began delivering spurt after hot spurt into my guts, deeper than any human could ever cum."
+    m "The load was huge, pulses pressing my sphincter just that little bit wider as each jet worked its way up from Remy and into me."
+    if bangok_four_remy_c4postsections_store.shaft_protection == True:
+        m "The balloon of cum bloated, spreading my inner walls outward and stretching down my colon as he kept cumming, until the pressure was pressing his tail in my womb away from his shaft, forcing my belly to expand to appear even more pregnant with dragon."
+    else:
+        m "The cum flooded me, pouring deep into my colon until my ass was stuffed, then continuing to spurt in until the pressure on my innards was pressing his tail in my womb away from his shaft, forcing my belly to expand to appear even more pregnant with dragon."
+
+    if (persistent.bangok_knot == True and bangok_four_remy_c4postsections_store.knot_pos == True) or persistent.bangok_knot == False:
+        if persistent.bangok_knot == True:
+            m "I could feel the cum flowing, pressing, seeking any way out of me, even back along Remy's shaft. But my ass was no escape, as a massive knot of flesh wider than my rear could ever spread held me fast against Remy."
+        else:
+            m "I could feel the cum flowing, pressing, seeking any way out of me, even back along Remy's shaft. But my ass was no escape, as my stretched pucker held fast, spread already to its limit against his thick length."
+        hide black with dissolveslow
+    else:
+        m "I could feel the cum flowing, pressing, seeking any way out of me, even back along Remy's shaft. Ropes of white dribbled from my spread rear, not as spread as it could have been had I been fully filled with his shaft."
+        hide black with dissolveslow
+        m "Then Remy let me down, gently, onto a knot of flesh so wide it hardly fit between my cheeks, and would never fit inside me."
+
+    $ renpy.pause(0.8)
+    m "A few moments of silence passed between us, panting and gasping from the incredible fuck."
+    m "Then Remy tugged in his wing, spread on the floor, and with his other, tipped us over onto his side."
+    hide remy with dissolve
+    play sound "fx/bed.ogg"
+    scene o2:
+        ypos -400 xpos -128
+    with vpunch
+    c "Oof!"
+
+    m "The cum inside me sloshed and flowed, liquid weight now resting on my side instead of my pelvis causing my belly to bloat a little bit further."
+    play sound "fx/craphug.mp3"
+    m "Then Remy tugged me closer to him with his forelegs, hugging me."
+    Ry smile ud "Thank you."
+    menu:
+        "Th-Thank me when you're out of me.":
+            # TODO: Mood--
+            pass
+        "Same to you.":
+            c "That... That was incredible."
+        "[[Kiss him.]":
+            show black with dissolvemed
+            if bangok_four_remy_c4postsections_store.remy_kissed == True:
+                m "Unlike last time, when I tugged on Remy's chin, he wasn't confused about what I wanted."
+                label bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail_kiss:
+                m "Our lips met, then his parted, offering tongue."
+                m "For a few seconds, with him stuffing two of my holes full, I accepted him into a third."
+                m "Just after we parted, he finished by giving me a small lick on the cheek."
+                hide black with dissolvemed
+                if remystatus == "neutral":
+                    Ry shy ud "That's... that's the second time you've done that. You..."
+                    Ry shy ud "[player_name], I-I thought you wanted this casually. I thought you wanted just to be friends."
+                    menu:
+                        "I didn't know you were so interested.":
+                            c "Now that I do, though, I'll admit it too: I like you as more than just a friend."
+                            $ remystatus = "good"
+                            m "Remy nuzzled my head, planting a few more licks."
+                            Ry shy ud "I wasn't sure when you did it the first time, but I'd hoped..."
+                        "Friends can't share some kisses during a good fuck?":
+                            Ry look ud "Oh. That... that's all it meant to you?"
+                            $ renpy.pause(0.5)
+                            c "Did it mean something more to you?"
+                            Ry look ud "Nevermind."
+                            $ renpy.pause(0.8)
+                else: # good
+                    c "Guess that seals the deal."
+                    Ry normal ud "I suppose it does."
+            else:
+                $ bangok_four_remy_c4postsections_store.remy_kissed = True
+                m "Reaching up, I tugged on his chin with a few fingers, guiding his head closer. Then, when he was in range, I lifted my head to kiss him."
+                if remystatus == "good":
+                    jump bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail_kiss
+                else:
+                    m "It turned into a brief peck as he abruptly pulled away, blushing furiously."
+                    hide black with dissolve
+                    Ry shy ud "[player_name], I-I thought you wanted this casually. I thought you wanted just to be friends."
+                    menu:
+                        "I didn't know you were so interested.":
+                            c "Now that I do, though, I'll admit it too: I like you as more than just a friend."
+                            $ remystatus = "good"
+                            m "Remy hesitated, then leaned back down."
+                            show black with dissolvemed
+                            jump bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail_kiss
+                        "Friends can't share a kiss after a good fuck?":
+                            Ry shy ud "N-No that... I..."
+                            $ renpy.pause(0.5)
+                            Ry normal ud "That's a little too strange for me."
+                            c "Fine."
+
+    
+    m "His tail twitched inside my womb, and I hissed."
+    Ry normal ud "R-Right. Apologies."
+    jump todo_out_of_content_bangok_four_remy_c4postsections
+
+
+
 
 label bangok_four_remy_c4postsections_mctop_vag:
     jump todo_out_of_content_bangok_four_remy_c4postsections
