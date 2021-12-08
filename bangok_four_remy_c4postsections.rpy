@@ -602,7 +602,7 @@ label bangok_four_remy_c4postsections_keymenu:
 
             m "I squirted a big dollop of lube onto his shaft, then set the bottle aside and began to spread it with my hands."
             play soundloop "fx/massage2.ogg"
-            show remy shysleep ud with dissolve
+            show remy shy ud closed with dissolve
             $ renpy.pause(2.0)
             stop soundloop fadeout 0.3
             $ renpy.pause(0.5)
@@ -623,7 +623,7 @@ label bangok_four_remy_c4postsections_keymenu:
             else:
                 show remy shy ud with dissolve
                 m "I squeezed out a large dollop of lube onto Remy's ass, then set the bottle aside and reached to work my fingers in, to make sure it permeated his rear entrance."
-            Ry shysleep ud "O-Ohhhh."
+            Ry shy ud closed "O-Ohhhh."
             m "It didn't take long to spread the lube in, but just prodding at the outside of Remy's hole seemed to get him going a little more, his cock twitching."
             menu:
                 "Push a few fingers in.":
@@ -671,7 +671,7 @@ label bangok_four_remy_c4postsections_keymenu:
                         label bangok_four_remy_c4postsections_keymenu_tailinsert:
                         Ry shy ud "What are you...?"
                         $ renpy.pause(0.3)
-                        Ry shysleep ud "Mmnh."
+                        Ry shy ud closed "Mmnh."
                         $ bangok_four_remy_c4postsections_store.tail_in_remy = True
                         $ renpy.pause(0.3)
                         m "When he realized what I was doing, Remy's tail stopped resisting my attempt to move it, curling over and almost guiding itself to his rear entrance before burrowing in, sliding easily enough with the lubrication I'd added."
@@ -682,7 +682,7 @@ label bangok_four_remy_c4postsections_keymenu:
                             m "I took hold of Remy's tail where it curved over, just before the condom began, then gently began to push, feeding more into his spreading asshole."
                         else:
                             m "I took hold of Remy's tail where it curved over, then gently began to push, feeding more into his spreading asshole."
-                        Ry shysleep ud "Nnh..."
+                        Ry shy ud closed "Nnh..."
                         if bangok_four_remy_c4postsections_store.shaft_protection == True:
                             m "His cock twitched noticeably as I felt his tail move inside him."
                         else:
@@ -760,7 +760,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
 
     Ry shy ud leye "I-I'm really not sure y-you {i}can{/i} do this, [player_name]. M-Maybe--"
     m "Not about to give up, I lifted my ass higher, until I was able to spread my cheeks around his tip."
-    Ry shysleep ud "H-Hahhh."
+    Ry shy ud closed "H-Hahhh."
     m "I applied pressure gently, moving my hips and spreading my cheeks with a hand to try to give him room for entry."
     m "Even still, Remy was {size=+8}large{/size}. his head flared wide enough that even its gradual sloping wasn't quite enough to spread my ass for him."
     m "I sat for a moment, spread open but not yet penetrated, trying to catch my breath and relax further."
@@ -883,7 +883,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
         "Keep pushing.":
             m "Then, my legs shaking a little from exertion, I eased some more weight down and felt the widest point on his head slip through my pucker."
 
-    Ry shysleep ud "Ohhhh..."
+    Ry shy ud closed "Ohhhh..."
     m "Not wanting to lose the momentum, I slid down Remy's length, inch after inch of wide, thick shaft entering to spread my colon around him."
     m "The way I could feel his head pushing deeper, it was almost like having a fist up inside me, though no human arm was so smooth, so able to mold my insides to its shape."
     m "I almost didn't notice the slight taper to Remy's shaft, until I was sitting speared upon it, the smallest distance remaining between my stretched hole and taking him completely."
@@ -891,7 +891,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
     Ry shy ud leye "Ngh... [player_name]?"
     c "C-Can't... quite..."
     m "I fought my breathing, the pain of the stretch telling me to hyperventilate and tense up. I raised myself slightly, feeling Remy's warm length retreat, then switched direction and pushed back down, agonizingly slowly, but keeping a steady rate."
-    show remy shysleep ud with dissolve
+    show remy shy ud closed with dissolve
     $ renpy.pause(0.8)
     if bangok_four_playerhasdick == True:
         if bangok_four_remy_c4postsections_store.tail_in_remy == True:
@@ -943,7 +943,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
             m "The smoothing effect of the lube let him slide into me easily while he remained smaller than a human penis, but he had far more tail beyond that point."
 
         m "When he brushed the end of my canal I gasped and tugged, pulling him slightly back out as my legs shuddered, and I dropped back to sitting fully sheathed on his cock."
-        Ry shysleep ud "Ah-!"
+        Ry shy ud closed "Ah-!"
         Ry shy ud "[player_name], are you hurt?! I-I knew I shouldn't have--"
         menu:
             "Th-That's too deep.":
@@ -1002,7 +1002,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal:
                 m "I grabbed his tail and pulled, swooning as his condom-wrapped, lubed taper smoothly spread my cervix. He resisted slightly, worried, but I encouraged him onward as the thickening slide through my outer lips and inner gate drove me up toward my peak."
             else:
                 m "I grabbed his tail and pulled, swooning as his rough, lubed scales speared my cervix. He resisted slightly, worried, but I encouraged him onward as the thickening friction through my outer lips and inner gate drove me rapidly toward my peak."
-            show remy shysleep ud
+            show remy shy ud closed
             show black
             with fadequick
             m "Then I came, my spread passage and ass spasming as they tried and failed to clench down on the large insertions filling me."
@@ -1066,7 +1066,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail:
     m "After a moment, I felt his tail twist a little, then rub against the walls of my deepest center. My spread cervix felt every motion, electric sparks dancing through my lower body."
     if bangok_four_remy_c4postsections_store.tail_protection == False:
         m "I winced, his scales not gentle so deep inside of me. But the pain only served to feed the pleasure, like fuel to the fire, hieghtening the experience."
-    show remy shysleep ud with dissolve
+    show remy shy ud closed with dissolve
     m "With a little more confidence he could safely navigate my womb, Remy began to gently sink more tail into me, his taper spreading my outer folds now larger than any human shaft."
     m "My inner gate widened further, forced open by the inevitable taper of his tail. What he had inside me began to circle back, pressing outward on my womb's walls."
     if bangok_four_remy_c4postsections_store.tail_protection == True:
@@ -1089,7 +1089,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail:
     m "Maneuvering his hindlegs, Remy awkwardly got a grip on my sides."
     Ry normal ud "Tell me if I need to stop, please."
     m "Then he began to lift me a little off his manhood."
-    show remy shysleep ud with dissolve
+    show remy shy ud closed with dissolve
     m "His tail had to slide a little out of my widened pussy to give him the slack to lift me, the coils inside twisting and tightening as a few inches pulled back through my cervix."
     show black with fadequick
     m "When he stopped to switch directions, I came again, my spread cunt trying with spasming muscles to squeeze off the pregnancy of dragon tail and keep it inside."
@@ -1105,7 +1105,7 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal_wombfoldtail:
     m "Remy lifted me again, then let me back down, this thrust easier on my ass than the last as my muscle grew weaker and more tired."
     m "Then his tail shifted a little, coils shifting toward my back, pressing against his shaft for his next thrust."
     play soundloop "fx/bangok_panting_1dot8.ogg" fadein 8.0
-    show remy shysleep ud with dissolve
+    show remy shy ud closed with dissolve
     m "The fucking increased slightly in tempo, as much as Remy could manage having to lift me bodily with each thrust. He panted, those same noises I'd heard back in the library, now undeniably because of me and my body."
     m "He began to move his tail again, coiling and uncoiling just a little bit deep inside me, slack sliding through my cervix and canal, dragging me toward another peak whether I was ready or not."
     if persistent.bangok_knot == True:
