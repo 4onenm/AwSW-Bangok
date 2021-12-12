@@ -8,6 +8,15 @@ def make_dev(cond):
     return '('+cond+') and (persistent.bangok_dev == True)'
 
 
+def adine4(ml):
+    ( ml.find_label('a4shower')
+        .search_say("I'm not supposed to go outside this late.",depth=300)
+        .hook_to('bangok_four_adine4_intro', return_link=False)
+        .search_say("I guess so...")
+        .link_behind_from('bangok_four_adine4_sceneover')
+    )
+
+
 def anna12(ml):
     # Anna1
     ml.find_label('_call_skiptut_7') \
@@ -281,6 +290,7 @@ class BangOkMod(Mod):
             add_side_images()
         ml = modinfo.get_mods()["MagmaLink"].import_ml()
         ml.register_mod_settings(cls, screen='bangok_modsettings')
+        adine4(ml)
         anna12(ml)
         bryce1_afterparty(ml)
         bryce3_afterparty(ml)
