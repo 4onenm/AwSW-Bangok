@@ -126,9 +126,6 @@ init:
 
     image bangok_four_xsebastian_cave2_dk = im.Recolor("bg/in/cave2_dk.png", 70, 70, 100, 255)
 
-    image bangok_four_forest_clearing = "bg/bangok_forest_clearing.png"
-    image bangok_four_forest_treehole = "bg/bangok_tree_hole.png"
-
     image bangok_four_library night = im.Recolor("bg/in/bangok_library_night.png", 70, 70, 100, 255)
     image bangok_four_library outside night = im.Recolor("bg/out/town/town5.jpg", 60, 70, 100, 255)
 
