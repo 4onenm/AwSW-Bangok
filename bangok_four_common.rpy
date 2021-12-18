@@ -1,124 +1,74 @@
+init python:
+    # Menu constants
+    bangok_four_menu_fetish_list = [
+        ("Watersports", "bangok_watersports"),
+        ("Inflation", "bangok_inflation"),
+        ("Knotting", "bangok_knot"),
+        ("Cloacas", "bangok_cloacas"),
+    ]
+    bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
+
+    # Common game variables
+    bangok_four_malepartners = 0
+    bangok_four_femalepartners = 0
+    bangok_four_playerhasdick = None
+    bangok_four_hornincident = False
+
+
 init:
     # Settings menu
+    screen bangok_four_checkbox(label, id):
+        hbox:
+            spacing 10
+            imagebutton:
+                xcenter 0.5
+                ycenter 0.5
+                idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
+                hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
+                selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
+                selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
+                action [MTSTogglePersistentBool(id),
+                        Play("audio", "se/sounds/yes.wav")]
+                hovered Play("audio", "se/sounds/select.ogg")
+                focus_mask None
+            text label
+
+
     screen bangok_modsettings tag smallscreen2:
         modal True
         window id "bangok_modsettings" at popup2:
             style "smallwindow"
-
             vbox:
                 align (0.5, 0.5)
-                spacing 10
-
-                if persistent.nsfwtoggle:
-                    text "Fetishes:":
-                        align (0.5, 0.5)
-
-                    text "If you do not know what an option means, leave it deselected (or look it up at your own peril)."
-
-                    null
-
-                    hbox:
-                        align (0.5, 0.5)
+                showif persistent.nsfwtoggle:
+                    text "Fetishes:" xalign 0.5
+                    grid bangok_four_menu_fetish_list_columns 2:
+                        align (0.5,0.5)
+                        transpose True
                         spacing 10
-                        imagebutton:
-                            xcenter 0.5
-                            ycenter 0.5
-                            idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
-                            hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
-                            selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
-                            selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
-                            action [MTSTogglePersistentBool("bangok_watersports"),
-                                    Play("audio", "se/sounds/yes.wav")]
-                            hovered Play("audio", "se/sounds/select.ogg")
-                            focus_mask None
-                        text "Watersports"
-
-                    hbox:
-                        align (0.5, 0.5)
-                        spacing 10
-                        imagebutton:
-                            xcenter 0.5
-                            ycenter 0.5
-                            idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
-                            hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
-                            selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
-                            selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
-                            action [MTSTogglePersistentBool("bangok_inflation"),
-                                    Play("audio", "se/sounds/yes.wav")]
-                            hovered Play("audio", "se/sounds/select.ogg")
-                            focus_mask None
-                        text "Inflation"
-
-                    hbox:
-                        align (0.5, 0.5)
-                        spacing 10
-                        imagebutton:
-                            xcenter 0.5
-                            ycenter 0.5
-                            idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
-                            hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
-                            selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
-                            selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
-                            action [MTSTogglePersistentBool("bangok_knot"),
-                                    Play("audio", "se/sounds/yes.wav")]
-                            hovered Play("audio", "se/sounds/select.ogg")
-                            focus_mask None
-                        text "Knotting"
-
-                    hbox:
-                        align (0.5, 0.5)
-                        spacing 10
-                        imagebutton:
-                            xcenter 0.5
-                            ycenter 0.5
-                            idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
-                            hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
-                            selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
-                            selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
-                            action [MTSTogglePersistentBool("bangok_cloacas"),
-                                    Play("audio", "se/sounds/yes.wav")]
-                            hovered Play("audio", "se/sounds/select.ogg")
-                            focus_mask None
-                        text "Cloacas"
-
-                    text "Development":
-                        align (0.5, 0.5)
-
-                    hbox:
-                        align (0.5, 0.5)
-                        spacing 10
-                        imagebutton:
-                            xcenter 0.5
-                            ycenter 0.5
-                            idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
-                            hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
-                            selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
-                            selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
-                            action [MTSTogglePersistentBool("bangok_dev"),
-                                    Play("audio", "se/sounds/yes.wav")]
-                            hovered Play("audio", "se/sounds/select.ogg")
-                            focus_mask None
-                        text "In-Development Scenes"
-
-                    if persistent.bangok_dev == True:
-                        text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes."
-
+                        for label, id in bangok_four_menu_fetish_list:
+                            use bangok_four_checkbox(label, id)
+                        if len(bangok_four_menu_fetish_list) % 2 == 1:
+                            null
+                    text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
+                        xalign 0.5
+                        size 36
+                    vbox:
+                        xalign 0.5
+                        use bangok_four_checkbox("Dangerous: Enable In-Development Scenes", "bangok_dev")
+                    showif persistent.bangok_dev == True:
+                        text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes." xalign 0.5 size 40
                 else:
-                    text "This mod's content is primarily":
-                        align (0.5,0.5)
-                    text "---- Not-Safe-For-Work ----":
-                        align (0.5,0.5)
-                    text "Re-enable NSFW scenes or uninstall the mod.":
-                        align (0.5,0.5)
-                    text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made.":
-                        align (0.5,0.5)
-
+                    text "This mod's content is primarily" xalign 0.5
+                    text "---- Not-Safe-For-Work ----" xalign 0.5
+                    text "Re-enable NSFW scenes or uninstall the mod." xalign 0.5
+                    text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made." xalign 0.5
             imagebutton idle "image/ui/close_idle.png" hover "image/ui/close_hover.png" action [Hide("my_cool_screen"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")] hovered Play("audio", "se/sounds/select.ogg") style "smallwindowclose" at nav_button
+
 
     # Locations
     image bangok_four_bryce1_apartment night = "bg/in/apts/pad_night.png"
     image bangok_four_bryce1_apartment night ceiling = "bg/in/apts/pad_night_ceil.png"
-
 
     image bangok_four_xipsum_bedroom normal = "bg/in/apts/ipsum_bedroom.png"
     image bangok_four_xipsum_bedroom_bed = "bg/in/apts/ipsum_bedroom_bed.png"
@@ -224,9 +174,3 @@ init:
 
     image sebastian shy b sleep = "cr/sebastian_shy_b_sleep.png"
     image sebastian shy b sleep dk = im.Recolor("cr/sebastian_shy_b_sleep.png", 70, 70, 100, 255)
-
-init python:
-    bangok_four_malepartners = 0
-    bangok_four_femalepartners = 0
-    bangok_four_playerhasdick = None
-    bangok_four_hornincident = False
