@@ -181,20 +181,20 @@ label bangok_four_mod_firstboot:
     stop music
     scene black with dissolve
     play sound "fx/system3.wav"
-    m "Initializing modification \"BangOk\"{cps=2}...{/cps}{w=0.5}{nw}"
+    s "Initializing modification \"BangOk\"{cps=2}...{/cps}{w=0.5}{nw}"
     play sound "fx/system3.wav"
-    m "Done!"
-    m "BangOk alters targetable coordinates to one of several different universes, with slightly differing draconic biologies and sexual fetish preferences."
-    m "Would you like to configure these coordinates now, or accept the most-vanilla, most human-like defaults?"
+    s "Done!"
+    s "BangOk alters targetable coordinates to one of several different universes, with slightly differing draconic biologies and sexual fetish preferences."
+    s "Would you like to configure these coordinates now, or accept the most-vanilla, most human-like defaults?"
     menu:
         "Yes, I'd like to configure my BangOk fetishes now.":
             show screen bangok_modsettings
         "No, I'll do it later from the settings menu.":
             pass
-    m "Recalculating arrival coordinates.{cps=2}..{/cps}"
+    s "Recalculating arrival coordinates.{cps=2}..{/cps}"
     play sound "fx/system.wav"
-    m "Calculations complete."
-    m "The BangOk module has been added to your {i}settings{/i} menu under {i}Mod Settings.{/i} You may alter your coordinates at {i}any time{/i}, though doing so in the midst of certain... activities may cause timeline instability."
+    s "Calculations complete."
+    s "The BangOk module has been added to your {i}settings{/i} menu under {i}Mod Settings.{/i} You may alter your coordinates at {i}any time{/i}, though doing so in the midst of certain... activities may cause timeline instability."
     $ persistent.bangok_four_menu_firstboot_complete = True
-    m "Returning to main menu initialization.{cps=2}..{/cps}{w=0.5}{nw}"
+    s "Returning to main menu initialization.{cps=2}..{/cps}{w=0.5}{nw}"
     jump bangok_four_mod_firstboot_return
