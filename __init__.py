@@ -256,6 +256,13 @@ def xsebastian(ml):
     )
 
 
+def modsettings_firstboot(ml):
+    ( ml.find_label('splashscreen')
+        .search_python("renpy.pause(1.6, hard=True)")
+        .hook_to('bangok_four_mod_firstboot', condition='persistent.bangok_four_menu_firstboot_complete != True')
+    )
+
+
 def add_side_images():
     def clip_anna_side_image(imagefile):
         return im.Flip(im.Scale(im.Crop(imagefile,(30,35,500,600)),250,300),horizontal=True)
@@ -292,6 +299,7 @@ class BangOkMod(Mod):
         xipsum(ml)
         xkatsu(ml)
         xsebastian(ml)
+        modsettings_firstboot(ml)
 
     @staticmethod
     def mod_complete():

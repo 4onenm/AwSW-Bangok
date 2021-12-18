@@ -52,18 +52,20 @@ init:
                             null
                     text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
                         xalign 0.5
-                        size 36
+                        size 38
                     vbox:
                         xalign 0.5
                         use bangok_four_checkbox("Dangerous: Enable In-Development Scenes", "bangok_dev")
                     showif persistent.bangok_dev == True:
                         text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes." xalign 0.5 size 40
+                        showif main_menu:
+                            textbutton "[[Replay first-boot experience.]" xalign 0.5 hovered Play("audio", "se/sounds/select.ogg") action [Hide("bangok_modsettings"), Play("audio", "se/sounds/close.ogg"), Start("bangok_four_mod_firstboot")]
                 else:
                     text "This mod's content is primarily" xalign 0.5
                     text "---- Not-Safe-For-Work ----" xalign 0.5
                     text "Re-enable NSFW scenes or uninstall the mod." xalign 0.5
                     text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made." xalign 0.5
-            imagebutton idle "image/ui/close_idle.png" hover "image/ui/close_hover.png" action [Hide("my_cool_screen"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")] hovered Play("audio", "se/sounds/select.ogg") style "smallwindowclose" at nav_button
+            imagebutton idle "image/ui/close_idle.png" hover "image/ui/close_hover.png" action [Hide("bangok_modsettings"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")] hovered Play("audio", "se/sounds/select.ogg") style "smallwindowclose" at nav_button
 
 
     # Locations
@@ -174,3 +176,25 @@ init:
 
     image sebastian shy b sleep = "cr/sebastian_shy_b_sleep.png"
     image sebastian shy b sleep dk = im.Recolor("cr/sebastian_shy_b_sleep.png", 70, 70, 100, 255)
+
+label bangok_four_mod_firstboot:
+    stop music
+    scene black with dissolve
+    play sound "fx/system3.wav"
+    m "Initializing modification \"BangOk\"{cps=2}...{/cps}{w=0.5}{nw}"
+    play sound "fx/system3.wav"
+    m "Done!"
+    m "BangOk alters targetable coordinates to one of several different universes, with slightly differing draconic biologies and sexual fetish preferences."
+    m "Would you like to configure these coordinates now, or accept the most-vanilla, most human-like defaults?"
+    menu:
+        "Yes, I'd like to configure my BangOk fetishes now.":
+            show screen bangok_modsettings
+        "No, I'll do it later from the settings menu.":
+            pass
+    m "Recalculating arrival coordinates.{cps=2}..{/cps}"
+    play sound "fx/system.wav"
+    m "Calculations complete."
+    m "The BangOk module has been added to your {i}settings{/i} menu under {i}Mod Settings.{/i} You may alter your coordinates at {i}any time{/i}, though doing so in the midst of certain... activities may cause timeline instability."
+    $ persistent.bangok_four_menu_firstboot_complete = True
+    m "Returning to main menu initialization.{cps=2}..{/cps}{w=0.5}{nw}"
+    jump bangok_four_mod_firstboot_return
