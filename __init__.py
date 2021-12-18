@@ -288,7 +288,6 @@ class BangOkMod(Mod):
         anna12(ml)
         bryce1_afterparty(ml)
         bryce3_afterparty(ml)
-        lorem3(ml)
         remy_c4postsections(ml)
         xipsum(ml)
         xkatsu(ml)
