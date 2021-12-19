@@ -128,14 +128,14 @@ label bangok_four_adine4_funtimes_menu:
 label bangok_four_adine4_tease:
     m "Adine spread her legs, revealing her slit, and started blushing."
     # TODO: Fix to blushing
-    show adine disappoint flip with dissolve
+    show adine think flip with dissolve
     Ad "Please be careful."
     c "Of course."
     m "Slowly, I leaned myself down to her slit and licked slowly around it."
-    Ad "Ohhh"
+    Ad giggle frillrubs flip "Ohhh"
     m "I kept licking and carefully licked a little inside her snatch."
     # TODO: adine pleasured
-    Ad giggle flip "That feels so good."
+    Ad giggle frillrubs closed flip "That feels so good."
     m "I continued my motions inside her slit and noticed that she was enjoying it, already getting pretty wet."
     m "Adine got more and more pleasure by my movements inside and I started focusing more on her clit and starting to taste her sweet juice."
     Ad "You feel so good, If you continue like this I don't think I will last long."
@@ -143,7 +143,7 @@ label bangok_four_adine4_tease:
         "Slowly stop licking.":
             m "Adine's breathing slowed as I let up in my ministrations on her slit."
             $ renpy.pause(0.5)
-            Ad think flip "Okay, what next?"
+            Ad think frillrubs flip "Okay, what next?"
             jump bangok_four_adine4_funtimes_menu
         "Continue.":
             pass
