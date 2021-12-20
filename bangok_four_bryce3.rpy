@@ -1544,11 +1544,11 @@ label bangok_four_bryce3_mcbottom_train:
                 $ bangok_four_bryce3_store.brycebroke = False
                 Br normal "Of course."
             "{i}Please.{/i}":
-                python in bangok_four_bryce3:
+                python in bangok_four_bryce3_store:
                     if protection:
                         brycebroke = True
             "[[Keep catching my breath.]":
-                python in bangok_four_bryce3:
+                python in bangok_four_bryce3_store:
                     if protection:
                         brycebroke = True
 
