@@ -184,6 +184,7 @@ label bangok_four_mod_firstboot:
     play sound "fx/system3.wav"
     s "Initializing modification \"BangOk\"{cps=2}...{/cps}{w=0.5}{nw}"
     s "Initializing modification \"BangOk\"... {fast}Done!"
+    $ _skipping = True
     s "BangOk alters targetable coordinates to one of several different universes, with slightly differing draconic biologies and sexual fetish preferences."
     s "Would you like to configure these coordinates now, or accept the most-vanilla, most human-like defaults?"
     menu:
