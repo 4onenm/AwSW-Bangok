@@ -20,6 +20,8 @@ init python in bangok_four_remy_c4postsections_store:
 
     knot_pos = None
 
+    player_in_remy = None # shaft in, specifically.
+
 
 
 
@@ -724,7 +726,9 @@ label bangok_four_remy_c4postsections_keymenu:
                         jump bangok_four_remy_c4postsections_mctop_vag
             else:
                 jump bangok_four_remy_c4postsections_mcpowerbottom_anal
-
+        "Get between his legs." if (bangok_four_playerhasdick == True and (bangok_four_remy_c4postsections_store.protection_agreed == bangok_four_remy_c4postsections_store.mc_protection)) or (bangok_four_playerhasdick == False and bangok_four_remy_c4postsections_store.tail_in_remy == True):
+            jump bangok_four_remy_c4postsections_mctop
+            
 
     jump todo_out_of_content_bangok_four_remy_c4postsections
 
@@ -740,6 +744,55 @@ label bangok_four_remy_c4postsections_fisting:
 
 label bangok_four_remy_c4postsections_oral:
     jump todo_out_of_content_bangok_four_remy_c4postsections
+
+label bangok_four_remy_c4postsections_mctop:
+    m "I straddled Remy's tail, climbing on at the juncture where it met his hips and, at the same point, disappeared inside his ass."
+    show remy shy ud with dissolve
+    m "Remy blushed, fully on display to me in this position."
+    if bangok_four_remy_c4postsections_store.tail_in_remy == True:
+        c "You know..."
+        m "I shuffled my legs closer together, gripping his tail."
+        c "We could do something with this."
+        m "Experimentally, I gave a slight thrust forward, gripping his tail between my legs. Despite the lubrication, I managed to squeeze hard enough to push it slightly deeper inside him."
+        if bangok_four_playerhasdick == False:
+            m "My shaft pressed up against his, our aroused genitalia sliding against each other in a lewd display of our arousal."
+        Ry shy ud closed "Ohhh..."
+        $ renpy.pause(0.8)
+        show remy shy ud leye
+        $ renpy.pause(0.8)
+        Ry normal ud "I'd... really like that. But I wouldn't like to not do anything for you."
+        if bangok_four_playerhasdick == True:
+            menu:
+                "I think I can fit myself in your ass {i}with{/i} your tail.":
+                    $ bangok_four_remy_c4postsections_store.player_in_remy = "ass"
+                "You have some room in your slit, right?":
+                    $ bangok_four_remy_c4postsections_store.player_in_remy = "slit"
+                "I'm getting plenty of stimulation like this.":
+                    $ bangok_four_remy_c4postsections_store.player_in_remy = None
+        else:
+            $ bangok_four_bryce3_store.player_in_remy = None
+
+        if bangok_four_remy_c4postsections_store.player_in_remy in ["slit","ass"]:
+            show remy shy ud with dissolve
+            if bangok_four_remy_c4postsections_store.player_in_remy == "slit":
+                Ry "Oh. Oh my. I do, yes..."
+            else:
+                Ry "Oh? Do you?"
+                Ry "That sounds... very interesting."
+            c "Here, may I...?"
+            m "I tugged a little bit of Remy's tail back out, both to give him some room for comfort with my thrusts and to give me some slack in his rear with which to try to squeeze inside."
+            if bangok_four_remy_c4postsections_store.player_in_remy == "ass":
+                if persistent.bangok_cloacas == True:
+                    m "Then, adjusting my legs to grip his tail a little higher, I pushed my balls back and lay my shaft along his tail, nestling my tip up against that tailhole beneath his shaft, inside his soon-to-be-very-crowded cloaca."
+                else:
+                    m "Then, adjusting my legs to grip his tail a little higher, I pushed my balls back and lay my shaft along his tail, nestling my tip up against that tailhole inside his soon-to-be-very-crowded ass slit."
+            else:
+                m "Then, pulling my legs a little tighter, I nestled my tip against where his cock emerged, inside his soon-to-be-very-crowded slit."
+
+
+    jump todo_out_of_content_bangok_four_remy_c4postsections
+
+
 
 label bangok_four_remy_c4postsections_mcpowerbottom_anal:
     if bangok_four_remy_c4postsections_store.shaft_protection == True:
