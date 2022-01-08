@@ -38,6 +38,11 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 </details>
 <br/>
 
+### Contribution credits:
+
++ `xsebastian` dialogue and blocking script contributed by `Dolkar` (Discord).
++ `remyc4postsections` inspired and reviewed by `saiginth renginalti` (Discord).
+
 ### Resource credits:
 + `bg/in/*`: 4onen, editing base-game assets
 + `bg/bangok_*.png`: 4onen
