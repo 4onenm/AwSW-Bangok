@@ -166,7 +166,7 @@ def bryce3_afterparty(ml):
         .search_say("Hey, do you want to know where I got these scars? I bet you're curious.")
         .link_from('bangok_four_bryce3_wannaknowscars')
         .search_say("Guess that's all of the trash. Thanks for the help.")
-        .hook_to('bangok_four_bryce3_mcbottom_train_epilogue', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)'))
+        .hook_to('bangok_four_bryce3_mcbottom_train_epilogue', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
     )
 
     clothes_fix = ( ml.find_label('bryce3skip')
@@ -180,7 +180,7 @@ def bryce3_afterparty(ml):
     clothes_fix.search_say("Is it okay for you to sleep like this?") \
         .link_from('bangok_four_bryce3_oktosleep') \
     
-    clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3.unplayed == False) and (bangok_four_bryce3.mc_bottom == True)'))
+    clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
 
 def remy_c4postsections(ml):
