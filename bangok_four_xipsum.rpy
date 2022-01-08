@@ -846,7 +846,7 @@ label bangok_four_xipsum_loremdone:
                     Lo think "Mmm."
                     Lo relieved "No. I think I'm going to go start on dinner."
                 else:
-                    Lo shy "O- Okay."
+                    Lo shy "O-Okay."
                     if bangok_four_xipsum.suckingipsum == True:
                         show ipsum happy flip with dissolve
                     if bangok_four_xipsum.fuckertarget == "ass" and bangok_four_playerhasdick == False:
