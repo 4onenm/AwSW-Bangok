@@ -13,6 +13,8 @@ init python in bangok_four_bryce3_store:
     mavws = False
     mavbroke = False
 
+    mavbackout = False
+
     # MP variables
     mavcondomleftin = False
 
@@ -1851,6 +1853,9 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                 m "Then he dragged back, long and slow, my insides gurgling as fluid flowed and shifted to follow him. His head popped free with a wet spatter down my legs."
             else:
                 m "Then he dragged back, long and slow. His head popping out sent a wave of relaxation through my innards, as my hole spasmed against the cool night air."
+
+            # Using mavbroke to indicate maverick has pissed inside so I don't have to think about yet another variable
+            $ bangok_four_bryce3_store.mavbroke = True
             m "Finally, he lifted his paw from my shoulderblades, releasing me from my service to his cock. I gasped as I slumped to the ground, thanking my lucky stars I'd avoided that internal organ rearrangement."
             scene beachx at Pan ((300, 0), (300, 0), 0.0) with hpunch
             jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
@@ -2631,7 +2636,7 @@ label bangok_four_bryce3_mctop_mavgoes:
 
         m "After I sat the supplies and myself a little further up the beach, Bryce wiggled his hips under Maverick."
     Br flirty flip "Alright, Mavers. Plow me."
-    if persistent.bangok_watersports == True and bangok_four_bryce3_store.mavws == True and bangok_four_bryce3_store.mavbroke == False:
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.mavws == True and bangok_four_bryce3_store.mavbroke == False and bangok_four_bryce3_store.mc_bottom == False:
         Mv normal flip "And your urination fetish?"
         Br "If you don't mind."
         $ renpy.pause(0.3)
@@ -2671,6 +2676,19 @@ label bangok_four_bryce3_mctop_mavgoes:
 
     m "Bryce's tail tip flicked against Maverick's neck."
     Br pantflirt flip "Y-You're, ah, crushing my circulation there."
+
+    show maverick nice flip:
+        transform_anchor True
+        ease 0.3 rotate 2 xpos 0.57 ypos 1.02
+    show bryce pant flip with dissolve
+    show bryce pant flip:
+        transform_anchor True
+        ease 0.8 rotate 22 xpos 0.93 ypos 1.3
+    with None
+    m "Maverick responded by closing his teeth on the hard spines at the end of Bryce's tail, then tugging Bryce's rear further forward."
+
+    Br pant flip "Haaahhh..."
+
 
 
 
