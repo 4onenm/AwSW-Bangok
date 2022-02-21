@@ -96,10 +96,6 @@ label bangok_four_anna1_goodending_nvl:
         n "I had bed a dragon before, but Anna seemed like a whole new experience."
     jump bangok_four_anna1_goodending_nvl_end
 
-label bangok_four_anna1_medending:
-    An normal flip "But you know what, this wasn't so bad after all. Maybe I'll let you have your sex."
-    jump bangok_four_anna1_medending_really
-
 label bangok_four_anna1_medending_nvl:
     n "After all, proposing a sex was my way of sticking it to her for being rude."
     n "Even though I lost the bet, she didn't seem to mind having sex with me, as long as she got what she wanted. Whether I would follow up on it was up to me, though."
