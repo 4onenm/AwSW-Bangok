@@ -916,58 +916,73 @@ label bangok_four_xkatsu_underneath_vag:
     show katsu smile with dissolve
     m "My canal clenched and squeezed, massaging his length for his heady warmth, to fight off the cold shock."
     Ka normal "That as deep as you can go?"
-    c "(He's right up against my cervix. {i}Can{/i} I take him deeper?)"
-    menu:
-        c "(He's right up against my cervix. {i}Can{/i} I take him deeper?){fast}"
-        "Fuck me deeper.":
-            $ renpy.pause(0.5)
-            $ bangok_four_xkatsu.target = "womb"
-            Ka smile "If you insist."
-            show katsu smile at Position(ypos=1.03) with ease
-            m "Katsuharu pulled back a moment, leaving a tiny well of emptiness inside me between his tip and my inner gate."
-            show katsu excited:
-                ease 0.3 xpos 0.47 ypos 1.05
-            with None
-            m "Then he filled that space and then some, squeezing through into my most sacred temple."
-        "I-I think I can take it...":
-            $ renpy.pause(0.5)
-            $ bangok_four_xkatsu.target = "womb"
-            Ka normal "You just let me know if it's too much."
-            show katsu normal:
-                ease 1.3 xpos 0.495 ypos 1.05
-            with None
-            m "He applied more pressure oh-so-gradually, leaning weight on his shaft with a slow ease that spoke to countless years of experience."
-            m "The pressure on my innermost gate increased, the ache increasing in step as his tip burrowed milimeters deeper, squeezed by a hole out of reach of humans."
-            menu:
-                "S-Stop!":
-                    $ renpy.pause(0.5)
-                    $ bangok_four_xkatsu.target = "vag"
-                    show katsu normal:
-                        ease 0.5 xpos 0.5 ypos 1.03
-                    with None
-                    m "Katsuharu and I both let out panting breaths as he pulled back."
-                    c "Y-You're too big. There's no way..."
-                    Ka exhausted "I could tell. Are you hurt?"
-                    c "I don't think so. As long as we don't try that again."
-                    Ka normal "Of course."
-                "So close...":
-                    $ renpy.pause(0.8)
-                    show katsu excited:
-                        ease 0.3 xpos 0.47 ypos 1.05
-                    with None
-                    m "His head popped in, squeezing through into my most sacred temple."
-        "Can't fit any more.":
-            $ renpy.pause(0.5)
-            $ bangok_four_xkatsu.target = "vag"
-            Ka "Of course."
-        "I-It's already so much!":
-            $ renpy.pause(0.5)
-            $ bangok_four_xkatsu.target = "vag"
-            show katsu exhausted with dissolve
-            show katsu exhausted at Position(ypos=1.03)
-            m "Katsuharu carefully slid back a little, taking the pressure off the wall at the end of my canal."
-            Ka "There?"
-            c "B-Better."
+    if persistent.bangok_cervpen:
+        c "(He's right up against my cervix. {i}Can{/i} I take him deeper?)"
+        menu:
+            c "(He's right up against my cervix. {i}Can{/i} I take him deeper?){fast}"
+            "Fuck me deeper.":
+                $ renpy.pause(0.5)
+                $ bangok_four_xkatsu.target = "womb"
+                Ka smile "If you insist."
+                show katsu smile at Position(ypos=1.03) with ease
+                m "Katsuharu pulled back a moment, leaving a tiny well of emptiness inside me between his tip and my inner gate."
+                show katsu excited:
+                    ease 0.3 xpos 0.47 ypos 1.05
+                with None
+                m "Then he filled that space and then some, squeezing through into my most sacred temple."
+            "I-I think I can take it...":
+                $ renpy.pause(0.5)
+                $ bangok_four_xkatsu.target = "womb"
+                Ka normal "You just let me know if it's too much."
+                show katsu normal:
+                    ease 1.3 xpos 0.495 ypos 1.05
+                with None
+                m "He applied more pressure oh-so-gradually, leaning weight on his shaft with a slow ease that spoke to countless years of experience."
+                m "The pressure on my innermost gate increased, the ache increasing in step as his tip burrowed milimeters deeper, squeezed by a hole out of reach of humans."
+                menu:
+                    "S-Stop!":
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xkatsu.target = "vag"
+                        show katsu normal:
+                            ease 0.5 xpos 0.5 ypos 1.03
+                        with None
+                        m "Katsuharu and I both let out panting breaths as he pulled back."
+                        c "Y-You're too big. There's no way..."
+                        Ka exhausted "I could tell. Are you hurt?"
+                        c "I don't think so. As long as we don't try that again."
+                        Ka normal "Of course."
+                    "So close...":
+                        $ renpy.pause(0.8)
+                        show katsu excited:
+                            ease 0.3 xpos 0.47 ypos 1.05
+                        with None
+                        m "His head popped in, squeezing through into my most sacred temple."
+            "Can't fit any more.":
+                $ renpy.pause(0.5)
+                $ bangok_four_xkatsu.target = "vag"
+                Ka "Of course."
+            "I-It's already so much!":
+                $ renpy.pause(0.5)
+                $ bangok_four_xkatsu.target = "vag"
+                show katsu exhausted with dissolve
+                show katsu exhausted at Position(ypos=1.03)
+                m "Katsuharu carefully slid back a little, taking the pressure off the wall at the end of my canal."
+                Ka "There?"
+                c "B-Better."
+    else:
+        menu:
+            "Ngh. Obviously!":
+                $ renpy.pause(0.5)
+                $ bangok_four_xkatsu.target = "vag"
+                Ka "Of course."
+            "It already hurts...":
+                $ renpy.pause(0.5)
+                $ bangok_four_xkatsu.target = "vag"
+                show katsu exhausted with dissolve
+                show katsu exhausted at Position(ypos=1.03)
+                m "Katsuharu carefully slid back a little, taking the pressure off the wall at the end of my canal."
+                Ka "There?"
+                c "B-Better."
     if bangok_four_xkatsu.target == "womb":
         m "I collapsed atop the bucket, knees giving out as my lower body shuddered with sparks of pain and pleasure ricocheting everywhere."
         show katsu smile:
