@@ -1803,3 +1803,11 @@ label bangok_four_anna2_apartment_done:
     show anna normal
     with Fade(0.5,1.0,0.5)
     jump anna2skip
+
+label bangok_four_anna2_lab_good_hookupover:
+    An smirk "Speaking of which, now that our hookup is officially over, we should talk about your end of the deal."
+    jump bangok_four_anna2_lab_good_hookupover_end
+
+label bangok_four_anna2_lab_normal_hookupover:
+    An smirk "You know, now that this hookup is officially over, if I don't work overtime every single day, I could fit you in for your end of the deal."
+    jump bangok_four_anna2_lab_normal_hookupover_end

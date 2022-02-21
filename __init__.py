@@ -116,6 +116,21 @@ def anna12(ml):
         .search_say("Yeah, let's go.") \
         .link_behind_from('bangok_four_anna2_romanticdate_conclusion_end')
 
+    anna2endings = ml.find_label('anna2skip').search_if('anna2mood > 6')
+    ( anna2endings
+        .branch('anna2mood > 6')
+        .search_say("Today was kinda fun, so maybe I should make the effort to get out every once in a while.")
+        .hook_to('bangok_four_anna2_lab_good_hookupover', condition='persistent.nsfwtoggle == True and bangok_four_anna2.position is not None', return_link=False)
+        .search_say("Of course.")
+        .link_from('bangok_four_anna2_lab_good_hookupover_end')
+    )
+    ( anna2endings
+        .branch('anna2mood > 1')
+        .search_say("I'll think about it.")
+        .hook_to('bangok_four_anna2_lab_normal_hookupover', condition='persistent.nsfwtoggle == True and bangok_four_anna2.position is not None', return_link=False)
+        .search_say("Of course you didn't forget about that.")
+        .link_from('bangok_four_anna2_lab_normal_hookupover_end')
+    )
 
 
 
