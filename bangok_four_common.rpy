@@ -5,6 +5,7 @@ init python:
         ("Inflation", "bangok_inflation"),
         ("Knotting", "bangok_knot"),
         ("Cloacas", "bangok_cloacas"),
+        ("Cervical Penetration","bangok_cervpen"),
     ]
     bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
 
