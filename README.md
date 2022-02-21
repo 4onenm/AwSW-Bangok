@@ -11,7 +11,7 @@ An Angels with Scaly Wings lewd mod. Contributions welcome.
 
 This mod is designed to add semi-plausible lewd scenes to AwSW. Scenes are incorporated into the flow of the story, and contain combinations of sprite-movement-based animation and flavorful descriptions. Some unique, lewd assets have also been made for the mod.
 
-A few fetishes and anatomical decisions are available with the mod. These can be configured with the in-game settings menu like any other setting. These decisions include: Cloacas, Knotting, Inflation, and Watersports. Each of these are disabled and inaccessible by default, and only become active by direct, intentional selection.
+A few fetishes and anatomical decisions are available with the mod. These can be configured with the in-game settings menu like any other setting. These decisions include: Cloacas, Knotting, Cervical penetration, Inflation, and Watersports. Each of these are disabled and inaccessible by default, and only become active by direct, intentional selection.
 
 <br/>
 
