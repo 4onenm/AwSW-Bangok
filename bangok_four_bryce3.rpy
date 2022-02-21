@@ -511,6 +511,9 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
     Mv angry "You don't need to share that with [player_name]!"
     if bangok_four_bryce3_store.sebastian_in == True:
         Sb drop "[player_name] isn't Maverick's ex, Bryce."
+    if not persistent.bangok_cervpen:
+        c "Humans can't do that. I definitely can't."
+        jump bangok_four_bryce3_mcbottom_mav_bryce_mp_nocervpen 
     menu:
         "I want it all.":
             if bangok_four_bryce3_store.sebastian_in == True:
@@ -536,6 +539,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
                     $ bangok_four_bryce3_store.mavtarget = "vag"
                     Mv normal "Then we won't."
         "I can't take more than this.":
+            label bangok_four_bryce3_mcbottom_mav_bryce_mp_nocervpen:
             $ bangok_four_bryce3_store.mavtarget = "vag"
             if bangok_four_bryce3_store.sebastian_in == True:
                 Sb normal "That's good. Keep your limits in mind."
@@ -1210,27 +1214,31 @@ label bangok_four_bryce3_mcbottom_train:
         c "B-Bryce! Stop!"
         m "He obliged immediately, leaving my vagina stuffed with his cock, tip resting against my cervix!"
         Br brow "Is that what I think it is?"
-        menu:
-            "This is as deep as I go.":
-                Br brow "Am I hurting you being this deep?"
-                c "You're up against my cervix. I don't--"
-                m "I squirmed, discomforted by the deep penetration."
-                c "If you could back off just a little..."
-                Br stern "Got it."
-            "I want you in my womb.":
-                Br stern "You realize how dangerous that is, right?"
-                Br stern "Most women find that extremely painful."
-                if bangok_four_bryce1_unplayed == False and bangok_four_bryce1.fuckwomb == True:
-                    Br brow "Last time, I think I only fit because we were drunk halfway out of our minds. I'm really not sure this time will be as easy or fun."
-                menu:
-                    "I'm sure.":
-                        $ bangok_four_bryce3_store.brycetarget = "womb"
-                        Br brow "..."
-                        $ renpy.pause (0.5)
-                        Br smirk "If you insist."
-                    "Maybe... maybe not.":
-                        Br stern "Definitely not."
-
+        if persistent.bangok_cervpen:
+            menu:
+                "This is as deep as I go.":
+                    label bangok_four_bryce3_mcbottom_train_bryce_nocervpen:
+                    Br brow "Am I hurting you being this deep?"
+                    c "You're up against my cervix. I don't--"
+                    m "I squirmed, discomforted by the deep penetration."
+                    c "If you could back off just a little..."
+                    Br stern "Got it."
+                "I want you in my womb.":
+                    Br stern "You realize how dangerous that is, right?"
+                    Br stern "Most women find that extremely painful."
+                    if bangok_four_bryce1_unplayed == False and bangok_four_bryce1.fuckwomb == True:
+                        Br brow "Last time, I think I only fit because we were drunk halfway out of our minds. I'm really not sure this time will be as easy or fun."
+                    menu:
+                        "I'm sure.":
+                            $ bangok_four_bryce3_store.brycetarget = "womb"
+                            Br brow "..."
+                            $ renpy.pause (0.5)
+                            Br smirk "If you insist."
+                        "Maybe... maybe not.":
+                            Br stern "Definitely not."
+        else:
+            c "This is as deep as I go."
+            jump bangok_four_bryce3_mcbottom_train_bryce_nocervpen
     if bangok_four_bryce3_store.brycetarget == "womb":
         m "Gradually, Bryce applied more and more pressure to my innermost gate, opening me millimeter by millimeter."
         m "It was nigh impossible to keep from tensing up, the stress on my vagina rising to the point of feeling like it'd tear me in half."
@@ -1607,8 +1615,8 @@ label bangok_four_bryce3_mcbottom_train:
             elif bangok_four_bryce3_store.brycetarget == "vag":
                 m "I pushed myself up against Bryce's belly to make the journey flat, then clenched what inner muscles I still could."
                 play sound "fx/pour.ogg" fadein 0.5
-                m "It was gravity that did the work, though. Bryce's load slowly poured through my innermost gate, then into the part of the condom Bryce gradually pulled out of my snatch."
-                m "The bloated reservoir followed, spilling between my legs onto the sand in one big blob."
+                m "It was gravity that did the work, though. Bryce's load slowly poured into the part of the condom Bryce gradually pulled out of my snatch."
+                m "The bloated reservoir itself followed, spilling between my legs onto the sand in one big blob."
             else: # "womb":
                 m "I pushed myself up against Bryce's belly to make the journey flat, then clenched what inner muscles I still could."
                 play sound "fx/pour.ogg" fadein 0.5
@@ -1793,7 +1801,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
 
     if bangok_four_bryce3_store.mavtarget in ["vag","womb"]:
         m "His large head spread my inner walls, feeling almost like a fist as it pushed deeper. It flattened out my inner folds, stretching my muscles and scraping deeper every drop of fluid within me."
-        if bangok_four_bryce3_store.mavtarget == "vag":
+        if bangok_four_bryce3_store.mavtarget == "vag" or not persistent.bangok_cervpen:
             m "I gasped, crotch already afire with overstimulation as he kissed my cervix with his tip."
         else: # "womb":
             m "I gasped, crotch already afire with overstimulation as he kissed my dilated cervix with his tip."
