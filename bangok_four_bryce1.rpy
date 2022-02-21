@@ -697,6 +697,9 @@ label bangok_four_bryce1_f_fuck:
     c "S-Stop!"
     m "Bryce froze instantly, waiting for me to explain, or give him more instructions. I wiggled slightly, trying to get a feel for what was going on."
     m "With a start, I realized he was so deep, he was pressing up against my cervix!"
+    if persistent.bangok_cervpen != True:
+        c "I can't go deeper than this."
+        jump bangok_four_bryce1_f_fuck_nowomb
     menu:
         "Press through, {i}carefully{/i}.":
             Br stern dk "What is it?"
@@ -747,6 +750,7 @@ label bangok_four_bryce1_f_fuck:
                     Br "We'd better not risk it."
                     c "Okay."
         "I can't go deeper than this.":
+            label bangok_four_bryce1_f_fuck_nowomb:
             $ bangok_four_bryce1.fuckwomb = False
             Br brow dk "Am I hurting you being this deep?"
             c "N-No. But any farther and you'll be fucking my womb."
@@ -783,7 +787,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
                         m "Warmth blossomed in my deepest recesses, filling me with an indescribable contentment and ecstacy as Bryce urinated directly into my womb."
                     else:
                         m "Warmth blossomed in my deepest recesses, filling me with an indescribable contentment and ecstacy as Bryce's piss filled what little space remained in my passage, then leaked through my cervix and into my womb."
-                        m "He shifted slightly, kissing his tip to my inner gate, urinating through, directly into my womb."
+                        m "He shifted slightly, kissing his tip to my inner gate, urinating through, directly into my deepest recesses."
                     if persistent.bangok_inflation == True:
                         m "His liquid just kept coming, filling my sacred temple like a toilet bowl.{w=0.5} I squirmed, unable to escape the glorious pressure as I was forced to expand around his piss."
                         $ bangok_four_bryce1_playerstuffed = True
@@ -957,7 +961,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
             menu:
                 "Y-You have a {i}knot{/i}?!":
                     $ bangok_four_bryce1.knotpos = "out"
-                "Th-Then do it!":
+                "Th-Then do it!" if persistent.bangok_cervpen:
                     $ bangok_four_bryce1.knotpos = "in"
                 "I wish...":
                     $ brycemood += 1
@@ -982,7 +986,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
     else:
         show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.05) with ease
         if bangok_four_bryce1_protected == True:
-            m "Bryce came, stopping with his cockhead in a tight kiss against my inner gate as he spurted into the condom reservoir on the other side."
+            m "Bryce came, stopping with his cockhead in a tight kiss against my inner gate, then jerked back as he began to spurt into the condom reservoir."
         else:
             m "Bryce came, stopping with his cockhead in a tight kiss against my inner gate as he spurted white ropes through it to my womb."
 
@@ -1002,7 +1006,10 @@ label bangok_four_bryce1_f_fuck_postwomb:
             if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
                 m "The condom's reservoir bloated inside my womb, pressing against every inner recess I had as the cum and piss looked for room to fill me up further."
             else:
-                m "The condom's reservoir bloated inside my womb, pressing against every inner recess I had as the cum looked for room to fill me up further."
+                if persistent.bangok_cervpen:
+                    m "The condom's reservoir bloated inside my womb, pressing against every inner recess I had as the cum looked for room to fill me up further."
+                else:
+                    m "The condom's reservoir bloated inside my passage, pressing against every inner recess I had as the cum looked for room to fill me up further."
         else:
             $ bangok_four_bryce1_playerstuffed = True
             if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
@@ -1186,7 +1193,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
                     $ brycemood += 1
                     scene black with dissolveslow
                     m "Bryce slumped on top of me on the couch, taking care to shift me to the edge so he wouldn't crush me."
-                    if persistent.bangok_knot == True:
+                    if bangok_four_bryce1_protected == False or (persistent.bangok_watersports and persistent.bangok_inflation):
                         m "He adjusted his hips too, pressing the tip of his shaft up against my cervix to help prevent leaks."
                     Br smirk dk "Goodnight, [player_name]."
                     jump bangok_four_bryce1_morningcouch
@@ -1218,10 +1225,12 @@ label bangok_four_bryce1_f_fuck_postwomb:
                         # Regular used condom.
                         play sound ["fx/slide.ogg","fx/uncork.ogg"] fadein 0.5
                         if persistent.bangok_watersports:
-                            m "Bryce tugged himself free, the blob of cum and piss he'd deposited in the condom's reservoir tugging through my cervix with a knee-shaking burst of pleasure."
+                            m "Bryce tugged himself free, the blob of cum and piss he'd deposited though my innermost gate into the condom's reservoir tugging through my cervix with a knee-shaking burst of pleasure."
                         else:
-                            m "Bryce tugged himself free, the blob of cum he'd deposited in the condom's reservoir tugging through my cervix with a knee-shaking burst of pleasure."
-
+                            if persistent.bangok_cervpen:
+                                m "Bryce tugged himself free, the blob of cum he'd deposited in the condom's reservoir tugging through my cervix with a knee-shaking burst of pleasure."
+                            else:
+                                m "Bryce tugged himself free, the blob of cum he'd deposeted in the condom's reservoir dragging through my passage with a knee-shaking slide of pleasure."
         if brycemood < 0:
             Br stern dk "Floor's open. Or you can find your way home like that."
             m "I struggled even to get off the couch, my legs still too weak to support me."
