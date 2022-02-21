@@ -45,7 +45,7 @@ def anna12(ml):
         .search_say("I'm quite sure you will.") \
         .hook_to('bangok_four_anna1_medending', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("Well, it's up to you. Call me if you're interested.") \
-        .link_from('bangok_four_ana1_medending_uptoyou') \
+        .link_from('bangok_four_anna1_medending_uptoyou') \
         .search_say("I was not sure what I had expected out of this encounter, but it certainly wasn't this.") \
         .hook_to('bangok_four_anna1_medending_nvl', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True') \
         .search_say("Even though I lost the bet, she didn't seem to mind going on a date with me, as long as she got what she wanted. Whether I would follow up on it was up to me, though.") \

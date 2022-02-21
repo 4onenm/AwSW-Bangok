@@ -86,7 +86,7 @@ label bangok_four_anna1_ending_merge:
     if annaanswers == 3:
         jump bangok_four_anna1_goodending_after_thankyou
     else:
-        jump bangok_four_ana1_medending_uptoyou
+        jump bangok_four_anna1_medending_uptoyou
 
 label bangok_four_anna1_goodending_nvl:
     n "Even though my bet of forcing her to have sex with me with me was more to get back at her for her earlier rudeness, I had not expected this outcome. I was not even sure what I expected from this meeting in the first place, but now I was locked into sex with her and being her own, personal guinea pig."
