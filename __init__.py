@@ -31,10 +31,11 @@ def anna12(ml):
         .link_from('bangok_four_anna1_winmenu_afterannablood')
 
     ml.find_label('_call_syscheck_36') \
-        .search_say("That's fine with me.") \
-        .hook_to('bangok_four_anna1_goodending', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
+        .search_say("I say we both get our rewards. After all, we each made a good effort to get them.") \
+        .hook_to('bangok_four_anna1_ending_merge', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("Thank you.") \
-        .link_from('bangok_four_anna1_goodending_thankyou') \
+        .search_show("anna normal flip") \
+        .link_from('bangok_four_anna1_goodending_after_thankyou') \
         .search_say("Despite all odds, I managed to match her perfect score in the game we played.") \
         .hook_to('bangok_four_anna1_goodending_nvl',condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("Whether anything good would come of this, I wasn't sure, either.") \
@@ -43,8 +44,8 @@ def anna12(ml):
     ml.find_label('anna1skip') \
         .search_say("I'm quite sure you will.") \
         .hook_to('bangok_four_anna1_medending', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
-        .search_say("Really?") \
-        .link_from('bangok_four_anna1_medending_really') \
+        .search_say("Well, it's up to you. Call me if you're interested.") \
+        .link_from('bangok_four_ana1_medending_uptoyou') \
         .search_say("I was not sure what I had expected out of this encounter, but it certainly wasn't this.") \
         .hook_to('bangok_four_anna1_medending_nvl', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True') \
         .search_say("Even though I lost the bet, she didn't seem to mind going on a date with me, as long as she got what she wanted. Whether I would follow up on it was up to me, though.") \

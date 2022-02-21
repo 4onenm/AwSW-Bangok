@@ -57,9 +57,36 @@ label bangok_four_anna1_winmenu:
             c "Oh. Okay then. Something that takes less time..."
             jump bangok_four_anna1_winmenu
 
-label bangok_four_anna1_goodending:
-    An normal flip "I won't have a spot in the facility to do the tests for a while, though, so I suppose next time we meet, it'll be for sex."
-    jump bangok_four_anna1_goodending_thankyou
+label bangok_four_anna1_medending:
+    An normal flip "But you know what, this wasn't so bad after all. Maybe I'll let you have your sex."
+label bangok_four_anna1_ending_merge:
+    c "Really? I'm surprised you're okay with that."
+    An normal flip "It's not unreasonable, and I certainly won't be letting you go back on your part of the bet."
+    An sad flip "Why? Do you {i}not{/i} want to have sex with me?"
+    menu:
+        "I didn't say that.":
+            An smirk flip "Then there's no problem."
+            An normal flip "I won't have a spot in the facility to do the tests for a while, though, so I suppose next time we meet, it'll be for sex."
+        "Humans have this saying, \"dinner and a movie...\"":
+            $ bangok_four_anna1_sexrequested = False
+            An normal flip "Fine. Then we can scale your end of the bet back to just a date."
+            An smirk flip "Unless things go really well."
+            c "That sounds fair to me."
+            An normal flip "I won't have a spot in the facility to do the tests for a while, though, so I suppose next time we meet, it'll be for that date."
+        "I kinda said it to get back at you for being rude.":
+            $ bangok_four_anna1_sexrequested = False
+            $ annamood -= 2
+            An face flip "I can't believe this."
+            c "Look, I'm sorry. What if we, I don't know, went to see a movie instead?"
+            An sad flip "What, like a date?"
+            An face flip "I seriously hope you're not abruptly trying to twist this into something longer-term."
+            $ renpy.pause(0.8)
+            An normal flip "Fine. I won't have a spot in the facility to do the tests for a while, so I suppose next time we meet, it'll be for this date of yours."
+    c "Sure."
+    if annaanswers == 3:
+        jump bangok_four_anna1_goodending_after_thankyou
+    else:
+        jump bangok_four_ana1_medending_uptoyou
 
 label bangok_four_anna1_goodending_nvl:
     n "Even though my bet of forcing her to have sex with me with me was more to get back at her for her earlier rudeness, I had not expected this outcome. I was not even sure what I expected from this meeting in the first place, but now I was locked into sex with her and being her own, personal guinea pig."
