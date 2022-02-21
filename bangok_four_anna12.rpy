@@ -1051,9 +1051,14 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             show anna bangok lipbite flip at Position(xpos=0.7,ypos=1.04) with ease
             m "Anna lifted herself up, her clenching almost tugging my arm with her. Just before my fingers were about to leave, she reversed direction and pressed back down, fucking herself onto my hand as if it were a dildo."
             An "Ah!"
-            m "We came up against resistance almost immediately, but this one came from within her."
-            show anna smirk flip with dissolve
-            m "A glance back from her showed in her face. Whatever this felt like for her, it was a good feeling."
+            if persistent.bangok_cervpen:
+                m "We came up against resistance almost immediately, but this one came from within her."
+                show anna smirk flip with dissolve
+                m "A glance back from her showed in her face. Whatever this felt like for her, it was a good feeling."
+            else:
+                show anna smirk flip with dissolve
+                m "She clenched up intentionally, bringing herself to a stop partway down and squeezing my arm and hand tightly."
+                c "(I wonder if I can make things even more interesting for her...)"
             menu:
                 "[[Form a fist.]":
                     $ anna2mood += 1
@@ -1096,7 +1101,6 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     An sad flip "D-Damnit. Still hurts a little."
                 "[[Don't get any ideas.]":
                     pass
-
             show anna:
                 ease 1.0 ypos 1.02
                 ease 1.0 ypos 1.04
@@ -1110,7 +1114,10 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             play soundloop "fx/rub2.ogg" fadein 4.0
             m "Anna began to fuck my wrist and hand, gently at first, then with increasing vigor."
             show anna bangok lipbite flip with dissolve
-            m "Each time, she thrust my hand against the resistance inside of her harder."
+            if persistent.bangok_cervpen:
+                m "Each time, she thrust my hand against the resistance inside of her harder."
+            else:
+                m "Each time, she thrust my hand a little deeper inside of her, squeezing tighter as more of her juices dribbled down my arm."
             An "A-Almost..."
             menu:
                 "Anna, don't hurt yourself!":
@@ -1131,7 +1138,10 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                 ease 0.3 ypos 1.07
             with None
             $ renpy.pause(0.8)
-            m "Abruptly, Anna thrust herself down hard enough to finally punch through the resistance. Her tail slapped the table as a few more inches of my arm disappeared inside of her. The pressure on my hand lessened and the undulating pressure on my arm mounted, a wider section now stuffed into her tight passage."
+            if persistent.bangok_cervpen:
+                m "Abruptly, Anna thrust herself down hard enough to finally punch through the resistance. Her tail slapped the table as a few more inches of my arm disappeared inside of her. The pressure on my hand lessened and the undulating pressure on my arm mounted, a wider section now stuffed into her tight passage."
+            else:
+                m "Abruptly, Anna thrust herself all the way down. I gasped, feeling the tight grip of her outer lips almost down to my elbow. The undulating pressure on my arm mounted and spasmed, a wider section now stuffed into her deep, tight passage."
             $ renpy.pause(0.5)
             show anna bangok lipbite flip with dissolve
             m "Anna remained there for several long moments, just catching her breath after the quiet roar and whatever she'd done."
@@ -1143,8 +1153,11 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     An smirk flip "Excellent, actually."
                 "What just happened?":
                     $ renpy.pause (0.6)
-                    An "I pushed your hand through my cervix."
-                "Is my hand in your womb right now?":
+                    if persistent.bangok_cervpen:
+                        An "I pushed your hand through my cervix."
+                    else:
+                        An "I took your arm, like I said I would."
+                "Is my hand in your womb right now?" if persistent.bangok_cervpen:
                     $ renpy.pause (0.5)
                     An smirk flip "Yes. Yes it is."
             if bangok_four_playerhasdick == True:
@@ -1157,7 +1170,10 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             with None
             $ renpy.pause(1.5)
             show anna bangok lipbite flip with dissolve
-            m "Anna sank further down my arm now soaked with her juices, until she all but sat on my forearm. There was another resistance inside of her, one I assumed she wouldn't be trying to batter through."
+            if persistent.bangok_cervpen:
+                m "Anna sank further down my arm now soaked with her juices, until she all but sat on my forearm. There was another resistance inside of her, one I assumed she wouldn't be trying to batter through."
+            else:
+                m "Anna sank further down my arm now soaked with her juices, until she all but sat on my forearm. There was a resistance deep inside of her, one I assumed she wouldn't be trying to play with."
             $ renpy.pause(1.5)
             An smirk flip "Well, I'm not going to do all the work here."
             c "I can't move my arm like this."
@@ -1171,7 +1187,10 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             with None
             $ renpy.pause(0.8)
             show anna bangok blush flip with dissolve
-            m "Anna began to pick herself up, legs shuddering. She faltered when I felt her cervix close above my hand, her bodyweight falling back on that tight inner gate and punching me back through, though not all the way."
+            if persistent.bangok_cervpen:
+                m "Anna began to pick herself up, legs shuddering. She faltered when I felt her cervix close above my hand, her bodyweight falling back on that tight inner gate and punching me back through, though not all the way."
+            else:
+                m "Anna began to pick herself up, legs shuddering. She faltered most of the way up, her bodyweight falling back on my arm as she clamped down, and let out a small gasp."
             menu:
                 "[[Pull out.]":
                     show anna bangok lipbite flip with dissolve
@@ -1201,13 +1220,24 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             m "Taking some faltering steps over to the couch, Anna fell back onto it. Her slit was still slightly open, glistening inside from her arousal."
             An smirk "Stick your arm back in."
             show anna bangok lipbite with dissolve
-            if bangok_four_anna2.position == "fist":
-                m "I obliged, reforming my fist (being careful to keep my fingernails in) and working it back into her. Once through her outer opening, it spread her walls, rubbing every which way until I reached her inner gate."
+            if persistent.bangok_cervpen:
+                if bangok_four_anna2.position == "fist":
+                    m "I obliged, reforming my fist (being careful to keep my fingernails in) and working it back into her. Once through her outer opening, it spread her walls, rubbing every which way until I reached her inner gate."
+                else:
+                    m "I obliged, working my hand through her outer opening, then sliding the short distance through her passage to her inner gate."
             else:
-                m "I obliged, working my hand through her outer opening, then sliding the short distance through her passage to her inner gate."
+                if bangok_four_anna2.position == "fist":
+                    m "I obliged, reforming my fist (being careful to keep my fingernails in) and working it back into her. Once through her outer opening, it spread her walls, rubbing every which way until she clenched down to stop my progress."
+                else:
+                    m "I obliged, working my hand through her outer opening, then sliding deeper until she clenched down to stop my progress."
+
             An smirk "Batter through."
             menu:
+                "Are you sure that's safe?":
+                    $ anna2mood -= 1
+                    jump bangok_four_anna2_finger_punch
                 "Just punch it?":
+                    label bangok_four_anna2_finger_punch:
                     $ anna2mood += 1
                     An bangok blush "How do you think I just did it?"
                     An smirk "I've done this a few times with big-dicked lovers. They're a lot less gentle than you try to be."
@@ -1216,27 +1246,38 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     $ renpy.pause(0.3)
                     An "Harder. Obviously."
                     $ renpy.pause(0.8)
-                    m "I tried again, pushing harder. Even with all the natural lubricant she'd spread on my arm, moving at speed was difficult with all the friction in her tight passage. Still, when I pressed up against her cervix, I felt a little spot of something different, and some small give."
+                    if persistent.bangok_cervpen:
+                        m "I tried again, pushing harder. Even with all the natural lubricant she'd spread on my arm, moving at speed was difficult with all the friction in her tight passage. Still, when I pressed up against her cervix, I felt a little spot of something different, and some small give."
+                    else:
+                        m "I tried again, pushing harder. Even with all the natural lubricant she'd spread on my arm, moving at speed was difficult with all the friction in her tight passage. Still, when I lined up just right, there was a way to slip deeper."
                     An smirk "What's wrong? The weak human ambassador isn't strong enough?"
                     c "(That's it!)"
-                    m "Adusting myself forward a little, I pulled my dragon-wrapped hand back, then pushed again, transferring the force between my shoulders to pull my arm up into her crotch. With the new angle, I was applying more force at her cervix."
-                    show anna bangok orgasm with dissolve
-                    m "It spread around my hand like her outermost opening had."
+                    if persistent.bangok_cervpen:
+                        m "Adusting myself forward a little, I pulled my dragon-wrapped hand back, then pushed again, transferring the force between my shoulders to pull my arm up into her crotch. With the new angle, I was applying more force at her cervix."
+                        show anna bangok orgasm with dissolve
+                        m "It spread around my hand like her outermost opening had."
+                    else:
+                        m "Adusting myself forward a little, I pulled my dragon-wrapped hand back, then pushed again, transferring the force between my shoulders to pull my arm up into her crotch. With the new angle, I took her to my elbow."
+                        show anna bangok orgasm with dissolve
                 "I'll try pushing first...":
                     m "I leaned more of the weight of my upper body onto my arm, pressing on her gate."
                     An bangok blush "Seriously, [player_name]. Repeated force is more effective than--"
+                    if not persistent.bangok_cervpen:
+                        m "Finding the right angle, I slid all the way in, despite her clenching down."
                     show anna bangok orgasm with dissolve
                     $ renpy.pause (0.4)
                     show anna bangok blushpalm with dissolve
                     An "Nevermind."
 
-
             An bangok lipbite "Well done. Now fuck me."
-            m "I started moving, pushing my arm almost to the elbow, then pulling back out until her cervix was about to let go of me, popping my knuckles through."
+            if persistent.bangok_cervpen:
+                m "I started moving, pushing my arm almost to the elbow, then pulling back out until her cervix was about to let go of me, popping my knuckles through."
+            else:
+                m "I started moving, pulling back, then pushing my arm almost to the elbow, then pulling back out until her outer lips were about to let go of me."
             m "Anna writhed in ecstacy."
             $ renpy.pause(0.5)
             An "D-Do not stop!"
-            m "I was about to ask why I would when her outer passage clamped down hard, the friction quadrupling. I could barely even manage to move. Not that it mattered, as one of her legs pulled me against her belly a moment later."
+            m "I was about to ask why I would when her passage clamped down hard, the friction quadrupling. I could barely even manage to move. Not that it mattered, as one of her legs pulled me against her belly a moment later."
             show anna bangok orgasm with dissolve
             show black with fadequick
             play sound "fx/snarl.ogg"
@@ -1252,7 +1293,10 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             menu:
                 "You came earlier?":
                     $ renpy.pause (0.5)
-                    An smirk "The first time you were through my cervix."
+                    if persistent.bangok_cervpen:
+                        An smirk "The first time you were through my cervix."
+                    else:
+                        An smirk "The first time I hilted your forearm."
                 "My turn, now?":
                     $ renpy.pause (0.6)
                     An smirk "Yes. Your turn."
