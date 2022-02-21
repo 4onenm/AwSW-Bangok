@@ -494,9 +494,19 @@ label bangok_four_anna2_apartment:
 
         if bangok_four_anna1_sexrequested == True:
             An "Now, you did buy condoms for the occasion, right?"
+            menu:
+                "Wait, why?":
+                    c "We're different species. I'm pretty sure I can't get you pregnant."
+                    An sad "Until I have a chance to go over your genital biofauna in a lab, I'd rather not discover the hard way your species has some kind of dragon-compatible bacteria that becomes an STD."
+                    c "Ah. Fair enough."
+                "Of course." if bangok_four_anna2.boughtcondoms == True:
+                    pass
+                "Uh..." if bangok_four_anna2.boughtcondoms == False:
+                    pass
             if bangok_four_anna2.boughtcondoms == True:
                 $ bangok_four_anna2.havecondoms = True
-                c "Of course."
+                show anna normal with dissolve
+                c "Of course I got some."
                 m "I retrieved the box I'd purchased during my visit to the store, removing one small foil-wrapped barrier device."
             else:
                 c "Uh..."
@@ -527,6 +537,7 @@ label bangok_four_anna2_apartment:
             c "What?"
             An sad "I didn't expect to do anything like this, so I didn't bring any condoms."
             An normal "And before you ask, no, I won't be having sex outside my phylogenic group without one."
+            An normal "Until I have a chance to go over your biofauna in a lab, I'd rather not discover the hard way your species has some kind of dragon-compatible bacteria that becomes an STD."
             $ renpy.pause (0.8)
             c "Well, let's look around. I'm sure some are stocked."
 
