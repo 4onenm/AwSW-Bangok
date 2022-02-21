@@ -64,14 +64,14 @@ def anna12(ml):
         .search_menu("Look at the health aisle.")
         .branch()
         .search_say("(I think these ones could fit on my arm.)")
-        .hook_to('bangok_four_chap2storehealth_anna12', condition='bangok_four_anna1_sexrequested == True')
+        .hook_to('bangok_four_chap2storehealth_anna12', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True')
     )
 
     ( ml.find_label('chap2storeques')
         .search_menu("[[Leave.]")
         .branch()
         .search_say("(I suppose that's all I can do here.)")
-        .hook_to('bangok_four_chap2storehealth_checkout_anna12', condition='bangok_four_anna1_sexrequested == True and chap2storehealth == False')
+        .hook_to('bangok_four_chap2storehealth_checkout_anna12', condition='bangok_four_anna1_sexrequested == True and bangok_four_anna2.boughtcondoms == True and persistent.nsfwtoggle == True')
     )
 
     # Anna2

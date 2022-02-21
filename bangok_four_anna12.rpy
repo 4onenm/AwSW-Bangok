@@ -3,6 +3,7 @@ init python:
     bangok_four_anna1_sexrequested = False
 
 init python in bangok_four_anna2:
+    boughtcondoms = False
     havecondoms = False
 
     havestrapon = False
@@ -131,8 +132,18 @@ label bangok_four_anna1_badending:
 
 
 label bangok_four_chap2storehealth_anna12:
-    m "Remembering my arrangement with Anna, I picked up one of the boxes of smaller sizes, labeled for runners, to purchase."
-    c "(Hope this doesn't seem too strange to the store clerk.)"
+    if bangok_four_playerhasdick == True:
+        m "Remembering my arrangement with Anna, I realized I should probably get some protection. I was dealing with an entirely different species, after all."
+    else:
+        m "Remembering my arrangement with Anna, an intrusive thought popped into my head about her tail."
+    menu:
+        "Get condoms.":
+            $ bangok_four_anna2.boughtcondoms = True
+            "I picked up one of the boxes of smaller sizes, labeled for runners, to purchase."
+            c "(Hope this doesn't seem too strange to the store clerk.)"
+        "Don't.":
+            $ bangok_four_anna2.boughtcondoms = False
+            c "(They probably have some in the apartment somewhere. Or we won't need them.)"
     jump bangok_four_chap2storehealth_anna12_return
 
 label bangok_four_chap2storehealth_checkout_anna12:
@@ -483,7 +494,7 @@ label bangok_four_anna2_apartment:
 
         if bangok_four_anna1_sexrequested == True:
             An "Now, you did buy condoms for the occasion, right?"
-            if chap2storehealth == False:
+            if bangok_four_anna2.boughtcondoms == True:
                 $ bangok_four_anna2.havecondoms = True
                 c "Of course."
                 m "I retrieved the box I'd purchased during my visit to the store, removing one small foil-wrapped barrier device."
