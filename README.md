@@ -46,7 +46,7 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 + `anna4` written and coded by `An Anonymous contributor`
 
 ### Resource credits:
-+ `bg/in/apts/o_ceil.png`: `An Anonymous contributor`
++ `bg/in/apts/o_ceil.png`: An Anonymous contributor
 + `bg/in/*`: 4onen, editing base-game assets
 + `bg/bangok_*.png`: 4onen
 + `cg/lorem-x-ipsum_purpleroom.png`:
