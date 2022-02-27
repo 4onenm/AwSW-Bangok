@@ -132,7 +132,13 @@ def anna12(ml):
         .link_from('bangok_four_anna2_lab_normal_hookupover_end')
     )
 
-
+    
+    # Anna 4
+    ml.find_label("a4romance") \
+        .search_menu("If you say so.").branch() \
+        .search_say("Alright, alright. So fussy.") \
+        .hook_to("bangok_anon_anna4_skipmenu", condition="persistent.nsfwtoggle == True")
+    
 
 def bryce1_afterparty(ml):
     ml.find_label('_call_skiptut_8') \
