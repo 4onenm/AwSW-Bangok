@@ -2,7 +2,7 @@
 # Table of contents:
 # Anna oral: Line 208. Tags used: Cloacas
 # Male player oral: Line 353
-# Femal player oral: Line 466. Tags used: Cerv pen
+# Female player oral: Line 466. Tags used: Cerv pen
 # Anna fingering: Line 523. Tags used: Cerv pen (Note: Scene is diffrent if done fingering in Anna2)
 # Male player tailfuck: Line 839
 # Female player tailfuck: Line 969. Tags used: Cerv pen
