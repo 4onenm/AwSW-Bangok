@@ -3,6 +3,8 @@ init python:
     bangok_four_anna1_sexrequested = False
 
 init python in bangok_four_anna2:
+    unplayed = True
+
     boughtcondoms = False
     havecondoms = False
 
@@ -20,6 +22,11 @@ init python in bangok_four_anna2:
     annacame = False
 
     tail = False
+    
+    annacomment = ""
+    doneoral = False
+    fisting = False
+    
 
 label bangok_four_anna1_skipmenu:
     play sound "fx/system3.wav"
@@ -705,6 +712,8 @@ label bangok_four_anna2_apartment_annaliesdown:
     m "Now in this position, I could clearly make out her single vertical slit, hidden on a slight mound between her legs."
     if persistent.bangok_cloacas == False:
         m "A small rosebud winked up at me from an inch or two further down."
+        
+    $ bangok_four_anna2.unplayed = False
     $ bangok_four_femalepartners += 1
 
     if bangok_four_anna2.havestrapon == False:
@@ -1061,6 +1070,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                 c "(I wonder if I can make things even more interesting for her...)"
             menu:
                 "[[Form a fist.]":
+                    $ bangok_four_anna2.fisting = True
                     $ anna2mood += 1
                     $ renpy.pause (0.5)
                     An sad flip "What are you...?"
@@ -1325,6 +1335,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
 
 
         "[[Use her mouth.]":
+            $ bangok_four_anna2.doneoral = True
             c "Actually..."
             m "I sat on the couch, spreading my legs."
             c "Why don't you use that mouth of yours on me?"
@@ -1573,9 +1584,11 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                 An face "Just do your thing and cum already."
                 c "Geez. Fine."
             elif anna2mood < 3:
+                $ bangok_four_anna2.annacomment = "small"
                 An sad "Yes. But you're rather small."
                 c "Ah. Well, I'll do what I can."
             else:
+                $ bangok_four_anna2.annacomment = "adorable"
                 An smirk "You're adorable. But there's simply no way you'll get me off with just that thing."
                 c "Is that a challenge?"
                 An bangok blush "A statement of fact."
