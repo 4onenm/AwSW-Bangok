@@ -66,10 +66,10 @@ label bangok_anon_anna4_start:
 
 # An face "Alright, alright. So fussy."
 An smirk "Now, let’s get these off you."
-m "Giving me a seductive look, Anna began to undress me. Starting by unbuttoning my shirt, tossing it onto the couch."
+m "Giving me a seductive look, Anna began to undress me. She started by unbuttoning my shirt, tossing it onto the couch."
 c "Uh, shouldn’t we at least go to the bedroom first?"
 m "Wordlessly, Anna took ahold of my wrist and led me to the bedroom."
-m "Then as soon as we got to the bedroom, she pushed me onto the bed and wasted no time, continuing undressing me."
+m "Then as soon as we got to the bedroom, she pushed me onto the bed and wasted no time, continuing to undress me."
 play sound "fx/undress.ogg"
 if bangok_four_playerhasdick == None:
     m "She proceeded to take off my pants, then underwear to reveal…"
@@ -110,12 +110,12 @@ c "I’m pretty sure I don’t have any either."
 An smirk "Then we’re fine."
 
 if bangok_four_playerhasdick == True:
-    m "Unpromptedly, she took hold of my shaft. Teasing me with long firm strokes."
+    m "Unpromptedly, she took hold of my shaft, teasing me with long firm strokes."
     c "O-Oh!"
     m "She continued stroking me, then picking up her pace until I was fully erect."
 
 else:
-    m "Unpromptedly, she started lightly fingering me. Teasing me by just barely penetrating my outer lips."
+    m "Unpromptedly, she started lightly fingering me, teasing me by just barely penetrating my outer lips."
     c "O-Oh!"
     m "She continued, fingering me until I was properly aroused."
 
@@ -226,19 +226,19 @@ show anna smirk flip:
 with dissolve
 
 if persistent.bangok_cloacas == False:
-    m "Anna proceeded to lie down on her back on the bed. Spreading her legs, giving me an unobstructed view of her slit, and asshole, just below it."
+    m "Anna proceeded to lie down on her back on the bed. Spreading her legs, she gave me an unobstructed view of her slit, and asshole, just below it."
 else:
-    m "Anna proceeded to lie down on her back on the bed. Spreading her legs, giving me an unobstructed view of her slit."
+    m "Anna proceeded to lie down on her back on the bed. Spreading her legs, she gave me an unobstructed view of her slit."
 
 m "I positioned myself between her legs, face inches from her slit. Anna wrapped her legs around the back of my shoulders, keeping me in place."
 show anna bangok blush flip with dissolve
 m "I began to tease her, gently licking outside her slit and the area immediately around it."
 m "I continued my gentle teasing action, but then Anna put a hand on the back of my head and pushed my face into her."
 An smirk flip "Enough of this gentle crap. You’re going to have to pick up the pace if you’re going to get me off."
-m "Following Anna’s orders, I picked up my pace. Firstly, penetrating her slit with my tongue."
+m "Following Anna’s orders, I picked up my pace, penetrating her slit with my tongue."
 An "Good little human."
 m "I started moving my tongue faster. Exploring her slick passage."
-An bangok blush flip "Your tongue is shorter than a dragons. It’s much softer and thicker though."
+An bangok blush flip "Your tongue is shorter than a dragon’s. It’s much softer and thicker though."
 m "Realizing this wouldn’t be enough for Anna, I tried applying suction."
 An bangok lipbite flip "Oh! What was that?"
 m "Worried I accidentally hurt her, I stopped and started to lift my head to answer, but was quickly pushed back down."
@@ -249,7 +249,7 @@ m "Anna bit her lip as if she was trying to hold herself back. But the subtle no
 An "Ngh…"
 m "She pushed me even further into her. Her juices covering my tongue, mouth, and part of my face. I explored deeper, feeling her slit lightly clench down on my tongue."
 if persistent.bangok_cloacas == True:
-    m "I then shifted my attention to her anal passage. The suction and slight penetration causing her to shudder."
+    m "I then shifted my attention to her anal passage. The suction and slight penetration caused her to shudder."
 $ renpy.pause (0.5)
 m "I kept up my action, getting a good taste of her slit juices, but then I was suddenly interrupted…"
 
@@ -478,7 +478,7 @@ show anna smirk with dissolve
 show anna:
     ease 1.0 ypos 1.50
 m "I spread my legs, giving Anna easy access to my groin, and almost immediately, she started teasing me by just licking my outer vaginal lips. Her tongue felt slightly coarse, but thankfully just enough to result in more pleasure than discomfort."
-m "She then placed her hands on my thighs. Simultaneously, bracing herself and holding me in place, as she continued to tease me. Only penetrating my pussy a shallow amount."
+m "She then placed her hands on my thighs. Simultaneously, bracing herself and holding me in place, as she continued to tease me, only penetrating my pussy a shallow amount."
 show anna at Position(ypos=1.51) with ease
 m "Then she started going deeper, her tongue just brushing my clit as she went in, causing me to shudder and moan appreciatively."
 c " A-Ah!"
@@ -486,7 +486,7 @@ m "She continued licking around that area for a decent amount of time, keeping u
 show anna:
     ease 1.5 ypos 1.52
 m "I started to push down into Anna’s tongue, which she took as an invitation to go even deeper, opening her mouth wider as not to scratch me with her teeth."
-m "She picked up her pace, licking and exploring inside my wet passage. Trying to find that sweet spot in me."
+m "She picked up her pace, licking and exploring inside my wet passage, trying to find that sweet spot in me."
 if persistent.bangok_cervpen:
     m "Then the tip of her tongue just flicked my cervix, causing me to moan again. I threw my head back and was temporarily paralyzed due to the sheer pleasure."
     m "She continued flicking my cervix with her tongue. Each time sending a wave of pleasure through my body, and bringing me closer to my limit by the second."
@@ -581,12 +581,12 @@ if bangok_four_anna2.annacame == True:
         repeat
 
     play soundloop "fx/rub2.ogg" fadein 3.0
-    m "Anna began to fuck my wrist and arm again. But this time not starting as slowly or needing time to adust."
+    m "Anna began to fuck my wrist and arm again. But this time she didn't start as slowly nor needed time to adust."
     $ renpy.pause (2.5)
     m "Her inner muscles squeezed tightly in on my arm and her juices started to dribble even faster down my arm."
 
     if persistent.bangok_cervpen:
-        m "Once again, my fist was being thrust against the resistance of her cervix. Each time my hand pushing a little further through."
+        m "Once again, my fist was being thrust against the resistance of her cervix. Each time my hand pushed a little further through."
         An "F-Fuck, a-almost…"
         $ renpy.pause (4.0)
         show anna bangok orgasm at Position(ypos=1.07) with ease
@@ -647,7 +647,7 @@ if bangok_four_anna2.annacame == True:
         $ renpy.pause (2.5)
         m "She paused, hilted on my arm, enjoying the feeling of me being so deep inside of her, and moving around occasionally."
         $ renpy.pause (1.0)
-        m "I felt a resistance deep inside her, just beyond my fist, one I assumed she couldn't be tying to mess around with."
+        m "I felt a resistance deep inside her, just beyond my fist, one I assumed she wouldn't be tying to mess around with."
         $ renpy.pause (0.5)
         show anna:
             ease 1.7 ypos 1.05
@@ -845,7 +845,7 @@ if bangok_four_anna2.tail == True:
     An bangok blush "Obviously. But more than just teasing you with just the tip."
 
 else:
-    An smirk "Oh. I didn’t expect you to be into tailplay, given you humans lack of one. I’m not complaining though."
+    An smirk "Oh. I didn’t expect you to be into tailplay, given you humans’ lack of one. I’m not complaining though."
 
 $ renpy.pause (1.0)
 play sound "fx/bed.ogg"
@@ -854,7 +854,7 @@ $ renpy.pause (2.5)
 show anna smirk at Position(ypos=1.3) with easeinbottom
 m "I proceed to lie on my back, and Anna positioned herself between my legs, with her tail pointing towards me."
 An bangok blush "First things first…"
-m "With a surprising amount of flexibility, Anna curled her tail back towards herself and between her legs. Then guided it to her slick slit with one of her hands."
+m "With a surprising amount of flexibility, Anna curled her tail back towards herself and between her legs. Then she guided it to her slick slit with one of her hands."
 c "What are you…?"
 An smirk "This won’t be as enjoyable without some kind of lubrication, and I want to get something out of this too."
 $ renpy.pause (0.5)
@@ -872,7 +872,7 @@ show anna:
     ease 0.8 ypos 1.3
     repeat
 $ renpy.pause (2.0)
-m "She then started thrusting her tail in and out of her passage, literally fucking herself. Each time, more of her juices covering her tail, letting it slide in with less resistance each time."
+m "She then started thrusting her tail in and out of her passage, literally fucking herself. Each time, more of her juices covered her tail, letting it slide in with less resistance each time."
 $ renpy.pause (3.0)
 show anna:
     ease 1.2 ypos 1.3
@@ -936,7 +936,7 @@ show anna:
     ease 1.7 ypos 1.28
     ease 1.5 ypos 1.3
 $ renpy.pause (3.0)
-m "But just as I was about to reach my limit, Anna slowed down, then fully retracted her tail from me. Letting my near-climax begin to slowly fade away."
+m "But just as I was about to reach my limit, Anna slowed down, then fully retracted her tail from me, letting my near-climax begin to slowly fade away."
 $ renpy.pause (1.5)
 
 scene black with fade
@@ -948,7 +948,7 @@ with dissolveslow
 $ renpy.pause (1.0)
 if bangok_anon_anna4.playeroral == True:
     $ renpy.pause (2.5)
-    c " Edging me {i}this{/i} much is just cruel."
+    c "Edging me {i}this{/i} much is just cruel."
     An smirk "Fine. If you’re going to complain so much, then that’s enough foreplay."
     jump bangok_anon_anna4_playerride
 
@@ -969,7 +969,7 @@ jump bangok_anon_anna4_beforemenu
 label bangok_anon_anna4_player_f_tail:
 
 c "Can you tailfuck me?"
-An smirk "Oh. I didn’t expect you to be into tailplay, given you humans lack of one. I’m not complaining though."
+An smirk "Oh. I didn’t expect you to be into tailplay, given you humans’ lack of one. I’m not complaining though."
 
 $ renpy.pause (1.0)
 play sound "fx/bed.ogg"
@@ -982,7 +982,7 @@ c "Yes…"
 $ renpy.pause (0.5)
 show anna:
     ease 1.0 ypos 1.26
-m "Anna then abruptly thrust her tail into me. Catching me by surprise, causing me to moan and a wave of pleasure to be sent through me."
+m "Anna then abruptly thrust her tail into me. Catching me by surprise, I let out a moan at the wave of pleasure sent through me."
 c "A-Ah!"
 m "I could feel my canal press inwards around her tail, coating it with even more of my juices, making her penetration of me even easier."
 $ renpy.pause (0.5)
