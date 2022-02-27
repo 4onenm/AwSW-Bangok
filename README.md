@@ -15,7 +15,7 @@ A few fetishes and anatomical decisions are available with the mod. These can be
 
 <br/>
 
-Currently, there are lewd scenes released for Bryce, Sebastian, Ipsum (+ Lorem), Katsuharu, and Anna.
+Currently, there are lewd scenes released for Bryce, Sebastian, Ipsum (+ Lorem), Katsuharu, and 2 for Anna.
 <details>
 <summary>Released scene access guides</summary>
 
@@ -23,6 +23,7 @@ Currently, there are lewd scenes released for Bryce, Sebastian, Ipsum (+ Lorem),
 + Bryce1: Try a different way of waking him up at the bar. Skipping Bryce1 will also give you the option to enter this scene.
 + Lorem2 (Ipsum + Lorem): Play through Lorem2 and, when Ipsum suggests it, agree to take off your clothes. With sufficiently high mood, Lorem may also be invited.
 + Anna2: During Anna1, bet for sex instead of a date OR during Anna2, do extremely well. (After betting for sex in Anna1, the original Anna2 date is still available if you say you're hungry.)
++ Anna4: Do Anna’s fourth date normally, picking the romance option, and a menu will appear with the choice to watch or skip the scene. (Doing the Anna2 scene beforehand will alter some dialogue/scene options.)
 + xKatsuharu: Play Katsuharu's scene to the end or skip through. During the fade-to-black at the end, Katsuharu will suggest the scene.
 </details>
 <br/>
@@ -42,8 +43,10 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 
 + `xsebastian` dialogue and blocking script contributed by `Dolkar` (Discord).
 + `remyc4postsections` inspired and reviewed by `saiginth renginalti` (Discord).
++ `anna4` written and coded by `An Anonymous contributor`
 
 ### Resource credits:
++ `bg/in/apts/o_ceil.png`: `An Anonymous contributor`
 + `bg/in/*`: 4onen, editing base-game assets
 + `bg/bangok_*.png`: 4onen
 + `cg/lorem-x-ipsum_purpleroom.png`:
