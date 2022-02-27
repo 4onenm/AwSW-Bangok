@@ -27,6 +27,12 @@ play sound "fx/system3.wav"
 s "Watch BangOk scene or skip to end?"
 menu:
     "Yes. I'd like to lewd Anna":
+        play sound "fx/system3.wav"
+        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+        play music "mx/anna4.ogg" fadein 2.0
+        jump bangok_anon_anna4_start
+
+    "No. Skip to the end.":    
         s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
         scene black with dissolvemed
         $ renpy.pause (2.0)
@@ -44,12 +50,6 @@ menu:
             jump chapter2chars
         else:
             jump chapter1chars
-
-    "No. Skip to the end.":
-        play sound "fx/system3.wav"
-        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-        play music "mx/anna4.ogg" fadein 2.0
-        jump bangok_anon_anna4_start
         
 
 label bangok_anon_anna4_start:
