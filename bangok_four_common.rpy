@@ -70,6 +70,8 @@ init:
 
 
     # Locations
+    image bangok_anon_o_ceiling = "bg/in/apts/o_ceil.png"
+    
     image bangok_four_bryce1_apartment night = "bg/in/apts/pad_night.png"
     image bangok_four_bryce1_apartment night ceiling = "bg/in/apts/pad_night_ceil.png"
 
