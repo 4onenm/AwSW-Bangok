@@ -2227,6 +2227,8 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
     $ renpy.pause(0.5)
     Br stern "Maverick!"
     $ renpy.pause(1.2)
+    scene beachx at Pan ((290, 0), (300, 0), 0.5) with fade
+    $ renpy.pause(0.5)
     show bryce brow at center with dissolvemed
     Br "He left."
 
