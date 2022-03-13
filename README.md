@@ -42,7 +42,7 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 ### Contribution credits:
 
 + `xsebastian` dialogue and blocking script contributed by `Dolkar` (Discord).
-+ `remyc4postsections` inspired and reviewed by `saiginth renginalti` (Discord).
++ `remyc4postsections` inspired and written by `saiginth renginalti` (Discord).
 + `anna4` written and coded by `An Anonymous contributor`
 
 ### Resource credits:
