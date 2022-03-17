@@ -976,12 +976,14 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_nomav_merge:
     jump todo_out_of_content_bangok_four_bryce3
 
 label bangok_four_bryce3_mcbottom_train:
+    scene beachx at Pan ((300, 0), (300, 0), 0.0) with dissolve
+    $ renpy.pause(0.5)
     scene beachx:
         xanchor 0.5
         yanchor 1.0
         xpos 0.5
         ypos 1.0
-    with dissolve
+    with dissolvemed
     m "I moved further from the basket, finding an empty spot on the beach so that any kicked up sand wouldn't wind up in Bryce's protection supplies."
     m "Then, thinking about the dragons' limited articulation, I got on all fours, presenting my ass back at them."
     Br flirty "That's a view."
@@ -1029,6 +1031,8 @@ label bangok_four_bryce3_mcbottom_train:
         c "Yeah."
         $ renpy.pause(0.5)
         m "Sebastian slid into me, lubrication on the condom letting me spread with relative ease."
+        show beachx:
+            linear 0.3 zoom 0.995
         m "I thrust back against him, heady with the first taste of cock this evening, what I knew would be the first of many."
         play soundloop "fx/rub2.ogg" fadein 0.5
         show beachx:
@@ -1038,11 +1042,21 @@ label bangok_four_bryce3_mcbottom_train:
         with None
         if bangok_four_bryce3_store.sebtarget == "ass":
             m "Picking up on my lack of discomfort with him, Sebastian quickly began a faster pace, sinking deep enough into my ass with each thrust to slap his thighs against mine."
-            $ renpy.pause(0.8)
-            m "I leaned forward into the sand, the hard assfucking already more than I'd imagined I'd get from this BBQ, and yet still only the first act."
         else:
             m "Picking up on my lack of discomfort with him, Sebastian quickly began a faster pace, thrusting deep enough into my love canal with each thrust that my lips met his."
-            $ renpy.pause(0.8)
+
+        show beachx:
+            ease 0.8 zoom 1.1
+            block:
+                linear 0.15 zoom 1.108
+                ease 0.5 zoom 1.1
+                repeat
+        with None
+        $ renpy.pause(0.8)
+        
+        if bangok_four_bryce3_store.sebtarget == "ass":
+            m "I leaned forward into the sand, the hard assfucking already more than I'd imagined I'd get from this BBQ, and yet still only the first act."
+        else:
             m "I leaned forward into the sand, the hard fucking already more than I'd imagined I'd get from this BBQ, and yet still only the first act."
         $ renpy.pause(1.2)
 
@@ -1100,7 +1114,7 @@ label bangok_four_bryce3_mcbottom_train:
             m "My hole squeezed, juices dribbling around his length and down my legs as I neared sweet release."
         stop soundloop fadeout 0.5
         show beachx:
-            linear 0.15 zoom 1.0
+            linear 0.15 zoom 1.1
         with None
         play sound "fx/snarl.ogg"
         if persistent.bangok_knot == False or (persistent.bangok_knot == True and bangok_four_bryce3_store.knotfuck == True):
@@ -1152,6 +1166,9 @@ label bangok_four_bryce3_mcbottom_train:
             m "After a few seconds, he began to pull out, still-hard length giving one last stimulating sendoff to my insides before he stepped back with a sigh."
         Sb disapproval "I think I need to call it a night now. Take this off and get some rest."
         Sb smile "Thanks for that, [player_name]."
+        show beachx:
+            linear 0.5 zoom 1.0
+        with None
         m "Panting myself, I got back to hands and knees, feeling the echoes of Sebastian's warmth against my back fading into the cool night air."
         c "Sure."
         Br laugh "Alright. Have a good night, Sebastian. See you tomorrow."
@@ -1220,8 +1237,13 @@ label bangok_four_bryce3_mcbottom_train:
             m "I took deep breaths and tried to relax my ass. Even still, Bryce's tip was big, a challenge to take."
     else:
         m "I took deep breaths, inner walls shivering in anticipation as they waited for Bryce to spread me enough to pass my outer lips"
-        
+
+    show beachx:
+        linear 0.8 zoom 1.1
+
     m "I had to lean forward, all but planting my face in the sand, before Bryce wedged his tip inside."
+    show beachx:
+        linear 0.15 zoom 1.096
     Br laugh "Ha! Damn!"
     Br flirty "Alright down there?"
     menu:
@@ -1297,11 +1319,11 @@ label bangok_four_bryce3_mcbottom_train:
                 $ renpy.pause (0.3)
         m "Then he popped in like a dam bursting."
 
-        menu:
-            "Gasp.":
-                pass
-            "Moan.":
-                pass
+        # menu:
+        #     "Gasp.":
+        #         pass
+        #     "Moan.":
+        #         pass
             # "Cry out.":
             #     Br stern "Damnit."
             #     m "He jerked back, pulling out of my womb, but it still took several seconds for me to even begin to recover."
@@ -1421,8 +1443,8 @@ label bangok_four_bryce3_mcbottom_train:
 
     play soundloop "fx/rub2.ogg" fadein 2.0
     show beachx:
-        linear 0.15 zoom 1.01
-        ease 0.5 zoom 1.0
+        linear 0.15 zoom 1.11
+        ease 0.5 zoom 1.1
         repeat
     with None
     m "Bryce began to thrust, gently at first, then with increasing need as I didn't voice any discomfort."
@@ -1486,7 +1508,7 @@ label bangok_four_bryce3_mcbottom_train:
     m "I could feel his thrusts get more uneven, more needy."
     m "That slight uncertainty was the last thing my endurance could take."
     show beachx:
-        ease 0.5 zoom 1.0
+        ease 0.5 zoom 1.1
     show black with fadequick
     if bangok_four_bryce3_store.brycetarget == "ass":
         if bangok_four_playerhasdick == True:
@@ -1575,6 +1597,8 @@ label bangok_four_bryce3_mcbottom_train:
                     m "I moaned as the pulses continued, until my womb was out of room, packed solid with Bryce's seed."
                     m "The pressure gave my womb no choice but to expand, distending my belly until I appeared pregnant with nothing but his cum."
     $ renpy.pause(0.5)
+    show beachx:
+        ease 0.5 zoom 1.0
     hide black with dissolveslow
     m "Bryce and I came down from our peaks together, breathing hard."
 
@@ -1895,6 +1919,9 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
         "I can't. I-I can't.":
             m "I could tell from his size and force that this {i}wasn't{/i} going to be the good time I had thought it would be. I repeated the two words like a mantra, praying it wasn't too late to back out."
             Br stern "Maverick."
+            show beachx:
+                linear 0.3 zoom 1.1
+            with None
             m "Maverick put a paw on my shoulder, sand and scales digging into my back as held me against the surface of the beach."
             if persistent.bangok_inflation == True and ((not bangok_four_bryce3_store.protection) or bangok_four_bryce3_store.brycebroke or bangok_four_bryce3_store.mavbroke):
                 m "Then he dragged back, long and slow, my insides gurgling as fluid flowed and shifted to follow him. His head popped free with a wet spatter down my legs."
@@ -1907,6 +1934,10 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             scene beachx at Pan ((300, 0), (300, 0), 0.0) with hpunch
             jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
     Br laugh "Any time you want to start."
+    show beachx:
+        ease 0.8 zoom 1.05
+        ease 0.5 zoom 1.2
+    with None
     $ renpy.pause(0.8)
     m "Maverick put one paw on my shoulder, sand and scales digging into my back as he held me against the surface of the beach."
     if persistent.bangok_inflation == True and ((not bangok_four_bryce3_store.protection) or bangok_four_bryce3_store.brycebroke or bangok_four_bryce3_store.mavbroke):
@@ -1934,9 +1965,13 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
     m "The next thrust went the same distance, but faster."
     play soundloop "fx/rub2.ogg"
     show beachx:
-        linear 0.15 zoom 1.02
-        ease 0.5 zoom 1.0
+        linear 0.15 zoom 1.22
+        ease 0.5 zoom 1.2
         repeat
+    show black:
+        alpha 0.0
+        linear 0.15 alpha 0.8
+        linear 0.5 alpha 0.2
     with None
     c "Ah!"
     m "Held in place by Maverick's paw, I could do nothing but hold on to consciousness through Maverick's rough fucking, as the sensations rapidly threatened me with climax after climax."
@@ -1966,7 +2001,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
 
     stop soundloop fadeout 0.5
     show beachx:
-        linear 0.15 zoom 1.0
+        linear 0.15 zoom 1.2
     with None
     play sound "fx/rub1.ogg"
 
@@ -1981,6 +2016,8 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
 
         if persistent.bangok_knot == True:
             m "Just a few spurts into his orgasm he pushed, pressing forward and jamming his seed deeper into me until a huge bulge at his base stopped him."
+            show beachx:
+                ease 0.5 ypos 1.02
             m "Shoving me a little in the sand, Maverick pressed his knot up against my rear, barely able to wedge it between my cheeks, much less fit it inside me."
         else:
             m "Just a few spurts into his orgasm he pushed, pressing forward and jamming his seed deeper into me until his slit pressed against my wide sphincter, feeding every bit of his cockflesh inside me."
@@ -2040,6 +2077,8 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
 
         if persistent.bangok_knot == True:
             m "Just a few spurts into his orgasm he pushed, pressing forward and spreading my cervix and canal wider around him until a huge bulge at his base stopped his entry."
+            show beachx:
+                ease 0.5 ypos 1.02
             m "Shoving me a little in the sand, Maverick pressed his knot up against my lips, barely able to wedge it between my thighs, much less fit it inside me."
         else:
             m "Just a few spurts into his orgasm he pushed, pressing forward and spreading my cervix and canal wider around him until his slit pressed against my stretched lips, feeding every bit of his cockflesh inside me."
@@ -2119,6 +2158,9 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             "P-Please get him o-out of me.":
                 Br stern "Maverick!"
                 Mv angry "Fine."
+        show beachx:
+            linear 0.3 zoom 1.19
+            ease 1.2 zoom 1.0
         m "Lifting me from the sand to straighten his shaft's journey, Maverick began gently pulling out."
         if bangok_four_bryce3_store.mavtarget == "ass":
             if persistent.bangok_inflation == True:
@@ -2252,6 +2294,10 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
 
     $ renpy.pause(0.8)
 
+    show black:
+        alpha 1.0
+    with dissolve
+
     if persistent.bangok_inflation == True and ((bangok_four_bryce3_store.protection == False) or (bangok_four_bryce3_store.brycebroke == True) or (bangok_four_bryce3_store.mavbroke == True)):
         m "Maverick stepped away from me. I slumped into the sand, unable to move with my insides rearranged around my bloated belly."
     else:
@@ -2266,7 +2312,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
     $ renpy.pause(0.5)
     Br stern "Maverick!"
     $ renpy.pause(1.2)
-    scene beachx at Pan ((290, 0), (300, 0), 0.5) with fade
+    scene beachx at Pan ((290, 0), (300, 0), 0.5) with dissolveslow
     $ renpy.pause(0.5)
     show bryce brow at center with dissolvemed
     Br "He left."
