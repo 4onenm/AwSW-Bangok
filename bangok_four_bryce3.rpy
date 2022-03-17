@@ -304,7 +304,9 @@ label bangok_four_bryce3_intro:
             Br brow "Does something come out of that, or...?"
             c "No. It's not a slit for a penis."
             Br flirty "Oh."
-        
+        else:
+            Br flirty "Y'know, I think you look better with those off."
+
         if bangok_four_bryce3_store.mc_bottom == False:
             Br smirk "You know, I'm not sure exactly how you're going to top me if you haven't got anything to stick inside."
             menu:
