@@ -354,6 +354,11 @@ label bangok_four_bryce3_mcbottom:
         m "I rolled one condom down his length, earning a flirty wink."
         show bryce smirk with dissolve
     m "I turned to the basket for a squirt of lube, then returned to Bryce's cock to spread it around."
+    play soundloop "fx/massage2.ogg"
+    show bryce pantflirt with dissolve
+    $ renpy.pause(2.0)
+    stop soundloop fadeout 0.3
+    show bryce smirk with dissolve
     show maverick nice flip:
         zoom 1.35
         yanchor 1.0
@@ -372,6 +377,10 @@ label bangok_four_bryce3_mcbottom:
         m "I took a squirt of lube and another condom, then shuffled within reach of Maverick to apply it. The large dragon held his ground, refusing to show discomfort at my proximity."
     else:
         m "I took a squirt of lube, then shuffled within reach of Maverick to apply it. The large dragon held his ground, refusing to show discomfort at my proximity."
+
+    play soundloop "fx/massage2.ogg"
+    $ renpy.pause(2.5)
+    stop soundloop fadeout 0.3
 
     $ renpy.pause(0.8)
     if bangok_four_bryce3_store.sebastian_in == True:
