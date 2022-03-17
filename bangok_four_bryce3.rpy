@@ -385,23 +385,26 @@ label bangok_four_bryce3_mcbottom:
     $ renpy.pause(0.8)
     if bangok_four_bryce3_store.sebastian_in == True:
         Br smirk "Seb, do you want first go?"
-        Sb smile "If you can share, you don't have to wait."
-        Br brow "What do you mean, \"if I can share\"?"
-        Br stern "I share! I'm just too big for you to take the front while I take the back."
-        Sb smile "We can resolve that if you were on your back with [player_name] on top."
-        Br brow "Hm."
-        Br "[player_name]? What do you think?"
-        menu:
-            "I'd prefer to take you all one at a time.":
-                jump bangok_four_bryce3_mcbottom_train
-            "Sure, sounds fun.":
-                jump bangok_four_bryce3_mcbottom_bryceseb_dp
-            "You know, I should be able to take all three of you." if bangok_four_playerhasdick == False:
-                c "If you got on top of the pile, Maverick?"
-                Mv nice flip "..."
-                Br flirty "I'm into it if you think you can take it."
-                Sb drop "Seems a little extreme."
-                jump bangok_four_bryce3_mcbottom_mav_bryce_mp
+        if bangok_four_playerhasdick == True:
+            Sb smile "[player_name]? It would be easiest on you to start with me before progressing to their sizes."
+            c "Sure, sounds good."
+            jump bangok_four_bryce3_mcbottom_train
+        else:
+            Sb smile "If you can share, you don't have to wait."
+            Br brow "What do you mean, \"if I can share\"?"
+            Br stern "I share! I'm just too big for you to take the front while I take the back."
+            Sb smile "We can resolve that if you were on your back with [player_name] on top."
+            Br brow "Hm."
+            Br "[player_name]? What do you think?"
+            menu:
+                "I'd prefer to take you all one at a time.":
+                    jump bangok_four_bryce3_mcbottom_train
+                "You know, I should be able to take all three of you." if bangok_four_playerhasdick == False:
+                    c "If you got on top of the pile, Maverick?"
+                    Mv nice flip "..."
+                    Br flirty "I'm into it if you think you can take it."
+                    Sb drop "Seems a little extreme."
+                    jump bangok_four_bryce3_mcbottom_mav_bryce_mp
     else:
         Br normal "I assume you want me first, to ease up to Maverick's size."
         if bangok_four_playerhasdick == True:
@@ -991,7 +994,7 @@ label bangok_four_bryce3_mcbottom_train:
     Br flirty "That's a view."
     if bangok_four_bryce3_store.sebastian_in == True:
         Br normal "Sebastian, care to ease [player_name] into this?"
-        m "Sebastian's footsteps padded up behind me. Then I felt near-frigid claws spreading my backside."
+        m "Sebastian's footsteps padded up behind me. Then I felt near-frigid claws spreading my backside as he knelt behind me."
         if bangok_four_playerhasdick == True:
             $ bangok_four_bryce3_store.sebtarget = "ass"
         else:
