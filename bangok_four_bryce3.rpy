@@ -870,10 +870,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
             m "His load kept coming, seed packing my tubes and womb until no room remained. Yet more cum came, forcing my womb to expand around it, pressing back against Bryce's cock in my ass and Maverick's belly above me."
     play soundloop "fx/breathing.ogg" fadein 1.0
     m "His pulses slowed, {w=0.3}then {w=0.3}finally came to an end. Maverick panted above me, tired out by the angle he'd had to take to work on top of Bryce."
-    if bangok_four_bryce3_store.sebastian_in == True:
-        m "Sebastian withdrew his cock from my mouth, and Bryce stilled, giving everyone a chance to check on me."
-    else:
-        m "Bryce stilled, taking the moment after Maverick's climax to check on me."
+    m "Bryce stilled, taking the moment after Maverick's climax to check on me."
     Br flirty "That felt amazing, and I'm not even you."
     Br normal "How are you feeling?"
     menu:
