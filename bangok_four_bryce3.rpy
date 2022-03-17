@@ -737,7 +737,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
         else:
             m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. With Bryce's paw on my shoulder, he held me in place, using Maverick's reticence to breach my innermost gate to lift his hips high enough to bottom out in my ass for his now-inevitable peak."
 
-    play sound "fx/dragonpain.ogg"
+    play sound "fx/dragonpain.wav"
     $ renpy.pause(0.4)
     play sound2 "fx/snarl.ogg"
     $ renpy.pause(1.0)
@@ -841,7 +841,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
             m "Abruptly, Maverick stuttered to a stop, through my cervix but a little short of hilting me. Even still, the violent thrust pushed me up Bryce's cock a distance I could feel sliding out."
         else:
             m "Abruptly, Maverick slammed me into his hips, hilting me as deep as he could go, spearing my womb and stretching my vagina around his dragonhood like a toy. The violent thrust pushed me up Bryce's cock a distance I could feel."
-        play sound "fx/dragonpain.ogg"
+        play sound "fx/dragonpain.wav"
         $ renpy.pause(1.0)
         
         if bangok_four_bryce3_store.protection == True:
@@ -851,7 +851,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
                 m "His load kept coming, the condom filling like a balloon, forcing my womb to expand around it, pressing back against Bryce's cock in my ass and Maverick's belly above me."
     else:
         m "Abruptly, Maverick stuttered to a stop, in the middle of my passage, twitching enough to lift me partly up Bryce's length."
-        play sound "fx/dragonpain.ogg"
+        play sound "fx/dragonpain.wav"
         $ renpy.pause(1.0)
         if bangok_four_bryce3_store.protection == True:
             m "Maverick's cum spilled into his condom, rapidly filling it in my stretched canal. His cock twitched and pulsed, dragging out my peak as he poured into me."
@@ -1975,7 +1975,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
 
     if bangok_four_bryce3_store.mavtarget == "ass":
         m "Finally, Maverick stopped, abruptly, halfway into me. Then his hips bucked, fucking my asshole fast and shallow with a few more short thrusts."
-        play sound "fx/dragonpain.ogg"
+        play sound "fx/dragonpain.wav"
         $ renpy.pause(1.0)
         if bangok_four_bryce3_store.protection and not bangok_four_bryce3_store.mavbroke:
             m "Cock twitching, Maverick stopped shallow in my ass, then began to spurt thick, hot seed into his condom."
@@ -2014,7 +2014,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             jump todo_out_of_content_bangok_four_bryce3
     elif bangok_four_bryce3_store.mavtarget == "vag":
         m "Finally, Maverick stopped, abruptly, halfway down my canal. Then his hips bucked, fucking my pussy fast and shallow with a few more short thrusts."
-        play sound "fx/dragonpain.ogg"
+        play sound "fx/dragonpain.wav"
         $ renpy.pause(1.0)
         if bangok_four_bryce3_store.protection:
             # Mavbroke is impossible on this route because no ws in vaginal-depth.
@@ -2034,7 +2034,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                 m "My pregnancy of cum advanced, belly bulging, leaving me thoroughly bred by my two draconic companions."
     else:
         m "Finally, Maverick stopped, abruptly, just short of my cervix. Then his hips bucked, fucking my womb fast and shallow with a few more short thrusts."
-        play sound "fx/dragonpain.ogg"
+        play sound "fx/dragonpain.wav"
         $ renpy.pause(1.0)
         if bangok_four_bryce3_store.protection and not bangok_four_bryce3_store.mavbroke:
             m "Cock twitching, Maverick stopped again with his head punched through my cervix, then began to spurt thick, hot seed into his condom."
