@@ -298,12 +298,6 @@ label bangok_four_bryce3_intro:
         m "The cool night air tickled my dick, eliciting a small rush of blood and a twitch."
         if bangok_four_bryce1_unplayed == True:
             Br smirk "Guessing you're a guy, then."
-
-        menu:
-            "Take a condom.":
-                $ bangok_four_bryce3_store.protection = True
-            "Go without.":
-                $ bangok_four_bryce3_store.protection = False
     else:
         m "The cool night air teased my lower lips, eliciting a small rush of blood that left my groin flushed and warm."
         if bangok_four_bryce1_unplayed == True:
