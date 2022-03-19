@@ -1175,10 +1175,11 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal_tailinremy_decision:
     c "Given how long you've probably waited for this, I think it's not unfair to have you finishing first."
     c "On top of that, I'm guessing, given your size, you finishing will probably get me there, or close enough to it to work out for me"
     if persistent.bangok_inflation == True:
-        Ry shy ud "I think that's a bit dangerous {size=-4}I'm feeling a bit productive today{/size}"
+        Ry shy ud "I think that's a bit dangerous."
+        Ry shy ud "{size=-4}I'm feeling a bit productive today{/size}"
         c "I did go into this expecting there to be some recovery time after all, and I trust you enough to be able to get me off of you if needed"
-        Ry look ud "Wait... you said you expected to have {i} recovery time{/i}, that sounds... concerning"
-        c "Well yeah, even though I can handle this, it's not exactly free of consequence, but I'm not taking any real risk with this"
+        Ry look ud "Wait... you said you expected to have {i}recovery time{/i}. that sounds... concerning"
+        c "Well yeah, even though I can handle this, it's not exactly free of consequence. But I'm not taking any real risk with this"
         Ry shy ud "Alright... though i hope you'll let me know the moment it looks like it'll be too much, ok?"
         c "Fair enough"
     else:
