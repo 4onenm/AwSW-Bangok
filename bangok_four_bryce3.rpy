@@ -21,6 +21,11 @@ init python in bangok_four_bryce3_store:
     mc_bottom = True
     protection = False
 
+    # Topping Bryce variables
+    mavfirst = False
+    mc_masturbate = False
+    mc_came = False
+
     # Menu options
     top_mav = True
 
@@ -306,14 +311,6 @@ label bangok_four_bryce3_intro:
             Br flirty "Oh."
         else:
             Br flirty "Y'know, I think you look better with those off."
-
-        if bangok_four_bryce3_store.mc_bottom == False:
-            Br smirk "You know, I'm not sure exactly how you're going to top me if you haven't got anything to stick inside."
-            menu:
-                "You'll just have to find out.":
-                    Br smirk "Can't wait to see."
-                "Well, you'll be on your back...":
-                    Br flirty "Now I almost don't want the surprise spoiled."
 
     if bangok_four_bryce3_store.mc_bottom == True:
         jump bangok_four_bryce3_mcbottom
@@ -2425,7 +2422,10 @@ label bangok_four_bryce3_mcbottom_train_epilogue:
 
 
 label bangok_four_bryce3_mctop:
-    scene beachx at Pan ((300, 0), (300, 0), 0.0) with dissolve
+    show beachx at reset:
+        anchor (0.0, 0.0)
+        pos (-300, 0) # Pan((300,0),(300,0), 0.0)
+    with None
     show bryce smirk flip at right with dissolve
     m "Bryce wandered a few steps away from his basket of supplies, then lifted his tail to expose his hindquarters."
     
@@ -2501,13 +2501,13 @@ label bangok_four_bryce3_mctop:
             xpos 0.51
             ypos 1.05
         with ease
-        play soundloop "fx/rub2.ogg" fadein 0.5
+        play soundloop "fx/bangok_poundofsalt.ogg" fadein 0.5
         show sebastian smile flip:
-            ease 0.15 xpos 0.52 ypos 1.05
+            ease 0.21 xpos 0.52 ypos 1.05
             ease 0.5 xpos 0.51 ypos 1.05
             repeat
         show bryce normal flip:
-            ease 0.15 xpos 0.995
+            ease 0.21 xpos 0.995
             ease 0.5 xpos 0.99
             repeat
         with None
@@ -2630,11 +2630,11 @@ label bangok_four_bryce3_mctop:
                 Br normal flip "Anyway. I could still take your cock, but refractory period means playing with mine'll be a little too intense for me. Just keep that in mind."
             jump bangok_four_bryce3_mctop_mavfirst_menu
         "I'll go first?":
-            $ bangok_four_bryce3_store.top_mav = False
+            $ bangok_four_bryce3_store.mavfirst = False
             Mv nice "..."
             Br flirty flip "Works for me."
         "Maverick? If you'd like to go.":
-            $ bangok_four_bryce3_store.top_mav = True
+            $ bangok_four_bryce3_store.mavfirst = True
             Mv normal "..."
             Br flirty flip "Works for me."
 
@@ -2654,7 +2654,7 @@ label bangok_four_bryce3_mctop:
                 $ bangok_four_bryce3_store.mavws = False
             "I'm not sure I want to fuck you after someone's pissed in you.":
                 jump bangok_four_bryce3_mctop_nows
-            "I'm going to be sloppy in {i}Maverick's{/i} piss?" if bangok_four_bryce3_store.top_mav == True:
+            "I'm going to be sloppy in {i}Maverick's{/i} piss?" if bangok_four_bryce3_store.mavfirst == True:
                 Br flirty flip "Like the idea?"
                 menu:
                     "No!":
@@ -2699,6 +2699,10 @@ label bangok_four_bryce3_mctop_mcgoes:
     jump todo_out_of_content_bangok_four_bryce3
 
 label bangok_four_bryce3_mctop_mavgoes:
+    show beachx at reset:
+        anchor (0.0, 0.0)
+        pos (-300, 0) # Pan((300,0),(300,0), 0.0)
+    with None
     show maverick normal flip at center behind bryce with dissolve
     m "Maverick watched me with suspicion as he walked over to Bryce."
     m "Only when he'd nearly stepped on Bryce's tail did he focus on his partner."
@@ -2722,12 +2726,29 @@ label bangok_four_bryce3_mctop_mavgoes:
         c "Sure."
         show bryce normal flip with dissolve
         show maverick normal flip with dissolve
+        show beachx:
+            linear 0.8 zoom 1.5 pos (-700, -300)
+        show bryce:
+            linear 0.8 zoom 1.4 ypos 1.42 xpos 1.1
+        show maverick:
+            linear 0.8 zoom 1.4
+        with None
         m "I slid Bryce's basket of supplies over, then took a large spurt of lube into my hands to spread over Maverick."
         show maverick angry flip with dissolve
         m "Maverick stiffened, but otherwise refused to show discomfort at my proximity. His shaft twitched as I rubbed on the lube, excited by the physical contact."
         m "I gave Maverick another two spurts, then rubbed the mess on my hands off on Bryce's ass. The rest I wiped off on his underbelly plates, all around his slit."
         Br laugh flip "Alright, get some distance and enjoy the show."
         show maverick normal flip with dissolve
+
+
+        show beachx at reset:
+            linear 1.0 zoom 1.0 pos (-300, 0) # Pan((300,0),(300,0), 0.0)
+        show bryce:
+            linear 1.0 zoom 1.0 xpos 0.93 ypos 1.3
+        show maverick:
+            linear 1.0 zoom 1.0
+        with None
+
 
         m "After I sat the supplies and myself a little further up the beach, Bryce wiggled his hips under Maverick."
     Br flirty flip "Alright, Mavers. Plow me."
@@ -2774,7 +2795,7 @@ label bangok_four_bryce3_mctop_mavgoes:
 
     show maverick nice flip:
         transform_anchor True
-        ease 0.3 rotate 2 xpos 0.57 ypos 1.02
+        ease 0.3 rotate 2 xpos 0.57 ypos 1.08
     show bryce pant flip with dissolve
     show bryce pant flip:
         transform_anchor True
@@ -2783,12 +2804,256 @@ label bangok_four_bryce3_mctop_mavgoes:
     m "Maverick responded by closing his teeth on the hard spines at the end of Bryce's tail, then tugging Bryce's rear further forward."
 
     Br pant flip "Haaahhh..."
+    $ renpy.pause(0.8)
+    Mv normal flip "Ready?"
+    Br smirk flip "What else am I going to do? You're already in!{w=0.5} Now are we going to do this, or--"
+
+    play soundloop "fx/rub2.ogg" fadein 0.5
+    show maverick:
+        ease 0.5 pos (0.55,1.06)
+        ease 0.15 pos (0.57,1.08)
+        repeat
+    show bryce:
+        pause 0.05
+        block:
+            ease 0.5 pos (0.92,1.295)
+            ease 0.15 pos (0.93,1.3)
+            repeat
+    with None
+
+    show bryce stern flip with dissolve
+
+    m "Bryce grunted at Maverick's first thrust, playful words and expression gone."
+
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.mavws == True:
+        m "Maverick's pace was rough, spattering lube and piss around their mating point to glisten on their underbelly plates."
+    else:
+        m "Maverick's pace was rough, spattering lube around their mating point to glisten on their underbelly plates."
+
+    if persistent.bangok_cloacas == True:
+        m "With each pull out I could see Maverick's thick shaft tugging open Bryce's slit, stretching his hole and pushing his erect shaft out of the way."
+    else:
+        m "With each pull out I could see Maverick's thick shaft tugging open Bryce's anal slit, stretching his hole and causing the smaller dragon's erect shaft to bounce."
+
+    $ bangok_four_bryce3_store.top_mav = True;
+    label bangok_four_bryce3_mctop_mavgoes_menu1:
+    menu:
+        "Bryce, you ok?" if bangok_four_bryce3_store.top_mav == True:
+            $ bangok_four_bryce3_store.top_mav = False
+            $ renpy.pause(0.5)
+            show maverick nice flip
+            show bryce flirty flip
+            with dissolve
+            Br "Adjusting."
+            $ renpy.pause(0.9)
+            show maverick normal flip
+            show bryce pant flip
+            with dissolve
+            Br "Always forget how fucking big... {w=0.8}Ah!"
+            show maverick nice flip
+            show bryce pantflirt flip
+            with dissolve
+            Br "I forget how big Maverick can be compared to other dragons."
+            $ renpy.pause(0.5)
+            jump bangok_four_bryce3_mctop_mavgoes_menu1
+        "Maverick, are you sure that fast is..." if bangok_four_bryce3_store.top_mav == True:
+            $ bangok_four_bryce3_store.top_mav = False
+            play sound "fx/growl.ogg"
+            show maverick angry flip
+            show bryce pant flip
+            with dissolve
+            $ renpy.pause(2.5)
+            stop sound fadeout 0.5
+            show maverick normal flip
+            show bryce pantflirt flip
+            with dissolve
+            Br "It's nothing more than he's done before."
+            $ renpy.pause(0.5)
+            jump bangok_four_bryce3_mctop_mavgoes_menu1
+        "[[Watch.]":
+            $ renpy.pause(0.5)
+        "[[Masturbate.]" if bangok_four_bryce3_store.mc_bottom == False and bangok_four_bryce3_store.mavfirst == True:
+            $ bangok_four_bryce3_store.mc_masturbate = True
+            c "(F-Fuck that's hot.)"
+            if persistent.bangok_four_playerhasdick == True:
+                m "Emboldened by the two dragons' vigorous lewd display, I began to jerk and tug at my own shaft, excited by the idea of soon being involved."
+            else:
+                m "Emboldened by the two dragons' vigorous lewd display, I began to prod and play with my pussy lips, excited by the idea of soon being involved."
+        "[[Look away.]":
+            scene beachx at Pan((100,0), (0,0), 8.0):
+                zoom 1.3
+            with dissolve
+            $ renpy.pause(0.5)
+            if bangok_four_bryce3_store.mc_bottom == True:
+                m "After narrowly avoiding having Maverick rearranging my insides, watching the two feral dragons' pounding coitus wasn't doing my abused body any favors."
+            else:
+                m "The two feral dragons' pounding coitus wasn't doing it for me."
+            $ renpy.pause(0.5)
+            m "The lewd slaps continued unabated in the background as I looked away toward the calm sea."
+            $ renpy.pause(3.0)
+            stop soundloop fadeout 0.5
+            play sound "fx/rub1.ogg" fadein 0.3
+            $ renpy.pause(0.8)
+            play sound "fx/dragonpain.wav"
+            $ renpy.pause(0.5)
+            play sound "fx/snarl.ogg"
+            $ renpy.pause(4.0)
+            Br pantflirt "Damn, Maverick. That one felt good."
+            $ renpy.pause(1.3)
+            play sound "fx/spray.ogg"
+            Br stern "Ngh."
+            $ renpy.pause(0.8)
+            Br brow "Maverick? Where are you going?"
+            Mv normal "Home."
+            Br brow "Don't you want to see [player_name]--"
+            Mv normal "No."
+            Br stern "Okay, still, at least stick around for a minute or two while I recover."
+            scene beachx at Pan((280,0), (300,0), 1.0)
+            show maverick normal flip:
+                anchor (0.5,1.0)
+                pos (0.7,1.0)
+                pause 0.3
+                ease 2.5 xpos 2.0
+            show bryce stern flip:
+                anchor (1.0,1.0)
+                pos (1.0,1.2)
+            with dissolve
+            $ renpy.pause(0.3)
+            Br "Maverick!"
+            jump todo_out_of_content_bangok_four_bryce3
 
 
+    show maverick nice flip
+    show bryce pant flip
+    with dissolvemed
+    $ renpy.pause(0.5)
+    m "Bryce's quiet grunts turned slowly to pants of want and need."
 
+    $ renpy.pause(0.5)
+    show maverick normal flip
+    show bryce pantflirt flip
+    with dissolve
+    Br "Maybe I should bottom more. Sebastian has it {i}good{/i} from you, Mavers."
 
+    if bangok_four_bryce3_store.mc_bottom == True:
+        show maverick nice flip
+        show bryce stern flip
+        with dissolve
+        Br "Er, sorry [player_name]. I know you..."
+        m "My abused lower body complained as I shifted in my sandy seating."
+        menu:
+            "It's fine.":
+                pass
+            "[[Say nothing.]":
+                pass
+        $ renpy.pause(0.8)
+    elif bangok_four_bryce3_store.mavfirst == True:
+        show maverick nice flip
+        show bryce flirty flip
+        with dissolve
+        Br "Excited for your turn, [player_name]?"
+        if bangok_four_bryce3_store.mc_masturbate == True:
+            m "Spotting me playing with myself while watching them, he laughed."
+            show maverick angry flip
+            show bryce laugh flip
+            with dissolve
+            Br "Yeah you are!"
+            $ renpy.pause(0.5)
+            menu:
+                "N-Not sure I can wait for you!":
+                    $ renpy.pause(0.5)
+                    show bryce pantflirt flip
+                    show maverick normal flip
+                    with dissolve
+                    Br "Then come on over. Got an open mouth here."
+                    jump bangok_four_bryce3_mctop_mavgoes_spitroast
+                "[[Contain yourself.]":
+                    $ renpy.pause(0.8)
+                "[[Cum.]":
+                    $ renpy.pause(0.3)
+                    $ bangok_four_bryce3_store.mc_came = True
+                    c "Nngh--"
+                    if persistent.bangok_four_playerhasdick == True:
+                        play sound "fx/extinguish.ogg"
+                        show black with dissolve
+                        m "I realized a moment too late I'd gone to far. My shaft twitched in my hand, leaving a line of my seed in the sand."
+                    else:
+                        show black with dissolve
+                        m "I realized a moment too late I'd gone to far. My hole clenched around my fingers as my orgasm overtook me."
+                    $ renpy.pause(0.5)
+                    show bryce smirk flip
+                    show maverick nice flip
+                    hide black
+                    with dissolveslow
+                    Br "Oops."
+        else:
+            if persistent.bangok_four_playerhasdick == True:
+                m "My shaft twitched, aching and ready."
+            else:
+                m "My empty hole clenched, flushed with heat and need."
+            menu:
+                "You bet I am.":
+                    $ renpy.pause(0.5)
+                    show maverick normal flip
+                    show bryce pant flip
+                    with dissolve
+                    Br "Alright!"
+                "Do I have to wait?":
+                    c "Your mouth seems pretty free."
+                    Br "Sure does seem that way. You... {w=0.4}Ah!{w=0.2} ...want to fill it?"
+                    jump bangok_four_bryce3_mctop_mavgoes_spitroast
+                "[[Touch yourself.]":
+                    $ bangok_four_bryce3_store.mc_masturbate = True
+                    c "(F-Fuck that's hot.)"
+                    if persistent.bangok_four_playerhasdick == True:
+                        m "Emboldened by the two dragons' vigorous lewd display, I began to jerk and tug at my own shaft, excited by the idea of soon being involved."
+                    else:
+                        m "Emboldened by the two dragons' vigorous lewd display, I began to prod and play with my pussy lips, excited by the idea of soon being involved."
+                "[[Say nothing.]":
+                    $ renpy.pause(0.8)
+                    show maverick normal flip
+                    show bryce pant flip
+                    with dissolvemed
+            $ renpy.pause(0.5)
+    else:
+        $ renpy.pause(0.8)
 
+    jump bangok_four_bryce3_mctop_mavgoes_climax
 
+label bangok_four_bryce3_mctop_mavgoes_climax:
+    show maverick normal flip
+    show bryce pant flip
+    with dissolve
+    if persistent.bangok_knot == True:
+        $ renpy.pause(0.5)
+        Mv "Are you feeling loose enough to..."
+        show maverick nice flip
+        show bryce pantflirt flip
+        with dissolve
+        Br "Fuck yes. Knot pop me."
+
+    stop soundloop fadeout 3.0
+    show maverick pant fip:
+        ease 0.5 pos (0.56,1.07)
+        ease 0.15 pos (0.57,1.08)
+        repeat
+    show bryce pant flip:
+        pause 0.05
+        block:
+            ease 0.5 pos (0.93,1.298)
+            ease 0.15 pos (0.93,1.3)
+            repeat
+    with None
+    $ renpy.pause(2.5)
+
+    if persistent.bangok_knot == True:
+        m "I didn't have long to wonder what that meant as Maverick's thrusts came shorter and faster. Then..."
+    else:
+        m "Maverick's thrusts came shorter and faster. Then..."
+
+    jump todo_out_of_content_bangok_four_bryce3
+
+label bangok_four_bryce3_mctop_mavgoes_spitroast:
     jump todo_out_of_content_bangok_four_bryce3
 
 label todo_out_of_content_bangok_four_bryce3:
