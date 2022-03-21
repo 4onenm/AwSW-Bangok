@@ -292,7 +292,7 @@ def add_side_images():
 
 @loadable_mod
 class BangOkMod(Mod):
-    name = "BangOk?"
+    name = "BangOk"
     version = "v0.0"
     author = "4onen"
     nsfw = True
