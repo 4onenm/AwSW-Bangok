@@ -1180,10 +1180,10 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal_tailinremy_decision:
         c "I did go into this expecting there to be some recovery time after all, and I trust you enough to be able to get me off of you if needed"
         Ry look ud "Wait... you said you expected to have {i}recovery time{/i}. that sounds... concerning"
         c "Well yeah, even though I can handle this, it's not exactly free of consequence. But I'm not taking any real risk with this"
-        Ry shy ud "Alright... though i hope you'll let me know the moment it looks like it'll be too much, ok?"
+        Ry shy ud "Alright... though I hope you'll let me know the moment it looks like it'll be too much, ok?"
         c "Fair enough"
     else:
-        Ry shy ud "I wouldn't mind helping to make sure at least"
+        Ry shy ud "I wouldn't mind helping "
     jump todo_out_of_content_bangok_four_remy_c4postsections
 
 
