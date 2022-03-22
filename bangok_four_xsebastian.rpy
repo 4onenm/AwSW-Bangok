@@ -3,8 +3,9 @@ init python:
     bangok_four_xsebastian_depth = 0
     bangok_four_xsebastian_playerfirst = False
     bangok_four_xsebastian_badtouch = False
-    
 
+label bangok_four_xsebastian_replay_start:
+    play music "mx/feelings.ogg" fadein 2.0
 label bangok_four_xsebastian_todaywasgreat:
     $ mp.sebastianromance = True
     $ mp.save()

@@ -347,6 +347,13 @@ def add_scene_select():
     fss.register_scene_select(bangok, "Katsuharu's Special", 'bangok_four_xkatsu_replay_start',
         locked=lambda: not renpy.store.persistent.playedkatsu)
 
+    # xSebastian
+    fss.register_scene_select(bangok, "Sebastian Cave Night", 'bangok_four_xsebastian_replay_start',
+        locked=lambda: not renpy.store.persistent.sebastianplayed,
+        replay_scope=fss.extend_scope(mcwon=False))
+    fss.end_replay_at_ml_node(ml.find_label('bangok_four_xsebastian_todaywasgreat_return'))
+
+
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
