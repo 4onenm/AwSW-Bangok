@@ -236,7 +236,7 @@ label bangok_four_xsebastian_path1_1:
                 m "He leaned over me, hugging my back as he stopped deep inside."
                 play sound "fx/extinguish.ogg"
                 m "Then warmth blossomed within me."
-                m "His shaft pulsed, rope after rope of seed deposited in my ass."
+                m "His shaft pulsed, rope after rope of seed deposited in my hole."
                 if persistent.bangok_inflation == True:
                     m "His cock kept twitching, the pressure of cum building up inside until it was spilling into my womb."
                     c "S-Seb!"
