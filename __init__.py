@@ -311,11 +311,25 @@ def add_scene_select():
     fss.register_scene_select_cateogry(bangok, nsfw=True)
 
     fss.register_scene_select(bangok, "Drunk with Bryce", 'bangok_four_bryce1_apartment_decided', replay_scope=fss.extend_scope(
-                        bangok_four_malepartners = 0,
-                        bangok_four_femalepartners = 0,
-                        bangok_four_playerhasdick = None,
+                        # bangok_four_malepartners = 0,
+                        # bangok_four_femalepartners = 0,
+                        # bangok_four_playerhasdick = None,
                         brycemood = 4,))
 
+    fss.register_scene_select(bangok, "Bryce and Maverick at the BBQ", 'bangok_four_bryce3_replaylabel',
+                                locked=lambda: not renpy.store.persistent.bryce3skip,
+                                replay_scope=fss.extend_scope_by_dict({
+                                    'bangok_four_malepartners': 1,
+                                }))
+
+    fss.register_scene_select(bangok, "Bryce, Maverick, and Sebastian at the BBQ", 'bangok_four_bryce3_replaylabel',
+                                locked=lambda: not renpy.store.persistent.bryce3skip,
+                                replay_scope=fss.extend_scope_by_dict({
+                                    'bangok_four_malepartners': 1,
+                                    'bangok_four_bryce1_unplayed': False,
+                                    'bangok_four_xsebastian_unplayed': False,
+                                    'bangok_four_bryce3_store.sebastian_in': True,
+                                }))
 
 @loadable_mod
 class BangOkMod(Mod):
