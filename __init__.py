@@ -278,6 +278,18 @@ def modsettings_firstboot():
     )
 
 
+def link_scenes():
+    anna12()
+    anna4()
+    bryce1_afterparty()
+    bryce3_afterparty()
+    remy_c4postsections()
+    xipsum()
+    xkatsu()
+    xsebastian()
+    modsettings_firstboot()
+
+
 def add_side_images():
     def clip_anna_side_image(imagefile):
         return im.Flip(im.Scale(im.Crop(imagefile,(30,35,500,600)),250,300),horizontal=True)
@@ -302,18 +314,12 @@ class BangOkMod(Mod):
 
     @classmethod
     def mod_load(cls):
-        if "Side Images" in modinfo.get_mods():
+        if modinfo.has_mod("Side Images"):
             add_side_images()
+
         ml.register_mod_settings(cls, screen='bangok_modsettings')
-        anna12()
-        anna4()
-        bryce1_afterparty()
-        bryce3_afterparty()
-        remy_c4postsections()
-        xipsum()
-        xkatsu()
-        xsebastian()
-        modsettings_firstboot()
+
+        link_scenes()
 
     @staticmethod
     def mod_complete():
