@@ -319,6 +319,10 @@ def add_scene_select():
             'bangok_four_anna2.boughtcondoms': True,
         }))
 
+    # Anna4
+    fss.register_scene_select(bangok, "Anna4: A Very Anna Afternoon", 'bangok_four_anna4_replay_start',
+        locked=lambda: not renpy.exports.seen_label('a4romance'))
+
     # Bryce1
     fss.register_scene_select(bangok, "Drunk with Bryce", 'bangok_four_bryce1_apartment_decided', replay_scope=fss.extend_scope(
                         brycemood = 4,))
