@@ -303,6 +303,19 @@ def add_side_images():
     renpy.exports.image('side sebastian shy b sleep', clip_sebastian_side_image('cr/sebastian_shy_b_sleep.png'))
 
 
+def add_scene_select():
+    import four_scene_select as fss
+
+    bangok="BangOk"
+
+    fss.register_scene_select_cateogry(bangok, nsfw=True)
+
+    fss.register_scene_select(bangok, "Drunk with Bryce", 'bangok_four_bryce1_apartment_decided', replay_scope=fss.extend_scope(
+                        bangok_four_malepartners = 0,
+                        bangok_four_femalepartners = 0,
+                        bangok_four_playerhasdick = None,
+                        brycemood = 4,))
+
 
 @loadable_mod
 class BangOkMod(Mod):
@@ -320,6 +333,9 @@ class BangOkMod(Mod):
         ml.register_mod_settings(cls, screen='bangok_modsettings')
 
         link_scenes()
+
+        if modinfo.has_mod("Scene Select"):
+            add_scene_select()
 
     @staticmethod
     def mod_complete():
