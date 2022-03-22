@@ -343,6 +343,10 @@ def add_scene_select():
                                     'bangok_four_bryce3_store.sebastian_in': True,
                                 }))
 
+    # xKatsu
+    fss.register_scene_select(bangok, "Katsuharu's Special", 'bangok_four_xkatsu_replay_start',
+        locked=lambda: not renpy.store.persistent.playedkatsu)
+
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
