@@ -329,13 +329,13 @@ def add_scene_select():
 
     # Bryce3
     fss.register_scene_select(bangok, "Bryce and Maverick at the BBQ", 'bangok_four_bryce3_replaylabel',
-                                locked=lambda: not renpy.store.persistent.bryce3skip,
+                                locked=lambda: (not renpy.store.persistent.bryce3skip) or (not renpy.store.persistent.bangok_dev),
                                 replay_scope=fss.extend_scope_by_dict({
                                     'bangok_four_malepartners': 1,
                                 }))
 
     fss.register_scene_select(bangok, "Bryce, Maverick, and Sebastian at the BBQ", 'bangok_four_bryce3_replaylabel',
-                                locked=lambda: not renpy.store.persistent.bryce3skip,
+                                locked=lambda: (not renpy.store.persistent.bryce3skip) or (not renpy.store.persistent.bangok_dev),
                                 replay_scope=fss.extend_scope_by_dict({
                                     'bangok_four_malepartners': 1,
                                     'bangok_four_bryce1_unplayed': False,
