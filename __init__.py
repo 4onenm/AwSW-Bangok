@@ -343,6 +343,16 @@ def add_scene_select():
                                     'bangok_four_bryce3_store.sebastian_in': True,
                                 }))
 
+    # Lorem2
+    fss.register_scene_select(bangok, "Arrangement with Ipsum", 'bangok_four_xipsum_replay_start',
+        locked=lambda: not renpy.store.persistent.lorem2skip)
+    fss.register_scene_select(bangok, "Arrangement with Lorem and Ipsum", 'bangok_four_xipsum_replay_start',
+        locked=lambda: not renpy.store.persistent.lorem2skip,
+        replay_scope=fss.extend_scope_by_dict({
+            'lorem2mood': 8,
+            'bangok_four_xipsum.loremin': True,
+        }))
+
     # xKatsu
     fss.register_scene_select(bangok, "Katsuharu's Special", 'bangok_four_xkatsu_replay_start',
         locked=lambda: not renpy.store.persistent.playedkatsu)

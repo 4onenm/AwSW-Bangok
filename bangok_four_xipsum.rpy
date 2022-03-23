@@ -19,6 +19,30 @@ init python in bangok_four_xipsum:
     took_ipsum_both = False
 
 
+label bangok_four_xipsum_replay_start:
+    scene black with dissolve
+    play music "mx/snowflake.ogg" fadein 2.0
+
+    Ip normal "Excuse my confusion, but are you male or female?"
+    menu:
+        "Male.":
+            $ bangok_four_playerhasdick = True
+        "Female.":
+            $ bangok_four_playerhasdick = False
+        "That's actually somewhat of an awkward question...":
+            $ renpy.pause (0.5)
+            $ lorem2mood += 1
+            Ip sad "Oh, is it?"
+            Ip think "Then how should I phrase it..."
+            Ip normal "What's between your legs?"
+            menu:
+                "Show him your dick.":
+                    $ bangok_four_playerhasdick = True
+                "Show him your lack of dick.":
+                    $ bangok_four_playerhasdick = False
+
+    jump bangok_four_xipsum_bedroom_start
+
 
 label bangok_four_xipsum_takeemoff:
     $ renpy.pause (0.5)
@@ -391,6 +415,7 @@ label bangok_four_xipsum_loremdone:
     m "Ipsum gestured to his room."
     Ip happy "Shall we?"
 
+label bangok_four_xipsum_bedroom_start:
     scene bangok_four_xipsum_bedroom normal at Pan ((128, 228), (128, 228), 0.0)
     if bangok_four_xipsum.loremin == True:
         show bangok_four_xipsum_bedroom_bed:
