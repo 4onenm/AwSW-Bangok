@@ -4,11 +4,13 @@ import renpy.display.im as im
 from modloader import modinfo
 from modloader.modclass import Mod, loadable_mod
 
+import jz_magmalink as ml
+
 def make_dev(cond):
     return '('+cond+') and (persistent.bangok_dev == True)'
 
 
-def anna12(ml):
+def anna12():
     # Anna1
     ml.find_label('_call_skiptut_7') \
         .search_menu("Yes. I want to skip ahead.") \
@@ -132,14 +134,14 @@ def anna12(ml):
         .link_from('bangok_four_anna2_lab_normal_hookupover_end')
     )
 
-def anna4(ml):
+def anna4():
     ml.find_label("a4romance") \
         .search_menu("If you say so.").branch() \
         .search_say("Alright, alright. So fussy.") \
         .hook_to("bangok_anon_anna4_skipmenu", condition="persistent.nsfwtoggle == True")
     
 
-def bryce1_afterparty(ml):
+def bryce1_afterparty():
     ml.find_label('_call_skiptut_8') \
         .search_menu("Yes. I want to skip ahead.") \
         .branch() \
@@ -173,7 +175,7 @@ def bryce1_afterparty(ml):
 
 
 
-def bryce3_afterparty(ml):
+def bryce3_afterparty():
     ( ml.find_label('_call_skiptut_26')
         .search_menu("Yes. I want to skip ahead.")
         .branch()
@@ -205,7 +207,7 @@ def bryce3_afterparty(ml):
     clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
 
-def remy_c4postsections(ml):
+def remy_c4postsections():
     ( ml.find_label('c4postsections')
         .search_say("I'll take care of the remaining tasks, so you can take the rest of the day off. I'm sure you have things to do other than helping the police department.")
         .hook_to('bangok_four_remy_c4postsections_sebintro', condition=make_dev('(persistent.nsfwtoggle == True) and (c4libraryavailable == True) and (remy3unplayed == False) and (remystatus == "good" or remystatus == "neutral")'))
@@ -214,7 +216,7 @@ def remy_c4postsections(ml):
     )
 
 
-def xipsum(ml):
+def xipsum():
     ( ml.find_label('lorem2')
         .search_hide('meetingipsum', depth=400)
         .search_menu("I see how it is.")
@@ -250,7 +252,7 @@ def xipsum(ml):
 
 
 
-def xkatsu(ml):
+def xkatsu():
     ( ml.find_label('katsuskip')
         .search_if('persistent.playedkatsu == False')
         .hook_to('bangok_four_xkatsu', condition='persistent.nsfwtoggle == True', return_link = False)
@@ -258,7 +260,7 @@ def xkatsu(ml):
 
 
 
-def xsebastian(ml):
+def xsebastian():
     ( ml.find_label('sebastianskip')
         .search_menu("It's pretty cold.")
         .branch()
@@ -269,11 +271,23 @@ def xsebastian(ml):
     )
 
 
-def modsettings_firstboot(ml):
+def modsettings_firstboot():
     ( ml.find_label('splashscreen')
         .search_python("renpy.pause(1.6, hard=True)")
         .hook_to('bangok_four_mod_firstboot', condition='persistent.bangok_four_menu_firstboot_complete != True')
     )
+
+
+def link_scenes():
+    anna12()
+    anna4()
+    bryce1_afterparty()
+    bryce3_afterparty()
+    remy_c4postsections()
+    xipsum()
+    xkatsu()
+    xsebastian()
+    modsettings_firstboot()
 
 
 def add_side_images():
@@ -289,6 +303,66 @@ def add_side_images():
     renpy.exports.image('side sebastian shy b sleep', clip_sebastian_side_image('cr/sebastian_shy_b_sleep.png'))
 
 
+def add_scene_select():
+    import four_scene_select as fss
+
+    bangok="BangOk"
+
+    fss.register_scene_select_cateogry(bangok, nsfw=True)
+
+    # Anna2
+    fss.register_scene_select(bangok, "Anna at night", 'bangok_four_anna2_apartment',
+        replay_scope=fss.extend_scope_by_dict({
+            'blood': True,
+            'annamood': 1,
+            'anna2mood': 4,
+            'bangok_four_anna2.boughtcondoms': True,
+        }))
+
+    # Anna4
+    fss.register_scene_select(bangok, "Anna4: A Very Anna Afternoon", 'bangok_four_anna4_replay_start',
+        locked=lambda: not renpy.exports.seen_label('a4romance'))
+
+    # Bryce1
+    fss.register_scene_select(bangok, "Drunk with Bryce", 'bangok_four_bryce1_apartment_decided', replay_scope=fss.extend_scope(
+                        brycemood = 4,))
+
+    # Bryce3
+    fss.register_scene_select(bangok, "Bryce and Maverick at the BBQ", 'bangok_four_bryce3_replaylabel',
+                                locked=lambda: not renpy.store.persistent.bryce3skip,
+                                replay_scope=fss.extend_scope_by_dict({
+                                    'bangok_four_malepartners': 1,
+                                }))
+
+    fss.register_scene_select(bangok, "Bryce, Maverick, and Sebastian at the BBQ", 'bangok_four_bryce3_replaylabel',
+                                locked=lambda: not renpy.store.persistent.bryce3skip,
+                                replay_scope=fss.extend_scope_by_dict({
+                                    'bangok_four_malepartners': 1,
+                                    'bangok_four_bryce1_unplayed': False,
+                                    'bangok_four_xsebastian_unplayed': False,
+                                    'bangok_four_bryce3_store.sebastian_in': True,
+                                }))
+
+    # Lorem2
+    fss.register_scene_select(bangok, "Arrangement with Ipsum", 'bangok_four_xipsum_replay_start',
+        locked=lambda: not renpy.store.persistent.lorem2skip)
+    fss.register_scene_select(bangok, "Arrangement with Lorem and Ipsum", 'bangok_four_xipsum_replay_start',
+        locked=lambda: not renpy.store.persistent.lorem2skip,
+        replay_scope=fss.extend_scope_by_dict({
+            'lorem2mood': 8,
+            'bangok_four_xipsum.loremin': True,
+        }))
+
+    # xKatsu
+    fss.register_scene_select(bangok, "Katsuharu's Special", 'bangok_four_xkatsu_replay_start',
+        locked=lambda: not renpy.store.persistent.playedkatsu)
+
+    # xSebastian
+    fss.register_scene_select(bangok, "Sebastian Cave Night", 'bangok_four_xsebastian_replay_start',
+        locked=lambda: not renpy.store.persistent.sebastianplayed,
+        replay_scope=fss.extend_scope(mcwon=False))
+    fss.end_replay_at_ml_node(ml.find_label('bangok_four_xsebastian_todaywasgreat_return'))
+
 
 @loadable_mod
 class BangOkMod(Mod):
@@ -296,23 +370,19 @@ class BangOkMod(Mod):
     version = "v0.0"
     author = "4onen"
     nsfw = True
-    dependencies = ["MagmaLink", "?Side Images", "?CRAP"] # TODO: Make CRAP mandatory when Bryce and Ipsum assets move.
+    dependencies = ["MagmaLink", "?Side Images", "?CRAP", "?Scene Select"] # TODO: Make CRAP mandatory when Bryce and Ipsum assets move.
 
     @classmethod
     def mod_load(cls):
-        if "Side Images" in modinfo.get_mods():
+        if modinfo.has_mod("Side Images"):
             add_side_images()
-        ml = modinfo.get_mods()["MagmaLink"].import_ml()
+
         ml.register_mod_settings(cls, screen='bangok_modsettings')
-        anna12(ml)
-        anna4(ml)
-        bryce1_afterparty(ml)
-        bryce3_afterparty(ml)
-        remy_c4postsections(ml)
-        xipsum(ml)
-        xkatsu(ml)
-        xsebastian(ml)
-        modsettings_firstboot(ml)
+
+        link_scenes()
+
+        if modinfo.has_mod("Scene Select"):
+            add_scene_select()
 
     @staticmethod
     def mod_complete():

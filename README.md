@@ -7,6 +7,11 @@ An Angels with Scaly Wings lewd mod. Contributions welcome.
 + **MagmaLink**: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2594080243) or [GitLab](https://gitlab.com/jakzie2/awsw-magmalink)
 + **Community Resource Assets Pack (CRAP)**: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2665870882) or [GitLab](https://gitlab.com/jakzie2/awsw-crap)
 
+### Optional Requirements:
+
++ **Scene Select**: [GitHub](https://github.com/4onen/AwSW-Scene-Select)
+  + Adds BangOk scenes to the scene selection menu."
+
 ### Content:
 
 This mod is designed to add semi-plausible lewd scenes to AwSW. Scenes are incorporated into the flow of the story, and contain combinations of sprite-movement-based animation and flavorful descriptions. Some unique, lewd assets have also been made for the mod.

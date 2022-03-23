@@ -31,6 +31,18 @@ init python in bangok_four_bryce3_store:
 
 
 
+label bangok_four_bryce3_replaylabel:
+    $ bryce3mood = 2
+    scene beachx at Pan ((290, 0), (300, 0), 5.0)
+    show bryce smirk at Position(xanchor = 1.0, xpos = 1.175, yanchor=1.0, ypos=1.0)
+    if bangok_four_bryce3_store.sebastian_in == True:
+        show sebastian normal flip at left
+    show maverick normal behind bryce at Position(xpos=0.825)
+    with Fade(0.5,0.5,1.0)
+    play music "mx/hydrangea.ogg" fadein 2.0
+    jump bangok_four_bryce3_bottom_choice
+
+
 
 label bangok_four_bryce3_skipmenu:
     play sound "fx/system3.wav"
@@ -39,8 +51,9 @@ label bangok_four_bryce3_skipmenu:
         "Yes. Join the team-building exercise.":
             play sound "fx/system3.wav"
             s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-            $ bryce3mood = 2
-            show bryce at Position(xanchor = 1.0, xpos = 1.175)
+            $ bryce3mood += 2
+            scene beachx at Pan ((0, 0), (300, 0), 5.0)
+            show bryce laugh at Position(xanchor = 1.0, xpos = 1.175, yanchor=1.0, ypos=1.0)
             show sebastian normal flip at left
             show maverick normal behind bryce at Position(xpos=0.825)
             show zhong normal flip at Position(xpos = 0.05)
@@ -2373,6 +2386,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
         "[[Say nothing.]":
             pass
     hide bryce with dissolve
+    $ renpy.end_replay()
     m "Bryce started to clean up, starting first with our foodscraps. But with the amount of trash left by five people, it was clear it would take a while."
 
     $ bangok_four_bryce3_store.unplayed = False
@@ -2412,6 +2426,7 @@ label bangok_four_bryce3_mcbottom_train_epilogue:
 
     $ renpy.pause (0.3)
     scene black with dissolvemed
+    $ renpy.end_replay()
     $ renpy.pause (1.0)
     scene padx at Pan ((0, 240), (0,360), 3.0) with dissolveslow
     $ renpy.pause (1.3)
