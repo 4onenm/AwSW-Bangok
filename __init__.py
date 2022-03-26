@@ -145,7 +145,7 @@ def bryce1_afterparty():
     ml.find_label('_call_skiptut_8') \
         .search_menu("Yes. I want to skip ahead.") \
         .branch() \
-        .hook_to('bangok_four_bryce1_skipmenu')
+        .hook_to('bangok_four_bryce1_skipmenu', condition='persistent.nsfwtoggle == True')
 
     wake_menu = ml.find_label('waitmenu') \
         .search_menu("I would, but I don't think I can beat someone like you.") \

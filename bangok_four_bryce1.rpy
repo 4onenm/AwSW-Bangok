@@ -21,16 +21,15 @@ init python in bangok_four_bryce1:
     knotpos = None
 
 label bangok_four_bryce1_skipmenu:
-    if persistent.nsfwtoggle == True:
-        play sound "fx/system3.wav"
-        s "Would you like to lewd Bryce?"
-        menu:
-            "Yes. I would like to lewd Bryce.":
-                play sound "fx/system3.wav"
-                s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-                jump bangok_four_bryce1_apartment_decided
-            "No. Not that far.":
-                pass
+    play sound "fx/system3.wav"
+    s "Would you like to lewd Bryce?"
+    menu:
+        "Yes. I would like to lewd Bryce.":
+            play sound "fx/system3.wav"
+            s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+            jump bangok_four_bryce1_apartment_decided
+        "No. Not that far.":
+            pass
     jump bangok_four_bryce1_skipmenu_return
 
 
