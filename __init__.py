@@ -218,6 +218,14 @@ def remy_c4postsections():
 
 def xipsum():
     ( ml.find_label('lorem2')
+        .search_if('persistent.lorem2skip == True')
+        .branch()
+        .search_menu("Yes. I want to skip ahead.")
+        .branch()
+        .hook_to('bangok_four_xipsum_lorem2_skipmenu', condition='persistent.nsfwtoggle==True')
+    )
+
+    ( ml.find_label('lorem2')
         .search_hide('meetingipsum', depth=400)
         .search_menu("I see how it is.")
         .add_choice("I could take them off...", condition='persistent.nsfwtoggle == True', jump='bangok_four_xipsum_takeemoff')

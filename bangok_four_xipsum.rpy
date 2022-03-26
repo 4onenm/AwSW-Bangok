@@ -44,6 +44,41 @@ label bangok_four_xipsum_replay_start:
     jump bangok_four_xipsum_bedroom_start
 
 
+label bangok_four_xipsum_lorem2_skipmenu:
+    play sound "fx/system3.wav"
+    s "Would you take your clothes off for Ipsum?"
+    menu:
+        "Yes. I would like to lewd Ipsum.":
+            $ bangok_four_xipsum.clothesoff = True
+            $ bangok_four_xipsum.unplayed = False
+        "Yes. I'll take my clothes off, but that's it.":
+            $ bangok_four_xipsum.clothesoff = True
+        "No. Just skip to the end.":
+            pass
+    if bangok_four_xipsum.clothesoff == True:
+        play sound "fx/system3.wav"
+        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+
+        scene black with dissolvemed
+        $ renpy.pause (1.0)
+        $ persistent.skipnumber += 1
+        $ lorem2mood = 7
+
+        call skipcheck from _call_skipcheck_bangok_xipsum
+
+        scene loremapt at Pan ((0, 72), (0,72), 0.0)
+        show lorem normal flip at Position (xpos = 0.3)
+        with dissolvemed
+        play music "mx/snowflake.ogg" fadein 2.0
+
+        if bangok_four_xipsum.unplayed == False:
+            jump bangok_four_xipsum_loremdone
+        else:
+            jump lorem2skip
+    else:
+        jump bangok_four_xipsum_lorem2_skipmenu_return
+
+
 label bangok_four_xipsum_takeemoff:
     $ renpy.pause (0.5)
     Ip normal "I'm just saying it would be hard to study an insect if there was a piece of cloth draped over it. Wearing that much just seems odd to me."
