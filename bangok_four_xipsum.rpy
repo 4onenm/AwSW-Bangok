@@ -19,10 +19,7 @@ init python in bangok_four_xipsum:
     took_ipsum_both = False
 
 
-label bangok_four_xipsum_replay_start:
-    scene black with dissolve
-    play music "mx/snowflake.ogg" fadein 2.0
-
+label bangok_four_xipsum_gendercheck:
     Ip normal "Excuse my confusion, but are you male or female?"
     menu:
         "Male.":
@@ -41,6 +38,16 @@ label bangok_four_xipsum_replay_start:
                 "Show him your lack of dick.":
                     $ bangok_four_playerhasdick = False
 
+    return
+
+
+
+label bangok_four_xipsum_replay_start:
+    scene black with dissolve
+    play music "mx/snowflake.ogg" fadein 2.0
+
+    call bangok_four_xipsum_gendercheck from bangok_four_xipsum_replay_start_gendercheck
+
     jump bangok_four_xipsum_bedroom_start
 
 
@@ -48,9 +55,11 @@ label bangok_four_xipsum_lorem2_skipmenu:
     play sound "fx/system3.wav"
     s "Would you take your clothes off for Ipsum?"
     menu:
-        "Yes. I would like to lewd Ipsum.":
+        "Yes, and lewd him.":
             $ bangok_four_xipsum.clothesoff = True
             $ bangok_four_xipsum.unplayed = False
+            if bangok_four_playerhasdick is None:
+                call bangok_four_xipsum_gendercheck from bangok_four_xipsum_skipmenu_gendercheck
         "Yes. I'll take my clothes off, but that's it.":
             $ bangok_four_xipsum.clothesoff = True
         "No. Just skip to the end.":
