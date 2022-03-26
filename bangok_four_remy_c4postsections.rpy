@@ -1171,12 +1171,11 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal_puttailinremy:
 
 
 label bangok_four_remy_c4postsections_mcpowerbottom_anal_tailinremy_decision:
-    m "I considered playing with Remy's tail, ultimately deciding that he's needed this more that I do" 
-    c "Given how long you've probably waited for this, I think it's not unfair to have you finishing first."
+    m "I considered playing with Remy's tail, ultimately deciding that he's needed this more than I do" 
+    c "Given how long you've probably waited for this, I don't think it's unfair to have you finishing first."
     c "On top of that, I'm guessing, given your size, you finishing will probably get me there, or close enough to it to work out for me"
     if persistent.bangok_inflation == True:
-        Ry shy ud "I think that's a bit dangerous."
-        Ry shy ud "{size=-4}I'm feeling a bit productive today{/size}"
+        Ry shy ud "I think that's a bit dangerous. {w}{size=-6}I'm feeling a bit, ah, productive today{/size}"
         c "I did go into this expecting there to be some recovery time after all, and I trust you enough to be able to get me off of you if needed"
         Ry look ud "Wait... you said you expected to have {i}recovery time{/i}. that sounds... concerning"
         c "Well yeah, even though I can handle this, it's not exactly free of consequence. But I'm not taking any real risk with this"
@@ -1184,6 +1183,16 @@ label bangok_four_remy_c4postsections_mcpowerbottom_anal_tailinremy_decision:
         c "Fair enough"
     else:
         Ry shy ud "I wouldn't mind helping "
+    c "Also, you'll probably have to find some way of getting me off of you when we're done, cause I doubt I'll be able to use my legs for a while afterward"
+    Ry look ud "Sure thing."
+    if bangok_four_playerhasdick == True:
+        m "Having been somewhat twisted to see Remy's face, my cock twitched from the pressure"
+    else:
+        m "Having been somewhat twisted to see Remy's face, I felt a small wave of pleasure hit me from the pressure"
+    c "Well then, shall we?"
+    if bangok_four_remy_c4postsections_store.tail_protection == True:
+        m "I started pulling Remy's slick tail again, though"
+    
     jump todo_out_of_content_bangok_four_remy_c4postsections
 
 
