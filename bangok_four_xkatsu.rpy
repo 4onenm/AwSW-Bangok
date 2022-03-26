@@ -75,6 +75,11 @@ label bangok_four_xkatsu:
 
     Ka "We'll need to return to my home. I'm afraid it needs to be prepared quite quickly, and kept quite cold."
     c "Alright. Lead on."
+
+    if False:
+        label bangok_four_xkatsu_replay_start:
+        play music "mx/fun.ogg" fadein 2.0
+
     scene black with dissolvemed
     play sound "fx/steps/rough_gravel.wav"
     stop sound fadeout 1.0
