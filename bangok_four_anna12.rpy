@@ -1880,6 +1880,7 @@ label bangok_four_anna2_apartment_done:
     else:
         An face "Fine."
     $ renpy.pause(0.5)
+    $ renpy.end_replay()
     scene facin3 at Pan ((128, 250), (128, 250), 0.0)
     show anna normal
     with Fade(0.5,1.0,0.5)

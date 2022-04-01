@@ -26,6 +26,17 @@ init python in bangok_anon_anna4:
     tailinwomb = False
 
 
+label bangok_four_anna4_replay_start:
+    scene black with dissolve
+    play music "mx/anna4.ogg" fadein 2.0
+    $ renpy.pause(0.5)
+    scene o at Pan((0, 250), (0, 250), 0.1)
+    show anna smirk
+    with dissolvemed
+
+    jump bangok_anon_anna4_start
+
+
 label bangok_anon_anna4_skipmenu:
 
 # Hook from:
@@ -1338,12 +1349,5 @@ $ annastatus = "good"
 $ annascenesfinished = 4
 stop music fadeout 2.0
 $ renpy.pause (0.5)
-if chapter4unplayed == False:
-    jump chapter4chars
-elif chapter3unplayed == False:
-    jump chapter3chars
-elif chapter2unplayed == False:
-    jump chapter2chars
-else:
-    jump chapter1chars
+jump _mod_fixjmp
 

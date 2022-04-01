@@ -19,6 +19,74 @@ init python in bangok_four_xipsum:
     took_ipsum_both = False
 
 
+label bangok_four_xipsum_gendercheck:
+    Ip normal "Excuse my confusion, but are you male or female?"
+    menu:
+        "Male.":
+            $ bangok_four_playerhasdick = True
+        "Female.":
+            $ bangok_four_playerhasdick = False
+        "That's actually somewhat of an awkward question...":
+            $ renpy.pause (0.5)
+            $ lorem2mood += 1
+            Ip sad "Oh, is it?"
+            Ip think "Then how should I phrase it..."
+            Ip normal "What's between your legs?"
+            menu:
+                "Show him your dick.":
+                    $ bangok_four_playerhasdick = True
+                "Show him your lack of dick.":
+                    $ bangok_four_playerhasdick = False
+
+    return
+
+
+
+label bangok_four_xipsum_replay_start:
+    scene black with dissolve
+    play music "mx/snowflake.ogg" fadein 2.0
+
+    call bangok_four_xipsum_gendercheck from bangok_four_xipsum_replay_start_gendercheck
+
+    jump bangok_four_xipsum_bedroom_start
+
+
+label bangok_four_xipsum_lorem2_skipmenu:
+    play sound "fx/system3.wav"
+    s "Would you take your clothes off for Ipsum?"
+    menu:
+        "Yes, and lewd him.":
+            $ bangok_four_xipsum.clothesoff = True
+            $ bangok_four_xipsum.unplayed = False
+            if bangok_four_playerhasdick is None:
+                call bangok_four_xipsum_gendercheck from bangok_four_xipsum_skipmenu_gendercheck
+        "Yes. I'll take my clothes off, but that's it.":
+            $ bangok_four_xipsum.clothesoff = True
+        "No. Just skip to the end.":
+            pass
+    if bangok_four_xipsum.clothesoff == True:
+        play sound "fx/system3.wav"
+        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+
+        scene black with dissolvemed
+        $ renpy.pause (1.0)
+        $ persistent.skipnumber += 1
+        $ lorem2mood = 7
+
+        call skipcheck from _call_skipcheck_bangok_xipsum
+
+        scene loremapt at Pan ((0, 72), (0,72), 0.0)
+        show lorem normal flip at Position (xpos = 0.3)
+        with dissolvemed
+        play music "mx/snowflake.ogg" fadein 2.0
+
+        if bangok_four_xipsum.unplayed == False:
+            jump bangok_four_xipsum_loremdone
+        else:
+            jump lorem2skip
+    else:
+        jump bangok_four_xipsum_lorem2_skipmenu_return
+
 
 label bangok_four_xipsum_takeemoff:
     $ renpy.pause (0.5)
@@ -391,6 +459,7 @@ label bangok_four_xipsum_loremdone:
     m "Ipsum gestured to his room."
     Ip happy "Shall we?"
 
+label bangok_four_xipsum_bedroom_start:
     scene bangok_four_xipsum_bedroom normal at Pan ((128, 228), (128, 228), 0.0)
     if bangok_four_xipsum.loremin == True:
         show bangok_four_xipsum_bedroom_bed:
