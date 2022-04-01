@@ -48,6 +48,10 @@ label bangok_four_remy_c4postsections_sebintro:
     scene bangok_four_library night at Pan ((60, 228), (0,228), 2.0) with dissolveslow
 
     c "(Yep, definitely closed. Lights are off and nobody's home.)"
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        m "Already feeling quite tired, I decided to return home and just get Remy the PDA in the morning."
+        jump bangok_four_remy_c4postsections_epilogue
+        
     play sound "fx/door/handle.wav"
     $ renpy.pause(0.5)
     c "(What? The door's unlocked.)"
@@ -55,6 +59,8 @@ label bangok_four_remy_c4postsections_sebintro:
     m "I went inside and closed the door behind me."
     play soundloop "fx/bangok_panting_1dot8.ogg" fadein 15.0
     m "Though I thought to call out for Remy immediately, I heard something that gave me pause. As I moved deeper in the stacks of bookshelves, I identified it as some sort of animalistic grunting."
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        jump bangok_four_bangnokay_kill_replay
     m "A few words mixed in with the noises."
     "???" "[player_name]... oh..."
     m "I turned a corner."

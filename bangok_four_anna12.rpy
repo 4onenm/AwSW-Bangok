@@ -417,6 +417,10 @@ label bangok_four_anna2_apartment:
     show anna normal
     with dissolvemed
 
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        jump bangok_four_bangnokay_kill_replay
+
+
     if bangok_four_anna2.havestrapon == True:
         $ renpy.pause(0.5)
         c "So. What's in the bag?"

@@ -204,3 +204,11 @@ label bangok_four_mod_firstboot:
     $ persistent.bangok_four_menu_firstboot_complete = True
     s "Returning to main menu initialization.{cps=2}..{/cps}{w=0.5}{nw}"
     jump bangok_four_mod_firstboot_return
+
+label bangok_four_bangnokay_kill_replay:
+    play sound "fx/system3.wav"
+    s "Whoops! There is nothing to see here."
+    play sound "fx/system3.wav"
+    s "Let me just clean this up..."
+    $ renpy.end_replay()
+    jump ml_main_menu

@@ -46,6 +46,9 @@ label bangok_four_xipsum_replay_start:
     scene black with dissolve
     play music "mx/snowflake.ogg" fadein 2.0
 
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        jump bangok_four_bangnokay_kill_replay
+
     call bangok_four_xipsum_gendercheck from bangok_four_xipsum_replay_start_gendercheck
 
     jump bangok_four_xipsum_bedroom_start
@@ -56,10 +59,14 @@ label bangok_four_xipsum_lorem2_skipmenu:
     s "Would you take your clothes off for Ipsum?"
     menu:
         "Yes, and lewd him.":
-            $ bangok_four_xipsum.clothesoff = True
-            $ bangok_four_xipsum.unplayed = False
-            if bangok_four_playerhasdick is None:
-                call bangok_four_xipsum_gendercheck from bangok_four_xipsum_skipmenu_gendercheck
+            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                play sound "fx/system3.wav"
+                s "I'm afraid that's not acceptable. Directing you to this scene's standard ending..."
+            else:
+                $ bangok_four_xipsum.clothesoff = True
+                $ bangok_four_xipsum.unplayed = False
+                if bangok_four_playerhasdick is None:
+                    call bangok_four_xipsum_gendercheck from bangok_four_xipsum_skipmenu_gendercheck
         "Yes. I'll take my clothes off, but that's it.":
             $ bangok_four_xipsum.clothesoff = True
         "No. Just skip to the end.":
@@ -94,6 +101,21 @@ label bangok_four_xipsum_takeemoff:
     Lo normal flip "If humans wear clothes like this, it's only appropriate to depict them as such."
     Ip think "Well [player_name], you did propose taking them off. What are the circumstances under which humans wear clothes versus not?"
     c "Exposing yourself around around other people is generally taboo, unless those other people are family or intended sexual partners."
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        Ip sad "What a shame."
+        menu:
+            "Yep.":
+                $ renpy.pause(0.5)
+            "I mean, if one of you were interested...":
+                $ renpy.pause(0.5)
+                Ip "Completely infeasible. An impossibility."
+                Ip think "Until we get your side the generators, your kind won't have nearly enough power to send over a member of your family just to take pictures for us."
+                c "Uh."
+                c "What."
+                Lo relieved flip "Ipsum..."
+                Ip normal "Well, nevermind then."
+        jump bangok_four_xipsum_unsatisfied
+        
     Ip happy "If that's all you need, I'd be quite interested in arranging that for you."
     Lo think flip "I don't think any members of [player_name]'s family are able to come over to our--"
     Lo shy flip "Oh."

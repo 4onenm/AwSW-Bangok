@@ -40,6 +40,8 @@ label bangok_four_bryce3_replaylabel:
     show maverick normal behind bryce at Position(xpos=0.825)
     with Fade(0.5,0.5,1.0)
     play music "mx/hydrangea.ogg" fadein 2.0
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        jump bangok_four_bangnokay_kill_replay
     jump bangok_four_bryce3_bottom_choice
 
 

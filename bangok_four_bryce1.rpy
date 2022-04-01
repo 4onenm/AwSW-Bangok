@@ -310,6 +310,9 @@ label bangok_four_bryce1_apartment:
         show bryce flirty dk with dissolve
 
     play sound "fx/undress.ogg"
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        $ renpy.pause(0.8)
+        jump bangok_four_bangnokay_kill_replay
     m "I struggled out of my clothes as fast as my lust-drunk state would allow."
     if bangok_four_malepartners + bangok_four_femalepartners < 1:
         c "(Is this really happening? Am I really going to fuck a dragon?)"

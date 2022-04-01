@@ -314,7 +314,7 @@ def add_side_images():
 def add_scene_select():
     import four_scene_select as fss
 
-    bangok="BangOk"
+    bangok="Bang? No, Kay"
 
     fss.register_scene_select_cateogry(bangok, nsfw=True)
 
@@ -374,7 +374,7 @@ def add_scene_select():
 
 @loadable_mod
 class BangOkMod(Mod):
-    name = "BangOk"
+    name = "BangNoKay"
     version = "v0.0"
     author = "4onen"
     nsfw = True

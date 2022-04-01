@@ -34,6 +34,9 @@ label bangok_four_anna4_replay_start:
     show anna smirk
     with dissolvemed
 
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        jump bangok_four_bangnokay_kill_replay
+
     jump bangok_anon_anna4_start
 
 
