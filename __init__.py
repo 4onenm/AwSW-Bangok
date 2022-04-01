@@ -182,7 +182,7 @@ def bryce3_afterparty(ml):
 
     ( ml.find_label('bryce3')
         .search_say("Yeah, I should also be heading off. You know I'm starting early tomorrow.", depth=1800)
-        .hook_to('bangok_four_bryce3_intro', return_link=False, condition=make_dev('persistent.nsfwtoggle == True'))
+        .hook_to('bangok_four_bryce3_intro', condition=make_dev('persistent.nsfwtoggle == True'))
         .search_say("I suppose I should be heading off as well.")
         .link_from('bangok_four_bryce3_playershouldleave')
         .search_say("Hey, do you want to know where I got these scars? I bet you're curious.")

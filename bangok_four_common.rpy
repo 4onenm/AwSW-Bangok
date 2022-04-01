@@ -15,6 +15,8 @@ init python:
     bangok_four_playerhasdick = None
     bangok_four_hornincident = False
 
+    bangok_four_bangnokay = True
+
 
 init:
     # Settings menu

@@ -33,24 +33,46 @@ label bangok_four_bryce3_skipmenu:
     menu:
         "Yes. Join the team-building exercise.":
             play sound "fx/system3.wav"
-            s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-            $ bryce3mood = 2
-            show bryce at Position(xanchor = 1.0, xpos = 1.175)
-            show sebastian normal flip at left
-            show maverick normal behind bryce at Position(xpos=0.825)
-            show zhong normal flip at Position(xpos = 0.05)
-            with Fade(0.5,0.5,1.0)
-            play music "mx/hydrangea.ogg" fadein 2.0
-            jump bangok_four_bryce3_intro
+            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
+            else:
+                s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                $ bryce3mood = 2
+                show bryce at Position(xanchor = 1.0, xpos = 1.175)
+                show sebastian normal flip at left
+                show maverick normal behind bryce at Position(xpos=0.825)
+                show zhong normal flip at Position(xpos = 0.05)
+                with Fade(0.5,0.5,1.0)
+                play music "mx/hydrangea.ogg" fadein 2.0
+                jump bangok_four_bryce3_intro
         "No. Have a nonsexual BBQ.":
             pass
-    jump bangok_four_bryce3_skip_return
+    jump bangok_four_bryce3_skipmenu_return
 
 
 
 
 
 label bangok_four_bryce3_intro:
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        c "Are you sure you don't want to stay for the best part, Zhong?"
+        Br brow "What best part?"
+        Sb disapproval flip "What are you talking about?"
+        c "Uh..."
+        menu:
+            "Cleaning up?":
+                Zh "I have enough of that to do at my places of work, thank you."
+                c "I mean, fair enough, I guess."
+            "The orgy?":
+                Mv angry "How {i}dare{/i} you."
+                Sb "Damn."
+                Br stern "Uh, no. We're co-workers, not swingers."
+                Sb normal flip "Maybe things are different where the ambassador is from. Let's just pretend that suggestion didn't come up and finish our evening."
+                Mv "But--"
+                Br "Maverick, drop it. There's no law against suggesting promiscuity."
+        Zh "Now, as I was saying about leaving..."
+        jump bangok_four_bryce3_intro_return
+
     Br laugh "Wait, you're out too? What about the best part?"
     c "Best part?"
     Br smirk "A bit of teambuilding, a bit of exercise."

@@ -33,7 +33,11 @@ label bangok_four_anna1_skipmenu:
     s "Bet with Anna for sex?"
     menu:
         "Yes. Bet with Anna for sex.":
-            $ bangok_four_anna1_sexrequested = True
+            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                play sound "fx/system3.wav"
+                s "Oh, I'm afraid that isn't on the table. Better luck another time."
+            else:
+                $ bangok_four_anna1_sexrequested = True
         "No. Not that far.":
             pass
     jump bangok_four_anna1_skipmenu_return
@@ -45,14 +49,23 @@ label bangok_four_anna1_winmenu:
         "Real date.":
             jump bangok_four_anna1_winmenu_return
         "Sex.":
-            $ bangok_four_anna1_sexrequested = True
             c "Let's say if I win{fast} you'll have sex with me."
-            An face flip "And I suppose you expect me to respond with, \"and if I win, I get to have sex with you\"?"
-            c "Well, I can't say I'd be opposed to that."
-            An smirk flip "Too bad. If I win, I'll have you come in sometime so I can run more tests on you."
-            if blood == False:
-                An "I won't even need your blood anymore."
-            jump bangok_four_anna1_winmenu_afterannablood
+            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                An disgust flip "What the fuck?"
+                An face flip "I don't know what it's like on your side of the portal, but you can't ask that kind of thing the first time you go for coffee with someone."
+                $ renpy.pause (0.5)
+                An sad flip "..."
+                $ renpy.pause (0.5)
+                An normal flip "How about, instead, we make it a little more casual than--"
+                jump bangok_four_anna1_winmenu_return
+            else:
+                $ bangok_four_anna1_sexrequested = True
+                An face flip "And I suppose you expect me to respond with, \"and if I win, I get to have sex with you\"?"
+                c "Well, I can't say I'd be opposed to that."
+                An smirk flip "Too bad. If I win, I'll have you come in sometime so I can run more tests on you."
+                if blood == False:
+                    An "I won't even need your blood anymore."
+                jump bangok_four_anna1_winmenu_afterannablood
         "A discourse on the morphological variations of dragon species, including factors cerebral, physical, and societal, with special interest toward understanding the apparently equivalent levels of intelligence despite clearly divergent evolutionary pathways." if bangok_four_anna1_discourseonmorphologicalvariations:
             c "Let's say if I win{fast} you'll help me understand how all these dragon species came about with the same level of intelligence? A bit of a biology trade-off."
             python:
@@ -271,7 +284,7 @@ label bangok_four_anna2_romanticdate_unusualbutfun:
 
 label bangok_four_anna2_romanticdate_conclusion:
     if bangok_four_anna1_sexrequested == False:
-        if anna2mood > 4:
+        if anna2mood > 4 and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
             An sad c "I have to say, I'm surprised how well this evening went, considering."
             c "Well, I can't take all the credit."
             An normal c "You can take enough of it."
@@ -295,7 +308,7 @@ label bangok_four_anna2_romanticdate_conclusion:
                     An normal c "We have that saying too."
                     c "Well, we just ate, and your hunting prowess was quite the show..."
                     An face c "Was that really supposed to be a pickup line?"
-                    if anna2mood < 1:
+                    if anna2mood < 1 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
                         c "You bet it was."
                         An disgust c "Fuck off."
                         An normal c "I agreed to a date, not anything more."

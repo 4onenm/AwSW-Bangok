@@ -38,28 +38,31 @@ s "Watch BangOk scene or skip to end?"
 menu:
     "Yes. I'd like to lewd Anna":
         play sound "fx/system3.wav"
-        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-        play music "mx/anna4.ogg" fadein 2.0
-        jump bangok_anon_anna4_start
+        if (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+            s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
+            scene black with dissolvemed
+            python:
+                renpy.pause (2.5)
+                mp.annaromance = True
+                mp.save()
+                annastatus = "good"
+                annascenesfinished = 4
+            jump _mod_fixjmp
+        else:
+            s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+            play music "mx/anna4.ogg" fadein 2.0
+            jump bangok_anon_anna4_start
 
     "No. Skip to the end.":    
         s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
         scene black with dissolvemed
-        $ renpy.pause (2.0)
-        $ mp.annaromance = True
-        $ mp.save()
-        $ annastatus = "good"
-        $ annascenesfinished = 4
-        stop music fadeout 2.0
-        $ renpy.pause (0.5)
-        if chapter4unplayed == False:
-            jump chapter4chars
-        elif chapter3unplayed == False:
-            jump chapter3chars
-        elif chapter2unplayed == False:
-            jump chapter2chars
-        else:
-            jump chapter1chars
+        python:
+            renpy.pause (2.5)
+            mp.annaromance = True
+            mp.save()
+            annastatus = "good"
+            annascenesfinished = 4
+        jump _mod_fixjmp
         
 
 label bangok_anon_anna4_start:

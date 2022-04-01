@@ -27,8 +27,11 @@ label bangok_four_bryce1_skipmenu:
         menu:
             "Yes. I would like to lewd Bryce.":
                 play sound "fx/system3.wav"
-                s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
-                jump bangok_four_bryce1_apartment_decided
+                if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                    s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
+                else:
+                    s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                    jump bangok_four_bryce1_apartment_decided
             "No. Not that far.":
                 pass
     jump bangok_four_bryce1_skipmenu_return
@@ -212,7 +215,7 @@ label bangok_four_bryce1_poke:
             c "On humans it kinda hangs out. I was just looking for..."
             Br "..."
             c "..."
-            if brycemood > 4:
+            if brycemood > 4 and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
                 Br "If I showed you, would you be interested in...{w=1.2}{nw}"
                 Br flirty "If I showed you, would you be interested in{fast} trying it out?"
                 menu:
@@ -239,7 +242,7 @@ label bangok_four_bryce1_poke:
                         Br normal "Thanks."
                         jump bangok_four_bryce1_nevermind
         "What you think.":
-            if brycemood < 6:
+            if brycemood < 6 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
                 Br stern "Then you should leave."
                 c "..."
                 Br "Now."
@@ -286,7 +289,7 @@ label bangok_four_bryce1_apartment:
             c "You're drunk. I'm drunk. And you're... very attractive."
             c "What do you say?"
             $ renpy.pause (0.4)
-            if brycemood < 5:
+            if brycemood < 5 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
                 play sound "fx/cartslide.ogg"
                 hide bryce with dissolve
                 m "By the time I finished asking the question, Bryce was already fast asleep on his couch."
