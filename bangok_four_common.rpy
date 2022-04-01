@@ -1,11 +1,11 @@
 init python:
     # Menu constants
     bangok_four_menu_fetish_list = [
-        ("Watersports", "bangok_watersports"),
-        ("Inflation", "bangok_inflation"),
-        ("Knotting", "bangok_knot"),
-        ("Cloacas", "bangok_cloacas"),
-        ("Cervical Penetration","bangok_cervpen"),
+        ("Water Polo", "bangok_watersports"),
+        ("Balloons", "bangok_inflation"),
+        ("Knot tying", "bangok_knot"),
+        ("Spelunking", "bangok_cloacas"),
+        ("Mining","bangok_cervpen"),
     ]
     bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
 
@@ -44,7 +44,7 @@ init:
             vbox:
                 align (0.5, 0.5)
                 showif persistent.nsfwtoggle:
-                    text "Fetishes:" xalign 0.5
+                    text "Cute buttons:" xalign 0.5
                     grid bangok_four_menu_fetish_list_columns 2:
                         align (0.5,0.5)
                         transpose True
