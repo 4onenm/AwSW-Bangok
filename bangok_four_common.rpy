@@ -1,24 +1,24 @@
 init python:
-    # Menu constants
-    bangok_four_menu_fetish_list = [
-        ("Watersports", "bangok_watersports"),
-        ("Inflation", "bangok_inflation"),
-        ("Knotting", "bangok_knot"),
-        ("Cloacas", "bangok_cloacas"),
-        ("Cervical Penetration","bangok_cervpen"),
-    ]
-    bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
-
     # Common game variables
     bangok_four_malepartners = 0
     bangok_four_femalepartners = 0
     bangok_four_playerhasdick = None
     bangok_four_hornincident = False
 
-    bangok_four_bangnokay = None
-
 
 init:
+    define bangok_four_bangnokay = False
+
+    # Menu constants
+    define bangok_four_menu_fetish_list = [
+        ("Watersports", "bangok_watersports"),
+        ("Inflation", "bangok_inflation"),
+        ("Knotting", "bangok_knot"),
+        ("Cloacas", "bangok_cloacas"),
+        ("Cervical Penetration","bangok_cervpen"),
+    ]
+    define bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
+
     # Settings menu
     screen bangok_four_checkbox(label, id):
         hbox:
