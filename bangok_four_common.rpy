@@ -1,24 +1,24 @@
 init python:
-    # Menu constants
-    bangok_four_menu_fetish_list = [
-        ("Water Polo", "bangok_watersports"),
-        ("Balloons", "bangok_inflation"),
-        ("Knot tying", "bangok_knot"),
-        ("Spelunking", "bangok_cloacas"),
-        ("Mining","bangok_cervpen"),
-    ]
-    bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
-
     # Common game variables
     bangok_four_malepartners = 0
     bangok_four_femalepartners = 0
     bangok_four_playerhasdick = None
     bangok_four_hornincident = False
 
-    bangok_four_bangnokay = True
-
 
 init:
+    define bangok_four_bangnokay = False
+
+    # Menu constants
+    define bangok_four_menu_fetish_list = [
+        ("Watersports", "bangok_watersports"),
+        ("Inflation", "bangok_inflation"),
+        ("Knotting", "bangok_knot"),
+        ("Cloacas", "bangok_cloacas"),
+        ("Cervical Penetration","bangok_cervpen"),
+    ]
+    define bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
+
     # Settings menu
     screen bangok_four_checkbox(label, id):
         hbox:
@@ -43,16 +43,43 @@ init:
             style "smallwindow"
             vbox:
                 align (0.5, 0.5)
-                showif persistent.nsfwtoggle:
-                    text "Cute buttons:" xalign 0.5
-                    grid bangok_four_menu_fetish_list_columns 2:
-                        align (0.5,0.5)
-                        transpose True
-                        spacing 10
-                        for label, id in bangok_four_menu_fetish_list:
-                            use bangok_four_checkbox(label, id)
-                        if len(bangok_four_menu_fetish_list) % 2 == 1:
+                if not persistent.nsfwtoggle:
+                    text "This mod's content is primarily" xalign 0.5
+                    text "---- Not-Safe-For-Work ----" xalign 0.5
+                    text "Re-enable NSFW scenes or uninstall the mod." xalign 0.5
+                    text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made." xalign 0.5
+                else:
+                    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                        textbutton "Bang? No, Kay Mod Settings":
+                            xalign 0.5
+                            text_size 36
+                            action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', False)]
+                            hovered Play("audio", "se/sounds/select.ogg")
+                            style "menu_choice_button"
+                        text "Cute Buttons:" xalign 0.5
+                        grid 3 2:
+                            align (0.5, 0.5)
+                            transpose True
+                            spacing 10
+                            for label, id in [("Water Polo", "bangok_watersports"),("Balloons", "bangok_inflation"),("Knot Tying", "bangok_knot"),("Spelunking", "bangok_cloacas"),("Mining","bangok_cervpen"),]:
+                                use bangok_four_checkbox(label, id)
                             null
+                    else:
+                        textbutton "BangOk Mod Settings":
+                            xalign 0.5
+                            text_size 36
+                            action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', True)]
+                            hovered Play("audio", "se/sounds/select.ogg")
+                            style "menu_choice_button"
+                        text "Fetishes:" xalign 0.5
+                        grid bangok_four_menu_fetish_list_columns 2:
+                            align (0.5,0.5)
+                            transpose True
+                            spacing 10
+                            for label, id in bangok_four_menu_fetish_list:
+                                use bangok_four_checkbox(label, id)
+                            if len(bangok_four_menu_fetish_list) % 2 == 1:
+                                null
                     text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
                         xalign 0.5
                         size 38
@@ -63,11 +90,6 @@ init:
                         text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes." xalign 0.5 size 40
                         showif main_menu:
                             textbutton "[[Replay first-boot experience.]" xalign 0.5 hovered Play("audio", "se/sounds/select.ogg") action [Hide("bangok_modsettings"), Play("audio", "se/sounds/close.ogg"), Start("bangok_four_mod_firstboot")]
-                else:
-                    text "This mod's content is primarily" xalign 0.5
-                    text "---- Not-Safe-For-Work ----" xalign 0.5
-                    text "Re-enable NSFW scenes or uninstall the mod." xalign 0.5
-                    text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made." xalign 0.5
             imagebutton idle "image/ui/close_idle.png" hover "image/ui/close_hover.png" action [Hide("bangok_modsettings"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")] hovered Play("audio", "se/sounds/select.ogg") style "smallwindowclose" at nav_button
 
 
