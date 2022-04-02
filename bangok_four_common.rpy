@@ -15,7 +15,7 @@ init python:
     bangok_four_playerhasdick = None
     bangok_four_hornincident = False
 
-    bangok_four_bangnokay = True
+    bangok_four_bangnokay = None
 
 
 init:
@@ -50,8 +50,27 @@ init:
                     text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made." xalign 0.5
                 else:
                     if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
-                        textbutton ""
+                        textbutton "Bang? No, Kay Mod Settings":
+                            xalign 0.5
+                            text_size 36
+                            action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', False)]
+                            hovered Play("audio", "se/sounds/select.ogg")
+                            style "menu_choice_button"
+                        text "Cute Buttons:" xalign 0.5
+                        grid 3 2:
+                            align (0.5, 0.5)
+                            transpose True
+                            spacing 10
+                            for label, id in [("Water Polo", "bangok_watersports"),("Balloons", "bangok_inflation"),("Knot Tying", "bangok_knot"),("Spelunking", "bangok_cloacas"),("Mining","bangok_cervpen"),]:
+                                use bangok_four_checkbox(label, id)
+                            null
                     else:
+                        textbutton "BangOk Mod Settings":
+                            xalign 0.5
+                            text_size 36
+                            action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', True)]
+                            hovered Play("audio", "se/sounds/select.ogg")
+                            style "menu_choice_button"
                         text "Fetishes:" xalign 0.5
                         grid bangok_four_menu_fetish_list_columns 2:
                             align (0.5,0.5)
@@ -61,9 +80,9 @@ init:
                                 use bangok_four_checkbox(label, id)
                             if len(bangok_four_menu_fetish_list) % 2 == 1:
                                 null
-                        text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
-                            xalign 0.5
-                            size 38
+                    text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
+                        xalign 0.5
+                        size 38
                     vbox:
                         xalign 0.5
                         use bangok_four_checkbox("Dangerous: Enable In-Development Scenes", "bangok_dev")
