@@ -175,7 +175,7 @@ label bangok_four_bryce3_intro:
     
     show sebastian disapproval flip with dissolve
     Br stern "I thought you agreed to keep this civil. Getting angry about things we're trying to leave out of tonight doesn't qualify in my book."
-    if bryce3mood < 2:
+    if bryce3mood < 1:
         Mv "They are the only known associate of the lone suspect in three murders."
         Mv "Sleeping with a suspect's associate doesn't qualify as proper police work in my book."
         $ renpy.pause (1.2)
