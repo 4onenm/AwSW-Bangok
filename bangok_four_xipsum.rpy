@@ -78,7 +78,7 @@ label bangok_four_xipsum_lorem2_skipmenu:
         scene black with dissolvemed
         $ renpy.pause (1.0)
         $ persistent.skipnumber += 1
-        $ lorem2mood = 7
+        $ lorem2mood = 8
 
         call skipcheck from _call_skipcheck_bangok_xipsum
 
@@ -402,7 +402,7 @@ label bangok_four_xipsum_loremdone:
             $ renpy.pause (2.0)
             show ipsum normal at right with easeinright
 
-            if lorem2mood >= 7:
+            if lorem2mood >= 4:
                 $ bangok_four_xipsum.loremin = True
                 Ip happy "Lorem's in."
                 c "Cool."
