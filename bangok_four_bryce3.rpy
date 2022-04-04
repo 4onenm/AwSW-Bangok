@@ -284,6 +284,7 @@ label bangok_four_bryce3_intro:
     $ renpy.pause (0.5)
     if bangok_four_bryce3_store.sebastian_in == True:
         Sb drop flip "Of course you brought supplies, even without talking it over with any of us."
+        show sebastian normal flip with dissolve
     menu:
         "Maverick, are you okay with this?":
             Mv angry "It changes nothing."
@@ -813,7 +814,46 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
         "Gonna be really sore.":
             Br smirk "Kinda unavoidable. Did you have fun, though?"
         "I think I'll take stock once I'm done tonight.":
-            Br pant "You are done. Just... gotta get us back out."
+            if persistent.bangok_watersports == True:
+                Br pant "You are done. Just... gotta get us back out. Unless..."
+            else:
+                Br pant "You are done. Just... gotta get us back out."
+
+
+    if persistent.bangok_watersports == True:
+        Br smirk "Hm. Y'know, Maverick and I had a few drinks in that party."
+        Br flirty "If you'd like even more filling."
+        Mv normal "Bryce, [player_name] has already gotten off multiple times. Is now really the moment for your urine fetish?"
+        Br laugh "That's entirely up to [player_name]. We could just waste it on the sand somewhere."
+        Br flirty "Or...?"
+        menu:
+            "Fill me.":
+                Br laugh "Thank goodness. Wasn't sure I could hold it."
+                python in bangok_four_bryce3_store:
+                    brycews = "after"
+                    mavws = "after"
+            "Please don't.":
+                Br brow "Oh. Damn."
+
+        if bangok_four_bryce3_store.brycews == True and bangok_four_bryce3_store.mavws == True:
+            play soundloop "fx/faucet1.ogg" fadein 1.0
+            queue soundloop "fx/faucet2.ogg"
+            if bangok_four_bryce3_store.protection == True:
+                m "I felt his shaft twitch, then a new jet of liquid warmth began mixing with his cum inside the condom in my colon."
+                if bangok_four_bryce3_store.mavtarget == "womb"
+                    m "Maverick hesitated, then I felt his stream adding to the condom reservoir in my innermost center."
+                else:
+                    m "Maverick hesitated, then I felt his stream adding to the condom reservoir in my packed canal."
+            else:
+                m "I felt his shaft twitch, then a new jet of liquid warmth began mixing with his cum inside my colon."
+                m "Maverick hesitated, then I felt his stream defiling my innermost center, mixing with his cum."
+
+            if persistent.bangok_inflation == True:
+                m ""
+
+            jump todo_out_of_content_bangok_four_bryce3
+
+
 
 
     m "Maverick began carefully to pull out, large girth tugging on my limp inner muscles."
@@ -917,9 +957,6 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
         "I think I'll take stock once I'm done tonight.":
             Br flirty "Can't wait for more, huh?"
 
-    # if persistent.bangok_watersports == True:
-    #     Br smirk "Hm. Y'know, Maverick and I had a few drinks in that party."
-
     m "Maverick began carefully to pull out, large girth tugging on my limp inner muscles."
     if bangok_four_bryce3_store.protection == True:
         menu:
@@ -1006,7 +1043,15 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_nomav_merge:
     $ renpy.pause(1.2)
     Br "He left."
 
+    menu:
+        "G-good riddance.":
+            Br stern "..."
+        "H-His choice.":
+            Br stern "..."
+        "[[Say nothing.]":
+            pass
     $ renpy.pause(0.8)
+
     jump todo_out_of_content_bangok_four_bryce3
 
 label bangok_four_bryce3_mcbottom_train:
