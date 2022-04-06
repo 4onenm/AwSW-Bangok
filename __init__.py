@@ -361,12 +361,13 @@ def add_scene_select():
             'bangok_four_xipsum.loremin': True,
         }))
 
-    # Remy
+    # Remyc4postsections
     fss.register_scene_select(bangok, "Remy's Tailplay Adventure", 'bangok_four_remy_c4postsections_replaystart',
         locked=lambda: (not renpy.store.persistent.remy3skip) or (not renpy.store.persistent.bangok_dev),
         replay_scope=fss.extend_scope_by_dict({
             'bangok_four_remy_c4postsections_store.remy_tail_player': True,
             'bangok_four_remy_c4postsections_store.remy_tail_remy': True,
+            'bangok_four_remy_c4postsections_store.remy_top': True,
         }))
 
     # xKatsu
