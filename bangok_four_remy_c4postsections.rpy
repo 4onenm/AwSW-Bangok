@@ -371,6 +371,9 @@ label bangok_four_remy_c4postsections_sebintro:
             Ry shy flip dk "Th-Thank you."
 
     m "We resumed walking toward my apartment."
+    if False:
+        label bangok_four_remy_c4postsections_replaystart:
+        play music "mx/bangok_quiet_campfire.ogg" fadein 5.0
     play sound "fx/steps/rough_gravel.wav"
     scene black with dissolvemed
     $ renpy.pause(1.0)
