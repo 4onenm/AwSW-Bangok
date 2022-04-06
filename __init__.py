@@ -319,7 +319,7 @@ def add_scene_select():
     fss.register_scene_select_cateogry(bangok, nsfw=True)
 
     # Anna2
-    fss.register_scene_select(bangok, "Anna at night", 'bangok_four_anna2_apartment',
+    fss.register_scene_select(bangok, "Anna at Night", 'bangok_four_anna2_apartment',
         replay_scope=fss.extend_scope_by_dict({
             'blood': True,
             'annamood': 1,
