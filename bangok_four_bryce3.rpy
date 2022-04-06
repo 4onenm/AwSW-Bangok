@@ -840,7 +840,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
             queue soundloop "fx/faucet2.ogg"
             if bangok_four_bryce3_store.protection == True:
                 m "I felt his shaft twitch, then a new jet of liquid warmth began mixing with his cum inside the condom in my colon."
-                if bangok_four_bryce3_store.mavtarget == "womb"
+                if bangok_four_bryce3_store.mavtarget == "womb":
                     m "Maverick hesitated, then I felt his stream adding to the condom reservoir in my innermost center."
                 else:
                     m "Maverick hesitated, then I felt his stream adding to the condom reservoir in my packed canal."
