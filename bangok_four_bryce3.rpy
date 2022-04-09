@@ -904,11 +904,6 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
 
     jump bangok_four_bryce3_mcbottom_mav_bryce_mp_nomav_merge
 
-
-
-
-
-
 label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
     if bangok_four_bryce3_store.mavtarget == "womb":
         if persistent.bangok_knot == True:
@@ -1004,7 +999,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
                             m "Maverick tugged harder, managing to stretch the condom material to the point his head had almost pulled through my folds."
                             play sound "fx/bubbles.ogg"
                             play sound2 "fx/spray.ogg"
-                            $ bangok_four_bryce3_store.mavbroke == True
+                            $ bangok_four_bryce3_store.mavbroke = True
                             m "He pulled out, tearing the condom material and leaving my cunt lips empty and gaped in one pull. I gasped as the barrier's stretching force disappeared, a river of cum leaking from my breached inner gate to spatter over my legs and Bryce's cock and hindquarters."
                             Br laugh "Hey! I didn't think I'd be getting the mess!"
                         "H-How do we get it out?":
@@ -1039,7 +1034,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
 label bangok_four_bryce3_mcbottom_mav_bryce_mp_nomav_merge:
     $ renpy.pause(0.5)
     Br stern "Maverick!"
-    m "Bryce's shout vibrated through my back, and his cock still in my ass. I slumped, unable to contribute to the situation."
+    m "Bryce's shout vibrated through my back and his cock still in my ass. I slumped, unable to contribute to the situation."
     $ renpy.pause(1.2)
     Br "He left."
 
@@ -1052,7 +1047,96 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_nomav_merge:
             pass
     $ renpy.pause(0.8)
 
-    jump todo_out_of_content_bangok_four_bryce3
+    if bangok_four_bryce3_store.top_mav == True:
+        Br stern "I don't want to force you to keep going after that."
+        Br "Let me just help you slide off me."
+
+        menu:
+            "I want you to finish.":
+                Br smirk "[player_name]..."
+                Br brow "Are you sure?"
+                c "Please?"
+                $ renpy.pause(0.5)
+                Br laugh "Can't say no to an ask like that."
+
+                if persistent.bangok_watersports == True:
+                    Br brow "Although, I kinda gotta take a piss. Had a few drinks in that party, and you're lying on my bladder."
+                    menu:
+                        "W-wouldn't want you to waste it on the sand somewhere...":
+                            Br flirty "Interested, are you?"
+                            c "Fill me."
+                            $ bangok_four_bryce3_store.brycews = "before"
+                        "C-can't you hold it?":
+                            Br normal "I don't think so. You wanna risk that?"
+                            menu:
+                                "Th-Then, go deal with that first.":
+                                    jump bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_alone_ws
+                                "Okay, just go in me then.":
+                                    $ bangok_four_bryce3_store.brycews = "before"
+                                "I'm up for a game of chance.":
+                                    $ bangok_four_bryce3_store.brycews = "after"
+                        "Go deal with that first.":
+                            label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_alone_ws:
+                            $ bangok_four_bryce3_store.brycews = None
+                            Br stern "Alright. In that case, we should probably just call it quits."
+                            c "But--"
+                            Br brow "[player_name], I'm not forcing myself back into you after Maverick's pace."
+                            Br smirk "You had plenty of fun, right? I'll figure something else out."
+                            $ renpy.pause (0.8)
+                            c "Alright."
+                            jump bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_gets_player_off
+                jump todo_out_of_content_bangok_four_bryce3
+
+            "Okay. Yeah. I think I'm done.":
+                pass
+    else:
+        Br "Let me just help you slide off me."
+
+    label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_gets_player_off:
+
+    m "Working his cold forelegs under my shoulders, Bryce tugged me back up his warm chest, until his cock popped free of my rear."
+    if bangok_four_bryce3_store.top_mav == False:
+        if bangok_four_bryce3_store.protection == True and bangok_four_bryce3_store.brycebroke = False:
+            if persistent.bangok_inflation == True:
+                m "I groaned, his bloated condom's reservoir dragging through my guts only begrudgingly, stretched taut through my asshole."
+                menu:
+                    "C-Careful with that...":
+                        m "The fluid inside it poured out of me, reducing the pressure inside until, eventually, the condom managed to slide free."
+                        play sound "fx/uncork.ogg"
+                        Br normal "See? No problem."
+                    "Break it?":
+                        Br brow "Oh?"
+                        Br smirk "Alright."
+                        m "He twitched his cock, tugging harder at my pressured backdoor."
+                        
+                        play sound "fx/bubbles.ogg"
+                        play sound2 "fx/spray.ogg"
+                        $ bangok_four_bryce3_store.brycebroke = True
+
+                        c "Urp!"
+
+                        if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews:
+                            m "Now free, his slurry of cum and piss flooded deeper into my guts, saturating my colon's walls."
+                        else:
+                            m "Now free, Bryce's thick, warm cum flooded deeper into my guts, saturating my colon's walls."
+
+                        m "More flowed out of my widened hole, around the base of his cock."
+                        Br laugh "Ha, damn, now I've given myself a mess to clean up."
+            else:
+                play sound "fx/uncork.ogg"
+                m "His condom reservoir followed, the bubble of fluid bouncing between my legs."
+
+    m "Utterly spent, when Bryce nudged me to one side of his chest, I slid all the way to the cold sand."
+    play sound "fx/undress.ogg"
+    scene black with dissolvemed
+    $ renpy.pause (0.5)
+    scene beachx at Pan ((300, 0), (300, 0), 0.0) with dissolve
+    $ renpy.pause (0.5)
+    show bryce normal at center with dissolve
+    Br normal "Whoops. Sorry about that."
+
+    jump bangok_four_bryce3_trash_cleanup
+
 
 label bangok_four_bryce3_mcbottom_train:
     scene beachx at Pan ((300, 0), (300, 0), 0.0) with dissolve
@@ -2416,6 +2500,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
         "[[Say nothing.]":
             pass
 
+    label bangok_four_bryce3_trash_cleanup:
     $ renpy.pause(0.8)
     Br brow "Damn, now everyone left without cleaning up their trash."
     Br normal "You wouldn't mind sticking around to help, would you?"
