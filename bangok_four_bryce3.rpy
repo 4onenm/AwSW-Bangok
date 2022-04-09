@@ -2839,7 +2839,7 @@ label bangok_four_bryce3_mctop:
                 $ bangok_four_bryce3_store.brycews = "before"
                 $ bangok_four_bryce3_store.mavws = True
 
-    if bangok_four_bryce3_store.top_mav == True:
+    if bangok_four_bryce3_store.mavfirst == True:
         jump bangok_four_bryce3_mctop_mavgoes
     else:
         jump bangok_four_bryce3_mctop_mcgoes
@@ -2848,9 +2848,9 @@ label bangok_four_bryce3_mctop_mcgoes:
     show bryce normal flip at center with ease
     m "Walking over to Bryce, I considered my options."
     menu:
-        "Fuck Bryce's ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.top_mav == False:
+        "Fuck Bryce's ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == False:
             jump todo_out_of_content_bangok_four_bryce3
-        "Fuck Bryce's gaping, sloppy ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.top_mav == True:
+        "Fuck Bryce's gaping, sloppy ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == True:
             jump todo_out_of_content_bangok_four_bryce3
         "Fuck Bryce's mouth." if bangok_four_playerhasdick == True:
             jump todo_out_of_content_bangok_four_bryce3
