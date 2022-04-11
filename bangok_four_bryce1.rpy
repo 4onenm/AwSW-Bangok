@@ -682,7 +682,7 @@ label bangok_four_bryce1_f_fuck:
                     m "Bryce groaned, then gestured to a nearby chest of drawers."
                     Br "Top, I think. Just hurry up."
                     label bangok_four_bryce1_f_fuck_getprotection:
-                    play sound "fx/rummage.ogg"
+                    play sound "fx/rummage.wav"
                     m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one at random."
                     m "Tearing into the packaging, I returned with the necessary equipment and knelt to roll it down over his cock."
                 "[[Take his load.]":
@@ -1387,7 +1387,7 @@ label bangok_four_bryce1_m2:
                         Br "Top. I think. Just hurry up."
                         label bangok_four_bryce1_oralbot_getprotection:
                         $ bangok_four_bryce1_protected = True
-                        play sound "fx/rummage.ogg"
+                        play sound "fx/rummage.wav"
                         if bangok_four_playerhasdick == True:
                             m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one labeled safe for oral, then dug a little deeper for one my size, in case things went further."
                             m "Only after I dug to the bottom did I finally find a box of condoms closer to my scale, unopened."
@@ -1820,7 +1820,7 @@ label bangok_four_bryce1_m2:
                         Br "Top, I think. Just hurry up."
                         label bangok_four_bryce1_analbot_fetchcondom:
                         $ bangok_four_bryce1_protected = True
-                        play sound "fx/rummage.ogg"
+                        play sound "fx/rummage.wav"
                         if bangok_four_playerhasdick == True:
                             m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one, then dug a little deeper for one my size, in case things went further."
                             m "Only after I dug to the bottom did I finally find a box of condoms closer to my scale, unopened."
@@ -2202,7 +2202,7 @@ label bangok_four_bryce1_m2:
                     scene bangok_four_bryce1_apartment night at Pan((0,360), (0,360), 0.0)
                     show bryce brow dk
                     with dissolvemed
-                    play sound "fx/sheets.ogg"
+                    play sound "fx/sheet.wav"
                     m "He backed off further, giving me room to get up on my elbows."
                     $ renpy.pause(0.5)
                     Br "I didn't exactly have a lot of time or room for thought, and you were being unclear."
@@ -2348,7 +2348,7 @@ label bangok_four_bryce1_m2:
                         m "Bryce groaned, then gestured at a chest of drawers in a corner."
                         Br "Top. I think. Just hurry up."
                         $ bangok_four_bryce1_protected = True
-                        play sound "fx/rummage.ogg"
+                        play sound "fx/rummage.wav"
                         m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. Only after I dug to the bottom did I finally find one closer to mine, unopened."
                         m "Tearing into the packaging, I returned equipped."
                     "[[Bareback.]":
@@ -2922,7 +2922,7 @@ label bangok_four_bryce1_m2:
                         m "Bryce groaned, then gestured at a chest of drawers in a corner."
                         Br "Top. I think. Just hurry up."
                         $ bangok_four_bryce1_protected = True
-                        play sound "fx/rummage.ogg"
+                        play sound "fx/rummage.wav"
                         m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one, just in case, then dug a little deeper for one my size."
                         m "Only after I dug to the bottom did I finally find a box of condoms closer to my scale, unopened."
                         m "Tearing into the packaging, I returned with the necessary equipment."
