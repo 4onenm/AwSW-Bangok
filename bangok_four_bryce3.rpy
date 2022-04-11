@@ -2258,7 +2258,8 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                     m "His condom tip ballooned deep inside my guts, pulse after pulse of hot seed forcing it to expand deeper, to find more space within me as more cum forced its way in behind."
             m "Heady warmth suffused my every organ as Maverick's pulses came to an end, leaving my muscles totally limp."
         else:
-            jump todo_out_of_content_bangok_four_bryce3
+            $ renpy.pause (0.8)
+            m "After a few{w=0.3} long {w=0.3}seconds of pressing into me, depositing his load, Maverick's pulses finally came to an end."
     elif bangok_four_bryce3_store.mavtarget == "vag":
         m "Finally, Maverick stopped, abruptly, halfway down my canal. Then his hips bucked, fucking my pussy fast and shallow with a few more short thrusts."
         play sound "fx/dragonpain.wav"
