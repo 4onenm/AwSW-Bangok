@@ -789,7 +789,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
             m "Jets of hot seed spilled into their condoms, one rapidly filling in my stretched canal, the other deep in my rear. The cocks twitched and pulsed, against each other, squeezing my stretched canal and dragging out my peak as they poured into me."
             scene black with dissolve
             if persistent.bangok_inflation == True:
-                m "Maverick pulled back to the limit before his head popped free, tugging his condom reservoir and Bryce's hindquarters back. Even still his load kept coming, the condom filling like a balloon in my tight channel until it was pressing against my every inner wall for an escape."
+                m "Maverick pulled back to the limit, keeping just his head inside me, tugging his condom reservoir and Bryce's hindquarters back. Even still his load kept coming, the condom filling like a balloon in my tight channel until it was pressing against my every inner wall for an escape."
                 m "The combined expansion of my love passage and colon pressed my belly outward with condom-contained cum, prying my two draconic fillers apart."
         else:
             m "Maverick's first jet of cum spattered against my innermost gate. The second pushed the first through."
@@ -798,7 +798,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
         m "Rope after rope of cum spilled into my womb and guts, flooding my most and least sacred places with hot dragon seed. Their cocks twitched and pulsed against each other, squeezing my stretched and abused love canal, dragging out my own peak as they poured into me."
         scene black with dissolvemed
         if persistent.bangok_inflation == True:
-            m "The load in my womb kept coming, seed packing my tubes and womb until no room remained. Yet more cum came, forcing my womb to expand around it. My guts filled too, colon packed with Bryce's seed, before more pulsing jets forced the seed even deeper."
+            m "The load in my womb kept coming, seed packing my tubes and uterus until no room remained. Yet more cum came, forcing my womb to expand around it. My guts filled too, colon packed with Bryce's seed, before more pulsing jets forced the seed even deeper."
             m "My belly bloated, pregnant and stuffed with twin dragonloads."
     play soundloop "fx/breathing.ogg" fadein 1.0
     m "Their pulses slowed, {w=0.3}then {w=0.3}finally came to an end. Maverick panted above me, tired out by having to lift Bryce's hindquarters with his thrusts toward their last few moments."
@@ -822,6 +822,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
 
     if persistent.bangok_watersports == True:
         Br smirk "Hm. Y'know, Maverick and I had a few drinks in that party."
+        stop soundloop fadeout 3.0
         Br flirty "If you'd like even more filling."
         Mv normal "Bryce, [player_name] has already gotten off multiple times. Is now really the moment for your urine fetish?"
         Br laugh "That's entirely up to [player_name]. We could just waste it on the sand somewhere."
@@ -835,11 +836,15 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
             "Please don't.":
                 Br brow "Oh. Damn."
 
-        if bangok_four_bryce3_store.brycews == True and bangok_four_bryce3_store.mavws == True:
+        if bangok_four_bryce3_store.brycews == "after" and bangok_four_bryce3_store.mavws == "after":
             play soundloop "fx/faucet1.ogg" fadein 1.0
             queue soundloop "fx/faucet2.ogg"
             if bangok_four_bryce3_store.protection == True:
-                m "I felt his shaft twitch, then a new jet of liquid warmth began mixing with his cum inside the condom in my colon."
+                if persistent.bangok_inflation == True:
+                    m "I felt his shaft twitch, then a new jet of liquid warmth began mixing with his cum inside the condom stretching my colon."
+                else:
+                    m "I felt his shaft twitch, then a new jet of liquid warmth began mixing with his cum inside the condom in my colon."
+
                 if bangok_four_bryce3_store.mavtarget == "womb":
                     m "Maverick hesitated, then I felt his stream adding to the condom reservoir in my innermost center."
                 else:
@@ -849,16 +854,52 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
                 m "Maverick hesitated, then I felt his stream defiling my innermost center, mixing with his cum."
 
             if persistent.bangok_inflation == True:
-                m ""
+                m "The massive shafts spearing me open were the only plugs tight enough to deal with the fluid pressure inside me as their golden liquid poured in."
+                if bangok_four_bryce3_store.protection == True:
+                    if bangok_four_bryce3_store.mavtarget == "womb":
+                        m "My pregnancy of a balloon of cum expanded faster, the now piss-stained slurry stretching thinner and thinner the condom reservoir protecting my reproductive organ, pressing my flesh against Maverick's hard belly plates, until the condom split."
+                    else:
+                        m "With nowhere else to go, the balloon stuffing my passage taut pressed hard against my cervix, well past the point of pain.{w} I squirmed, pinched between my two scaly lovers with nothing I could do, until the condom split."
+                    $ bangok_four_bryce3_store.mavbroke = True
+                    $ bangok_four_bryce3_store.brycebroke = True
+                    play sound "fx/bubbles.ogg"
+                    c "Urp!"
+                    if bangok_four_bryce3_store.mavtarget == "womb":
+                        m "Bryce's broke too. All at once, a wave of cum and piss spread within me, completely saturating the walls of my least and most sacred places with the degrading warmth of wanton lust."
+                    else:
+                        m "Bryce's broke too. I gasped as cum and piss flooded my guts and sprayed into my womb, completely saturating the walls of my least and most sacred places with the degrading warmth of wanton lust."
+                else:
+                    m "My pregnancy of cum expanded faster, the now piss-stained slurry bloating my reproductive organ further, pressing my flesh against Maverick's hard belly plates."
+                    m "My intestines were left with no room to expand. Packed solid, I began to feel the sensations flood even deeper, spilling from my guts into my stomach."
+                    m "I burped as I was packed solid from stem to stern, my belly left bloated as nothing but these dragons' toilet for urine and seed."
+            else:
+                if bangok_four_bryce3_store.protection == True:
+                    m "I felt the warm bubbles of their condoms' reservoirs expand, mixing piss with cum to make tantalizingly desacrated baubles of slurry."
+                else:
+                    m "Piss sloshed over the ropes of seed already coating my deepest recesses, mixing and flowing together into a thick painting of wanton lust on my innermost walls."
 
-            jump todo_out_of_content_bangok_four_bryce3
+            stop soundloop fadeout 2.0
+            if bangok_four_bryce3_store.protection == True and not (bangok_four_bryce3_store.brycebroke or bangok_four_bryce3_store.mavbroke):
+                m "Their streams trickled out, leaving their condoms' reservoirs slightly bloated inside me."
+            elif persistent.bangok_inflation == True:
+                m "I panted, barely able to breathe pinned between my draconic lovers and the warm liquid gifts with which they had flooded my insides."
 
-
-
+                if bangok_four_bryce3_store.protection == True:
+                    menu:
+                        "F-Fucking b-broke!":
+                            Br stern "Er..."
+                            Br brow "I guess we should have seen that coming."
+                            c "D-Damnit..."
+                        "Ohhh...":
+                            Br pantflirt "Hahhhh... Feel nice?"
+                            c "F-Full..."
+                            Br pant "Sorry 'bout the condoms, but you did ask."
+            else:
+                m "Their streams trickled out, leaving me suffused with heat from their white and gold liquid gifts."
 
     m "Maverick began carefully to pull out, large girth tugging on my limp inner muscles."
     if bangok_four_bryce3_store.mavtarget == "womb":
-        if bangok_four_bryce3_store.protection == True:
+        if bangok_four_bryce3_store.protection == True and bangok_four_bryce3_store.mavbroke == False:
             if persistent.bangok_inflation == True:
                 m "The balloon of cum pulled at my inner gate, thick, heavy, and unwilling to move from my bloated belly."
                 m "Maverick stopped, cognizant he couldn't make any more progress without hurting me or breaking the condom."
@@ -883,15 +924,21 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
         else:
             m "As he pulled back through my cervix, fluid splashed from my womb, saturating my canal's walls."
             if persistent.bangok_inflation == True:
-                m "When his head tugged out of my fuck-hole it gaped, letting a river of cum pour from inside me onto Bryce's cock and hindquarters."
+                if persistent.bangok_watersports == True and bangok_four_bryce3_store.mavws:
+                    m "When his head tugged out of my fuck-hole it gaped, letting a river of cum and piss slurry pour from inside me onto Bryce's cock and hindquarters."
+                else:
+                    m "When his head tugged out of my fuck-hole it gaped, letting a river of cum pour from inside me onto Bryce's cock and hindquarters."
                 Br laugh "Hey! I didn't think I'd be getting the mess!"
             else:
                 m "When Maverick's head tugged through my lips, I remained gaped open. A dribble of cum spilled from my canal onto where Bryce's cock speared my ass, the rest still trapped much deeper inside me."
     else:
-        if bangok_four_bryce3_store.protection == True:
+        if bangok_four_bryce3_store.protection == True and bangok_four_bryce3_store.mavbroke == False:
             m "Maverick's condom popped free of my abused folds, bouncing off where Bryce's cock still speared my ass."
         else:
-            m "When Maverick's head tugged through my lips, I remained gaped open. A dribble of cum spilled from my canal onto where Bryce's cock speared my ass, the rest still trapped much deeper inside me."
+            if persistent.bangok_watersports == True and bangok_four_bryce3_store.mavws:
+                m "When Maverick's head tugged through my lips, I remained gaped open. A dribble of cum and piss slurry spilled from my canal onto where Bryce's cock speared my ass, the rest still trapped much deeper inside me by my innermost gate."
+            else:
+                m "When Maverick's head tugged through my lips, I remained gaped open. A dribble of cum spilled from my canal onto where Bryce's cock speared my ass, the rest still trapped much deeper inside me by my innermost gate."
 
     scene stars at Pan((0, 0), (0, 20), 2.0) with dissolvemed
     stop soundloop fadeout 3.0
@@ -900,7 +947,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
     Mv normal "Home."
     Br stern "At least help me get [player_name] off of--"
     Mv normal "No. I think you have that covered. [player_name] is more than easy enough to \"get off.\""
-    Br brow "And if I need help getting [player_name] home?"
+    Br brow "And if I need help getting [player_name] back to their apartment?"
 
     jump bangok_four_bryce3_mcbottom_mav_bryce_mp_nomav_merge
 
@@ -1096,7 +1143,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_nomav_merge:
 
     m "Working his cold forelegs under my shoulders, Bryce tugged me back up his warm chest, until his cock popped free of my rear."
     if bangok_four_bryce3_store.top_mav == False:
-        if bangok_four_bryce3_store.protection == True and bangok_four_bryce3_store.brycebroke = False:
+        if bangok_four_bryce3_store.protection == True and bangok_four_bryce3_store.brycebroke == False:
             if persistent.bangok_inflation == True:
                 m "I groaned, his bloated condom's reservoir dragging through my guts only begrudgingly, stretched taut through my asshole."
                 menu:
@@ -1615,7 +1662,10 @@ label bangok_four_bryce3_mcbottom_train:
         if bangok_four_bryce3_store.brycetarget == "ass":
             m "Each slam of Bryce's crotch into my hindquarters sent the liquid load inside me sloshing, heightening the experience."
         elif bangok_four_bryce3_store.brycetarget == "vag":
-            m "He plunged in and out through my passage, thick shaft weakening my muscles. Piss leaked from my womb each time he pulled out, only to be forced back by his return, the repeated motion saturating my vaginal walls."
+            if bangok_four_bryce3_store.protection == False:
+                m "He plunged in and out through my passage, thick shaft weakening my muscles. Piss leaked from my womb each time he pulled out, only to be forced back by his return, the repeated motion saturating my vaginal walls."
+            else:
+                m "He plunged in and out through my passage, thick shaft weakening my muscles. Piss leaked from my womb each time he pulled out, only to be forced back by his return, the repeated motion sloshing in and out of my womb electric and mind-numbing."
         else: # womb
             m "He plunged in and out of my womb, forcing my cervix wide with the repeated penetrations. Each time in he forced my womb to expand, cockhead displacing some of his piss and increasing the pressure on the walls of my defiled sacred place."
     else:
