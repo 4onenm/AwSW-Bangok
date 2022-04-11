@@ -256,6 +256,39 @@ label bangok_four_bryce1_poke:
                 Br flirty "How about we try that again with me awake, at my place?"
                 c "Sure."
                 jump bangok_four_bryce1_apartment_decided
+        "Trying to wake you up.":
+            c "That's a sensitive spot for humans. I thought poking it might..."
+            $ renpy.pause(0.8)
+            Br brow "..."
+            $ renpy.pause(0.8)
+            play sound "fx/tableslap.wav"
+            Br laugh "That works, I suppose."
+            if brycemood < 4 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                show bryce stern with dissolve
+            else:
+                show bryce smirk with dissolve
+            Br "So, what, is that normal among humans?"
+            c "I mean, we'd have clothes protecting it."
+            Br brow "Right, all your layers."
+            if brycemood < 6 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                Br stern "Well, I need to get home, you need to get home, let's just... focus on that."
+                c "I'll help you walk home."
+                $ renpy.pause(0.5)
+                Br normal "Thanks."
+            else:
+                Br flirty "Y'know, I kinda want to see what's under yours, back at my place...?"
+                c "Are you coming on to me?"
+                Br smirk "Are you interested?"
+                menu:
+                    "Accept.":
+                        show bryce flirty with dissolve
+                        $ renpy.pause(0.5)
+                        jump bangok_four_bryce1_apartment_decided
+                    "Reject.":
+                        $ brycemood -= 1
+                        c "Let's just get you home, Bryce."
+                        Br laugh "Fair enough!"
+                        jump bangok_four_bryce1_nevermind
 
 
 
