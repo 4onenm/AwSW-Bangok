@@ -3311,7 +3311,7 @@ label bangok_four_bryce1_morningcouch:
             Br laugh "I guess I forgot about that after knotting you, then passed out."
             c "Guess so."
 
-    if (persistent.bangok_watersports or persistent.bangok_inflation) and bangok_four_bryce1_playerstuffed:
+    if persistent.bangok_watersports and bangok_four_bryce1_playerstuffed:
         if "vag" in [bangok_four_bryce1_position_picka, bangok_four_bryce1_position_pickb]:
             m "My hand went to my womb as I felt last night's fluid results shifting around."
         else:
