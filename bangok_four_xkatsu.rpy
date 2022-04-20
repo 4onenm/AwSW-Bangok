@@ -778,7 +778,7 @@ label bangok_four_xkatsu_get_underneath:
     $ renpy.pause(0.8)
     c "Should I help you look, or...?"
     Ka "No, no. Should just be a moment."
-    play sound "fx/rummage.ogg"
+    play sound "fx/rummage.wav"
     $ renpy.pause(1.2)
     show katsu normal:
         anchor (0.5,1.0)
@@ -788,7 +788,7 @@ label bangok_four_xkatsu_get_underneath:
     m "Katsuharu's footsteps returned. I heard a squeeze bottle plunger, then cold gel spilled on one of my cheeks and into my crack."
     m "I shuffled forward sligthly from the sensation, my legs bumping into the freezing metal of the outer bucket."
     c "H-Hey! That's pretty cold!"
-    play sound "fx/box.ogg"
+    play sound "fx/box.wav"
     $ renpy.pause(0.5)
     Ka exhausted "Odd. Didn't keep it anywhere near the icebox."
     c "I don't think cold for me and cold for you is the same."
