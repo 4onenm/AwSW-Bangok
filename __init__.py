@@ -1,5 +1,6 @@
 import renpy.exports
 import renpy.display.im as im
+from renpy.display.image import ImageReference
 
 from modloader import modinfo
 from modloader.modclass import Mod, loadable_mod
@@ -265,6 +266,14 @@ def xipsum():
     )
 
 
+def xipsum2():
+    ml.add_answ_machine_message('bangok_four_xipsum2_answ_machine', condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), chapters=[4])
+
+    ( ml.find_label('chapter4chars2')
+        .search_menu("Meet with Remy.")
+        .add_choice("Meet Ipsum for something stimulating.", condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), jump='bangok_four_xipsum2')
+    )
+
 
 def xkatsu():
     ( ml.find_label('katsuskip')
@@ -299,6 +308,7 @@ def link_scenes():
     bryce3_afterparty()
     remy_c4postsections()
     xipsum()
+    xipsum2()
     xkatsu()
     xsebastian()
     modsettings_firstboot()
@@ -316,6 +326,13 @@ def add_side_images():
     
     renpy.exports.image('side sebastian shy b sleep', clip_sebastian_side_image('cr/sebastian_shy_b_sleep.png'))
 
+    def clip_ipsum_side_image(composite):
+        return im.Flip(im.Scale(im.Crop(composite, (100,40,500,600)), 250,300), horizontal=True)
+
+    renpy.exports.image('side ipsum normal bangok blush', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_normal_blush.png")))
+    renpy.exports.image('side ipsum happy bangok blush', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_happy_blush.png")))
+    renpy.exports.image('side ipsum normal bangok heady', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_heady.png")))
+    renpy.exports.image('side ipsum happy bangok heady', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_heady_grin.png")))
 
 def add_scene_select():
     import four_scene_select as fss
