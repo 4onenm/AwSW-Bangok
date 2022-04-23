@@ -1151,7 +1151,6 @@ label bangok_four_xipsum_bedroom_start:
                 $ renpy.pause(0.5)
                 Ip think "Fair enough."
                 jump bangok_four_xipsum_one_cock_ass_fuck_getlube
-            ""
         hide ipsum with easeoutbottom
         $ renpy.pause(0.8)
         m "He stepped away a moment, getting a healthy dollop of lube to stroke over the lower of his shafts."
