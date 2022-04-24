@@ -267,11 +267,11 @@ def xipsum():
 
 
 def xipsum2():
-    ml.add_answ_machine_message('bangok_four_xipsum2_answ_machine', condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), chapters=[4])
+    ml.add_answ_machine_message('bangok_four_xipsum2_answ_machine', condition=('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), chapters=[4])
 
     ( ml.find_label('chapter4chars2')
         .search_menu("Meet with Remy.")
-        .add_choice("Meet Ipsum for something stimulating.", condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), jump='bangok_four_xipsum2')
+        .add_choice("Meet Ipsum for something stimulating.", condition=('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), jump='bangok_four_xipsum2')
     )
 
 
@@ -395,7 +395,7 @@ def add_scene_select():
 
     # xIpsum2
     fss.register_scene_select(bangok, "Something Stimulating with Ipsum", 'bangok_four_xipsum2_replay_start',
-        locked=lambda: (not renpy.store.persistent.bangok_dev) or (not renpy.store.persistent.bangok_four_xipsum2_skip))
+        locked=lambda: (not renpy.store.persistent.bangok_four_xipsum2_skip))
 
     # xKatsu
     fss.register_scene_select(bangok, "Katsuharu's Special", 'bangok_four_xkatsu_replay_start',
