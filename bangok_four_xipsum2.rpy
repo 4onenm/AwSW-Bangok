@@ -55,6 +55,49 @@ label bangok_four_xipsum2:
 
     show ipsum happy bangok briefs at center with dissolve
 
+    if persistent.bangok_four_xipsum2_skip == True and (not _in_replay):
+        stop music fadeout 1.0
+        $ renpy.pause (0.3)
+        play sound "fx/system3.wav"
+        call syscheck from _call_bangok_four_syscheck_xipsum2
+        call skiptut from _call_bangok_four_skiptut_xipsum2
+        if skipbeginning == False:
+            if system == "normal":
+                s "My records indicate you have already experienced this scene in a satisfactory manner. Would you like to skip to the end?"
+            elif system == "advanced":
+                s "It looks like you've seen this before. Skip to the end of this scene?"
+            else:
+                s "So, it turns out you've seen this before. Either you could watch this again, or we could save some time and just skip to the end of this scene."
+        $ skipbeginning = False
+        menu:
+            "Yes. I want to skip ahead.":
+                play sound "fx/system3.wav"
+                s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                scene black with dissolvemed
+                play sound "fx/door/close2.wav"
+                $ renpy.pause (1.0)
+                $ persistent.skipnumber += 1
+                call skipcheck from _call_bangok_four_skipcheck_xipsum2
+
+                scene bangok_four_xipsum_bedroom ceiling:
+                    alignaround (0,0)
+                    # pos (0, -456)
+                    pos (-128,0)
+
+                show ipsum normal bangok blush flip:
+                    zoom 1.8
+                    alignaround (0.5,0)
+                    xpos 0.18
+                    ypos 0.6
+                with dissolvemed
+
+                play music "mx/snowflake.ogg" fadein 2.0
+                jump bangok_four_xipsum2_skip
+            "No. Don't skip ahead.":
+                play sound "fx/system3.wav"
+                s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                play music "mx/snowflake.ogg" fadein 2.0
+
     c "Hey Ipsum."
 
     menu:
@@ -172,7 +215,6 @@ label bangok_four_xipsum2:
 
             show loremapt at Pan ((0, 0), (128,72), 0.0) with vpunch
             m "I yelped, dropping to my knees and grabbing at the briefs, then yanking them down to discover what Ipsum had done."
-            play sound "fx/slide.ogg"
             $ renpy.pause(0.3)
             m "Three of his fingers waggled out at me from one of the disks, which were now glowing."
             c "Woah!"
@@ -599,6 +641,9 @@ label bangok_four_xipsum2_sit:
             
 
     m "I let my legs fall away from behind him, and he flicked at one of my feet with his tail."
+
+    label bangok_four_xipsum2_skip:
+    $ persistent.bangok_four_xipsum2_skip = True
     if persistent.bangok_knot == True:
         Ip normal bangok blush flip "Now, it'll be a little while before I can pull out--"
         c "Huh?"
