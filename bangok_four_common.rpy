@@ -203,13 +203,6 @@ init:
         (214,684),"cr/ipsum_bangok_pen.png"
     )
     image ipsum normal flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok'),horizontal=True)
-    image ipsum normal bangok erect blush = im.Composite(
-        (650,800),
-        (0,0), "cr/ipsum_sad.png",
-        (0,0), "cr/bangok/ipsum_normal_blush.png",
-        (214,684),"cr/ipsum_bangok_pen.png"
-    )
-    image ipsum normal bangok erect blush flip = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok blush'),horizontal=True)
     image ipsum happy bangok = im.Composite(
         (650,800),
         (0,0), "cr/ipsum_happy.png",
@@ -313,7 +306,7 @@ init:
         (0,0), "cr/bangok/ipsum_briefs_glow.png",
         (0,0), "cr/bangok/ipsum_briefs_touch.png",
     )
-    image ipsum normal bangok blush briefs touch glow flip = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok briefs touch'),horizontal=True)
+    image ipsum normal bangok blush briefs touch glow flip = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok blush briefs touch glow'),horizontal=True)
     image ipsum happy bangok briefs touch glow = im.Composite(
         (650,800),
         (0,0), "cr/ipsum_happy.png",
@@ -332,10 +325,10 @@ init:
         (650,800),
         (0,0), "cr/ipsum_sad.png",
         (0,0), "cr/bangok/ipsum_happy_blush.png",
-        (0,0), "cr/bangok/ipsum_briefs_glow.png",
         (0,0), "cr/bangok/ipsum_briefs_touch.png",
+        (0,0), "cr/bangok/ipsum_briefs_glow.png",
     )
-    image ipsum happy bangok blush briefs touch glow flip = im.Flip(renpy.display.image.ImageReference('ipsum happy bangok blush briefs touch'),horizontal=True)
+    image ipsum happy bangok blush briefs touch glow flip = im.Flip(renpy.display.image.ImageReference('ipsum happy bangok blush briefs touch glow'),horizontal=True)
 
 
 
