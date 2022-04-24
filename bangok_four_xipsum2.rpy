@@ -727,6 +727,107 @@ label bangok_four_xipsum2_sit:
                                     $ renpy.pause(0.5)
                                     $ bangok_four_xipsum2_store.sharing = 3
                                     Ip happy flip "Excellent."
+
+            $ renpy.pause(0.5)
+            scene black with dissolvemed
+            stop music fadeout 2.0
+            $ renpy.pause(1.0)
+
+            play sound "fx/phonering.ogg"
+            scene o3 at Pan((0, 100), (0, 250), 3.0) with dissolveslow
+            $ renpy.pause(1.3)
+            play sound "fx/phonepickup.ogg"
+
+            Ip normal bangok blush "Hello, [player_name]."
+            c "Ipsum?"
+            c "It's the middle of the night. What...?"
+            if bangok_four_playerhasdick == True:
+                m "I felt the rustling of fabric over my shaft and realized Ipsum must be looking at his end of his stimulating device."
+            else:
+                m "I felt the rustling of fabric over my outermost folds and realized Ipsum must be looking at his end of his stimulating device."
+
+            if bangok_four_xipsum2_store.sharing > 1:
+                Ip normal bangok blush "Well, Lorem wasn't interested. But asking him gave me a thought."
+            Ip happy bangok blush "Since you're still wearing it, perhaps you'd like an... overnight visitation."
+
+            menu:
+                "Just how horny are you?":
+                    Ip think "This much, evidently."
+                    if bangok_four_playerhasdick == True:
+                        m "A clawed finger ghosted over my outer lips, leaving me shivering."
+                    Ip normal bangok blush "What do you say?"
+                    menu:
+                        "Accept.":
+                            jump bangok_four_xipsum2_evening_accept
+                        "Reject.":
+                            jump bangok_four_xipsum2_evening_reject
+                "Accept.":
+                    label bangok_four_xipsum2_evening_accept:
+                    Ip happy bangok blush "Happy to oblige."
+                    m "(Click.)"
+                    c "(He hung up?)"
+                    m "Air wafted over my nethers as he moved his end of the devices."
+                    if bangok_four_playerhasdick == True:
+                        if bangok_four_xipsum2_store.protection == True:
+                            m "Then a cold condom was unrolled down my shaft."
+                        else:
+                            m "Then cold lubricant dribbled over my shaft."
+                        c "Ah!"
+                        m "Before I had a handle on the sensations in my groin, my shaft was enveloped by Ipsum's warm rear, sinking slowly inside."
+                    if bangok_four_playerhasdick == True or bangok_four_xipsum2_store.scene != "truedp":
+                        m "Then I felt his twin shafts at my rear."
+                        if bangok_four_xipsum2_store.scene != "assdp":
+                            c "(W-Wait, I don't think I can--!)"
+                        m "He didn't thrust, instead applying pressure gently, waiting for my pucker to give."
+                        if bangok_four_playerhasdick == True:
+                            m "I tensed, then found myself relaxing into the slow shifting of his body around my length, due to his breathing."
+                        else:
+                            m "I tensed, then shivered as he reached a finger through to tickle my outermost folds."
+                        c "Ohhhh..."
+                        m "Ipsum sank inside me, spreading my hole evenly and slowly."
+                    else:
+                        m "Then his twin heads prodded once again at my two folds."
+                        c "Ohhhh..."
+                        if bangok_four_xipsum2_store.protection == True:
+                            m "I arched my back as he filled me, gently, applying pressure slowly to slip inside on condom lubrication alone, rather than thrusting."
+                        else:
+                            m "I arched my back as he filled me, gently, applying pressure slowly to slip inside on lubrication alone, rather than thrusting."
+                    m "Then his slit pressed against my rear, leaving me hilted in my empty bed."
+                    m "There he stopped. I felt tremors and tugging as he moved about in his home, but he wasn't fucking me, just visiting."
+                    m "Shifting around to try to find a comfortable position, I eventually drifted off with my legs spread, his shafts buried inside me."
+                    $ renpy.pause(0.3)
+                    scene black with dissolveslow
+                    $ renpy.pause(1.0)
+
+                    if bangok_four_xipsum2_store.protection == True:
+                        if bangok_four_playerhasdick == True:
+                            m "When morning came, the only sign of his former presence was the condom I'd filled in him in my sleep."
+                        elif bangok_four_xipsum2_store.scene == "truedp":
+                            m "When morning came, the only sign of his former presence was a warm feeling of contentment radiating from my pussy and ass."
+                        else:
+                            m "When morning came, the only sign of his former presence was a warm feeling of contentment radiating from my ass."
+                    elif persistent.bangok_inflation == True:
+                        if bangok_four_playerhasdick == True:
+                            m "When morning came, the only signs of his former presence were the mess of cum on my own cock, and the large, sticky load in my backdoor."
+                        elif bangok_four_xipsum2_store.scene == "truedp":
+                            m "When morning came, the only sign of his former presence was the heavy sticky load weighing in my guts and canal."
+                        else:
+                            m "When morning came, the only sign of his former presence was the heavy sticky load weighing in my rear."
+                    else:
+                        if bangok_four_playerhasdick == True:
+                            m "When morning came, the only signs of his former presence were the mess of cum on my own cock, and the dregs of a load in my backdoor."
+                        elif bangok_four_xipsum2_store.scene == "truedp":
+                            m "When morning came, the only signs of his former presence were the sticky loads in my ass and pussy."
+                        else:
+                            m "When morning came, the only signs of his former presence were the dregs of a load in my backdoor."
+                "Reject.":
+                    label bangok_four_xipsum2_evening_reject:
+                    c "It's just comfortable evening-wear. Don't read too much into it."
+                    Ip sad "Oh."
+                    Ip think "Alright then. Do let me know when you are, {i}ahem{/i}, available."
+                    c "Yeah. Sure."
+                    Ip sad "Goodnight."
+
         "I'd honestly like to have both ends.":
             $ renpy.pause(0.5)
             $ bangok_four_xipsum2_store.has_both = True
