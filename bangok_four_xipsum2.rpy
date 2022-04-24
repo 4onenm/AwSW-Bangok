@@ -127,7 +127,16 @@ label bangok_four_xipsum2:
                     $ renpy.pause (0.5)
                     queue sound "fx/leather.ogg"
                     $ renpy.pause (1.0)
-                    m "I stripped out of my clothes, then pulled the strange briefs most of the way up. I kept them off my waist, though, still looking down at the glowing disks."
+                    if bangok_four_playerhasdick is None:
+                        m "I stripped out of my clothes, then pulled the strange briefs most of the way up. I kept them off my waist, though, still looking down at the glowing disks past my..."
+                        menu:
+                            m "I stripped out of my clothes, then pulled the strange briefs most of the way up. I kept them off my waist, though, still looking down at the glowing disks past my..."
+                            "...hardening cock.":
+                                $ bangok_four_playerhasdick = True
+                            "...dampening hole.":
+                                $ bangok_four_playerhasdick = False
+                    else:
+                        m "I stripped out of my clothes, then pulled the strange briefs most of the way up. I kept them off my waist, though, still looking down at the glowing disks."
                 "Alright, fine.":
                     jump bangok_four_xipsum2_surprise
         "[[Put them on.]":
@@ -435,7 +444,7 @@ label bangok_four_xipsum2_sit:
                 xanchor 0.7
                 xpos 1.0
                 yanchor 1.0
-                ypos 1.25
+                ypos 1.15
             with easeinright
             Lo "Oh, [player_name]? You're here."
             Lo shy b "A-And your clothes are..."
