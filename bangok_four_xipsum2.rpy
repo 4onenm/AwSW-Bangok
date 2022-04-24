@@ -75,7 +75,7 @@ label bangok_four_xipsum2:
                 s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
                 scene black with dissolvemed
                 play sound "fx/door/close2.wav"
-                $ renpy.pause (1.0)
+                $ renpy.pause (2.0)
                 $ persistent.skipnumber += 1
                 call skipcheck from _call_bangok_four_skipcheck_xipsum2
 
@@ -643,7 +643,8 @@ label bangok_four_xipsum2_sit:
     m "I let my legs fall away from behind him, and he flicked at one of my feet with his tail."
 
     label bangok_four_xipsum2_skip:
-    $ persistent.bangok_four_xipsum2_skip = True
+    if not _in_replay:
+        $ persistent.bangok_four_xipsum2_skip = True
     if persistent.bangok_knot == True:
         Ip normal bangok blush flip "Now, it'll be a little while before I can pull out--"
         c "Huh?"
