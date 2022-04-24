@@ -860,3 +860,9 @@ label bangok_four_xipsum2_ipsum_sharing1:
             Ip think "Alright then. Do let me know when you are, {i}ahem{/i}, available."
             c "Yeah. Sure."
             Ip sad "Goodnight."
+
+    $ renpy.pause(0.5)
+    scene black with dissolvemed
+    stop music fadeout 2.0
+    $ renpy.pause(2.0)
+    jump _mod_fixjmp
