@@ -393,6 +393,10 @@ def add_scene_select():
             'bangok_four_remy_c4postsections_store.remy_top': True,
         }))
 
+    # xIpsum2
+    fss.register_scene_select(bangok, "Something Stimulating with Ipsum", 'bangok_four_xipsum2_replay_start',
+        locked=lambda: (not renpy.store.persistent.bangok_dev) or (not renpy.store.persistent.lorem2skip))
+
     # xKatsu
     fss.register_scene_select(bangok, "Katsuharu's Special", 'bangok_four_xkatsu_replay_start',
         locked=lambda: not renpy.store.persistent.playedkatsu)

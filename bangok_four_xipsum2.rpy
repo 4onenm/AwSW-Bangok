@@ -31,7 +31,8 @@ label bangok_four_xipsum2_answ_machine:
     c "(Stimulating, huh?)"
     jump ml_answeringmachine_end
 
-
+label bangok_four_xipsum2_replay_start:
+    $ c4csplayed = 0
 label bangok_four_xipsum2:
     stop music fadeout 1.0
     $ c4csplayed += 1
@@ -295,7 +296,7 @@ label bangok_four_xipsum2_df:
         Ip normal bangok briefs "We will need some lubrication, however, and to apply your protection."
     else:
         Ip normal bangok briefs "We will need some lubrication, however."
-    Ip happy bangok briefs touch glow "Finish putting yours on? And feed your penis through. I'd like to do both of us at once."
+    Ip happy bangok briefs touch glow "Finish putting your device on? And feed your penis through. I'd like to lubricate both of us at once."
     c "Oh?"
     m "Looking down, I finished pulling up the briefs, feeding my hardening cock through one of the disks into his waiting fingers."
     c "Ah! Th-That tickles!"
@@ -338,7 +339,7 @@ label bangok_four_xipsum2_df:
 
     play sound "fx/door/close2.wav"
     $ renpy.pause (1.0)
-    show ipsum normal bangok blush briefs with easeinright
+    show ipsum normal bangok blush briefs at right with easeinright
     $ renpy.pause (0.3)
     m "He emerged from his room a little unsteadily, one hand hanging around the edge of his briefs' waistband."
     c "A little too rough."
@@ -361,7 +362,7 @@ label bangok_four_xipsum2_sit:
         xanchor 0.0
         yanchor 1.0
         xpos 0.0
-        ypos 1.3
+        ypos 1.25
         rotate -5
     with dissolve
     if bangok_four_xipsum2_store.scene in ["assdp","truedp"]:
@@ -434,7 +435,7 @@ label bangok_four_xipsum2_sit:
                 xanchor 0.7
                 xpos 1.0
                 yanchor 1.0
-                ypos 1.4
+                ypos 1.25
             with easeinright
             Lo "Oh, [player_name]? You're here."
             Lo shy b "A-And your clothes are..."
@@ -611,6 +612,9 @@ label bangok_four_xipsum2_sit:
                 else: # "df"
                     m "He stepped back, arms spread to show there was technically no direct connection between us, despite his cock in my ass, and mine in his."
                 c "... Huh."
+                show ipsum:
+                    ypos 0.6
+                with ease
             "Oh.":
                 pass
     else:
