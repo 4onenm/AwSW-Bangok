@@ -274,6 +274,11 @@ def xipsum2():
         .add_choice("Meet Ipsum for something stimulating.", condition=('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), jump='bangok_four_xipsum2')
     )
 
+    ( ml.find_label('chapter5')
+        .search_say("After a night of turbulent dreams, my consciousness returned to the shores of the waking world.")
+        .hook_to('bangok_four_xipsum2_ipsum_sharing3', condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum2_store.shared_with == "ipsum" and bangok_four_xipsum2_store.sharing == 3'))
+    )
+
 
 def xkatsu():
     ( ml.find_label('katsuskip')
