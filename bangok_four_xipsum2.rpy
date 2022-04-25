@@ -17,6 +17,8 @@ init python in bangok_four_xipsum2_store:
     #  3 - Free use for the target's friends.
     sharing = 0
 
+    sharing_ws = False
+
 
 label bangok_four_xipsum2_answ_machine:
     play sound "fx/answeringmachine.ogg"
@@ -727,6 +729,23 @@ label bangok_four_xipsum2_sit:
                                     $ renpy.pause(0.5)
                                     $ bangok_four_xipsum2_store.sharing = 3
                                     Ip happy flip "Excellent."
+                                    if persistent.bangok_watersports == True:
+                                        Ip think flip "What about using you for a... possibly unsanitary prank?"
+                                        c "Uh... what kind of prank?"
+                                        Ip normal bangok blush flip "To tell you would spoil the surprise, wouldn't it?"
+                                        Ip think flip "I suppose the clarifying question is, would you have a problem with complete strangers urinating in you?"
+                                        menu:
+                                            "Obviously, I'd have a problem with that!":
+                                                $ renpy.pause(0.5)
+                                                Ip sad flip "Nevermind, then. No harm, no foul."
+                                                c "Seriously, Ipsum. Don't."
+                                                Ip think flip "I won't. It was just an idea. I wasn't sure how far afield your tastes ran."
+                                            "Now I'm too curious.":
+                                                $ renpy.pause(0.5)
+                                                $ bangok_four_xipsum2_store.sharingws = True
+                                                c "Who is this prank on?"
+                                                Ip happy bangok blush flip "You'll find out in a few days. Is that you agreeing to it?"
+                                                c "I... guess it is."
             jump bangok_four_xipsum2_ipsum_sharing1
         "I'd honestly like to have both ends.":
             $ renpy.pause(0.5)
@@ -872,6 +891,12 @@ init python in bangok_four_xipsum2_sharing3_store:
 
 label bangok_four_xipsum2_ipsum_sharing3:
     m "I began to go about my morning routine, preparing for the day of the fireworks."
+
+    if persistent.bangok_watersports == True and bangok_four_xipsum2_store.sharing_ws == True:
+        if bangok_four_playerhasdick == True:
+            jump bangok_four_xipsum2_ipsum_sharing3_ws_male
+        else:
+            jump bangok_four_xipsum2_ipsum_sharing3_ws_female
 
     play sound "fx/phonering.ogg"
     scene o4 at Pan((0, 100), (0, 250), 0.0) with dissolveslow
