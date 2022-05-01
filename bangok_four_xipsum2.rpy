@@ -838,7 +838,7 @@ label bangok_four_xipsum2_ipsum_sharing1:
                 c "Ohhhh..."
                 m "Ipsum sank inside me, spreading my hole evenly and slowly."
             else:
-                m "Then his twin heads prodded once again at my two folds."
+                m "Then his twin heads prodded once again at my two holes."
                 c "Ohhhh..."
                 if bangok_four_xipsum2_store.protection == True:
                     m "I arched my back as he filled me, gently, applying pressure slowly to slip inside on condom lubrication alone, rather than thrusting."

@@ -1,78 +1,28 @@
+init python in bangok_four_xipsum2_ipsum_sharing3_ws_store:
+    pissed_in_ipsum = False
 
+    # Female route only. Options: "ass" and "vag"
+    game_winner = None
 
-label bangok_four_xipsum2_ipsum_sharing3_ws_male:
+label bangok_four_xipsum2_ipsum_sharing3_ws:
     m "Something felt off, though, as I rolled out of bed to move about my apartment."
-    m "I realized, with a start, that my ass was plugged with something, and my penis was surrounded by warm, shifting flesh!"
-    m "I scrabbled at the waistband, trying to pull them down, only to realized the briefs had been glued in place in my sleep."
+    if bangok_four_playerhasdick == True:
+        m "I realized, with a start, that my ass was plugged with something, and my penis was surrounded by warm, shifting flesh!"
+    else:
+        m "I realized, with a start, that I could feel a cock in my ass, and another in my pussy!"
+    m "I scrabbled at the waistband, trying to pull the briefs down, only to realize they had been glued in place in my sleep."
+    if bangok_four_playerhasdick == False:
+        m "Worse still, something blocked my urethra, meaning even if I did want to piss in the magic briefs, I couldn't."
 
-    m "My shaft twitched, reminding me I had to go to the restroom. The cock in my ass did the same, and I realized what had happened."
+    m "(Damnit Ipsum, you naughty piece of dragon ass. I didn't agree to anything all-day like this!)"
 
-    c "(Ipsum, you naughty little piece of dragon ass.)"
-
-    play soundloop "fx/faucet2.ogg" fadein 4.0
-    m "I gave up trying to hold my morning bladder, pissing hot urine into the warm, enveloping flesh."
-
-    m "As I'd expected, my piss ended up in my own ass. I flushed with embarassment, as I used my own guts as a urinal."
-
-    stop soundloop fadeout 1.0
-
-    c "(Is that it, though? Didn't he say something about complete strangers?)"
-
-    m "Emptied out, I stumbled toward the phone, planning to give Ipsum a piece of my mind."
-
-    m "I nearly stumbled as, abruptly, my cock in my ass twisted, then pulled out. My surprised hole tensed, clenching shut and spilling only a few drops of golden liquid."
-
-    m "A few moments later a new, different cock took its place, poked a little way in, then began to piss as well."
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-
-    play sound "fx/impact.wav"
-    scene o4:
-        ypos -456
-    with hpunch
-
-    m "I did stumble to the floor, taken by surprise by the new penetration. I groaned, feeling the golden liquid jetting even deeper down my colon, staining my walls with liquid waste."
-
-
-    stop soundloop fadeout 0.5
-    m "The flow abruptly cut off, as the new cock pushed deeper into my ass, exploring."
-    m "Then they began to thrust."
-    play soundloop "fx/bangok_poundofsalt.ogg"
-    $ renpy.pause(0.8)
-    c "(F-Fuck!)"
-    $ renpy.pause(0.8)
-    stop soundloop fadeout 0.5
-    m "I took it for a few seconds, then began struggling to my feet again. A few moments after that, the cock fucking me stopped, then pulled out."
-
-    m "My ass was exposed to open air for only a few seconds. I felt air waft over it as something sniffed it, then chuffed."
-    m "Then I felt the head of a massive dragonhood prodding my rear."
-    c "(That's too big! That won't fit! That--)"
-    m "It pushed but, finding itself blocked by my limited size, gave up."
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "I almost hoped it'd back off. Instead, a thick, hot stream of urine poured into my asshole, saturating my walls and flushing my passage with tingling heat."
-    play sound "fx/impact.wav"
-    with hpunch
-    m "I fell back to the floor, the heat suffusing my guts throwing my balance off."
-    if persistent.bangok_inflation == True:
-        m "Ass-up, the piss pouring into me had nowhere to go but further up my colon, pooling deep inside my intestines as I flushed with yet more embarassment."
-    stop soundloop fadeout 0.5
-    m "Then it stopped, satisfied, and pulled away from my hole. A moment later, the fucking cock returned, the much smaller shaft plowing in with abandon."
-    play sound "fx/extinguish.ogg"
-    m "After a few more thrusts he shoved in all the way and came, layering seed over the piss staining my guts."
-    m "Then he finally pulled out. Another small cock shoved into me, taking me to the hilt, but it wasn't mine, and it just sat inside."
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "Then it, too, began to piss."
-    c "Oh, great!"
-    m "Forcing myself back up, I stumbled toward the phone."
-    if persistent.bangok_inflation == True:
-        play sound "fx/bubbles.ogg"
-        m "My heavy belly sloshed, disrupting my balance with my liquid load."
-    m "Nevertheless, I stumbled over to the phone and dialed Ipsum's number."
+    c "I stumbled over to the phone, planning to give Ipsum an earful."
     play soundloop "fx/phonering.ogg"
     c "(Come on...)"
     $ renpy.pause(1.0)
     c "(Really?)"
     $ renpy.pause(1.0)
-    c "(Ipsum, don't do this to me and take off.)"
+    c "(Ipsum, don't do this to me and blow me off.)"
     $ renpy.pause(1.0)
     stop soundloop
     play sound "fx/phonepickup.ogg"
@@ -82,50 +32,39 @@ label bangok_four_xipsum2_ipsum_sharing3_ws_male:
     Lo think b "Huh? [player_name]?"
     c "Lorem?"
     Lo normal b "Yeah. Are you trying to reach Ipsum?"
-    play sound "fx/tableslap.wav"
-    with hpunch
-    m "I gasped as the cock plugging my ass was pulled out again, causing me to pitch forward onto the table."
-    c "Y-Yes. V-Very much so."
-    Lo think b "He left for work early this morning. I can give you his work number."
-    m "I felt a little golden liquid dribble from my ass, until another stranger's cock was shoved inside, beginning to vigorously fuck me."
-    play soundloop "fx/bangok_poundofsalt.ogg"
-    c "P-Please!"
-    m "Lorem began to recite the number. I only got halfway through repeating it back before the cock fucking me was yanked out, replaced with my {i}own{/i} for a few rough thrusts, then swapped back to the stranger's."
-    c "A-Ah! Fuck!"
-    Lo sad b "Is something wrong?"
-    c "J-Just c-call him. T-Tell him to c-call me!"
+    if bangok_four_playerhasdick == True:
+        m "I tried to keep my voice under control as the cock inside my ass twitched."
+    else:
+        m "I tried to keep my voice under control as the cocks inside me twitched."
+    c "Yes. Yes I am."
+    Lo think b "He left for work really early this morning. I can call him and tell him to call you."
+    c "Sure. Thanks."
     Lo think b "Okay."
     m "(Click.)"
-    
-    m "Groaning, I sank further down onto the table as the cock went at me."
-    m "It was bizarre, feeling it thrusting into me without the weight of a body, only feeling the briefs tug on my waist as my sphincter muscles tried and failed to keep the unexpected guests out."
-
-    stop soundloop fadeout 0.5
-    play sound "fx/extinguish.ogg"
-    m "The guy in my ass finally got off, stopping, then twitching ropes of sticky white that sank into the piss already flooding my colon."
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "No sooner did his load of cum end than he began to piss."
-    c "(A-Ah. Fuck. Really?)"
-    if persistent.bangok_inflation == True:
-        m "I squirmed on the table, feeling my guts fill even more."
-        $ renpy.pause(0.8)
-    stop soundloop fadeout 1.5
-    m "After a few seconds, the guy pissing in me finally finished."
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "He was replaced a moment later by a friend."
-    c "(Uuurgh.)"
-    if persistent.bangok_inflation == True:
-        m "My colon was packed, leaving nowhere for the fresh piss to go but deeper into my guts."
-        $ renpy.pause(0.8)
-    stop soundloop fadeout 1.5
+    $ renpy.pause (0.8)
+    if bangok_four_playerhasdick == True:
+        m "I waited by the phone, trying not to think about the cock in my ass, as every shift in my weight caused me to clench down on it a little."
+        play soundloop "fx/faucet2.ogg" fadein 1.0
+        m "Then I felt it twitch back, and a hot stream of liquid began to jet into my colon"
+        c "(Agh. I-Ipsum...)"
+        m "I flushed with embarassment as he used my ass as a urinal, pissing in me from afar as I stood in my living room."
+    else:
+        m "I waited by the phone, trying not to think about the cocks inside me, as every shift in my weight caused me to clench down on them a little."
+        play soundloop "fx/faucet2.ogg" fadein 1.0
+        m "Then I felt them twitch back, and twin hot streams of liquid began to jet into my front and rear."
+        c "(Agh. I-Ipsum...)"
+        m "I flushed with embarassment as he used me as a living urinal, pissing in me from afar as I stood in my living room."
     $ renpy.pause(0.8)
-    m "Finally he finished, swapping his cock out for another."
-
     play sound "fx/phonering.ogg"
     $ renpy.pause(0.8)
     play sound "fx/phonepickup.ogg"
-    
-    m "I yanked the phone off the reciever."
+    stop soundloop fadeout 2.0
+
+    if bangok_four_playerhasdick == True:
+        m "The phone finally rang, and I yanked it off the reciever the stream of liquid flowing into me came to an end."
+    else:
+        m "The phone finally rang, and I yanked it off the reciever as the streams of liquid flowing into me came to an end."
+
     c "I-Ipsum?"
 
     Ip normal bangok blush "Oh, hello! What an unexpected surprise. Now, why would you be asking Lorem to call me to call you while I'm at work?"
@@ -134,299 +73,302 @@ label bangok_four_xipsum2_ipsum_sharing3_ws_male:
     m "I could hear Ipsum's shit-eating grin through the phone."
     Ip happy bangok blush "The adhesive is soluble in even weak acids, so all you'd need do is... overflow."
     c "You've gotta be kidding me."
-    m "I tried squeezing my abused muscles, but with my asshole stuffed, the fluid inside wasn't interested in escape."
+    if bangok_four_playerhasdick == True:
+        m "I tried squeezing my rectal muscles, but with my holes stuffed, the fluid inside wasn't interested in escape."
+    else:
+        m "I tried squeezing my inner muscles, but with my holes stuffed, the fluid inside wasn't interested in escape."
     Ip normal bangok aheago briefs "Nnngh."
     Ip normal bangok blush "You may find that difficult so long as they keep obeying the signs."
-    c "Signs? What signs? Where did you put my ass?!"
-    Ip happy bangok blush "Well, you didn't hear it from me, but I heard the production facility factory floor men's room has a new, realistic-looking mounting-stand-style urinal."
+    if bangok_four_playerhasdick == True:
+        c "Signs? What signs? Who--? Where did you put my ass?! And my cock?!"
+        Ip normal bangok blush "The latter I'm keeping safe with me."
+        Ip happy bangok blush "The former? Well, you didn't hear it from me, but I heard the production facility factory floor restroom has a new, realistic-looking mounting-stand-style urinal."
+    else:
+        c "Signs? What signs? Who--? Where did you put my holes?!"
+        Ip happy bangok blush "Well, you didn't hear it from me, but I heard the production facility factory floor restroom has some new, realistic-looking mounting-stand-style urinals."
     Ip normal bangok blush "It should be busy down there in a few minutes, since their workday is just about to st--ah! Start."
     m "I felt the cock dragged out of my ass just as he gasped, confirming a suspicion I had."
-    c "They're plugging me with {i}our{/i} cocks?!"
-    Ip happy bangok blush "Gotta go. Let me know if anything happens!"
+    c "Are you fucking me right now?!"
+    Ip normal bangok blush "I'm actually not. That would probably be your first visitor."
+    m "I grunted as I felt the cock slowly pressed back inside, then yanked out again. My hole clenched."
+    c "They're plugging me with your cocks!"
+    Ip happy bangok blush "They're just obeying the signs."
+    Ip normal bangok blush "I should go. My first break is in an hour, at which point I'll come shut that experiment down. Until then, have fun!"
+    c "Ip--!"
     m "(Click.)"
-    m "Before I could curse his name or try again to push out some of what was stuffed inside me, I felt another cockhead of a larger dragon prodding at my abused hole."
-    c "Oh n-no--"
-    play sound "fx/impact.wav"
-    $ renpy.pause(0.3)
-    with vpunch
-    m "I got two steps toward the restroom before the cock pressed, stretching my sphincter to the limit, then sliding inside in the mess left by previous entrants."
-    if persistent.bangok_inflation == True:
-        play sound "fx/bubbles.ogg"
-        m "I collapsed to the ground, legs left almost useless as, like a plunger in a syringe, the hefty cock forced the slurry of cum and piss in my colon deeper, causing my guts to roil with the impassive tide of white and gold waste."
-        m "My belly bulged, packed full of a dozen meals or more of material."
-
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "At the limit of depth I thought I could possibly take, I felt the cock twitch. Then a fresh, hot, direct injection of piss flooded in, weighing me down more."
-
-    c "(I-If I don't get to the restroom soon, I don't know if I'm gonna be able to move!)"
-
-    if persistent.bangok_inflation == True:
-        m "Desperation fueling my movements, I struggled to heft my bulging belly off the floor, then stumbled over to the bathroom."
+    if bangok_four_playerhasdick == True:
+        m "Then I felt another cock, slightly larger than his, prodding at my pucker."
+        c "Oh n-no--"
+        m "It pressed in, popping its tip through my tight ring before letting go."
+        play soundloop "fx/faucet2.ogg" fadein 1.0
+        m "Another hot stream of urine poured into my colon, causing my lower body to flush with heat."
+        m "With my inner walls already saturated with Ipsum's pissload, though, the stranger's liquid waste quickly began to pool around his tip."
+        stop soundloop fadeout 0.5
+        m "He yanked his cock out of my ass, leaving gravity to dump his piss right back at him through my parted pucker."
     else:
-        m "Desperation fueling my movements, I struggled to stand on my abused lower body, then stumbled over to the bathroom."
+        m "Then I felt Ipsum's cock slide back into my ass while his other pulled out of my pussy."
+        m "A finger prodded at my front entrance, forcing me to clench and shiver. Then a cockhead slightly larger than Ipsum's pressed."
+        c "Oh n-no--"
+        m "It just popped its tip through into my canal before letting go."
+        play soundloop "fx/faucet2.ogg" fadein 1.0
+        m "Another hot stream of urine poured into my love passage, causing my lower body to flush with heat."
+        m "With my inner walls already saturated with Ipsum's pissload, though, the stranger's liquid waste quickly began to pool around his tip."
+        stop soundloop fadeout 0.5
+        m "He yanked his cock out of my hole, leaving gravity to dump his piss right back at him through my parted lower lips."
+    m "I shuddered, legs wobbling as he shoved Ipsum's cock back into place."
 
-    scene bath with wipeleftquick
+    $ renpy.pause (0.8)
 
-    stop soundloop fadeout 2.0
+    if bangok_four_playerhasdick == True:
+        m "As I stood for an embarassed moment, I could feel Ipsum's ass shifting around my cock as he went about his day in his lab."
+        m "There was more than enough in my bladder to give him more than he'd given me, to at least force him through a taste of what he was putting me through."
+        menu:
+            "Retaliate.":
+                $ renpy.pause (0.5)
+                $ bangok_four_xipsum2_ipsum_sharing3_ws_store.pissed_in_ipsum = True
+                c "(Let's see how you like it.)"
+                play soundloop "fx/faucet2.ogg" fadein 2.0
+                m "I let go, only able to manage a trickle at first, then pushing until I was pissing hard and fast in Ipsum's ass."
+                m "I could imagine him standing there, flushed and embarassed by his coworkers as someone used {i}him{/i} as a urinal."
+                m "Unfortunately, like the stranger who'd just pissed in my ass, I realized too late I was pissing into someone standing upright."
+                stop soundloop fadeout 2.0
+                m "My warm liquid waste formed a puddle where Ipsum's ass squeezed my length, squelching lewdly about my cock as he moved."
+                m "Only left more flushed and aroused, I considered my next move."
+            "Hold it.":
+                $ renpy.pause (0.5)
+                $ bangok_four_xipsum2_ipsum_sharing3_ws_store.pissed_in_ipsum = False
+                c "(I don't need to be that mean.)"
+                c "(Or maybe he likes it, and denying it will be more mean?)"
 
-    m "My eyes swept quickly over my available options as I felt the direct injection of fluid come to an end. Once this cock pulled out, there was no way I could convince my lower body to move again."
+        m "Prodding around the adhesive ring holding the briefs' portal to my hole, I couldn't feel any give whatsoever."
+    else:
+        m "Prodding around the adhesive ring holding the briefs' portals to my holes, I couldn't feel any give whatsoever."
+    m "Clearly I either needed to collect a lot more and \"overflow,\" as Ipsum had put it, or I needed their piss to pour out of me more slowly so it didn't fall away from my hole before it could dribble from my holes to the edge of the portals."
+    m "Either way, I couldn't spray it back out at my \"visitors\" without turning them off of \"using\" me, which would result in me being stuck like this for an hour or more."
+
+    play sound "fx/steps/clean2.wav"
+    scene black with dissolvemed
+    m "I walked to the bathroom, considering how I'd want to arrange myself to take this prank."
+    $ renpy.pause (0.5)
+    scene bath with dissolve
+    $ renpy.pause (0.5)
 
     menu:
         "Bathtub, ass-up.":
-            play sound "fx/impact.wav"
-            m "I sat on the edge of the tub, then lay down backward in it, keeping my butt up on the reclining part of the bathtub normally meant for one's back."
-            m "The cock in my ass pulled out, my guts roiling from the stretched mess it left behind."
-            if persistent.bangok_inflation == True:
-                m "I had a few moments to breathe when it popped out of my now-gaping ass, leaving the slurry of piss and cum bulging my belly to settle."
-            else:
-                m "I had a few moments to breathe when it popped out of my now-gaping ass, leaving the left-behind slurry of piss and cum to seep deeper into my gut's walls."
-            m "Then I realized my mistake. With my ass up, gravity kept the urine down, pooling inside of me."
-            m "As I felt the next cock at my abused asshole, I wondered: was this a mistake? Or was this exactly what I wanted?"
-            m "It slipped in easily, just girthy enough to rub against my new size."
-            play sound "fx/bangok_poundofsalt.ogg"
-            m "A second, smaller cock prodded at my ass, trying to pass through my stretched opening at the same time."
+            jump bangok_four_xipsum2_ipsum_sharing3_ws_assup
+        "Bathtub, lying down.":
+            jump todo_out_of_content_bangok_four_xipsum_sharing3
+
+label bangok_four_xipsum2_ipsum_sharing3_ws_assup:
+    $ renpy.pause (0.5)
+    m "I sat on the edge of the tub, then lay back with my head toward the facuet, keeping my ass up on the smooth curve of the back-reclining portion."
+
+    m "As I was arranging my legs, I was interrupted by the slow slide of Ipsum's cock plug being pulled gradually from my ass, out to the tip."
+
+    if bangok_four_playerhasdick == True:
+        m "Then the tip popped out, and was replaced with another stranger's cockhead."
+        m "I grunted as it entered, stretching me slightly larger than a human's would, the dragon's slit juices barely enough to lubricate his entry."
+        m "Then the cock kept coming, sinking in inch by maddenning inch, until until a horizontal slit between hard plates rested against my rear."
+    else:
+        m "Then the cock plugging my pussy was dragged out the same way. Spotting what he really wanted, the guy shoved Ipsum's cock roughly back into my ass, then dragged out the one in my pussy entirely."
+        m "Then I felt this stranger's cockhead at my front entrance."
+        m "I grunted as it entered, stretching my entrance slightly more than a human's would."
+        m "Then the cock kept coming, sinking in inch by maddenning inch, until until a horizontal slit between hard plates rested against my folds."
+    c "(Oh no. I think this guy's not just interested in pissing and leaving.)"
+    play soundloop "fx/bangok_poundofsalt.ogg" fadein 5.0
+    m "He pulled out an inch, then thrust back in, then pulled out two inches, then thrust again."
+    m "Pretty soon, the invisible, nameless stranger was fucking my piss-stained hole for real, leaving me shivering and gasping from the sensations."
+    stop soundloop fadeout 0.5
+    m "Just as I was getting into it, though, he stopped, abruptly, then pulled out completely."
+    $ renpy.pause (1.2)
+    if bangok_four_playerhasdick == True:
+        m "I held my crotch, wondering why the guy would stop halfway through. I thrust for some stimulation, but unable to move my cock in Ipsum's ass with his ass already attached to my hips."
+        $ renpy.pause (1.2)
+        m "My silent question was answered a half dozen seconds later, when I felt a {i}much{/i} larger cock at my asshole."
+    else:
+        m "I held my empty crotch, wondering why the guy would stop halfway through."
+        $ renpy.pause (1.2)
+        m "My silent question was answered a half dozen seconds later, as Ipsum's cock plugging my asshole was dragged out."
+        m "Then a {i}much{/i} larger cockhead took its place at my rear."
+    c "W-Wait! N-No! That'll never fit! That--"
+    m "The large cock pressed, just enough to bow my rosebud a little bit open around its tip. Then the jet of hot, golden liquid began to rush in."
+    play soundloop "fx/faucet2.ogg" fadein 2.0
+    m "The big dragon pissed like a racehorse, his urine following gravity's will to flow far into my guts before collecting in a warm, deep pool inside me."
+    if persistent.bangok_inflation == True:
+        $ renpy.pause (0.8)
+        m "I moaned, suffused by the warmth and depth and weight of the flood."
+
+    if bangok_four_playerhasdick == True:
+        $ renpy.pause (1.2)
+        m "After a few seconds, the big dragon pissing in me gave a short, abrupt thrust, straining my sphincter."
+        stop soundloop fadeout 3.0
+        m "Then his flow began to taper off, leaving my colon a urine-saturated and defiled mess."
+        play soundloop "fx/bangok_poundofsalt.ogg" fadein 5.0
+        m "No sooner had the big dragon pulled away than the cock that had been fucking me returned, thrusting into my newly-warmed inner walls, then picking up right where he'd left off."
+
+        m "His thrusts were renewed and far less cautious, no longer afraid of getting caught fucking me."
+        if persistent.bangok_inflation == True:
+            m "They sent shudders through my body, disturbing the pissload deep within me."
+
+        m "I arched my back, pushing my butt a little higher in the tub, into the stranger's assfucking."
+
+        $ renpy.pause (0.8)
+        stop soundloop fadeout 0.5
+        play sound "fx/extinguish.ogg"
+        if persistent.bangok_inflation == True:
+            m "A few thrusts more, then the dragon came, rope after rope of sticky white seed sliding down my colon's walls to sink into the deep pool of piss the last dragon had left behind."
+            m "The cum added to my liquid weight, leaving a visible bump in my warmed belly that I rubbed and massaged."
+        else:
+            m "A few thrusts more, then the dragon came, rope after rope of sticky white seed painting my colon's walls."
+
+        m "His load came to an end.{w=0.5} A second passed.{w=0.5}{nw}"
+        play soundloop "fx/faucet2.ogg" fadein 1.0
+        m "His load came to an end. A second passed.{fast} Then I felt another hot, less-viscous stream jetting into my guts."
+        m "His golden liquid washed down my inner walls, cleaning them of his cum for my next visitor."
+        if persistent.bangok_inflation == True:
+            m "I could feel the bump in my belly expanding, slightly, with yet another stream of fluid collecting in my flooded colon."
+    else:
+        $ renpy.pause (1.2)
+        m "After a few seconds, the cock that had been fucking me returned, sliding easily into my aching, empty pussy."
+
+        m "His thrusts were renewed and far less cautious, no longer afraid of getting caught fucking me."
+
+        if persistent.bangok_inflation == True:
+            m "They sent shudders through my body, disturbing the pissload still collecting deep within me."
+        stop soundloop fadeout 0.5
+        m "Finally, the big dragon finished using me as a living urinal, then stepped away."
+        play soundloop "fx/bangok_poundofsalt.ogg" fadein 5.0
+        m "Ipsum's ass-plugging cock slid back into me, trapping the golden load deep inside. The fucking of my pussy, however, continued."
+
+        m "I arched my back, pushing my butt a little higher in the tub, into the stranger's fucking."
+
+        $ renpy.pause (0.8)
+        stop soundloop fadeout 0.5
+        play sound "fx/extinguish.ogg"
+        if persistent.bangok_inflation == True:
+            m "A few thrusts more, then the dragon came, rope after rope of sticky white seed painting my canal's inner walls, seeping downward to pool against my innermost gate."
+            m "The cum added to my liquid weight, leaving a visible bump in my warmed belly that I rubbed and massaged, heady with proximity to my own orgasm."
+        else:
+            m "A few thrusts more, then the dragon came, rope after rope of sticky white seed painting my canal's inner walls."
+
+        m "His load came to an end.{w=0.5} A second passed.{w=0.5}{nw}"
+        play soundloop "fx/faucet2.ogg" fadein 1.0
+        m "His load came to an end. A second passed.{fast} Then I felt a hot, less-viscous stream spraying down the inner walls of my passage."
+        m "His piss spattered around my spasming canal, washing my walls of his cum for my next visitor, yet defiling them at the same time."
+        if persistent.bangok_inflation == True:
+            m "I could feel the bump in my belly expanding, slightly, as all his ejected fluids pooled at the entrance to my deepest center."
+
+    stop soundloop fadeout 1.0
+    m "Unfortunately, he, too finished."
+    $ renpy.pause (0.5)
+    m "As he began to pull out, I gasped, squeezing him tightly, trying to reach orgasm of my own."
+    m "I failed, forced to pant with pent-up need as Ipsum's cock was shoved back inside, plugging me."
+
+    $ renpy.pause (0.8)
+    m "I lay, steeping in the warm results of my newfound use as a draconic urinal."
+    if persistent.bangok_inflation == True:
+        m "Part of me worried the PH of cum would lower the PH of the piss, preventing it from dissolving the adhesive and freeing me once I finally did overflow."
+        $ renpy.pause (1.2)
+        m "Another part, basking in the sloshing and flowing at every tremor of my inner muscles, wasn't sure I should care."
+    else:
+        m "Part of me worried the PH of cum would lower the PH of the piss, preventing it from dissolving the adhesive and freeing me once I finally did overflow."
+        $ renpy.pause (1.2)
+        if bangok_four_playerhasdick == True:
+            m "Another part, squeezing and massaging Ipsum's cock with my ass as if he had more to give, wasn't sure I should care."
+        else:
+            m "Another part, squeezing and massaging Ipsum's cocks with my holes as if he had more to give, wasn't sure I should care."
+
+    $ renpy.pause (1.0)
+    m "I was startled from my lewd reverie by the cock in my rear dragging partway out, followed by a draft of air over my hole, as if someone had sniffed me."
+
+    if bangok_four_playerhasdick == True:
+        $ renpy.pause (1.0)
+        m "A few seconds passed."
+        $ renpy.pause (1.0)
+        m "Then I finally felt it fully removed, and a new cock at my ass."
+        play sound ["fx/bangok_poundofsalt.ogg","fx/bangok_poundofsalt.ogg"] fadein 0.5
+        m "It shoved through my weakened muscle fast and hard, jumping straight to fucking me."
+        stop sound fadeout 1.0
+        m "I didn't have long to enjoy the sensation, though, as after just ten thrusts, it stopped, then pulled out."
+        play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/bangok_poundofsalt.ogg","fx/bangok_poundofsalt.ogg"] fadein 0.5
+        m "Another, different, slightly larger cock pressed to my hole, then followed the pattern of the first, pumping my rosebud with ten thrusts."
+        stop sound fadeout 1.0
+        m "Then it, too, stopped and pulled out."
+        play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/bangok_poundofsalt.ogg","fx/bangok_poundofsalt.ogg"] fadein 0.5
+        m "The first, or what I thought was the first, returned. It sank in, bottoming out in me before starting up its hard cadence again."
+        stop sound fadeout 1.0
+        m "When its ten was up, it pulled out."
+        play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/bangok_poundofsalt.ogg","fx/bangok_poundofsalt.ogg"] fadein 0.5
+        m "I grunted, panting with need as my ass was traded off again, wondering what game they were playing with me, and what liquid gifts I would earn when one of them lost."
+        stop sound fadeout 1.0
+        m "The second finished more gently, its last few thrusts slower, bottoming out in me, before pulling out slowly after his turn."
+        play sound ["fx/rub2.ogg"] fadein 0.5
+        m "The first rammed right in, fucking my ass raw to try to bring himself over his edge within his limit."
+        stop sound fadeout 1.0
+        m "He failed, pulling out for his partner to take over."
+        $ renpy.pause(0.8)
+        m "The second seemed to take the exact opposite approach, taking a few moments to even step back up to me, then sinking in slowly."
+        $ renpy.pause(0.8)
+        m "I felt like he was playing with me and his friend, his pace maddeningly, excruciatingly slow."
+        $ renpy.pause(0.8)
+        play soundloop "fx/faucet2.ogg" fadein 2.0
+        m "Then I felt the jet of hot piss his slow pace was covering up, soaking into my already-saturated walls around his tip as he only narrowly avoided pulling out with each{w=0.5} slow{w=0.5} thrust."
+        if persistent.bangok_inflation == True:
+            m "The urine added to the pool inside me, backing up along my colon until the tip of his shaft was prodding my inner pool of urine with each thrust."
+        stop soundloop fadeout 0.5
+        m "Then, cutting himself off, he dragged out of me after his tenth thrust exceedingly slowly, making sure my loosened ring wiped his tip on the way out."
+        if persistent.bangok_inflation == True:
+            m "His friend's first thrust was right into the piss."
+            $ renpy.pause(1.2)
+            play soundloop "fx/faucet2.ogg" fadein 2.0
+            m "After hesitating for several seconds, he let go too, pressing right up to my hole and pissing into my already packed colon."
             $ renpy.pause(0.8)
-            stop soundloop fadeout 0.5
-            play sound "fx/extinguish.ogg"
-            m "They didn't manage it, but the cock fucking me did release its load, yet more thick ropes of cum painting my widened colon."
-            play soundloop "fx/faucet2.ogg" fadein 1.0
-            m "Both pulled out. Then twin streams of urine fell into my gaping hole, both depositing their hot liquid gifts within me at the same time."
-            if persistent.bangok_inflation == True:
-                m "I moaned, basking in the increasing weight of my belly full of liquid gifts."
-            else:
-                m "I moaned, basking in my new use as yet more piss pooled within my guts."
-            m "This, serving as a urinal for those rebuilding the generators, felt like the best thing to ever happen to me."
-            stop soundloop fadeout 2.0
-            m "As they finished, I felt air rustling over my useless cock. Then I felt it rubbing against my own asshole, not nearly enough to fill me."
-            m "After a moment of poking and prodding, I felt Ipsum's cock shoved in with mine, our two lengths rubbing together finally enough to stuff my hole."
-            m "Then my next user yanked both cocks out of my ass. I felt my own land on cold tile, cast aside as another large cockhead prodded my actually useful hole."
-            if persistent.bangok_inflation == True:
-                m "As the thick head weged its way in, it smushed my prostate out of the way. I came, blissed out as another large dragon sank into my distended, defiled guts."
-            else:
-                m "As the thick head weged its way in, it smushed my prostate out of the way. I came, blissed out as another large dragon sank into my defiled guts."
-
-            play soundloop "fx/bangok_poundofsalt.ogg"
-            m "He thrust, fucking my spread ass with vigor. I moaned again, knowing he intended not just to fill me with golden liquid, but with his seed as well."
-            $ renpy.pause(1.0)
-            m "The latest piss mixed with the cum already deposited, thinning the thick gobs in my inner slurry as he fucked."
-            if persistent.bangok_inflation == True:
-                m "I looked pregnant with every inward thrust, the motion packing my guts solid with the white and gold mixture within me."
-            stop soundloop fadeout 0.5
-            play sound "fx/extinguish.ogg"
-            m "Then he rammed all the way home, reshaping my guts to his cock, before delivering pulse after pulse of his seed."
-            m "I clutched my ass, trying to spread it wider, get the stranger closer and deeper, despite the impossibility with the portal briefs separating me from the true action."
-            if persistent.bangok_inflation == True:
-                c "Urp!"
-                m "With nowhere left to go, the slurry in my packed guts flowed further upward, backfilling into my stomach."
-                m "My bloated belly expanded, left near to the end of a pregnancy in size by the sheer amounts of seed and waste stuffed within me."
-
-
-            m "Then the massive cock tried to pull back... and couldn't."
-            if persistent.bangok_knot == True:
-                m "I gasped, the knot of flesh so large and thick it pulled at my pelvic bone, and the disk connecting me to the far side."
-                m "There was {i}no{/i} way it could pull out. Yet the dragon behind the cock tried anyway, yanking again and again at my stretched rear."
-            else:
-                m "I gasped, feeling the "
-
-
-
-
-
-        "Bathtub, ass-down.":
-        # "Toilet.":
-
-
-
-
-
-
-    jump todo_out_of_content_bangok_four_xipsum_sharing3
-
-
-label bangok_four_xipsum2_ipsum_sharing3_ws_male:
-    m "Something felt off, though, as I rolled out of bed to move about my apartment."
-    m "I realized, with a start, that I could feel the warm, hard rods of Ipsum's cocks shoved into my pussy and ass!"
-    m "I scrabbled at the waistband, trying to pull them down, only to realize the briefs had been glued in place in my sleep."
-    m "Worse still, something blocked my urethra, meaning even if I did want to piss in the magic briefs, I couldn't."
-
-    m "I stumbled toward the phone, planning to give Ipsum a piece of my mind."
-
-    play soundloop "fx/faucet2.ogg" fadein 4.0
-    m "As I moved, Ipsum's cocks twitched, beginning to release a steady stream of hot, thin liquid into my depths."
-
-    m "I stopped dead, flushing with embarassment as Ipsum used my pussy and my guts as a urinal."
-
-    if persistent.bangok_inflation == True:
-        m "The flow continued for several seconds, pooling around his cocks and lightly sloshing as I struggled to keep walking."
-    stop soundloop fadeout 1.0
-    m "Then his bladder tapped out, leaving me flushed with heat and embarassment."
-
-    c "(Is that it, though? Didn't he say something about complete strangers?)"
-
-    m "I took a few more steps toward the phone, then nearly stumbled as, abruptly, his cock in my ass twisted, then pulled out. My surprised hole tensed, clenching shut and spilling only a few drops of golden liquid."
-
-    m "A few moments later a new, different cock took its place, poked a little way in, then began to piss as well."
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-
-    play sound "fx/impact.wav"
-    scene o4:
-        ypos -456
-    with hpunch
-
-    m "I did stumble to the floor, taken by surprise by the new penetration. I groaned, feeling the golden liquid jetting even deeper down my colon, staining my walls with liquid waste."
-
-    stop soundloop fadeout 0.5
-    m "The flow abruptly cut off, as the new cock pushed deeper into my ass, exploring."
-    m "Then they began to thrust."
-    play soundloop "fx/bangok_poundofsalt.ogg"
-    $ renpy.pause(0.8)
-    c "(F-Fuck!)"
-    $ renpy.pause(0.8)
-    m "I took it for a few seconds, then began struggling to my feet again. A few moments after that, the cock fucking me stopped, then pulled out."
-    stop soundloop fadeout 0.5
-    m "I gasped, got my feet under myself, then pitched forward again as the cock I thought was Ipsum's was shoved roughly and completely back into my ass."
-    play sound "fx/impact.wav"
-    with hpunch
-    m "A few moments later, the cock in my pussy was yanked free, revealing my stained hole to open air. I felt air waft over my cooch as something sniffed it, then chuffed."
-    c "(N-No, wait--)"
-    m "The cock-shaped fleshy plug in my ass was yanked free again, then re-occupied by the fucking cock. I winced, wondering what was coming for my pussy if this was happening to my ass."
-    m "Then I felt the head of a massive dragonhood prodding my entrance."
-    c "(That's too big! That won't fit! That--)"
-    m "It pushed but, finding itself blocked by my limited size, gave up."
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "I almost hoped it'd back off. Instead, a thick, hot stream of urine poured into my canal, saturating my walls and flushing my passage with tingling heat."
-    if persistent.bangok_inflation == True:
-        m "It flowed as deep as my cervix, pooling deep inside my passage as I flushed with yet more embarassment."
-    stop soundloop fadeout 0.5
-    m "Then it stopped, satisfied, and pulled away from my hole. A moment later, Ipsum's cock was pushed back inside me, plugging my pussy."
-
-    m "The other guy was still going at my ass, though."
-    play sound "fx/extinguish.ogg"
-    m "After a few more thrusts he shoved in all the way and came, layering seed over the piss staining my guts."
-    m "Then he, too, pulled out, and plugged me again with Ipsum's cock."
-
-    m "Flushed with embarassment, it took me a few seconds to get to my feet."
-    if persistent.bangok_inflation == True:
-        play sound "fx/bubbles.ogg"
-        m "My heavy belly sloshed, disrupting my balance with my liquid load."
-
-    m "Nevertheless, I stumbled over to the phone and dialed Ipsum's number."
-    play soundloop "fx/phonering.ogg"
-    c "(Come on...)"
-    $ renpy.pause(1.0)
-    c "(Really?)"
-    $ renpy.pause(1.0)
-    c "(Ipsum, don't do this to me and take off.)"
-    $ renpy.pause(1.0)
-    stop soundloop
-    play sound "fx/phonepickup.ogg"
-    $ renpy.pause(0.5)
-
-    c "Ipsum, damnit, what the hell?"
-    Lo think b "Huh? [player_name]?"
-    c "Lorem?"
-    Lo normal b "Yeah. Are you trying to reach Ipsum?"
-    play sound "fx/tableslap.wav"
-    with hpunch
-    m "I gasped as the cock plug in my ass was pulled out again, causing me to pitch forward onto the table."
-    c "Y-Yes. V-Very much so."
-    Lo think b "He left for work early this morning. I can give you his work number."
-    m "I felt a little golden liquid dribble from my ass, until another stranger's cock was shoved inside, beginning to vigorously fuck me."
-    play soundloop "fx/bangok_poundofsalt.ogg"
-    c "P-Please!"
-    m "Lorem began to recite the number. I only got halfway through repeating it back, when the cock plug in my pussy was swapped out for the real thing, which also began to thrust."
-    c "A-Ah! Fuck!"
-    Lo sad b "Is something wrong?"
-    c "J-Just c-call him. T-Tell him to c-call me!"
-    Lo think b "Okay."
-    m "(Click.)"
-    m "Groaning, I sank further down onto the table as the two cocks went at me."
-    m "It was bizarre, feeling them thrusting into me without the weight of a body, only feeling the briefs tug on my waist as my muscles tried and failed to keep the unexpected guests out."
-    play sound "fx/extinguish.ogg"
-    m "The one in my pussy came first, but his friend in my ass wasn't far behind."
-    play sound "fx/extinguish.ogg"
-    stop soundloop fadeout 0.5
-
-    m "Two fresh loads spurted into me, sinking in the pooled piss already inside."
-    if persistent.bangok_inflation == True:
-        m "I groaned as my vagina reached its limit, utterly packed with fluids, even as my latest fucker pulled most of the way out. My colon, meanwhile, sat heavy, somehow still not full."
-
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "Then the two began to piss."
-    c "(A-Ah. Fuck. Really?)"
-    if persistent.bangok_inflation == True:
-        m "With no room left in my passage, the slurry of cum and piss seeped through my innermost gate, defiling my womb."
-        m "I squirmed on the table, feeling my guts fill even more."
-        $ renpy.pause(0.8)
-        m "Finally, they finished with me, pulling out, before stuffing my filled holes again with the cock-shaped plugs. My guts gurgled as fluid was forced yet deeper by the thrusts of insertion."
+            m "I moaned, feeling my innards expand slightly as the slurry of strangers' piss and seed backed up further into my guts."
+        else:
+            m "The first thrust into my freshly-defiled inner walls and immediately felt the difference."
+            $ renpy.pause(1.2)
+            play soundloop "fx/faucet2.ogg" fadein 2.0
+            m "After hesitating for several seconds, he let go too, pressing right up to my hole and pissing into my thoroughly-defiled colon."
+            $ renpy.pause(0.4)
+            m "I moaned, feeling yet another stranger's piss warming my saturated innards, dribbling down my inner walls."
+        stop soundloop fadeout 0.5
+        $ renpy.pause(1.2)
+        play soundloop "fx/bangok_poundofsalt.ogg" fadein 1.0
+        m "Then he stopped and, after a moment to recover and readjust his position, began to fuck me again."
+        jump todo_out_of_content_bangok_four_xipsum_sharing3
     else:
-        $ renpy.pause(0.8)
-        m "Finally, they finished with me, pulling out, before stuffing my holes again with the cock-shaped plugs."
-
-    play sound "fx/phonering.ogg"
-    $ renpy.pause(0.8)
-    play sound "fx/phonepickup.ogg"
-
-    m "I yanked the phone off the reciever."
-    c "I-Ipsum?"
-
-    Ip normal bangok blush "Oh, hello! What an unexpected surprise. Now, why would you be asking Lorem to call me to call you while I'm at work?"
-    c "D-Damnit Ipsum, you know why!"
-    Ip happy bangok blush "Oh yes, yes of course."
-    m "I could hear Ipsum's shit-eating grin through the phone."
-    Ip happy bangok blush "The adhesive is soluble in even weak acids, so all you'd need do is... overflow."
-    c "You've gotta be kidding me."
-    m "I tried squeezing my abused muscles, but with my holes stuffed, the fluid inside wasn't interested in escape."
-    Ip normal bangok aheago briefs "Nnngh."
-    Ip normal bangok blush "You may find that difficult so long as they keep obeying the signs."
-    c "Signs? What signs? Where did you put my holes?!"
-    Ip happy bangok blush "Well, you didn't hear it from me, but I heard the production facility factory floor restroom has some new, realistic-looking mounting-stand-style urinals."
-    Ip normal bangok blush "It should be busy down there in a few minutes, since their workday is just about to st--ah! Start."
-    m "I felt the cock dragged out of my ass just as he gasped, confirming a suspicion I had."
-    c "They're plugging me with {i}your{/i} cocks?!"
-    Ip happy bangok blush "Gotta go. Let me know if anything happens!"
-    m "(Click.)"
-    m "Before I could curse his name or try again to push out some of what was stuffed inside me, I felt another cockhead of a larger dragon prodding at my rear entrance."
-    c "Oh n-no--"
-    play sound "fx/impact.wav"
-    $ renpy.pause(0.3)
-    with vpunch
-    m "I got two steps in toward the restroom before the cock pressed, straining my rosebud, then sliding inside in the mess left by previous entrants."
-    if persistent.bangok_inflation == True:
-        play sound "fx/bubbles.ogg"
-        m "I collapsed to the ground, legs left almost useless as, like a plunger in a syringe, the hefty cock forced the slurry of cum and piss in my colon deeper, causing my guts to roil with the impassive tide of white and gold waste."
-    # m "Ipsum's other cock was yanked out of my ass, then a similarly large cockhead to that spreading my pussy was placed against it."
-
-    play soundloop "fx/faucet2.ogg" fadein 1.0
-    m "At the limit of depth I thought I could possibly take, I felt the cock twitch. Then a fresh, hot, direct injection of piss flooded in, weighing me down more."
-
-    c "(I-If I don't get to the restroom soon, I don't know if I'm gonna be able to move!)"
-
-    if persistent.bangok_inflation == True:
-        m "Desperation fueling my movements, I struggled to heft my bulging belly off the floor, then stumbled over to the bathroom."
-    else:
-        m "Desperation fueling my movements, I struggled to stand on my abused lower body, then stumbled over to the bathroom."
-
-    scene bath with wipeleftquick
-
-    stop soundloop fadeout 2.0
-
-    m "My eyes swept quickly over my available options as I felt the direct injection of fluid come to an end. Once this cock pulled out, there was no way I could convince my lower body to move again."
-
-    menu:
-        "Bathtub, ass-up.":
-            play sound "fx/impact.wav"
-            m "I sat on the edge of the tub, then lay down backward in it, keeping my butt up on the reclining part of the bathtub normally meant for one's back."
-            m "The cock in my ass pulled out, my guts roiling from the stretched mess it left behind."
-            if persistent.bangok_inflation == True:
-                m "I had a few moments to breathe when it popped out of my now-gaping ass, leaving the slurry of piss and cum bulging my belly to settle."
-            else:
-                m "I had a few moments to breathe when it popped out of my now-gaping ass, leaving the left-behind slurry of piss and cum to seep deeper into my gut's walls."
-        "Bathtub, ass-down.":
+        m "The one in my pussy followed, sliding partway out at someone's tug, before slipping the rest of the way under gravity and the slickness of my arousal alone."
+        $ renpy.pause (1.0)
+        m "A few seconds passed."
+        $ renpy.pause (1.0)
+        m "Then the cock in my ass was removed fully, and two new dragons began lining up with my holes."
+        
+        $ renpy.pause (0.5)
+        play soundloop "fx/bangok_poundofsalt.ogg" fadein 0.5
+        $ renpy.pause (0.5)
+        m "Giving me no prep time, once they were lined up, they thrust together."
+        m "I moaned, kneading at my crotch as the slightly larger cock in my pussy set a slightly faster pace, pushing me toward that edge I had earlier been denied."
+        m "Between the two of them, though, I wondered if they were playing some kind of game with my body, seeing who would be the first to cum in my stained holes."
+        m "I wondered if I could tip the odds..."
+        menu:
+            "Ass.":
+                $ renpy.pause (0.5)
+                m "I squeezed with my ass, trying to give the cock fucking me there just that little bit extra."
+                jump todo_out_of_content_bangok_four_xipsum_sharing3
+            "Pussy.":
+                jump todo_out_of_content_bangok_four_xipsum_sharing3
+            "Cum.":
+                $ renpy.pause (0.5)
+                m "Throwing rational thought to the wind, I decided I didn't care which of them won. I just wanted to be used and filled."
+                m "I spasmed around both cocks, lost in the hedonism of the double penetration."
+                
+                show white with dissolve
+                m "Then I came, squeezing down hard, but unable to stop the merciless fucking with my abused, blissed-out muscles."
+                stop soundloop fadeout 1.5
+                m "Warmth blossomed in my love canal, sticky ropes pulsing from the twitching cock there. N"
 
 
-
-
+        jump todo_out_of_content_bangok_four_xipsum_sharing3
 
 
     jump todo_out_of_content_bangok_four_xipsum_sharing3
