@@ -126,6 +126,45 @@ init:
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
     image bangok_four_bryce_underside_large dk flip = im.Recolor(im.Flip("cr/bryce_underside_large.png",horizontal=True), 70, 70, 100, 255)
 
+    image damion normal bangok = im.Composite(
+        (709,827),
+        (0,0),"cr/damion_normal.png",
+        (0,0),"cr/bangok/damion_pen.png"
+    )
+    image damion normal bangok flip = im.Flip(renpy.display.image.ImageReference('damion normal bangok'),horizontal=True)
+    image damion face bangok = im.Composite(
+        (709,827),
+        (0,0),"cr/damion_face.png",
+        (0,0),"cr/bangok/damion_pen.png"
+    )
+    image damion face bangok flip = im.Flip(renpy.display.image.ImageReference('damion face bangok'),horizontal=True)
+    image damion arrogant bangok = im.Composite(
+        (709,827),
+        (0,0),"cr/damion_arrogant.png",
+        (0,0),"cr/bangok/damion_pen.png"
+    )
+    image damion arrogant bangok flip = im.Flip(renpy.display.image.ImageReference('damion arrogant bangok'),horizontal=True)
+
+    image damion normal bangok ws = im.Composite(
+        (709,827),
+        (0,0),"cr/damion_normal.png",
+        (0,0),"cr/bangok/damion_pen_ws.png"
+    )
+    image damion normal bangok ws flip = im.Flip(renpy.display.image.ImageReference('damion normal bangok ws'),horizontal=True)
+    image damion face bangok ws = im.Composite(
+        (709,827),
+        (0,0),"cr/damion_face.png",
+        (0,0),"cr/bangok/damion_pen_ws.png"
+    )
+    image damion face bangok ws flip = im.Flip(renpy.display.image.ImageReference('damion face bangok ws'),horizontal=True)
+    image damion arrogant bangok ws = im.Composite(
+        (709,827),
+        (0,0),"cr/damion_arrogant.png",
+        (0,0),"cr/bangok/damion_pen_ws.png"
+    )
+    image damion arrogant bangok ws flip = im.Flip(renpy.display.image.ImageReference('damion arrogant bangok ws'),horizontal=True)
+    
+
     image lorem bangok normal = im.Composite(
         (1240,650), 
         (0,0),"cr/lorem_normal.png",

@@ -223,6 +223,15 @@ def remy_c4postsections():
     )
 
 
+def xdamion():
+    ( ml.find_label('chap2facility')
+        .search_say("And you are?")
+        .hook_to('bangok_four_xdamion', condition=make_dev('(persistent.nsfwtoggle==True)'))
+        .search_say("What exactly did you want, again?")
+        .link_from('bangok_four_xdamion_canon_whatdidyouwant')
+    )
+
+
 def xipsum():
     ( ml.find_label('lorem2')
         .search_if('persistent.lorem2skip == True')
@@ -312,6 +321,7 @@ def link_scenes():
     bryce1_afterparty()
     bryce3_afterparty()
     remy_c4postsections()
+    xdamion()
     xipsum()
     xipsum2()
     xkatsu()
@@ -397,6 +407,10 @@ def add_scene_select():
             'bangok_four_remy_c4postsections_store.remy_tail_remy': True,
             'bangok_four_remy_c4postsections_store.remy_top': True,
         }))
+
+    # xDamion
+    fss.register_scene_select(bangok, "Improving Damion's Mood", 'bangok_four_xdamion_replay_start',
+        locked=lambda: (not renpy.store.persistent.bangok_dev) or (not renpy.store.persistent.metdamion))
 
     # xIpsum2
     fss.register_scene_select(bangok, "Something Stimulating with Ipsum", 'bangok_four_xipsum2_replay_start',
