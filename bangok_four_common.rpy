@@ -236,30 +236,30 @@ init:
     )
     image ipsum happy bangok heady flip = im.Flip(renpy.display.image.ImageReference('ipsum happy bangok heady'),horizontal=True)
     # Ipsum pen art
-    image ipsum normal bangok = im.Composite(
+    image ipsum normal bangok erect wrapped = im.Composite(
         (650,800),
         (0,0), "cr/ipsum_normal.png",
         (214,684),"cr/ipsum_bangok_pen.png"
     )
-    image ipsum normal flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok'),horizontal=True)
-    image ipsum happy bangok = im.Composite(
+    image ipsum normal bangok erect wrapped flip = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok erect wrapped'),horizontal=True)
+    image ipsum happy bangok erect wrapped = im.Composite(
         (650,800),
         (0,0), "cr/ipsum_happy.png",
         (214,684),"cr/ipsum_bangok_pen.png"
     )
-    image ipsum happy flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum happy bangok'),horizontal=True)
-    image ipsum sad bangok = im.Composite(
+    image ipsum happy bangok erect wrapped flip = im.Flip(renpy.display.image.ImageReference('ipsum happy bangok erect wrapped'),horizontal=True)
+    image ipsum sad bangok erect wrapped = im.Composite(
         (650,800),
         (0,0), "cr/ipsum_sad.png",
         (214,684),"cr/ipsum_bangok_pen.png"
     )
-    image ipsum sad flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum sad bangok'),horizontal=True)
-    image ipsum think bangok = im.Composite(
+    image ipsum sad bangok erect wrapped flip = im.Flip(renpy.display.image.ImageReference('ipsum sad bangok erect wrapped'),horizontal=True)
+    image ipsum think bangok erect wrapped = im.Composite(
         (650,800),
         (0,0), "cr/ipsum_think.png",
         (214,684),"cr/ipsum_bangok_pen.png"
     )
-    image ipsum think flip bangok = im.Flip(renpy.display.image.ImageReference('ipsum think bangok'),horizontal=True)
+    image ipsum think bangok erect wrapped flip = im.Flip(renpy.display.image.ImageReference('ipsum think bangok erect wrapped'),horizontal=True)
     # Ipsum swimwear art
     image ipsum normal bangok briefs = im.Composite(
         (650,800),

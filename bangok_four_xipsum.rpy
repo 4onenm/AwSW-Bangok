@@ -519,7 +519,7 @@ label bangok_four_xipsum_bedroom_start:
     m "I shrugged."
     c "You do you."
     $ renpy.pause(0.8)
-    show ipsum happy bangok with dissolve
+    show ipsum happy bangok erect wrapped with dissolve
     Ip "Actually, I believe now I do you."
     m "Ipsum had turned around from his desk, revealing twin penises now sheathed in condoms."
     menu:
@@ -529,9 +529,9 @@ label bangok_four_xipsum_bedroom_start:
                 mood += 1
         "You have {i}two{/i}?!":
             $ renpy.pause(0.5)
-            Ip think bangok "Oh. I take it this is uncommon among mammals?"
+            Ip think bangok erect wrapped "Oh. I take it this is uncommon among mammals?"
             c "Yeah, I think it's pretty much unheard of."
-            Ip normal bangok "Well, in dragon society it's a little rare, but hardly uncommon."
+            Ip normal bangok erect wrapped "Well, in dragon society it's a little rare, but hardly uncommon."
 
     if bangok_four_xipsum.loremin:
         show lorem sad flip with dissolve
@@ -540,8 +540,8 @@ label bangok_four_xipsum_bedroom_start:
         else:
             m "He tossed a condom packet across the bed to Lorem with a flick of the wrist."
 
-        Ip think bangok "Now, how Lorem is okay interacting with you is going to limit exactly what positions we can do."
-        Ip normal bangok "What do you think?"
+        Ip think bangok erect wrapped "Now, how Lorem is okay interacting with you is going to limit exactly what positions we can do."
+        Ip normal bangok erect wrapped "What do you think?"
         show lorem think flip with dissolve
         menu:
             "Sucking me?" if bangok_four_playerhasdick:
@@ -550,7 +550,7 @@ label bangok_four_xipsum_bedroom_start:
                     fuckeraction = "oral"
                     fuckertarget = "cock"
                 Lo think flip "Alright, I can do that."
-                Ip happy bangok "I can confirm that statement."
+                Ip happy bangok erect wrapped "I can confirm that statement."
                 Lo shy flip "H-Hey!"
             "Eating me out?":
                 python:
@@ -566,7 +566,7 @@ label bangok_four_xipsum_bedroom_start:
                     "How would you know, Lorem?":
                         $ renpy.pause(0.5)
                         $ bangok_four_xipsum.mood -= 1
-                        Ip happy bangok "We're roommates. He's merely heard the reviews from my other satisfied customers."
+                        Ip happy bangok erect wrapped "We're roommates. He's merely heard the reviews from my other satisfied customers."
                         c "Wait, you sell yourself out as a business?"
                         Lo relieved flip "That was a joke, [player_name]."
                         c "Oh."
@@ -577,21 +577,21 @@ label bangok_four_xipsum_bedroom_start:
                 $ renpy.pause(0.5)
                 $ bangok_four_xipsum.mood += 1
                 Lo shy flip "Oh. Okay."
-                Ip think bangok flip "Let me get you two a dental dam."
+                Ip think bangok erect wrapped flip "Let me get you two a dental dam."
                 play sound "fx/rumamge.ogg"
                 $ renpy.pause(0.5)
-                Ip normal bangok "Here."
+                Ip normal bangok erect wrapped "Here."
                 m "He held up a small, limp apparatus consisting of three small bags of near-transparent barrier. It definitely wasn't the flat sheet design I knew from my world."
                 c "What{w=0.5} is that?"
-                Ip happy bangok "A dental dam."
-                Ip normal bangok "Lorem, since you'll be the one using it, care to demonstrate?"
+                Ip happy bangok erect wrapped "A dental dam."
+                Ip normal bangok erect wrapped "Lorem, since you'll be the one using it, care to demonstrate?"
                 Lo relieved flip "Okay."
                 m "Ipsum tossed the dental dam across the bed to Lorem. The small dragon picked it up so that the three barrier bags hung vertically, then slid the top and bottom bags over his snout and jaw, respectively."
                 m "Breathing through the sides of his mouth, as his nostrils were now covered, he poked his tongue into the third bag."
                 Lo shy flip "That's it, I think."
-                Ip normal bangok "Remember not to bite down, or you could puncture it."
+                Ip normal bangok erect wrapped "Remember not to bite down, or you could puncture it."
                 Lo relieved flip "I know how it works."
-                Ip sad bangok "Then stop saying hard \"t\"s with your teeth. Your tongue against the roof of your mouth can provide a similar glottal without risking the barrier."
+                Ip sad bangok erect wrapped "Then stop saying hard \"t\"s with your teeth. Your tongue against the roof of your mouth can provide a similar glottal without risking the barrier."
             "First fuck?":
                 $ bangok_four_xipsum.fuckeraction = "fuck"
                 $ bangok_four_xipsum.fuckertarget = "ass" if bangok_four_playerhasdick else "vag"
@@ -599,12 +599,12 @@ label bangok_four_xipsum_bedroom_start:
                 if bangok_four_malepartners + bangok_four_femalepartners < 1:
                     c "What do you think, Lorem? Want to be the very first dragon to fuck a human?"
                     show lorem shy flip with dissolve
-                    Ip think bangok "You mean you haven't done this with other dragons, yet?"
-                    Ip happy bangok "Intriguing."
+                    Ip think bangok erect wrapped "You mean you haven't done this with other dragons, yet?"
+                    Ip happy bangok erect wrapped "Intriguing."
                     $ renpy.pause(0.5)
                     Lo happy flip "You'd let me do that?"
                     Lo shy flip "Nobody will believe me."
-                    Ip normal bangok "You will have two witnesses able to attest to the fact."
+                    Ip normal bangok erect wrapped "You will have two witnesses able to attest to the fact."
                     Lo normal flip "W-Wow. Okay."
                     $ bangok_four_xipsum.loremfirst = True
                 else:
@@ -622,20 +622,20 @@ label bangok_four_xipsum_bedroom_start:
                 if bangok_four_malepartners + bangok_four_femalepartners < 1:
                     c "Either way, you two are about to be the first two dragons to fuck a human."
                     show lorem shy flip with dissolve
-                    Ip think bangok "You mean you haven't done this with other dragons, yet?"
-                    Ip happy bangok "Intriguing."
+                    Ip think bangok erect wrapped "You mean you haven't done this with other dragons, yet?"
+                    Ip happy bangok erect wrapped "Intriguing."
                     $ bangok_four_xipsum.loremfirst = True
-                Ip happy bangok "Works for me."
+                Ip happy bangok erect wrapped "Works for me."
                 scene bangok_four_xipsum_bedroom ceiling:
                     alignaround (0,0)
                     pos (0, -456)
                     ease 3.0 pos (-128,0)
                 with dissolve
                 $ renpy.pause(2.0)
-                Ip normal bangok "Lorem, would you like to do the honors?"
+                Ip normal bangok erect wrapped "Lorem, would you like to do the honors?"
                 Lo shy "M-Me?"
-                Ip happy bangok "Of course. I wouldn't want to stand in the way of one of your rare instances of sexual conquest."
-                Ip think bangok "I am also larger than you, so if we want to ease [player_name] into this..."
+                Ip happy bangok erect wrapped "Of course. I wouldn't want to stand in the way of one of your rare instances of sexual conquest."
+                Ip think bangok erect wrapped "I am also larger than you, so if we want to ease [player_name] into this..."
                 Lo think "Alright."
                 jump bangok_four_xipsum_loremin_firstfuck_loremclimbs
             "Shouldn't Lorem choose?":
@@ -645,8 +645,8 @@ label bangok_four_xipsum_bedroom_start:
                 $ bangok_four_xipsum.mood += 1
                 c "I'm just saying. Of the three of us, he's the most nervous. So... whatever makes him comfortable, right?"
                 Lo shy flip "I..."
-                Ip happy bangok "Whatever you want, Lorem."
-                Ip normal bangok "Within reason, of course."
+                Ip happy bangok erect wrapped "Whatever you want, Lorem."
+                Ip normal bangok erect wrapped "Within reason, of course."
                 show lorem sad flip with dissolve
                 $ renpy.pause(0.8)
                 Lo think flip "I guess... if you're offering..."
@@ -1116,7 +1116,7 @@ label bangok_four_xipsum_bedroom_start:
     else:
         if bangok_four_playerhasdick:
             m "He handed me a condom packet of my own."
-        Ip normal bangok "I know you've been standing a while. Why not lie down? I still have to get a tray set up for barrier disposal."
+        Ip normal bangok erect wrapped "I know you've been standing a while. Why not lie down? I still have to get a tray set up for barrier disposal."
         c "Sure."
         $ bangok_four_malepartners += 1
         scene bangok_four_xipsum_bedroom ceiling:
