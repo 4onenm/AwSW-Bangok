@@ -219,19 +219,19 @@ label bangok_four_xipsum_donewithclothed:
     play sound "fx/undress.ogg"
     $ renpy.pause (0.5)
     m "Kicking off my shoes, I undid my belt and dropped my drawers."
-    show lorem bangok shy with dissolve
+    show lorem shy bangok with dissolve
     play soundloop "fx/scribbles.ogg"
     m "Lorem began scribbling, though turned away as if trying to pretend he wasn't looking."
     Ip happy "So that's what you're working with."
     menu:
         "Are my genitals about to end up in your game, Lorem?":
             $ renpy.pause (0.5)
-            Lo bangok shy "You are the one who agreed to this."
-            Lo bangok relieved "But I haven't even decided if I want that kind of content."
+            Lo shy bangok "You are the one who agreed to this."
+            Lo relieved bangok "But I haven't even decided if I want that kind of content."
             Ip normal "I think a lot of people would be interested to know how mythical species get it on."
-            Lo bangok think "True, but at the same time there's pushback for showing any kind of sexual content to younger dragons."
-            Lo bangok relieved "Putting anything like that in could limit the reach of my game."
-            Lo bangok shy "Plus, I don't want my game to be {i}about{/i} that."
+            Lo think bangok "True, but at the same time there's pushback for showing any kind of sexual content to younger dragons."
+            Lo relieved bangok "Putting anything like that in could limit the reach of my game."
+            Lo shy bangok "Plus, I don't want my game to be {i}about{/i} that."
         "See something you like, Ipsum?":
             python in bangok_four_xipsum:
                 renpy.pause(0.5)
@@ -359,18 +359,18 @@ label bangok_four_xipsum_lorembad:
 
 label bangok_four_xipsum_loremdone:
     Lo normal flip "Would you like to stay for dinner? I don't know how long you and Ipsum are going to.{cps=2}..{/cps}{w=0.5}{nw}"
-    Lo bangok shy flip "Would you like to stay for dinner? I don't know how long you and Ipsum are going to...{fast} take."
+    Lo shy bangok flip "Would you like to stay for dinner? I don't know how long you and Ipsum are going to...{fast} take."
     c "Let me see. What time is it?"
     c "It's getting late and I probably shouldn't stay out this long. Looks like I'll have to decline for now."
     Lo think flip "I see. Well, I gotta do something for you, at least."
     c "Isn't Ipsum already doing something?"
-    Lo bangok shy flip "O-Oh, I guess you're right."
+    Lo shy bangok flip "O-Oh, I guess you're right."
     m "I had thought I had imagined it the first time, when he'd turned away while drawing. Now that I was seeing it again, I was sure."
     m "Every time I brought up me and Ipsum being about to get it on, since I got naked, something poked out of a slit on Lorem's lower body."
     menu:
         "Are you interested in joining us?":
             $ renpy.pause(0.5)
-            Lo bangok sad flip "What? N-No."
+            Lo sad bangok flip "What? N-No."
             m "He seemed to finally notice what I'd picked up on."
             Lo bangok hidepeek flip "No. No I--"
             show lorem at Position(ypos=1.1) with ease
@@ -422,14 +422,14 @@ label bangok_four_xipsum_loremdone:
                 $ renpy.pause (0.5)
                 c "So I guess that leaves you and me. What are you comfortable with?"
         "Don't mention it.":
-            show lorem bangok normal flip with dissolve
+            show lorem normal bangok flip with dissolve
             $ renpy.pause (0.5)
             c "Honestly, this whole thing has been my pleasure. Minus having to stand still for as long as I did, this was actually quite fun."
             c "And, of course, there's a little left to come."
-            Lo bangok shy flip "Yep."
-            Lo bangok normal flip "How about I invite you again, sometime?"
+            Lo shy bangok flip "Yep."
+            Lo normal bangok flip "How about I invite you again, sometime?"
             c "For Ipsum's benefit, or...?"
-            Lo bangok shy flip "If you two wanted to meet again, I suppose you'd work that out with him."
+            Lo shy bangok flip "If you two wanted to meet again, I suppose you'd work that out with him."
             Lo normal flip "But I was thinking something that wouldn't force you to take your clothes off."
             c "Sure. Works for me."
             $ loremstatus = "good"
