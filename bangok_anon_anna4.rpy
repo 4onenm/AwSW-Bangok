@@ -1282,7 +1282,7 @@ $ renpy.pause (0.3)
 scene o at Pan((0, 250), (0, 250), 0.1) with dissolveslow
 show anna smirk at center with dissolveslow
 $ renpy.pause (0.5)
-m "After Anna's passaged had fully relaxed, she got off of me, then collapsed next to me, leaving both of us lying side by side on the bed."
+m "After Anna's passage had fully relaxed, she got off of me, then collapsed next to me, leaving both of us lying side by side on the bed."
 $ renpy.pause (1.5)
 
 jump bangok_anon_anna4_afterglow
