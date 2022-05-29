@@ -214,6 +214,20 @@ def bryce3_afterparty():
     clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
 
+def lorem4():
+    ( ml.find_label('lorem4skip')
+        .search_say("You've made me feel a lot better, though.")
+        .hook_to('bangok_four_lorem4_feelbetter', condition=make_dev('(persistent.nsfwtoggle==True)'))
+    )
+
+    ( ml.find_label('lorem4skip')
+        .search_menu("I'm not sure what to say.")
+        .branch()
+        .search_say("You can give me a call in a few days when you've had the time to mull it over or want to talk.")
+        .link_from('bangok_four_lorem4_canon_callmelater')
+    )
+
+
 def remy_c4postsections():
     ( ml.find_label('c4postsections')
         .search_say("I'll take care of the remaining tasks, so you can take the rest of the day off. I'm sure you have things to do other than helping the police department.")
@@ -320,6 +334,7 @@ def link_scenes():
     anna4()
     bryce1_afterparty()
     bryce3_afterparty()
+    lorem4()
     remy_c4postsections()
     xdamion()
     xipsum()
