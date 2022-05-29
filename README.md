@@ -41,6 +41,9 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 
 + Bryce3 (Bryce + Maverick): Get to Bryce3, play through with high mood (or skip) until Zhong leaves, then be diplomatic about how you respond. (Don't be overeager, don't refuse.)
 + Bryce3 (Bryce + Sebastian + Maverick): See above, but also have previously completed xSebastian.
+
++ Lorem4: Complete Lorem4, tell Lorem you don't mind, talk about making Lorem feel better.
++ Ipsum4 (Ipsum): Complete Lorem2's lewd scene with Ipsum, then reach Chapter 4 and check your answering machine. (This scene does not lock out other 4th date choices with other dragons.)
 </details>
 <br/>
 
