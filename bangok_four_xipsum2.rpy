@@ -1,6 +1,7 @@
 init python in bangok_four_xipsum2_store:
     protection = False
 
+    # Old scene selector:
     scene = None
     # Scenes:
     #    truedp - Ipsum takes f character's ass and pussy at the same time.
@@ -8,6 +9,8 @@ init python in bangok_four_xipsum2_store:
     #    ass    - Ipsum fits one cock in the player's ass and hotdogs with the other.
     #    df     - Ipsum and the player fuck each other simultaneously.
 
+
+    # sharing:
     has_both = False
     shared_with = None
     # This "sharing" enum covers extra use scenes.
@@ -229,6 +232,10 @@ label bangok_four_xipsum2:
     c "Sure."
     Ip happy bangok briefs "Excellent. Then, would you like something a little more substantive than my fingers?"
 
+    if persistent.bangok_dev == True:
+        jump bangok_four_xipsum2_scene_select
+
+    label bangok_four_xipsum2_old_scene_select:
     menu:
         "Can you take both my ass and pussy comfortably with this?" if bangok_four_playerhasdick == False:
             $ renpy.pause (0.5)
@@ -1162,3 +1169,38 @@ label bangok_four_xipsum2_ipsum_sharing3:
     $ renpy.pause(1.0)
     scene o4 at Pan((0, 0), (0, 250), 5.0) with dissolveslow
     jump bangok_four_xipsum2_ipsum_sharing3_return
+
+
+
+
+label bangok_four_xipsum2_scene_select:
+    menu:
+        "Oh, {i}fuck{/i} me.":
+            $ renpy.pause(0.5)
+            Ip happy bangok briefs "Happy to oblige. But, where, exactly?"
+            # Goes back to the old scenes
+            jump bangok_four_xipsum2_old_scene_select
+
+        "I am going to fuck you so hard with these.":
+            $ renpy.pause(0.5)
+            Ip normal bangok blush briefs "Oh?"
+            Ip happy bangok blush briefs "I'm excited for your demonstration."
+            play sound "fx/undress.ogg"
+            $ renpy.pause(0.5)
+            m "I took my pair of briefs off, turning them inside out to expose the two disks linked to Ipsum's lower body."
+            m "Then I poked one of my fingers through, teasing Ipsum's slit."
+            Ip normal bangok blush briefs "You dare use my own tricks against me?"
+            Ip normal bangok briefs "I jest, I jest."
+            m "The tips of his twin penises emerged, but only that far before he cleared his throat."
+            Ip happy bangok briefs "Alright. Perhaps"
+
+        "Can we take the ends out?":
+            $ renpy.pause(0.5)
+            c "Do they have to be inside these? Or are you able to take them out?"
+            Ip normal bangok briefs ""
+
+
+label todo_out_of_content_bangok_four_xipsum:
+    play sound "fx/system3.wav"
+    s "Out of content. Rollback and save, or prepare to crash."
+    $ renpy.error("TODO: Out of content.")
