@@ -58,18 +58,19 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 ### Resource credits:
 + `bg/in/apts/o_ceil.png`: An Anonymous contributor
 + `bg/in/*`: 4onen, editing base-game assets
-+ `bg/bangok_*.png`: 4onen
 + `cg/lorem-x-ipsum_purpleroom.png`:
     + Linework: [Yaroul](https://www.furaffinity.net/user/Yaroul/) (Original: https://www.furaffinity.net/view/23028281/)
     + Comissioner: [haloudoval](https://www.furaffinity.net/user/haloudoval)
     + Coloring-in: 4onen
 + `cr/anna_*.png`: yoshisman8 from [mod-nsfw-anna](https://github.com/AWSW-Modding/AWSW-Modtools/tree/mod-nsfw-anna) (Used without permission; unable to contact.)
++ `cr/bangok/*.png`: 4onen
 + `cr/bryce_underside_large.png`: 4onen, editing base-game assets
 + `cr/ipsum_bangok_pen.png`: 4onen, cutting `cg/lorem-x-ipsum_purpleroom.png`
 + `cr/lorem_bangok_hidepeek.png`: 4onen, editing base-game assets
 + `cr/lorem_bangok_peek.png`: 4onen
 + `cr/sebastian_shy_b_sleep.png`: 4onen, editing base-game assets
 + `fx/2buckets.ogg`: 4onen, editing base-game `fx/2glasses.ogg`
++ `fx/bangok_panting_*.ogg`: 4onen, editing base-game `fx/breathing.ogg`
++ `fx/bangok_poundofsalt.ogg`: 4onen, editing base-game `fx/salt.ogg`
 + `fx/digice.ogg`: 4onen, editing base-game `fx/dig.ogg`
-+ `fx/bangok_panting_*.ogg`: 4onen, editing base game `fx/breathing.ogg`
 + `mx/bangok_quiet_campfire.ogg`: 4onen, editing base game `mx/campfire.ogg`
