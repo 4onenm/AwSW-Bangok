@@ -37,6 +37,8 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 <details>
 <summary>In-Development scene access guides</summary>
 
++ Damion: Go to the facility during the Chapter 2 investigation and respond in kind to Damion's crude comments.
+
 + Remy c4postsections: Complete Remy's first, second, and third scenes. Then *do not* deliver the PDA to him in the chapter 4 investigation. You can suggest to Sebastian when you speak with him that you could deliver the PDA, which will trigger the scene.
 
 + Bryce3 (Bryce + Maverick): Get to Bryce3, play through with high mood (or skip) until Zhong leaves, then be diplomatic about how you respond. (Don't be overeager, don't refuse.)
