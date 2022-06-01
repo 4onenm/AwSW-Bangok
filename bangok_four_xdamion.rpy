@@ -160,7 +160,7 @@ label bangok_four_xdamion_ws_fuck:
             m "No sooner had I taken him in than I felt his hands on the back of my head, abruptly pulling me as deep as my mouth could take him, forcing me to swallow a dribble of piss as I gagged."
             Dm face "Not so fleshy and malleable inside, huh?"
             m "Angling my head back, he aimed his cock downward. I only had a moment to suck in air before he sank his piss-stained rod deeper, into my throat, until my nose was pressing into his soggy slit."
-            Dm arrogant "There we go."
+            Dm normal "There we go."
             play soundloop "fx/faucet1.ogg" fadein 1.0
             queue soundloop "fx/faucet2.ogg"
             m "Hot liquid jetted into my throat, almost faster than I would have been able to swallow."
@@ -177,8 +177,8 @@ label bangok_four_xdamion_ws_fuck:
             play sound "fx/spray.ogg"
             m "He finally ended with one last splash on my face as I struggled to swallow, spattering my nose, one cheek, and one closed eye with his golden waste."
             $ renpy.pause (0.5)
-            m "Wiping my defiled face with a hand, I blinked my eyes open."
-            show damion arrogant bangok
+            m "Wiping my dripping face with a hand, I blinked my eyes open."
+            show damion arrogant bangok ws
             hide black
             with dissolve
             Dm "Well, at least you make a good urinal."
@@ -186,12 +186,12 @@ label bangok_four_xdamion_ws_fuck:
             $ renpy.pause (0.5)
             menu:
                 "[[Suck.]":
-                    jump todo_out_of_content_bangok_four_xdamion
+                    pass
                 "No. I'm done.":
                     $ renpy.pause (0.5)
-                    Dm face "The ambassador gets a little piss in their eye, and that's the end of things?"
-                    Dm arrogant "Fuck you too. You're the one who wanted this."
-                    Dm normal "But fine. If my piss is all you're good for, then I don't have anything more for you."
+                    Dm face bangok ws "The ambassador gets a little piss in their eye, and that's the end of things?"
+                    Dm arrogant bangok ws "Fuck you too. You're the one who wanted this."
+                    Dm normal bangok ws "But fine. If my piss is all you're good for, then I don't have anything more for you."
                     hide damion with dissolve
                     play sound ["fx/door/lock.ogg","fx/door/hallwaydoor.ogg"]
                     $ renpy.pause(0.5)
@@ -209,6 +209,41 @@ label bangok_four_xdamion_ws_fuck:
                     $ renpy.pause (0.5)
                     show town1 with dissolvemed
                     jump chapter2sections
+
+            $ renpy.pause (0.5)
+            show black with dissolve
+            $ renpy.pause (0.5)
+            m "After a few moments to catch my breath, I took his slick tip back into my mouth."
+            m "As I began to explore with my tongue, I realized with some amount of surprise it almost felt like his tip was exploring back, his cockflesh malleable and motile, not hard like anything I'd experienced before."
+            m "I suckled at his waste-coated teat for a few moments, until I felt a different taste on my tongue -- sweet drops of pre."
+            $ renpy.pause (0.8)
+            m "Impatiently, Damion took a hold on my head, pushing a little more of himself into my mouth."
+            Dm normal bangok ws "Come on. Can't you do more than that?"
+            $ renpy.pause (1.0)
+            menu:
+                "Try to take him deeper.":
+                    m "I leaned forward a little into his pulling, accepting just a tiny bit more until his tip was at the back of my throat."
+                    m "Having given him an inch, Damion took a mile."
+                    Dm normal bangok ws "You want me in your throat again? Hold your breath, cocksucker."
+                    m "Getting a better grip on my head, he lined himself up again, before thrusting into my vulnerable windpipe."
+                    play sound "fx/bangok_poundofsalt.ogg"
+                    if persistent.bangok_inflation == True:
+                        m "I gagged, stomach full of his piss roiling as he took the pleasure he wanted from my throat."
+                    else:
+                        m "I gagged, airways blocked as he took the pleasure he wanted from my throat."
+                    m "I could barely see him throwing his head back in ecstacy, as he pulled my face into his slit."
+                    Dm face bangok ws "Fuuuck, human. It's like you were built to take my cock."
+                    Dm arrogant bangok ws "Wouldn't it just be perfect if all this hubub, it was dragons who built humans to be their fucktoys?"
+                    Dm "You sure are a prime example."
+                    m "Finally letting me back off a bit, he waited, almost impatiently, as I caught my breath."
+                    m "Then he pulled me back up his length, into his piss-stained groin."
+                    Dm normal bangok ws "Fucking perfect."
+                    Dm face bangok ws "Almost might--"
+                    play sound "fx/snarl.ogg"
+                    jump todo_out_of_content_bangok_four_xdamion
+
+                "Use hands.":
+                    jump todo_out_of_content_bangok_four_xdamion
 
 
             jump todo_out_of_content_bangok_four_xdamion
@@ -283,6 +318,35 @@ label bangok_four_xdamion_ws_fuck:
                 Dm "You'd better still have room for my cum."
             else:
                 Dm arrogant bangok ws "Squeeze tighter, urinal. Take my cum and keep it all inside."
+
+            show damion normal bangok ws:
+                zoom 2.4 ypos 1.7
+                ease 0.5 zoom 2.3 ypos 1.75
+                ease 0.15 zoom 2.4 ypos 1.7
+                repeat
+            with None
+            play sound "fx/bangok_poundofsalt.ogg"
+
+            m "He barely gave me a few moments before beginning to thrust, stretching my outer folds again and again around his thick base, before sliding out to leave me feeling almost empty and thrusting in again."
+            if persistent.bangok_inflation == True and persistent.bangok_cervpen == True:
+                m "There was nothing I could do to contain my wombful of his piss as, every time he pulled back, he left my innermost gate breached, allowing a small torrent of his golden gift to pour out into my quickly-soaked passage."
+            elif persistent.bangok_inflation == True:
+                m "There was nothing I could do to contain my wombful of his piss as, every time he pulled back, a small stream of his golden gift to leaked out of my bloated deepest center into my quickly-soaked passage."
+            elif persistent.bangok_cervpen == True:
+                m "There was nothing I could do to contain the pool of piss in my womb as, every time he pulled back, he left my innermost gate breached, allowing a small torrent of his golden gift to leak out into my quickly-soaked passage."
+            else:
+                m "No matter how I tried to squeeze, the steep taper of his member left me grasping at nothing, unable to hold back the warm pool of piss in my canal he thrust into over and over again."
+            m "His deep thrusts spattered the dirty fluid over our thighs, eliciting a grunt of disapproval from him."
+            Dm face bangok ws "I told you to fucking keep this in. Leak it all over my lab and you are going to have a problem."
+            show damion normal bangok ws with dissolve
+            show damion normal bangok ws:
+                ease 0.5 zoom 2.35 ypos 1.72
+                ease 0.15 zoom 2.4 ypos 1.7
+                repeat
+            with None
+            m "I squeezed tighter with my weak legs, pulling him closer to try to reduce the pitch of his thrusts, to keep my outer folds stretched and sealed to him, as well as to pull myself closer to my own peak."
+            Dm "Not long, slut. I'll... give you what you want."
+
 
             jump todo_out_of_content_bangok_four_xdamion
         "Refuse.":
