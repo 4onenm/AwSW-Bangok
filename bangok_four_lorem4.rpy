@@ -285,7 +285,7 @@ label bangok_four_lorem4_maleplayer_handjobstart:
             m "After a few more moments, Lorem braced their other hand on my hips, then hopped forward to stand upright on my legs, revealing the full extent of the shaft now emerging from their cloaca."
         else:
             m "After a few more moments, Lorem braced their other hand on my hips, then hopped forward to stand upright on my legs, revealing the full extent of the shaft now emerging from their slit."
-        jump bangok_four_lorem4_maleplayer_ride_penischoice
+        jump bangok_four_lorem4_maleplayer_ride
     else: # "carry"
         $ renpy.pause(0.5)
         jump bangok_four_lorem4_maleplayer_carry
@@ -299,12 +299,12 @@ label bangok_four_lorem4_maleplayer_blowjobstart:
     with ease
     m "Lorem leaned forward off the table, grabbing my hips."
     if bangok_four_lorem4_store.protection == True:
-        m "He took my wrapped tip between their finely pebbled lips with what seemed like practiced ease, before their tongue snaked out to dig and explore."
+        m "They took my wrapped tip between their finely pebbled lips with what seemed like practiced ease, before their tongue snaked out to dig and explore."
     else:
-        m "He took my tip between their finely pebbled lips with what seemed like practiced ease, before their tongue snaked out to dig and explore."
+        m "They took my tip between their finely pebbled lips with what seemed like practiced ease, before their tongue snaked out to dig and explore."
     show lorem happy with dissolve
 
-    m "It was all I could do not to thrust my hips forward. Lorem seemed to have planned for this, as his hands on either side of his head kept him easily at the same depth, licking and nibbling."
+    m "It was all I could do not to thrust my hips forward. Lorem seemed to have planned for this, as their hands on either side of their head kept him easily at the same depth, licking and nibbling."
 
     menu:
         "{i}D-Deeper...{/i}":
@@ -390,7 +390,7 @@ label bangok_four_lorem4_maleplayer_blowjobstart:
                             ypos (1080+516)
                             ease 0.5 zoom 1.2
                         with ease
-                        m "Then he pushed himself back, as I gently released his horns."
+                        m "Then they pushed themselves back, as I gently released their horns."
                         $ renpy.pause (0.5)
                         Lo "More filling than Pantolli's."
                         if bangok_four_lorem4_store.protection == True:
@@ -421,7 +421,7 @@ label bangok_four_lorem4_maleplayer_blowjobstart:
             m "Lorem hopped forward to stand upright on my legs, revealing the full extent of the shaft now emerging from their cloaca."
         else:
             m "Lorem hopped forward to stand upright on my legs, revealing the full extent of the shaft now emerging from their slit."
-        jump bangok_four_lorem4_maleplayer_ride_penischoice
+        jump bangok_four_lorem4_maleplayer_ride
     else:
         $ renpy.pause(0.5)
         jump bangok_four_lorem4_maleplayer_carry
@@ -429,7 +429,7 @@ label bangok_four_lorem4_maleplayer_blowjobstart:
     jump todo_out_of_content_bangok_four_lorem4
 
 
-label bangok_four_lorem4_maleplayer_ride_penischoice:
+label bangok_four_lorem4_maleplayer_ride:
     Lo happy bangok erect "Ready?"
     menu:
         "[[Stroke their shaft.]":
@@ -478,9 +478,9 @@ label bangok_four_lorem4_maleplayer_ride_penischoice:
                     $ renpy.pause (0.5)
                     Lo sad bangok peek "..."
                     $ renpy.pause (0.5)
-                    Lo sad "I'm sorry, [player_name]. I can't do this."
+                    Lo sad bangok peek "I'm sorry, [player_name]. I can't do this."
                     Lo "There's no way to hide it away completely."
-                    Lo relieved "Unless I'm not actually enjoying it, I'll get off too."
+                    Lo relieved bangok peek "Unless I'm not actually enjoying it, I'll get off too."
                     Lo sad "If what my male parts put out when I cum is going to upset you, then I should just go."
                     c "Lorem..."
                     jump bangok_four_lorem4_canon_callmelater
@@ -494,8 +494,146 @@ label bangok_four_lorem4_maleplayer_ride_penischoice:
                 show lorem normal bangok peek with dissolve
                 Lo "There."
 
-label bangok_four_lorem4_maleplayer_ride:
+    if bangok_four_lorem4_store.lorem_pen == "stroke":
+        show lorem shy bangok erect with dissolve
+        $ renpy.pause(0.3)
+        show lorem:
+            ypos 1.2
+        with ease
+        $ renpy.pause(0.3)
+        m "Their legs shaking a little under my ministrations, Lorem got on their knees atop my legs, lining themselves up with my tip."
+    else:
+        if bangok_four_lorem4_store.lorem_pen == "hidden":
+            show lorem shy bangok peek with dissolve
+        else:
+            show lorem shy bangok erect with dissolve
+        $ renpy.pause(0.3)
+        show lorem:
+            ypos 1.2
+        with ease
+        $ renpy.pause(0.3)
+        m "Lorem got down on their knees atop my legs, lining themselves up with my tip."
+
+    if bangok_four_lorem4_store.protection == True:
+        m "Through the condom, I could feel my tip sliding against Lorem's moist tip as their breathing came faster."
+    else:
+        m "Lorem's slit was moist and slick, my tip sliding about a little against the outer opening as their breathing came faster."
+    c "It's okay."
+    Lo "I-I know. I'm just nervous."
+
+    $ renpy.pause(0.8)
+    if bangok_four_lorem4_store.lorem_pen is None or bangok_four_lorem4_store.lorem_pen == "stroke":
+        show lorem:
+            ease 1.5 ypos 1.4
+        with None
+        $ renpy.pause(0.5)
+        m "After a few long moments they began to sink down onto me, spreading their tight slit taut around my hard length."
+    else:
+        show lorem:
+            ease 1.0 ypos 1.25
+        with None
+        $ renpy.pause(0.5)
+        m "After a few long moments they began to sink down onto me, pressing their impossibly tight slit taught against my tip."
+        show lorem scared with dissolve
+        m "The protruding tip of their dragonhood pressed against my head, blocking my entry as the rest of their snatch failed to stretch to accomodate."
+        Lo "Nngh! T-Too big!"
+        show lorem relieved bangok peek with dissolve
+        $ renpy.pause(0.3)
+        show lorem:
+            ypos 1.2
+        with ease
+        m "Unwilling to risk injuring them, I grabbed Lorem's hips and helped them lift off of me."
+        c "Are you okay?"
+        Lo "Yeah. I just... can't fit you and my male parts at the same time."
+        Lo sad bangok peek "I did warn you I don't have much room."
+        c "That's fine. I was curious, now I know that doesn't work for you. Go ahead and let it back out."
+        $ renpy.pause(0.3)
+        show lorem think bangok peek with dissolve
+        $ renpy.pause(0.3)
+        show lorem think bangok erect with dissolve
+        $ renpy.pause(0.3)
+        c "Do you want to keep going?"
+        Lo normal bangok erect "Yeah."
+        show lorem:
+            ease 1.5 ypos 1.4
+        with None
+        $ renpy.pause(0.5)
+        m "Readjusting the position of their knees to line back up, they began to sink down onto me, spreading their tight entrance all-but taut around my hard length."
+    show lorem blush:
+        ypos 1.4
+    with dissolve
+    Lo "Mmh. Ohhh..."
+
+    if bangok_four_lorem4_store.protection == True:
+        m "They twisted a little as they sank down, inner walls massaging the upper half of my length and spreading their lubrication thoroughly over the condom's surface."
+    else:
+        m "They twisted a little as they sank down, inner walls massaging the upper half of my length and spreading their lubrication thoroughly across my cockflesh."
+
+    menu:
+        "How does it feel?":
+            $ renpy.pause (0.5)
+            if bangok_four_xipsum.loremin == True:
+                Lo normal blush "You're bigger than Ipsum."
+                c "In a good way, or...?"
+                Lo blush "Yes. A very good way."
+            Lo think blush "I'm honestly not sure I'll be able to fit all of you."
+            if bangok_four_lorem4_store.lorem_pen == "stroke":
+                Lo normal blush "Don't stop what you're doing with my male parts, though."
+        "[[Give a small thrust.]":
+            $ renpy.pause (0.5)
+            show lorem scared:
+                ease 0.3 ypos 1.41
+                ease 0.5 ypos 1.3
+            with None
+            $ renpy.pause (1.0)
+            show lorem scared:
+                ypos 1.3
+            with ease
+            m "When I thrust, even with the slight amount of force, Lorem's legs gave a little and I sank in deeper, bumping up against something within them."
+            Lo "C-Careful!"
+            Lo relieved "I'm only so deep."
+            Lo sad "Let me figure it out? Please?"
+            c "Sorry."
+            $ renpy.pause (0.5)
+            show lorem blush with dissolve
+            show lorem:
+                ease 1.0 ypos 1.4
+            with None
+            $ renpy.pause (0.5)
+            if bangok_four_lorem4_store.lorem_pen == "stroke":
+                m "After a few moments, as I resumed stroking Lorem's shaft, they blushed, and I felt them clench lightly around me, mistake forgiven."
+            else:
+                m "After a few moments, Lorem sank slowly back to their previous depth, and I felt them clench lightly around me, mistake forgiven."
+            show lorem:
+                ypos 1.4
+            with ease
+        "[[Stroke their shaft.]" if bangok_four_lorem4_store.lorem_pen != "stroke":
+            $ renpy.pause (0.5)
+            show lorem blush with dissolve
+            m ""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     jump todo_out_of_content_bangok_four_lorem4
+
 
 label bangok_four_lorem4_maleplayer_carry:
     show lorem shy bangok erect with dissolve
@@ -503,10 +641,10 @@ label bangok_four_lorem4_maleplayer_carry:
         ypos 1.0
         ease 0.5 zoom 1.6
     with ease
-    m "Leaning down, I scooped up Lorem under his arms, hoisting him up to my height."
-    m "Between us, his dragonhood poked at my stomach, hard and wet. Mine rubbed one of his thighs."
+    m "Leaning down, I scooped up Lorem under their arms, hoisting him up to my height."
+    m "Between us, their dragonhood poked at my stomach, hard and wet. Mine rubbed one of their thighs."
     c "Ready?"
-    m "Lorem got his arms up, gripping my shoulders."
+    m "Lorem got their arms up, gripping my shoulders."
     Lo normal bangok erect "Yeah."
     jump todo_out_of_content_bangok_four_lorem4
 
