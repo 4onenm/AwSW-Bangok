@@ -119,9 +119,9 @@ label bangok_four_annaxdamion:
 
             show bangok_four_labdoor dk with dissolve
             show bangok_four_labdoor dk:
-                ease 2.0 zoom 10.0 pos (-9000, -6800)
+                ease 2.0 zoom 10.0 pos (-9000, -6900)
                 zoom 10.0
-                pos (-9000, -6800)
+                pos (-8800, -6900)
             show bangok_four_annaxdamion:
                 ease 2.1 zoom 1.2 pos (200, 0)
                 pause 0.3
@@ -182,7 +182,7 @@ label bangok_four_annaxdamion:
         with dissolve
         m "I ducked down, trying to avoid being spotted, but it sounded like the damage had already been done."
         Dm face "I'll go look."
-        show cgdamion at Pan((0, 340), (0, 302), 5.0) behind bangok_four_labdoor with dissolvemed
+        show cgdamion at Pan((0, 100), (0, 150), 5.0) behind bangok_four_labdoor with dissolvemed
         m "Our eyes met through the window. There was no way he didn't see me."
         Dm arrogant "You left the fucking door partway open. Other than that? Nothing."
         play sound "fx/door/doorclose.ogg"
@@ -296,6 +296,7 @@ label bangok_four_annaxdamion_talk_damion_caught:
             Dm face "Ha{w=0.4} ha.{w=0.4} Very funny."
             jump bangok_four_annaxdamion_to_xdamion
         "I... I guess?":
+            $ renpy.pause (0.5)
             label bangok_four_annaxdamion_to_xdamion:
             Dm arrogant "I was joking. Unless you're actually serious."
             menu:
