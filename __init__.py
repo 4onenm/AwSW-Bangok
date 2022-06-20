@@ -195,6 +195,8 @@ def bryce3_afterparty():
         .hook_to('bangok_four_bryce3_intro', condition=make_dev('persistent.nsfwtoggle == True'))
         .search_say("I suppose I should be heading off as well.")
         .link_from('bangok_four_bryce3_playershouldleave')
+        .search_say("Damn, now everyone left without cleaning up. At least you're still here to help me.")
+        .link_from('bangok_four_bryce3_canon_trash')
         .search_say("Hey, do you want to know where I got these scars? I bet you're curious.")
         .link_from('bangok_four_bryce3_wannaknowscars')
         .search_python('renpy.pause (1.5)')
@@ -204,7 +206,7 @@ def bryce3_afterparty():
         .search_say("Having been saved by police sure did a lot to make me want to follow the same path. Turns out, I was good enough to even become chief.")
         .hook_to('bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_knotted_epilogue', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.knotted == True)'))
         .search_say("Guess that's all of the trash. Thanks for the help.")
-        .hook_to('bangok_four_bryce3_mcbottom_train_epilogue', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
+        .hook_to('bangok_four_bryce3_mcbottom_train_epilogue', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True and bangok_four_bryce3_store.mavbackout == False)'))
     )
 
     clothes_fix = ( ml.find_label('bryce3skip')
