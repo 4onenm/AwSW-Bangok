@@ -6,6 +6,74 @@ init python:
     bangok_four_hornincident = False
 
 
+init python in bangok_four_xdamion_store:
+    import pygame
+    import math
+
+    # Initial parallax code thanks to Aquapaulo
+    #  https://github.com/aquapaulo/renpy-main-menu-parallax/blob/main/CODE.md
+    class TrackCursor(renpy.Displayable):
+        def __init__(self, child, posxmin=0, posxmax=100, posymin=0, posymax=100):
+            super(TrackCursor, self).__init__(style='transform')
+
+            self.child = renpy.displayable(child)
+
+            self.mouse_x = None
+            self.mouse_y = None
+
+            self.actual_x = 0
+            self.actual_y = 0
+
+            self.posxmin, self.posxmax = posxmin, posxmax
+            self.posymin, self.posymax = posymin, posymax
+
+            self.last_at = 0
+
+        def render(self, width, height, st, at):
+
+            speed = 1.5
+
+
+            if self.mouse_x is not None:
+                at_change = at - self.last_at
+
+                range_x = self.posxmax - self.posxmin
+                range_y = self.posymax - self.posymin
+
+                x = (self.mouse_x/renpy.config.screen_width)*range_x
+                y = (self.mouse_y/renpy.config.screen_height)*range_y
+
+                self.last_at = at
+                self.actual_x = math.floor(self.actual_x + ((x - self.actual_x) * speed * (at_change)))
+                self.actual_y = math.floor(self.actual_y + ((y - self.actual_y) * speed * (at_change)))
+
+                self.actual_x = max(0,min(range_x, x))
+                self.actual_y = max(0,min(range_y, y))
+            else:
+                x,y = self.actual_x, self.actual_y
+
+            self.last_at = at
+
+            cr = renpy.render(self.child, width, height, st, at)
+            rv = renpy.Render(width, height)
+            rv.blit(cr, (self.actual_x+self.posxmin, self.actual_y+self.posymin))
+
+            if x != self.actual_x:
+                renpy.redraw(self, 0)
+            return rv
+
+        def event(self, ev, x, y, st):
+            super(TrackCursor, self).event(ev, x, y, st)
+
+            if ev.type == pygame.MOUSEMOTION:
+                if (x != self.mouse_x) or (y != self.mouse_y):
+                    self.mouse_x, self.mouse_y = x, y
+                    renpy.redraw(self, 0)
+
+        def visit(self):
+            return [ self.child ]
+
+
 init:
     define bangok_four_bangnokay = False
 
@@ -16,6 +84,7 @@ init:
         ("Knotting", "bangok_knot"),
         ("Cloacas", "bangok_cloacas"),
         ("Cervical Penetration","bangok_cervpen"),
+        ("Voyeurism", "bangok_voyeurism"),
     ]
     define bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
 
@@ -108,9 +177,57 @@ init:
     image bangok_four_library night = im.Recolor("bg/in/bangok_library_night.png", 70, 70, 100, 255)
     image bangok_four_library outside night = im.Recolor("bg/out/town/town5.jpg", 60, 70, 100, 255)
 
+    image bangok_four_labdoor = "bg/in/bangok/labdoor.png"
+    image bangok_four_labdoor dk = im.Recolor("bg/in/bangok/labdoor.png", 60, 70, 100, 255)
+    image bangok_four_labdoor dk track = bangok_four_xdamion_store.TrackCursor(
+        im.Recolor("bg/in/bangok/labdoor.png", 60, 70, 100, 255),
+        posxmin=-320, posxmax=160,
+        posymin=-40, posymax=40)
+
 
     # CGs
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
+
+    image bangok_four_annaxdamion cloacal = "cg/bangok/annaxdamion_lab/base.png"
+    image bangok_four_annaxdamion cloacal bulge = im.Composite(
+        (1280,988),
+        (0,0), "cg/bangok/annaxdamion_lab/base.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_bulge.png",
+    )
+    image bangok_four_annaxdamion cloacal bulge cum = im.Composite(
+        (1280,988), 
+        (0,0), "cg/bangok/annaxdamion_lab/base.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_bulge.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_cum.png",
+    )
+    image bangok_four_annaxdamion cloacal cum = im.Composite(
+        (1280,988), 
+        (0,0), "cg/bangok/annaxdamion_lab/base.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_cum.png",
+    )
+    image bangok_four_annaxdamion vaginal = im.Composite(
+        (1280,988),
+        (0,0), "cg/bangok/annaxdamion_lab/base.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/vaginal.png",
+    )
+    image bangok_four_annaxdamion vaginal cum = im.Composite(
+        (1280,988),
+        (0,0), "cg/bangok/annaxdamion_lab/base.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/vaginal.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_cum.png",
+    )
+    image bangok_four_annaxdamion vaginal bulge = im.Composite(
+        (1280,988),
+        (0,0), "cg/bangok/annaxdamion_lab/base.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_bulge.png",
+    )
+    image bangok_four_annaxdamion vaginal bulge cum = im.Composite(
+        (1280,988),
+        (0,0), "cg/bangok/annaxdamion_lab/base.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_bulge.png",
+        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_cum.png",
+    )
+
 
     # People
     image anna bangok blush = "cr/anna_blush.png"

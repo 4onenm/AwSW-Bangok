@@ -140,7 +140,14 @@ def anna4():
         .search_menu("If you say so.").branch() \
         .search_say("Alright, alright. So fussy.") \
         .hook_to("bangok_anon_anna4_skipmenu", condition="persistent.nsfwtoggle == True")
-    
+
+def anna_x_damion():
+    ( ml.find_label('chap2facility')
+        .search_say("(Reza was allegedly here at some point. Maybe I should ask Anna.)")
+        .hook_to('bangok_four_annaxdamion', condition=make_dev("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
+        .search_say("What exactly did you want, again?")
+        .link_behind_from('bangok_four_annaxdamion_canon_questions')
+    )
 
 def bryce1_afterparty():
     ml.find_label('_call_skiptut_8') \
@@ -332,6 +339,7 @@ def modsettings_firstboot():
 def link_scenes():
     anna12()
     anna4()
+    anna_x_damion()
     bryce1_afterparty()
     bryce3_afterparty()
     lorem4()
