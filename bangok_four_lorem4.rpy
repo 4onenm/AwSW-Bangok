@@ -289,7 +289,7 @@ label bangok_four_lorem4_maleplayer_handjobstart:
     else: # "carry"
         $ renpy.pause(0.5)
         jump bangok_four_lorem4_maleplayer_carry
-    jump todo_out_of_content_bangok_four_lorem4
+
 
 label bangok_four_lorem4_maleplayer_blowjobstart:
     Lo shy bangok peek "I wasn't sure if you wanted that while soft-ish like this, but sure."
@@ -425,8 +425,6 @@ label bangok_four_lorem4_maleplayer_blowjobstart:
     else:
         $ renpy.pause(0.5)
         jump bangok_four_lorem4_maleplayer_carry
-
-    jump todo_out_of_content_bangok_four_lorem4
 
 
 label bangok_four_lorem4_maleplayer_ride:
@@ -611,24 +609,6 @@ label bangok_four_lorem4_maleplayer_ride:
             $ renpy.pause (0.5)
             show lorem blush with dissolve
             m ""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
