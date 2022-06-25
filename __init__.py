@@ -252,6 +252,13 @@ def xdamion():
         .hook_to('bangok_four_xdamion', condition=make_dev('(persistent.nsfwtoggle==True)'))
         .search_say("What exactly did you want, again?")
         .link_from('bangok_four_xdamion_canon_whatdidyouwant')
+        # ml.find_label('chap2facques') # We're literally right here.
+        .search_menu("That's all.")
+        .add_choice("[[Attempt to stand.]", jump='bangok_four_xdamion_questions_getup', condition=make_dev('(persistent.nsfwtoggle==True) and (bangok_four_xdamion_store.position) and (bangok_four_xdamion_store.standing_unattempted == True)'), before="That's all.")
+        .branch("That's all.").search_say("Thanks for your help.")
+        .hook_to('bangok_four_xdamion_cleanup', condition=make_dev('(persistent.nsfwtoggle==True) and (bangok_four_xdamion_store.position)'))
+        .search_hide('damion').search_with()
+        .link_behind_from('bangok_four_xdamion_canon_interrogation_over')
     )
 
 
