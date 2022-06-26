@@ -337,9 +337,26 @@ label bangok_four_lorem4_maleplayer_blowjobstart:
             Lo "It's definitely... a... different experience."
             Lo normal blush "Can you hold it until you're, ah, between my legs?"
             menu:
-                "You want it in your vagina? Sure, I can hold it.":
-                    $ bangok_four_lorem4_store.player_pissed = "vag"
-                    Lo normal "Thanks."
+                "You want it in there? Sure, I can hold it.":
+                    $ renpy.pause (0.5)
+                    if bangok_four_lorem4_store.protection == True:
+                        Lo think "..."
+                        c "Something wrong?"
+                        Lo relieved "Now that I think about it, your warning about bacteria, and the possibility of a condom-ful of it down there? I just don't think it's a good idea."
+                        c "So that's a no on this?"
+                        Lo "Yeah."
+
+                        show black with dissolve
+                        play sound "fx/door/doorclose3.wav"
+                        m "Jumping up, I scrambled into the restroom and poured my bladder into the toilet, replacing my condom after I was done."
+                        $ renpy.pause(1.0)
+                        $ bangok_four_lorem4_store.player_pissed = "toilet"
+                        hide black
+                        with dissolvemed
+                        c "... so, where were we?"
+                    else:
+                        $ bangok_four_lorem4_store.player_pissed = "vag"
+                        Lo normal "Thanks."
                 "I gotta go now. Please may I use your mouth?":
                     if bangok_four_lorem4_store.protection == True:
                         Lo relieved "I don't want a condom full of piss blocking my throat."
@@ -513,7 +530,7 @@ label bangok_four_lorem4_maleplayer_ride:
         m "Lorem got down on their knees atop my legs, lining themselves up with my tip."
 
     if bangok_four_lorem4_store.protection == True:
-        m "Through the condom, I could feel my tip sliding against Lorem's moist tip as their breathing came faster."
+        m "Through the condom, I could feel my tip sliding against Lorem's moist slit as their breathing came faster."
     else:
         m "Lorem's slit was moist and slick, my tip sliding about a little against the outer opening as their breathing came faster."
     c "It's okay."
@@ -522,7 +539,7 @@ label bangok_four_lorem4_maleplayer_ride:
     $ renpy.pause(0.8)
     if bangok_four_lorem4_store.lorem_pen is None or bangok_four_lorem4_store.lorem_pen == "stroke":
         show lorem:
-            ease 1.5 ypos 1.4
+            ease 1.5 ypos 1.3
         with None
         $ renpy.pause(0.5)
         m "After a few long moments they began to sink down onto me, spreading their tight slit taut around my hard length."
@@ -553,12 +570,12 @@ label bangok_four_lorem4_maleplayer_ride:
         c "Do you want to keep going?"
         Lo normal bangok erect "Yeah."
         show lorem:
-            ease 1.5 ypos 1.4
+            ease 1.5 ypos 1.3
         with None
         $ renpy.pause(0.5)
         m "Readjusting the position of their knees to line back up, they began to sink down onto me, spreading their tight entrance all-but taut around my hard length."
     show lorem blush:
-        ypos 1.4
+        ypos 1.3
     with dissolve
     Lo "Mmh. Ohhh..."
 
@@ -580,8 +597,8 @@ label bangok_four_lorem4_maleplayer_ride:
         "[[Give a small thrust.]":
             $ renpy.pause (0.5)
             show lorem scared:
-                ease 0.3 ypos 1.41
-                ease 0.5 ypos 1.3
+                ease 0.3 ypos 1.31
+                ease 0.5 ypos 1.25
             with None
             $ renpy.pause (1.0)
             show lorem scared:
@@ -595,7 +612,7 @@ label bangok_four_lorem4_maleplayer_ride:
             $ renpy.pause (0.5)
             show lorem blush with dissolve
             show lorem:
-                ease 1.0 ypos 1.4
+                ease 1.0 ypos 1.3
             with None
             $ renpy.pause (0.5)
             if bangok_four_lorem4_store.lorem_pen == "stroke":
@@ -603,13 +620,88 @@ label bangok_four_lorem4_maleplayer_ride:
             else:
                 m "After a few moments, Lorem sank slowly back to their previous depth, and I felt them clench lightly around me, mistake forgiven."
             show lorem:
-                ypos 1.4
+                ypos 1.3
             with ease
         "[[Stroke their shaft.]" if bangok_four_lorem4_store.lorem_pen != "stroke":
             $ renpy.pause (0.5)
             show lorem blush with dissolve
-            m ""
+            $ bangok_four_lorem4_store.lorem_pen = "stroke"
+            m "Reaching forward, I gently took Lorem's shaft into my hand."
+            Lo shy bangok erect "O-Oh!"
+            Lo blush "K-Keep doing that."
+        "{i}A-Ah{/i}! I forgot I have to piss!" if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed is None and bangok_four_lorem4_store.protection == False:
+            $ bangok_four_lorem4_store.player_pissed = "vag"
+            Lo blush "Oh, you mean..."
+            Lo think blush "Well, Ipsum \"forgets\" sometimes too."
+            Lo "It's definitely... a... different experience."
+            Lo blush "Just give me a little longer, first? To get used to you?"
+            c "O-Okay..."
 
+
+
+    $ renpy.pause(0.3)
+    show lorem blush:
+        ypos 1.3
+        ease 0.8 ypos 1.3
+        pause 0.1
+        ease 0.4 ypos 1.325
+        pause 0.2
+        repeat
+    with None
+    $ renpy.pause(1.0)
+    m "They squeezed their legs together, pushing themselves a little up the upper half of my shaft before letting themselves slide back down."
+
+    Lo "Y-Yeah.{w} Ohh.{w} This is...{w}"
+    Lo normal blush "[player_name] I...{w} Thank you.{w}"
+
+    $ renpy.pause(1.0)
+    c "Same to you."
+    c "We wouldn't be here, experiencing this together if you hadn't been brave enough to open up."
+    Lo blush "Mmh.{w} Yeah.{w}"
+
+    $ renpy.pause(1.0)
+
+    if persistent.bangok_cervpen == True:
+        menu:
+            "Can you take me deeper?":
+                $ renpy.pause(0.5)
+                Lo relieved "Not while keeping use of my legs."
+                Lo blush "That kind of thing is too much for me."
+                c "Okay."
+                $ renpy.pause (1.0)
+            "[[Enjoy.]":
+                $ renpy.pause (1.0)
+
+    if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
+        c "I-I've still gotta go."
+        show lorem blush:
+            ypos 1.3
+        with ease
+
+        m "Lorem came to a stop, steadying themself with hands on my chest."
+        Lo "Okay. Start slow, though. I'm sensitive down there."
+
+        $ renpy.pause(0.5)
+        play soundloop "fx/faucet1.ogg" fadein 1.0
+        queue soundloop "fx/faucet2.ogg"
+        show lorem relieved shy with dissolve
+        m "Gently taking hold of their hips, I let my bladder go, leaking warm, golden liquid into Lorem's tight passage."
+        Lo "OH! H-ha.{w} S-So warm."
+        m "I gradually let my stream come out faster, as I felt my piss pooling around my tip."
+        show lorem normal blush eyes with dissolve
+        m "Lorem raised a hand to their lower stomach."
+        Lo normal blush eyes "S-So much..."
+        if persistent.bangok_inflation == True:
+            show lorem normal blush eyes brows with dissolve
+            stop soundloop fadeout 1.0
+            m "As my stream petered out, Lorem's belly expanded slightly under their hand."
+            Lo "I-It's stretching my womb."
+        else:
+            m "As my stream petered out, Lorem's breathing hitched."
+            Lo blush "Th-That felt amazing."
+        Lo blush "And you haven't even cum yet."
+        c "Ready for more?"
+        Lo normal blush "So ready."
 
 
     jump todo_out_of_content_bangok_four_lorem4
