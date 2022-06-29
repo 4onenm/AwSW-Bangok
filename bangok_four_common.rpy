@@ -280,7 +280,16 @@ init:
         (0,0),"cr/bangok/damion_pen_ws.png"
     )
     image damion arrogant bangok ws flip = im.Flip(renpy.display.image.ImageReference('damion arrogant bangok ws'),horizontal=True)
-    
+
+    image lorem happy bangok shy = "cr/bangok/lorem_happy+blush.png"
+    image lorem happy bangok shy flip = im.Flip("cr/bangok/lorem_happy+blush.png", horizontal=True)
+    image lorem happy bangok shy2 = "cr/bangok/lorem_happy2+blush.png"
+    image lorem happy bangok shy2 flip = im.Flip("cr/bangok/lorem_happy2+blush.png", horizontal=True)
+    image lorem bangok aheago1 = "cr/bangok/lorem_aheago1.png"
+    image lorem bangok aheago1 flip = im.Flip("cr/bangok/lorem_aheago1.png", horizontal=True)
+    image lorem bangok aheago2 = "cr/bangok/lorem_aheago2.png"
+    image lorem bangok aheago1 flip = im.Flip("cr/bangok/lorem_aheago2.png", horizontal=True)
+
 
     image lorem normal bangok erect = im.Composite(
         (1240,650),
@@ -318,6 +327,140 @@ init:
         (0,0),"cr/bangok/lorem_penis.png"
     )
     image lorem think bangok erect flip = im.Flip(renpy.display.image.ImageReference('lorem think bangok erect'),horizontal=True)
+
+    image lorem normal bangok cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_normal.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem normal bangok cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem normal bangok cumleak'),horizontal=True)
+    image lorem happy bangok cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_happy.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem happy bangok cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem happy bangok cumleak'),horizontal=True)
+    image lorem sad bangok cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_sad.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem sad bangok cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem sad bangok cumleak'),horizontal=True)
+    image lorem shy bangok cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_shy.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem shy bangok cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem shy bangok cumleak'),horizontal=True)
+    image lorem think bangok cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_think.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem think bangok cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem think bangok cumleak'),horizontal=True)
+
+    image lorem normal bangok pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_normal.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem normal bangok pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem normal bangok pissleak'),horizontal=True)
+    image lorem happy bangok pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_happy.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem happy bangok pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem happy bangok pissleak'),horizontal=True)
+    image lorem sad bangok pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_sad.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem sad bangok pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem sad bangok pissleak'),horizontal=True)
+    image lorem shy bangok pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_shy.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem shy bangok pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem shy bangok pissleak'),horizontal=True)
+    image lorem think bangok pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_think.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem think bangok pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem think bangok pissleak'),horizontal=True)
+
+    image lorem normal bangok bulge cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_normal.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem normal bangok bulge cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem normal bangok bulge cumleak'),horizontal=True)
+    image lorem happy bangok bulge cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_happy.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem happy bangok bulge cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem happy bangok bulge cumleak'),horizontal=True)
+    image lorem sad bangok bulge cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_sad.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem sad bangok bulge cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem sad bangok bulge cumleak'),horizontal=True)
+    image lorem shy bangok bulge cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_shy.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem shy bangok bulge cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem shy bangok bulge cumleak'),horizontal=True)
+    image lorem think bangok bulge cumleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_think.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_cumleak.png"
+    )
+    image lorem think bangok bulge cumleak flip = im.Flip(renpy.display.image.ImageReference('lorem think bangok bulge cumleak'),horizontal=True)
+
+    image lorem normal bangok bulge pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_normal.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem normal bangok bulge pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem normal bangok bulge pissleak'),horizontal=True)
+    image lorem happy bangok bulge pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_happy.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem happy bangok bulge pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem happy bangok bulge pissleak'),horizontal=True)
+    image lorem sad bangok bulge pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_sad.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem sad bangok bulge pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem sad bangok bulge pissleak'),horizontal=True)
+    image lorem shy bangok bulge pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_shy.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem shy bangok bulge pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem shy bangok bulge pissleak'),horizontal=True)
+    image lorem think bangok bulge pissleak = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_think.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_pen_pissleak.png"
+    )
+    image lorem think bangok bulge pissleak flip = im.Flip(renpy.display.image.ImageReference('lorem think bangok bulge pissleak'),horizontal=True)
 
     image lorem normal bangok peek = im.Composite(
         (1240,650), 

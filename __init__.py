@@ -227,6 +227,8 @@ def lorem4():
     ( ml.find_label('lorem4skip')
         .search_say("You've made me feel a lot better, though.")
         .hook_to('bangok_four_lorem4_feelbetter', condition=make_dev('(persistent.nsfwtoggle==True)'))
+        .search_say("Hey, do you still want to see the fireworks show together?")
+        .link_from('bangok_four_lorem4_canon_fireworks')
     )
 
     ( ml.find_label('lorem4skip')
