@@ -3836,7 +3836,7 @@ label bangok_four_bryce3_mctop_mavgoes_climax:
     $ renpy.pause (0.5)
     Mv nice flip "Can you walk?"
     Br "Y-Yeah, just gonna need another minute."
-    if bangok_four_bryce3_store.mavfirst == True:
+    if bangok_four_bryce3_store.mavfirst == True and bangok_four_bryce3_store.mc_came == False:
         m "Bryce gave me a wink."
         Br flirty flip "[player_name], if you want your turn now?"
         show maverick normal with dissolve
@@ -3882,7 +3882,7 @@ label bangok_four_bryce3_mctop_mavgoes_aftermath:
         jump bangok_four_bryce3_canon_trash
 
     if bangok_four_bryce3_store.mc_came == True:
-        if bangok_four_bryce3_store.mavfirst == True:
+        if bangok_four_bryce3_store.mavfirst == True and bangok_four_bryce3_store.mc_masturbate == True:
             m "He looked at my fluids in the sand."
             Br smirk "Well, at least you're all finished up."
             menu:
@@ -3894,7 +3894,11 @@ label bangok_four_bryce3_mctop_mavgoes_aftermath:
                         Br smirk "I'll have to see if there are any other shows I can invite you to."
                     else:
                         Br smirk "I'm glad you found us that fun to watch."
-                    Br brow "Felt pretty damn good too. Sorry about that ending."
+                    Br brow "Felt pretty damn good too."
+        elif bangok_four_bryce3_store.mc_masturbate == False:
+            show bryce smirk with dissolve
+            m "He licked his lips."
+            Br "Well, at least you're all finished up."
 
         jump bangok_four_bryce3_canon_trash
 
@@ -3943,7 +3947,7 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
             repeat
     with ease
     m "I approached, arriving groin-to-face with a smiling Bryce, and face-to-face with a glaring Maverick."
-    show bryce pant with dissolve
+    show bryce pant flip with dissolve
     if bangok_four_playerhasdick == True:
         if bangok_four_bryce3_store.protection == True:
             m "Bryce extended his tongue, slathering a few wet licks over my condom-wrapped length."
@@ -3954,13 +3958,13 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
 
     m "With Maverick's punishing pace shaking his body, I wasn't sure I wanted to get my sensitive areas any closer to Bryce's sharp maw."
 
-    Br pantflirt "Can't help ya out if you don't get closer."
+    Br pantflirt flip "Can't help ya out if you don't get closer."
 
     $ renpy.pause (0.5)
 
     m "After a few moments' hesitation, I brought my groin within range."
 
-    show bryce pant with dissolve
+    show bryce pant flip with dissolve
 
     if bangok_four_playerhasdick == True:
         m "Bryce raised his head up from below, tongue wrapping around my balls and over the base of my shaft while the ribbed roof of his mouth ran over my length's tip."
@@ -3976,20 +3980,62 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
     m "I stumbled a half step back, but my feet to sank into the sand, leaving some of my weight on Bryce's jaw as he continued to lavish my privates with his tongue."
     m "Approving of his use at both ends, Bryce let a huffing moan slip between his teeth and my lower body."
 
-    m "As I was caught up in the sensations in my groin, I hardly noticed Maverick's continued glare."
+    # m "As I was caught up in the sensations in my groin, I hardly noticed Maverick's continued glare."
 
     c "F-Fuck, so close..."
 
-    menu:
-        "Cum.":
-            pass
-        "Grab Bryce's horns and cum.":
-            pass
-        "Ask to grab Bryce's horns.":
-            pass
+    $ bangok_four_bryce3_store.mc_came = True
+
+    # menu:
+    #     "Cum.":
+    play sound "fx/extinguish.ogg"
+    show black with dissolve
+    if bangok_four_playerhasdick == True:
+        if bangok_four_bryce3_store.protection == True:
+            m "My legs went weak, leaving more of my weight to rest on Bryce's jaw as his exploring tongue milked my twitching cock against the roof of his mouth, drawing out every drop of cum I could muster into my condom."
+        else:
+            m "My legs went weak, leaving more of my weight to rest on Bryce's jaw as his exploring tongue milked my twitching cock against the roof of his mouth, drawing out every drop of cum I could muster into his needy gullet."
+    else:
+        m "My legs went weak, leaving more of my weight to rest on Bryce's jaw as I clenched down hard on his exploring tongue, squeezing our coital juices out of my passage and into his mouth."
+    #     "Grab Bryce's horns and cum.":
+    #         jump todo_out_of_content_bangok_four_bryce3
+    #     "Ask to grab Bryce's horns.":
+    #         jump todo_out_of_content_bangok_four_bryce3
 
 
-    jump todo_out_of_content_bangok_four_bryce3
+    hide black with dissolveslow
+
+    m "As my peak came to its end, I felt Bryce's breath huffing around my groin in what felt like laughter."
+    m "Then he angled his head forward, and I stumbled back onto my ass in the sand."
+
+    Br pantflirt flip "What was that, like thirty seconds?"
+    Br pant flip "I didn't know I was that good."
+
+    if bangok_four_bryce3_store.mc_masturbate == True:
+        c "Hey, I got myself started though!"
+        Br "You sure did."
+    else:
+        c "I, uh..."
+        Br "Win some, lose some. Ah!"
+    $ bangok_four_bryce3_store.mc_masturbate = False
+
+    Br stern flip "M-Maverick, you almost done back there?"
+
+    show maverick nice flip:
+        ease 0.5 pos (0.56,1.07)
+        ease 0.15 pos (0.57,1.08)
+        repeat
+    show bryce stern flip:
+        pause 0.05
+        block:
+            ease 0.5 pos (0.93,1.298)
+            ease 0.15 pos (0.93,1.3)
+            repeat
+    with None
+
+    m "I worked my way back, out of the range of any flailing horns or tails for when they climaxed."
+
+    jump bangok_four_bryce3_mctop_mavgoes_climax
 
 label todo_out_of_content_bangok_four_bryce3:
     play sound "fx/system3.wav"
