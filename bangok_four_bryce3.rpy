@@ -3966,7 +3966,7 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
         m "Bryce raised his head up from below, tongue wrapping around my balls and over the base of my shaft while the ribbed roof of his mouth ran over my length's tip."
         if bangok_four_bryce3_store.protection == True:
             m "I gasped, the brush of teeth over my lower belly sending a rush of blood to my dick, just as Bryce ran his tongue up the underside of the condom."
-        else
+        else:
             m "I gasped, the brush of teeth over my lower belly sending a rush of blood to my dick, just as Bryce ran his tongue up the underside."
     else:
         m "Bryce raised his head up from below, tongue driving up through my folds and into my passage."
