@@ -3952,7 +3952,42 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
     else:
         m "Bryce extended his tongue, running the wet tip unsteadily through my equally wet outer folds."
 
-    m "With Maverick's punishing pace shaking his body, I wasn't sure I wanted to get my sensitive areas any closer to his sharp maw."
+    m "With Maverick's punishing pace shaking his body, I wasn't sure I wanted to get my sensitive areas any closer to Bryce's sharp maw."
+
+    Br pantflirt "Can't help ya out if you don't get closer."
+
+    $ renpy.pause (0.5)
+
+    m "After a few moments' hesitation, I brought my groin within range."
+
+    show bryce pant with dissolve
+
+    if bangok_four_playerhasdick == True:
+        m "Bryce raised his head up from below, tongue wrapping around my balls and over the base of my shaft while the ribbed roof of his mouth ran over my length's tip."
+        if bangok_four_bryce3_store.protection == True:
+            m "I gasped, the brush of teeth over my lower belly sending a rush of blood to my dick, just as Bryce ran his tongue up the underside of the condom."
+        else
+            m "I gasped, the brush of teeth over my lower belly sending a rush of blood to my dick, just as Bryce ran his tongue up the underside."
+    else:
+        m "Bryce raised his head up from below, tongue driving up through my folds and into my passage."
+        m "I gasped, the brush of teeth over my lower belly sending a rush of blood to my hot and squeezing inner walls."
+
+    m "A thrust from Maverick caught Bryce differently. Bryce's teeth pricked my skin, the spreading of the force across them keeping any real damage from being done."
+    m "I stumbled a half step back, but my feet to sank into the sand, leaving some of my weight on Bryce's jaw as he continued to lavish my privates with his tongue."
+    m "Approving of his use at both ends, Bryce let a huffing moan slip between his teeth and my lower body."
+
+    m "As I was caught up in the sensations in my groin, I hardly noticed Maverick's continued glare."
+
+    c "F-Fuck, so close..."
+
+    menu:
+        "Cum.":
+            pass
+        "Grab Bryce's horns and cum.":
+            pass
+        "Ask to grab Bryce's horns.":
+            pass
+
 
     jump todo_out_of_content_bangok_four_bryce3
 
