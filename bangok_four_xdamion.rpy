@@ -98,7 +98,7 @@ label bangok_four_xdamion_fuck:
             $ renpy.pause (0.8)
             Dm "There's a good cocksucker."
             $ renpy.pause (0.5)
-            Dm normal bangok ws "Well? Get started."
+            Dm normal bangok "Well? Get started."
             $ renpy.pause (0.3)
             show black with dissolve
             $ renpy.pause (0.5)
@@ -141,7 +141,7 @@ label bangok_four_xdamion_fuck:
                     if persistent.bangok_inflation == True:
                         m "It sank heavy and hot into my belly, spurt after spurt until I felt like I couldn't have swallowed another drop."
                     m "It slid down my throat, injected deep enough that all I could taste was his saliva-slicked cockflesh pulsing over my tongue."
-                    show damion normal bangok ws
+                    show damion normal bangok
                     hide black
                     with dissolve
                     m "Then Damion pulled back, dribbling a last few tantalizing spurts across my tongue before wiping his unique tip on my cheek, staining it with his leftover seed."
@@ -149,12 +149,12 @@ label bangok_four_xdamion_fuck:
                     m "I wrapped a hand around his base, finding it easily sliding over his slit-juice-slicked length."
                     play soundloop "fx/bangok_poundofsalt.ogg" fadein 1.0
                     m "While still licking and swirling his tip in my mouth, I began to pump his shaft, getting at first one, then both hands dirty with working his shaft."
-                    Dm face bangok ws "Want the reward without the challenge, huh?"
-                    Dm arrogant bangok ws "Fine. I don't need your throat anyway."
+                    Dm face bangok "Want the reward without the challenge, huh?"
+                    Dm arrogant bangok "Fine. I don't need your throat anyway."
                     stop soundloop fadeout 0.5
                     play sound "fx/slap1.wav"
                     m "He slapped my hand away."
-                    Dm normal bangok ws "If all you're good for is as a receptacle, I'll handle that myself."
+                    Dm normal bangok "If all you're good for is as a receptacle, I'll handle that myself."
                     play soundloop "fx/bangok_poundofsalt.ogg" fadein 1.0
                     m "One hand on my head, he began to pump his member himself with his other hand."
                     $ renpy.pause (1.0)
@@ -176,7 +176,7 @@ label bangok_four_xdamion_fuck:
                         m "His seed sank heavy and hot into my belly, spurt after spurt until I felt like I couldn't have swallowed another drop."
                     else:
                         $ renpy.pause (0.8)
-                    Dm arrogant bangok ws "Mmh."
+                    Dm arrogant bangok "Mmh."
                     m "He withdrew from my lips, his tip slathering a thin line of seed from my lips to my chin, staining it with his leftover cum."
                     hide black with dissolvemed
         "Offer your ass." if bangok_four_xdamion_store.ass_offered == False:
@@ -190,9 +190,9 @@ label bangok_four_xdamion_fuck:
             $ bangok_four_xdamion_store.position = "vaginal"
             m "I hopped up on the lab bench, sliding a hand under my waistband."
             c "Okay, how about you put that where it's supposed to go?"
-            Dm face bangok ws "What are you...?"
-            Dm normal bangok ws "Oh."
-            Dm arrogant bangok ws "Oh you slutty bitch."
+            Dm face bangok "What are you...?"
+            Dm normal bangok "Oh."
+            Dm arrogant bangok "Oh you slutty bitch."
             Dm "Pants off. Strip."
             play sound "fx/undress.ogg"
             $ renpy.pause (0.5)
@@ -294,8 +294,8 @@ label bangok_four_xdamion_fuck:
             else:
                 m "The sliding of his slick length past my inner walls left me twitching and spasming. The unusual shape of his shaft slipped over different spots inside of me with every thrust, leaving me constantly guessing and surprised by his ceaseless fucking of my canal."
 
-            show damion normal bangok ws with dissolve
-            show damion normal bangok ws:
+            show damion normal bangok with dissolve
+            show damion normal bangok:
                 ease 0.5 zoom 2.375 ypos 1.71
                 ease 0.15 zoom 2.4 ypos 1.7
                 repeat
@@ -310,7 +310,7 @@ label bangok_four_xdamion_fuck:
             stop soundloop fadeout 0.5
             play sound "fx/snarl.ogg"
             $ renpy.pause (0.2)
-            show damion face bangok ws:
+            show damion face bangok:
                 ease 0.15 zoom 2.4 ypos 1.7
             with None
 
@@ -848,13 +848,35 @@ label bangok_four_xdamion_cleanup:
             scene black with dissolve
             jump bangok_four_xdamion_canon_interrogation_over
 
-    jump todo_out_of_content_bangok_four_xdamion
+    m "I lapped delicately at his length, trying to lap up anything he might consider a stain."
+    if persistent.bangok_watersports == True and bangok_four_xdamion_store.position in ["urinal","vaginalws","wombws"]:
+        Dm normal bangok ws "I said {i}all the way{/i}"
+        show black with dissolve
+        m "I felt his hand on the back of my head, then he was rubbing my face in his piss-soaked genital slit, cock pressed across the side of my head."
+    else:
+        Dm normal bangok "I said {i}all the way{/i}"
+        show black with dissolve
+        m "I felt his hand on the back of my head, then he was rubbing my face in his wet genital slit, cock pressed across the side of my head."
 
+    m "Trying to obey his instructions, I extended my tongue, digging into Damion's slit, lapping up his slit juices and the results of our coitus."
+    $ renpy.pause (0.5)
+    m "A long, relaxed sigh hissed between Damion's teeth."
+    Dm arrogant "Now the other side."
+    $ renpy.pause (0.5)
+    m "Though he'd removed his hand from my head, I kept my face in his slit, tonguing around beneath, then into the opposite side of his shaft's base."
+    m "His shaft rubbed over my face as I moved, leaving my face sticky with his juices and my own saliva."
+    Dm normal bangok "Hmh."
+    Dm "That's enough."
+    hide black with dissolvemed
+    $ renpy.pause (0.5)
 
+    if bangok_four_xdamion_store.position in ["vaginal","womb","vaginalws","wombws"]:
+        Dm arrogant bangok "Alright. Get the fuck out of here before someone connects your stained face or leaking hole back to me."
+        scene black with dissolvemed
+        m "As I got back to my feet, I tried to remember the path to the closest restroom, where I could clean Damion's mess off, and try to get at least most of it out."
+    else:
+        Dm arrogant bangok "Alright. Get the fuck out of here before someone connects your stained face back to me."
+        scene black with dissolvemed
+        m "As I got back to my feet, I tried to remember the path to the closest restroom, where I could clean Damion's mess off."
 
-
-
-label todo_out_of_content_bangok_four_xdamion:
-    play sound "fx/system3.wav"
-    s "TODO: Out of content. Roll back or prepare to crash."
-    $ renpy.error("TODO: Out of content.")
+    jump bangok_four_xdamion_canon_interrogation_over
