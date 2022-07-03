@@ -103,10 +103,11 @@ init:
                         Play("audio", "se/sounds/yes.wav")]
                 hovered Play("audio", "se/sounds/select.ogg")
                 focus_mask None
-            text label
+            text "[label]"
 
 
-    screen bangok_modsettings tag smallscreen2:
+    screen bangok_modsettings():
+        tag smallscreen2
         modal True
         window id "bangok_modsettings" at popup2:
             style "smallwindow"
