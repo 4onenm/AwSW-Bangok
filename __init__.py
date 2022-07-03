@@ -144,7 +144,7 @@ def anna4():
 def anna_x_damion():
     ( ml.find_label('chap2facility')
         .search_say("(Reza was allegedly here at some point. Maybe I should ask Anna.)")
-        .hook_to('bangok_four_annaxdamion', condition=make_dev("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
+        .hook_to('bangok_four_annaxdamion', condition=("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
         .search_say("What exactly did you want, again?")
         .link_behind_from('bangok_four_annaxdamion_canon_questions')
     )
@@ -251,14 +251,14 @@ def remy_c4postsections():
 def xdamion():
     ( ml.find_label('chap2facility')
         .search_say("And you are?")
-        .hook_to('bangok_four_xdamion', condition=make_dev('(persistent.nsfwtoggle==True)'))
+        .hook_to('bangok_four_xdamion', condition=('(persistent.nsfwtoggle==True)'))
         .search_say("What exactly did you want, again?")
         .link_from('bangok_four_xdamion_canon_whatdidyouwant')
         # ml.find_label('chap2facques') # We're literally right here.
         .search_menu("That's all.")
-        .add_choice("[[Attempt to stand.]", jump='bangok_four_xdamion_questions_getup', condition=make_dev('(persistent.nsfwtoggle==True) and (bangok_four_xdamion_store.position) and (bangok_four_xdamion_store.standing_unattempted == True)'), before="That's all.")
+        .add_choice("[[Attempt to stand.]", jump='bangok_four_xdamion_questions_getup', condition=('(persistent.nsfwtoggle==True) and (bangok_four_xdamion_store.position) and (bangok_four_xdamion_store.standing_unattempted == True)'), before="That's all.")
         .branch("That's all.").search_say("Thanks for your help.")
-        .hook_to('bangok_four_xdamion_cleanup', condition=make_dev('(persistent.nsfwtoggle==True) and (bangok_four_xdamion_store.position)'))
+        .hook_to('bangok_four_xdamion_cleanup', condition=('(persistent.nsfwtoggle==True) and (bangok_four_xdamion_store.position)'))
         .search_hide('damion').search_with()
         .link_behind_from('bangok_four_xdamion_canon_interrogation_over')
     )
@@ -444,7 +444,7 @@ def add_scene_select():
 
     # xDamion
     fss.register_scene_select(bangok, "Improving Damion's Mood", 'bangok_four_xdamion_replay_start',
-        locked=lambda: (not renpy.store.persistent.bangok_dev) or (not renpy.store.persistent.metdamion))
+        locked=lambda: (not renpy.store.persistent.metdamion))
 
     # xIpsum2
     fss.register_scene_select(bangok, "Something Stimulating with Ipsum", 'bangok_four_xipsum2_replay_start',
