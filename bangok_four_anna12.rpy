@@ -380,32 +380,7 @@ label bangok_four_anna2_romanticdate_conclusion:
         An smirk c "Now, the question of where."
         c "I guess my apartment?"
 
-    if False: # nofood == False: # Disabled until I write the woods scene
-        An "Actually, since you so enjoyed nature's bounty out here..."
-        c "Oh?"
-        An smirk c "Once we get some distance, we could find a quiet spot in the woods and see what happens."
-        menu:
-            "Don't you need to wash the blood off?":
-                An sad c "I actually thought that would be part of the fun."
-                menu:
-                    "Not for me.":
-                        c "I, uh, I don't do blood in sex."
-                        An normal c "I suppose I can see why, given your fragility."
-                        An smirk c "Then in the interest of not breaking you somehow, let's head back to your apartment."
-                    "Sounds interesting.":
-                        c "I, ah, suppose I could see what you have in mind."
-                        show anna smirk c
-                        $ renpy.pause (0.8)
-                        jump bangok_four_anna2_woods
-            "I'd prefer to be inside.":
-                An normal c "In that case, your apartment it is."
-            "Sounds fun.":
-                $ anna2mood += 1
-                c "I'm in."
-                An smirk c "Thought you would be."
-                jump bangok_four_anna2_woods
-    else:
-        An normal c "Sounds good."
+    An normal c "Sounds good."
     An sad c "I'd rather not leave evidence all over your living room, though, so I may need to ruin a towel or two to get this blood off."
     c "Alright."
     jump bangok_four_anna2_apartment
@@ -419,77 +394,6 @@ label bangok_four_anna2_apartment:
 
     if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
         jump bangok_four_bangnokay_kill_replay
-
-
-    if bangok_four_anna2.havestrapon == True:
-        $ renpy.pause(0.5)
-        c "So. What's in the bag?"
-        show anna smirk with dissolve
-        play sound "fx/undress.ogg"
-        show anna smirk dildohand with dissolve
-
-        $ renpy.pause(0.8)
-
-        menu:
-            "Is that a double-ended dildo?":
-                $ renpy.pause(0.5)
-                c "What's all that extra strapping for?"
-            "Is that a strapon?":
-                $ renpy.pause(0.5)
-                An smirk dildohand "It is."
-            "Oh my.":
-                $ renpy.pause(0.5)
-            "No.":
-                $ renpy.pause(0.5)
-                show anna sad dildohand with dissolve
-                c "Whatever that is, we're not using it."
-                label bangok_four_anna2_apartment_nostrapon:
-                An sad dildohand "I see. Would you mind telling me why?"
-                menu:
-                    "Not my thing.":
-                        $ renpy.pause(0.5)
-                        An normal dildohand "Fair enough."
-                        play sound "fx/undress.ogg"
-                        show anna normal with dissolve
-                    "It's huge!":
-                        $ renpy.pause(0.5)
-                        An sad dildohand "The larger end wouldn't be going in {i}you{/i}."
-                        c "Even still."
-                        An normal dildohand "Fair enough."
-                        play sound "fx/undress.ogg"
-                        show anna normal with dissolve
-                    "Why did you go and make this weird?":
-                        $ renpy.pause(0.5)
-                        $ anna2mood -= 1
-                        play sound "fx/undress.ogg"
-                        An face "Fine, I'll put it away."
-                    "No.":
-                        $ renpy.pause(0.5)
-                        $ anna2mood -= 1
-                        play sound "fx/undress.ogg"
-                        An face "Fine, I'll put it away."
-
-                m "Anna put the toy away in the satchel and set it aside."
-                $ bangok_four_anna2.havestrapon = False
-                jump bangok_four_anna2_apartment_under_layers
-
-        An normal dildohand "I bought this to use with an ex, but I never could talk him into it."
-        An smirk dildohand "It's intended to be used as a strapon for pegging, but there's a few other ways I'm sure we could use it."
-        menu:
-            "Sounds like fun.":
-                $ renpy.pause(0.5)
-                $ anna2mood += 1
-            "I... guess we could try it.":
-                $ renpy.pause(0.5)
-            "I'm not sure about that thing.":
-                $ renpy.pause(0.5)
-                jump bangok_four_anna2_apartment_nostrapon
-            "Okay, no way.":
-                $ renpy.pause(0.5)
-                $ anna2mood -= 1
-                jump bangok_four_anna2_apartment_nostrapon
-        show anna normal with dissolve
-        m "Anna set the toy aside on the coffee table."
 
     label bangok_four_anna2_apartment_under_layers:
     $ renpy.pause (0.5)
@@ -569,7 +473,7 @@ label bangok_four_anna2_apartment:
             An normal "Fine. I'll check the bathroom, you check the bedroom."
             hide anna with dissolve
             $ renpy.pause (0.5)
-            play sound "fx/rummage.ogg"
+            play sound "fx/rummage.wav"
             m "A box of condoms was in the first drawer I checked in the nightstand next to my bed, shoved near the back."
             m "I returned, holding it aloft, only to find Anna already seated on the couch with one next to her."
             show anna normal at center with dissolve
@@ -608,10 +512,6 @@ label bangok_four_anna2_apartment:
                 An sad "Let's just get it over with."
             else:
                 show anna normal with dissolve
-
-
-        if bangok_four_anna2.havestrapon == True:
-            An smirk dildohand "Or do you want to be receiving first?"
     else:
         An normal "Definitely a mammal. I'm guessing female, as I'm sure as a male your dick would already be visible at the prospect of sex."
         menu:
@@ -642,7 +542,7 @@ label bangok_four_anna2_apartment:
                     jump bangok_four_anna2_apartment_maleshow
 
         An normal "Well, I doubt the strapon's strapping will work with your pelvic structure."
-        An smirk dildohand "I suppose that means you'll have to be receiving."
+        An smirk "I suppose that means you'll have to be receiving."
 
 
 
@@ -679,7 +579,7 @@ label bangok_four_anna2_apartment:
             An smirk "Even while inside people."
         c "I see."
 
-        An normal dildohand "I should go fill the faux cum now if we're going to use it later."
+        An normal "I should go fill the faux cum now if we're going to use it later."
         menu:
             "Let's not.":
                 $ renpy.pause(0.5)
@@ -690,7 +590,7 @@ label bangok_four_anna2_apartment:
                 $ renpy.pause(0.5)
                 $ bangok_four_anna2.havefauxcum = True
                 show anna normal with dissolve
-                play sound "fx/rummage.ogg"
+                play sound "fx/rummage.wav"
                 $ renpy.pause(0.8)
                 stop sound fadeout 1.0
                 $ renpy.pause(0.8)
