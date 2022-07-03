@@ -408,42 +408,43 @@ label bangok_four_bryce1_f_tonguefuck:
     show bryce at Position(ypos=1.3) with ease
     show bryce at Position(ypos=1.5) with ease
     m "Bryce got low in front of my crotch, hot breath washing over my dampening lips."
-    menu:
-        "W-Wait! Protection!":
-            $ brycemood -= 1
-            show bryce brow dk at Position(ypos=1.3) with ease
-            Br "Are you kidding me?"
-            c "We don't know what my stuff might do to you."
-            Br stern dk "Well, I've got some bad news for you. Oral so rarely causes complications for anyone here, I don't buy dental dams."
-            Br "Ones my size aren't exactly cheap anyway."
-            m "I paused a moment, considering my options."
-            menu:
-                "Fuck it. Eat me anyway.":
-                    Br brow dk "You're sure?"
-                    c "Yeah."
-                    Br smirk dk "You got it."
-                    show bryce at Position(ypos=1.5) with ease
-                    show bryce flirty dk
-                "Skip this, then. I want you in my ass.":
-                    $ bangok_four_bryce1_position_picka = "analbot"
-                    Br smirk dk "Alright. I've got condoms over there. Top drawer."
-                    jump bangok_four_bryce1_analbot_fetchcondom
-                "Skip this, then. I want you in my cunt.":
-                    $ bangok_four_bryce1_position_picka = "vag"
-                    Br smirk dk "Alright. I've got condoms over there. Top drawer."
-                    jump bangok_four_bryce1_f_fuck_getprotection
-                "Maybe I'll suck you instead.":
-                    $ bangok_four_bryce1_position_picka = "oralbot"
-                    Br flirty dk "Oh?"
-                    play sound "fx/cartslide.ogg"
-                    show bryce normal dk at Position(xpos=0.4,xanchor='center') with dissolve
-                    show bryce at Position(xpos=0.45,xanchor='center',ypos=1.05) with ease
-                    m "Bryce settled back on the couch, bunching the rug and tugging the coffee table as his tail caught for a moment."
-                    m "He splayed one hindleg out, giving me easy access to his shaft from beside the couch."
-                    Br smirk dk "Alright. I've got condoms over there. Top drawer."
-                    jump bangok_four_bryce1_oralbot_getprotection
-        "[[Enjoy.]":
-                pass
+    if bangok_four_bryce1_position_picka != "oraltop":
+        menu:
+            "W-Wait! Protection!":
+                $ brycemood -= 1
+                show bryce brow dk at Position(ypos=1.3) with ease
+                Br "Are you kidding me?"
+                c "We don't know what my stuff might do to you."
+                Br stern dk "Well, I've got some bad news for you. Oral so rarely causes complications for anyone here, I don't buy dental dams."
+                Br "Ones my size aren't exactly cheap anyway."
+                m "I paused a moment, considering my options."
+                menu:
+                    "Fuck it. Eat me anyway.":
+                        Br brow dk "You're sure?"
+                        c "Yeah."
+                        Br smirk dk "You got it."
+                        show bryce at Position(ypos=1.5) with ease
+                        show bryce flirty dk
+                    "Skip this, then. I want you in my ass.":
+                        $ bangok_four_bryce1_position_picka = "analbot"
+                        Br smirk dk "Alright. I've got condoms over there. Top drawer."
+                        jump bangok_four_bryce1_analbot_fetchcondom
+                    "Skip this, then. I want you in my cunt.":
+                        $ bangok_four_bryce1_position_picka = "vag"
+                        Br smirk dk "Alright. I've got condoms over there. Top drawer."
+                        jump bangok_four_bryce1_f_fuck_getprotection
+                    "Maybe I'll suck you instead.":
+                        $ bangok_four_bryce1_position_picka = "oralbot"
+                        Br flirty dk "Oh?"
+                        play sound "fx/cartslide.ogg"
+                        show bryce normal dk at Position(xpos=0.4,xanchor='center') with dissolve
+                        show bryce at Position(xpos=0.45,xanchor='center',ypos=1.05) with ease
+                        m "Bryce settled back on the couch, bunching the rug and tugging the coffee table as his tail caught for a moment."
+                        m "He splayed one hindleg out, giving me easy access to his shaft from beside the couch."
+                        Br smirk dk "Alright. I've got condoms over there. Top drawer."
+                        jump bangok_four_bryce1_oralbot_getprotection
+            "[[Enjoy.]":
+                    pass
     show bryce at Position(ypos=1.51) with ease
     m "Pressing forward, Bryce opened his maw wide, surrounding my crotch as his tongue aimed for my love canal."
     m "The abrupt feeling of tongue and pinpricks of teeth was too much. I stumbled back, tripping and falling on the edge of the rug."
@@ -867,7 +868,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
                                 $ renpy.pause (9.0)
                                 m "It was a huge volume. I had to pause and take a break partway through. When I finished, I felt packed with the warmth that had so recently left Bryce's bladder."
                             else:
-                                queue sound "fx/gulping.ogg"
+                                queue sound "fx/gulping.wav"
                                 $ renpy.pause (3.0)
                                 stop sound fadeout 1.0
                             python:
@@ -1143,7 +1144,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
                         c "Ah!"
                         m "The condom burst, cum and piss rushing immediately to pack my tubes, saturating my womb, flooding my most sacred places with nothing but Bryce's fluids."
                         m "I looked clearly pregnant now, belly bulging upward with a blob of fluid and man meat."
-                        Br sad dk "Sorry."
+                        Br stern dk "Sorry."
                 stop soundloop fadeout 1.0
                 menu:
                     "I think I might survive.":
@@ -1555,11 +1556,11 @@ label bangok_four_bryce1_m2:
                                                 show bryce smirk dk flip with dissolve
                                                 play sound "fx/water2.ogg"
                                                 if persistent.bangok_inflation == True:
-                                                    queue sound "fx/gulpslow2.ogg"
+                                                    queue sound "fx/gulpslow2.wav"
                                                     $ renpy.pause (9.0)
                                                     m "It was a huge volume. I had to pause and take a break partway through. When I finished, I felt packed with the warmth that had so recently left Bryce's bladder."
                                                 else:
-                                                    queue sound "fx/gulping.ogg"
+                                                    queue sound "fx/gulping.wav"
                                                     $ renpy.pause (3.0)
                                                     stop sound fadeout 1.0
                                                 python:
@@ -1740,7 +1741,7 @@ label bangok_four_bryce1_m2:
                     "Can I fuck you?" if bangok_four_playerhasdick == True:
                         jump bangok_four_bryce1_ptop
                     "Eat me out?" if bangok_four_playerhasdick == False:
-                        jump bangok_four_bryce1_f_eatout_merge
+                        jump bangok_four_bryce1_f_tonguefuck
 
             label bangok_four_bryce1_bothdone:
             Br normal dk "Well, that's you and that's me."
@@ -2756,7 +2757,7 @@ label bangok_four_bryce1_m2:
                                                 $ bangok_four_bryce1_playerstuffed = True
                                                 $ bangok_four_bryce1_position_pickb = "oralbot"
                                             else:
-                                                queue sound "fx/gulping.ogg"
+                                                queue sound "fx/gulping.wav"
                                                 $ renpy.pause (3.0)
                                                 stop sound fadeout 1.0
                                             $ brycemood += 1
@@ -2855,7 +2856,7 @@ label bangok_four_bryce1_m2:
                                     $ bangok_four_bryce1_playerstuffed = True
                                     $ bangok_four_bryce1_position_pickb = "oralbot"
                                 else:
-                                    queue sound "fx/gulping.ogg"
+                                    queue sound "fx/gulping.wav"
                                     $ renpy.pause (3.0)
                                     stop sound fadeout 1.0
                                 $ brycemood += 1
