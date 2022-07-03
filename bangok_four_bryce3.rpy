@@ -2980,7 +2980,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                                 m "The bloated condom plopped out onto my legs."
             else:
                 if bangok_four_bryce3_store.protection == False or bangok_four_bryce3_store.mavbroke == True:
-                    play sound "fx/spray.oggg"
+                    play sound "fx/spray.ogg"
                     if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
                         m "When his head tugged through my cunt lips he left me gaping, letting a dribble of cum and piss run down my lips and over my legs."
                     else:
