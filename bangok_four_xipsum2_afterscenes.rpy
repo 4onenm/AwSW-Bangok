@@ -882,3 +882,9 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
 
 
     jump todo_out_of_content_bangok_four_xipsum_sharing3
+
+
+label todo_out_of_content_bangok_four_xipsum_sharing3:
+    play sound "fx/system3.wav"
+    s "Out of content. Rollback and save, or prepare to crash."
+    $ renpy.error("TODO: Out of content.")
