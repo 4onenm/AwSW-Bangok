@@ -578,7 +578,7 @@ label bangok_four_xipsum_bedroom_start:
                 $ bangok_four_xipsum.mood += 1
                 Lo shy flip "Oh. Okay."
                 Ip think bangok erect wrapped flip "Let me get you two a dental dam."
-                play sound "fx/rumamge.ogg"
+                play sound "fx/rummage.wav"
                 $ renpy.pause(0.5)
                 Ip normal bangok erect wrapped "Here."
                 m "He held up a small, limp apparatus consisting of three small bags of near-transparent barrier. It definitely wasn't the flat sheet design I knew from my world."
