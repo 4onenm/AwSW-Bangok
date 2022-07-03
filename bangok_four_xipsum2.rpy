@@ -45,6 +45,8 @@ init python in bangok_four_xipsum2_store:
     #  3 - Free use for the target's friends.
     sharing = 0
 
+    sharing_unsanitary = False
+
 
 label bangok_four_xipsum2_answ_machine:
     play sound "fx/answeringmachine.ogg"
@@ -991,6 +993,26 @@ label bangok_four_xipsum2_sharingchat:
                                     $ renpy.pause(0.5)
                                     $ bangok_four_xipsum2_store.sharing = 3
                                     Ip happy bangok briefs "Excellent."
+                                    if persistent.bangok_watersports == True:
+                                        Ip think bangok briefs "What about using you for a... possibly unsanitary prank?"
+                                        c "Uh... what kind of prank?"
+                                        Ip normal bangok blush briefs "To tell you would spoil the surprise, wouldn't it?"
+                                        if persistent.bangok_watersports == True and bangok_four_xipsum2_store.ws == True:
+                                            Ip think bangok briefs "I suppose the clarifying question is, would you have a problem with complete strangers urinating in you?"
+                                        else:
+                                            Ip think bangok briefs "I suppose the clarifying question is, would you have a problem with complete strangers ejaculating in you unprotected?"
+                                        menu:
+                                            "Obviously, I'd have a problem with that!":
+                                                $ renpy.pause(0.5)
+                                                Ip sad bangok briefs "Nevermind, then. No harm, no foul."
+                                                c "Seriously, Ipsum. Don't."
+                                                Ip think bangok briefs "I won't. It was just an idea. I wasn't sure how far afield your tastes ran."
+                                            "Now I'm too curious.":
+                                                $ renpy.pause(0.5)
+                                                $ bangok_four_xipsum2_store.sharing_unsanitary = True
+                                                c "Who is this prank on?"
+                                                Ip happy bangok blush briefs "You'll find out in a few days. Is that you agreeing to it?"
+                                                c "I... guess it is."
             jump bangok_four_xipsum2_ipsum_sharing1
         "I... think I'm done with this tech.":
             $ renpy.pause(0.8)
@@ -1008,56 +1030,6 @@ label bangok_four_xipsum2_sharingchat:
     stop music fadeout 2.0
     $ renpy.pause(2.0)
     jump _mod_fixjmp
-
-
-
-label bangok_four_xipsum2_ipsum_sharing1:
-    $ renpy.pause(0.5)
-    scene black with dissolvemed
-    stop music fadeout 2.0
-    $ renpy.pause(1.0)
-
-    play sound "fx/phonering.ogg"
-    scene o3 at Pan((0, 100), (0, 250), 3.0) with dissolveslow
-    $ renpy.pause(1.3)
-    play sound "fx/phonepickup.ogg"
-
-    Ip normal bangok blush "Hello, [player_name]."
-    c "Ipsum?"
-    c "It's the middle of the night. What...?"
-    if bangok_four_playerhasdick == True:
-        m "I felt the rustling of fabric over my shaft and realized Ipsum must be looking at his end of his stimulating devices."
-    else:
-        m "I felt the rustling of fabric over my outermost folds and realized Ipsum must be looking at his end of his stimulating devices."
-
-    if bangok_four_xipsum2_store.sharing > 1:
-        Ip normal bangok blush "Well, Lorem wasn't interested. But asking him gave me a thought."
-    Ip happy bangok blush "Since you're still wearing the briefs, is a human-style onahole available? Perhaps you'd like an... overnight visitation."
-
-    menu:
-        m "Do I want Ipsum to fuck me again?"
-        "Accept.":
-            Ip happy bangok blush "Happy to oblige."
-            m "(Click.)"
-            c "(He hung up?)"
-            m "Air wafted over my nethers as he moved his end of the devices."
-
-            jump todo_out_of_content_bangok_four_xipsum
-        "Reject.":
-            c "It's just comfortable evening-wear. Don't read too much into it."
-            Ip sad "Oh."
-            Ip think "Alright then. Do let me know when you are, {i}ahem{/i}, available."
-            c "Yeah. Sure."
-            Ip sad "Goodnight."
-
-    $ renpy.pause(0.5)
-    scene black with dissolvemed
-    stop music fadeout 2.0
-    $ renpy.pause(2.0)
-    jump _mod_fixjmp
-
-
-
 
 
 label todo_out_of_content_bangok_four_xipsum:

@@ -318,6 +318,7 @@ def xipsum2():
     ( ml.find_label('chapter5')
         .search_say("After a night of turbulent dreams, my consciousness returned to the shores of the waking world.")
         .hook_to('bangok_four_xipsum2_ipsum_sharing3', condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum2_store.shared_with == "ipsum" and bangok_four_xipsum2_store.sharing == 3'))
+        .hook_to('bangok_four_xipsum2_ipsum_sharing3_unsanitary', condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum2_store.shared_with == "ipsum" and bangok_four_xipsum2_store.sharing == 3 and bangok_four_xipsum2_store.sharing_unsanitary == True'))
     )
 
 
