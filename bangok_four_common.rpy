@@ -498,7 +498,7 @@ init:
         (0,0),"cr/lorem_think.png",
         (626,579), "cr/lorem_bangok_peek.png"
     )
-    image lorem think bangok peek flip = im.Flip('lorem think bangok peek',horizontal=True)
+    image lorem think bangok peek flip = im.Flip(renpy.display.image.ImageReference('lorem think bangok peek'),horizontal=True)
 
     image lorem bangok hidepeek = "cr/lorem_bangok_hidepeek.png"
     image lorem bangok hidepeek flip = im.Flip("cr/lorem_bangok_hidepeek.png",horizontal=True)
@@ -613,7 +613,7 @@ init:
     image ipsum normal bangok heady briefs touch = im.Composite(
         (650,800),
         (0,0), "cr/ipsum_sad.png",
-        (0,0), "cr/bangok/ipsum_heady_blush.png",
+        (0,0), "cr/bangok/ipsum_heady.png",
         (0,0), "cr/bangok/ipsum_briefs_touch.png",
     )
     image ipsum normal bangok heady briefs touch flip = im.Flip(renpy.display.image.ImageReference('ipsum normal bangok briefs touch'),horizontal=True)
