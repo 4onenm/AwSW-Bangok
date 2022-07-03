@@ -14,6 +14,14 @@ label bangok_four_annaxdamion:
     m "As I walked up to Anna's partially-ajar door, I heard a rhythmic wet smacking coming from the lab."
     $ renpy.pause(0.8)
     c "(What is that...?)"
+
+    if (persistent.bangok_four_bangnokay or bangok_four_bangnokay):
+        stop soundloop fadeout 1.0
+        play sound "fx/steps/clean2.wav"
+        show black with dissolvemed
+        m "Having no reason to pry into the private lives nor scientific experimentation of the dragons, I decided to come back a little later."
+        jump bangok_four_annaxdamion_abort_merge
+
     menu:
         "Listen closer.":
             pass

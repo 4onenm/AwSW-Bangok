@@ -14,10 +14,36 @@ label bangok_four_xdamion_replay_start:
     scene facin2 at Pan ((128, 250), (128, 250), 0.0)
     show damion face
     with fade
+    if (persistent.bangok_four_bangnokay or bangok_four_bangnokay):
+        jump bangok_four_bangnokay_kill_replay
     jump bangok_four_xdamion_replay_merge
 
 label bangok_four_xdamion:
     c "[player_name], ambassador from humanity to dragonkind."
+
+    if (persistent.bangok_four_bangnokay or bangok_four_bangnokay):
+        Dm arrogant "Tchk, of course. Immediately with a big fancy title. This whole thing is so blown out of proportion, it makes me wonder how many coffees you had to deliver to be the one coming here."
+        c "Hey, I'm nobody's suckup."
+        Dm "You might look better doing some of that."
+        menu:
+            "Uh...":
+                Dm "Everyone's acting like it's some huge event that everyone should be celebrating.{w} Newsflash: Not everyone cares."
+                Dm "Once both of you are gone, life will return to normal and we can all go back to what we actually should be doing."
+                jump bangok_four_xdamion_canon_whatdidyouwant
+            "I could \"suck up\" to you if it'd help your mood.":
+                $ renpy.pause (0.5)
+                Dm "I..."
+                $ renpy.pause (0.5)
+                show damion face with dissolve
+                $ renpy.pause (0.4)
+                Dm face "Ha{w=0.4} ha.{w=0.4} Very funny."
+                Dm normal "Frankly, the image of the great human ambassador sucking up to a lowly researcher is already amusing enough."
+                Dm arrogant "No need to go through the song and dance."
+                Dm arrogant "Let me spell this out simply enough for you to understand:{w} Not everyone cares."
+                Dm "Once both of you are gone, life will return to normal and we can all go back to what we actually should be doing."
+                show damion face with dissolve
+                jump bangok_four_xdamion_canon_whatdidyouwant
+
     Dm arrogant "Tchk, of course. Immediately with a big fancy title. This whole thing is so blown out of proportion, it makes me wonder how many dicks you had to suck to be the one coming here."
     menu:
         "Uh...":
