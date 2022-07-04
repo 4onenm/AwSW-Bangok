@@ -10,6 +10,8 @@ init python in bangok_four_lorem4_store:
     # True - Applied
     protection = None
 
+    condom_left_in = False
+
     # Whether Lorem will have their penis on display for relevant scenes,
     #  and what the player might be doing with it.
     # None - no decision, merely hanging out
@@ -30,14 +32,17 @@ init python in bangok_four_lorem4_store:
 
     def lorem_filled_expression(emotion):
         if protection == True:
-            im = 'lorem '+emotion+' bangok erect'
+            if renpy.store.persistent.bangok_inflation == True and condom_left_in == True:
+                im = 'lorem '+emotion+' bangok bulge erect'
+            else:
+                im = 'lorem '+emotion+' bangok erect'
         elif renpy.store.persistent.bangok_inflation == True:
-            if renpy.store.persistent.bangok_watersports == True and renpy.store.player_pissed == "vag":
+            if renpy.store.persistent.bangok_watersports == True and player_pissed == "vag":
                 im = 'lorem '+emotion+' bangok bulge pissleak'
             else:
                 im = 'lorem '+emotion+' bangok bulge cumleak'
         else:
-            if renpy.store.persistent.bangok_watersports == True and renpy.store.player_pissed == "vag":
+            if renpy.store.persistent.bangok_watersports == True and player_pissed == "vag":
                 im = 'lorem '+emotion+' bangok pissleak'
             else:
                 im = 'lorem '+emotion+' bangok cumleak'
@@ -948,7 +953,7 @@ label bangok_four_lorem4_maleplayer_carry:
             m "I came, jetting pulse after pulse of my seed into my condom as I hilted myself in Lorem's womb."
             if persistent.bangok_inflation == True:
                 m "It was more than the room Lorem had left. As my hot spurts bloated the condom reservoir, Lorem's tight innermost space, already stretched around my head, had to expand further to acccept my load."
-                m "Their cock rubbed in their own seed, between their slightly-bloated belly and mine."
+                m "Their cock rubbed in their own seed between their slightly-bloated belly and mine."
         elif persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
             m "I came, jetting pulse after pulse of my seed against the deepest recesses of Lorem's defiled sacred center."
             if persistent.bangok_inflation == True:
@@ -962,38 +967,73 @@ label bangok_four_lorem4_maleplayer_carry:
         m "Their grip on my neck limpened further, leaving their weight hanging almost solely from my arms and shaft, as our orgasms reached their end."
 
         m "I hurriedly dropped to my knees, easing them back onto the coffee table before I could accidentally drop them."
-        if persistent.bangok_inflation == True:
-            m "Then I eased out of them, pulling out of their bloated womb with a small cascade of my fluids."
-            Lo sleep blush "Ohhh..."
-            $ renpy.pause (0.5)
-            if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
-                show lorem shy bangok bulge pissleak at center
-                hide black
-                with dissolvemed
+        if bangok_four_lorem4_store.protection == True:
+            if persistent.bangok_inflation == True:
+                m "Then I tried to ease out of them, but my condom's bloated reservoir was too large to slip out of Lorem's stretched cervix."
+                Lo scared "Nngh!"
+                menu:
+                    "Keep pulling.":
+                        $ bangok_four_lorem4_store.condom_left_in = False
+                        $ renpy.pause (0.5)
+                        Lo relieved shy "Ough!"
+                        Lo sleep blush "Ohhh..."
+                        Lo normal blush eyes brows "... I wonder if that's what laying feels like."
+                        show lorem shy bangok erect at center
+                        hide black
+                        with dissolvemed 
+                    "Leave it.":
+                        $ bangok_four_lorem4_store.condom_left_in = True
+                        $ renpy.pause (0.5)
+                        m "I tugged on the condom, easing it off of my shaft so I could slip out of Lorem's passage."
+                        Lo normal blush eyes "Nnh... What are you..."
+                        m "Then I twisted off the end, to make sure it wouldn't leak inside them."
+                        Lo think hard blush "Oh. That... could be hard to get out later."
+                        show lorem shy bangok bulge erect at center
+                        hide black
+                        with dissolvemed
+                $ renpy.pause (0.5)
             else:
-                show lorem shy bangok bulge cumleak at center
+                m "Then I eased out of them, pulling out of their breached innermost gate with the condom-wrapped blob of my seed."
+                Lo relieved shy "Ough!"
+                Lo sleep blush "Ohhh..."
+                $ renpy.pause (0.5)
+                show lorem shy bangok erect at center
                 hide black
-                with dissolvemed
+                with dissolvemed 
+                $ renpy.pause (0.5)
         else:
-            m "Then I eased out of them, pulling out of their breached innermost gate with a small cascade of my fluids."
-            Lo sleep blush "Ohhh..."
-            $ renpy.pause (0.5)
-            if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
-                show lorem shy bangok pissleak at center
-                hide black
-                with dissolvemed
+            if persistent.bangok_inflation == True:
+                m "Then I eased out of them, pulling out of their bloated womb with a small cascade of my fluids."
+                Lo sleep blush "Ohhh..."
+                $ renpy.pause (0.5)
+                if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
+                    show lorem shy bangok bulge pissleak at center
+                    hide black
+                    with dissolvemed
+                else:
+                    show lorem shy bangok bulge cumleak at center
+                    hide black
+                    with dissolvemed
             else:
-                show lorem shy bangok cumleak at center
-                hide black
-                with dissolvemed
+                m "Then I eased out of them, pulling out of their breached innermost gate with a small cascade of my fluids."
+                Lo sleep blush "Ohhh..."
+                $ renpy.pause (0.5)
+                if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
+                    show lorem shy bangok pissleak at center
+                    hide black
+                    with dissolvemed
+                else:
+                    show lorem shy bangok cumleak at center
+                    hide black
+                    with dissolvemed
     else:
         show lorem shy:
-            ease 1.0 ypos 1.198
+            ease 1.0 ypos 1.197
             ease 0.5 ypos 1.2
-            ease 0.5 ypos 1.198
+            ease 0.5 ypos 1.197
             block:
                 ease 0.15 ypos 1.2
-                ease 0.5 ypos 1.198
+                ease 0.5 ypos 1.197
                 repeat
         with None
         m "I began, gently at first, to thrust into Lorem. Their tight inner walls stretched and molded around my length, gripping and squeezing just tightly enough to feel amazing, but weakly enough not to impede my progress."
@@ -1008,7 +1048,7 @@ label bangok_four_lorem4_maleplayer_carry:
 
         m "Lorem's arms around my neck tightened, keeping me from pushing too far inside them."
         m "Their dragonhood twitched, leaking a sticky trail up and down beneath my navel as it rubbed between us."
-        Lo happy bangok shy "Farther out. L-Lift me up more..."
+        Lo normal bangok shy "Farther out. L-Lift me up more..."
         show lorem happy bangok shy:
             ease 0.15 ypos 1.2
             ease 0.5 ypos 1.195
@@ -1018,10 +1058,10 @@ label bangok_four_lorem4_maleplayer_carry:
         Lo "Ah...{w=0.65} Nhh...{w=0.65} Right...{w=0.65} There...{w}"
         m "Their tight passage squeezed all the harder, in undulating waves that slid, maddeningly in their stimulation, over all my tip's most sensitive areas."
         m "Their arms limpened, trusting me to go a little bit deeper, though still short of their innermost gate or my full length."
-        Lo "[player_name]...{w=0.65} Nngh...{w=1.3} I...{w}"
+        Lo bangok aheago1 "[player_name]...{w=0.65} Nngh...{w=1.3} I...{w}"
         play sound "fx/varagrowl.ogg"
         play sound2 "fx/extinguish.ogg"
-        show lorem bangok aheago1:
+        show lorem bangok aheago2:
             ease 0.15 ypos 1.20
             ease 0.5 ypos 1.198
             repeat
@@ -1056,7 +1096,7 @@ label bangok_four_lorem4_maleplayer_carry:
                 Lo sleep blush "Ohhh..."
                 m "Lorem moanned as I pulled out, somehow remaining cognizant of their request not to put pressure on their cervix."
                 $ renpy.pause (0.5)
-                show lorem shy bangok erect at center with dissolve
+                show lorem shy bangok erect at center behind black with dissolve
             elif persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
                 m "I came, my twitching length stringing rope after rope of sticky seed across Lorem's piss-stainend innermost gate."
             else:
@@ -1108,7 +1148,7 @@ label bangok_four_lorem4_maleplayer_carry:
             Lo "I think I need to ask Ipsum to focus on just my vagina more."
 
 
-    if persistent.bangok_inflation == True and bangok_four_lorem4_store.protection == False:
+    if persistent.bangok_inflation == True and (bangok_four_lorem4_store.protection == False or bangok_four_lorem4_store.condom_left_in == True):
         Lo "And to be this full..."
 
     c "Feels good, huh?"
