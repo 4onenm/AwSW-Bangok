@@ -94,6 +94,7 @@ label bangok_four_xdamion_fuck:
         anchor (0.5,1.0)
         pos (0.6,1.0)
     with dissolve
+    $ chap2damionquestions = 0
     $ renpy.pause(0.5)
     if bangok_four_playerhasdick is None:
         m "At the sight of his exotic, tapered penis, I felt a welling of heat in my groin..."
@@ -423,6 +424,7 @@ label bangok_four_xdamion_ws_fuck:
         anchor (0.5,1.0)
         pos (0.6,1.0)
     with dissolve
+    $ chap2damionquestions = 0
     m "The smell of urine hit me immediately, wafting from his groin."
     c "Wh-- Are you dribbling piss on yourself?"
     Dm face bangok ws "Before you arrived, I was trying to stave off having to go to the bathroom, to complete what I was working on."
@@ -851,7 +853,7 @@ label bangok_four_xdamion_cleanup:
             m "His cock hung before me, slathered in our coital juices and traces of his piss."
         else:
             if persistent.bangok_inflation == True:
-                m "My heavy, wombful cum nearly put me off balance as I, and it, settled."
+                m "My heavy, wombful of cum nearly put me off balance as I, and it, settled."
             Dm arrogant bangok "Good slut."
             m "His cock hung before me, slathered in our coital juices."
     else:
