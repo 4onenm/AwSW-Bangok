@@ -667,9 +667,9 @@ label bangok_four_xipsum2_ionahole:
             Ip "Just returning the favor from your entry."
             Ip "We did start this conversation on the premise of using each other as sex toys."
             Ip happy bangok blush flip "Enjoy yourself."
-            m "Thankfully, his relenntless entry came to an end, as I felt one of his belly plates against my ass, through the disk."
+            m "Thankfully, his relentless entry came to an end, as I felt one of his belly plates against my ass, through the disk."
         else:
-            m "Away in the other room, he couldn't hear my complaint. Thankfully, his relenntless entry came to an end, as I felt one of his belly plates against my ass, through the disk."
+            m "Away in the other room, he couldn't hear my complaint. Thankfully, his relentless entry came to an end, as I felt one of his belly plates against my ass, through the disk."
         m "Adjusting his grip, he began to pull himself back out, before switching directions and thrusting again over the lowest quarter of his shaft."
 
     m "Not wanting to be left out, I reached for my crotch, pulling on the disk to Ipsum's ass, drawing myself back out for another thrust."
@@ -826,11 +826,11 @@ label bangok_four_xipsum2_ionahole:
             m "I gagged, thick blasts of cum abruptly bloating Ipsum's condom tips in my mouth."
             m "I hilted myself in Ipsum, then pulled his twin lengths from my mouth, watching with fascination as his twitching shafts filled their respective condom reservoirs, and then some."
         elif bangok_four_xipsum2_store.scene_subtype == "anal1":
-            m "He stopped, hilted inside me, then his shaft hilted inside me twitched and pulsed, warm seed filling his condom reservoir as he came."
+            m "He stopped, hilted inside me, then his shaft twitched and pulsed, warm seed filling his condom reservoir as he came."
             if bangok_four_xipsum2_store.separate == False:
                 m "I hilted myself in Ipsum, then looked over, watching with fascination as his spare shaft filled its condom reservoir too."
         else:
-            m "Hilted inside me, his shafts twitched and pulsed, filling twin warm balloons of sticky white within me."
+            m "Hilted inside, his shafts twitched and pulsed, filling twin warm balloons of sticky white within me."
     else:
         if bangok_four_xipsum2_store.suck_spare == True or bangok_four_xipsum2_store.scene_subtype == "oral":
             m "I gagged, thick blasts of cum coating my mouth and throat as I struggled to swallow."
@@ -931,7 +931,7 @@ label bangok_four_xipsum2_ionahole:
             menu:
                 "H-Hey!":
                     c "I didn't say you could do that!"
-                    Ip normal bangok briefs flip "I apologize. I assumed that because it wouldn't affect your ability to leave today, it wouldn't have as great a concern for you."
+                    Ip normal bangok briefs "I apologize. I assumed that because it wouldn't affect your ability to leave today, it wouldn't have as great a concern for you."
                     m "He spread his arms, indicating the lack of connection between us."
                     c "... Huh."
                 "Oh.":
