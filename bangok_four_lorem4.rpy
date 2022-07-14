@@ -1353,7 +1353,7 @@ label bangok_four_lorem4_maleplayer_toy:
     Lo "H-Haaah... Ohhh I... Mmmh..."
     $ renpy.pause (0.5)
 
-    if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed is None or bangok_four_lorem4_store.player_pissed == "vag" and bangok_four_lorem4_store.protection == False:
+    if persistent.bangok_watersports == True and (bangok_four_lorem4_store.player_pissed is None or bangok_four_lorem4_store.player_pissed == "vag") and bangok_four_lorem4_store.protection == False:
         m "Then my bladder reminded me of its presence, with a twinge indicating it was near capacity."
         if bangok_four_lorem4_store.player_pissed == "vag":
             c "Is my little sex toy ready to be a little urinal?"
@@ -1406,6 +1406,7 @@ label bangok_four_lorem4_maleplayer_toy:
             ease 0.15 ypos 1.21
             repeat
         with None
+        play soundloop "fx/rub2.ogg" fadein 0.5
         m "Squeezing Lorem's hips, I lifted them and yanked back down, getting into things with more vigor as my toy adapted to me."
         if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
             if persistent.bangok_inflation == True:
@@ -1429,8 +1430,9 @@ label bangok_four_lorem4_maleplayer_toy:
 
         menu:
             "Give them a break.":
+                stop soundloop fadeout 0.5
                 show lorem bangok aheago2:
-                    ease 0.15 ypos 1.21
+                    ease 0.25 ypos 1.21
                 with None
                 m "I pulled Lorem back to my base, enjoying the straining undulations of their canal as they tried to get me off."
                 m "I was close, but not that close."
@@ -1450,11 +1452,52 @@ label bangok_four_lorem4_maleplayer_toy:
                 c "You're sure? You don't need any more time?"
                 Lo think hard blush "Y-You're not exactly giving me a break by being all the way in my womb."
                 c "Fair enough."
-            "Keep fucking.":
                 jump todo_out_of_content_bangok_four_lorem4
+            "Keep fucking.":
+                m "Lorem's mouth hung open, lost in their ecstacy as I used their spasming canal to focus on myself."
+                m "I was close, but not close enough I felt I could get off from their orgasm."
 
+                show lorem relieved shy:
+                    ease 0.5 ypos 1.204
+                    ease 0.15 ypos 1.208
+                    repeat
+                with None
+                m "Nearing my peak, I lifed Lorem off just a bit more, so that their stretched cervix closed around my tip and I got to spread it around me anew."
+                m "Lorem twitched and shook, inner walls undulating around me, bringing me right up to my edge."
+        stop soundloop fadeout 0.5
+        show lorem happy bangok shy:
+            ease 0.15 ypos 1.21
+        with None
+        play sound "fx/extinguish.ogg"
+        show black with dissolve
+        if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
+            if persistent.bangok_inflation == True:
+                m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft to add to the piss inflating their womb."
+                m "Spurt after spurt travelled up, until the liquid in their womb felt like a thick slurry and I felt their belly pressing back slightly against my hands on their hips."
+            else:
+                m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft to spurt over the piss defiling their womb."
+        else:
+            if bangok_four_lorem4_store.protection == True:
+                m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft spurt into my conndom's reservoir, nestled in the depths of their womb."
+                if persistent.bangok_inflation == True:
+                    m "Squished against their womb's rear wall, my cum flowed back around my head, until it felt like my condom was expanding to fill all room in the small space."
+            else:
+                m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft spurt over the walls of their womb."
+                if persistent.bangok_inflation == True:
+                    m "Spattering back from their womb's far wall, my cum flowed back around my head, until it felt like my load had completely packed Lorem's small, innermost space."
+        show lorem sleep blush
+        hide black
+        with dissolveslow
+        # TODO: Bulge
+        m "I came back down from my peak slowly, hilted in my smiling little toy."
     else:
         jump todo_out_of_content_bangok_four_lorem4
+
+        show lorem sleep blush
+        hide black
+        with dissolveslow
+
+
 
     jump todo_out_of_content_bangok_four_lorem4
 
