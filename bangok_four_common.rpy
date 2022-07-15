@@ -370,6 +370,18 @@ init:
         (0,0),"cr/bangok/lorem_penis.png"
     )
     image lorem think bangok bulge erect flip = im.Flip(renpy.display.image.ImageReference('lorem think bangok bulge erect'),horizontal=True)
+    image lorem blush bangok bulge erect = im.Composite(
+        (1240,650),
+        (0,0),"cr/lorem_blush.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_penis.png"
+    )
+    image lorem happy bangok shy bulge erect = im.Composite(
+        (1240,650),
+        (0,0),"cr/bangok/lorem_Happy+blush.png",
+        (0,0),"cr/bangok/lorem_bulge.png",
+        (0,0),"cr/bangok/lorem_penis.png"
+    )
 
     image lorem normal bangok cumleak = im.Composite(
         (1240,650),

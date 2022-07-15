@@ -1230,6 +1230,8 @@ label bangok_four_lorem4_maleplayer_carry:
 
     Lo "This was amazing!"
 
+    label bangok_four_lorem4_epilogue_merge:
+
     $ bangok_four_lorem4_store.lorem_filled_expression('shy')
     with dissolve
 
@@ -1402,11 +1404,11 @@ label bangok_four_lorem4_maleplayer_toy:
 
     if persistent.bangok_cervpen == True and bangok_four_lorem4_store.cerv_pen == True:
         show lorem bangok aheago1:
-            ease 0.5 ypos 1.205
+            ease 0.5 ypos 1.2
             ease 0.15 ypos 1.21
             repeat
         with None
-        play soundloop "fx/rub2.ogg" fadein 0.5
+        play soundloop "fx/rub2.ogg" fadein 1.5
         m "Squeezing Lorem's hips, I lifted them and yanked back down, getting into things with more vigor as my toy adapted to me."
         if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
             if persistent.bangok_inflation == True:
@@ -1452,14 +1454,41 @@ label bangok_four_lorem4_maleplayer_toy:
                 c "You're sure? You don't need any more time?"
                 Lo think hard blush "Y-You're not exactly giving me a break by being all the way in my womb."
                 c "Fair enough."
-                jump todo_out_of_content_bangok_four_lorem4
+
+                show lorem shy:
+                    ypos 1.20
+                with ease
+                m "Gently, I began to lift them again, testing the waters and their arousal after their orgasm."
+                show lorem blush:
+                    ypos 1.21
+                with ease
+                Lo blush "Nnmh."
+                Lo normal blush "You can go faster than that."
+                show lorem shy:
+                    ypos 1.20
+                with ease
+                show lorem shy:
+                    ypos 1.21
+                with ease
+                $ renpy.pause (0.1)
+                play soundloop "fx/rub2.ogg" fadein 2.5
+                show lorem happy bangok shy:
+                    ease 0.5 ypos 1.20
+                    ease 0.15 ypos 1.21
+                    repeat
+                with None
+                $ renpy.pause (0.8)
+                m "Lorem's slick canal slid around my shaft as I pumped them up and down, squeezing and urging me closer to my release."
+                $ renpy.pause (0.8)
+                m "I thrust a little with my hips up into them, my edge moments away."
+                $ renpy.pause (0.4)
             "Keep fucking.":
                 m "Lorem's mouth hung open, lost in their ecstacy as I used their spasming canal to focus on myself."
                 m "I was close, but not close enough I felt I could get off from their orgasm."
 
                 show lorem relieved shy:
-                    ease 0.5 ypos 1.204
-                    ease 0.15 ypos 1.208
+                    ease 0.5 ypos 1.19
+                    ease 0.15 ypos 1.21
                     repeat
                 with None
                 m "Nearing my peak, I lifed Lorem off just a bit more, so that their stretched cervix closed around my tip and I got to spread it around me anew."
@@ -1485,10 +1514,9 @@ label bangok_four_lorem4_maleplayer_toy:
                 m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft spurt over the walls of their womb."
                 if persistent.bangok_inflation == True:
                     m "Spattering back from their womb's far wall, my cum flowed back around my head, until it felt like my load had completely packed Lorem's small, innermost space."
-        show lorem sleep blush
+        show lorem normal bangok bulge erect
         hide black
         with dissolveslow
-        # TODO: Bulge
         m "I came back down from my peak slowly, hilted in my smiling little toy."
     else:
         jump todo_out_of_content_bangok_four_lorem4
@@ -1497,9 +1525,64 @@ label bangok_four_lorem4_maleplayer_toy:
         hide black
         with dissolveslow
 
+    $ renpy.pause (0.8)
+    if persistent.bangok_inflation == True:
+        c "You felt amazing. Sure filled you up too, huh?"
+        Lo shy bangok bulge erect "Yeah."
+        Lo blush bangok bulge erect "That felt amazing."
+        c "Oh, I uh... should probably pull out."
+        Lo shy bangok bulge erect "Probably..."
+        show lorem happy bangok shy bulge erect with dissolve
+        $ renpy.pause (0.1)
+        hide lorem with dissolve
+    else:
+        c "You felt amazing. So tight."
+        Lo shy "T-Thanks."
+        Lo blush "That felt a lot better than I was expecting."
+        c "Oh, I uh... should probably pull out."
+        Lo shy "Probably..."
+        show lorem happy bangok shy with dissolve
 
+    $ renpy.pause (0.1)
 
-    jump todo_out_of_content_bangok_four_lorem4
+    if persistent.bangok_cervpen == True and bangok_four_lorem4_store.cerv_pen == True:
+        if bangok_four_lorem4_store.protection == True:
+            if persistent.bangok_inflation == True:
+                m "I tried to lift them off of my shaft, but my condom's bloated reservoir was too large to slip out of Lorem's stretched womb."
+                Lo scared "Nngh!"
+                menu:
+                    "Keep pulling.":
+                        $ bangok_four_lorem4_store.condom_left_in = False
+                        $ renpy.pause (0.5)
+                        Lo relieved shy "Ough!"
+                        Lo sleep blush "Ohhh..."
+                        Lo normal blush eyes brows "... I wonder if that's what laying feels like."
+                    "Leave it.":
+                        $ bangok_four_lorem4_store.condom_left_in = True
+                        $ renpy.pause (0.5)
+                        m "I tugged on the condom, easing it off of my shaft so I could slip out of Lorem's passage."
+                        Lo normal blush eyes "Nnh... What are you..."
+                        m "Then I twisted off the end, to make sure it wouldn't leak inside them."
+                        Lo think hard blush "Oh. That... could be hard to get out later."
+            else:
+                hide lorem with dissolve
+                m "I lifted them off my shaft, sliding out of their breached innermost gate with the condom-wrapped blob of my seed."
+                Lo relieved shy "Ough!"
+                Lo sleep blush "Ohhh..."
+        else:
+            hide lorem with dissolve
+            if persistent.bangok_inflation == True:
+                m "I lifted Lorem's stuffed womb off my length and they gasped. A slick flow of my fluids followed my head, soaking into their stretched canal."
+            else:
+                m "I lifted Lorem's innnermost gate off my length and they gasped. A slow drip of my fluids followed my head, dribbling down into their stretched canal."
+            Lo sleep blush "Ohhh..."
+    else:
+        jump todo_out_of_content_bangok_four_lorem4
+
+    $ renpy.pause (0.5)
+
+    m "Then, careful not to jostle their lower body, I seated them on the edge of the table."
+    jump bangok_four_lorem4_epilogue_merge
 
 
 label todo_out_of_content_bangok_four_lorem4:
