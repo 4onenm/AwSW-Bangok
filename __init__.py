@@ -182,6 +182,25 @@ def bryce1_afterparty():
         .link_from('bangok_four_bryce1_bryce2fix_end')
 
 
+def bryce2_feet():
+    ( ml.find_label('bryce2')
+        .search_menu("Color me impressed.")
+        .add_choice("[[Feel more of his foreleg.]", jump='bangok_four_bryce2_explorepaw', condition=make_dev('True'))
+        .link_behind_from('bangok_four_bryce2_explorepaw_end')
+        .search_say("Hey, I'm gonna grab myself a beer. You want one?")
+        .link_from('bangok_four_bryce2_canon_beer')
+        .search_say("You know what? I don't believe you.")
+        .hook_to('bangok_four_bryce2_show_bryce_no_tail', condition=make_dev('bangok_four_bryce2_unplayed == False'), return_link=False)
+        .search_menu("[[Show him.]")
+        .link_behind_from('bangok_four_bryce2_show_bryce_no_tail_end')
+        .search_if('bryce2mood > 10',depth=400)
+        .branch_else()
+        .search_say("Really? Is that how you are going to talk to me?")
+        .link_from('bangok_four_bryce2_canon_jerk_ending')
+        .search_say("Don't let the door hit your tail on the way out.")
+        .link_from('bangok_four_bryce2_canon_jerk_ending_departure')
+    )
+
 
 def bryce3_afterparty():
     ( ml.find_label('_call_skiptut_26')
@@ -353,6 +372,7 @@ def link_scenes():
     anna4()
     anna_x_damion()
     bryce1_afterparty()
+    bryce2_feet()
     bryce3_afterparty()
     lorem4()
     remy_c4postsections()

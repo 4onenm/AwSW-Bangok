@@ -244,6 +244,15 @@ init:
     image bangok_four_bryce_underside_large dk = im.Recolor("cr/bryce_underside_large.png", 70, 70, 100, 255)
     image bangok_four_bryce_underside_large dk flip = im.Recolor(im.Flip("cr/bryce_underside_large.png",horizontal=True), 70, 70, 100, 255)
 
+    image bryce normal bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_normal_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
+    image bryce brow bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_brow_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
+    image bryce flirty bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_flirty_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
+    image bryce laugh bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_laugh_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
+    image bryce smirk bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_smirk_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
+    image bryce stern bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_stern_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
+    image bryce sad bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_sad_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
+
+
     image damion normal bangok = im.Composite(
         (709,827),
         (0,0),"cr/damion_normal.png",
