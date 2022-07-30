@@ -13,7 +13,7 @@ init python in bangok_four_bryce2_store:
 
     player_came = False
     bryce_came = False
-    player_swallowed = False
+    cumlube = False
 
 label bangok_four_bryce2_explorepaw:
     $ renpy.pause (0.5)
@@ -123,7 +123,7 @@ label bangok_four_bryce2_explorepaw:
     c "You keep these really clean."
     Br "Yeah. Keep the floor clean too, 'cause why would I want to live in a mess?"
     Br "Combine that with me have a little time off right now, which is why I invited you over instead of heading back out to the crime scenes."
-    Br sad flip "Haven't actually been outside yet today, 'cause I'm worried I'd just go right back to work and not get any rest in."
+    Br stern flip "Haven't actually been outside yet today, 'cause I'm worried I'd just go right back to work and not get any rest in."
     $ renpy.pause (0.5)
     Br brow flip "You know, I didn't invite you over just to let you give me massages. I'm supposed to be hosting. That means entertaining you, not the other way around."
     Br normal flip "I'm good on the massages if you are."
@@ -245,6 +245,7 @@ label bangok_four_bryce2_hindpaw_menu:
                 Br laugh "Mmmh. That's the spot."
             "Suck a claw." if bangok_four_bryce2_store.hindpaw_suckle == False:
                 $ renpy.pause (0.5)
+                $ bangok_four_bryce2_store.hindpaw_suckle = True
                 m "I took one of Bryce's claws into my mouth, running the cold keratin across my tongue as I worked my way down to where the claw emerged."
                 Br smirk "H-Huh. That's a feeling."
                 m "I let his claw go."
@@ -252,6 +253,7 @@ label bangok_four_bryce2_hindpaw_menu:
                 Br smirk "Pretty good, yeah. Just, like, the little bit of contact around the tip of my toe, base of the claw. Dunnno how to describe it."
             "Lick the pad." if bangok_four_bryce2_store.hindpaw_lick == False:
                 $ renpy.pause (0.5)
+                $ bangok_four_bryce2_store.hindpaw_lick = True
                 m "My tongue rubbed across Bryce's smooth scales on the sole of his foot, pounded smooth by years of supporting his weight and motion."
                 m "Bryce shifted tail flicking."
                 Br brow "That tickles a little. Can't really feel it, though."
@@ -278,12 +280,12 @@ label bangok_four_bryce2_hindpaw_menu:
         m "It was hard to ignore the..."
         menu:
             m "It was hard to ignore the...{fast}"
-            "... hardness of my shaft in my pants":
+            "... tent in my pants":
                 $ bangok_four_playerhasdick = True
             "... damp spot forming in my pants":
                 $ bangok_four_playerhasdick = False
     if bangok_four_playerhasdick == True:
-        m "It was hard to ignore the hardness of my shaft in my pants at Bryce's suggestion."
+        m "It was hard to ignore the tent in my pants at Bryce's suggestion."
     else:
         m "It was hard to ignore the damp spot forming in my pants from Bryce's suggestion."
 
@@ -316,7 +318,61 @@ label bangok_four_bryce2_hindpaw_menu:
 
 label bangok_four_bryce2_footjob:
     m "Bryce worked his legs, trying to comfortably put his feet at my crotch height while he reclined on his couch."
+    if bangok_four_playerhasdick == True:
+        m "I examined his scaly walking pads, heady with arousal from what I was about to do."
+        Br brow "Sorry for my claws being sharp, but you know the job I'm in doesn't exactly allow for me to cut them back."
+        c "I'm not exactly fucking your claws, right?"
+        Br laugh "Fair enough!"
+        show bryce normal with dissolve
+        if bangok_four_bryce2_store.cumlube == True:
+            m "I pressed his feet together around my length, toes toward my tip, squeezing up and down to spread his cum out over his soles and my length."
+            m "Then he gently began to move, his slickened feet moving easily up until he was just gripping my tip, then back down to press on both sides of my rock-hard shaft."
+        else:
+            m "I pressed his feet together around my length, toes toward my tip, feeling the just-slightly-rough texture of his soles squeezing in around my privates."
+            m "Then he gently begann to move, his textured pads scraping over my rock-hard shaft in a way that left my knees weak from the overstimulation."
+        m "As he pushed back down, the force of his feet bumping my pelvis almost put me just past off-balancce, only caught by his quick thinking to tug me forward again with his toes gripped around my tip."
+        c "O-Ow! H-Hey, don't rip it off!"
+        Br laugh "Sorry."
+        Br smirk "Trying not to knock you over and all."
+        m "As he loosened up his toes, blood flowed back into the end of my member, leaving my groin flushed with heat, and a new idea in my head."
+        menu:
+            "Fuck his toes.":
+                c "Could you interlace your toes again?"
+                Br brow "Hm?"
+                m "Bryce did as asked, "
+
+            "Fuck the arch of his feet.":
+                jump todo_out_of_content_bangok_four_bryce2
+
+        jump todo_out_of_content_bangok_four_bryce2
+    elif bangok_four_playerhasdick == False:
+        m "I examined his scaly walking pads, heady with the choices before me."
+        Br brow "Sorry for my claws being sharp, but you know the job I'm in doesn't exactly allow for me to cut them back."
+        Br stern "It's, ah, probably not a good idea for you to put any of them in you, considering that's not safe even for female dragons."
+        c "Makes sense."
+        show bryce normal with dissolve
+        # Maybe another scene, or another writer, can spread these out.
+        # But I don't want to write two versions of four more ways of fucking his feet rn.
+        # label bangok_four_bryce2_footjob_f_menu:
+        #     menu:
+        #         "Rub his sole over your crotch.":
+        #         "Grind on his toe knuckles.":
+        #         "Grind on the sides of his feet.":
+        #         "Fuck his heel.":
+        if bangok_four_bryce2_store.cumlube == True:
+            m "I pressed his feet together, then pressed his soles to my mound, squeezing his cum between his feet and my wet, needy hole."
+        else:
+            m "I pressed his feet together, then pressed his soles to the slick slit between my legs, massaging my mound with his flat, scaly pads."
+        m "His force back was minimal as I began to grind myelf lightly across his feet, seeking more stimulation."
+        c "Making me do all the work?"
+        Br laugh "I'd do more, but I don't want to kick you across the room on accident."
+        Br smirk "Besides, it looks like you're having fun this way."
+        jump todo_out_of_content_bangok_four_bryce2
+    else:
+        $ renpy.error ("Excuse the binary, but you must either have a penis or not have one.")
+
     jump todo_out_of_content_bangok_four_bryce2
+
 
 label bangok_four_bryce2_worship:
     m "Bryce splayed his hindlegs, welcoming me in to his crotch."
@@ -400,27 +456,44 @@ label bangok_four_bryce2_worship:
     menu:
         "[[Scoop some on your groin as lube.]" if bangok_four_bryce2_store.player_came == False:
             $ renpy.pause (0.5)
+            $ bangok_four_bryce2_store.cumlube = True
             Br flirty "If you like my seed that much, maybe I should've just put this rod of mine inside you."
             c "But then I wouldn't get to play with these."
             Br smirk "Oh?"
             jump bangok_four_bryce2_footjob
         "[[Scoop some on his hindpaws as lube.]" if bangok_four_bryce2_store.player_came == False:
             $ renpy.pause (0.5)
+            $ bangok_four_bryce2_store.cumlube = True
             Br laugh "What are you trying to do, make me leave a bunch of footprints under a UV light?"
             c "Nope. Just making these more fun to play with."
             Br smirk "Oh?"
             jump bangok_four_bryce2_footjob
         "[[Help lick it up.]":
-            $ bangok_four_bryce2_store.bryce_came = "inside"
-            jump todo_out_of_content_bangok_four_bryce2
-        "Sorry, Bryce. I don't know if I can help with that much.":
+            $ renpy.pause (0.5)
+            if bangok_four_bryce2_store.bryce_came == "outside":
+                if persistent.bangok_inflation == True:
+                    m "I caught the puddle on Bryce's belly before it could dribble down to the ccouch, collecting with a hand until I could get my face in position to start licking up his cum."
+                    m "Bryce's belly plates moved beneath my lapping tongue as he lay back and enjoyed my work, while his sticky forepaws awaited my ministrations."
+                    m "Finished enough with his belly I didn't think what was left would run anywhere, I took Bryce's front feet and held them next to each other, lapping up with my already cream-covered tongue."
+                else:
+                    m "I took Bryce's sticky front feet and held them next to each other, lapping up the thick ropes of white."
+            else:
+                if persistent.bangok_inflation == True:
+                    m "Holding bryce's sticky front feet next to each other, I licked slowly at the thick ropes of white, finding it difficult to swallow too much, as I already felt full from the main course."
+                else:
+                    m "Holding bryce's sticky front feet next to each other, I lapped up what I'd spilled, cleaning the pads of his feet of his mess."
+            m "When I finished, the flat, scaly pads of Bryce's forepaws had a glistening, polished shine."
+            Br laugh "If only I could get you to tongue-bath all of me like that."
+
+            $ bangok_four_bryce2_store.bryce_came = "cleaned"
+        "Sorry, Bryce. I don't know if I can help with that.":
             $ renpy.pause (0.5)
             Br laugh "Ah, heck it. Worth a shot to see you using that mouth of yours on me some more."
             m "Bringing his forepaws up to his maw, Bryce licked up his own ejaculate, making quick work of what might've taken me several minutes."
             if bangok_four_bryce2_store.bryce_came == "outside":
                 m "Then he curled forward, doing the same for what had landed on his belly plates, though he missed many more spots, and it was too late to stop some from dripping into the couch."
 
-            $ bangok_four_bryce2_store.bryce_came = "inside"
+            $ bangok_four_bryce2_store.bryce_came = "cleaned"
 
     if bangok_four_bryce2_store.player_came == False:
         Br smirk "Guess now it's time for me to give you a hand. Or foot. Or feet."
