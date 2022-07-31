@@ -183,6 +183,13 @@ def bryce1_afterparty():
 
 
 def bryce2_feet():
+
+    ( ml.find_label('_call_skiptut_6')
+        .search_menu("Yes. I want to skip ahead.")
+        .branch()
+        .hook_to('bangok_four_bryce2_skipmenu', condition='persistent.nsfwtoggle == True')
+    )
+
     ( ml.find_label('bryce2')
         .search_menu("Color me impressed.")
         .add_choice("[[Feel more of his foreleg.]", jump='bangok_four_bryce2_explorepaw', condition=make_dev('True'))

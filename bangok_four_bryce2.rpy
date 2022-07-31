@@ -15,6 +15,36 @@ init python in bangok_four_bryce2_store:
     bryce_came = False
     cumlube = False
 
+
+label bangok_four_bryce2_skipmenu:
+    play sound "fx/system3.wav"
+    s "Would you like to lewd Bryce's feet?"
+    menu:
+        "Yes. I would like to lewd Bryce's feet.":
+            play sound "fx/system3.wav"
+            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
+            else:
+                s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                scene black with dissolvemed
+                $ renpy.pause (1.0)
+
+                $ persistent.skipnumber += 1
+                call skipcheck from _bangok_four_call_skipcheck_bryce2_1
+
+                $ bryce2mood += 1
+
+                scene pad at Pan ((0, 360), (0,360), 0.0)
+                show bryce brow bangok foreleg flip
+                with dissolvemed
+
+                play music "mx/campfire.ogg" fadein 2.0
+                jump bangok_four_bryce2_explorepaw
+        "No. Not that far.":
+            pass
+    jump bangok_four_bryce2_skipmenu_return
+
+
 label bangok_four_bryce2_explorepaw:
     $ renpy.pause (0.5)
     m "I slid my hand lower on Bryce's foreleg, feeling the rough bumps and scales on his foreleg protecting the thick knots of muscle that gave him his strength."
@@ -155,7 +185,7 @@ label bangok_four_bryce2_explorepaw:
 
     $ renpy.pause (0.5)
     c "I'd say I'm pretty entertained right now."
-    if bryce2mood < -1:
+    if bryce2mood < 0:
         show bryce stern with dissolve
         m "Bryce pulled his foot back with a glare."
         Br "You know what? No. You've insulted me enough already. You can stop being a creep over my legs or you can leave. Make your choice."
