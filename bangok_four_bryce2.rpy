@@ -92,7 +92,7 @@ label bangok_four_bryce2_explorepaw:
                     $ renpy.pause (0.5)
                     Br "... a foot massage?"
                     c "I mean, it's the least I could do after, uh, trying to tickle you."
-                    Br laugh banok foreleg flip "Ha! Okay, sure I guess."
+                    Br laugh bangok foreleg flip "Ha! Okay, sure I guess."
                     Br normal bangok foreleg flip "Not like I'm going to turn that down. I mean, free? Can't beat that price."
 
         "Uh. Do you want me to stop?":
@@ -259,7 +259,7 @@ label bangok_four_bryce2_hindpaw_menu:
                 Br brow "That tickles a little. Can't really feel it, though."
         jump bangok_four_bryce2_hindpaw_menu
 
-    show bryce laugh flip
+    show bryce laugh
     hide black
     with dissolvemed
 
@@ -269,9 +269,9 @@ label bangok_four_bryce2_hindpaw_menu:
         m "As I switched to Bryce's other hindleg to apply the same treatments, Bryce let out a breath."
 
     if bangok_four_bryce1_unplayed == False:
-        Br laugh flip "I know I said no sex, but damnit if you worshiping my feet like that isn't getting me going."
+        Br laugh "I know I said no sex, but damnit if you worshiping my feet like that isn't getting me going."
     else:
-        Br laugh flip "I didn't invite you over for this kind of thing, and heck, it might be a diplomatic incident, but damnit if you worshiping my feet like that isn't getting me going."
+        Br laugh "I didn't invite you over for this kind of thing, and heck, it might be a diplomatic incident, but damnit if you worshiping my feet like that isn't getting me going."
 
     Br smirk "What about my feet pressing you into something else of mine? Or I could put my feet on something of yours?"
 
@@ -330,21 +330,63 @@ label bangok_four_bryce2_footjob:
         else:
             m "I pressed his feet together around my length, toes toward my tip, feeling the just-slightly-rough texture of his soles squeezing in around my privates."
             m "Then he gently begann to move, his textured pads scraping over my rock-hard shaft in a way that left my knees weak from the overstimulation."
-        m "As he pushed back down, the force of his feet bumping my pelvis almost put me just past off-balancce, only caught by his quick thinking to tug me forward again with his toes gripped around my tip."
+        m "As he pushed back down, the force of his feet bumping my pelvis almost put me just past off-balance, only caught by his quick thinking to tug me forward again with his toes gripped around my tip."
         c "O-Ow! H-Hey, don't rip it off!"
         Br laugh "Sorry."
         Br smirk "Trying not to knock you over and all."
         m "As he loosened up his toes, blood flowed back into the end of my member, leaving my groin flushed with heat, and a new idea in my head."
-        menu:
-            "Fuck his toes.":
-                c "Could you interlace your toes again?"
-                Br brow "Hm?"
-                m "Bryce did as asked, "
+        # menu:
+        #     "Fuck his toes.":
+        c "Could you interlace your toes again?"
+        Br brow "Hm?"
+        m "Bryce did as asked, wrapping his toes and claws together in a dense knot of scales and keratin."
+        m "His legs clearly strained at the angle."
+        Br laugh "Testing the limits of my articulation, here."
+        c "It'll be worth it."
+        if bangok_four_bryce2_store.cumlube == True:
+            m "Tugging his cum-sticky feet slightly further apart, I opened a small hole framed by a couple toes, then thrust in."
+            m "The feeling was exquisite. I kneaded the top of his feet, pressing his soles into my pelvis as his toes clenched around my length."
+        else:
+            m "Tugging his feet slightly further apart, I opened a small hole framed by a couple toes, then thrust in."
+            m "The coupling was rough, but pressed in all the right places. I kneaded the top of his feet, holding his soles against my pelvis as his toes clenched around my length."
+        play soundloop "fx/rub2.ogg" fadein 0.5
+        $ renpy.pause (0.5)
+        m "I began to thrust for real, fucking between his toes as he chuckled beneath me."
+        Br smirk "C-Can't say I've ever felt that before."
+        $ renpy.pause (0.8)
+        Br pant "Right there in the little spots between my toes. Mmnh."
 
-            "Fuck the arch of his feet.":
-                jump todo_out_of_content_bangok_four_bryce2
+        if bangok_four_bryce2_store.cumlube == True:
+            m "Bryce's cum squelched less and less against my crotch as I neared my release, the hole made by his interlaced toes kneading the top and bottom of my shaft with the tips where they turned from scales to keratin, even as his feet separated a little from my pace."
+        else:
+            m "I had no words as I neared my release, the hole made by his interlaced toes kneading the top and bottom of my shaft with the tips where they turned from scales to keratin, even as his feet separated a little from my pace."
 
-        jump todo_out_of_content_bangok_four_bryce2
+        #     "Fuck the arch of his feet.":
+        #         jump todo_out_of_content_bangok_four_bryce2
+
+
+        stop soundloop fadeout 0.5
+        play sound "fx/rub1.ogg" fadein 0.5
+        queue sound "fx/extinguish.ogg"
+        $ bangok_four_bryce2_store.player_came = True
+        $ renpy.pause (1.8)
+
+        if bangok_four_bryce2_store.cumlube == True:
+            m "My load was paltry in comparison to what Bryce's had been, but still left a few white ropes around his genital slit, where he pointed my shaft as I came."
+        else:
+            if bangok_four_bryce2_store.bryce_came == "outside" or bangok_four_bryce2_store.bryce_came == "cleaned":
+                m "Bryce tugged my shaft downward as I came, stringing my white ropes of seed across his genital slit, joining the remains of what he'd already left behind."
+            else:
+                m "Bryce tugged my shaft downward as I came, stringing my white ropes of seed across his genital slit in a display of affection for his exquisite footwork."
+
+        $ renpy.pause (0.8)
+        Br laugh "I've gotta have you over for more \"foot massages.\""
+        if bangok_four_bryce2_store.bryce_came == False:
+            m "I could see Bryce's pink cockhead peeking from his slit."
+            Br smirk "Well, you really got me going now."
+            Br flirty "Gonna help with that?"
+            jump bangok_four_bryce2_worship
+
     elif bangok_four_playerhasdick == False:
         m "I examined his scaly walking pads, heady with the choices before me."
         Br brow "Sorry for my claws being sharp, but you know the job I'm in doesn't exactly allow for me to cut them back."
@@ -371,7 +413,16 @@ label bangok_four_bryce2_footjob:
     else:
         $ renpy.error ("Excuse the binary, but you must either have a penis or not have one.")
 
-    jump todo_out_of_content_bangok_four_bryce2
+    Br laugh "Man, what a time."
+
+    $ bryce2mood += 4
+    show bryce:
+        zoom 1.0
+        xalign 0.5
+    hide black
+    with dissolvemed
+
+    jump bangok_four_bryce2_canon_beer
 
 
 label bangok_four_bryce2_worship:
@@ -391,7 +442,7 @@ label bangok_four_bryce2_worship:
 
     Br pantflirt "Nngh."
 
-    m "More of his dragonhood emerged, rubbing up the side of my cheek as I kissed and suckled, licking my way around its base with my eyes closed, fully dominnated by this larger creature's powerful legs."
+    m "More of his dragonhood emerged, rubbing up the side of my cheek as I kissed and suckled, licking my way around its base with my eyes closed, fully dominated by this larger creature's powerful legs."
     m "I felt his toes curl, one claw brushing my forehead."
 
     $ renpy.pause (0.5)
@@ -532,6 +583,10 @@ label bangok_four_bryce2_show_bryce_no_tail:
     Br flirty "Is that so?"
     $ bryce2mood += 1
     jump bangok_four_bryce2_show_bryce_no_tail_end
+
+label bangok_four_bryce2_talking_otherthings:
+    Br flirty "... and other things."
+    jump bangok_four_bryce2_talking_otherthings_return
 
 
 label todo_out_of_content_bangok_four_bryce2:
