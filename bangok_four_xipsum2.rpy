@@ -278,9 +278,9 @@ label bangok_four_xipsum2_scene_type_choice:
             menu:
                 "Yes.":
                     $ renpy.pause(0.5)
-                    $ bangok_four_xipsum2_store.ws = persistent.bangok_watersports
+                    $ bangok_four_xipsum2_store.ws = persistent.bangok_watersports  == True
                     jump bangok_four_xipsum2_ponahole
-                "I don't want to be your urinal, but I'm for the sex.":
+                "I don't want to be your urinal, but I'm for the sex." if persistent.bangok_watersports == True:
                     $ renpy.pause(0.5)
                     $ bangok_four_xipsum2_store.ws = False
                     jump bangok_four_xipsum2_ponahole
@@ -289,16 +289,38 @@ label bangok_four_xipsum2_scene_type_choice:
         "You can turn my ass into your sex toy with this?" if bangok_four_playerhasdick == True and bangok_four_xipsum2_store.ponahole_unasked == True:
             $ bangok_four_xipsum2_store.ponahole_unasked = False
             $ renpy.pause(0.5)
-            Ip think bangok briefs "Easily, yes. All you'd need to do is keep the briefs on, and I should have full access."
+            if persistent.bangok_watersports == True:
+                Ip think bangok briefs "And my urinal, too, if you're so inclined to that sort of thing. All you'd need to do is keep the briefs on, and I should have full access."
+            else:
+                Ip think bangok briefs "Easily, yes. All you'd need to do is keep the briefs on, and I should have full access."
             Ip normal bangok briefs "Is that what you want?"
             menu:
                 "Yes.":
                     $ renpy.pause(0.5)
+                    $ bangok_four_xipsum2_store.ws = persistent.bangok_watersports == True
+                    jump bangok_four_xipsum2_ponahole
+                "I don't want to be your urinal, but I'm for the sex." if persistent.bangok_watersports == True:
+                    $ renpy.pause(0.5)
+                    $ bangok_four_xipsum2_store.ws = False
                     jump bangok_four_xipsum2_ponahole
                 "Let me think about my other options.":
                     jump bangok_four_xipsum2_scene_type_choice
         "Oh, fuck me. Human-brand onahole, sure." if bangok_four_xipsum2_store.ponahole_unasked == False:
             $ renpy.pause(0.5)
+            if persistent.bangok_watersports == True:
+                Ip normal bangok briefs "And about that little suggestion of using said onahole to... relieve myself?"
+                menu:
+                    c "(Do I want Ipsum pissing in me?)"
+                    "Yes.":
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xipsum2_store.ws = True
+                    "No.":
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xipsum2_store.ws = False
+            if persistent.bangok_watersports == True and bangok_four_xipsum2_store.ws == False:
+                Ip sad bangok briefs "Very reasonable. As you wish."
+            else:
+                Ip normal bangok briefs "I promise you won't regret it."
             jump bangok_four_xipsum2_ponahole
         "Ipsum-brand dildos sound amusing." if bangok_four_xipsum2_store.idildo_unasked == True:
             $ bangok_four_xipsum2_store.idildo_unasked = False
@@ -361,7 +383,6 @@ label bangok_four_xipsum2_scene_type_choice:
 
 label bangok_four_xipsum2_ponahole:
     $ bangok_four_xipsum2_store.scene_type = "ponahole"
-    Ip normal bangok briefs "I promise you won't regret it."
     if bangok_four_playerhasdick == False:
         Ip think bangok briefs "Now, what styles of hole are available? And how much can they... accomodate?"
         menu:
@@ -426,6 +447,22 @@ label bangok_four_xipsum2_ponahole:
     show ipsum normal bangok briefs touch glow flip with dissolve
     m "Ipsum reached inside his pair of briefs, and below me in mine I could see his fingers working at his side's disks."
 
+    hide ipsum with easeoutright
+    play sound "fx/door/close2.wav"
+
+    $ renpy.pause (0.5)
+    show loremapt at Pan((128,62),(0,0), 2.0) with ease
+    $ renpy.pause (0.5)
+
+    if bangok_four_playerhasdick == True:
+        m "I sat on the couch with the briefs pulled up, hands on my crotch, feeling a little awkward as my shaft and balls hung through to open air on the far side."
+    else:
+        m "I sat on the couch with the briefs pulled up, hands on my crotch, feeling a little awkward as my holes remained exposed to open air, despite the briefs I was wearing."
+
+    if bangok_four_xipsum2_store.scene_subtype in ['dp','anal1','anal2']:
+        m "Then, abruptly I felt the cold plastic nozzle of a lube bottle nestling in my crack, just over my asshole."
+        c "Ah!"
+        m "A thick dollop of chilly lube squirted over my rosebud, rubbed in a moment later by a scaly finger."
 
 
 
