@@ -365,34 +365,57 @@ label bangok_four_bryce2_footjob:
         Br laugh "Sorry."
         Br smirk "Trying not to knock you over and all."
         m "As he loosened up his toes, blood flowed back into the end of my member, leaving my groin flushed with heat, and a new idea in my head."
-        # menu:
-        #     "Fuck his toes.":
-        c "Could you interlace your toes again?"
-        Br brow "Hm?"
-        m "Bryce did as asked, wrapping his toes and claws together in a dense knot of scales and keratin."
-        m "His legs clearly strained at the angle."
-        Br laugh "Testing the limits of my articulation, here."
-        c "It'll be worth it."
-        if bangok_four_bryce2_store.cumlube == True:
-            m "Tugging his cum-sticky feet slightly further apart, I opened a small hole framed by a couple toes, then thrust in."
-            m "The feeling was exquisite. I kneaded the top of his feet, pressing his soles into my pelvis as his toes clenched around my length."
-        else:
-            m "Tugging his feet slightly further apart, I opened a small hole framed by a couple toes, then thrust in."
-            m "The coupling was rough, but pressed in all the right places. I kneaded the top of his feet, holding his soles against my pelvis as his toes clenched around my length."
-        play soundloop "fx/rub2.ogg" fadein 0.5
-        $ renpy.pause (0.5)
-        m "I began to thrust for real, fucking between his toes as he chuckled beneath me."
-        Br smirk "C-Can't say I've ever felt that before."
-        $ renpy.pause (0.8)
-        Br pant "Right there in the little spots between my toes. Mmnh."
+        menu:
+            "Fuck his toes.":
+                c "Could you interlace your toes again?"
+                Br brow "Hm?"
+                m "Bryce did as asked, wrapping his toes and claws together in a dense knot of scales and keratin."
+                m "His legs clearly strained at the angle."
+                Br laugh "Testing the limits of my articulation, here."
+                c "It'll be worth it."
+                if bangok_four_bryce2_store.cumlube == True:
+                    m "Tugging his cum-sticky feet slightly further apart, I opened a small hole framed by a couple toes, then thrust in."
+                    m "The feeling was exquisite. I kneaded the top of his feet, pressing his soles into my pelvis as his toes clenched around my length."
+                else:
+                    m "Tugging his feet slightly further apart, I opened a small hole framed by a couple toes, then thrust in."
+                    m "The coupling was rough, but pressed in all the right places. I kneaded the top of his feet, holding his soles against my pelvis as his toes clenched around my length."
+                play soundloop "fx/rub2.ogg" fadein 0.5
+                $ renpy.pause (0.5)
+                m "I began to thrust for real, fucking between his toes as he chuckled beneath me."
+                Br smirk "C-Can't say I've ever felt that before."
+                $ renpy.pause (0.8)
+                Br pant "Right there in the little spots between my toes. Mmnh."
 
-        if bangok_four_bryce2_store.cumlube == True:
-            m "Bryce's cum squelched less and less against my crotch as I neared my release, the hole made by his interlaced toes kneading the top and bottom of my shaft with the tips where they turned from scales to keratin, even as his feet separated a little from my pace."
-        else:
-            m "I had no words as I neared my release, the hole made by his interlaced toes kneading the top and bottom of my shaft with the tips where they turned from scales to keratin, even as his feet separated a little from my pace."
+                if bangok_four_bryce2_store.cumlube == True:
+                    m "Bryce's cum squelched less and less against my crotch as I neared my release, the hole made by his interlaced toes kneading the top and bottom of my shaft with the tips where they turned from scales to keratin, even as his feet separated a little from my pace."
+                else:
+                    m "I had no words as I neared my release, the hole made by his interlaced toes kneading the top and bottom of my shaft with the tips where they turned from scales to keratin, even as his feet separated a little from my pace."
 
-        #     "Fuck the arch of his feet.":
-        #         jump todo_out_of_content_bangok_four_bryce2
+            "Fuck the arch of his feet.":
+                c "Could you angle your feet up?"
+                m "Adjusting his feet, Bryce tried to angle his feet upward, though he only managed a small angle."
+                Br laugh "Testing the limits of my articulation, here."
+                c "It'll be worth it."
+                if bangok_four_bryce2_store.cumlube == True:
+                    m "Tugging his cum-sticky feet slightly apart, I opened a small hole between the arches of his feet, then thrust down and in."
+                    m "The feeling was exquisite. I kneaded the top of his feet, pressing his heels into my pelvis as he squeezed them around the bottom of my shaft."
+                else:
+                    m "Tugging his feet slightly apart, I opened a small hole between the arches of his feet, then thrust down and in."
+                    m "The flat pads of his feet were more than smooth enough, the slight rougness sending sparks up my length. I kneaded the top of his feet, pressing his heels into my pelvis as he squeezed them around the bottom of my shaft."
+                play soundloop "fx/rub2.ogg" fadein 0.5
+                $ renpy.pause (0.5)
+                m "I began to thrust for real, fucking between his feet pads as his tail lashed and he chuckled."
+                Br smirk "A-Ah H-Heck! Ah, t-that feels--"
+                $ renpy.pause (0.8)
+                m "He was clearly struggling to control the ticklish sensation as I gave up controlling my lust."
+                Br pant "Man, that feels wild."
+
+                if bangok_four_bryce2_store.cumlube == True:
+                    m "Bryce's cum squelched less and less around my shaft as I neared my release."
+
+                m "He interlaced his toes, squeezing my overstimulated length between the pads of his strong feet, pushing back against me just a tiny bit."
+                m "That was the last my endurance could take."
+
 
 
         stop soundloop fadeout 0.5
@@ -408,14 +431,6 @@ label bangok_four_bryce2_footjob:
                 m "Bryce tugged my shaft downward as I came, stringing my white ropes of seed across his genital slit, joining the remains of what he'd already left behind."
             else:
                 m "Bryce tugged my shaft downward as I came, stringing my white ropes of seed across his genital slit in a display of affection for his exquisite footwork."
-
-        $ renpy.pause (0.8)
-        Br laugh "I've gotta have you over for more \"foot massages.\""
-        if bangok_four_bryce2_store.bryce_came == False:
-            m "I could see Bryce's pink cockhead peeking from his slit."
-            Br smirk "Well, you really got me going now."
-            Br flirty "Gonna help with that?"
-            jump bangok_four_bryce2_worship
 
     elif bangok_four_playerhasdick == False:
         m "I examined his scaly walking pads, heady with the choices before me."
@@ -436,12 +451,23 @@ label bangok_four_bryce2_footjob:
         else:
             m "I pressed his feet together, then pressed his soles to the slick slit between my legs, massaging my mound with his flat, scaly pads."
         m "His force back was minimal as I began to grind myelf lightly across his feet, seeking more stimulation."
+        $ renpy.pause (0.8)
         c "Making me do all the work?"
         Br laugh "I'd do more, but I don't want to kick you across the room on accident."
         Br smirk "Besides, it looks like you're having fun this way."
+        m ""
         jump todo_out_of_content_bangok_four_bryce2
     else:
         $ renpy.error ("Excuse the binary, but you must either have a penis or not have one.")
+
+
+    $ renpy.pause (0.8)
+    Br laugh "I've gotta have you over for more \"foot massages.\""
+    if bangok_four_bryce2_store.bryce_came == False:
+        m "I could see Bryce's pink cockhead peeking from his slit."
+        Br smirk "Well, you really got me going now."
+        Br flirty "Gonna help with that?"
+        jump bangok_four_bryce2_worship
 
     Br laugh "Man, what a time."
 
