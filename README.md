@@ -26,6 +26,7 @@ Currently, there are lewd scenes released for Bryce, Sebastian, Ipsum (+ Lorem),
 
 + xSebastian: After the skip point in his one date, say it's pretty cold and you could use a blanket.
 + Bryce1: Try a different way of waking him up at the bar. Skipping Bryce1 will also give you the option to enter this scene.
++ Bryce2: Keep feeling his leg after he flexes his muscles.
 + Lorem2 (Ipsum + Lorem): Play through Lorem2 and, when Ipsum suggests it, agree to take off your clothes. With sufficiently high mood, Lorem may also be invited.
 + Anna2: During Anna1, bet for sex instead of a date OR during Anna2, do extremely well. (After betting for sex in Anna1, the original Anna2 date is still available if you say you're hungry.)
 + Anna4: Do Anna’s fourth date normally, picking the romance option, and a menu will appear with the choice to watch or skip the scene. (Doing the Anna2 scene beforehand will alter some dialogue/scene options.)
@@ -56,6 +57,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `xsebastian` dialogue and blocking script contributed by `Dolkar` (Discord).
 + `remyc4postsections` inspired and written by `saiginth renginalti` (Discord).
 + `anna4` written and coded by `An Anonymous contributor`
++ `bryce2` happy birthday `Kosmos` (Discord).
 
 ### Resource credits:
 + `bg/in/apts/o_ceil.png`: An Anonymous contributor
