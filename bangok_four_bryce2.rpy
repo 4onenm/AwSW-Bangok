@@ -157,7 +157,7 @@ label bangok_four_bryce2_explorepaw:
     $ renpy.pause (0.5)
     Br brow flip "You know, I didn't invite you over just to let you give me massages. I'm supposed to be hosting. That means entertaining you, not the other way around."
     Br normal flip "I'm good on the massages if you are."
-    if persistent.nsfwtoggle:
+    if persistent.nsfwtoggle or persistent.bangok_four_bangnokay or bangok_four_bangnokay:
         menu:
             "Kiss his foot.":
                 $ renpy.pause (0.5)
