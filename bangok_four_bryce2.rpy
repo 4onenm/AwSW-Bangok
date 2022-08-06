@@ -84,7 +84,7 @@ label bangok_four_bryce2_explorepaw:
     Br laugh bangok foreleg flip "I don't know. I just said I don't think too much about it."
     m "His tail flicked as he shifted his weight."
     Br normal bangok foreleg flip "You're, ah, taking quite an interest in that, huh?"
-    m "I hadn't noticed, but while we'd talked, I'd been unconsciously kneading his paw in my hand, feeling out more of the intricate biological joints in his scales where his toes met the body of his food."
+    m "I hadn't noticed, but while we'd talked, I'd been unconsciously kneading his paw in my hand, feeling out more of the intricate biological joints in his scales where his toes met the body of his foot."
 
     menu:
         "[[Give him his foot back.]":
@@ -450,13 +450,46 @@ label bangok_four_bryce2_footjob:
             m "I pressed his feet together, then pressed his soles to my mound, squeezing his cum between his feet and my wet, needy hole."
         else:
             m "I pressed his feet together, then pressed his soles to the slick slit between my legs, massaging my mound with his flat, scaly pads."
-        m "His force back was minimal as I began to grind myelf lightly across his feet, seeking more stimulation."
+        m "His force back was minimal as I began to grind myself lightly across his feet, seeking more stimulation."
         $ renpy.pause (0.8)
         c "Making me do all the work?"
         Br laugh "I'd do more, but I don't want to kick you across the room on accident."
         Br smirk "Besides, it looks like you're having fun this way."
-        m ""
-        jump todo_out_of_content_bangok_four_bryce2
+        m "Taking one of his feet, I curled his toes over with a hand, putting his claws to his sole and leaving a knobby surface of his toe knuckles."
+        Br laugh "Oh man. That's one way to solve the sharp claws problem."
+        m "I leaked over his toe knuckles as I slipped them, one by one, through my outer folds and over my clit."
+        m "Then, abruptly, I felt his other foot at the small of my back, tugging me forward onto his foot harder, such that two of his toe knuckles fit into my outer folds at the same time."
+        c "H-Hah!"
+        Br flirty "I think I found a way to help."
+        m "I swooned, legs weak as he held me in place to rub his scaly, bumpy toe knuckles over my slick slit himself. The stimulation was so much, I worried I'd fall over before reachinng my peak."
+        c "W-Wait."
+        if bangok_four_bryce2_store.cumlube == True:
+            m "I turned his foot back to his pad, the sticky surface's slick surface more than enough stimulation as he held me in place to slide his food over my arousal, some of my weight resting on him."
+        else:
+            m "I turned his foot back to his pad, the flat surface's slightly rough surface more than enough stimulation as he held me in place to slide his food over my arousal, some of my weight resting on him."
+        $ renpy.pause (0.8)
+        c "Nnngh-"
+        Br smirk "My feet in all the right places doing it for you?"
+        $ renpy.pause (0.5)
+        m "I pulled his foot harder into my crotch, at a loss for words."
+        $ renpy.pause (0.5)
+        m "Then his heel slid in just the right way, and I came to shuddering climax."
+        $ bangok_four_bryce2_store.player_came = True
+        $ renpy.pause (1.5)
+
+        Br smirk "How was that?"
+        menu:
+            "[[Lick your juices from his foot.]":
+                $ renpy.pause (0.5)
+                if bangok_four_bryce2_store.cumlube == True:
+                    m "I ran my tongue up his sticky walking pad, where my juices and his cum had mixed into a slimy, only slightly salty goopy mess."
+                else:
+                    m "I ran my tongue up his slickened walking pad, where my juices had left his sole shiny and salty with my appreciation of his footwork."
+            "Great.":
+                pass
+            "I think it's your turn." if bangok_four_bryce2_store.bryce_came == False:
+                $ renpy.pause (0.5)
+                Br smirk "I can't wait."
     else:
         $ renpy.error ("Excuse the binary, but you must either have a penis or not have one.")
 
@@ -484,7 +517,7 @@ label bangok_four_bryce2_footjob:
 label bangok_four_bryce2_worship:
     m "Bryce splayed his hindlegs, welcoming me in to his crotch."
     if bangok_four_bryce2_store.player_came:
-        m "My juices glistened on his plates, around a horizontal slit where I could see a small pinkish tip peeking from inside him."
+        m "My dribbled juices glistened on his plates, around a horizontal slit where I could see a small pinkish tip peeking from inside him."
         m "Then one of his legs wrapped around the back of my head, the side of his foot pressing against my cheek as he pulled me face-first against that slit, rubbing my own juices in my face, and my nose and mouth against his tip."
         m "His other heel I could feel on my back, pulling me upward into his first hindleg's embrace."
         $ renpy.pause (0.5)
@@ -643,9 +676,3 @@ label bangok_four_bryce2_show_bryce_no_tail:
 label bangok_four_bryce2_talking_otherthings:
     Br flirty "... and other things."
     jump bangok_four_bryce2_talking_otherthings_return
-
-
-label todo_out_of_content_bangok_four_bryce2:
-    play sound "fx/system3.wav"
-    s "Out of content. Roll back or prepare to crash."
-    $ renpy.error("Out of content.")
