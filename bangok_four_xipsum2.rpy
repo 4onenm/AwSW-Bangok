@@ -464,6 +464,81 @@ label bangok_four_xipsum2_ponahole:
         c "Ah!"
         m "A thick dollop of chilly lube squirted over my rosebud, rubbed in a moment later by a scaly finger."
 
+    if bangok_four_xipsum2_store.scene_subtype in ['dp','vag1','vag2']:
+        m "Cold claws nestled around my outer lips, gently massaging and stimulating my hole, leaving me shivering and slick."
+
+    if bangok_four_xipsum2_store.separate == False:
+        $ renpy.pause (0.3)
+        play sound "fx/door/close2.wav"
+        $ renpy.pause (0.8)
+        show ipsum happy bangok briefs at right with easeinright
+        m "Ipsum returned, bearing the bottle of lube."
+        Ip "Ready?"
+        menu:
+            "Can we do the separate rooms thing?":
+                c "I think I've changed my mind."
+                Ip normal bangok blush briefs "Absolutely."
+                $ renpy.pause (0.3)
+                Ip normal bangok blush briefs flip "Have fun."
+                $ renpy.pause (0.3)
+                hide ipsum with easeoutright
+                play sound "fx/door/close2.wav"
+                $ renpy.pause (0.8)
+                $ bangok_four_xipsum2_store.separate = True
+            "Yeah. You want to sit down, too?":
+                $ renpy.pause (0.5)
+    if bangok_four_xipsum2_store.separate == False:
+        hide ipsum with dissolve
+        $ renpy.pause (0.5)
+        show ipsum happy bangok briefs touch flip:
+            xanchor 0.0
+            yanchor 1.0
+            xpos 0.0
+            ypos 1.25
+            rotate -5
+        with dissolve
+        if bangok_four_xipsum2_store.protection == True:
+            m "Ipsum pulled open the fly on his briefs, letting his hard, twin condom-wrapped shafts spill out into the open air."
+        else:
+            m "Ipsum pulled open the fly on his briefs, letting his hard, twin shafts spill out into the open air."
+
+        menu:
+            "Be gentle.":
+                $ renpy.pause (0.5)
+                Ip "Of course."
+            "Are you going to stop teasing and fuck me?":
+                $ renpy.pause (0.5)
+                Ip "Soon enough."
+
+        if bangok_four_xipsum2_store.scene_subtype in ['vag2','ass2']:
+            m "Squeezing his twin shafts together, he brought the disk connected to my hole to their tips."
+        elif bangok_four_xipsum2_store.scene_subtype in ['vag1','ass1']:
+            m "With baited breath, I watched as he raised the disk linked to my hole to one tip."
+        else: # dp
+            m "One disk in each hand, Ipsum lifted them over his twitching shafts."
+
+    if bangok_four_xipsum2_store.scene_subtype == 'dp':
+        m "Then I felt his shafts at my front and rear entrances, small heads slowly sliding inside."
+    elif bangok_four_xipsum2_store.scene_subtype == 'ass1':
+        m "Then I felt his cockhead at my rear, its small head slowly sliding inside."
+    elif bangok_four_xipsum2_store.scene_subtype == 'ass2':
+        m "Then I felt his shafts at my rear, twin heads slowly elongating my sphincter as they together slid inside."
+    elif bangok_four_xipsum2_store.scene_subtype == 'vag1':
+        m "Then I felt his cockhead nestle between my lips, its small head slowly spreading me as he slipped into my canal."
+    elif bangok_four_xipsum2_store.scene_subtype == 'vag2':
+        m "Then I felt his shafts at my front entrance, twin heads slowly spreading my folds as they together stretched my hole to slide inside."
+    else:
+        $ renpy.error ("Impossible scene subtype %s"%bangok_four_xipsum2_store.scene_subtype)
+
+    c "Mmmh!"
+    m "I arched my back, the sensation of slow insertion without feeling him between my legs an uncanny, wild feeling."
+
+    # if separate == False:
+    #     m "Ipsum grinned wider as he hilted inside me."
+    #     Ip "How does that feel?"
+    #     menu:
+    #         "I've never felt anything like it.":
+    #         "Like you should be moving faster.":
 
 
 
@@ -1072,4 +1147,4 @@ label bangok_four_xipsum2_sharingchat:
 label todo_out_of_content_bangok_four_xipsum:
     play sound "fx/system3.wav"
     s "Out of content. Rollback and save, or prepare to crash."
-    $ renpy.error("TODO: Out of content.")
+    $ renpy.error("Out of content.")
