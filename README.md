@@ -61,11 +61,17 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 
 ### Resource credits:
 + `bg/in/apts/o_ceil.png`: An Anonymous contributor
++ `bg/in/apts/*`: 4onen, editing base-game assets
++ `bg/in/bangok/labdoor.png`: 4onen, editing base-game assets
 + `bg/in/*`: 4onen, editing base-game assets
 + `cg/lorem-x-ipsum_purpleroom.png`:
     + Linework: [Yaroul](https://www.furaffinity.net/user/Yaroul/) (Original: https://www.furaffinity.net/view/23028281/)
     + Comissioner: [haloudoval](https://www.furaffinity.net/user/haloudoval)
     + Coloring-in: 4onen
++ `cg/bangok/annaxdamion_lab/*`:
+    + Artist: [Aesyr](https://www.furaffinity.net/user/aesyr/) (Original: https://www.furaffinity.net/view/47526643/)
+    + Comissioner: [Argentum48](https://www.furaffinity.net/user/argentum48/)
+    + Vaginal, belly, cum edits: 4onen
 + `cr/anna_*.png`: yoshisman8 from [mod-nsfw-anna](https://github.com/AWSW-Modding/AWSW-Modtools/tree/mod-nsfw-anna) (Used without permission; unable to contact.)
 + `cr/bangok/*.png`: 4onen
 + `cr/bryce_underside_large.png`: 4onen, editing base-game assets
