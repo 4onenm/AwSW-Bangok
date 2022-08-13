@@ -1327,6 +1327,20 @@ label bangok_four_lorem4_maleplayer_toy:
                 $ renpy.pause (0.5)
                 m "Enjoying the tight wetness stretched around my length, it took me a few moments to realize what I'd pushed through."
             "Ease in.":
+                show lorem:
+                    ypos 1.1
+                with ease
+                $ renpy.pause (0.3)
+                m "I lined myself up with my new toy's tight slit, trying to temper my excitement with concern for not hurting them."
+                show lorem happy bangok shy:
+                    ypos 1.1
+                    ease 2.0 ypos 1.2
+                    ypos 1.2
+                with None
+                m "Then, gradually, I began to ease Lorem onto my shaft, enveloping myself in their tight canal."
+                show lorem sleep blush with dissolve
+                Lo "O-Ohh... I-Is this feeling for you--"
+                Lo scared "OH!"
                 jump todo_out_of_content_bangok_four_lorem4
 
         if persistent.bangok_cervpen == True and bangok_four_lorem4_store.cerv_pen == True:
