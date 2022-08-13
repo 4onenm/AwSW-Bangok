@@ -3387,7 +3387,7 @@ label bangok_four_bryce3_mctop_mcgoes:
         "Fuck Bryce's ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == False:
             jump todo_out_of_content_bangok_four_bryce3
         "Fuck Bryce's gaping, sloppy ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == True:
-            jump todo_out_of_content_bangok_four_bryce3
+            jump bangok_four_bryce3_mctop_mcgoes_sloppy
         "Fuck Bryce's mouth." if bangok_four_playerhasdick == True:
             jump todo_out_of_content_bangok_four_bryce3
         "Ride Bryce's mouth." if bangok_four_playerhasdick == False:
@@ -3932,7 +3932,6 @@ label bangok_four_bryce3_mctop_mavgoes_aftermath:
     Br smirk flip "What do you want to do?"
     jump bangok_four_bryce3_mctop_mcgoes
 
-
 label bangok_four_bryce3_mctop_mavgoes_spitroast:
     play soundloop "fx/rub2.ogg" fadein 0.5
     show maverick:
@@ -4036,6 +4035,18 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
     m "I worked my way back, out of the range of any flailing horns or tails for when they climaxed."
 
     jump bangok_four_bryce3_mctop_mavgoes_climax
+
+label bangok_four_bryce3_mctop_mcgoes_sloppy:
+    c "Yep, keep that tail up."
+    Br laugh flip "Like it sloppy, huh?"
+    Br flirty flip "I'm not gonna stop you."
+
+    show bryce smirk flip:
+        transform_anchor True
+        ease 0.8 rotate 20 xpos 0.93 ypos 1.3
+    with None
+    m "Bryce folded his legs, "
+    
 
 label todo_out_of_content_bangok_four_bryce3:
     play sound "fx/system3.wav"
