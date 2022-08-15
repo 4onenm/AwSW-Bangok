@@ -733,6 +733,7 @@ init:
 
 
     image sebastian normal b dk = im.Recolor("cr/sebastian_normal_b.png", 70, 70, 100, 255)
+    image sebastian normal dk = im.Recolor("cr/sebastian_normal.png", 70, 70, 100, 255)
     image sebastian shy dk = im.Recolor("cr/sebastian_shy.png", 70, 70, 100, 255)
     image sebastian shy b dk = im.Recolor("cr/sebastian_shy_b.png", 70, 70, 100, 255)
     image sebastian shy b flip dk = im.Recolor(im.Flip("cr/sebastian_shy_b.png", horizontal=True), 70, 70, 100, 255)
