@@ -14,22 +14,21 @@ init:
         ("Inflation", "bangok_inflation"),
         ("Knotting", "bangok_knot"),
         ("Cloacas", "bangok_cloacas"),
-        ("Cervical Penetration","bangok_cervpen"),
+        ("Cervix Penetration","bangok_cervpen"),
         ("Voyeurism", "bangok_voyeurism"),
     ]
     define bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
 
     # Settings menu
     screen bangok_four_checkbox(label, id):
-        hbox:
-            spacing 10
+        vbox:
+            xalign 0.5
             imagebutton:
-                xcenter 0.5
-                ycenter 0.5
-                idle im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70)
-                hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 70, 70), 64, 64, 64)
-                selected_idle im.Scale("ui/nsfw_chbox-checked.png", 70, 70)
-                selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 70, 70), 64, 64, 64)
+                xalign 0.5
+                idle im.Scale("ui/nsfw_chbox-unchecked.png", 60, 60)
+                hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 60, 60), 64, 64, 64)
+                selected_idle im.Scale("ui/nsfw_chbox-checked.png", 60, 60)
+                selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 60, 60), 64, 64, 64)
                 action [MTSTogglePersistentBool(id),
                         Play("audio", "se/sounds/yes.wav")]
                 hovered Play("audio", "se/sounds/select.ogg")
@@ -41,22 +40,35 @@ init:
         tag smallscreen2
         modal True
         window id "bangok_modsettings" at popup2:
-            style "smallwindow"
-            vbox:
-                align (0.5, 0.5)
-                if not persistent.nsfwtoggle:
+            style "smallwindow_big2"
+            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                textbutton "Bang? No, Kay Mod Settings":
+                    yalign 0.06
+                    xalign 0.5
+                    text_size 44
+                    action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', False)]
+                    hovered Play("audio", "se/sounds/select.ogg")
+                    style "menu_choice_button"
+            else:
+                textbutton "BangOk Mod Settings":
+                    yalign 0.06
+                    xalign 0.5
+                    text_size 44
+                    action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', True)]
+                    hovered Play("audio", "se/sounds/select.ogg")
+                    style "menu_choice_button"
+
+
+            if not persistent.nsfwtoggle:
+                vbox:
                     text "This mod's content is primarily" xalign 0.5
                     text "---- Not-Safe-For-Work ----" xalign 0.5
                     text "Re-enable NSFW scenes or uninstall the mod." xalign 0.5
                     text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made." xalign 0.5
-                else:
+            else:
+                vbox:
+                    align (0.5, 0.3)
                     if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
-                        textbutton "Bang? No, Kay Mod Settings":
-                            xalign 0.5
-                            text_size 36
-                            action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', False)]
-                            hovered Play("audio", "se/sounds/select.ogg")
-                            style "menu_choice_button"
                         text "Cute Buttons:" xalign 0.5
                         grid 3 2:
                             align (0.5, 0.5)
@@ -66,12 +78,6 @@ init:
                                 use bangok_four_checkbox(label, id)
                             null
                     else:
-                        textbutton "BangOk Mod Settings":
-                            xalign 0.5
-                            text_size 36
-                            action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', True)]
-                            hovered Play("audio", "se/sounds/select.ogg")
-                            style "menu_choice_button"
                         text "Fetishes:" xalign 0.5
                         grid bangok_four_menu_fetish_list_columns 2:
                             align (0.5,0.5)
@@ -81,18 +87,44 @@ init:
                                 use bangok_four_checkbox(label, id)
                             if len(bangok_four_menu_fetish_list) % 2 == 1:
                                 null
-                    text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
-                        xalign 0.5
-                        size 38
-                    vbox:
-                        xalign 0.5
-                        use bangok_four_checkbox("Dangerous: Enable In-Development Scenes", "bangok_dev")
-                    showif persistent.bangok_dev == True:
-                        text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes." xalign 0.5 size 40
-                        showif main_menu:
-                            textbutton "[[Replay first-boot experience.]" xalign 0.5 hovered Play("audio", "se/sounds/select.ogg") action [Hide("bangok_modsettings"), Play("audio", "se/sounds/close.ogg"), Start("bangok_four_mod_firstboot")]
-            imagebutton idle "image/ui/close_idle.png" hover "image/ui/close_hover.png" action [Hide("bangok_modsettings"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")] hovered Play("audio", "se/sounds/select.ogg") style "smallwindowclose" at nav_button
+                        text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
+                            xalign 0.5
+                            size 38
+                hbox:
+                    xalign 0.5
+                    yalign 0.8
+                    spacing 20
+                    imagebutton:
+                        idle im.Scale("ui/nsfw_chbox-unchecked.png", 55, 55)
+                        hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 55, 55), 64, 64, 64)
+                        selected_idle im.Scale("ui/nsfw_chbox-checked.png", 55, 55)
+                        selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 55, 55), 64, 64, 64)
+                        action [MTSTogglePersistentBool('bangok_dev'),
+                                Play("audio", "se/sounds/yes.wav")]
+                        hovered Play("audio", "se/sounds/select.ogg")
+                        focus_mask None
+                    text "Dangerous: Enable In-Development Scenes"
 
+                showif persistent.bangok_dev == True and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                    text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes.":
+                        yalign 0.875
+                        xalign 0.5
+                        size 40
+
+            showif persistent.bangok_dev == True and main_menu and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                textbutton "[[Replay first-boot experience.]":
+                    xalign 0.5 
+                    yalign 1.1
+                    hovered Play("audio", "se/sounds/select.ogg") 
+                    action [Hide("bangok_modsettings"), Play("audio", "se/sounds/close.ogg"), Start("bangok_four_mod_firstboot")]
+
+            imagebutton:
+                idle "image/ui/close_idle.png"
+                hover "image/ui/close_hover.png"
+                action [Hide("bangok_modsettings"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")]
+                hovered Play("audio", "se/sounds/select.ogg")
+                style "smallwindowclose"
+                at nav_button
 
     # Locations
     image bangok_anon_o_ceiling = "bg/in/apts/o_ceil.png"
