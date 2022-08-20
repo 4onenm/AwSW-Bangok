@@ -5,36 +5,78 @@ init python:
     bangok_four_playerhasdick = None
     bangok_four_hornincident = False
 
+init python in bangok_four_common:
+    import renpy.display.im as im
+    from renpy.display.behavior import ImageButton
+
+    def Switch(id, image=None, active_image=None, inactive_image=None, focus_mask=None, dim_inactive_image=None, **properties):
+        if active_image is None:
+            active_image = image
+        if inactive_image is None:
+            dim_inactive_image = True
+            inactive_image = image
+
+        if inactive_image is not None:
+            if dim_inactive_image:
+                inactive_image = im.Recolor(inactive_image, 128, 128, 128)
+
+            idle = im.Composite((150,100),
+                (0,0), "image/ui/bangok/switchoff.png",
+                (15,15), inactive_image,
+            )
+        else:
+            idle = "image/ui/bangok/switchoff.png"
+
+        if active_image is not None:
+            selected_idle = im.Composite((150,100),
+                (0,0), "image/ui/bangok/switchon.png",
+                (65,15), active_image,
+            )
+        else:
+            selected_idle = "image/ui/bangok/switchon.png"
+
+        displayables = dict(
+            idle_image=idle,
+            hover_image = im.Recolor(idle, 64, 64, 64),
+            selected_idle_image=selected_idle,
+            selected_hover_image=im.Recolor(selected_idle, 64, 64, 64),
+        )
+
+        displayables.update(properties)
+
+        return ImageButton(
+            clicked=renpy.store.MTSTogglePersistentBool(id),
+            focus_mask=focus_mask,
+            **displayables
+        )
+    renpy.pure('bangok_four_common.Switch')
+
 init:
     define bangok_four_bangnokay = False
 
     # Menu constants
     define bangok_four_menu_fetish_list = [
-        ("Watersports", "bangok_watersports"),
-        ("Inflation", "bangok_inflation"),
-        ("Knotting", "bangok_knot"),
-        ("Cloacas", "bangok_cloacas"),
-        ("Cervix Penetration","bangok_cervpen"),
-        ("Voyeurism", "bangok_voyeurism"),
+        ("Watersports", "bangok_watersports", ("image/ui/bangok/icons/bangok_watersports.png",)),
+        ("Inflation", "bangok_inflation", ("image/ui/bangok/icons/bangok_inflation.png",)),
+        ("Knotting", "bangok_knot", ("image/ui/bangok/icons/bangok_knot.png",)),
+        ("Cloacas", "bangok_cloacas", ("image/ui/bangok/icons/bangok_cloacas_inactive.png","image/ui/bangok/icons/bangok_cloacas_active.png")),
+        ("Cervix Penetration","bangok_cervpen", ("image/ui/bangok/icons/bangok_cervpen.png",)),
+        ("Voyeurism", "bangok_voyeurism", ("image/ui/bangok/icons/bangok_voyeurism.png",)),
     ]
     define bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
 
     # Settings menu
-    screen bangok_four_checkbox(label, id):
-        vbox:
-            xalign 0.5
-            imagebutton:
-                xalign 0.5
-                idle im.Scale("ui/nsfw_chbox-unchecked.png", 60, 60)
-                hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 60, 60), 64, 64, 64)
-                selected_idle im.Scale("ui/nsfw_chbox-checked.png", 60, 60)
-                selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 60, 60), 64, 64, 64)
-                action [MTSTogglePersistentBool(id),
-                        Play("audio", "se/sounds/yes.wav")]
-                hovered Play("audio", "se/sounds/select.ogg")
-                focus_mask None
-            text "[label]"
+    style bangok_four_switch is image_button:
+        activate_sound "se/sounds/yes.wav"
+        hover_sound "se/sounds/select.ogg"
 
+    style bangok_four_smallwindowclose is smallwindowclose:
+        activate_sound "se/sounds/close.ogg"
+        hover_sound "se/sounds/select.ogg"
+
+    style bangok_four_close is button:
+        activate_sound "se/sounds/close.ogg"
+        hover_sound "se/sounds/select.ogg"
 
     screen bangok_modsettings():
         tag smallscreen2
@@ -46,17 +88,15 @@ init:
                     yalign 0.06
                     xalign 0.5
                     text_size 44
-                    action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', False)]
-                    hovered Play("audio", "se/sounds/select.ogg")
-                    style "menu_choice_button"
+                    action SetField(persistent, 'bangok_four_bangnokay', False)
+                    style "bangok_four_switch"
             else:
                 textbutton "BangOk Mod Settings":
                     yalign 0.06
                     xalign 0.5
                     text_size 44
-                    action [Play("audio", "se/sounds/yes.wav"), SetField(persistent, 'bangok_four_bangnokay', True)]
-                    hovered Play("audio", "se/sounds/select.ogg")
-                    style "menu_choice_button"
+                    action SetField(persistent, 'bangok_four_bangnokay', True)
+                    style "bangok_four_switch"
 
 
             if not persistent.nsfwtoggle:
@@ -74,8 +114,10 @@ init:
                             align (0.5, 0.5)
                             transpose True
                             spacing 10
-                            for label, id in [("Water Polo", "bangok_watersports"),("Balloons", "bangok_inflation"),("Knot Tying", "bangok_knot"),("Spelunking", "bangok_cloacas"),("Mining","bangok_cervpen"),]:
-                                use bangok_four_checkbox(label, id)
+                            for label, id, images in [("Water Polo", "bangok_watersports", ()), ("Balloons", "bangok_inflation", ("image/ui/bangok/icons/bangok_inflation.png",)), ("Knot Tying", "bangok_knot", ("image/ui/bangok/icons/bangok_knot.png",)), ("Motion", "bangok_cloacas", ("image/ui/bangok/icons/bangok_cloacas_inactive.png","image/ui/bangok/icons/bangok_cloacas_active.png")), ("Mining","bangok_cervpen", ()),]:
+                                hbox:
+                                    add bangok_four_common.Switch(id, *images, style='bangok_four_switch')
+                                    text "[label]"
                             null
                     else:
                         text "Fetishes:" xalign 0.5
@@ -83,8 +125,10 @@ init:
                             align (0.5,0.5)
                             transpose True
                             spacing 10
-                            for label, id in bangok_four_menu_fetish_list:
-                                use bangok_four_checkbox(label, id)
+                            for label, id, images in bangok_four_menu_fetish_list:
+                                hbox:
+                                    add bangok_four_common.Switch(id, *images, style='bangok_four_switch')
+                                    text "[label]"
                             if len(bangok_four_menu_fetish_list) % 2 == 1:
                                 null
                         text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
@@ -99,9 +143,8 @@ init:
                         hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 55, 55), 64, 64, 64)
                         selected_idle im.Scale("ui/nsfw_chbox-checked.png", 55, 55)
                         selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 55, 55), 64, 64, 64)
-                        action [MTSTogglePersistentBool('bangok_dev'),
-                                Play("audio", "se/sounds/yes.wav")]
-                        hovered Play("audio", "se/sounds/select.ogg")
+                        action MTSTogglePersistentBool('bangok_dev')
+                        style "bangok_four_switch"
                         focus_mask None
                     text "Dangerous: Enable In-Development Scenes"
 
@@ -115,15 +158,15 @@ init:
                 textbutton "[[Replay first-boot experience.]":
                     xalign 0.5 
                     yalign 1.1
-                    hovered Play("audio", "se/sounds/select.ogg") 
-                    action [Hide("bangok_modsettings"), Play("audio", "se/sounds/close.ogg"), Start("bangok_four_mod_firstboot")]
+                    action [Hide("bangok_modsettings"), Start("bangok_four_mod_firstboot")]
+                    style "bangok_four_close"
 
             imagebutton:
                 idle "image/ui/close_idle.png"
                 hover "image/ui/close_hover.png"
                 action [Hide("bangok_modsettings"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")]
                 hovered Play("audio", "se/sounds/select.ogg")
-                style "smallwindowclose"
+                style "bangok_four_smallwindowclose"
                 at nav_button
 
     # Locations
