@@ -494,10 +494,10 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "v0.0"
+    version = "2022-08-19-child_of_0697444"
     author = "4onen"
     nsfw = True
-    dependencies = ["MagmaLink", "?Side Images", "?CRAP", "?Scene Select"] # TODO: Make CRAP mandatory when Bryce and Ipsum assets move.
+    dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
 
     @classmethod
     def mod_load(cls):
