@@ -6,64 +6,12 @@ init python:
     bangok_four_hornincident = False
 
 init python in bangok_four_common:
-    import renpy.display.im as im
-    from renpy.display.behavior import ImageButton
-
-    def Switch(id, image=None, active_image=None, inactive_image=None, focus_mask=None, dim_inactive_image=None, **properties):
-        if active_image is None:
-            active_image = image
-        if inactive_image is None:
-            dim_inactive_image = True
-            inactive_image = image
-
-        if inactive_image is not None:
-            if dim_inactive_image:
-                inactive_image = im.Recolor(inactive_image, 128, 128, 128)
-
-            idle = im.Composite((150,100),
-                (0,0), "image/ui/bangok/switchoff.png",
-                (15,15), inactive_image,
-            )
-        else:
-            idle = "image/ui/bangok/switchoff.png"
-
-        if active_image is not None:
-            selected_idle = im.Composite((150,100),
-                (0,0), "image/ui/bangok/switchon.png",
-                (65,15), active_image,
-            )
-        else:
-            selected_idle = "image/ui/bangok/switchon.png"
-
-        displayables = dict(
-            idle_image=idle,
-            hover_image = im.Recolor(idle, 64, 64, 64),
-            selected_idle_image=selected_idle,
-            selected_hover_image=im.Recolor(selected_idle, 64, 64, 64),
-        )
-
-        displayables.update(properties)
-
-        return ImageButton(
-            clicked=renpy.store.MTSTogglePersistentBool(id),
-            focus_mask=focus_mask,
-            **displayables
-        )
-    renpy.pure('bangok_four_common.Switch')
+    import bangok_four
+    renpy.pure('bangok_four_common.bangok_four.fetish_count')
+    renpy.pure('bangok_four_common.bangok_four.fetish_iter')
 
 init:
     define bangok_four_bangnokay = False
-
-    # Menu constants
-    define bangok_four_menu_fetish_list = [
-        ("Watersports", "bangok_watersports", ("image/ui/bangok/icons/bangok_watersports.png",)),
-        ("Inflation", "bangok_inflation", ("image/ui/bangok/icons/bangok_inflation.png",)),
-        ("Knotting", "bangok_knot", ("image/ui/bangok/icons/bangok_knot.png",)),
-        ("Cloacas", "bangok_cloacas", ("image/ui/bangok/icons/bangok_cloacas_inactive.png","image/ui/bangok/icons/bangok_cloacas_active.png")),
-        ("Cervix Penetration","bangok_cervpen", ("image/ui/bangok/icons/bangok_cervpen.png",)),
-        ("Voyeurism", "bangok_voyeurism", ("image/ui/bangok/icons/bangok_voyeurism.png",)),
-    ]
-    define bangok_four_menu_fetish_list_columns = ((len(bangok_four_menu_fetish_list)+1)//2)
 
     # Settings menu
     style bangok_four_switch is image_button:
@@ -110,27 +58,25 @@ init:
                     align (0.5, 0.3)
                     if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
                         text "Cute Buttons:" xalign 0.5
-                        grid 3 2:
-                            align (0.5, 0.5)
-                            transpose True
-                            spacing 10
-                            for label, id, images in [("Water Polo", "bangok_watersports", ()), ("Balloons", "bangok_inflation", ("image/ui/bangok/icons/bangok_inflation.png",)), ("Knot Tying", "bangok_knot", ("image/ui/bangok/icons/bangok_knot.png",)), ("Motion", "bangok_cloacas", ("image/ui/bangok/icons/bangok_cloacas_inactive.png","image/ui/bangok/icons/bangok_cloacas_active.png")), ("Mining","bangok_cervpen", ()),]:
-                                hbox:
-                                    add bangok_four_common.Switch(id, *images, style='bangok_four_switch')
-                                    text "[label]"
-                            null
                     else:
                         text "Fetishes:" xalign 0.5
-                        grid bangok_four_menu_fetish_list_columns 2:
-                            align (0.5,0.5)
-                            transpose True
-                            spacing 10
-                            for label, id, images in bangok_four_menu_fetish_list:
-                                hbox:
-                                    add bangok_four_common.Switch(id, *images, style='bangok_four_switch')
-                                    text "[label]"
-                            if len(bangok_four_menu_fetish_list) % 2 == 1:
-                                null
+
+                    grid ((bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay)+1)//2) 2:
+                        align (0.5,0.5)
+                        transpose True
+                        spacing 10
+                        for fetish in bangok_four_common.bangok_four.fetish_iter(bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                            hbox:
+                                add fetish.get_switch(bangok_four_bangnokay or persistent.bangok_four_bangnokay)
+                                if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                                    text "[fetish.clean_label]"
+                                else:
+                                    text "[fetish.label]"
+                        if bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay) % 2 == 1:
+                            null
+
+
+                    showif (not bangok_four_bangnokay or persistent.bangok_four_bangnokay):
                         text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
                             xalign 0.5
                             size 38
