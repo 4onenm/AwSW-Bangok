@@ -68,9 +68,9 @@ init:
                         for fetish in bangok_four_common.bangok_four.fetish_iter(bangok_four_bangnokay or persistent.bangok_four_bangnokay):
                             hbox:
                                 add fetish.get_switch(bangok_four_bangnokay or persistent.bangok_four_bangnokay)
-                                if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                                showif bangok_four_bangnokay or persistent.bangok_four_bangnokay:
                                     text "[fetish.clean_label]"
-                                else:
+                                showif not bangok_four_bangnokay or persistent.bangok_four_bangnokay:
                                     text "[fetish.label]"
                         if bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay) % 2 == 1:
                             null

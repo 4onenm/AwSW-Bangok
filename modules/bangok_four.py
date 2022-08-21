@@ -2,7 +2,17 @@ import renpy
 import renpy.display.im as im
 from renpy.display.behavior import ImageButton
 
+clean_switch_displayables = dict(
+    idle_image="image/ui/bangok/switchoff.png",
+    hover_image = im.Recolor("image/ui/bangok/switchoff.png", 64, 64, 64),
+    selected_idle_image="image/ui/bangok/switchon.png",
+    selected_hover_image=im.Recolor("image/ui/bangok/switchon.png", 64, 64, 64),
+)
+
 def Switch(id, image=None, active_image=None, inactive_image=None, focus_mask=None, dim_inactive_image=None, **properties):
+    if (image or active_image or inactive_image) is None:
+        return ImageButton(clicked=renpy.store.MTSTogglePersistentBool(id), focus_mask=focus_mask, **clean_switch_displayables)
+
     if active_image is None:
         active_image = image
     if inactive_image is None:
@@ -56,6 +66,8 @@ class _BangOkFetish():
         self.active_image = active_image
         self.inactive_image = inactive_image
 
+        self._cache = [None, None]
+
     def __eq__(self, __o):
         return self.id == __o.id
 
@@ -64,9 +76,11 @@ class _BangOkFetish():
 
     def get_switch(self, clean=False):
         if self.image_clean or not clean:
-            return Switch(self.id, self.image, self.active_image, self.inactive_image, style='bangok_four_switch')
+            self._cache[0] = self._cache[0] or Switch(self.id, self.image, self.active_image, self.inactive_image, style='bangok_four_switch')
+            return self._cache[0]
         else:
-            return Switch(self.id, style='bangok_four_switch')
+            self._cache[1] = self._cache[1] or Switch(self.id, style='bangok_four_switch')
+            return self._cache[1]
 
     @property
     def images(self):
