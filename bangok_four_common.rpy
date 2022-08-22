@@ -70,7 +70,7 @@ init:
                                 add fetish.get_switch(bangok_four_bangnokay or persistent.bangok_four_bangnokay)
                                 showif bangok_four_bangnokay or persistent.bangok_four_bangnokay:
                                     text "[fetish.clean_label]"
-                                showif not bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                                showif not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
                                     text "[fetish.label]"
                         if bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay) % 2 == 1:
                             null
