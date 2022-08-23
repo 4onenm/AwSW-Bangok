@@ -60,6 +60,9 @@ init:
                         text "Cute Buttons:" xalign 0.5
                     else:
                         text "Fetishes:" xalign 0.5
+                        text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
+                            xalign 0.5
+                            size 32
 
                     grid ((bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay)+1)//2) 2:
                         align (0.5,0.5)
@@ -75,11 +78,6 @@ init:
                         if bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay) % 2 == 1:
                             null
 
-
-                    showif (not bangok_four_bangnokay or persistent.bangok_four_bangnokay):
-                        text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
-                            xalign 0.5
-                            size 38
                 hbox:
                     xalign 0.5
                     yalign 0.8
