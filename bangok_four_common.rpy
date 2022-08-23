@@ -66,7 +66,7 @@ init:
                         transpose True
                         spacing 10
                         for fetish in bangok_four_common.bangok_four.fetish_iter(bangok_four_bangnokay or persistent.bangok_four_bangnokay):
-                            hbox:
+                            vbox:
                                 add fetish.get_switch(bangok_four_bangnokay or persistent.bangok_four_bangnokay)
                                 showif bangok_four_bangnokay or persistent.bangok_four_bangnokay:
                                     text "[fetish.clean_label]"
