@@ -251,6 +251,13 @@ def bryce3_afterparty():
     clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
 
+def bryce_x_sebastian():
+    ( ml.find_label('c3go')
+        .search_python('renpy.pause (0.5)')
+        .hook_to('bangok_four_brycexsebastian', condition=make_dev("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
+    )
+
+
 def lorem4():
     ( ml.find_label('lorem4skip')
         .search_say("You've made me feel a lot better, though.")
@@ -383,6 +390,7 @@ def link_scenes():
     bryce1_afterparty()
     bryce2_feet()
     bryce3_afterparty()
+    bryce_x_sebastian()
     lorem4()
     remy_c4postsections()
     xdamion()
