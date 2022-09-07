@@ -152,10 +152,10 @@ label bangok_four_brycexsebastian:
         zoom 0.9
         xpos 200
         ypos -200
-        ease 2.0 ypos 0
+        linear 2.0 ypos 0
         ypos 0
     with dissolveslow
-    $ renpy.pause (1.8)
+    $ renpy.pause (1.0)
     Br smirk "Now lick it clean..."
     $ renpy.pause (2.0)
 
