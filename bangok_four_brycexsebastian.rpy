@@ -59,7 +59,7 @@ label bangok_four_brycexsebastian:
     Br flirty "All good now?"
     Sb smile "Mm."
     Br flirty "So I could..."
-    show bangok_four_brycexsebastian frameB bryceframeA with dissolve
+    show bangok_four_brycexsebastian frameB brycesmile bryceeyeopen with dissolve
 
     m "I had no question now that what they were doing was something private. Standing here in the hallway, someone might spot me and tell them about it."
     m "Then they'd know I had been watching."
@@ -111,36 +111,36 @@ label bangok_four_brycexsebastian:
     $ renpy.pause (0.5)
     stop soundloop fadeout 0.5
     play sound "fx/snarl.ogg"
-    show bangok_four_brycexsebastian climax nocum with dissolve
+    show bangok_four_brycexsebastian frameB nocum with dissolve
     $ renpy.pause (0.8)
-    show bangok_four_brycexsebastian climax with dissolve
+    show bangok_four_brycexsebastian frameB cum with dissolve
     Sb shy "Glk!"
     $ renpy.pause (0.5)
     if persistent.bangok_inflation == True:
-        show bangok_four_brycexsebastian climax bulge sebshocked with dissolve
+        show bangok_four_brycexsebastian frameB sebcheekbulge sebthroatbulge sebeyeshocked morecum with dissolve
         Sb shy "Gck."
-        show bangok_four_brycexsebastian climax bulge with dissolve
+        show bangok_four_brycexsebastian frameB sebcheekbulge sebthroatbulge morecum with dissolve
         $ renpy.pause (0.5)
         Br pantflirt "Now swallow."
         play sound "fx/gulpslow2.wav" fadein 0.5
         $ renpy.pause (0.5)
-        show bangok_four_brycexsebastian climax bulge swallow1 with dissolve
+        show bangok_four_brycexsebastian frameB bryceeyeroll brycesmile sebcheekbulge morecum with dissolve
         $ renpy.pause (0.5)
-        show bangok_four_brycexsebastian climax bulge swallow2 with dissolve
+        show bangok_four_brycexsebastian frameB bryceeyeroll brycesmile morecum with dissolve
         $ renpy.pause (0.6)
-        show bangok_four_brycexsebastian climax bulge swallow3 with dissolve
+        show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeopen morecum with dissolve
         $ renpy.pause (0.3)
         stop sound fadeout 0.5
 
         Br smirk "Not to be the bearer of bad news, but it looks like you're gonna need a little more practice."
-        show bangok_four_brycexsebastian climax bulge swallow3 sebeyeclosed with dissolve
+        show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile morecum with dissolve
     else:
         $ renpy.pause (0.5)
         Br pantflirt "Now swallow."
         play sound "fx/gulpslow2.wav" fadein 0.5
-        show bangok_four_brycexsebastian climax swallow1 with dissolve
+        show bangok_four_brycexsebastian frameB bryceeyeroll brycesmile cum with dissolve
         $ renpy.pause(4.5)
-        show bangok_four_brycexsebastian climax swallow2 with dissolve
+        show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeopen cum with dissolve
         stop sound fadeout 0.5
 
         Br brow "So, how much did you spill...?"
@@ -164,8 +164,12 @@ label bangok_four_brycexsebastian:
     Sb drop "Wai--"
 
     hide bangok_four_brycexsebastian_lickpanel
-    show bangok_four_brycexsebastian cumspill sebshocked
+    show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeshocked
     with dissolve
+
+    $ renpy.pause (0.5)
+
+    show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeopen with dissolve
 
     Sb disapproval "Gck."
     Br brow "What?"

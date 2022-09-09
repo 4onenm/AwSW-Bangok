@@ -10,6 +10,15 @@ init python in bangok_four_common:
     renpy.pure('bangok_four_common.bangok_four.fetish_count')
     renpy.pure('bangok_four_common.bangok_four.fetish_iter')
 
+    try:
+        import jz_magmalink.extras.layeredimage as layeredimage
+    except:
+        print("WARNING: Magmalink version does not include `layeredimage`.\n\tFalling back to a copy contained in BangOk.\n\tThis fallback may be removed in a future version.")
+        import bangok_four_layeredimage_fallback as layeredimage
+    LayeredImage = layeredimage.LayeredImage
+    Always = layeredimage.Always
+    Attribute = layeredimage.Attribute
+
     import pygame
     import math
 
@@ -252,158 +261,38 @@ init:
         (-68,130), "cg/bangok/annaxdamion_lab/vaginal_cum.png",
     )
 
-    image bangok_four_brycexsebastian frameA = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameA_base.png",
-    )
-    image bangok_four_brycexsebastian frameB = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png",
-    )
-    image bangok_four_brycexsebastian frameB bryceframeA = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeopen.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-    )
-    image bangok_four_brycexsebastian frameA bryceeyeclosed = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameA_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameA_bryceeyeclosed.png",
-    )
-    image bangok_four_brycexsebastian frameB bryceclosedsmile sebastianopen = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebeyeopen.png",
-    )
-    image bangok_four_brycexsebastian frameA bryceeyeclosed = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameA_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameA_bryceeyeclosed.png",
-    )
-    image bangok_four_brycexsebastian frameB = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png",
-    )
+    image bangok_four_brycexsebastian = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/brycexsebastian_office/officecut.jpg"),
+        bangok_four_common.Attribute('frame',        'frameA', "cg/bangok/brycexsebastian_office/frameA_base.png"),
+        bangok_four_common.Attribute('frame',        'frameB', "cg/bangok/brycexsebastian_office/frameB_base.png"),
+        bangok_four_common.Attribute('bryceeye',     'bryceeyeclosed', "cg/bangok/brycexsebastian_office/bryceeyeclosed.png"),
+        bangok_four_common.Attribute('bryceeye',     'bryceeyeopen', "cg/bangok/brycexsebastian_office/bryceeyeopen.png"),
+        bangok_four_common.Attribute('bryceeye',     'bryceeyeroll', "cg/bangok/brycexsebastian_office/bryceeyeroll.png"),
+        bangok_four_common.Attribute('brycemouth',   'brycesmile', "cg/bangok/brycexsebastian_office/brycesmile.png"),
+        bangok_four_common.Attribute('cumspill',     'nocum', "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png", default=True, if_all=['frameB']),
+        bangok_four_common.Attribute('cumspill',     'cum', renpy.display.layout.Null(), if_all=['frameB']),
+        bangok_four_common.Attribute('cumspill',     'morecum', "cg/bangok/brycexsebastian_office/frameB_cumspill+.png", if_all=['frameB']),
+        bangok_four_common.Attribute('sebcheek',     'sebcheekbulge', "cg/bangok/brycexsebastian_office/frameB_sebcheekbulge.png", if_all=['frameB']),
+        bangok_four_common.Attribute('sebthroat',    'sebthroatbulge', "cg/bangok/brycexsebastian_office/frameB_sebthroatbulge.png", if_all=['frameB']),
+        bangok_four_common.Attribute('sebeye',       'sebeyeopen', "cg/bangok/brycexsebastian_office/frameB_sebeyeopen.png", if_all=['frameB']),
+        bangok_four_common.Attribute('sebeye',       'sebeyeshocked', "cg/bangok/brycexsebastian_office/frameB_sebeyeshocked.png", if_all=['frameB']),
+    ])
+    image bangok_four_brycexsebastian_lickpanel = "cg/bangok/brycexsebastian_office/lickpanel.png"
+
     image bangok_four_brycexsebastian animate bryceclosedsmile sebastianopen:
-        "bangok_four_brycexsebastian frameA bryceeyeclosed"
-        "bangok_four_brycexsebastian frameB bryceclosedsmile sebastianopen" with dissolve
+        "bangok_four_brycexsebastian frameA bryceeyeclosed brycesmile sebeyeopen"
+        "bangok_four_brycexsebastian frameB bryceeyeclosed brycesmile sebeyeopen" with dissolve
         pause 1.5
-        "bangok_four_brycexsebastian frameA bryceeyeclosed" with dissolve
+        "bangok_four_brycexsebastian frameA bryceeyeclosed brycesmile sebeyeopen" with dissolve
         pause 1.5
         repeat
     image bangok_four_brycexsebastian animate bryceclosed:
         "bangok_four_brycexsebastian frameA bryceeyeclosed"
-        "bangok_four_brycexsebastian frameB" with dissolve
+        "bangok_four_brycexsebastian frameB bryceeyeclosed" with dissolve
         pause 1.5
         "bangok_four_brycexsebastian frameA bryceeyeclosed" with dissolve
         pause 1.5
         repeat
-    image bangok_four_brycexsebastian climax nocum = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png",
-    )
-    image bangok_four_brycexsebastian climax = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-    )
-    image bangok_four_brycexsebastian climax bulge sebshocked = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumspill+.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebeyeshocked.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebcheekbulge.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebthroatbulge.png",
-    )
-    image bangok_four_brycexsebastian climax bulge = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumspill+.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebcheekbulge.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebthroatbulge.png",
-    )
-    image bangok_four_brycexsebastian climax bulge swallow1 = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeroll.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumspill+.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebcheekbulge.png",
-    )
-    image bangok_four_brycexsebastian climax bulge swallow2 = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeroll.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumspill+.png",
-    )
-    image bangok_four_brycexsebastian climax bulge swallow3 = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeopen.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumspill+.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebeyeopen.png",
-    )
-    image bangok_four_brycexsebastian climax bulge swallow3 sebeyeclosed = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeopen.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_cumspill+.png",
-    )
-    image bangok_four_brycexsebastian climax swallow1 = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeroll.png",
-    )
-    image bangok_four_brycexsebastian climax swallow2 = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeopen.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebeyeopen.png",
-    )
-    image bangok_four_brycexsebastian climax swallow2 sebeyeclosed = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeopen.png",
-    )
-    image bangok_four_brycexsebastian_lickpanel = "cg/bangok/brycexsebastian_office/lickpanel.png"
-    image bangok_four_brycexsebastian cumspill sebshocked = im.Composite(
-        (1920, 1200),
-        (0,0), "cg/bangok/brycexsebastian_office/officecut.jpg",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_base.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_brycesmile.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_bryceeyeopen.png",
-        (0,0), "cg/bangok/brycexsebastian_office/frameB_sebeyeshocked.png",
-    )
 
 
     # People
