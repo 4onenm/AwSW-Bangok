@@ -254,7 +254,7 @@ def bryce3_afterparty():
 def bryce_x_sebastian():
     ( ml.find_label('c3go')
         .search_python('renpy.pause (0.5)')
-        .hook_to('bangok_four_brycexsebastian', condition=make_dev("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
+        .hook_to('bangok_four_brycexsebastian', condition=("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
     )
 
 
