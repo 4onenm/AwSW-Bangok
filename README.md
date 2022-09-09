@@ -83,4 +83,6 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `fx/bangok_panting_*.ogg`: 4onen, editing base-game `fx/breathing.ogg`
 + `fx/bangok_poundofsalt.ogg`: 4onen, editing base-game `fx/salt.ogg`
 + `fx/digice.ogg`: 4onen, editing base-game `fx/dig.ogg`
++ `image/ui/bangok/*`: 4onen
++ `image/ui/bangok/icons/*`: 4onen, editing base-game assets
 + `mx/bangok_quiet_campfire.ogg`: 4onen, editing base game `mx/campfire.ogg`
