@@ -194,5 +194,6 @@ label bangok_four_brycexsebastian:
     jump bangok_four_brycexsebastian_abort_merge
 
 label bangok_four_brycexsebastian_abort_merge:
+    stop soundloop fadeout 0.5
     m "I must have dozed off in a chair, as what felt like a few minutes later, Sebastian was nudging me awake and guiding me to Bryce's office."
     jump bangok_four_brycexsebastian_return
