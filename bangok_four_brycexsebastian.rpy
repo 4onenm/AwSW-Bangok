@@ -160,17 +160,21 @@ label bangok_four_brycexsebastian:
     Br smirk "Now lick it clean..."
     $ renpy.pause (2.0)
 
+    show bangok_four_brycexsebastian frameB bryceeyeopen sebeyeshocked cum with dissolve
+
     Br brow "Uh... I'd go get you a towel, but first you have to undo those cuffs." # Co-Pilot suggestion: "Uh... I'd go easy on the food for a while."
+
+    show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeshocked cum with dissolve
     Br smirk "If you throat it again, that should give you some more arm length to work with."
     Sb drop "Wai--"
 
     hide bangok_four_brycexsebastian_lickpanel
-    show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeshocked
+    show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeshocked cum
     with dissolve
 
-    $ renpy.pause (0.5)
+    $ renpy.pause (0.8)
 
-    show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeopen with dissolve
+    show bangok_four_brycexsebastian frameB bryceeyeopen brycesmile sebeyeopen cum with dissolve
 
     Sb disapproval "Gck."
     Br brow "What?"
