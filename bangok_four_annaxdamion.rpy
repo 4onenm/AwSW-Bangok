@@ -106,11 +106,11 @@ label bangok_four_annaxdamion:
         "Look closer through the door crack.":
             $ bangok_four_xdamion_store.peek_window = False
 
-            show bangok_four_labdoor dk with dissolve
-            show bangok_four_labdoor dk:
-                ease 2.0 zoom 10.0 pos (-12700, -3000)
+            show bangok_four_labdoor dk track with dissolve
+            show bangok_four_labdoor dk track:
+                ease 2.0 zoom 10.0 pos (-12550, -3000)
                 zoom 10.0
-                pos (-12700, -3000)
+                pos (-12550, -3000)
             show bangok_four_annaxdamion:
                 ease 2.1 zoom 1.2 pos (200, 0)
                 pause 0.3
@@ -120,16 +120,15 @@ label bangok_four_annaxdamion:
                     repeat
             with None
             $ renpy.pause (2.0)
-            show bangok_four_labdoor dk track with Fade(0.1,0.0,0.1)
 
         "Peek through the window.":
             $ bangok_four_xdamion_store.peek_window = True
 
-            show bangok_four_labdoor dk with dissolve
-            show bangok_four_labdoor dk:
-                ease 2.0 zoom 10.0 pos (-9000, -6900)
+            show bangok_four_labdoor dk track with dissolve
+            show bangok_four_labdoor dk track:
+                ease 2.0 zoom 10.0 pos (-9650, -6900)
                 zoom 10.0
-                pos (-8800, -6900)
+                pos (-9650, -6900)
             show bangok_four_annaxdamion:
                 ease 2.1 zoom 1.2 pos (200, 0)
                 pause 0.3
@@ -139,7 +138,6 @@ label bangok_four_annaxdamion:
                     repeat
             with None
             $ renpy.pause (2.0)
-            show bangok_four_labdoor dk track with Fade(0.1,0.0,0.1)
         "Come back a little later.":
             jump bangok_four_annaxdamion_abort2
 

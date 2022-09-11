@@ -44,17 +44,16 @@ label bangok_four_brycexsebastian:
         alpha 1.0
         ease 1.0 alpha 0.0
         alpha 0.0
-    show bangok_four_officedoor:
+    show bangok_four_officedoor track:
         anchor (0, 0)
-        pos (-750, -6600)
+        pos (-800, -6600)
         zoom 9.0
-        ease 1.0 zoom 10.0
+        ease 1.0 zoom 10.0 xpos -1100
         zoom 10.0
+        xpos -1100
     with dissolvemed
-    $ renpy.pause (0.3)
-    hide white
-    show bangok_four_officedoor track
-    with Fade(0.1,0.0,0.1)
+    $ renpy.pause (0.5)
+    hide white with None
 
     Br flirty "All good now?"
     Sb smile "Mm."
@@ -75,14 +74,16 @@ label bangok_four_brycexsebastian:
     show bangok_four_brycexsebastian frameA with dissolve
 
     show bangok_four_officedoor track:
-        pos (-1600, -6600)
-        zoom 12.0
-        ease 0.5 zoom 15.0
+        zoom 10.0
+        pos (-1100, -6600)
+        ease 0.5 zoom 15.0 pos (-2200, -9900)
         zoom 15.0
+        pos (-2200, -9900)
     show bangok_four_brycexsebastian frameA:
         xpos 400
         ease 0.5 xpos 200
         xpos 200
+    with None
 
     m "I adjusted my position, shamelessly peeking from closer to the crack in the door."
 
