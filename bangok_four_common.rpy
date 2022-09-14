@@ -158,45 +158,17 @@ init:
     # CGs
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
-    image bangok_four_annaxdamion cloacal = "cg/bangok/annaxdamion_lab/base.png"
-    image bangok_four_annaxdamion cloacal bulge = im.Composite(
-        (1280,988),
-        (0,0), "cg/bangok/annaxdamion_lab/base.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_bulge.png",
-    )
-    image bangok_four_annaxdamion cloacal bulge cum = im.Composite(
-        (1280,988), 
-        (0,0), "cg/bangok/annaxdamion_lab/base.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_bulge.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_cum.png",
-    )
-    image bangok_four_annaxdamion cloacal cum = im.Composite(
-        (1280,988), 
-        (0,0), "cg/bangok/annaxdamion_lab/base.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/cloacal_cum.png",
-    )
-    image bangok_four_annaxdamion vaginal = im.Composite(
-        (1280,988),
-        (0,0), "cg/bangok/annaxdamion_lab/base.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/vaginal.png",
-    )
-    image bangok_four_annaxdamion vaginal cum = im.Composite(
-        (1280,988),
-        (0,0), "cg/bangok/annaxdamion_lab/base.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/vaginal.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_cum.png",
-    )
-    image bangok_four_annaxdamion vaginal bulge = im.Composite(
-        (1280,988),
-        (0,0), "cg/bangok/annaxdamion_lab/base.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_bulge.png",
-    )
-    image bangok_four_annaxdamion vaginal bulge cum = im.Composite(
-        (1280,988),
-        (0,0), "cg/bangok/annaxdamion_lab/base.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_bulge.png",
-        (-68,130), "cg/bangok/annaxdamion_lab/vaginal_cum.png",
-    )
+
+    image bangok_four_annaxdamion = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/annaxdamion_lab/base.png"),
+        bangok_four_common.Attribute('femaleparts', 'cloacal', renpy.display.layout.Null()), # default
+        bangok_four_common.Attribute('femaleparts', 'vaginal', "cg/bangok/annaxdamion_lab/vaginal.png", pos=(-68, 130)),
+        bangok_four_common.Attribute('bulge',       'bulge', "cg/bangok/annaxdamion_lab/cloacal_bulge.png", if_all=['cloacal'], pos=(-68, 130)),
+        bangok_four_common.Attribute('bulge',       'bulge', "cg/bangok/annaxdamion_lab/vaginal_bulge.png", if_all=['vaginal'], pos=(-68, 130)),
+        bangok_four_common.Attribute('cum',         'cum', "cg/bangok/annaxdamion_lab/cloacal_cum.png", if_all=['cloacal'], pos=(-68, 130)),
+        bangok_four_common.Attribute('cum',         'cum', "cg/bangok/annaxdamion_lab/vaginal_cum.png", if_all=['vaginal'], pos=(-68, 130)),
+    ])
+
 
     image bangok_four_brycexsebastian = bangok_four_common.LayeredImage([
         bangok_four_common.Always("cg/bangok/brycexsebastian_office/officecut.jpg"),
