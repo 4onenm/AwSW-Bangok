@@ -2631,7 +2631,21 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             m "Finally, he lifted his paw from my shoulderblades, releasing me from my service to his cock. I gasped as I slumped to the ground, thanking my lucky stars I'd avoided that internal organ rearrangement."
             scene beachx at Pan ((300, 0), (300, 0), 0.0) with hpunch
             jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
+
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == None:
+        m "Bryce wandered away down the beach, keeping an eye on both of us."
+        play soundloop "fx/faucet1.ogg" fadein 1.0
+        queue soundloop "fx/faucet2.ogg"
+        m "Picking a spot that was very specifically in both my field of view and Maverick's, Bryce spread his legs and began to piss into the sand."
+        m "Maverick stiffened and stared, watching Bryce deposit his liquid stream."
+        $ renpy.pause (0.5)
+        Mv normal "Could you not do that behind a bush? Or standing in the ocean water? That's public urination."
+        stop soundloop fadeout 1.5
+        Br flirty "Oh come on. It's just us three, and the tide will wash it away."
+        Mv "..."
     Br laugh "Any time you want to start."
+
+
     show beachx:
         ease 0.8 zoom 1.05
         ease 0.5 zoom 1.2
