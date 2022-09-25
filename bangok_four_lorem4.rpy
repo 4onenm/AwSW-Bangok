@@ -61,6 +61,24 @@ label bangok_four_lorem4_feelbetter:
             $ renpy.pause (0.5)
             Lo "I don't..."
             $ renpy.pause (0.5)
+            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                Lo relieved "[player_name], we just had a pizza party. Isn't it a little soon for a sleepover?"
+                c "What?"
+                c "I mean, that's not what I was suggesting..."
+                Lo think "What were you suggesting?"
+                c "You and me... getting to know each other better?"
+                Lo "But we already know each other."
+                c "I mean, in a different way."
+                Lo think blush "..."
+                Lo relieved "No."
+                Lo sad "Just because I have those parts doesn't mean I want to use them."
+                c "Oh. {w=0.5}Uh. {w=0.5}Okay.{w}{nw}"
+                Lo relieved "It's nothing against you, [player_name]. I just don't want to."
+                c "I see."
+                c "Well, I'm sorry I brought it up."
+                Lo normal "It's fine."
+                jump bangok_four_lorem4_feelbetter_return
+
             Lo shy bangok peek "W-Wait, you mean... You're suggesting you'd be willing to... with me..."
             Lo bangok hidepeek flip "E-Even though I..."
             $ renpy.pause (0.8)
