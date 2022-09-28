@@ -740,6 +740,70 @@ label bangok_four_xipsum2_ponahole:
 
 label bangok_four_xipsum2_idildo:
     $ bangok_four_xipsum2_store.scene_type = "idildo"
+    Ip happy bangok briefs "I'm excited to discover what you will do with them."
+    if persistent.bangok_watersports == True:
+        Ip sad bangok briefs "One note, I do have to relieve myself. Should I take care of that before we begin, or would you like toys with a... \"{i}leaky{/i}\" feature?"
+        menu:
+            "Yes.":
+                $ renpy.pause(0.5)
+                $ bangok_four_xipsum2_store.ws = True
+                Ip happy bangok briefs "Good to hear."
+                Ip normal bangok briefs "I'll only start if both toys are \"inserted\" for a few seconds without movement. Got it?"
+                c "Yeah."
+            "What if there are spills on your living room?":
+                $ renpy.pause(0.5)
+                Ip think bangok briefs "Well, I am placing a certain amount of trust in you to keep things inside, as it were."
+                Ip normal bangok briefs "I'll only start if both toys are \"inserted\" for a few seconds without movement."
+                menu:
+                    c "(Do I want Ipsum pissing in me?)"
+                    "Yes.":
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xipsum2_store.ws = True
+                    "No thanks.":
+                        $ renpy.pause(0.5)
+                        $ bangok_four_xipsum2_store.ws = False
+                        Ip think bangok briefs "As you wish. Forget I brought it up"
+            "Ew, No!":
+                $ renpy.pause(0.5)
+                $ bangok_four_xipsum2_store.ws = False
+                Ip sad bangok briefs "Nevermind, then. Forget I brought it up."
+
+    Ip normal bangok briefs "Now, briefs off, please? And hand them back to me."
+    $ renpy.pause (0.5)
+    play sound "fx/necklace.ogg"
+    $ renpy.pause (0.8)
+    play sound "fx/pda.wav"
+    $ renpy.pause (0.5)
+    play sound "fx/pda.wav"
+    m "I handed the briefs back, and Ipsum deftly removed the two disks from inside."
+    Ip happy bangok briefs "When the shafts appear, they are \"available.\""
+    Ip happy bangok briefs flip "Have fun."
+    menu:
+        "Wait, where are you going?":
+            Ip think bangok briefs "To my room, to prepare and enjoy."
+            Ip normal bangok briefs "Excuse me for not explaining: I wanted to take the sex toy analogy a little more seriously."
+            Ip "I'm curious how it will feel to be used without being present."
+            menu:
+                "Are you sure that's safe?":
+                    Ip happy bangok briefs "Perhaps not, but it's what I'd like to try."
+                    Ip sad bangok briefs "The only way I can think of something going wrong is through intentional misuse of my parts. You're not going to do that to me, right?"
+                    c "No, of course not."
+                    Ip happy bangok briefs "Then all is well. Have fun."
+                "Fair enough.":
+                    $ renpy.pause (0.5)
+            show ipsum normal bangok briefs flip with dissolve
+            $ renpy.pause (0.3)
+        "Thanks.":
+            $ renpy.pause (0.5)
+
+    hide ipsum with easeoutright
+    play sound "fx/door/close2.wav"
+
+    $ renpy.pause (0.5)
+    show loremapt at Pan((128,62),(0,0), 2.0) with ease
+    $ renpy.pause (0.5)
+
+
     jump todo_out_of_content_bangok_four_xipsum
 
 label bangok_four_xipsum2_ionahole:
