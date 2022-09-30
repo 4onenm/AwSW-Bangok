@@ -14,6 +14,11 @@ init python in bangok_four_xipsum2_store:
     #     vag1
     #     vag2
     # idildo:
+    #     oral
+    #     anal1
+    #     anal2
+    #     vag1
+    #     vag2
     # ionahole:
     #     oral
     #     anal1
@@ -27,6 +32,7 @@ init python in bangok_four_xipsum2_store:
     # False - Ipsum takes a seat on the couch with the MC to fuck/be fucked
 
     ws = False
+    ipsum_pissed = False
     player_pissed = False
 
     ponahole_unasked = True
@@ -270,7 +276,7 @@ label bangok_four_xipsum2_scene_type_choice:
         "You can turn my holes into your sex toy with this?" if bangok_four_playerhasdick==False and bangok_four_xipsum2_store.ponahole_unasked == True:
             $ bangok_four_xipsum2_store.ponahole_unasked = False
             $ renpy.pause(0.5)
-            if persistent.bangok_watersports == True:
+            if persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False:
                 Ip think bangok briefs "And my urinal, too, if you're so inclined to that sort of thing. All you'd need to do is keep the briefs on, and I should have full access."
             else:
                 Ip think bangok briefs "Easily, yes. All you'd need to do is keep the briefs on, and I should have full access."
@@ -278,9 +284,9 @@ label bangok_four_xipsum2_scene_type_choice:
             menu:
                 "Yes.":
                     $ renpy.pause(0.5)
-                    $ bangok_four_xipsum2_store.ws = persistent.bangok_watersports == True
+                    $ bangok_four_xipsum2_store.ws = (persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False)
                     jump bangok_four_xipsum2_ponahole
-                "I don't want to be your urinal, but I'm for the sex." if persistent.bangok_watersports == True:
+                "I don't want to be your urinal, but I'm for the sex." if (persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False):
                     $ renpy.pause(0.5)
                     $ bangok_four_xipsum2_store.ws = False
                     jump bangok_four_xipsum2_ponahole
@@ -289,7 +295,7 @@ label bangok_four_xipsum2_scene_type_choice:
         "You can turn my ass into your sex toy with this?" if bangok_four_playerhasdick == True and bangok_four_xipsum2_store.ponahole_unasked == True:
             $ bangok_four_xipsum2_store.ponahole_unasked = False
             $ renpy.pause(0.5)
-            if persistent.bangok_watersports == True:
+            if (persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False):
                 Ip think bangok briefs "And my urinal, too, if you're so inclined to that sort of thing. All you'd need to do is keep the briefs on, and I should have full access."
             else:
                 Ip think bangok briefs "Easily, yes. All you'd need to do is keep the briefs on, and I should have full access."
@@ -297,9 +303,9 @@ label bangok_four_xipsum2_scene_type_choice:
             menu:
                 "Yes.":
                     $ renpy.pause(0.5)
-                    $ bangok_four_xipsum2_store.ws = persistent.bangok_watersports == True
+                    $ bangok_four_xipsum2_store.ws = (persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False)
                     jump bangok_four_xipsum2_ponahole
-                "I don't want to be your urinal, but I'm for the sex." if persistent.bangok_watersports == True:
+                "I don't want to be your urinal, but I'm for the sex." if (persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False):
                     $ renpy.pause(0.5)
                     $ bangok_four_xipsum2_store.ws = False
                     jump bangok_four_xipsum2_ponahole
@@ -307,7 +313,7 @@ label bangok_four_xipsum2_scene_type_choice:
                     jump bangok_four_xipsum2_scene_type_choice
         "Oh, fuck me. Human-brand onahole, sure." if bangok_four_xipsum2_store.ponahole_unasked == False:
             $ renpy.pause(0.5)
-            if persistent.bangok_watersports == True:
+            if (persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False):
                 Ip normal bangok briefs "And about that little suggestion of using said onahole to... relieve myself?"
                 menu:
                     c "(Do I want Ipsum pissing in me?)"
@@ -670,7 +676,7 @@ label bangok_four_xipsum2_ponahole:
     else:
         $ renpy.error ("Impossible scene_subtype %s"%bangok_four_xipsum2_store.scene_subtype)
 
-    if persistent.bangok_watersports == True and bangok_four_xipsum2_store.ws == True:
+    if persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == True and bangok_four_xipsum2_store.ws == True:
         stop soundloop fadeout 0.5
         $ renpy.pause (0.8)
 
@@ -686,6 +692,7 @@ label bangok_four_xipsum2_ponahole:
 
         play soundloop "fx/faucet1.ogg" fadein 1.0
         queue soundloop "fx/faucet2.ogg"
+        $ bangok_four_xipsum2_store.ipsum_pissed = True
 
         if bangok_four_xipsum2_store.scene_subtype == 'dp':
             m "His twin shafts twitched, then hot, wet streams of watery liquid began to spray into my front and rear, saturating my twitching canal and my guts' lowest reaches."
@@ -741,7 +748,7 @@ label bangok_four_xipsum2_ponahole:
 label bangok_four_xipsum2_idildo:
     $ bangok_four_xipsum2_store.scene_type = "idildo"
     Ip happy bangok briefs "I'm excited to discover what you will do with them."
-    if persistent.bangok_watersports == True:
+    if persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False:
         Ip sad bangok briefs "One note, I do have to relieve myself. Should I take care of that before we begin, or would you like toys with a... \"{i}leaky{/i}\" feature?"
         menu:
             "Yes.":
@@ -778,31 +785,90 @@ label bangok_four_xipsum2_idildo:
     m "I handed the briefs back, and Ipsum deftly removed the two disks from inside."
     Ip happy bangok briefs "When the shafts appear, they are \"available.\""
     Ip happy bangok briefs flip "Have fun."
-    menu:
-        "Wait, where are you going?":
-            Ip think bangok briefs "To my room, to prepare and enjoy."
-            Ip normal bangok briefs "Excuse me for not explaining: I wanted to take the sex toy analogy a little more seriously."
-            Ip "I'm curious how it will feel to be used without being present."
-            menu:
-                "Are you sure that's safe?":
-                    Ip happy bangok briefs "Perhaps not, but it's what I'd like to try."
-                    Ip sad bangok briefs "The only way I can think of something going wrong is through intentional misuse of my parts. You're not going to do that to me, right?"
-                    c "No, of course not."
-                    Ip happy bangok briefs "Then all is well. Have fun."
-                "Fair enough.":
-                    $ renpy.pause (0.5)
-            show ipsum normal bangok briefs flip with dissolve
-            $ renpy.pause (0.3)
-        "Thanks.":
-            $ renpy.pause (0.5)
+    if persistent.bangok_watersports == False or bangok_four_xipsum2_store.protection == True or bangok_four_xipsum2_store.ws == True:
+        menu:
+            "Wait, where are you going?":
+                Ip think bangok briefs "To my room, to prepare and enjoy."
+                Ip normal bangok briefs "Excuse me for not explaining: I wanted to take the sex toy analogy a little more seriously."
+                Ip "I'm curious how it will feel to be used without being present."
+                menu:
+                    "Are you sure that's safe?":
+                        Ip happy bangok briefs "Perhaps not, but it's what I'd like to try."
+                        Ip sad bangok briefs "The only way I can think of something going wrong is through intentional misuse of my parts. You're not going to do that to me, right?"
+                        c "No, of course not."
+                        Ip happy bangok briefs "Then all is well. Have fun."
+                    "Fair enough.":
+                        $ renpy.pause (0.5)
+                show ipsum normal bangok briefs flip with dissolve
+                $ renpy.pause (0.3)
+            "Thanks.":
+                $ renpy.pause (0.5)
 
     hide ipsum with easeoutright
     play sound "fx/door/close2.wav"
 
     $ renpy.pause (0.5)
+
+    if persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False and bangok_four_xipsum2_store.ws == False:
+        c "(I wonder why he went to his room instead of the bathroom.)"
+
     show loremapt at Pan((128,62),(0,0), 2.0) with ease
     $ renpy.pause (0.5)
 
+    m "I sat down on the couch, waiting for my dildos to appear."
+    if persistent.bangok_watersports == True and bangok_four_xipsum2_store.protection == False and bangok_four_xipsum2_store.ws == False:
+        $ renpy.pause (1.5)
+        m "A long time passed, leaving me to twiddle my thumbs."
+        $ renpy.pause (1.5)
+        c "(Is he actually going to give me his cocks? Or is he going to make me sit here for fun?)"
+        $ renpy.pause (1.5)
+        m "Just before I'd decided to get up and go knock on Ipsum's bedroom door, I spotted movement through the disks."
+    else:
+        m "After a short wait, I spotted movement through the disks."
+
+    if bangok_four_xipsum2_store.protection == False:
+        m "Ipsum's cocks emerged, one from each disk, stout and glistening with a convenient sheen of lube."
+    else:
+        m "Ipsum's condom-wrapped cocks emerged, one from each disk, stout and glistening with a convenient sheen of lube."
+    c "(Thanks for the lube, Ipsum.)"
+
+    m "Picking one up by the disk, I considered where it should go."
+
+    menu:
+        "Front." if bangok_four_playerhasdick == False:
+            $ bangok_four_xipsum2_store.scene_subtype == "vag1"
+            m "Reclining on the couch, I nestled his tip in my outer folds, spreading my legs for the dildo that was real."
+            if bangok_four_xipsum2_store.protection == True:
+                m "I teased my lips for a while, dragging the condom's reservoir around and around my dampening folds."
+            else:
+                m "I teased my lips for a while, smearing his first drops of pre into my dampening folds."
+            m "Then, gently, I eased his head inside, sliding in to the base as I clenched around him."
+            m "Getting the hang of a one-handed pace, I began to slowly pump his shaft into and out of my wet hole. Then I sat forward on the couch, pushing him all the way in while I reached for his other cock."
+        "Rear.":
+            $ bangok_four_xipsum2_store.scene_subtype == "vag1"
+            m "Balancing his cock on the couch cushion, I leaned back, gently nestling his head between my cheeks."
+            m "Settled, I began to ease downward, spreading my tight pucker around his relatively small length."
+            if bangok_four_xipsum2_store.protection == True:
+                m "With the lubrication on his condom his shaft was slippery, easily sliding in as I lowered myself to sitting on his couch and cock."
+            else:
+                m "With the lubrication he'd applied, his shaft was slippery, easily sliding in as I lowered myself to sitting on his couch and cock."
+            m "I lifted myself off again, feeling him slide out, then back in as I sat back down."
+            m "On my next rise up, I reached for his other cock."
+        "Mouth.":
+            $ bangok_four_xipsum2_store.suck_spare = True
+            if bangok_four_xipsum2_store.protection == True:
+                m "I slid his condom-wrapped shaft into my mouth, running my tongue over the lubricated rubber that protected me from tiny liquid droplets resulting from his every twitch."
+            else:
+                m "I slid his lubricated shaft into my mouth, running my tongue over the slippery texture until I got the encouragement I was looking for: a dollop of pre, on my tongue."
+            m "Getting the hang of a one handed pace, I began to pump his shaft into and out of my mouth, while I reached with obstructed vision for his other cock."
+
+    menu:
+        "Front.":
+            jump todo_out_of_content_bangok_four_xipsum
+        "Rear.":
+            jump todo_out_of_content_bangok_four_xipsum
+        "Mouth.":
+            jump todo_out_of_content_bangok_four_xipsum
 
     jump todo_out_of_content_bangok_four_xipsum
 
@@ -1001,13 +1067,19 @@ label bangok_four_xipsum2_ionahole:
 
     if bangok_four_xipsum2_store.scene_subtype == "oral":
         m "Taking pity on him, I decided to pick up the disk from which his cocks emerged and start that blowjob I had promised."
-        m "It was like suckling on a pair of fleshy, pre-leaking dildos, as I took his tips into my mouth."
+        if bangok_four_xipsum2_store.protection == False:
+            m "It was like suckling on a pair of fleshy, pre-leaking dildos, as I took his tips into my mouth."
+        else:
+            m "It was like suckling on a pair of condom-wrapped dildos, as I took his tips into my mouth."
 
         if bangok_four_xipsum2_store.separate == False:
             Ip normal bangok blush flip "Mmh. Better."
             m "Spurred on by his encouragement, I pushed his penises slightly deeper into my mouth, swirling the heads around with my tongue."
-        else:
+        elif bangok_four_xipsum2_store.protection == False: 
             m "The taste, texture, and slight twitching helped keep me from forgetting these were real, as he leaked small dollops of pre into my mouth."
+        else:
+            m "The texture and slight twitching helped keep me from forgetting that these were real."
+
     elif bangok_four_xipsum2_store.scene_subtype == "anal1":
         if bangok_four_xipsum2_store.separate == False:
             Ip normal bangok blush flip "My turn, then."
@@ -1022,6 +1094,7 @@ label bangok_four_xipsum2_ionahole:
         if bangok_four_xipsum2_store.separate == False:
             Ip "We did start this conversation on the premise of using each other as sex toys."
             Ip happy bangok blush flip "Enjoy yourself."
+
     else: # anal2
         if bangok_four_xipsum2_store.separate == False:
             Ip normal bangok blush flip "My turn, then."
@@ -1062,6 +1135,7 @@ label bangok_four_xipsum2_ionahole:
 
         play soundloop "fx/faucet1.ogg" fadein 1.0
         queue soundloop "fx/faucet2.ogg"
+        $ bangok_four_xipsum2_store.ipsum_pissed = True
 
         if bangok_four_xipsum2_store.scene_subtype == "oral":
             m "I barely had time to move both hands to the twin dildos in my mouth, before jets of sour piss were flooding over my tongue and up against the back of my throat."
@@ -1160,19 +1234,22 @@ label bangok_four_xipsum2_ionahole:
         m "I glanced over at Ipsum's free shaft, bobbing and twitching in the air while he stretched my ass over its twin."
         if persistent.bangok_watersports == True and bangok_four_xipsum2_store.ws == True:
             m "A sheen of piss and pre covered most of it, with a little more pre squeezing out with every one of his other shaft's thrusts into my ass."
-        else:
+        elif bangok_four_xipsum2_store.protection == False:
             m "A sheen of slit juices and pre covered most of it, with a little more pre squeezing out with every one of his other shaft's thrusts into my ass."
+        elif bangok_four_xipsum2_store.protection == False:
+            m "A sheen of lube covered most of its condom, glinting and twitching with every one of his other shaft's thrusts into my ass."
 
         menu:
-            "Suck it.":
-                $ bangok_four_xipsum2_store.suck_spare = True
-                show ipsum happy bangok heady with dissolve
-                show black with dissolve
-                m "Leaning over, I took Ipsum's spare length into my mouth, lapping up his fluids as I tried to drive him over his peak."
+            # "Suck it.":
+            #     $ bangok_four_xipsum2_store.suck_spare = True
+            #     show ipsum happy bangok heady with dissolve
+            #     show black with dissolve
+            #     m "Leaning over, I took Ipsum's spare length into my mouth, lapping up his fluids as I tried to drive him over his peak."
             "Ask him to stick it in, too.":
                 Ip ipsum happy bangok heady "W-Well, if you insist."
                 m "He pulled out, leaving my ass momentarily cold and empty."
                 m "Then I felt both his heads prodding at my spread rosebud."
+                $ bangok_four_xipsum2_store.scene_subtype == "anal2"
                 c "Mngh!"
                 m "It felt like his paired shafts were going to pry my ass apart, but they fit."
                 m "With my ass already pre-stretched by his one, he quickly got back to his punishing pace, as I kept mine going, stretching his tight rear."
@@ -1233,11 +1310,11 @@ label bangok_four_xipsum2_ionahole:
         hide black
         with dissolveslow
 
-    if bangok_four_xipsum2_store.suck_spare == True:
-        m "I came back down from my high with Ipsum grinning down at me, in his lap."
-        Ip "Nice touch at the end, there."
-        m "Blushing, I let his cock back out of my mouth."
-    elif bangok_four_xipsum2_store.separate == False:
+    # if bangok_four_xipsum2_store.suck_spare == True:
+    #     m "I came back down from my high with Ipsum grinning down at me, in his lap."
+    #     Ip "Nice touch at the end, there."
+    #     m "Blushing, I let his cock back out of my mouth."
+    if bangok_four_xipsum2_store.separate == False:
         m "I came back down from my high with Ipsum grinning over at me, fingering the disk in his lap."
         Ip "And a happy ending for us both."
     else:
