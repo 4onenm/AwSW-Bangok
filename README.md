@@ -58,6 +58,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `remyc4postsections` inspired and written by `saiginth renginalti` (Discord).
 + `anna4` written and coded by `An Anonymous contributor`
 + `bryce2` happy birthday `Kosmos` (Discord).
++ `adine4` written by `Jackwolf` (Discord).
 
 ### Resource credits:
 + `bg/in/apts/o_ceil.png`: An Anonymous contributor

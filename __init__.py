@@ -11,6 +11,16 @@ def make_dev(cond):
     return '('+cond+') and (persistent.bangok_dev == True)'
 
 
+def adine4():
+    ( ml.find_label('a4shower')
+        .search_say("Is that... are you purring?")
+        .search_show()
+        .hook_to('bangok_four_adine4_shower_purring', condition=make_dev('persistent.nsfwtoggle == True'))
+        .search_say("When she turned off the water again, I realized that it didn't cling to her much at all. After she shook herself for a bit, she stepped out again, nearly dry.")
+        .link_from('bangok_four_adine4_when_she_turned_off_the_water_again')
+    )
+
+
 def anna12():
     # Anna1
     ml.find_label('_call_skiptut_7') \
@@ -384,6 +394,7 @@ def modsettings_firstboot():
 
 
 def link_scenes():
+    adine4()
     anna12()
     anna4()
     anna_x_damion()
