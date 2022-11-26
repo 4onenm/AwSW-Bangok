@@ -72,6 +72,11 @@ label bangok_four_xsebastian_path1:
     m "I worked my way lower down our rock bed, giving myself easier access to his cock."
     m "Gently, I began to explore it, getting an idea of what I'd be working with."
     m "It was smooth, slightly tapered with a wider base than head, and a tip that bulged just slightly from the shaft, enough to give it a noticeable ridge, but not enough for said ridge to impede anything."
+    if persistent.bangok_balls == True:
+        if persistent.bangok_inflation == True:
+            m "Beneath his shaft a heavy, hand-filling pair of balls lay, slightly damp as if they'd just emerged from his slit with his dragonhood."
+        else:
+            m "Beneath his shaft a pair of balls comprable in size to a human's lay, slightly damp as if they'd just emerged from his slit with his dragonhood."
     m "Sebastian thrust back slightly against my explorations."
     menu:
         "I'll just use my hands, okay?":
@@ -170,7 +175,10 @@ label bangok_four_xsebastian_path1:
         m "The easiest spot to grip his dick with my tongue was that small ridge where it turned into his tip, so I dug my tastebuds in there, digging out an extra dose of slit juices."
         m "He moaned into my crotch, the sensations evidently pushing him toward his peak as well."
     else: # == 2
-        m "I guided his cock into my mouth. He barely gave me a moment to enjoy the taste before he pressed his hips forward, burrowing his tip in my neck."
+        if persistent.bangok_balls == True:
+            m "I guided his cock into my mouth. He barely gave me a moment to enjoy the taste before he pressed his hips forward, burrowing his tip in my neck and slapping his balls forward into my face."
+        else:
+            m "I guided his cock into my mouth. He barely gave me a moment to enjoy the taste before he pressed his hips forward, burrowing his tip in my neck."
         m "I bucked my crotch into his face, the sensation of my throat being entered racheting up the sensations in my groin."
         m "He moaned back, evidently quickly approaching his peak as well."
     
@@ -236,9 +244,14 @@ label bangok_four_xsebastian_path1_1:
                 m "I leaned forward into the bed of rocks, taking the gentle fucking with soft gasps and moans."
                 $ renpy.pause (1.5)
                 stop soundloop fadeout 0.5
-                m "He leaned over me, hugging my back as he stopped deep inside."
-                play sound "fx/extinguish.ogg"
-                m "Then warmth blossomed within me."
+                if persistent.bangok_balls == True:
+                    m "He leaned over me, hugging my back as he stopped deep inside, balls-deep in my canal."
+                    play sound "fx/extinguish.ogg"
+                    m "Then his balls clenched, and warmth blossomed within me."
+                else:
+                    m "He leaned over me, hugging my back as he stopped deep inside."
+                    play sound "fx/extinguish.ogg"
+                    m "Then warmth blossomed within me."
                 m "His shaft pulsed, rope after rope of seed deposited in my hole."
                 if persistent.bangok_inflation == True:
                     m "His cock kept twitching, the pressure of cum building up inside until it was spilling into my womb."
@@ -312,9 +325,14 @@ label bangok_four_xsebastian_path1_1:
     m "I leaned forward into the bed of rocks, taking the assfucking to repay Sebastian for his glorious oral."
     $ renpy.pause (1.5)
     stop soundloop fadeout 0.5
-    m "He leaned over me, hugging my back as he stopped deep inside."
-    play sound "fx/extinguish.ogg"
-    m "Then warmth blossomed within me."
+    if persistent.bangok_balls == True:
+        m "He leaned over me, hugging my back as he stopped deep inside, his balls slapping against my thighs."
+        play sound "fx/extinguish.ogg"
+        m "Then his balls clenched upward, and warmth blossomed within me."
+    else:
+        m "He leaned over me, hugging my back as he stopped deep inside."
+        play sound "fx/extinguish.ogg"
+        m "Then warmth blossomed within me."
     m "His shaft pulsed, rope after rope of seed deposited in my ass."
     if persistent.bangok_inflation == True:
         m "By the time the pulses slowed, I felt stuffed, like I'd eaten enough for the entire next day."
@@ -340,15 +358,26 @@ label bangok_four_xsebastian_path1_1:
     jump bangok_four_xsebastian_aftersex
 
 label bangok_four_xsebastian_path1_2:
-    if bangok_four_xsebastian_depth < 2:
-        m "I took his shaft in both hands, stroking him forward and back with a tight ring of my fingers."
+    if persistent.bangok_balls == True:
+        if bangok_four_xsebastian_depth < 2:
+            m "I took his shaft in both hands, stroking him forward and back with a tight ring of my fingers right down to his sack."
+        else:
+            m "I wrapped a hand around what little of his shaft wasn't buried deep in my throat, stroking with a tight ring of my thumb and index fingers right down to his sack."
+        if persistent.bangok_cloacas == True:
+            m "As Sebastian bucked into my face, my hand ring momentarily entered his slit, my knuckles pushing his sack back against what felt like a tight asshole behind his balls."
+        else:
+            m "As Sebastian bucked into my face, my arm brushed against a tight asshole, a little further back from his cock."
+        m "Wanting to get him off before I got off, I pressed a finger inside, searching for the oh-so-useful pleasure button that hid there in human males."
     else:
-        m "I wrapped a hand around what little of his shaft wasn't buried deep in my throat, stroking with a tight ring of my thumb and index fingers."
-    if persistent.bangok_cloacas == True:
-        m "As Sebastian bucked into my face, my hand ring momentarily entered his slit, brushing against a tight asshole behind his cock."
-    else:
-        m "As Sebastian bucked into my face, the back of my hand brushed against a tight asshole, a little further back from his cock."
-    m "Wanting to get him off before I got off, I pressed a finger inside, searching for the oh-so-useful pleasure button that hid there in human males."
+        if bangok_four_xsebastian_depth < 2:
+            m "I took his shaft in both hands, stroking him forward and back with a tight ring of my fingers."
+        else:
+            m "I wrapped a hand around what little of his shaft wasn't buried deep in my throat, stroking with a tight ring of my thumb and index fingers."
+        if persistent.bangok_cloacas == True:
+            m "As Sebastian bucked into my face, my hand ring momentarily entered his slit, brushing against a tight asshole behind his cock."
+        else:
+            m "As Sebastian bucked into my face, the back of my hand brushed against a tight asshole, a little further back from his cock."
+        m "Wanting to get him off before I got off, I pressed a finger inside, searching for the oh-so-useful pleasure button that hid there in human males."
 
     Sb shy b dk "Nngh!"
     if bangok_four_xsebastian_depth == 1:
@@ -365,7 +394,10 @@ label bangok_four_xsebastian_path1_2:
         m "Sebastian's mouth popped free of my crotch as he thrust into my face and hand, shoving into my neck."
         label bangok_four_xsebastian_oralinside:
         play sound "fx/extinguish.ogg"
-        m "His cock twitched deep in my throat, then spurt thick seed directly down, into my stomach."
+        if persistent.bangok_balls == True:
+            m "His cock twitched deep in my throat, balls clenching against my face. Then he spurt thick seed directly down, into my stomach."
+        else:
+            m "His cock twitched deep in my throat, then spurt thick seed directly down, into my stomach."
         if persistent.bangok_inflation == True:
             m "I could only struggle to hold him close as he drained spurt after spurt into me, each forcing the last down until I felt full and light-headed."
             $ renpy.pause(0.8)
@@ -374,7 +406,7 @@ label bangok_four_xsebastian_path1_2:
     elif bangok_four_xsebastian_depth == 0:
         play sound "fx/extinguish.ogg"
         m "Sebastian's mouth popped free of my crotch as he bucked into my face and hand, splattering my face with sticky ropes."
-        m "It got everywhere; my nose, eyes, mouth, even a few droplets on my ear as his twitching cock strung creamy decorations across my face."
+        m "It got everywhere: my nose, eyes, mouth, even a few droplets on my ear as his twitching cock strung creamy decorations across my face."
     else:
         $ renpy.error("Impossible bangok_four_xsebastian_depth")
     $ renpy.pause(0.5)
@@ -399,10 +431,7 @@ label bangok_four_xsebastian_path1_2:
         Sb "O-Oh! Sorry, I forgot you..."
         show sebastian smile b dk with dissolve
         m "I lifted one of his legs aside, preparing to press as deeply as I could."
-        if persistent.bangok_cloacas == True:
-            m "I aimed my saliva-slicked shaft up to his asshole I had discovered earlier, just behind his own."
-        else:
-            m "I aimed my saliva-slicked shaft up to his asshole I had discovered earlier."
+        m "I aimed my saliva-slicked shaft up to his asshole I had discovered earlier."
         m "Then I pushed inside of him."
         Sb drop b dk "Oh!"
         if bangok_four_xsebastian_depth == 0:
@@ -417,7 +446,10 @@ label bangok_four_xsebastian_path1_2:
         with None
         m "He didn't seem to mind in the slightest as I started up my pace immediately, pushing to the hilt in his tight hole with my first thrust, and every one after."
         $ renpy.pause (0.4)
-        m "His own cock re-emerged fully from its slit, slapping against my leg with every one of my thrusts."
+        if persistent.bangok_balls == True:
+            m "His own cock re-emerged fully from its slit, slapping against my belly with every one of my thrusts as I plowed in behind his balls."
+        else:
+            m "His own cock re-emerged fully from its slit, slapping against my belly with every one of my thrusts."
         m "I took hold of it, stroking him to give him something more out of this as well."
         if persistent.bangok_knot == True:
             m "Since he'd cum, some kind of bulb had formed around his base -- what I realized had to be a knot. I gave it a squeeze and he gasped."
@@ -435,7 +467,7 @@ label bangok_four_xsebastian_path1_2:
         show sebastian shy b dk with dissolve
         play sound "fx/extinguish.ogg"
         show black with fadequick
-        m "I thundered into him, plowing his legs wide before blasting inside."
+        m "I thundered into him, pressing his legs wide before blasting inside."
         m "In my hand, his cock twitched too, a meagre dribble compared to his last go, but an orgasm nonetheless."
         show sebastian shy b sleep dk with dissolve
         hide black
@@ -678,7 +710,13 @@ label bangok_four_xsebastian_path2_1_1:
             "[[Stroke him.]":
                 $ renpy.pause(0.5)
                 m "It took me a moment to find in the dark even as it slapped against my stomach, but I managed to get my hand around Sebastian's dick. His up-and-down motions fucked it forward and backward in my grip, stimulating him for every motion he made."
-                m "Sebastian picked up his pace slightly, leaning forward into the sensations."
+                if persistent.bangok_balls == True:
+                    if persistent.bangok_inflation == True:
+                        m "Sebastian picked up his pace slightly, leaning forward into the sensations as his heavy balls rolled on my belly."
+                    else:
+                        m "Sebastian picked up his pace slightly, leaning forward into the sensations as his own balls rolled on my belly."
+                else:
+                    m "Sebastian picked up his pace slightly, leaning forward into the sensations."
                 $ renpy.pause(1.2)
                 c "(If he cums, he's going to get it all over my only shirt.)"
                 m "With my free hand, I went at the buttons, trying to clear a runway for him to shoot into."
@@ -699,7 +737,10 @@ label bangok_four_xsebastian_path2_1_1:
                 m "Now that he wasn't moving up and down, I could manage to give him more direct pumps with my hand."
             "[[Fuck him back.]":
                 $ renpy.pause(0.5)
-                m "Reaching up, I got my hands onto his hips, pulling myself up and him further down with each thrust, so every one hilted me inside him and slapped his cock against my chest."
+                if persistent.bangok_balls == True:
+                    m "Reaching up, I got my hands onto his hips, pulling myself up and him further down with each thrust, so every one hilted me inside him and slapped his cock and balls against my belly."
+                else:
+                    m "Reaching up, I got my hands onto his hips, pulling myself up and him further down with each thrust, so every one hilted me inside him and slapped his cock against my belly."
                 show sebastian shy b dk with dissolve
                 $ renpy.pause(0.8)
                 show sebastian smile b dk with dissolve
@@ -797,7 +838,13 @@ label bangok_four_xsebastian_path2_1_1:
         m "He slid in, his arousal and mine making the passage of his cock easy. I panted, sparks flying inside."
         $ renpy.pause(0.8)
         show sebastian at Position(xpos=0.45, ypos=1.15) with ease
-        m "After giving me a moment, Sebastian pushed further in, his slit pressing into my own. My legs spread wide to reach around his, rough scales against my smooth thighs."
+        if persistent.bangok_balls == True:
+            if persistent.bangok_inflation == True:
+                m "After giving me a moment, Sebastian pushed further in, his slit pressing into my own, his heavy balls resting on my rear. My legs spread wide to reach around his, rough scales against my smooth thighs."
+            else:
+                m "After giving me a moment, Sebastian pushed further in, his slit pressing into my own, his balls resting on my taint. My legs spread wide to reach around his, rough scales against my smooth thighs."
+        else:
+            m "After giving me a moment, Sebastian pushed further in, his slit pressing into my own. My legs spread wide to reach around his, rough scales against my smooth thighs."
         $ renpy.pause(0.8)
         show sebastian smile b dk:
             ease 0.15 xpos 0.45 ypos 1.15
