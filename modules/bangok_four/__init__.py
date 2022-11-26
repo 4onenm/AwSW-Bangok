@@ -137,3 +137,9 @@ register_fetish("Voyeurism", "bangok_voyeurism",
     image_clean=True,
     image="image/ui/bangok/icons/bangok_voyeurism.png"
 )
+
+register_fetish("Balls (WIP)", "bangok_balls",
+    clean_label="Bowling",
+    image_clean=True,
+    image="image/ui/bangok/icons/bangok_balls.png",
+)
