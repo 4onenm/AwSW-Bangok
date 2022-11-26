@@ -16,7 +16,7 @@ An Angels with Scaly Wings lewd mod. Contributions welcome.
 
 This mod is designed to add semi-plausible lewd scenes to AwSW. Scenes are incorporated into the flow of the story, and contain combinations of sprite-movement-based animation and flavorful descriptions. Some unique, lewd assets have also been made for the mod.
 
-A few fetishes and anatomical decisions are available with the mod. These can be configured with the in-game settings menu like any other setting. These decisions include: Cloacas, Knotting, Cervical penetration, Inflation, and Watersports. Each of these are disabled and inaccessible by default, and only become active by direct, intentional selection.
+A few fetishes and anatomical decisions are available with the mod. These can be configured with the in-game settings menu like any other setting. These decisions include: Dragon balls, Cloacas, Knotting, Cervical penetration, Inflation, Watersports, and Voyeurism. Each of these are disabled and inaccessible by default, and only become active by direct, intentional selection.
 
 <br/>
 
@@ -24,21 +24,21 @@ Currently, there are lewd scenes released for Bryce, Sebastian, Ipsum (+ Lorem),
 <details>
 <summary>Released scene access guides</summary>
 
-+ xSebastian: After the skip point in his one date, say it's pretty cold and you could use a blanket.
++ Anna2: During Anna1, bet for sex instead of a date OR during Anna2, do extremely well. (After betting for sex in Anna1, the original Anna2 date is still available if you say you're hungry.)
++ Anna4: Do Anna’s fourth date normally, picking the romance option, and a menu will appear with the choice to watch or skip the scene. (Doing the Anna2 scene beforehand will alter some dialogue/scene options.)
 + Bryce1: Try a different way of waking him up at the bar. Skipping Bryce1 will also give you the option to enter this scene.
 + Bryce2: Keep feeling his leg after he flexes his muscles.
 + Lorem2 (Ipsum + Lorem): Play through Lorem2 and, when Ipsum suggests it, agree to take off your clothes. With sufficiently high mood, Lorem may also be invited.
-+ Anna2: During Anna1, bet for sex instead of a date OR during Anna2, do extremely well. (After betting for sex in Anna1, the original Anna2 date is still available if you say you're hungry.)
-+ Anna4: Do Anna’s fourth date normally, picking the romance option, and a menu will appear with the choice to watch or skip the scene. (Doing the Anna2 scene beforehand will alter some dialogue/scene options.)
++ xDamion: Go to the facility during the Chapter 2 investigation and respond in kind to Damion's crude comments.
 + xKatsuharu: Play Katsuharu's scene to the end or skip through. During the fade-to-black at the end, Katsuharu will suggest the scene.
++ xSebastian: After the skip point in his one date, say it's pretty cold and you could use a blanket.
 </details>
 <br/>
-In-development scenes (accessible via a menu flag and full of bugs) include: Remy, Maverick.
+In-development scenes (accessible via a menu flag and full of bugs) include: Remy, Maverick, more Lorem and more Ipsum.
 
 <details>
 <summary>In-Development scene access guides</summary>
 
-+ Damion: Go to the facility during the Chapter 2 investigation and respond in kind to Damion's crude comments.
 
 + Remy c4postsections: Complete Remy's first, second, and third scenes. Then *do not* deliver the PDA to him in the chapter 4 investigation. You can suggest to Sebastian when you speak with him that you could deliver the PDA, which will trigger the scene.
 
@@ -47,6 +47,16 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 
 + Lorem4: Complete Lorem4, tell Lorem you don't mind, talk about making Lorem feel better.
 + Ipsum4 (Ipsum): Complete Lorem2's lewd scene with Ipsum, then reach Chapter 4 and check your answering machine. (This scene does not lock out other 4th date choices with other dragons.)
+</details>
+<br/>
+
+Voyeurism scenes (accessible if the Voyeurism fetish flag is enabled)
+
+<details>
+<summary>Voyeurism scene access guides</summary>
+
++ Anna x Damion: Visit the production facility during the Chapter 2 investigation.
++ Bryce x Sebastian: Complete Chapter 3 as normal.
 </details>
 <br/>
 
