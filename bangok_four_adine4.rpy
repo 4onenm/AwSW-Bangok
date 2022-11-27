@@ -1,23 +1,64 @@
-label bangok_four_adine4_shower_purring:
-    # m "Cuts in when Adine starts purring"
+label bangok_four_adine4_shower_sceneselect:
+    play music "mx/fireplace.ogg" fadein 2.0
+    scene black with dissolve
+    $ renpy.pause (0.5)
+    play sound "fx/purr.ogg"
+    $ renpy.pause (2.0)
+    c "Is that... are you purring?"
+    show adineshower at Pan ((00, 608), (400,0), 10.0) with dissolve
+    stop sound fadeout 4.0
 
-    # c "Is that... are you purring?"
+label bangok_four_adine4_shower_purring:
     stop soundloop fadeout 2.0
+
+    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        m "Suddenly, her expression changed as she looked over her shoulder."
+        Ad think "Oh, are you done? You should take a step back if you don't want to get hit by the water."
+        c "I'm fine with getting wet if I take my clothes off."
+        Ad giggle "You don't have to do that, just go ahead and step out."
+        c "Are you sure?"
+        Ad annoyed "Yes, [player_name]. You're in here to help me clean off, not so that I can see you naked or something."
+        c "Oh."
+        $ renpy.end_replay()
+        jump bangok_four_adine4_leave_the_shower
+
     m "Suddenly, her expression changed as she looked over her shoulder. She was visibly blushing."
     Ad think "Oh, are you done? You should... uh, strip so your clothes don't get wet."
     $ renpy.pause (0.5)
     m "It took me a moment to process what she had just asked. But then it hit me."
     c "Wait, was this shower thing an excuse to see me naked?"
     Ad giggle "No! Well, not entirely. It really would be hard to wash my back with my shoulder injured."
-    $ renpy.pause (0.8)
+    menu:
+        "I'd rather not.":
+            $ renpy.pause (0.5)
+            Ad disappoint "Oh."
+            c "Nothing against you, it's just..."
+            Ad disappoint "No, no, it's fine. Sorry for, ah, trying to trick you like that."
+            Ad think "You might want to step out if you don't want to get hit by the water."
+            $ renpy.end_replay()
+            jump bangok_four_adine4_leave_the_shower
+        "[[Undress.]":
+            $ renpy.pause (0.8)
     play sound "fx/undress.ogg"
     scene black with dissolve
     m "She looked nervous, though that was to be expected given her request. To reassure her, I started removing my clothes and tossing them out of range of the shower, letting my erection pop into view in front of her."
     Ad giggle "O-oh! Well, looking good there handsome!"
+    play soundloop "fx/shower.ogg" fadein 1.0
     m "I chuckled lightly at her response as she hit a button on the wall, turning the shower head on and coating us both in warm water."
     m "With the water flowing, Adine moved around a bit, quickly washing off all of the suds from my scrubbing. And yet, even when she was clean, the water continued to flow with the two of us standing there expectantly."
 
     menu:
+        "I should step out.":
+            Ad think "Are you sure? You look a little, ah, excited. To be sharing a shower with me. You know..."
+            menu:
+                "I'm good, thanks.":
+                    stop soundloop fadeout 2.0
+                    $ renpy.pause (0.8)
+                    Ad disappoint "Oh."
+                    $ renpy.end_replay()
+                    jump bangok_four_adine4_leave_the_shower
+                "Are you saying you want to do something?":
+                    jump .adine_presents_rear
         "Want to taste my dick?":
             jump .oral
         "Mind lifting that rear of yours?":
@@ -41,10 +82,14 @@ label bangok_four_adine4_shower_purring:
 
     menu:
         "Grab her head and cum in her mouth.":
-            m "I wrapped both arms around the dragon's head and pulled it down, drawing a shocked gasp from my partner as I flooded her mouth with seed. "
+            $ renpy.pause (0.5)
+            play sound "fx/extinguish.ogg"
+            m "I wrapped both arms around the dragon's head and pulled it down, drawing a shocked gasp from my partner as I flooded her mouth with seed."
             m "There was no resistance however, and she swallowed it as wave after wave of fluids coated her tongue."
             m "After I had been licked dry, Adine's efforts for herself came to fruition, as she squirted into the wall from her own climax, her head reeling back in a loud moan."
         "Lean back and enjoy it.":
+            $ renpy.pause (0.5)
+            play sound "fx/extinguish.ogg"
             m "I let myself fall backwards, thrusting my hips up as I came. Just before the first drop shot out however, Adine pulled her maw back to let the off-white spunk coat her face."
             m "The water from the showerhead rinsed it off as quickly as it came out, cleaning both of us of the seed as it erupted."
             m "When I'd finished, Adine threw her head back in a loud moan as she climaxed in turn, squirting her own fluids into the wall behind her."
@@ -56,9 +101,9 @@ label bangok_four_adine4_shower_purring:
     hide adineshower with dissolve
     $ renpy.pause (0.5)
     scene adineapt2 at Pan ((128, 300), (128,300), 0.0) with dissolvemed
-    play soundloop "fx/shower.ogg" fadein 1.0
     m "I dismissed myself to dry off, exiting the shower to find a towel to use as Adine turned back to the shower."
     stop soundloop fadeout 2.0
+    $ renpy.end_replay()
     jump bangok_four_adine4_when_she_turned_off_the_water_again
 
 
@@ -90,6 +135,8 @@ label bangok_four_adine4_shower_purring:
 
     menu:
         "Cum inside.":
+            $ renpy.pause (0.5)
+            play sound "fx/extinguish.ogg"
             m "After a few more thrusts, I started pumping my semen into the beautiful mass of scales before me. The white juice leaked out of her slit as I stuffed her one wave at a time."
             m "Simultaneously, Adine herself came, her pussy quivering as my crotch got soaked in her juice."
             Ad giggle "Fuhh-uhck, I needed that!"
@@ -100,6 +147,8 @@ label bangok_four_adine4_shower_purring:
             m "I giggled in turn, equally exhausted from the effort."
         "Pull out.":
             m "I pulled out and stroked my shaft for a few moments. At the same time, Adine reached back to start masturbating with her claws."
+            $ renpy.pause (0.5)
+            play sound "fx/extinguish.ogg"
             m "Barely a second past before we climaxed together, my belly getting soaked from her squirt as ropes of jizz shot out and iced her rump. "
             m "The fluids were washed off quickly by the water, floating down the drain as if nothing had happened. Both me and Adine were gasping like we ran a marathon however, a sure sign that I hadn't just fantasized the whole interaction."
             Ad disappoint "I was kind of hoping you'd finish inside."
@@ -116,9 +165,9 @@ label bangok_four_adine4_shower_purring:
     hide adineshower with dissolve
     $ renpy.pause (0.5)
     scene adineapt2 at Pan ((128, 300), (128,300), 0.0) with dissolvemed
-    play soundloop "fx/shower.ogg" fadein 1.0
     m "I returned to the living room and waited for Adine to finish her business. As it turned out, it didn't take long."
     stop soundloop fadeout 2.0
+    $ renpy.end_replay()
     jump bangok_four_adine4_when_she_turned_off_the_water_again
 
     label .anal:
@@ -136,10 +185,14 @@ label bangok_four_adine4_shower_purring:
 
     menu:
         "Cum inside.":
+            $ renpy.pause (0.5)
+            play sound "fx/extinguish.ogg"
             m "After a few more thrusts I found myself pumping her ass with my seed, followed soon by Adine's own orgasm coating my legs."
             m "We were both gasping and ragged, having spent more energy than we'd noticed. After a few spurts, I'd finally emptied my full load into her."
             m "Savoring the feeling for a moment, I eventually pulled out, sitting on the floor and admiring the view."
         "Pull out.":
+            $ renpy.pause (0.5)
+            play sound "fx/extinguish.ogg"
             m "I pulled my shaft out just before I orgasmed and started stroking it, shooting ropes of white spunk around her rump just as Adine herself came, squirting my legs with her fluids."
             m "All of it washed off quickly in the active shower, leaving both of us gasping for ragged breaths."
             m "I eventually fell back, sitting on the floor to gather my stamina back up as the water washed soothingly down around us."
@@ -155,7 +208,7 @@ label bangok_four_adine4_shower_purring:
     hide adineshower with dissolve
     $ renpy.pause (0.5)
     scene adineapt2 at Pan ((128, 300), (128,300), 0.0) with dissolvemed
-    play soundloop "fx/shower.ogg" fadein 1.0
     m "I took the smallest towel I could find, which was still big enough to be a blanket for me, and dried myself off before stepping aside to wait for Adine to finish up."
     stop soundloop fadeout 2.0
+    $ renpy.end_replay()
     jump bangok_four_adine4_when_she_turned_off_the_water_again

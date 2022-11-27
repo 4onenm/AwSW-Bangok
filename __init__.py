@@ -16,6 +16,8 @@ def adine4():
         .search_say("Is that... are you purring?")
         .search_show()
         .hook_to('bangok_four_adine4_shower_purring', condition=make_dev('persistent.nsfwtoggle == True'))
+        .search_hide('adineshower')
+        .link_from('bangok_four_adine4_leave_the_shower')
         .search_say("When she turned off the water again, I realized that it didn't cling to her much at all. After she shook herself for a bit, she stepped out again, nearly dry.")
         .link_from('bangok_four_adine4_when_she_turned_off_the_water_again')
     )
@@ -439,6 +441,10 @@ def add_scene_select():
 
     fss.register_scene_select_cateogry(bangok, nsfw=True)
 
+    # Adine4
+    fss.register_scene_select(bangok, "Adine in the Shower", 'bangok_four_adine4_shower_sceneselect',
+        locked=lambda: not renpy.exports.seen_label('a4shower'))
+
     # Anna2
     fss.register_scene_select(bangok, "Anna at Night", 'bangok_four_anna2_apartment',
         replay_scope=fss.extend_scope_by_dict({
@@ -513,7 +519,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2022-11-27-child_of_75643a5"
+    version = "2022-11-27-child_of_6e6d4e6"
     author = "4onen"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
