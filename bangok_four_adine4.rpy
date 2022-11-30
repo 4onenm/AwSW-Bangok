@@ -41,7 +41,32 @@ label bangok_four_adine4_shower_purring:
             $ renpy.pause (0.8)
     play sound "fx/undress.ogg"
     scene black with dissolve
-    m "She looked nervous, though that was to be expected given her request. To reassure her, I started removing my clothes and tossing them out of range of the shower, letting my erection pop into view in front of her."
+    m "She looked nervous, though that was to be expected given her request."
+    if bangok_four_playerhasdick is None:
+        menu:
+            m "To reassure her, I started removing my clothes and tossing them out of range of the shower, lettinng my..."
+            "...erection pop into view.":
+                $ bangok_four_playerhasdick = True
+                pass
+            "...damp hole slip into view.":
+                $ bangok_four_playerhasdick = False
+                play sound "fx/system3.wav"
+                scene black with None
+                s "Whoops! This scene presently only has male player content."
+                s "Would you like to proceed with this scene as a male, or skip to the end?"
+                menu:
+                    "Yes, Let me see the scene as a male player.\n(Temporary, will revert after this scene.)":
+                        play sound "fx/system3.wav"
+                        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                        pass
+                    "No, skip to the end.":
+                        play sound "fx/system3.wav"
+                        s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
+                        stop soundloop fadeout 2.0
+                        $ renpy.end_replay()
+                        jump bangok_four_adine4_leave_the_shower
+    # if bangok_four_playerhasdick == True
+    m "To reassure her, I started removing my clothes and tossing them out of range of the shower, letting my erection pop into view in front of her."
     Ad giggle "O-oh! Well, looking good there handsome!"
     play soundloop "fx/shower.ogg" fadein 1.0
     m "I chuckled lightly at her response as she hit a button on the wall, turning the shower head on and coating us both in warm water."
