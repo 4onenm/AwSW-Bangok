@@ -123,7 +123,7 @@ label bangok_four_adine4_shower_purring:
     label .vaginal:
     m "I moved in and penetrated her swiftly, drawing a cross between a moan and a purr from her chest. It was wet, and not from the shower."
     Ad giggle "Oh my, so bold of you, nnf, to just take me like that. Are all humans such savages?"
-    c "Only if you let us be"
+    c "Only if you let us be."
     m "Satisfied with the answer, Adine leaned further forward, pressing her rear back to brace against my thrusts. Though her slit was too large for my human shaft, she seemed more than happy to just be doing this with me."
     m "Or maybe I was bigger than I gave myself credit for. Her hole was enjoyably tight, and her haphazard moans indicated that she was getting off as much as I was."
     c "You're tighter than I thought a dragon would- nnnf, be, given your size."
