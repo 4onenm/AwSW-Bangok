@@ -205,6 +205,30 @@ init:
 
 
     # People
+    image adineshower blush = im.Composite(
+        (3000,1688),
+        (0,0), "cg/chap4/adineshower.jpg",
+        (0,0), "cg/bangok/adineshower/adineshower_blush.png",
+    )
+    image adineshower think = im.Composite(
+        (3000,1688),
+        (0,0), "cg/chap4/adineshower.jpg",
+        (0,0), "cg/bangok/adineshower/adineshower_think.png",
+    )
+    image adineshower thinkblush = im.Composite(
+        (3000,1688),
+        (0,0), "cg/chap4/adineshower.jpg",
+        (0,0), "cg/bangok/adineshower/adineshower_blush.png",
+        (0,0), "cg/bangok/adineshower/adineshower_think.png",
+    )
+    image adineshower annoyedblush = im.Composite(
+        (3000,1688),
+        (0,0), "cg/chap4/adineshower.jpg",
+        (0,0), "cg/bangok/adineshower/adineshower_blush.png",
+        (0,0), "cg/bangok/adineshower/adineshower_annoyed.png",
+    )
+
+
     image anna bangok blush = "cr/anna_blush.png"
     image anna bangok blush flip = im.Flip("cr/anna_blush.png", horizontal = True)
     image anna bangok orgasm = "cr/anna_orgasm.png"

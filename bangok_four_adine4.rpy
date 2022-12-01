@@ -5,35 +5,44 @@ label bangok_four_adine4_shower_sceneselect:
     play sound "fx/purr.ogg"
     $ renpy.pause (2.0)
     c "Is that... are you purring?"
-    show adineshower at Pan ((00, 608), (400,0), 10.0) with dissolve
+    show adineshower at Pan ((00,608), (00,608), 0.0) with dissolvemed
     stop sound fadeout 4.0
 
 label bangok_four_adine4_shower_purring:
     stop soundloop fadeout 2.0
 
     if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+        show adineshower at Pan ((00, 608), (400,0), 10.0) with None
         m "Suddenly, her expression changed as she looked over her shoulder."
         Ad think "Oh, are you done? You should take a step back if you don't want to get hit by the water."
         c "I'm fine with getting wet if I take my clothes off."
+        show adineshower thinkblush at Pan ((400,0), (400,0), 10.0) with dissolve
         Ad giggle "You don't have to do that, just go ahead and step out."
         c "Are you sure?"
+        show adineshower annoyedblush at Pan ((400,0), (400,0), 10.0) with dissolve
         Ad annoyed "Yes, [player_name]. You're in here to help me clean off, not so that I can see you naked or something."
         c "Oh."
         $ renpy.end_replay()
         jump bangok_four_adine4_leave_the_shower
 
+    show adineshower blush at Pan ((00, 608), (400,0), 10.0) with None
     m "Suddenly, her expression changed as she looked over her shoulder. She was visibly blushing."
     Ad think "Oh, are you done? You should... uh, strip so your clothes don't get wet."
     $ renpy.pause (0.5)
     m "It took me a moment to process what she had just asked. But then it hit me."
     c "Wait, was this shower thing an excuse to see me naked?"
+    show adineshower thinkblush at Pan((400,0),(400,0),0.0) with dissolve
     Ad giggle "No! Well, not entirely. It really would be hard to wash my back with my shoulder injured."
+
     menu:
         "I'd rather not.":
             $ renpy.pause (0.5)
+            show adineshower think at Pan((400,0),(400,0),0.0) with dissolve
             Ad disappoint "Oh."
             c "Nothing against you, it's just..."
+            show adineshower at Pan((400,0),(400,0),0.0) with dissolve
             Ad disappoint "No, no, it's fine. Sorry for, ah, trying to trick you like that."
+            show adineshower think at Pan((400,0),(400,0),0.0) with dissolve
             Ad think "You might want to step out if you don't want to get hit by the water."
             $ renpy.end_replay()
             jump bangok_four_adine4_leave_the_shower

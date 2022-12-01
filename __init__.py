@@ -14,7 +14,6 @@ def make_dev(cond):
 def adine4():
     ( ml.find_label('a4shower')
         .search_say("Is that... are you purring?")
-        .search_show()
         .hook_to('bangok_four_adine4_shower_purring', condition=('persistent.nsfwtoggle == True and bangok_four_playerhasdick != False'))
         .search_hide('adineshower')
         .link_from('bangok_four_adine4_leave_the_shower')
@@ -519,7 +518,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2022-11-30-child_of_94ccfcf"
+    version = "2022-12-01-child_of_43a0544"
     author = "4onen"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
