@@ -1452,6 +1452,7 @@ label bangok_four_lorem4_maleplayer_toy:
                 $ renpy.pause (0.5)
                 m "Enjoying the tight wetness stretched around my length, it took me a few moments to realize what I'd pushed through."
             "Ease in.":
+                label bangok_four_lorem4_maleplayer_toy_ease_in:
                 show lorem:
                     ypos 1.1
                 with ease
@@ -1459,14 +1460,55 @@ label bangok_four_lorem4_maleplayer_toy:
                 m "I lined myself up with my new toy's tight slit, trying to temper my excitement with concern for not hurting them."
                 show lorem happy bangok shy:
                     ypos 1.1
-                    ease 2.0 ypos 1.2
-                    ypos 1.2
+                    ease 2.0 ypos 1.21
+                    ypos 1.21
                 with None
                 m "Then, gradually, I began to ease Lorem onto my shaft, enveloping myself in their tight canal."
                 show lorem sleep blush with dissolve
                 Lo "O-Ohh... I-Is this feeling for you--"
                 Lo scared "OH!"
-                jump todo_out_of_content_bangok_four_lorem4
+                m "At little more than half my shaft's length, I bumped against something inside them."
+                Lo scared "A-Ah! T-Too far!"
+                show lorem sad:
+                    ypos 1.2
+                with ease
+                m "I lifted Lorem slightly."
+                Lo relieved "That was my cervix."
+                menu:
+                    "That's what we're going through, right?" if persistent.bangok_cervpen == True and bangok_four_lorem4_store.cerv_pen == True:
+                        $ renpy.pause (0.8)
+                        Lo blush "W-Well..."
+                        $ renpy.pause (0.8)
+                        Lo normal blush "Yes. I want you all the way in."
+                        show lorem sleep blush with dissolve
+                        show lorem sleep blush:
+                            ypos 1.2
+                            ease 1.0 ypos 1.205
+                            ypos 1.205
+                        $ renpy.pause (0.8)
+                        m "I gently eased Lorem back down, sliding slowly back to their inner gate."
+                        show lorem think hard blush with dissolve
+                        m "Lorem squirmed, inner walls undulating around my length spasmatically as I gently pulled their depths up against my hard insertion."
+                        Lo normal blush eyes "Mnh!"
+                        Lo shy "I-I, ah--!"
+                        Lo blush "Nngh--"
+                        show lorem relieved shy:
+                            ypos 1.21
+                        with ease
+                        Lo "OUGH!"
+                        m "Once I was through, I slid in completely, hilting Lorem's tight slit around my base and bringing their twitching shaft rubbing right up against my belly."
+                    "Sorry about that.":
+                        $ renpy.pause (0.8)
+                        $ bangok_four_lorem4_store.cerv_pen = False
+                        Lo sad "Yeah, that's definitely too deep for me."
+                        $ renpy.pause (0.5)
+                        Lo think blush "B-but what you already have inside..."
+                        c "Want me to start moving?"
+                        Lo normal blush "Please."
+                    "Got it." if persistent.bangok_cervpen != True or bangok_four_lorem4_store.cerv_pen == False:
+                        $ renpy.pause (0.5)
+                        c "Want me to start moving?"
+                        Lo normal blush "Please."
 
         if persistent.bangok_cervpen == True and bangok_four_lorem4_store.cerv_pen == True:
             c "Lorem?"
@@ -1476,7 +1518,7 @@ label bangok_four_lorem4_maleplayer_toy:
             show lorem shy with dissolve
             m "Lorem nodded, evidently beyond words."
     else:
-        jump todo_out_of_content_bangok_four_lorem4
+        jump bangok_four_lorem4_maleplayer_toy_ease_in
 
     if persistent.bangok_cervpen == True and bangok_four_lorem4_store.cerv_pen == True:
         $ renpy.pause (0.5)
@@ -1488,8 +1530,18 @@ label bangok_four_lorem4_maleplayer_toy:
         show lorem bangok aheago2:
             ease 0.15 ypos 1.2
         with None
-
-    m "Then I pulled back down, testing my wet new fleshlight."
+        m "Then I pulled back down, testing my wet new fleshlight."
+    else:
+        $ renpy.pause (0.5)
+        Lo sleep blush "Mmmnh."
+        show lorem sleep blush:
+            ypos 1.19
+        with ease
+        m "Lorem panted, inner walls squeezing rhythmically as I gently lifted them almost entirely off my length."
+        m "Then I pulled back down, testing my wet new shallow fleshlight."
+        show lorem happy bangok shy2:
+            ease 0.3 ypos 1.2
+        with None
 
     Lo "H-Haaah... Ohhh I... Mmmh..."
     $ renpy.pause (0.5)
@@ -1632,6 +1684,8 @@ label bangok_four_lorem4_maleplayer_toy:
                 with None
                 m "Nearing my peak, I lifed Lorem off just a bit more, so that their stretched cervix closed around my tip and I got to spread it around me anew."
                 m "Lorem twitched and shook, inner walls undulating around me, bringing me right up to my edge."
+        
+        label bangok_four_lorem4_maleplayer_toy_cerv_pen_orgasm:
         stop soundloop fadeout 0.5
         show lorem happy bangok shy:
             ease 0.15 ypos 1.21
@@ -1658,6 +1712,64 @@ label bangok_four_lorem4_maleplayer_toy:
         with dissolveslow
         m "I came back down from my peak slowly, hilted in my smiling little toy."
     else:
+        show lorem bangok aheago1:
+            ease 0.5 ypos 1.19
+            ease 0.15 ypos 1.2
+            repeat
+        with None
+        play soundloop "fx/rub2.ogg" fadein 1.5
+        m "Squeezing Lorem's hips, I began to tug them up and down at my own pace, getting into things with more vigor as my toy adapted to me."
+
+        if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
+            if persistent.bangok_inflation == True:
+                m "I could feel my piss flowing and leaking everywhere within them, saturating their female parts and my legs with my waste as they moaned around my shaft."
+            else:
+                m "Their piss-stained canal squelched lewdly around my cockhead, becoming coated with my waste as they moaned around my shaft."
+        else:
+            m "Our mating poinnt squelched slightly with each pull down, becominng coated in our coital juices as they moaned around my shaft."
+
+        m "It was all I could do not to pull them down further or too fast, as their tight hole quickly had me approaching my peak."
+        m "They stretched taut around my tip with with each lift up, the clenching of their entrance squeezing in a way better than any real sex toy."
+
+        Lo bangok aheago2 "Aaahn!"
+
+        if persistent.cerv_pen == True:
+            Lo aheago1 "D-Deeper!"
+            m "I could feel I was almost kissing the end of their canal with each pull down. There wasn't much deeper I could go without pushing right into their womb!"
+            menu:
+                "[[Obey.]":
+                    label bangok_four_lorem4_maleplayer_toy_late_pen:
+                    $ bangok_four_lorem4_store.cerv_pen = True
+                    m "After just a few more thrusts to prepare us both, I pulled Lorem down, then kept pulling."
+                    stop soundloop fadeout 0.15
+                    show lorem relieved shy:
+                        ease 0.15 ypos 1.21
+                        ypos 1.21
+                    with None
+                    play sound "fx/varagrowl.ogg"
+                    play sound2 "fx/extinguish.ogg"
+                    m "Lorem came instantly, their malehood twitching as they strung ropes of sticky white across my chest."
+                    show lorem bangok aheago2 with dissolve
+                    m "I held them there, fully speared on my shaft, with all the depth they could want as I rode out their orgasm."
+
+                    if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
+                        if persistent.bangok_inflation == True:
+                            m "My tip pressed right into the back of their womb, surrounded with the piss I'd filled them with, while their cervix and canal squeezed eratically around the lower half of my shaft like some kind of large, wet, living cock ring."
+                        else:
+                            m "My tip pressed right into the back of their womb, while their cervix and canal squeezed eratically around the lower half of my shaft like some kind of large, piss-stained living cock ring."
+                    else:
+                        m "My tip pressed right into the back of their womb, while their cervix and canal squeezed eratically around the lower half of my shaft like some kind of large, wet, living cock ring."
+
+                    m "Then, trying to lift them slightly, the sensation of their womb and canal all sliding around my shaft proved too much for me, too."
+                    jump bangok_four_lorem4_maleplayer_toy_cerv_pen_orgasm
+                "A-Are you sure?":
+                    Lo bangok aheago2 "Yes!"
+                    jump bangok_four_lorem4_maleplayer_toy_late_pen
+                "Going as deep as I can!":
+                    pass
+
+        Lo bangok aheago1 "F-Faster!"
+
         jump todo_out_of_content_bangok_four_lorem4
 
         show lorem sleep blush
