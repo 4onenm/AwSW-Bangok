@@ -351,6 +351,11 @@ label bangok_four_bryce1_apartment:
         c "(Is this really happening? Am I really going to fuck a dragon?)"
     show bryce at Position(ypos=1.1) with ease
     m "Bryce rolled his lower body onto its side, revealing the worryingly large shaft emerging between his legs."
+    if persistent.bangok_balls == True:
+        if persistent.bangok_inflation == True:
+            m "As his muscles clenched, a scaleless sac emerged too, two round orbs larger than apples swinging down inside to plop wetly against the underside of his tail."
+        else:
+            m "As his muscles clenched, a scaleless sac emerged too, two round orbs larger than mandarins swinging down inside to plop wetly against the underside of his tail."
     c "Huh. Guess you don't get whiskey dick."
     Br brow dk "What's that?"
     c "It's where alcohol makes it hard to... stay hard."
@@ -922,7 +927,10 @@ label bangok_four_bryce1_f_fuck_postwomb:
                         Br normal dk "Sure. Think I can hold it."
 
 
-    m "He sat like that for a long moment, hilted inside me as I spasmed around him."
+    if persistent.bangok_balls == True:
+        m "He sat like that for a long moment, hilted inside me as I spasmed around him, my clenching nudging his heavy orbs resting against my ass."
+    else:
+        m "He sat like that for a long moment, hilted inside me as I spasmed around him."
     show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-1.95) with ease
     if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
         if bangok_four_bryce1_protected == True:
@@ -953,7 +961,10 @@ label bangok_four_bryce1_f_fuck_postwomb:
             ease 0.7 ypos (-2.0)
             repeat
         $ renpy.pause(0.8)
-        m "Bryce began to fuck me for real, keeping most of his shaft inside as he breached my womb again and again."
+        if persistent.bangok_balls == True:
+            m "Bryce began to fuck me for real, slapping my asscheeks with his balls, keeping most of his shaft inside as he breached my womb again and again."
+        else:
+            m "Bryce began to fuck me for real, keeping most of his shaft inside as he breached my womb again and again."
         if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
             m "Piss leaked back and forth inside of me, less and less impeded by my innermost gate as his thrusts spread it wide."
     else:
