@@ -167,6 +167,12 @@ init:
         bangok_four_common.Attribute('bulge',       'bulge', "cg/bangok/annaxdamion_lab/vaginal_bulge.png", if_all=['vaginal'], pos=(-68, 130)),
         bangok_four_common.Attribute('cum',         'cum', "cg/bangok/annaxdamion_lab/cloacal_cum.png", if_all=['cloacal'], pos=(-68, 130)),
         bangok_four_common.Attribute('cum',         'cum', "cg/bangok/annaxdamion_lab/vaginal_cum.png", if_all=['vaginal'], pos=(-68, 130)),
+        bangok_four_common.Attribute('cum',         'cum', im.Composite((1280,988),(0,0),"cg/bangok/annaxdamion_lab/cloacal_cum.png",(0,0),"cg/bangok/annaxdamion_lab/vaginal_cum.png"), if_all=['bulge'], pos=(-68, 130)),
+        bangok_four_common.Always(renpy.display.layout.ConditionSwitch(
+            'persistent.bangok_balls and persistent.bangok_inflation', "cg/bangok/annaxdamion_lab/dm_ballz_big.png",
+            'persistent.bangok_balls', "cg/bangok/annaxdamion_lab/dm_ballz.png",
+            'True', renpy.display.layout.Null(),
+        )),
     ])
 
 
