@@ -845,14 +845,14 @@ label bangok_four_xipsum2_idildo:
             m "Then, gently, I eased his head inside, sliding in to the base as I clenched around him."
             m "Getting the hang of a one-handed pace, I began to slowly pump his shaft into and out of my wet hole. Then I sat forward on the couch, pushing him all the way in while I reached for his other cock."
         "Rear.":
-            $ bangok_four_xipsum2_store.scene_subtype == "vag1"
+            $ bangok_four_xipsum2_store.scene_subtype == "ass1"
             m "Balancing his cock on the couch cushion, I leaned back, gently nestling his head between my cheeks."
             m "Settled, I began to ease downward, spreading my tight pucker around his relatively small length."
             if bangok_four_xipsum2_store.protection == True:
                 m "With the lubrication on his condom his shaft was slippery, easily sliding in as I lowered myself to sitting on his couch and cock."
             else:
                 m "With the lubrication he'd applied, his shaft was slippery, easily sliding in as I lowered myself to sitting on his couch and cock."
-            m "I lifted myself off again, feeling him slide out, then back in as I sat back down."
+            m "I lifted myself off again, feeling him slide out of my pucker, then back in as I sat back down."
             m "On my next rise up, I reached for his other cock."
         "Mouth.":
             $ bangok_four_xipsum2_store.suck_spare = True
@@ -864,11 +864,72 @@ label bangok_four_xipsum2_idildo:
 
     menu:
         "Front.":
-            jump todo_out_of_content_bangok_four_xipsum
-        "Rear.":
-            jump todo_out_of_content_bangok_four_xipsum
+            if bangok_four_xipsum2_store.scene_subtype == "vag1":
+                $ bangok_four_xipsum2_store.scene_subtype = "vag2"
+                m "Though I already had one of his lengths stuffed in my pussy, he was a little small, and I wanted {i}more{/i}."
+                m "I leaned back on the couch again, sliding out his length already in my hole enough that I could nestle his other tip into my outer folds."
+                jump todo_out_of_content_bangok_four_xipsum
+            elif bangok_four_xipsum2_store.scene_subtype == "ass1":
+                $ bangok_four_xipsum2_store.scene_subtype = "dp"
+                if bangok_four_xipsum2_store.protection == True:
+                    m "I nestled his shaft's tip into my folds, spreading the pre that had leaked from his tip into my damp outer lips."
+                else:
+                    m "I nestled his condom-wrapped shaft's tip into my folds, spreading its lubrication into my damp outer lips."
+                m "Then I slid him inside, easily taking him to my base in the front, while I sank slowly back down his shaft in my rear."
+            elif bangok_four_xipsum2_store.suck_spare == True:
+                jump todo_out_of_content_bangok_four_xipsum
+        "Rear." if bangok_four_xipsum2_store.scene_subtype != "ass1":
+            if bangok_four_xipsum2_store.scene_subtype == "vag1":
+                $ bangok_four_xipsum2_store.scene_subtype = "dp"
+                if bangok_four_xipsum2_store.protection == True:
+                    m "Gripping his slick condom-wrapped shaft as best I could with my canal, I focused on balancing his other length on the couch beneath and behind me."
+                else:
+                    m "Gripping his slick shaft as best I could with my canal, I focused on balancing his other length on the couch beneath and behind me."
+                m "Nestling his second shaft's head between my cheeks, I paused, playing with the one in my front for a few moments as I eased his head into my tight rear."
+                m "Then I sank downward, spreading my tight pucker around his relatively small length."
+                if bangok_four_xipsum2_store.protection == True:
+                    m "With the lubrication on his condom his shaft was slippery, easily sliding in as I lowered myself to sitting on his couch and cocks."
+                else:
+                    m "With the lubrication he'd applied, his shaft was slippery, easily sliding in as I lowered myself to sitting on his couch and cocks."
+
+            elif bangok_four_xipsum2_store.suck_spare == True:
+                jump todo_out_of_content_bangok_four_xipsum
         "Mouth.":
+            $ bangok_four_xipsum2_store.suck_spare = True
+            if bangok_four_xipsum2_store.scene_subtype == "vag1":
+                jump todo_out_of_content_bangok_four_xipsum
+            elif bangok_four_xipsum2_store.scene_subtype == "ass1":
+                jump todo_out_of_content_bangok_four_xipsum
+            else:
+                $ bangok_four_xipsum2_store.scene_subtype = "oral"
+                jump todo_out_of_content_bangok_four_xipsum
+
+    if persistent.bangok_watersports == True and bangok_four_xipsum2_store.ws == True:
+        if bangok_four_xipsum2_store.scene_subtype == "dp":
+            m "I paused, hesitating, both my front and rear spread open by Ipsum's cocks."
+        else:
             jump todo_out_of_content_bangok_four_xipsum
+
+        c "(Do I want him to piss in me now? Or later?)"
+        menu:
+            "Now.":
+                $ bangok_four_xipsum2_store.ipsum_pissed = True
+            "Later.":
+                $ bangok_four_xipsum2_store.ipsum_pissed = False
+                m "I began moving..."
+                jump todo_out_of_content_bangok_four_xipsum
+
+        if bangok_four_xipsum2_store.ipsum_pissed == True:
+            if bangok_four_xipsum2_store.scene_subtype == "dp":
+                m "I waited, feeling Ipsum's lengths within me."
+
+                play soundloop "fx/faucet1.ogg" fadein 1.0
+                queue soundloop "fx/faucet2.ogg"
+
+                m "Noticing my pause, Ipsum took it as his cue. His cocks twitched, then warm, watery liquid began spraying into my colon and canal, saturating my inner walls."
+            else:
+                jump todo_out_of_content_bangok_four_xipsum
+
 
     jump todo_out_of_content_bangok_four_xipsum
 
