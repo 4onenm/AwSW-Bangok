@@ -18,9 +18,13 @@ init python in bangok_four_common:
     LayeredImage = layeredimage.LayeredImage
     Always = layeredimage.Always
     Attribute = layeredimage.Attribute
+    Condition = layeredimage.Condition
 
     import bangok_four.trackcursor
     TrackCursor = bangok_four.trackcursor.TrackCursor
+
+    import bangok_four.moredisplayables
+    PersistentConditionalDisplayable = bangok_four.moredisplayables.PersistentConditionalDisplayable
 
 
 init:
@@ -161,18 +165,42 @@ init:
 
     image bangok_four_annaxdamion = bangok_four_common.LayeredImage([
         bangok_four_common.Always("cg/bangok/annaxdamion_lab/base.png"),
-        bangok_four_common.Attribute('femaleparts', 'cloacal', renpy.display.layout.Null()), # default
-        bangok_four_common.Attribute('femaleparts', 'vaginal', "cg/bangok/annaxdamion_lab/vaginal.png", pos=(-68, 130)),
-        bangok_four_common.Attribute('bulge',       'bulge', "cg/bangok/annaxdamion_lab/cloacal_bulge.png", if_all=['cloacal'], pos=(-68, 130)),
-        bangok_four_common.Attribute('bulge',       'bulge', "cg/bangok/annaxdamion_lab/vaginal_bulge.png", if_all=['vaginal'], pos=(-68, 130)),
-        bangok_four_common.Attribute('cum',         'cum', "cg/bangok/annaxdamion_lab/cloacal_cum.png", if_all=['cloacal'], pos=(-68, 130)),
-        bangok_four_common.Attribute('cum',         'cum', "cg/bangok/annaxdamion_lab/vaginal_cum.png", if_all=['vaginal'], pos=(-68, 130)),
-        bangok_four_common.Attribute('cum',         'cum', im.Composite((1280,988),(0,0),"cg/bangok/annaxdamion_lab/cloacal_cum.png",(0,0),"cg/bangok/annaxdamion_lab/vaginal_cum.png"), if_all=['bulge'], pos=(-68, 130)),
-        bangok_four_common.Always(renpy.display.layout.ConditionSwitch(
-            'persistent.bangok_balls and persistent.bangok_inflation', "cg/bangok/annaxdamion_lab/dm_ballz_big.png",
-            'persistent.bangok_balls', "cg/bangok/annaxdamion_lab/dm_ballz.png",
-            'True', renpy.display.layout.Null(),
-        )),
+        bangok_four_common.Always(
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas',
+                None,
+                "cg/bangok/annaxdamion_lab/vaginal.png",
+            ),
+            pos=(-68, 130)
+        ),
+        bangok_four_common.Attribute('bulge','bulge', "cg/bangok/annaxdamion_lab/bulge.png"),
+        bangok_four_common.Attribute('cum', 'cum',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas',
+                "cg/bangok/annaxdamion_lab/cloacal_cum.png",
+                "cg/bangok/annaxdamion_lab/vaginal_cum.png",
+            ),
+            if_not=['bulge'],
+            pos=(-68, 130),
+        ),
+        bangok_four_common.Attribute('cum', 'cum',
+            im.Composite((1280,988),
+                (0,0),"cg/bangok/annaxdamion_lab/cloacal_cum.png",
+                (0,0),"cg/bangok/annaxdamion_lab/vaginal_cum.png",
+            ),
+            if_all=['bulge'],
+            pos=(-68, 130),
+        ),
+        bangok_four_common.Always(
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_balls',
+                bangok_four_common.PersistentConditionalDisplayable(
+                    'bangok_inflation',
+                    "cg/bangok/annaxdamion_lab/dm_ballz_big.png",
+                    "cg/bangok/annaxdamion_lab/dm_ballz.png",
+                ),
+            ),
+        ),
     ])
 
 

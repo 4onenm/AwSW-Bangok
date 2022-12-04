@@ -40,16 +40,10 @@ label bangok_four_annaxdamion:
 
     scene black with dissolvemed
     $ renpy.pause (0.5)
-    if persistent.bangok_cloacas == True:
-        scene bangok_four_annaxdamion cloacal:
-            zoom 2.2
-            anchor (0.0,0.0)
-            pos (0.0,-0.5)
-    else:
-        scene bangok_four_annaxdamion vaginal:
-            zoom 2.2
-            anchor (0.0,0.0)
-            pos (0.0,-0.5)
+    scene bangok_four_annaxdamion:
+        zoom 2.2
+        anchor (0.0,0.0)
+        pos (0.0,-0.5)
     show white:
         alpha 0.9
     show bangok_four_labdoor:
@@ -164,17 +158,11 @@ label bangok_four_annaxdamion:
     $ renpy.pause (0.3)
     play sound "fx/extinguish.ogg"
 
-    if persistent.bangok_cloacas == True:
-        show bangok_four_annaxdamion cloacal cum with dissolvemed
-    else:
-        show bangok_four_annaxdamion vaginal cum with dissolvemed
+    show bangok_four_annaxdamion cum with dissolvemed
 
     if persistent.bangok_inflation == True:
         Dm face "F-Fuck this is a big load."
-        if persistent.bangok_cloacas == True:
-            show bangok_four_annaxdamion cloacal bulge cum with dissolvemed
-        else:
-            show bangok_four_annaxdamion vaginal bulge cum with dissolvemed
+        show bangok_four_annaxdamion bulge cum with dissolvemed
         An disgust "Ah!"
 
     $ renpy.pause (0.5)
