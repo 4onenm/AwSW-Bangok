@@ -69,7 +69,6 @@ class PersistentConditionalDisplayable(Displayable):
     def per_interact(self):
         old_value = self.current_value
         self.current_value = getattr(renpy.store.persistent, self.persistent_attribute, False)
-        print('per_interact ran on %s, result %s'%(self, self.current_value))
         if self.current_value != old_value:
             renpy.display.render.redraw(self, 0)
 
