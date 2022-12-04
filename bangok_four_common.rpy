@@ -161,18 +161,16 @@ init:
         bangok_four_common.Always("cg/bangok/annaxdamion_lab/base.png"),
         bangok_four_common.Always(
             bangok_four_common.PersistentConditionalDisplayable(
-                'bangok_cloacas',
-                None,
-                "cg/bangok/annaxdamion_lab/vaginal.png",
+                'bangok_cloacas', None,
+                None, "cg/bangok/annaxdamion_lab/vaginal.png",
             ),
             pos=(-68, 130)
         ),
         bangok_four_common.Attribute('bulge','bulge', "cg/bangok/annaxdamion_lab/bulge.png"),
         bangok_four_common.Attribute('cum', 'cum',
             bangok_four_common.PersistentConditionalDisplayable(
-                'bangok_cloacas',
-                "cg/bangok/annaxdamion_lab/cloacal_cum.png",
-                "cg/bangok/annaxdamion_lab/vaginal_cum.png",
+                'bangok_cloacas', "cg/bangok/annaxdamion_lab/cloacal_cum.png",
+                None, "cg/bangok/annaxdamion_lab/vaginal_cum.png",
             ),
             if_not=['bulge'],
             pos=(-68, 130),
@@ -187,12 +185,9 @@ init:
         ),
         bangok_four_common.Always(
             bangok_four_common.PersistentConditionalDisplayable(
-                'bangok_balls',
-                bangok_four_common.PersistentConditionalDisplayable(
-                    'bangok_inflation',
-                    "cg/bangok/annaxdamion_lab/dm_ballz_big.png",
-                    "cg/bangok/annaxdamion_lab/dm_ballz.png",
-                ),
+                ('bangok_balls', 'bangok_inflation'), "cg/bangok/annaxdamion_lab/dm_ballz_big.png",
+                'bangok_balls', "cg/bangok/annaxdamion_lab/dm_ballz.png",
+                None, None
             ),
         ),
     ])

@@ -12,48 +12,53 @@ except:
     import bangok_four.layeredimage_fallback as layeredimage
 
 class PersistentConditionalDisplayable(Displayable):
-    __slots__ = ('persistent_attribute', 'true_displayable', 'false_displayable', 'current_value')
-    nosave = ['current_value']
+    __slots__ = ('conditions', 'children', 'child')
+    nosave = ['child']
 
     def after_setstate(self):
-        self.current_value = None
+        self.child = self.children[0]
 
-    def __init__(self, persistent_attribute, true_displayable=None, false_displayable=None):
+    def __init__(self, *args, **kwargs):
         super(PersistentConditionalDisplayable, self).__init__()
 
-        if true_displayable is None and false_displayable is None:
-            raise ValueError("%s requires at least one of `true_displayable`, `false_displayable`"%(self.__class__,))
+        if len(args) & 1 == 1:
+            raise ValueError("%s requires an even number of arguments."%(self.__class__,))
 
-        self.persistent_attribute = persistent_attribute
-        self.true_displayable = renpy.easy.displayable_or_none(true_displayable) if true_displayable is not None else Null() 
-        self.false_displayable = renpy.easy.displayable_or_none(false_displayable) if false_displayable is not None else Null()
-        self.current_value = None
+        self.conditions = tuple(((arg,) if isinstance(arg,basestring) else () if arg is None else arg for arg in args[0::2]))
+        self.children = tuple((renpy.easy.displayable(d) if d is not None else Null() for d in args[1::2]))
+        self.child = None
 
     def _duplicate(self, args):
         if not self._duplicatable:
             return self
 
         rv = self._copy(args)
-        rv.true_displayable = self.true_displayable._duplicate(args)
-        rv.false_displayable = self.false_displayable._duplicate(args)
+        rv.children = tuple((c._duplicate(args) for c in self.children))
+        rv.child = None
 
         return rv
 
     def _in_current_store(self):
-        new_true = self.true_displayable._in_current_store()
-        new_false = self.false_displayable._in_current_store()
+        new_children = tuple((c._in_current_store() for c in self.children))
 
-        if (new_true is self.true_displayable) and (new_false is self.false_displayable):
+        if all((c is old for c, old in zip(new_children, self.children))):
             return self
 
         rv = self._copy()
-        rv.true_displayable = new_true
-        rv.false_displayable = new_false
+        rv.children = new_children
+        rv.child = None
 
         return rv
 
-    def get_current_child(self):
-        return self.true_displayable if self.current_value else self.false_displayable
+    def get_current_child(self, update=False):
+        if update or self.child is None:
+            for condition, child in zip(self.conditions, self.children):
+                if all(getattr(renpy.store.persistent, attr, False) for attr in condition):
+                    self.child = child
+                    return child
+            raise ValueError("No child matched PersistentConditionalDisplayable current conditions: %s"%(self.conditions,))
+
+        return self.child
 
     def render(self, width, height, st, at):
         return self.get_current_child().render(width,height,st,at)
@@ -71,17 +76,18 @@ class PersistentConditionalDisplayable(Displayable):
         return self.get_current_child().get_placement()
 
     def visit(self):
-        return [self.false_displayable, self.true_displayable]
+        return self.children
 
     def per_interact(self):
-        old_value = self.current_value
-        self.current_value = getattr(renpy.store.persistent, self.persistent_attribute, False)
-        if self.current_value != old_value:
+        old_value = self.child
+        self.get_current_child(update=True) # Sets self.child
+        if self.child != old_value:
             renpy.display.render.redraw(self, 0)
 
     def predict_one(self):
         renpy.display.predict.displayable(self.get_current_child())
 
     def _clear(self):
-        self.true_displayable = Null()
-        self.false_displayable = Null()
+        self.child = None
+        self.children = ()
+        self.conditions = ()
