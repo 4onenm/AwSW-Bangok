@@ -10,21 +10,15 @@ init python in bangok_four_common:
     renpy.pure('bangok_four_common.bangok_four.fetish_count')
     renpy.pure('bangok_four_common.bangok_four.fetish_iter')
 
-    try:
-        import jz_magmalink.extras.layeredimage as layeredimage
-    except:
-        print("WARNING: Magmalink version does not include `layeredimage`.\n\tFalling back to a copy contained in BangOk.\n\tThis fallback may be removed in a future version.")
-        import bangok_four.layeredimage_fallback as layeredimage
-    LayeredImage = layeredimage.LayeredImage
-    Always = layeredimage.Always
-    Attribute = layeredimage.Attribute
-    Condition = layeredimage.Condition
-
     import bangok_four.trackcursor
     TrackCursor = bangok_four.trackcursor.TrackCursor
 
     import bangok_four.moredisplayables
     PersistentConditionalDisplayable = bangok_four.moredisplayables.PersistentConditionalDisplayable
+    LayeredImage = bangok_four.moredisplayables.layeredimage.LayeredImage
+    Always = bangok_four.moredisplayables.layeredimage.Always
+    Attribute = bangok_four.moredisplayables.layeredimage.Attribute
+    Condition = bangok_four.moredisplayables.layeredimage.Condition
 
 
 init:

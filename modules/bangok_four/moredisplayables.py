@@ -4,6 +4,13 @@ from renpy.display.layout import Null
 import renpy.easy
 import renpy
 
+
+try:
+    import jz_magmalink.extras.layeredimage as layeredimage
+except:
+    print("WARNING: Magmalink version does not include `layeredimage`.\n\tFalling back to a copy contained in BangOk.\n\tThis fallback may be removed in a future version.")
+    import bangok_four.layeredimage_fallback as layeredimage
+
 class PersistentConditionalDisplayable(Displayable):
     __slots__ = ('persistent_attribute', 'true_displayable', 'false_displayable', 'current_value')
     nosave = ['current_value']
