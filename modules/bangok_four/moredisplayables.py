@@ -91,3 +91,6 @@ class PersistentConditionalDisplayable(Displayable):
         self.child = None
         self.children = ()
         self.conditions = ()
+
+def PersistentConditionalLayer(*args, **kwargs):
+    return layeredimage.Always(PersistentConditionalDisplayable(*args), **kwargs)

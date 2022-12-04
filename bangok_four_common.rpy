@@ -19,6 +19,7 @@ init python in bangok_four_common:
     Always = bangok_four.moredisplayables.layeredimage.Always
     Attribute = bangok_four.moredisplayables.layeredimage.Attribute
     Condition = bangok_four.moredisplayables.layeredimage.Condition
+    PersistentConditionalLayer = bangok_four.moredisplayables.PersistentConditionalLayer
 
 
 init:
@@ -159,11 +160,9 @@ init:
 
     image bangok_four_annaxdamion = bangok_four_common.LayeredImage([
         bangok_four_common.Always("cg/bangok/annaxdamion_lab/base.png"),
-        bangok_four_common.Always(
-            bangok_four_common.PersistentConditionalDisplayable(
-                'bangok_cloacas', None,
-                None, "cg/bangok/annaxdamion_lab/vaginal.png",
-            ),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_cloacas', None,
+            None, "cg/bangok/annaxdamion_lab/vaginal.png",
             pos=(-68, 130)
         ),
         bangok_four_common.Attribute('bulge','bulge', "cg/bangok/annaxdamion_lab/bulge.png"),
@@ -183,12 +182,10 @@ init:
             if_all=['bulge'],
             pos=(-68, 130),
         ),
-        bangok_four_common.Always(
-            bangok_four_common.PersistentConditionalDisplayable(
-                ('bangok_balls', 'bangok_inflation'), "cg/bangok/annaxdamion_lab/dm_ballz_big.png",
-                'bangok_balls', "cg/bangok/annaxdamion_lab/dm_ballz.png",
-                None, None
-            ),
+        bangok_four_common.PersistentConditionalLayer(
+            ('bangok_balls', 'bangok_inflation'), "cg/bangok/annaxdamion_lab/dm_ballz_big.png",
+            'bangok_balls', "cg/bangok/annaxdamion_lab/dm_ballz.png",
+            None, None
         ),
     ])
 
