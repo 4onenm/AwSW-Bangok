@@ -111,12 +111,18 @@ def PersistentConditionalComposite(size, *args, **kwargs):
     if len(conditions) == 0:
         return im.Composite(size, *args, **kwargs)
     elif len(conditions) == 1:
+        null = Null()
         i, conds, subchildren = conditions[0]
         composites = []
         for subchild in subchildren:
-            these_children = list(children[:])
-            these_children[i] = subchild
-            composite = im.Composite(size, *sum(zip(positions, these_children), ()), **kwargs)
+            if isinstance(subchild, Null):
+                these_positions = list(positions[:i]) + list(positions[i+1:])
+                these_children = list(children[:i]) + list(children[i+1:])
+            else:
+                these_positions = positions
+                these_children = list(children)
+                these_children[i] = subchild
+            composite = im.Composite(size, *sum(zip(these_positions, these_children), ()), **kwargs)
             composites.append(composite)
 
         return PersistentConditionalDisplayable(*sum(zip(conds, composites), ()))
