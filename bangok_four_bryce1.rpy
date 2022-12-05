@@ -690,7 +690,10 @@ label bangok_four_bryce1_f_fuck:
                     label bangok_four_bryce1_f_fuck_getprotection:
                     play sound "fx/rummage.wav"
                     m "There were a few different brands with \"actual size\" markings on the order of Bryce's scale. I picked one at random."
-                    m "Tearing into the packaging, I returned with the necessary equipment and knelt to roll it down over his cock."
+                    if persistent.bangok_balls == True:
+                        m "Tearing into the packaging, I returned with the necessary equipment and knelt to roll it down over his cock, right down to his slightly-slick balls."
+                    else:
+                        m "Tearing into the packaging, I returned with the necessary equipment and knelt to roll it down over his cock."
                 "[[Take his load.]":
                     call bangok_four_bryce1_setprotected(False) from bangok_four_bryce1_f_fuck_rejectprotection
                     c "Fair point."
@@ -783,7 +786,13 @@ label bangok_four_bryce1_f_fuck:
                             Br smirk dk "Ah."
                             $ brycemood += 1
                     show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.14) with ease
-                    m "He pressed deeper, until I felt the warm scales on his thighs pressing up against mine."
+                    if persistent.bangok_balls == True:
+                        if persistent.bangok_inflation == True:
+                            m "He pressed deeper, until I felt the large, warm orbs of his balls resting on my buttcheeks, his thighs pressing up against mine."
+                        else:
+                            m "He pressed deeper, until I felt the warm orbs of his balls resting on my buttcheeks, his thighs pressing up against mine."
+                    else:
+                        m "He pressed deeper, until I felt the warm scales on his thighs pressing up against mine."
                     m "Every milimeter sliding past my cervix electrified my innards, even more pleasurable than his entry into my outer cunt."
                 "No.":
                     $ bangok_four_bryce1.fuckwomb = False
@@ -1030,9 +1039,15 @@ label bangok_four_bryce1_f_fuck_postwomb:
             m "I yelped loudly, jolting backward as, with a snarl, Bryce barrelled through my unprepared cervix and came directly into my womb."
         else:
             if bangok_four_bryce1_protected == True:
-                m "Bryce came, prying my numb legs apart as he forced our hips together, hilting me to fill his condom inside."
+                if persistent.bangok_balls == True:
+                    m "Bryce came, prying my numb legs apart as he forced our hips together, slapping his churning balls against my rear, hilting me to fill his condom inside."
+                else:
+                    m "Bryce came, prying my numb legs apart as he forced our hips together, hilting me to fill his condom inside."
             else:
-                m "Bryce came, prying my numb legs apart as he forced our hips together, hilting me to paint my womb white."
+                if persistent.bangok_balls == True:
+                    m "Bryce came, prying my numb legs apart as he forced our hips together, slapping his churning balls against my rear, hilting me to paint my womb white."
+                else:
+                    m "Bryce came, prying my numb legs apart as he forced our hips together, hilting me to paint my womb white."
     else:
         show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.05) with ease
         if bangok_four_bryce1_protected == True:
@@ -1093,7 +1108,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
         show bangok_four_bryce_underside_large:
             ease 1.0 ypos -2.0
             ease 1.0 ypos -1.7
-    m "After a long moment cumming inside of me, Bryce worked his way back with his forelegs, keeping his hips and cock where they were as he curled over to look down at me."
+    m "After a long moment of climax inside me, Bryce worked his way back with his forelegs, keeping his hips and cock where they were as he curled over to look down at me."
     $ bangok_four_bryce1_brycecame = True
 
 
@@ -1197,7 +1212,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
             m "I moaned, body numb but for the feeling of bryce pissing in the balloon of defilement, so thinly separated from my innermost space."
         else:
             $ bangok_four_bryce1_playerstuffed = True
-            m "I moaned, body numb but for the feeling of bryce pissing in my innermost temple until it was nothing but his urine."
+            m "I moaned, body numb but for the feeling of bryce pissing in my innermost temple until every surface inside was seeping in his urine."
         if persistent.bangok_inflation == True:
             m "I looked clearly pregnant now, belly bulging upward with a blob of fluid and man meat."
         
@@ -1274,7 +1289,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
                     else:
                         # Regular used condom.
                         play sound ["fx/slide.ogg","fx/uncork.ogg"] fadein 0.5
-                        if persistent.bangok_watersports:
+                        if persistent.bangok_watersports and bangok_four_bryce1_wstiming is not None:
                             m "Bryce tugged himself free, the blob of cum and piss he'd deposited though my innermost gate into the condom's reservoir tugging through my cervix with a knee-shaking burst of pleasure."
                         else:
                             if persistent.bangok_cervpen:
@@ -1320,9 +1335,14 @@ label bangok_four_bryce1_m:
     $ renpy.pause(0.9)
     m "Bryce didn't look impressed."
     c "You're like twice my size. Of course you're bigger."
-    Br "No, no. I get that. What's that underneath?"
-    c "Hm? {w=0.8}Oh, balls. That's where the sperm comes from."
-    Br smirk dk "They just hang out like that? Undefended? Under that limp shaft?"
+    if persistent.bangok_balls:
+        Br "No, no. I get that. Where's your slit?"
+        c "Slit? {w=0.8}I don't have one of those."
+        Br smirk dk "So your parts just hang out like that? Undefended? With that limp shaft?"
+    else:
+        Br "No, no. I get that. What's that underneath?"
+        c "Hm? {w=0.8}Oh, balls. That's where the sperm comes from."
+        Br smirk dk "They just hang out like that? Undefended? Under that limp shaft?"
     c "Yeah. Though, uh, not s'posed to be limp right now. Whiskey dick, I guess."
     $ renpy.pause(0.5)
     Br flirty dk "Are your balls sensitive?"
@@ -1356,7 +1376,10 @@ label bangok_four_bryce1_m:
     Br laugh dk "New for me too!"
     show bryce normal dk with dissolve
     show bryce at center with ease
-    Br normal dk "Never seen things... outside like that. Skin tastes weird too."
+    if persistent.bangok_balls:
+        Br normal dk "Never seen things... just always outside like that. Dry skin tastes weird too."
+    else:
+        Br normal dk "Never seen things... outside like that. Skin tastes weird too."
     c "Good weird or bad weird?"
     Br brow dk "Different."
 
@@ -1461,6 +1484,11 @@ label bangok_four_bryce1_m2:
                 else:
                     m "Then my lips met his tip. His pre, far from my understanding of the human variety, was actually borderline sweet!"
                 m "I sank downward a small amount, beginning a careful exploration of how much I could fit."
+            if persistent.bangok_balls == True:
+                if persistent.bangok_inflation == True:
+                    m "As I explored his tip, I gently began lifting and massaging his warm, heavy balls. I could feel the weight of the seed inside as I toyed with them. Their scaleless surface was still slightly damp from the inside of his slit."
+                else:
+                    m "As I explored his tip, I gently began lifting and massaging his warm balls. I could feel that the scaleless surface was still slightly damp from the inside of his slit."
             m "His reaction was not what I was expecting."
             Br smirk dk "If you want to take it this slowly, we could be here all night. You've barely even used your tongue yet."
             m "When I released his tip with a wet pop, his expression changed."
@@ -1507,13 +1535,13 @@ label bangok_four_bryce1_m2:
                     Br stern dk flip "H-hold on. I need a sec to hold my piss."
                     Br flirty dk flip "Unless you want it now?"
                     menu:
-                        "[[Keep sucking.]":
+                        "Keep sucking.":
                             label bangok_four_bryce1_oralbot_ws_before:
                             $ bangok_four_bryce1_wstiming = "before"
                             show bryce laugh dk flip with dissolve
                             if bangok_four_bryce1_protected:
                                 menu:
-                                    "[[Throat.]":
+                                    "Throat.":
                                         play soundloop "fx/faucet1.ogg" fadein 1.0
                                         queue soundloop "fx/faucet2.ogg"
                                         m "I pushed as far forward as I could without triggering my gag reflex, then {i}sucked.{/i}{w=0.5} Bryce's maw fell open in ectasy as his bladder let go, delivering golden liquid into my throat."
@@ -1532,7 +1560,7 @@ label bangok_four_bryce1_m2:
                                         Br "Don't hurt yourself. I don't think either of us is sober enough to get you to a hospital."
                                         c "..."
                                         $ renpy.pause (0.8)
-                                    "[[Mouth.]":
+                                    "Mouth.":
                                         play soundloop "fx/faucet1.ogg" fadein 1.0
                                         queue soundloop "fx/faucet2.ogg"
                                         m "I pulled back so that just Bryce's tip remained in my mouth, expecting what was coming as I continued to suckle.{w=0.5} Bryce's maw fell open in ectasy as his bladder let go, delivering golden liquid into the condom's reservoir."
@@ -1544,12 +1572,12 @@ label bangok_four_bryce1_m2:
                                         c "Yeah. But I kinda expected it. You're way larger than me."
                                 Br smirk dk flip "I think we're going to need a new condom."
                                 menu:
-                                    "[[Get a new condom.]":
+                                    "Get a new condom.":
                                         m "After tugging off and tying off his piss balloon, I went back to the cabinet for another condom for the rest of our suck session."
                                         m "The smell of urine was still strong on his cockhead when I returned, until I rolled the new rubberized safety over it. I stuck it back into my mouth anyway, imagining I could lick and suck out more golden results -- even if that wasn't safe."
                                         $ renpy.pause(0.8)
                                         Br brow dk flip "I don't think just the tip is going to do me."
-                                    "[[Cream from the tap.]":
+                                    "Drink his cream from the tap.":
                                         $ bangok_four_bryce1_protected = False
                                         c "Actually, fuck it. I've changed my mind."
                                         $ brycemood += 1
@@ -1560,7 +1588,7 @@ label bangok_four_bryce1_m2:
                                         show bryce stern dk flip with dissolve
                                         m "He strained, delivering me a little trickle more of urine.{w=0.5} I flushed, thinking about the golden load still in the condom on the floor next to me."
                                         menu:
-                                            "[[Drink it.]":
+                                            "Drink his piss.":
                                                 m "Bryce frowned as I abandoned his cock, until he saw what I was trying to do."
                                                 Br flirty dk flip "Like it that much, huh?"
                                                 m "He proffered one of his hindlegs. I used one of its claws to poke a hole higher up in the shaft part of the condom. Then I upturned it into my mouth."
@@ -1582,7 +1610,7 @@ label bangok_four_bryce1_m2:
                                                 c "Not done yet."
                                                 m "Sucking on his head, I finally got to taste my first few drops of sweet, sweet pre from him, shockingly contrasting against the pallete-cleanser of piss."
                                                 Br laugh dk flip "Go for it."
-                                            "[[Move on.]":
+                                            "Move on.":
                                                 pass
                             else:
                                 play soundloop "fx/faucet1.ogg" fadein 1.0
@@ -1593,7 +1621,7 @@ label bangok_four_bryce1_m2:
                                 m "Unfortunately, all good things had to come to an end. He finished, then gave me a satisfied wink."
                                 Br flirty dk flip "Might not have taken a piss since the shift started at the station. Hope you don't mind."
                                 Br flirty dk flip "Good?"
-                                m "I nodded, the head of his cock still in his mouth as I slurped at the tip."
+                                m "I nodded, the head of his cock still in his mouth as I slurped at the tangy tip."
                                 Br smirk dk flip "Feel free to keep going."
                         "[[Give him a second.]":
                             show bryce stern dk flip with dissolve
@@ -1612,7 +1640,10 @@ label bangok_four_bryce1_m2:
                 m "I started by spreading some of the mix of pre and saliva from his head down his length, easing the passage of my fingers slightly."
             m "Then I formed a tight ring with the thumb and index fingers of both hands, circling him."
             show bryce brow dk flip with dissolve
-            m "I took his head in my mouth again, then began to pump my hands and mouth at once."
+            if persistent.bangok_balls == True:
+                m "I took his head in my mouth again, then began to pump my hands and mouth at once. Each time my fingers reached his base, I gave his balls a teasing nudge, stroke, or fondle."
+            else:
+                m "I took his head in my mouth again, then began to pump my hands and mouth at once."
             show bryce laugh dk flip with dissolve
             m "Bryce threw his head back, lost in the sensations I was providing him."
             c "Mmm. Mmmph?"
@@ -1625,10 +1656,16 @@ label bangok_four_bryce1_m2:
             $ bangok_four_bryce1_brycecame = True
             play sound "fx/snarl.ogg"
             if bangok_four_bryce1_protected:
-                m "Bryce's first spurt ballooned the condom's tip abruptly. I let most of his tip out of my mouth, just kissing the very end and giving the reservoir room to expand."
+                if persistent.bangok_balls:
+                    m "Bryce's balls churned under my fingers. Then his first spurt ballooned the condom's tip abruptly. I let most of his tip out of my mouth, just kissing the very end and giving the reservoir room to expand."
+                else:
+                    m "Bryce's first spurt ballooned the condom's tip abruptly. I let most of his tip out of my mouth, just kissing the very end and giving the reservoir room to expand."
                 m "Even still, it was a formidable load, more and more love-cream pressing the condom against my tongue and mouth's roof."
                 play sound "fx/uncork.ogg"
-                m "I pulled the bloated reservoir out of my mouth, holding his cockhead against my cheek as I continued pumping him, milking out every last spurt of cum."
+                if persistent.bangok_balls:
+                    m "I pulled the bloated reservoir out of my mouth, resting his cockhead against my cheek as I pumped him one-handed and fondled his balls with my other, milking out every last spurt of cum."
+                else:
+                    m "I pulled the bloated reservoir out of my mouth, holding his cockhead against my cheek as I continued pumping him, milking out every last spurt of cum."
                 m "Eventually Bryce finished, slumping onto his back."
                 Br flirty dk flip "Damn... that was something else."
                 if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "after":
@@ -1639,7 +1676,7 @@ label bangok_four_bryce1_m2:
                     Br normal dk flip "Take it off? I really gotta go take that leak."
                     m "I tugged the condom free, the smell of Bryce's cum hitting me immediately from what remained on his tip, even as I tied off the protection."
                     menu:
-                        "[[Drink his leak.]":
+                        "Drink his leak.":
                             c "Ah, fuck it."
                             m "I took his head again, grabbing his hips and tugging them as close as I could, nestling his tip at the back of my mouth and just into my throat. His cum, still smeared on his tip, tasted surprisingly sweet."
                             $ brycemood += 1
@@ -1648,24 +1685,28 @@ label bangok_four_bryce1_m2:
                             Br laugh dk flip "Too late now!"
                             play soundloop "fx/faucet1.ogg" fadein 1.0
                             queue soundloop "fx/faucet2.ogg"
-                            m "Warm, golden liquid flooded my throat. It was all I could do to swallow it down as Bryce used my mouth as a urinal."
+                            m "Warm, golden liquid flooded my throat. It was all I could do to swallow it down as Bryce used my mouth as his urinal."
                             if persistent.bangok_inflation == True:
                                 m "Swallowing the rapid stream normally was impossible. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
-                                m "Not wanting to lose a drop around the seal of my lips, I shoved Bryce's cockhead further than I thought it could go, partway {i}into{/i} my throat, so that he could piss directly into my guts."
+                                m "Not wanting to lose a drop around the seal of my lips, I shoved Bryce's cockhead further than I thought it could go, partway {i}into{/i} my throat, so that he could urinate directly into my guts."
                                 $ bangok_four_bryce1_playerstuffed = True
                             else:
                                 m "Swallowing the flow was nearly impossible. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
                             jump bangok_four_bryce1_oralbot_afterpissend
 
 
-                        "[[Let him go.]":
+                        "Let him go.":
                             call bangok_four_bryce1_ws_emptying_the_tank(False)
 
                 else:
                     m "I tugged the condom free, tying it off."
             else:
                 label bangok_four_bryce1_oralbot_cum:
-                m "Bryce's first spurt hit me in the back of the throat when I was pulling back, dousing my mouth in thick, creamy seed. I switched directions immediately, driving what I could and the next few spurts directly into my throat."
+                if persistent.bangok_balls:
+                    m "Bryce's first spurt hit me in the back of the throat when I was pulling back, dousing my mouth in thick, creamy seed from his churning balls."
+                else:
+                    m "Bryce's first spurt hit me in the back of the throat when I was pulling back, dousing my mouth in thick, creamy seed."
+                m "I switched directions immediately, driving what I could and the next few spurts directly into my throat."
                 m "Even still, it was a formidable load, more and more love-cream leaking past his head and filling my mouth with each blast."
                 if persistent.bangok_inflation == True:
                     m "I felt light-headed, the seemingly endless stream of cum almost more than I could hold my breath through."
@@ -1703,7 +1744,7 @@ label bangok_four_bryce1_m2:
                     m "My appreciative hum was cut off by the stream of warm, golden liquid. I sank even a little bit further on his cock, needy and excited by having the big dragon use me as nothing more than a cum rag and urinal."
                     if persistent.bangok_inflation == True:
                         m "Swallowing the flow normally was impossible with my guts as full as they were. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
-                        m "Not wanting to lose a drop around the seal of my lips, I shoved Bryce's cockhead further than I thought it could go, partway {i}into{/i} my throat, so that he could piss directly into my guts."
+                        m "Not wanting to lose a drop around the seal of my lips, I shoved Bryce's cockhead further than I thought it could go, partway {i}into{/i} my throat, so that he could urinate directly into my guts."
                         m "The pressure bulged out my belly as fluid shifted and flowed inside of me to accomodate."
                     else:
                         m "Swallowing the flow was nearly impossible. It sloshed back as I gagged, washing away the taste of cum in my mouth and replacing it with the tang of piss."
@@ -1949,7 +1990,10 @@ label bangok_four_bryce1_m2:
                 m "Bryce sank in slowly, showing the uptmost care despite our shared inebriation. The plates on his belly scraped past my own penis, the harsh stimulation adding yet more to the experience."
             else:
                 m "Bryce sank in slowly, showing the uptmost care despite our shared inebriation. The plates on his belly scraped past my belly just centimeters from the lips of my front entrance, the harsh stimulation and anticipation of more to come adding to the experience."
-            m "As the warm scales on his legs pressed up against my skin, I squirmed to try to part my own legs further, to get that little bit closer to take him fully."
+            if persistent.bangok_balls:
+                m "As the warm scales on his legs pressed up against my skin, his balls resting against my buttcheeks, I squirmed to try to part my own legs further, to get that little bit closer to take him fully."
+            else:
+                m "As the warm scales on his legs pressed up against my skin, I squirmed to try to part my own legs further, to get that little bit closer to take him fully."
             Br laugh dk "So tight!"
             c "Y-You're so big!"
             Br flirty dk "I hear that a lot."
@@ -1968,7 +2012,7 @@ label bangok_four_bryce1_m2:
                     m "I squirmed a little more, turned on as Bryce used my ass as a urinal."
                 stop soundloop fadeout 1.5
                 if persistent.bangok_inflation:
-                    m "Between his cock and piss, I felt stuffed. I was a little unsure how he'd even go about fucking with me this full."
+                    m "Between his cock and piss, I felt stuffed. I was a little unsure how we'd even go about fucking with me this full."
                 $ renpy.pause(0.8)
                 Br flirty dk "Might not have taken a piss since the shift started at the station. Hope you don't mind."
                 $ renpy.pause(0.8)
@@ -1994,10 +2038,10 @@ label bangok_four_bryce1_m2:
                     Br smirk dk "Then I guess you won't mind if we get moving."
             show bangok_four_bryce_underside_large:
                 ease 3.5 ypos (-2.05)
-            m "Bryce tugged back just as slowly as he'd entered, keeping the lube even on his shaft, and my speared ass from feeling any significant shocks."
+            m "Bryce tugged back just as slowly as he'd entered, keeping the lube even on his shaft and my speared ass from feeling any significant shocks."
             if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
                 if bangok_four_bryce1_protected:
-                    m "The condom's bloated reservoir followed through my innards, the sensation of dragging the shifting fluid mass utterly maddening."
+                    m "The condom's bloated reservoir followed through my innards, the sensation of dragging the shifting fluid mass inside me utterly maddening."
                 else:
                     m "Piss followed his cockhead as he pulled back, the sensation of fluid flowing through my innards adding yet another bubbling layer on top of the thickness of his shaft."
             m "He stopped at his tip, waiting again."
@@ -2055,7 +2099,10 @@ label bangok_four_bryce1_m2:
                     show bangok_four_bryce1_apartment night ceiling at Pan((0,0), (0,30), 0.5)
                     show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.05)
                     with ease
-                    m "I thrust my ass back against his cock, taking back a little bit of what he'd taken away."
+                    if persistent.bangok_balls:
+                        m "I thrust my ass back against his cock, taking back a little bit of what he'd taken away and bumping his balls."
+                    else:
+                        m "I thrust my ass back against his cock, taking back a little bit of what he'd taken away."
                     Br flirty dk "If you say so."
 
             play soundloop "fx/rub2.ogg" fadein 1.0
@@ -2063,12 +2110,18 @@ label bangok_four_bryce1_m2:
                 ease 0.5 ypos (-2.15)
                 ease 0.7 ypos (-2.1)
                 repeat
-            m "Bryce began to fuck me for real, sliding in and out, in and out with movements that spread me wide each way."
+            if persistent.bangok_balls:
+                if persistent.bangok_inflation:
+                    m "Bryce began to fuck me for real, sliding in and out, in and out with movements that spread me wide each way and slapped my rear with his large, heavy balls."
+                else:
+                    m "Bryce began to fuck me for real, sliding in and out, in and out with movements that spread me wide each way and slapped my rear with his balls."
+            else:
+                m "Bryce began to fuck me for real, sliding in and out, in and out with movements that spread me wide each way."
             if persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "before":
                 if bangok_four_bryce1_protected:
                     m "His piss balloon was shoved deeper into my gut, sticking in place with his pulls out that stretched the condom lewdly inside me."
                 else:
-                    m "His piss was shoved deeper into my gut, wet squelches almost audible with each thrust."
+                    m "His piss was shoved deeper into my gut, wet squelches almost audible outside me with each thrust."
             $ renpy.pause(3.0)
             m "It didn't take long before we were both emitting undignified noises."
             $ renpy.pause(0.9)
@@ -2091,10 +2144,16 @@ label bangok_four_bryce1_m2:
             play sound "fx/snarl.ogg"
             show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-2.15) with ease
             if not persistent.bangok_knot or (persistent.bangok_knot and bangok_four_bryce1.knotpos != "out"):
-                if bangok_four_bryce1_protected == True:
-                    m "Bryce came, prying my legs further apart as he forced our hips together, hilting me to fill his condom inside."
+                if persistent.bangok_balls:
+                    if bangok_four_bryce1_protected == True:
+                        m "Bryce came, prying my legs further apart as he forced our hips together and slapped his churning balls against my ass, hilting me to fill his condom inside."
+                    else:
+                        m "Bryce came, prying my legs further apart as he forced our hips together and slapped his churning balls against my ass, hilting inside me to coat my insides white."
                 else:
-                    m "Bryce came, prying my legs further apart as he forced our hips together, hilting inside me to coat my insides white."
+                    if bangok_four_bryce1_protected == True:
+                        m "Bryce came, prying my legs further apart as he forced our hips together, hilting me to fill his condom inside."
+                    else:
+                        m "Bryce came, prying my legs further apart as he forced our hips together, hilting inside me to coat my insides white."
             else:
                 if bangok_four_bryce1_protected == True:
                     m "Bryce came, prying my legs further apart as he jerked to a stop, coming a few inches short of hilting while he filled his condom inside me."
