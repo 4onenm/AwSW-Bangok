@@ -197,11 +197,28 @@ init:
         bangok_four_common.Always("cg/bangok/brycexsebastian_office/officecut.jpg"),
         bangok_four_common.Attribute('frame',        'frameA', "cg/bangok/brycexsebastian_office/frameA_base.png"),
         bangok_four_common.Attribute('frame',        'frameB', "cg/bangok/brycexsebastian_office/frameB_base.png"),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_balls', "cg/bangok/brycexsebastian_office/frameA_balls.png",
+            None, None,
+            if_all=['frameA']
+        ),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_balls', "cg/bangok/brycexsebastian_office/frameB_balls.png",
+            None, None,
+            if_all=['frameB']
+        ),
         bangok_four_common.Attribute('bryceeye',     'bryceeyeclosed', "cg/bangok/brycexsebastian_office/bryceeyeclosed.png"),
         bangok_four_common.Attribute('bryceeye',     'bryceeyeopen', "cg/bangok/brycexsebastian_office/bryceeyeopen.png"),
         bangok_four_common.Attribute('bryceeye',     'bryceeyeroll', "cg/bangok/brycexsebastian_office/bryceeyeroll.png"),
         bangok_four_common.Attribute('brycemouth',   'brycesmile', "cg/bangok/brycexsebastian_office/brycesmile.png"),
-        bangok_four_common.Attribute('cumspill',     'nocum', "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png", default=True, if_all=['frameB']),
+        bangok_four_common.Attribute('cumspill',     'nocum',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_balls', "cg/bangok/brycexsebastian_office/frameB_cumcoverup_balls.png",
+                None, "cg/bangok/brycexsebastian_office/frameB_cumcoverup.png",
+            ),
+            default=True,
+            if_all=['frameB']
+        ),
         bangok_four_common.Attribute('cumspill',     'cum', renpy.display.layout.Null(), if_all=['frameB']),
         bangok_four_common.Attribute('cumspill',     'morecum', "cg/bangok/brycexsebastian_office/frameB_cumspill+.png", if_all=['frameB']),
         bangok_four_common.Attribute('sebcheek',     'sebcheekbulge', "cg/bangok/brycexsebastian_office/frameB_sebcheekbulge.png", if_all=['frameB']),
@@ -209,7 +226,10 @@ init:
         bangok_four_common.Attribute('sebeye',       'sebeyeopen', "cg/bangok/brycexsebastian_office/frameB_sebeyeopen.png", if_all=['frameB']),
         bangok_four_common.Attribute('sebeye',       'sebeyeshocked', "cg/bangok/brycexsebastian_office/frameB_sebeyeshocked.png", if_all=['frameB']),
     ])
-    image bangok_four_brycexsebastian_lickpanel = "cg/bangok/brycexsebastian_office/lickpanel.png"
+    image bangok_four_brycexsebastian_lickpanel = bangok_four_common.PersistentConditionalComposite((1920,1200),
+        (0,0),"cg/bangok/brycexsebastian_office/lickpanel.png",
+        (0,0),bangok_four_common.PersistentConditionalDisplayable('bangok_balls', "cg/bangok/brycexsebastian_office/lickpanel_balls.png", None, None),
+    )
 
     image bangok_four_brycexsebastian animate bryceclosedsmile sebastianopen:
         "bangok_four_brycexsebastian frameA bryceeyeclosed brycesmile sebeyeopen"
