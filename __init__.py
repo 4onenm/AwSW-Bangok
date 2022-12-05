@@ -272,7 +272,7 @@ def bryce_x_sebastian():
 def lorem4():
     ( ml.find_label('lorem4skip')
         .search_say("You've made me feel a lot better, though.")
-        .hook_to('bangok_four_lorem4_feelbetter', condition=make_dev('(persistent.nsfwtoggle==True)'))
+        .hook_to('bangok_four_lorem4_feelbetter', condition='persistent.nsfwtoggle==True')
         .search_say("Hey, do you still want to see the fireworks show together?")
         .link_from('bangok_four_lorem4_canon_fireworks')
     )
@@ -518,7 +518,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2022-12-05-child_of_6a2a5b9"
+    version = "2022-12-05-child_of_067e737"
     author = "4onen"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
