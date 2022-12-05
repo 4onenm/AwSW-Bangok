@@ -1,5 +1,6 @@
 from renpy.display.core import Displayable
 from renpy.display.layout import Null
+from renpy.display import im
 
 import renpy.easy
 import renpy
@@ -94,3 +95,49 @@ class PersistentConditionalDisplayable(Displayable):
 
 def PersistentConditionalLayer(*args, **kwargs):
     return layeredimage.Always(PersistentConditionalDisplayable(*args), **kwargs)
+
+def PersistentConditionalComposite(size, *args, **kwargs):
+    if len(args) & 1 != 0:
+        raise Exception("Composite requires an odd number of arguments.")
+
+    positions = args[0::2]
+    children = args[1::2]
+
+    conditions = []
+    for i, child in enumerate(children):
+        if isinstance(child, PersistentConditionalDisplayable):
+            conditions.append((i, child.conditions, child.children))
+
+    if len(conditions) == 0:
+        return im.Composite(size, *args, **kwargs)
+    elif len(conditions) == 1:
+        i, conds, subchildren = conditions[0]
+        composites = []
+        for subchild in subchildren:
+            these_children = list(children[:])
+            these_children[i] = subchild
+            composite = im.Composite(size, *sum(zip(positions, these_children), ()), **kwargs)
+            composites.append(composite)
+
+        return PersistentConditionalDisplayable(*sum(zip(conds, composites), ()))
+    else:
+        raise NotImplementedError("PersistentConditionalComposite does not support more than one PersistentConditionalDisplayable child.")
+
+def PersistentConditionalFlip(d, **kwargs):
+    if isinstance(d, renpy.display.image.ImageReference):
+        d.find_target()
+        d = d.target
+
+    if isinstance(d, PersistentConditionalDisplayable):
+        return PersistentConditionalDisplayable(*sum(zip(d.conditions, (im.Flip(child, **kwargs) for child in d.children)), ()))
+    else:
+        return im.Flip(d, **kwargs)
+
+def RefHFlip(arg, horizontal=True, **kwargs):
+    if isinstance(arg, basestring):
+        if '/' in arg:
+            arg = renpy.display.im.image(arg)
+        else:
+            arg = renpy.display.image.ImageReference(arg)
+
+    return PersistentConditionalFlip(arg, horizontal=horizontal, **kwargs)

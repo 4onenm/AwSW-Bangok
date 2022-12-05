@@ -13,13 +13,16 @@ init python in bangok_four_common:
     import bangok_four.trackcursor
     TrackCursor = bangok_four.trackcursor.TrackCursor
 
-    import bangok_four.moredisplayables
-    PersistentConditionalDisplayable = bangok_four.moredisplayables.PersistentConditionalDisplayable
-    LayeredImage = bangok_four.moredisplayables.layeredimage.LayeredImage
-    Always = bangok_four.moredisplayables.layeredimage.Always
-    Attribute = bangok_four.moredisplayables.layeredimage.Attribute
-    Condition = bangok_four.moredisplayables.layeredimage.Condition
-    PersistentConditionalLayer = bangok_four.moredisplayables.PersistentConditionalLayer
+    import bangok_four.moredisplayables as md
+    PersistentConditionalDisplayable = md.PersistentConditionalDisplayable
+    LayeredImage = md.layeredimage.LayeredImage
+    Always = md.layeredimage.Always
+    Attribute = md.layeredimage.Attribute
+    Condition = md.layeredimage.Condition
+    PersistentConditionalLayer = md.PersistentConditionalLayer
+    PersistentConditionalComposite = md.PersistentConditionalComposite
+    PersistentConditionalFlip = md.PersistentConditionalFlip
+    RefHFlip = md.RefHFlip
 
 
 init:
@@ -271,43 +274,46 @@ init:
     image bryce sad bangok foreleg flip = im.Composite((1152,969),(0,0),"cr/bryce_sad_flip.png", (0,0), "cr/bangok/bryce_foreleg.png")
 
 
-    image damion normal bangok = im.Composite(
+    image damion normal bangok = bangok_four_common.PersistentConditionalComposite(
         (709,827),
         (0,0),"cr/damion_normal.png",
-        (0,0),"cr/bangok/damion_pen.png"
+        (0,0),bangok_four_common.PersistentConditionalDisplayable('bangok_balls',"cr/bangok/damion_pen_ballz.png",None,"cr/bangok/damion_pen.png"),
     )
-    image damion normal bangok flip = im.Flip(renpy.display.image.ImageReference('damion normal bangok'),horizontal=True)
-    image damion face bangok = im.Composite(
+    image damion normal bangok flip = bangok_four_common.RefHFlip('damion normal bangok')
+    image damion face bangok = bangok_four_common.PersistentConditionalComposite(
         (709,827),
         (0,0),"cr/damion_face.png",
-        (0,0),"cr/bangok/damion_pen.png"
+        (0,0),bangok_four_common.PersistentConditionalDisplayable('bangok_balls',"cr/bangok/damion_pen_ballz.png",None,"cr/bangok/damion_pen.png"),
     )
-    image damion face bangok flip = im.Flip(renpy.display.image.ImageReference('damion face bangok'),horizontal=True)
-    image damion arrogant bangok = im.Composite(
+    image damion face bangok flip = bangok_four_common.RefHFlip('damion face bangok')
+    image damion arrogant bangok = bangok_four_common.PersistentConditionalComposite(
         (709,827),
         (0,0),"cr/damion_arrogant.png",
-        (0,0),"cr/bangok/damion_pen.png"
+        (0,0),bangok_four_common.PersistentConditionalDisplayable('bangok_balls',"cr/bangok/damion_pen_ballz.png",None,"cr/bangok/damion_pen.png"),
     )
-    image damion arrogant bangok flip = im.Flip(renpy.display.image.ImageReference('damion arrogant bangok'),horizontal=True)
+    image damion arrogant bangok flip = bangok_four_common.RefHFlip('damion arrogant bangok')
 
-    image damion normal bangok ws = im.Composite(
+    image damion normal bangok ws = bangok_four_common.PersistentConditionalComposite(
         (709,827),
         (0,0),"cr/damion_normal.png",
+        (0,0),bangok_four_common.PersistentConditionalDisplayable('bangok_balls',"cr/bangok/damion_pen_ballz.png",None,"cr/bangok/damion_pen.png"),
         (0,0),"cr/bangok/damion_pen_ws.png"
     )
-    image damion normal bangok ws flip = im.Flip(renpy.display.image.ImageReference('damion normal bangok ws'),horizontal=True)
-    image damion face bangok ws = im.Composite(
+    image damion normal bangok ws flip = bangok_four_common.RefHFlip('damion normal bangok ws')
+    image damion face bangok ws = bangok_four_common.PersistentConditionalComposite(
         (709,827),
         (0,0),"cr/damion_face.png",
+        (0,0),bangok_four_common.PersistentConditionalDisplayable('bangok_balls',"cr/bangok/damion_pen_ballz.png",None,"cr/bangok/damion_pen.png"),
         (0,0),"cr/bangok/damion_pen_ws.png"
     )
-    image damion face bangok ws flip = im.Flip(renpy.display.image.ImageReference('damion face bangok ws'),horizontal=True)
-    image damion arrogant bangok ws = im.Composite(
+    image damion face bangok ws flip = bangok_four_common.RefHFlip('damion face bangok ws')
+    image damion arrogant bangok ws = bangok_four_common.PersistentConditionalComposite(
         (709,827),
         (0,0),"cr/damion_arrogant.png",
+        (0,0),bangok_four_common.PersistentConditionalDisplayable('bangok_balls',"cr/bangok/damion_pen_ballz.png",None,"cr/bangok/damion_pen.png"),
         (0,0),"cr/bangok/damion_pen_ws.png"
     )
-    image damion arrogant bangok ws flip = im.Flip(renpy.display.image.ImageReference('damion arrogant bangok ws'),horizontal=True)
+    image damion arrogant bangok ws flip = bangok_four_common.RefHFlip('damion arrogant bangok ws')
 
     image lorem happy bangok shy = "cr/bangok/lorem_happy+blush.png"
     image lorem happy bangok shy flip = im.Flip("cr/bangok/lorem_happy+blush.png", horizontal=True)
