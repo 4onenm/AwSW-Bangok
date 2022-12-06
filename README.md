@@ -85,11 +85,14 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
     + Artist: [Aesyr](https://www.furaffinity.net/user/aesyr/) (Original: https://www.furaffinity.net/view/47526643/)
     + Comissioner: [Argentum48](https://www.furaffinity.net/user/argentum48/)
     + Vaginal, belly, cum edits: 4onen
+    + Balls edit: `Anonymous By Request`
 + `cg/bangok/brycexsebastian_office/*`:
     + Artist: [N1k0](https://www.furaffinity.net/user/n1k0) (Originals: https://www.furaffinity.net/view/48861688/ https://www.furaffinity.net/view/48861770/)
     + Layering, no cum, `excessive_cum` edits: 4onen
+    + Balls edit: `Anonymous By Request`
 + `cr/anna_*.png`: yoshisman8 from [mod-nsfw-anna](https://github.com/AWSW-Modding/AWSW-Modtools/tree/mod-nsfw-anna) (Used without permission; unable to contact.)
 + `cr/bangok/*.png`: 4onen
++ `cr/bangok/damion_pen_ballz.png`: `Anonymous By Request`
 + `cr/bryce_underside_large.png`: 4onen, editing base-game assets
 + `cr/ipsum_bangok_pen.png`: 4onen, cutting `cg/lorem-x-ipsum_purpleroom.png`
 + `cr/lorem_bangok_hidepeek.png`: 4onen, editing base-game assets
