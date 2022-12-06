@@ -208,6 +208,10 @@ label bangok_four_xkatsu_help:
     Ka normal "Can tell you, still works just fine."
     Ka exhausted "Or it did about two weeks ago, when I last made this."
     c "Huh."
+    if persistent.bangok_balls:
+        m "As I massaged his cock a little more, his plates began to strain around his slit."
+        m "Then, to my shock and amazement, one massive testicle almost the size of a melon popped out, hanging in a fleshy, slightly-damp sack. Another followed a moment later, swinging beneath his length."
+        m "Katsu continued talking as if nothing had happened."
     Ka smile "Has some advantages. Can fit in some people'd otherwise be too small. Like you, maybe."
     if bangok_four_playerhasdick is None:
         Ka exhausted "Huh. Guess I never did ask. You have one of these?"
@@ -344,20 +348,24 @@ label bangok_four_xkatsu_help:
             c "Seriously?"
             Ka normal "I can tell you're trying. Doesn't mean you'll get anywhere."
             $ renpy.pause(3.0)
-            Ka exhausted "What's that?"
-            c "I... didn't say... anything."
-            Ka "Nah, fleshy bit slapping my staff each time you push. That's not part of me, is it?"
-            $ renpy.pause(0.8)
-            m "Looking down, I spotted my balls swinging into Katsuharu's dick every time I thrust forward."
-            c "That's... me."
-            Ka normal "Mm. Well if you did a bit more of that, you might have a chance."
+            if persistent.bangok_balls:
+                m "My balls slapped against Katsuharu's each time my hips met his, sending jolts down my legs, slightly slowing my pace."
+                Ka exhausted "You know, if you played with me a bit more, you might have a chance."
+            else:
+                Ka exhausted "What's that?"
+                c "I... didn't say... anything."
+                Ka "Nah, fleshy bit slapping my staff each time you push. That's not part of me, is it?"
+                $ renpy.pause(0.8)
+                m "Looking down, I spotted my balls swinging into Katsuharu's dick every time I thrust forward."
+                c "That's... me."
+                Ka normal "Mm. Well if you did a bit more of that, you might have a chance."
             $ bangok_four_xkatsu.whatcum = True
             $ bangok_four_malepartners += 1
             label bangok_four_xkatsu_assfuckmenu:
             menu:
                 "[[Stroke him.]":
                     pass
-                "I can't grow more balls!" if bangok_four_xkatsu.whatcum == True:
+                "I can't grow more balls!" if bangok_four_xkatsu.whatcum == True and not persistent.bangok_balls:
                     $ bangok_four_xkatsu.whatcum = False
                     Ka exhausted "More what?"
                     Ka normal "Not my problem, is it?"
@@ -385,7 +393,10 @@ label bangok_four_xkatsu_help:
             m "I stopped, getting a better grip on his tail from further down."
             Ka exhausted "Eh?"
             c "Give me a second."
-            m "With his tail settled on one shoulder, I was able to get my other hand under his legs, taking a grip on the lower section of his staff."
+            if persistent.bangok_balls:
+                m "With his tail settled on one shoulder, I was able to get my other hand under his legs, taking a grip on the lower section of his staff, with most of my hand nestled into the base of his sack."
+            else:
+                m "With his tail settled on one shoulder, I was able to get my other hand under his legs, taking a grip on the lower section of his staff."
             Ka smile "That's more like it!"
             Ka normal "Can you still move like that?"
 
@@ -493,7 +504,10 @@ label bangok_four_xkatsu_help:
                     $ bangok_four_xkatsu.playercame = True
                     $ bangok_four_xkatsu.fill = 3
                     $ renpy.pause(0.5)
-                    m "When I came back down, Katsu's shaft twitched in my hand, rope after rope of thick seed spattering into the deep pool already in the nearer inner bucket."
+                    if persistent.bangok_balls:
+                        m "When I came back down, Katsu's shaft twitched in my hand, balls churning against my thighs, rope after rope of thick seed spattering into the deep pool already in the nearer inner bucket."
+                    else:
+                        m "When I came back down, Katsu's shaft twitched in my hand, rope after rope of thick seed spattering into the deep pool already in the nearer inner bucket."
                     if persistent.bangok_inflation == True:
                         m "It was already almost full!"
                     Ka exhausted "Ha! G-Gotta switch, can't overfill 'em!"
@@ -537,6 +551,8 @@ label bangok_four_xkatsu_help:
                                 c "Ah!"
                                 if persistent.bangok_knot == True:
                                     m "Cum flooded my ass, backing up inside me, then was abruptly shoved even deeper as Katsuharu used the added lubrication of his seed to shove his cock further in, until a bulge near his base was pressed between my cum-spattered cheeks, against my spread asshole."
+                                elif persistent.bangok_balls == True:
+                                    m "Cum flooded my ass, backing up inside me, then was abruptly shoved even deeper as Katsuharu used the added lubrication of his seed to shove his cock further in, until his genital slit was pressed to my cum-spattered cheeks, churning balls up against my thighs."
                                 else:
                                     m "Cum flooded my ass, backing up inside me, then was abruptly shoved even deeper as Katsuharu used the added lubrication of his seed to shove his cock further in, until his genital slit was pressed to my cum-spattered cheeks."
                                 show katsu excited at Position(xpos=0.49, ypos=1.05) with ease
@@ -656,7 +672,10 @@ label bangok_four_xkatsu_help:
                 window show
                 n "Katsuharu asked me to bring him bowls of water a few times, throughout the recipe-making."
                 n "I obliged, unsurprised he needed to rehydrate after what he'd just done."
-                n "Toward the end of our prep, he began to look a little uncomfortable, and I could see his man-meet peeking from his slit again."
+                if persistent.bangok_balls == True:
+                    n "Toward the end of our prep, he began to look a little uncomfortable, and I could see his man-meet peeking from his slit again, over where his balls still had yet to retreat fully inside."
+                else:
+                    n "Toward the end of our prep, he began to look a little uncomfortable, and I could see his man-meet peeking from his slit again."
                 n "He couldn't be ready for another round, could he?"
                 window hide
                 nvl clear
@@ -939,6 +958,8 @@ label bangok_four_xkatsu_underneath_ass:
                 show katsu excited at Position(xpos=0.49, ypos=1.05) with ease
                 if persistent.bangok_knot == True:
                     m "Then he pressed in hard and fast, shoving the cum deep into me fast enough that some spurted back around his cock, lubricating him as he speared me all the way to a thick bulge at his base."
+                elif persistent.bangok_balls == True:
+                    m "Then he pressed in hard and fast, shoving the cum deep into me fast enough that some spurted back around his cock, lubricating him as he speared me all the way to his genital slit and churning balls."
                 else:
                     m "Then he pressed in hard and fast, shoving the cum deep into me fast enough that some spurted back around his cock, lubricating him as he speared me all the way to his genital slit."
                 m "The fluid shifted deep inside of me, pushed still deeper as more jets came to fill me up. Feeling full, I pushed the ice bucket out from under me, setting my face on the floor to better take my deep penetration."
@@ -947,7 +968,12 @@ label bangok_four_xkatsu_underneath_ass:
                     m "From this new angle, I could watch as these spurts that packed me solid began to press my belly outward, inflating me with Katsuharu's creamy seed."
                     $ bangok_four_xkatsu.playerstuffed = "ass"
                     m "No matter how full I felt, still more was coming."
-                m "Then, gently, the pulses came to an end, leaving me packed full of Katsuharu's cum, as I'd wanted."
+
+                if persistent.bangok_balls == True:
+                    m "Then, gently, the pulses came to an end, leaving me packed full of the product of Katsuharu's massive orbs, as I'd wanted."
+                else:
+                    m "Then, gently, the pulses came to an end, leaving me packed full of Katsuharu's cum, as I'd wanted."
+
                 $ renpy.pause (0.8)
                 show katsu exhausted at Position(xpos=0.53) with ease
                 show katsu exhausted at Position(xpos=0.56, ypos=1.0) with ease
@@ -1088,7 +1114,10 @@ label bangok_four_xkatsu_underneath_vag:
         show katsu smile:
             ease 0.6 ypos 1.06
         with None
-        m "Then I felt his thighs against mine."
+        if persistent.bangok_balls == True:
+            m "Then I felt his massive, heavy balls against my thighs."
+        else:
+            m "Then I felt his thighs against mine."
         c "H-Holy fuck."
         Ka exhausted "Is that a good expression or a bad one."
         c "{i}Good.{/i}"
@@ -1148,11 +1177,17 @@ label bangok_four_xkatsu_underneath_vag:
                 if bangok_four_xkatsu.target == "womb":
                     if persistent.bangok_knot == True:
                         m "Katsuharu speared me almost the way, tail slapping down between my legs as he pressed his tip and my sacred place against the bucket and stopped."
+                    elif persistent.bangok_balls == True:
+                        m "Katsuharu speared me all the way, warm, heavy balls slapping hard against my legs as he pressed his tip and my sacred place against the bucket and stopped."
                     else:
                         m "Katsuharu speared me all the way, tail slapping down between my legs as he pressed his tip and my sacred place against the bucket and stopped."
-                    m "Pulses pressed through my innermost gate, expanding his girth at my tightest point before spraying from his tip within me."
+
+                    if persistent.bangok_balls == True:
+                        m "His balls rolled against my thighs, clenching as they pressed pulses through my innermost gate. Each packet of seed expanded his girth at my tightest point before spraying from his tip within me."
+                    else:
+                        m "Pulses pressed through my innermost gate, expanding his girth at my tightest point before spraying from his tip within me."
                     play sound "fx/slide.ogg"
-                    m "I had to shove the ice bucket out of the way, as the contrast between warm fluid and frozen spikes became painful. Face on the floor, I moaned as he defiled my innermost place, sowing his seed within me."
+                    m "I had to shove the ice bucket out of the way, as the contrast between hot fluid and frozen spikes became painful. Face on the floor, I moaned as he defiled my innermost place, sowing his seed within me."
                 else:
                     show katsu smile at Position(xpos=0.5, ypos=1.04) with ease
                     m "Katsuharu jerked back as he began to cum, keeping himself from pressing deeper than I could take. Even still, his first spurts spattered against my innermost gate like thrusts, leaving me crying out from the overstimulation."
@@ -1240,12 +1275,15 @@ label bangok_four_xkatsu_underneath_mouth:
         ease 0.5 zoom 2.2 xpos 0.4
     show kitchen:
         ease 0.5 zoom 2.4
-    m "I shoved the second bucket out of my way, then shuffled sideways over the first until Katsuharu's cockhead was just next to my cheek, a glistening drop of pre glinting in the corner of my vision as I peered up his shaft, toward the slit from which it emerged."
+    if persistent.bangok_balls == True:
+        m "I shoved the second bucket out of my way, then shuffled sideways over the first until Katsuharu's cockhead was just next to my cheek, a glistening drop of pre glinting in the corner of my vision as I peered up his shaft, toward the slit from which it emerged, and massive, heavy balls hanging beneath."
+    else:
+        m "I shoved the second bucket out of my way, then shuffled sideways over the first until Katsuharu's cockhead was just next to my cheek, a glistening drop of pre glinting in the corner of my vision as I peered up his shaft, toward the slit from which it emerged."
     show black with dissolvemed
     m "Cautiously, I took his tip into my mouth, licking up the pre. {w=0.5}It was delicious! Saccharine sweet, I was sure in a more viscous form, it would be an incredibly lucrative flavor of taffy."
     show katsu exhausted with dissolve
     m "Seeking out more of it, my tongue explored just inside his urethra, eliciting a small gasp from Katsuharu, a twitch from his shaft, and another dollop for me."
-    m "I shuffled closer, until my knees were up against the first bucket. Bracing against his hindlegs with one hand and holding his shaft from beneath with the other, I pushed more of his head into my mouth, his spongy cockflesh compressing so I could do so without hurting my jaw."
+    m "I shuffled closer, until my knees were up against the first bucket. Bracing against his hindlegs with one hand and holding his shaft from beneath with the other, I pushed more of his head into my mouth, his spongy cockflesh compressing so it didn't stretch my jaw too far."
     m "I began to pump, trying to draw more pre down his tube. Encouraging the production of more, my tongue explored around what it could reach, digging and licking behind his head."
     $ renpy.pause(0.5)
     m "Katsuharu kept himself steady, content to let me do the work in this position, and keeping himself from moving in a way that might hurt me."
@@ -1312,7 +1350,11 @@ label bangok_four_xkatsu_underneath_mouth:
             m "When I couldn't press myself forward any further, I tugged on one of Katsuharu's hindlegs."
             Ka excited "Alright!"
             c "Urk!"
-            m "In one step forward, he had me sitting back as if I hadn't begun taking his shaft, all of my control gone. My head was bent back, face pressed directly into his genital slit as his rod straightened and bulged my neck."
+            if persistent.bangok_balls == True:
+                m "His balls slapped me in the chest hard. In one step forward, he had me sitting back as if I hadn't begun taking his shaft, all of my control gone. My head was bent back, face pressed directly into his genital slit as his rod straightened and bulged my neck."
+                m "The warm flesh of his ballsack ran down my front like a blanket over my chin. His two massive orbs rested on my ribs, easily within reach to play with."
+            else:
+                m "In one step forward, he had me sitting back as if I hadn't begun taking his shaft, all of my control gone. My head was bent back, face pressed directly into his genital slit as his rod straightened and bulged my neck."
             m "My chest burned. I realized a moment later it wasn't from lack of air, but instead heartburn as his tip popped into my stomach, completely spearing my throat with malleable cockflesh."
             m "He lifted his hips, freeing my face from his genital slit, only to drop back down, fucking my mouth."
             Ka excited "Ah!{w=0.5} Not going to last long like this!"
@@ -1336,7 +1378,10 @@ label bangok_four_xkatsu_underneath_mouth:
             m "I paused with my mouth close to his genital slit, wondering if he could feel my breath."
             c "Keep going?"
             Ka smile "If you'd please."
-            m "I dragged my hands back down my shaft, but kept my head where it was. Curiosity getting the better of me, I leaned in to taste a part of his shaft I hadn't reached yet, digging my tongue just a little bit in and around his genital slit."
+            if persistent.bangok_balls == True:
+                m "I dragged my hands back down my shaft, but kept my head where it was. Curiosity getting the better of me, I leaned in to taste a part of his shaft I hadn't reached yet, digging my tongue just a little bit in and around his genital slit and the base of his ballsack."
+            else:
+                m "I dragged my hands back down my shaft, but kept my head where it was. Curiosity getting the better of me, I leaned in to taste a part of his shaft I hadn't reached yet, digging my tongue just a little bit in and around his genital slit."
             show katsu excited with dissolve
             show katsu excited at Position(xpos=0.51, xanchor='center') with ease
             m "His cock almost twitched out of my grip, as he shuffled back half a step."
@@ -1350,7 +1395,7 @@ label bangok_four_xkatsu_underneath_mouth:
             show katsu smile with dissolve
             show black with dissolvemed
             $ renpy.pause(1.4)
-            m "Back at his tip, I enveloped and sucked, enjoying the large beads of pre my actions had collected there. Then I popped th ehead back out of my mouth for a momentary breather, and to see if he had any more tips for treating his cock well."
+            m "Back at his tip, I enveloped and sucked, enjoying the large beads of pre my actions had collected there. Then I popped the head back out of my mouth for a momentary breather, and to see if he had any more tips for treating his cock well."
             hide black with dissolvemed
     
     if bangok_four_xkatsu.flavor == 3:
@@ -1363,11 +1408,19 @@ label bangok_four_xkatsu_underneath_mouth:
                 play sound "fx/snarl.ogg"
                 m "No sooner was I stroking him into my mouth again than he twitched in my hands, his first pulse prying my jaw slightly wider before exploding against the back of my throat."
                 if bangok_four_xkatsu.target == "throat":
-                    if persistent.bangok_knot == True:
-                        m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind. {w=0.5}He obliged me by stepping forward, ramming his cock down my throat, packing my neck solid with twitching meat but for a bulge at his base that wouldn't fit past my jaw."
+                    if persistent.bangok_balls == True:
+                        if persistent.bangok_knot == True:
+                                m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind."
+                                m "He obliged me by stepping forward, ramming his cock down my throat and swinging his balls into my chest again, packing my neck solid with twitching meat but for a bulge at his base that wouldn't fit past my jaw."
+                        else:
+                            m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind. {w=0.5}He obliged me by stepping forward, ramming his cock down my throat and swinging his balls into my chest again, packing my neck solid with his twitching meat."
+                        m "After the meat came dessert, his churning balls against my chest injecting rope after rope of warm seed directly into my stomach, flooding me with nutritious, creamy protein."
                     else:
-                        m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind. {w=0.5}He obliged me by stepping forward, ramming his cock down my throat, packing my neck solid with his twitching meat."
-                    m "After the meat came dessert, rope after rope of warm seed injected directly into my stomach, flooding me with nutritious, creamy protein."
+                        if persistent.bangok_knot == True:
+                            m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind. {w=0.5}He obliged me by stepping forward, ramming his cock down my throat, packing my neck solid with twitching meat but for a bulge at his base that wouldn't fit past my jaw."
+                        else:
+                            m "I leaned forward, using Katsuharu's head to push his first spurts down before I could change my mind. {w=0.5}He obliged me by stepping forward, ramming his cock down my throat, packing my neck solid with his twitching meat."
+                        m "After the meat came dessert, rope after rope of warm seed injected directly into my stomach, flooding me with nutritious, creamy protein."
                     if persistent.bangok_inflation == True:
                         m "It was seconds before my belly was filled, stuffed with as much as I'd ever eaten in one go. Yet the flood continued. My guts gurgled audibly as they made room for what Katsuharu was feeding me, my stomach insufficient to contain the gift. Then I began to expand, my stuffed intestines needing somewhere to go themselves."
                     m "My hands went to my belly, knowing even when I gave some of it back for the ice cream recipe, I still wouldn't need to eat for some time."
@@ -1486,7 +1539,10 @@ label bangok_four_xkatsu_ready:
             "I could use a palette cleanser...":
                 $ renpy.pause (0.5)
                 Ka "Could you, now?"
-                m "Katsuharu's cock emerged a little further from his slit."
+                if persistent.bangok_balls == True:
+                    m "Katsuharu's cock emerged a little further from his slit, rubbing up against his ballsack."
+                else:
+                    m "Katsuharu's cock emerged a little further from his slit."
                 jump bangok_four_xkatsu_ws_mouth
                 # if bangok_four_xkatsu.target in ["ass","vag","womb"]:
                 #     Ka "Are you sure that's where you want it?"
@@ -1561,7 +1617,7 @@ label bangok_four_xkatsu_ws_mouth:
                 $ bangok_four_xkatsu.playerstuffed = True
             "Mouthwash.":
                 $ renpy.pause(0.5)
-                c "I'm in it for the taste. So, uh..."
+                c "I'm in it for the taste. So, ah..."
                 Ka normal "Well, it's acquired, so I hope you've got practice."
                 jump bangok_four_xkatsu_ws_mouthwash
     else:
@@ -1612,7 +1668,11 @@ label bangok_four_xkatsu_ws_mouth:
 label bangok_four_xkatsu_ending:
     scene black with dissolveslow
     $ renpy.pause(0.5)
-    m "After serving up and putting the remainder into the icebox to stay cool, we wandered back out into the summer heat to enjoy the fruits of our labor and Katsuharu's loins."
+    if persistent.bangok_balls == True:
+        m "After serving up and putting the remainder into the icebox to stay cool, he took a moment to push his large balls back inside his genital slit."
+        m "Then we wandered back out into the summer heat to enjoy the fruits of our labor and Katsuharu's loins."
+    else:
+        m "After serving up and putting the remainder into the icebox to stay cool, we wandered back out into the summer heat to enjoy the fruits of our labor and Katsuharu's loins."
     $ renpy.pause(0.5)
     scene extra9:
         zoom 2.0
