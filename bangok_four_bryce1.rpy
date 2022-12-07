@@ -2427,22 +2427,34 @@ label bangok_four_bryce1_m2:
                         c "Okay. Where?"
             m "Bryce twisted his head behind the couch, returning with a bottle of lube clenched in his maw."
             show bryce stern dk with dissolve
-            if persistent.bangok_cloacas == True:
-                m "With a grunt of effort, he curled forward to brace the bottle against his cock, then depressed the plunger to squirt a dollop at the base of where said cock emerged from his slit."
+            if persistent.bangok_balls == True:
+                if persistent.bangok_cloacas == True:
+                    m "With a grunt of effort, he curled forward to brace the bottle beneath his balls, then depressed the plunger to squirt a dollop right into the slit beneath them."
+                else:
+                    m "With a grunt of effort, he curled forward to brace the bottle beneath his balls, then depressed the plunger to squirt a dollop two plate ridges below where said balls emerged from his slit, which I could now see was also slightly spread."
             else:
-                m "With a grunt of effort, he curled forward to brace the bottle against his cock, then depressed the plunger to squirt a dollop two plate ridges below where said cock emerged from his slit, which I could now see was also slightly spread."
+                if persistent.bangok_cloacas == True:
+                    m "With a grunt of effort, he curled forward to brace the bottle against his cock, then depressed the plunger to squirt a dollop at the base of where said cock emerged from his slit."
+                else:
+                    m "With a grunt of effort, he curled forward to brace the bottle against his cock, then depressed the plunger to squirt a dollop two plate ridges below where said cock emerged from his slit, which I could now see was also slightly spread."
             play sound "fx/box.wav"
             m "He tossed the bottle aside against the coffee table."
             Br smirk dk "There. Any more questions?"
-            m "I answered his question by straddling his tail, bracing against his hindlegs, then experimentally prodding the opening he'd indicated beneath his shaft."
-            m "I missed."
-            Br brow dk "Further down. That spot's where mine comes out."
+            if persistent.bangok_balls == True:
+                m "I answered his question by straddling his tail, bracing against his hindlegs, then trying to decide again exactly where I was putting my shaft."
+            else:
+                m "I answered his question by straddling his tail, bracing against his hindlegs, then experimentally prodding the opening he'd indicated beneath his shaft."
+                m "I missed."
+                Br brow dk "Further down. That spot's where mine comes out."
             menu:
-                "[[Dock with him.]":
+                "Dock with him.":
                     if not bangok_four_bryce1_brycecame:
                         m "Bryce gasped, then clenched his teeth as I tried to press deeper next to his shaft."
                         $ brycemood -= 1
-                        Br stern dk "What did I {i}just{/i} say?"
+                        if persistent.bangok_balls == True:
+                            Br stern dk "Wrong side of my balls. Lower."
+                        else:
+                            Br stern dk "What did I {i}just{/i} say?"
                         c "Uh."
                         menu:
                             "[[Dock him.]":
@@ -2452,7 +2464,7 @@ label bangok_four_bryce1_m2:
                                 show bangok_four_bryce1_apartment night at Pan((0,0), (0,0), 0.0)
                                 with vpunch
                                 m "I sprawled across the floor, Bryce's kick leaving me out of breath and dizzy."
-                                Br brow dk "This isn't one-way. You want inside me, you gotta {i}listen{/i} to me."
+                                Br brow dk "This isn't one-way. You want to get inside me, you gotta {i}listen{/i} to me."
                                 Br brow dk "Aim lower, okay? I'm way too pent up for what you're trying to pull."
                                 play sound "fx/cartslide.ogg"
                                 show bangok_four_bryce1_apartment night at Pan((0,360), (0,360), 2.0)
@@ -2470,8 +2482,12 @@ label bangok_four_bryce1_m2:
                             "[[Listen to him.]":
                                 pass
                     else:
-                        m "I pressed in deeper next to his shaft, doubling down on my mistake. Bryce wriggled a little."
-                        Br stern dk "Still wrong."
+                        if persistent.bangok_balls == True:
+                            m "I pressed in next to his shaft, experimentally exploring his genital slit. Bryce wriggled a little."
+                            Br stern dk "Wrong side of my balls. Lower."
+                        else:
+                            m "I pressed in deeper next to his shaft, doubling down on my mistake. Bryce wriggled a little."
+                            Br stern dk "Still wrong."
                         if brycemood < 2:
                             c "What if I want to fuck your genital slit?"
                             if brycemood < 0:
@@ -2658,7 +2674,10 @@ label bangok_four_bryce1_m2:
                 m "As the lube spread further around my condom, one of his hard belly plates ground against the bottom of my cock. Then all gave way to warm envelopment as I reached as far inside him as I could go."
             else:
                 m "As the lube spread further around my shaft, one of his hard belly plates ground against the bottom of my cock. Then all gave way to warm envelopment as I reached as far inside him as I could go."
-            m "As his shaft rubbed up my torso, he grinned lewdly."
+            if persistent.bangok_balls == True:
+                m "As his balls rolled around his shaft, which prodded my torso, he grinned lewdly."
+            else:
+                m "As his shaft rubbed up my torso, he grinned lewdly."
             Br "That's the spot, huh?"
             m "I nodded, at a loss for words."
             Br smirk dk "Well, have your fun."
@@ -2680,7 +2699,10 @@ label bangok_four_bryce1_m2:
                 m "I didn't respond, his bucking back putting me near the edge of my peak."
             else:
                 Br flirty dk "Doesn't hurt in the least, if that's what you're wondering."
-                m "I took that as a sign of further encouragement, leaned forward, and went to town."
+                if persistent.bangok_balls == True:
+                    m "I took that as a sign of further encouragement, leaned forward while pushing his balls out of the way, and went to town."
+                else:
+                    m "I took that as a sign of further encouragement, leaned forward, and went to town."
                 Br laugh dk "Now I'm almost feeling it!"
             stop soundloop fadeout 0.5
             $ renpy.pause(0.5)
@@ -2773,7 +2795,10 @@ label bangok_four_bryce1_m2:
                             stop sound fadeout 1.0
                             m "The condoms weren't hard to find. I returned with one his size, which most of the boxes were."
                         call bangok_four_bryce1_setprotected(True)
-                        m "Sitting underneath him, I unrolled the condom along his length."
+                        if persistent.bangok_balls == True:
+                            m "Sitting underneath him, I unrolled the condom along his length, right down to his balls."
+                        else:
+                            m "Sitting underneath him, I unrolled the condom along his length."
                         Br smirk dk "Alright. Go to town."
                         m "I gripped Bryce's shaft around the condom lightly near the base. I wasn't quite sure how rough I could be with it, with him being a different species."
                         Br laugh dk "H-Hey! Don't {i}tickle{/i} it!"
@@ -2812,9 +2837,12 @@ label bangok_four_bryce1_m2:
                                     stop soundloop
                                     Br normal dk "Alright. Where were we?"
                                     label bangok_four_bryce1_handjob_wscondomleft:
-                                    m "The condom still hung from his dick, a bobbing, hypnotizing balloon full of piss."
+                                    if persistent.bangok_balls == True:
+                                        m "The condom still hung from his dick, a bobbing, hypnotizing balloon full of piss even larger than either of his balls."
+                                    else:
+                                        m "The condom still hung from his dick, a bobbing, hypnotizing balloon full of piss."
                                     menu:
-                                        "[[Drink it.]":
+                                        "Drink it.":
                                             m "I pinched off his condom near the tip, then took the ring at the base and slid the whole thing off. The smell of urine hit like an aphrodisiac."
                                             show bryce flirty dk with dissolve
                                             m "Before I could think about what I was doing, I had the ring in my mouth, and was lifting the balloon up over my head."
@@ -2834,7 +2862,7 @@ label bangok_four_bryce1_m2:
                                             Br flirty dk "That was hot to watch."
                                             m "Slurping the last from the now empty condom, I shoved it back down over his dick."
                                             c "Let's get back to it."
-                                        "[[Replace it.]":
+                                        "Replace it.":
                                             m "I pinched off his condom near the tip, then took the ring at the base and slid the whole thing off. The smell of urine hit like a wave."
                                             m "Tying it, I rolled it aside across his floor. Then I wandered back to his condom drawers for another one."
                                             c "Let's get back to it."
@@ -2909,7 +2937,7 @@ label bangok_four_bryce1_m2:
                         else:
                             m "Bryce's cum balloon bobbed in front of me."
                         menu:
-                            "[[Drink it.]":
+                            "Drink it.":
                                 m "I pinched off his condom near the tip, then took the ring at the base and slid the whole thing off. The smell of cum was thick and heady."
                                 show bryce flirty dk with dissolve
                                 m "Before I could think about what I was doing, I had the ring in my mouth, and was lifting the balloon up over my head."
@@ -2932,17 +2960,17 @@ label bangok_four_bryce1_m2:
                                 $ brycemood += 1
                                 Br flirty dk "That was hot to watch."
                                 m "I discarded the condom, feeling my consumption weighing on me, sapping what little of my energy remained."
-                            "[[Take it off.]":
+                            "Take it off.":
                                 m "I pinched off his condom near the tip, then took the ring at the base and slid the whole thing off. The smell of cum was thick."
                                 m "Tying it off, I set the condom out of the way, where it wouldn't be stepped on."
 
                         if persistent.bangok_knot == True:
                             m "While he'd cum, a bulge had emerged near the base of his cock, one I hadn't noticed in the heat of the moment."
                             menu:
-                                "[[Squeeze it.]":
+                                "Squeeze it.":
                                     Br laugh dk "H-Hey!"
                                     Br smirk dk "A bit soon to try to get me going again."
-                                "[[Leave it.]":
+                                "Leave it.":
                                     pass
 
 
