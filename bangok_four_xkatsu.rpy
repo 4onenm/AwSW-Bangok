@@ -5,6 +5,7 @@ init python in bangok_four_xkatsu:
     playercame = False
     playerstuffed = None
     target = None
+    ws_target = None
 
     safety = True
     flavor = 0
@@ -1434,7 +1435,7 @@ label bangok_four_xkatsu_underneath_mouth:
                     m "One hand went to my belly, knowing even when I gave some of it back for the ice cream recipe, I still wouldn't need to eat for some time with the liquid gift Katsuharu had stuffed into me."
                     m "Yet, it didn't seem to end. The feeling of warm, stuffed contentment faded with my ability to swallow, my stomach too packed to take any more. But more was coming!"
                     m "Remembering the bucket, I yanked him free with a spray of cum in my face. Then I bent over the bucket, his cock and my mouth competing to fill it faster."
-                $ bangok_four_xkatsu.playerstuffed = True
+                $ bangok_four_xkatsu.playerstuffed = "mouth"
                 $ renpy.pause(0.8)
                 show katsu exhausted with dissolve
                 play sound "fx/slide.ogg"
@@ -1543,18 +1544,22 @@ label bangok_four_xkatsu_ready:
                     m "Katsuharu's cock emerged a little further from his slit, rubbing up against his ballsack."
                 else:
                     m "Katsuharu's cock emerged a little further from his slit."
-                jump bangok_four_xkatsu_ws_mouth
-                # if bangok_four_xkatsu.target in ["ass","vag","womb"]:
-                #     Ka "Are you sure that's where you want it?"
-                #     menu:
-                #         "Shower.":
-                #             jump bangok_four_xkatsu_ws_shower
-                #         "Mouth.":
-                #             jump bangok_four_xkatsu_ws_mouth
-                #         "Ass." if bangok_four_xkatsu.target == "ass":
-                #             jump bangok_four_xkatsu_ws_underneath
-                #         "Vagina." if bangok_four_xkatsu.target == "vag":
-                #             jump bangok_four_xkatsu_ws_underneath
+                # jump bangok_four_xkatsu_ws_mouth
+                if bangok_four_xkatsu.target in ["ass","vag","womb"]:
+                    Ka "Are you sure that's where you want it?"
+                    menu:
+                        # "Shower.":
+                        #     jump bangok_four_xkatsu_ws_shower
+                        "Mouth.":
+                            jump bangok_four_xkatsu_ws_mouth
+                        "Ass.":
+                            $ bangok_four_xkatsu.ws_target = "ass"
+                            jump bangok_four_xkatsu_ws_underneath
+                        "Vagina." if bangok_four_playerhasdick == False:
+                            $ bangok_four_xkatsu.ws_target = "womb" if bangok_four_xkatsu.target == "womb" else "vag"
+                            jump bangok_four_xkatsu_ws_underneath
+                else:
+                    jump bangok_four_xkatsu_ws_mouth
             "Oh, yeah, go take care of that.":
                 $ renpy.pause (0.5)
                 show katsu exhausted flip with dissolve
@@ -1579,8 +1584,10 @@ label bangok_four_xkatsu_ready:
     jump bangok_four_xkatsu_ending
 
 label bangok_four_xkatsu_ws_mouth:
-    # c "Doesn't cleanse my palette if it goes somewhere else."
-    # Ka smile "Suppose it doesn't."
+    $ bangok_four_xkatsu.ws_target = "mouth"
+    if bangok_four_xkatsu.target not in ["ass","vag","womb"]:
+        c "Doesn't cleanse my palette if it goes somewhere else."
+        Ka smile "Suppose it doesn't."
     m "Stepping away from the buckets to protect our creamy treat, I sank to my knees."
     show katsu smile at center with ease
     if bangok_four_xkatsu.target == "throat":
@@ -1597,14 +1604,14 @@ label bangok_four_xkatsu_ws_mouth:
                 play soundloop "fx/faucet1.ogg" fadein 1.0
                 queue soundloop "fx/faucet2.ogg"
                 m "I did my best to be a full-service urinal, lapping at his genital slit with what little I could move of my tongue, but I was too overwhelmed by the sensations inside me."
-                if bangok_four_xkatsu.playerstuffed == False:
-                    m "My stomach filled rapidly with warmth from Katsuharu's bladder as he pissed like a hose down my throat."
-                    if persistent.bangok_inflation == True:
-                        m "It was beyond anything I could drink without the assistance of his shaft, my stomach filled so completely my intestines began to flood, belly expanding under the load."
-                if bangok_four_xkatsu.playerstuffed == True:
+                if bangok_four_xkatsu.playerstuffed:
                     m "My guts churned, Katsuharu's piss pushing the cum from my stomach and deeper into my intestines."
                     if persistent.bangok_inflation == True:
                         m "It was beyond anything I could drink without the assistance of his shaft. I expanded, the fluid bulge in my belly growing to a nearly painful degree, enough that I was sure I couldn't walk."
+                else:
+                    m "My stomach filled rapidly with warmth from Katsuharu's bladder as he pissed like a hose down my throat."
+                    if persistent.bangok_inflation == True:
+                        m "It was beyond anything I could drink without the assistance of his shaft, my stomach filled so completely my intestines began to flood, belly expanding under the load."
 
 
                 stop soundloop fadeout 1.0
@@ -1614,7 +1621,7 @@ label bangok_four_xkatsu_ws_mouth:
                 m "Then he pulled back, the space his tip had occupied in my stomach immediately replaced with urine by fluid pressure."
                 hide black with dissolvemed
                 m "I could barely keep it all down as he withdrew completely, leaving me gasping on my knees, flushed with the warmth of my urinal use."
-                $ bangok_four_xkatsu.playerstuffed = True
+                $ bangok_four_xkatsu.playerstuffed = "mouth"
             "Mouthwash.":
                 $ renpy.pause(0.5)
                 c "I'm in it for the taste. So, ah..."
@@ -1633,11 +1640,11 @@ label bangok_four_xkatsu_ws_mouth:
         queue soundloop "fx/faucet2.ogg"
         m "My first warning was a bit of sweetness mixed with tang, some of his cum mixed in with the initial trickle of urine. Then the full stream hit the back of my throat, {i}definitely{/i} beyond what I could swallow."
         if bangok_four_playerhasdick == True:
-            m "Piss leaked past my lips, dribbling down my chin and chest as I tried to keep up and not make a mess. I pulled the mixing bowl closer, under my hardening shaft and balls as the stream of golden liquid flowed down my belly, parting around my cock before dribbling down into a pool."
+            m "Piss leaked past my lips, dribbling down my chin and chest as I tried to keep up and not make a mess. I pulled the mixing bowl closer, under my hardening shaft and balls as the stream of liquid flowed down my belly, parting around my cock before dribbling down into a pool."
         else:
-            m "Piss leaked past my lips, dribbling down my chin and chest as I tried to keep up and not make a mess. I pulled the mixing bowl closer, under my vaginal lips as the stream of golden liquid flowed down my belly and over my cunt, dribbling down into a pool with my own juices."
+            m "Piss leaked past my lips, dribbling down my chin and chest as I tried to keep up and not make a mess. I pulled the mixing bowl closer, under my vaginal lips as the stream of liquid flowed down my belly and over my cunt, dribbling down into a pool with my own juices."
         m "I sank his cockhead a little deeper in my mouth, trying to get a better seal, trying to swallow the fast stream without choking and coughing up more."
-        if bangok_four_xkatsu.playerstuffed == True:
+        if bangok_four_xkatsu.playerstuffed:
             if bangok_four_xkatsu.target not in ["vag","womb"]:
                 m "The new stream of liquid gift mixed with the cum Katsuharu had already left inside me. Almost unable to swallow, even more piss ran down my front, over my belly stuffed full of his donations."
             else:
@@ -1657,10 +1664,296 @@ label bangok_four_xkatsu_ws_mouth:
     Ka "All that's left is to serve up. Cup or cone?"
     $ renpy.pause(0.8)
     c "H-How about a half hour rest first? That... I think my throat needs a break."
-    if bangok_four_xkatsu.playerstuffed == True:
+    if bangok_four_xkatsu.playerstuffed:
         c "And I'm so full..."
     Ka normal "If you insist."
     jump bangok_four_xkatsu_ending
+
+label bangok_four_xkatsu_ws_underneath:
+    c "Well, that might be a bit leaky."
+    if bangok_four_xkatsu.ws_target == "ass":
+        if bangok_four_xkatsu.target == "ass":
+            m "I turned around, spreading my asscheeks to give him a look at my still-spread rosebud."
+        else:
+            m "I turned around, spreading my asscheeks to give him a look at my untouched rosebud."
+            if bangok_four_xkatsu.target == "mouth":
+                Ka normal "The other end?"
+            else:
+                Ka normal "The other hole?"
+    else:
+        if bangok_four_xkatsu.target in ['vag','womb']:
+            m "I spread my loosened cunt lips apart, giving him a look at the entrance to my love canal."
+        else:
+            m "I spread my tight cunt lips apart, giving him a look at the entrance to my love canal."
+            if bangok_four_xkatsu.target == "mouth":
+                Ka normal "The other end?"
+            else:
+                Ka normal "The other hole?"
+    c "How about here?"
+    Ka smile "Don't mind if I do."
+
+    if (bangok_four_xkatsu.ws_target == bangok_four_xkatsu.target) and bangok_four_xkatsu.playerstuffed:
+        m "I looked around, not sure where would be best to really make a mess in his kitchen. If his volume of piss was anything like that of his cum, I wasn't sure I'd be able to take it all atop his cum."
+    elif (bangok_four_xkatsu.ws_target == bangok_four_xkatsu.target):
+        m "I looked around, not sure where would be best to really make a mess in his kitchen. If his volume of piss was anything like that of his cum, I wasn't sure I'd be able to take it all in my loose hole."
+    else:
+        m "I looked around, not sure where would be best to really make a mess in his kitchen. If his volume of piss was anything like that of his cum, I wasn't sure I'd be able to take it all."
+
+    Ka normal "Anywhere'll do. Don't like to be kept holding it, though."
+    show katsu normal with dissolve
+    show katsu:
+        ease 0.5 zoom 1.7
+    show kitchen:
+        ease 0.5 zoom 1.8
+    with None
+    m "I got on all fours, letting Katsuharu get on top of me for what would come next."
+    m "He took a large bowl off a nearby shelf, nudging it between my legs with a hindpaw. I looked back at it."
+    Ka exhausted "What? I wash them."
+    Ka normal "Now hold still."
+
+
+    if bangok_four_xkatsu.ws_target == "ass":
+        m "I planted my hands as I felt his massive cockhead between my cheeks, pressing against my tight rear, almost pushing me forward."
+    else:
+        m "I planted my hands as I felt his massive cockhead spreading my lower lips, pressing flat against the entrance to my vagina, almost pushing me forward."
+    if bangok_four_xkatsu.ws_target == bangok_four_xkatsu.target:
+        c "H-Hang on, I think we might need to lube you up again."
+    else:
+        c "H-Hang on, I think we might need to lube you--"
+    Ka normal "Nah. Only thing that's gotta get in you is what's coming out."
+    Ka smile "Think I can almost feel ya..."
+    play soundloop "fx/faucet1.ogg" fadein 1.0
+    queue soundloop "fx/faucet2.ogg"
+
+    if bangok_four_xkatsu.ws_target == bangok_four_xkatsu.target:
+        if bangok_four_xkatsu.ws_target == "ass":
+            jump .ass
+        else:
+            jump .vag
+    else:
+        jump .untouched
+
+    label .untouched:
+        if bangok_four_xkatsu.ws_target == "ass":
+            show katsu excited with dissolve:
+            m "The hot stream of his urine jetted into my ass like a small hose, rapidly flowing deeper into my guts as I laid my face on the floor to take his hard pressure on my sphincter."
+            m "I moaned, heat suffusing my body as his bladder emptied into my bowels, using me for his liquid waste just like he had used me for his ice cream making."
+            if bangok_four_playerhasdick == True:
+                m "Even despite his pressure, the seal wasn't perfect. Urine leaked from our coupling point, running down my balls and manhood and dripping into the bowl below."
+            elif bangok_four_xkatsu.target in ["vag","womb"] and bangok_four_xkatsu.flavor > 2:
+                m "Even despite his pressure, the seal wasn't perfect. Urine leaked from our coupling point, running down my cum-stained, loosened outer lips and dripping into the bowl below."
+            else:
+                m "Even despite his pressure, the seal wasn't perfect. Urine leaked from our coupling point, running down my outer lips and dripping into the bowl below."
+            
+            if bangok_four_xkatsu.playerstuffed == "mouth":
+                m "My guts gurglged, Katsuharu's piss flooding so deeply, I was sure it was meeting the cum I'd swallowed before."
+                if persistent.bangok_inflation == True:
+                    m "It was beyond anything I could drink without the assistance of his shaft. I expanded, the fluid bulge in my belly growing to a nearly painful degree, enough that I was sure I couldn't walk."
+            else:
+                if persistent.bangok_inflation == True:
+                    m "It was beyond anything I could have drunk from my other end, my guts gurgling as he forced them to bloat with his hot urine, my intestines expanding and pressing my belly outward with the volume of his liquid waste."
+            stop soundloop fadeout 1.0
+            $ renpy.pause (0.5)
+            show katsu smile with dissolve
+
+
+            if persistent.bangok_inflation == True:
+                m "Finally he stopped, leaving my bloated intestines stuffed with his urine and my lower body suffused with his expelled warmth."
+            else:
+                m "Finally he stopped, leaving my colon seeping in a deep pool of his urine and my lower body suffused with his expelled warmth."
+
+            play sound "fx/water1.ogg"
+            show katsu smile:
+                ease 0.5 ypos 1.0
+            with None
+            if persistent.bangok_inflation == True:
+                m "Then he pulled back, cock slapping the side of the mixing bowl with a lewd smack. A stream of his piss dribbled down my legs, only barely getting caught by the rim of the bowl against my thighs."
+                $ bangok_four_bryce1_playerstuffed = "ass"
+            else:
+                m "Then he pulled back, cock slapping the side of the mixing bowl with a lewd smack, leaving my ass alone to hold in his waste."
+        else:
+            show katsu excited:
+                pause 0.5
+                ease 1.5 ypos 1.04
+            with None
+            m "The hot stream of his urine sprayed down the spasming walls of my vagina. As I clenched and unclenched my lower muscles, his spongy cockhead compressed, then abruptly slid inside me, shoving deeper his wave of liquid waste until I had no room left."
+            c "F-Fuuuuck!"
+            if persistent.bangok_cervpen == True:
+                m "He pushed right up to my limit, forcing his piss through my innermost gate until his tip kissed my cervix and his defiling liquid gift jetted directly into my womb."
+                if persistent.bangok_inflation == True:
+                    if bangok_four_xkatsu.playerstuffed:
+                        m "It wasn't enough room. I groaned, belly forced to expand still further as he bloated my womb with his waste, pressing inside me against his load of cum in my other organs."
+                    else:
+                        m "It wasn't enough room. I groaned, belly forced to expand as he bloated my womb with his waste, leaving me pregnant with his byproduct."
+            else:
+                m "He backed off, giving a little more room for his fresh piss as he kept pissing, leaving my deepest recesses to seep in his defiling liquid gift."
+                if persistent.bangok_inflation == True:
+                    m "It wasn't enough room. I groaned, belly forced to expand as he packed my canal solid with his waste."
+            stop soundloop fadeout 1.0
+            $ renpy.pause (0.5)
+            show katsu smile with dissolve
+            m "Finally he stopped, leaving my pussy hot and stuffed with his dragonhood and urine, my lower body suffused with his expelled warmth."
+            play sound "fx/water1.ogg"
+            show katsu smile:
+                ease 0.5 ypos 1.0
+            with None
+            if persistent.bangok_inflation == True:
+                m "Then he pulled out, cock slapping the side of the mixing bowl with a lewd smack. A stream of his piss dribbled from my cunt and ran down my legs, only barely getting caught by the rim of the bowl against my thighs."
+                $ bangok_four_bryce1_playerstuffed = "vag"
+            else:
+                m "Then he pulled out, cock slapping the side of the mixing bowl with a lewd smack. A trickle of his piss ran down my legs, only barely getting caught by the rim of the bowl against my thighs."
+
+        Ka "All that's left is to serve up. Cup or cone?"
+        $ renpy.pause(0.8)
+        c "H-How about a half hour rest first? That... I think if I move it'll all come back out..."
+        if bangok_four_xkatsu.playerstuffed:
+            c "And I'm so full..."
+        Ka normal "If you insist."
+        jump bangok_four_xkatsu_ending
+
+    label .ass:
+        show katsu excited:
+            pause 0.5
+            ease 1.0 ypos 1.04
+        with None
+        if persistent.bangok_balls == True:
+            m "The hot stream of his urine jetting directly into my ass spasmed muscles across my lower body. In that moment his head pushed inside, sinking in until his balls met my thighs again."
+        else:
+            m "The hot stream of his urine jetting directly into my ass spasmed muscles across my lower body. In that moment his head pushed inside, sinking in until his thighs met mine again."
+
+        if bangok_four_xkatsu.playerstuffed == "ass":
+            m "I moaned, heat suffusing my body as his bladder emptied into my upper colon, stirring up the cum he'd left there until my guts were gurgling with a rapidly-thinning hot slurry pooling deep inside."
+            if persistent.bangok_inflation == True:
+                m "It was beyond anything I could have drunk from my other end. My guts gurgled as he forced the fluid bulge in my belly to grow to a nearly painful degree, enough that I was sure I couldn't walk."
+        elif bangok_four_xkatsu.playerstuffed == "mouth":
+            m "I moaned, heat suffusing my body as his bladder emptied into my upper colon, leaving a quickly-growing, deep, hot pool in my guts."
+            m "My guts gurglged, Katsuharu's piss flooding so deeply, I was sure it was meeting the cum I'd swallowed before."
+            if persistent.bangok_inflation == True:
+                m "It was beyond anything I could have drunk from my other end. My guts gurgled as he forced the fluid bulge in my belly to grow to a nearly painful degree, enough that I was sure I couldn't walk."
+        else:
+            m "I moaned, heat suffusing my body as his bladder emptied into my upper colon, leaving a quickly-growing, deep, hot pool in my guts."
+            if persistent.bangok_inflation == True:
+                m "It was beyond anything I could have drunk from my other end. My guts gurgled as he forced them to bloat with his hot urine, my intestines expanding and pressing my belly outward with the volume of his liquid waste."
+
+        stop soundloop fadeout 1.0
+        $ renpy.pause (0.5)
+        show katsu smile with dissolve
+
+        if persistent.bangok_inflation == True:
+            m "Finally he stopped pissing, leaving my bloated intestines stuffed with his shaft and urine. My body was suffused with his expelled warmth, molded to fit the length stuffed inside me."
+        else:
+            m "Finally he stopped, leaving my colon seeping in a deep pool of his urine placed there by his shaft. My body was suffused with his expelled warmth, molded to fit the length stuffed inside me."
+
+
+        play sound ["fx/silence.ogg", "fx/silence.ogg", "fx/silence.ogg", "fx/silence.ogg", "fx/silence.ogg"]
+        queue sound "fx/water1.ogg"
+        show katsu normal:
+            ease 0.5 ypos 1.0
+        with None
+        if persistent.bangok_inflation == True:
+            if bangok_four_xkatsu.playerstuffed in ["ass", "mouth"]:
+                m "Then Katsuharu pulled out faster than I expected, leaving my packed guts roiling as the fluid attempted to follow him. His cock hit the mixing bowl with a lewd smack, followed by a small fountain of his cum and piss, lasting only a second or two."
+            else:
+                m "Then Katsuharu pulled out faster than I expected, leaving my packed guts roiling as the fluid attempted to follow him. His cock hit the mixing bowl with a lewd smack, followed by a small slpatter of his piss."
+        else:
+            m "Katsuharu pulled out faster than I expected, his cock striking the mixing bowl with a lewd smack, leaving my piss-stained ass clenching at open air."
+
+        Ka smile "All that's left is to serve up. Cup or cone?"
+        $ renpy.pause(0.8)
+        if persistent.bangok_inflation == True:
+            $ renpy.pause (0.4)
+            m "I lay there, still trying to recover from the settling of my flooded guts."
+            Ka smile "Alright, I know that look. I'll let you rest with it."
+            c "Th-Thanks..."
+            scene black with dissolveslow
+            m "Nearly an hour passed before I'd managed to drain myself enough to stand and walk about again."
+        else:
+            c "H-How about a half hour rest first? That... I think if I move it'll all come back out..."
+            if bangok_four_xkatsu.playerstuffed:
+                c "And I'm so full..."
+            Ka normal "If you insist."
+        jump bangok_four_xkatsu_ending
+
+    label .vag:
+        show katsu excited:
+            pause 0.5
+            ease 1.0 ypos 1.04
+        with None
+        m "The hot stream of his urine sprayed down the spasming walls of my vagina. As I clenched and unclenched my lower muscles, his spongy cockhead compressed, then abruptly slid inside me, shoving deeper his wave of liquid waste until I had no room left."
+        c "F-Fuuuuck!"
+        if persistent.bangok_cervpen == True and bangok_four_xkatsu.target == "womb":
+            if bangok_four_xkatsu.playerstuffed == "vag":
+                m "He pressed right through my cervix, fucking into, then pissing into the thick pool of cum already in my womb as I lay stretched taut around his staff."
+                if persistent.bangok_balls == True:
+                    m "His balls slapped into my thighs, completing the seal as his stream of hot waste churned the contents of my womb into a defiling slurry."
+                else:
+                    m "His thighs slapped into mine, completing the seal as his stream of hot waste churned the contents of my womb into a defiling slurry."
+                
+                if persistent.bangok_inflation == True:
+                    m "Even without his entire length and load of cum stuffed into me, I wouldn't have had enough room."
+                    m "My belly bloated further, enough I was sure I couldn't stand up, let alone walk."
+                    m "I was a stationary tank of his hot fluids and, as I felt myself expanding with his slurry of cum and piss bloating my deepest center, that was all I wanted to be."
+            else:
+                m "He pressed right through my cervix, pissing against the far wall of my womb as I lay stretched taut around his thick meat."
+                if persistent.bangok_balls == True:
+                    m "His balls slapped into my thighs, completing the seal as he soaked my sacred temple in a deepening pool of his hot waste."
+                else:
+                    m "His thighs slapped into mine, completing the seal as he soaked every nook and cranny of my sacred temple in a deepening pool of his hot waste."
+
+                if persistent.bangok_inflation == True:
+                    m "Even without his entire length stuffed in me, I wouldn't have had enough room."
+                    m "My belly bloated further, enough I was sure I couldn't walk until I'd drained."
+                    m "I was a stationary tank of his hot fluids and, as I felt myself expanding with his pissload stretching my deepest center, that was all I wanted to be."
+        else:
+            if bangok_four_xkatsu.playerstuffed == "vag":
+                m "He pushed right up to my limit, forcing a slurry of his piss and old, thick cum through my innermost gate until his tip kissed my cervix and his defiling hot stream jetted directly into my womb."
+                if persistent.bangok_inflation == True:
+                    m "Even without the added volume of his cum in his waste slurry, I wouldn't have had enough room."
+                    m "My belly bloated further, enough I was sure I couldn't walk until I'd drained of all he'd defiled my sacred temple with."
+                    m "I was a stationary tank of his hot fluids and, as I felt myself expanding with his pissload stretching my deepest center, that was all I wanted to be."
+            else: 
+                m "He pushed right up to my limit, forcing his piss through my innermost gate until his tip kissed my cervix and his defiling liquid gift jetted directly into my womb."
+                if persistent.bangok_inflation == True:
+                    if bangok_four_xkatsu.playerstuffed:
+                        m "I didn't have enough room inside me. I groaned, belly forced to expand still further as he bloated my womb with his waste, pressing inside me against his cum in my other organs."
+                    else:
+                        m "I didn't have enough room inside me. I groaned, belly forced to expand as he bloated my womb with his waste, leaving me pregnant with his byproduct."
+        show katsu smile:
+            ease 2.0 ypos 1.0
+        with None
+        stop soundloop fadeout 2.0
+        if persistent.bangok_inflation == True:
+            if bangok_four_xkatsu.playerstuffed == "vag":
+                m "He pulled out slowly, stream petering out as he gradually reduced the pressure on my bloated reproductive organ."
+            else:
+                m "He pulled out slowly, stream petering out as he gradually reduced the pressure on my stretched reproductive organ."
+        else:
+            m "He pulled out slowly, stream petering out as he gradually retreated from my defiled reproductive organ."
+
+        play sound "fx/water1.ogg"
+        if persistent.bangok_inflation == True and bangok_four_xkatsu.ws_target == "womb":
+            m "Then he pulled out, cock slapping the side of the mixing bowl with a lewd smack. A small river of his piss spilled from my cunt and ran down my legs, only barely getting caught by the rim of the bowl against my thighs."
+        elif persistent.bangok_inflation == True or bangok_four_xkatsu.ws_target == "womb":
+            m "Then he pulled out, cock slapping the side of the mixing bowl with a lewd smack. A stream of his piss dribbled from my cunt and ran down my legs, only barely getting caught by the rim of the bowl against my thighs."
+            $ bangok_four_bryce1_playerstuffed = "vag"
+        else:
+            m "Then he pulled out, cock slapping the side of the mixing bowl with a lewd smack. A trickle of his piss ran down my legs, only barely getting caught by the rim of the bowl against my thighs."
+
+        Ka "All that's left is to serve up. Cup or cone?"
+        $ renpy.pause(0.8)
+        if persistent.bangok_inflation == True and bangok_four_xkatsu.ws_target == "womb":
+            $ renpy.pause (0.4)
+            m "I lay, still trying to recover from the mindblowing sensations of the cervical fucking and deep fluid stuffing."
+            Ka smile "Alright, I know that look. I'll let you rest with it."
+            c "Th-Thanks..."
+            scene black with dissolveslow
+            m "Nearly an hour passed before I'd managed to drain my womb enough to stand and walk about again."
+        else:
+            c "H-How about a half hour rest first? That... I think if I move it'll all come back out..."
+            if bangok_four_xkatsu.playerstuffed:
+                c "And I'm so full..."
+            Ka normal "If you insist."
+        jump bangok_four_xkatsu_ending
 
 
 
