@@ -99,6 +99,7 @@ label bangok_four_adine4_shower_purring:
             jump .adine_presents_rear
 
     label .oral:
+    $ bangok_four_femalepartners += 1
     m "Adine turned around to face me, clearly satisfied with my offer."
     Ad think "I hope you won't be disappointed. I've read tips on how to do this from a magazine, but this would be my first time putting them in practice."
     m "I shook my head and rubbed her cheek reassuringly."
@@ -142,6 +143,7 @@ label bangok_four_adine4_shower_purring:
 
 
     label .adine_presents_rear:
+    $ bangok_four_femalepartners += 1
     m "Adine rolled her eyes, though her amused smile betrayed her mock indignation."
     Ad annoyed "Well, I suppose I owe you that much, since I so cruelly decieved you into stripping naked for me."
     m "It was a glorious sight to behold, the different colors perfectly framing a pussy and anus that were begging to be ravaged."

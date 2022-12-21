@@ -266,6 +266,7 @@ label bangok_four_xipsum2:
     Ip think bangok briefs "You can keep that secret, can't you [player_name]?"
     c "Sure."
     Ip happy bangok briefs "Excellent. Then, would you like something a little more substantive than my fingers?"
+    $ bangok_four_malepartners += 1
     if bangok_four_playerhasdick == False:
         Ip "Say, a pair of Ipsum-brand dildos. Or perhaps you might be willing to offer a human-brand onahole or two."
     else:

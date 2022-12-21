@@ -249,6 +249,7 @@ label bangok_four_xkatsu_help:
             play soundloop "fx/massage.ogg" fadein 1.5
             m "Putting the droplet from my mind, I aimed Katsuharu's cockhead into the first bucket and began to pump with both hands."
             $ renpy.pause(1.0)
+            $ bangok_four_malepartners += 1
             Ka exhausted "You know, dry pumping tugs at my skin a lot. Would help if you spread my pre around. Or played with my tip a bit more."
             stop soundloop fadeout 1.0
             c "Do you have lube? That'd probably be an easier way to get you more slick."
@@ -330,6 +331,7 @@ label bangok_four_xkatsu_help:
                 show katsu smile with dissolve
                 m "I stood, tugging his tail and rear back into position."
             $ renpy.pause(1.0)
+            $ bangok_four_malepartners += 1
             show katsu excited with dissolve
             m "Katsuharu's underbelly was pliable at his age, his plates barely impeding me as I sank my shaft into the large, warm confines of his ass."
             Ka "Ha! Been a while since I've had anything back there."
@@ -361,7 +363,6 @@ label bangok_four_xkatsu_help:
                 c "That's... me."
                 Ka normal "Mm. Well if you did a bit more of that, you might have a chance."
             $ bangok_four_xkatsu.whatcum = True
-            $ bangok_four_malepartners += 1
             label bangok_four_xkatsu_assfuckmenu:
             menu:
                 "[[Stroke him.]":
@@ -706,6 +707,7 @@ label bangok_four_xkatsu_help:
 label bangok_four_xkatsu_get_underneath:
     show katsu smile with dissolve
     $ renpy.pause (1.4)
+    $ bangok_four_malepartners += 1
     Ka "What do you expect me to say? No?"
     $ renpy.pause (0.3)
     play sound "fx/undress.ogg"

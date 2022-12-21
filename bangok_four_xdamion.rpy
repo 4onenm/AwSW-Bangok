@@ -115,6 +115,7 @@ label bangok_four_xdamion_fuck:
     menu:
         "Drop to your knees.":
             $ bangok_four_xdamion_store.position = "oral"
+            $ bangok_four_malepartners += 1
             show damion arrogant bangok:
                 transform_anchor True
                 ease 0.5 zoom 2.4
@@ -215,6 +216,7 @@ label bangok_four_xdamion_fuck:
             jump bangok_four_xdamion_fuck_positionmenu
         "Offer your slick, needy hole." if bangok_four_playerhasdick == False:
             $ bangok_four_xdamion_store.position = "vaginal"
+            $ bangok_four_malepartners += 1
             m "I hopped up on the lab bench, sliding a hand under my waistband."
             c "Okay, how about you put that where it's supposed to go?"
             Dm face bangok "What are you...?"
@@ -449,6 +451,7 @@ label bangok_four_xdamion_ws_fuck:
     menu:
         "Drop to your knees.":
             $ bangok_four_xdamion_store.position = "urinal"
+            $ bangok_four_malepartners += 1
             show damion arrogant bangok ws:
                 transform_anchor True
                 ease 0.5 zoom 2.4
@@ -608,6 +611,7 @@ label bangok_four_xdamion_ws_fuck:
             jump bangok_four_xdamion_ws_fuck_positionmenu
         "Offer your slick, needy hole." if bangok_four_playerhasdick == False:
             $ bangok_four_xdamion_store.position = "vaginalws"
+            $ bangok_four_malepartners += 1
             m "I hopped up on the lab bench, sliding a hand under my waistband."
             c "Okay, how about you put that where it's supposed to go?"
             Dm face bangok ws "What are you...?"

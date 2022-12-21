@@ -481,6 +481,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
     m "I nestled into his chest easily, the position comfortable enough to sleep in."
     m "But I was looking for something much more fun."
     m "Picking myself up on my feet, straddling his belly, I lifted his cockhead to my rear entrance."
+    $ bangok_four_malepartners += 1
     Br smirk "Take this slow, okay?"
     Br normal "Don't want to hurt you and have to undo this cock pretzel."
     c "I'll try."
@@ -530,6 +531,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
     c "I will."
 
     m "Hesitantly, Maverick began to press forward, the lube on his tip squishing into every nook and cranny of my lips."
+    $ bangok_four_malepartners += 1
     m "I squirmed, Bryce's cock twisting slightly in my ass as I struggled to help aim the flat pressure on my cunt deeper into my passage, where there was space for Maverick to enter."
     m "Then his tip popped in, stretching my hole to its limit, rubbing my inner walls as he sank a couple inches inside me."
     c "Ah! W-Wow."
@@ -639,6 +641,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
         $ renpy.pause (0.8)
 
         m "Sebastian stepped close enough I could accept his condom-wrapped tip into my mouth. Then he pushed a little further, filling my mouth with the warmth of his length and the taste of the condom. I began to slurp and lick, preparing for the next step."
+        $ bangok_four_malepartners += 1
 
     $ renpy.pause (0.5)
     play soundloop "fx/rub2.ogg"
@@ -1696,6 +1699,7 @@ label bangok_four_bryce3_mcbottom_train:
                 "Vaginal.":
                     $ bangok_four_bryce3_store.sebtarget = "vag"
         Sb smile "Mind if I have a taste, first?"
+        $ bangok_four_malepartners += 1
         menu:
             "Go for it.":
                 if bangok_four_bryce3_store.sebtarget == "ass":
@@ -1924,6 +1928,7 @@ label bangok_four_bryce3_mcbottom_train:
     Br smirk "Ready?"
     c "Y-Yeah."
 
+    $ bangok_four_malepartners += 1
     m "He didn't wait for me to fully finish my acknowledgment before easing slightly more weight onto his shaft, and by extension me."
     if bangok_four_bryce3_store.brycetarget == "ass":
         if (bangok_four_bryce3_store.sebastian_in == True) and (persistent.bangok_knot == True) and (bangok_four_bryce3_store.knotfuck == True):
@@ -2443,6 +2448,7 @@ label bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn:
     jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mavgoes_merge
 
 label bangok_four_bryce3_mcbottom_train_mav_turn:
+    $ bangok_four_malepartners += 1
     m "He pressed forward, spreading me open wider than Bryce had. Then he stopped, once his whole cockhead was in."
     Mv nice "Is this at all painful?"
     m "After Bryce's fucking, just being spread around a thick shaft was a non-issue. I shook my head."
@@ -3690,6 +3696,7 @@ label bangok_four_bryce3_mctop_mavgoes:
                 "[[Cum.]":
                     $ renpy.pause(0.3)
                     $ bangok_four_bryce3_store.mc_came = True
+                    $ bangok_four_malepartners += 1
                     c "Nngh--"
                     if persistent.bangok_four_playerhasdick == True:
                         play sound "fx/extinguish.ogg"
@@ -3961,6 +3968,7 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
     with ease
     m "I approached, arriving groin-to-face with a smiling Bryce, and face-to-face with a glaring Maverick."
     show bryce pant flip with dissolve
+    $ bangok_four_malepartners += 1
     if bangok_four_playerhasdick == True:
         if bangok_four_bryce3_store.protection == True:
             m "Bryce extended his tongue, slathering a few wet licks over my condom-wrapped length."

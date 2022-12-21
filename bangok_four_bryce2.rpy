@@ -244,6 +244,8 @@ label bangok_four_bryce2_explorepaw:
         c "Alright. Other topics..."
         jump bangok_four_bryce2_explorepaw_end
 
+    $ bangok_four_malepartners += 1
+
     Br laugh bangok foreleg flip "Ah, heck it."
     Br smirk bangok foreleg flip "I've got two more feet that need attention, huh?"
 

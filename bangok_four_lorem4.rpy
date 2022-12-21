@@ -195,6 +195,7 @@ label bangok_four_lorem4_maleplayer:
     show lorem think bangok peek with dissolve
     $ renpy.pause (0.5)
     Lo "You're quite a lot larger than I am. I don't want to be crushed, so do you mind sitting down so I could climb on and... ride?"
+    $ bangok_four_femalepartners += 1
     menu:
         "Sounds good to me.":
             label bangok_four_lorem4_maleplayer_positionselect_ride:

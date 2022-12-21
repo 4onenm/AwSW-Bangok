@@ -121,14 +121,18 @@ label bangok_four_xipsum2_ipsum_sharing3:
             m "Then the first condom-wrapped cock nestled into my folds and thrust, faster than I could deal with."
         else:
             m "Then the first cock nestled into my folds and thrust, faster than I could deal with."
+        $ bangok_four_malepartners += 1
         play soundloop "fx/bangok_poundofsalt.ogg"
         m "Another joined it at my ass, and I only barely got my hand through the waistband to poke at the head, blocking its entry."
+        $ bangok_four_malepartners += 1
     else:
         m "Then I felt scaly folds wrapping around my tip, before my shaft was shoved somewhere hard enough it hurt at the base of my length."
+        $ bangok_four_femalepartners += 1
         if bangok_four_xipsum2_store.protection == True:
             m "A condom-wrapped cock prodded at my ass, and I only barely got my hand through the waistband to poke at the head, blocking its entry."
         else:
             m "A cock prodded at my ass, and I only barely got my hand through the waistband to poke at the head, blocking its entry."
+        $ bangok_four_malepartners += 1
 
     play sound "fx/tableslap.wav"
     with vpunch
@@ -164,11 +168,12 @@ label bangok_four_xipsum2_ipsum_sharing3:
         else:
             m "Then the one in my cooch began to twitch, and I felt warm, heavy ropes of cum jet over my inner walls."
             if persistent.bangok_knot == True:
-                m "A bulbous knot of flesh pressed at my outer folds, spreading my entrance just slightly further as the male injected his cum as deep as he could go."
+                m "A bulbous knot of flesh pressed at my outer folds, spreading my entrance just slightly further as the male injected his cum as deep as he could go without tying with me."
             if persistent.bangok_inflation == True:
                 m "When the cock pulled out, a thick pool of cum rested against my innermost gate. Then another, larger cock took its place."
             else:
                 m "The cock pulled out, leaving my passage slightly damper and stickier. Then another, larger cock took its place."
+        $ bangok_four_malepartners += 1
     else:
         m "Juices flowed around my dick, dribbling down around my balls as the cunt on the far side squeezed and massaged me."
         m "I thrust, uselessly, from the simultaneous fucking of my ass and shaft. I couldn't force myself any further into what was already attached to my hips."
@@ -176,6 +181,7 @@ label bangok_four_xipsum2_ipsum_sharing3:
     if bangok_four_xipsum2_store.protection == True:
         m "Finally, the one in my ass stopped, pulses of his load travelling up his length to fill his condom's reservoir."
         m "I sighed as it slid out, taking its load with it, only to then feel a new head prodding at my weakened sphincter."
+        $ bangok_four_malepartners += 1
         c "Ah-h!"
         m "This one stretched me wider. As it sank in, I realized it was going deeper, too."
     else:
@@ -183,6 +189,7 @@ label bangok_four_xipsum2_ipsum_sharing3:
         if persistent.bangok_inflation == True:
             m "Pulse after pulse spurt into me, leaving my ass feeling heavy and full."
         m "I sighed as it slid out, feeling its load settle inside me, only to then feel a new head prodding at my weakened sphincter."
+        $ bangok_four_malepartners += 1
         c "Ah-h!"
         m "This one stretched me wider, scraping off my inner walls the seed of its predecessor. As it sank in, I realized it was going deeper, too."
 
@@ -225,6 +232,7 @@ label bangok_four_xipsum2_ipsum_sharing3:
                 m "There was so much, my vagina alone couldn't handle it. As they sank in one last thrust, still releasing pulse after pulse, I gasped as it sprayed through my innermost gate, flowing into and staining my womb."
             m "Then, finished, it slid out, leaving my pussy parted and dripping."
         m "The next cockhead at my entrance, I could feel immediately, was barely going to fit if it could do so at all."
+        $ bangok_four_malepartners += 1
         c "W-W-Wait--"
         m "My hands snapped to my crotch but, without my spine to guide my hand, I couldn't get under the waistband in time."
         stop soundloop fadeout 2.5
@@ -292,6 +300,7 @@ label bangok_four_xipsum2_ipsum_sharing3:
         m "I wasn't done, though."
 
         m "The moment my holes were free again, I felt a smaller cock nestling in my gaping asshole, followed by a second in my loosened canal."
+        $ bangok_four_malepartners += 1
         if bangok_four_xipsum2_store.protection == True:
             m "Unlike the others, these were just using, rather than abusing, my holes. I sighed with relief, rubbing my belly as I enjoyed this final, gentle double-fuck."
         else:
@@ -367,6 +376,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary:
         m "I realized, with a start, that my ass was plugged with something, and my penis was surrounded by warm, shifting flesh!"
     else:
         m "I realized, with a start, that I could feel a cock in my ass, and another in my pussy!"
+    $ bangok_four_malepartners += 1
     m "I scrabbled at the waistband, trying to pull the briefs down, only to realize they had been glued in place in my sleep."
     if bangok_four_playerhasdick == False:
         m "Worse still, something blocked my urethra, meaning even if I did want to piss in the magic briefs, I couldn't."
@@ -482,6 +492,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary:
     c "Ip--!"
     m "(Click.)"
 
+    $ bangok_four_malepartners += 1
     if persistent.bangok_watersports == True:
         if bangok_four_playerhasdick == True:
             m "Then I felt another cock, slightly larger than his, prodding at my pucker."
@@ -580,6 +591,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
         m "Then I felt this stranger's cockhead at my front entrance."
         m "I grunted as it entered, stretching my entrance slightly more than a human's would."
         m "Then the cock kept coming, sinking in inch by maddenning inch, until until a horizontal slit between hard plates rested against my folds."
+    $ bangok_four_malepartners += 1
 
     if persistent.bangok_watersports == True:
         c "(Oh no. I think this guy's not just interested in pissing and leaving.)"
@@ -606,6 +618,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
         $ renpy.pause (1.2)
         m "My silent question was answered a half dozen seconds later, as Ipsum's cock plugging my asshole was dragged out."
         m "Then a {i}much{/i} larger cockhead took its place at my rear."
+    $ bangok_four_malepartners += 1
     c "W-Wait! N-No! That'll never fit! That--"
 
     if persistent.bangok_watersports == True:
@@ -795,12 +808,14 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
         $ renpy.pause (1.0)
         m "A few seconds passed."
         $ renpy.pause (1.0)
+        $ bangok_four_malepartners += 1
         m "Then I finally felt it fully removed, and a new cock at my ass."
         play sound ["fx/bangok_poundofsalt.ogg","fx/bangok_poundofsalt.ogg"] fadein 0.5
         m "It shoved through my weakened muscle fast and hard, jumping straight to fucking me."
         stop sound fadeout 1.0
         m "I didn't have long to enjoy the sensation, though, as after just ten thrusts, it stopped, then pulled out."
         play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/bangok_poundofsalt.ogg","fx/bangok_poundofsalt.ogg"] fadein 0.5
+        $ bangok_four_malepartners += 1
         m "Another, different, slightly larger cock pressed to my hole, then followed the pattern of the first, pumping my rosebud with ten thrusts."
         stop sound fadeout 1.0
         m "Then it, too, stopped and pulled out."
@@ -852,6 +867,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
         m "A few seconds passed."
         $ renpy.pause (1.0)
         m "Then the cock in my ass was removed fully, and two new dragons began lining up with my holes."
+        $ bangok_four_malepartners += 2
         
         $ renpy.pause (0.5)
         play soundloop "fx/bangok_poundofsalt.ogg" fadein 0.5
