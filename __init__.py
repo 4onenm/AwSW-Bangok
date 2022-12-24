@@ -526,7 +526,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2022-12-23-child_of_7e910a8"
+    version = "2022-12-23-child_of_33c84d1"
     author = "4onen"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]

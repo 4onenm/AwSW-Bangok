@@ -69,6 +69,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 
 + `xsebastian` dialogue and blocking script contributed by `Dolkar` (Discord).
 + `remyc4postsections` inspired and written by `saiginth renginalti` (Discord).
++ `anna2 strapon` written by `Anonymous By Request`
 + `anna4` written and coded by `An Anonymous contributor`
 + `bryce2` happy birthday `Kosmos` (Discord).
 + `adine1` written by `Jackwolf` (Discord).
