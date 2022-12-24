@@ -35,11 +35,13 @@ Currently, there are lewd scenes released for Adine, Anna, Bryce, Damion, Sebast
 + xSebastian: After the skip point in his one date, say it's pretty cold and you could use a blanket.
 </details>
 <br/>
-In-development scenes (accessible via a menu flag and full of bugs) include: Remy, Maverick, more Lorem and more Ipsum.
+In-development scenes (accessible via a menu flag and full of bugs) include: Remy, Maverick, more Lorem and more Ipsum, and some Adine teasing.
 
 <details>
 <summary>In-Development scene access guides</summary>
 
+
++ Adine1: When the player brings up Truth or Dare, think lascivious thoughts.
 
 + Remy c4postsections: Complete Remy's first, second, and third scenes. Then *do not* deliver the PDA to him in the chapter 4 investigation. You can suggest to Sebastian when you speak with him that you could deliver the PDA, which will trigger the scene.
 
@@ -69,6 +71,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `remyc4postsections` inspired and written by `saiginth renginalti` (Discord).
 + `anna4` written and coded by `An Anonymous contributor`
 + `bryce2` happy birthday `Kosmos` (Discord).
++ `adine1` written by `Jackwolf` (Discord).
 + `adine4` written by `Jackwolf` (Discord).
 
 ### Resource credits:

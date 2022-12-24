@@ -11,6 +11,13 @@ def make_dev(cond):
     return '('+cond+') and (persistent.bangok_dev == True)'
 
 
+def adine1():
+    ( ml.find_label('nextsc')
+        .search_say("Truth or dare.")
+        .hook_to('bangok_four_adine1', condition=make_dev('persistent.nsfwtoggle == True'))
+    )
+
+
 def adine4():
     ( ml.find_label('a4shower')
         .search_say("Is that... are you purring?")
@@ -395,6 +402,7 @@ def modsettings_firstboot():
 
 
 def link_scenes():
+    adine1()
     adine4()
     anna12()
     anna4()
@@ -518,7 +526,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2022-12-06-child_of_f0328a3"
+    version = "2022-12-23-child_of_7e910a8"
     author = "4onen"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
