@@ -18,6 +18,20 @@ label bangok_four_adine1_abruptexit:
     $ adinescenesfinished = 1
     jump _mod_fixjmp
 
+label bangok_four_adine1_ToD_refused:
+    Ad think b "Honestly I kinda hate you. Is it still raining outside?"
+    m "The storm hadn't stopped, though it had lessened slightly."
+    c "Not really, so you should stay--"
+    Ad disappoint b "Nah, good enough. I'll be leaving now."
+    hide adine with dissolve
+    $ renpy.pause (0.3)
+    play sound "fx/door/doorclose3.wav"
+    m "Before I could get another word in, she was gone, flying through a thin sheet of rain."
+
+    $ adinestatus = "bad"
+    $ adinescenesfinished = 1
+    jump _mod_fixjmp
+
 label bangok_four_adine1:
     m "As I brought the topic up, I had in mind some..."
     $ headgear = True
@@ -172,12 +186,11 @@ label bangok_four_adine1:
                     $ renpy.pause (0.5)
                     Ad giggle b "Well at least you're honest, pervert."
                 "Yes, and it's very fat.":
-                    $ adinemood -= 1
+                    $ adinemood -= 2
                     c "I have, and it's one of the fattest dragon asses I've seen."
                     $ renpy.pause (0.5)
                     Ad sad "Wh-what? Why would you-"
                     c "No no that's not a bad thing! I like it fat!"
-                    call bangok_four_adine1_angercheck
                     Ad sad "I- let's just move on."
                 "Nope.":
                     $ renpy.pause (0.5)
@@ -199,9 +212,9 @@ label bangok_four_adine1:
             c "Not much about them honestly. Humans are more agile, and I just really like how they look."
             Ad "Fair enough, I guess you'd prefer your own species. Still, some dragons have wings to fly, right?"
             c "Yeah, but I always found wings a bit ugly, they remind me of bats."
-            call bangok_four_adine1_angercheck
             Ad sad "Geez, you didn't have to say it like that."
             c "Shit, right, I'm sorry, I didn't-"
+            call bangok_four_adine1_angercheck
             Ad sad "it's your turn, right?"
             c "Yeah, it is."
 
@@ -209,17 +222,17 @@ label bangok_four_adine1:
     show adine think b with dissolve
 
     menu:
-        "If I asked you to fuck me, would you?":
+        "If I asked you to fuck me would you?":
             $ renpy.pause (0.5)
             if adinemood >= 2:
                 show adine giggle b with dissolve
             else:
                 show adine annoyed b with dissolve
-            Ad "That's a very good question. Which you won't get an answer to, I'll take a dare on this one."
+            Ad "That's a very good question. Which you won't get an answer to; I'll take a dare on this one."
             call .dare_table_2
         "What is the highest you've flown?":
-            Ad think b "I'm not sure. High, I think. Turns out you lose confidence quickly when everything below you looks like an ant farm and have nothing to focus on except how fast you can drop."
-            c "Imagine that. I can't see why anyone would be scared of terminal velocity."
+            Ad think b "I'm not sure. Pretty high, I think. Turns out you lose confidence quickly when everything below you looks like an ant farm and have nothing to focus on except how fast you can drop."
+            c "Imagine that, I can't see why anyone would be scared of terminal velocity."
             Ad giggle b "You just reminded me of how hard it can be to convey tone through text. I've had to re-read lines in a few of my books because the author didn't tell me a character was being sarcastic."
         "Have you ever tried sleeping upside down?":
             $ adinemood += 1
@@ -234,7 +247,7 @@ label bangok_four_adine1:
             Ad think b "Less messy than doing it on the ground, but it just didn't feel right. Like \"Hey you should be doing this down there\" and all."
             c "Yeah, fair enough."
 
-    Ad normal b "Anyways, from the dragons you've met here so far, who do you fancy the most?"
+    Ad normal b "Okay, from the dragons you've met here so far, who do you fancy the most?"
 
     menu:
         "You":
@@ -246,31 +259,31 @@ label bangok_four_adine1:
             $ adinemood += 1
             Ad think b "Him huh? Thanks actually. He needs someone to look out for him."
             c "What makes you say that exactly?"
-            Ad normal b "Nothing in particular. I'm just worried about him is all."
+            Ad normal b "Nothing in particular, I'm just worried about him is all."
         "Bryce" if brycescenesfinished > 0 and brycestatus in ["neutral","good"] and not brycedead:
             Ad giggle b "He really is quite the pick, huh?"
             c "So strong, so loyal, and so charming."
             Ad normal b "And with the strongest liver for miles, I hear." ## Did you do that on purpose? "Miles"?
         "Anna" if annascenesfinished > 0 and annastatus in ["neutral","good"] and not annadead:
-            Ad annoyed b "I don't know what you see in her, if I'm being honest."
+            $ adinemood -= 1
+            Ad annoyed b "I don't know what you see in her if I'm being honest."
             c "What do you mean?"
             Ad think b "That bitch from the other day? The one who was rude to everyone at every possible turn?"
             c "I know, she's rough around the edges, but I just think there's more to her than that."
             Ad frustrated b "What's that supposed to-- {w=0.5}{nw}"
             Ad annoyed b "What's that supposed to-- {fast}Nevermind. I don't want to talk about this."
         "Lorem" if loremscenesfinished > 0 and loremstatus in ["neutral","good"] and not loremdead:
-            $ adinemood -= 1
             Ad think b "Sorry, I don't know that name. Who is it?"
             c "Cute delivery flyer, blue scales."
             Ad "Actually I think I've run into him a few times, never got his name though."
         "Too early to tell":
             Ad normal b "Yeah, that makes sense. You haven't been here that long."
             c "I just want to wait until it feels right."
-            Ad "Honestly, I feel the same way. You can't really force these things."
+            Ad think b "Honestly, I feel the same way. You can't really force these things."
         "Take dare":
             Ad giggle b "About time!"
             Ad think b "Hmm, what am I going to do with you?"
-            if adinemood < 2:
+            if adinemood < 3:
                 c "Anything you want."
                 Ad disappoint b "I really have no clue"
                 c "Should put a pin in this?"
@@ -289,15 +302,16 @@ label bangok_four_adine1:
                         Ad sad b "O-oh! Sorry, I didn't mean to. I mean, I didn't know, it's just--"
                         menu:
                             "Strip naked.":
-                                m "I start removing my clothes, despite Adine's newfound focus. She blushes, seeming to enjoy the show."
+                                $ adinemood += 1
+                                m "I start removing my clothes, ignoring Adine's sudden silence. She blushed, seeming to enjoy the show."
                                 Ad giggle b "Thanks! I think. Jeez, now I feel like I owe you something."
                                 c "Maybe I'll call it in later. Or maybe your next dare's gonna sting."
                                 Ad normal b "Don't push me too hard! Thanks though. I really was curious about that."
                             "Comfort her.":
-                                c "Don't worry. I doubt you've had many humans telling you how important clothes are."
-                                Ad giggle b "Right? I just wanted to know what you looked like. I didn't know how forward I sounded!"
+                                c "Don't worry, I doubt you've had many humans telling you how important clothes are."
+                                Ad giggle b "Right? I just wanted to know what you looked like. I didn't know how forward I sounded."
                                 c "Any idea what your backup dare is?"
-                                Ad think b "Sadly no. That was all I had."
+                                Ad think b "Sadly no, that was all I had."
                                 c "Let's put a pin in that for later then."
 
     menu:
@@ -400,21 +414,22 @@ label bangok_four_adine1:
                 play sound "fx/drmg.wav"
                 $ renpy.pause(4.0)
                 show adine normal b with dissolve
-                Ad "So, should I just take a bite out of this one?"
-                c "That's your dare."
-                Ad "If you say so..."
+                m "Adine left to the pantry and came back with a potato in hand."
+                Ad "Ugh, you couldn't have chosen a more mildly annoying dare."
+                c "That's the fun of this, eh?"
+                Ad "I swear if I get a good idea I'm getting revenge."
                 stop music fadeout 1.0
                 show black with fade
                 play sound "fx/bite.wav"
                 $ renpy.pause(1.0)
-                c "(She didn't even peel it or anything...)"
+                m "Adine put the potato in her mouth and took a chomp. With how small it was compared to her jaw, half of it was gone in a single bite, though the shape of her face made it hard to fit in."
+                m "Adine chewed the thing rapidly, evidently not enjoying the sensation of the bitter, starchy tuber."
+                m "After a bit, she swallowed it, then put the other half in her mouth, downing it more quickly than the other."
                 show adine normal b
                 hide black
                 with fade
                 play music "mx/serene.ogg"
-                Ad "There you go."
-                c "..."
-                c "I see."
+                Ad "There you go. I'll be taking my turn now, thank you very much."
             "Slide two claws into your vagina.":
                 $ adinemood -= 1
                 Ad annoyed b "You want me to masturbate?"
@@ -465,7 +480,7 @@ label bangok_four_adine1:
         c "Sorry. Still friends?"
         Ad "We'll see. I'll leave you my number."
         hide adine with dissolve
-        m "Adine scribbled some numbers on a piece of scrap paer, then left without saying anything else." 
+        m "Adine scribbled some numbers on a piece of scrap paper, then left without saying anything else." 
         stop music fadeout 2.0
         m "On her way out though, she looked back and shot me an exasperated look before lifting her tail, showing me her heavenly rear in full."
         play sound "fx/door/doorclose3.wav"
@@ -488,7 +503,7 @@ label bangok_four_adine1:
         c "I most certainly am, thank you."
         Ad normal b "Good, because it looks like the rain has stopped, which means it's time for me to go."
         show adine normal b with dissolve
-        m "Adine wrote a string of numbers on a scrap paper and slid it to me."
+        m "Adine wrote a string of numbers on a scrap of paper and slid it to me."
         Ad "Here, no need to order food if you want to stare at me again."
         hide adine with dissolve
         play sound "fx/door/doorclose3.wav"
@@ -500,7 +515,7 @@ label bangok_four_adine1:
         m "We exchanged goodbyes, and just like that she left the building, leaving me aroused."
         jump _mod_fixjmp
 
-    label .best_ending:
+    label .good_ending:
         Ad giggle b "My, such a forward demand. I like it."
         c "So?"
         hide adine with dissolve
@@ -519,6 +534,56 @@ label bangok_four_adine1:
         m "After exchanging goodbyes with me, Adine started heading out the door. Though, on her way out, she moved her tail out of the way again and smirked back at me, teasing me further."
         play sound "fx/door/doorclose3.wav"
         $ renpy.pause(2.0)
+        $ persistent.adine1skip = True
+        $ persistent.headgear = headgear
+        $ adinestatus = "good"
+        $ adinescenesfinished = 1
+        jump _mod_fixjmp
+    
+    label .superb_ending:
+        Ad think b "You really are horny, aren't you?"
+        c "More than a little."
+        Ad giggle b "You and me both, you really got me worked up."
+        c "So?"
+        Ad normal b "I'll do you one better. Lay down and let me do my thing, no effort needed on your part."
+        ## Implement the eject sequence here for if the player doesn't want to fuck Adine, unless the opening counted as the eject sequence.
+        stop music fadeout 2.0
+        play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/undress.ogg"]
+        show black with dissolve
+        $ renpy.pause(0.4)
+        m "Without thinking about it, I obediently got on my back and waited patiently for Adine to approach."
+        m "As promised, she offered more than just flashing me her rear. She sat on my chest and looked down into my eyes, her wet slit rubbing against me."
+        m "As our gazes met, and a blush covered her face, she spoke in a low, gentle tone."
+        Ad think b "So, how good are you with your tongue?"
+        c "Good enough."
+        c "Why, thinking of teaching me what dragon tastes like?"
+        Ad giggle b "You owe me that much for getting me worked up like this."
+        m "She stood up and turned around. I had plenty of chance to protest if I so chose, but I opted not to. Instead, I closed my eyes and opened my arms as she plopped her rump on my nose, her soaking wet dragon snatch within reach of my tongue."
+        m "I didn't hesitate to hug her rump, letting my tongue out to lap at her."
+        Ad giggle b "Ooooh yeah, just like that [player_name]."
+        m "Her lustful moans repeated the sentiment as I gorged myself on her fluids."
+        m "I felt my own arousal grow from the intoxicating mix of proximity and scent."
+        Ad think b "I hope you're enjoying yourself-- Nnf... As much as I'm enjoying you."
+        m "I couldn't respond through the dragon ass in my face, but a couple of reassuring pats on her hips gave all the assurance needed."
+        m "After a few moments passing all too soon, Adine began to buck her hips on impulse, seemingly close to orgasm."
+        play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/varagrowl.ogg"]
+        m "And after a few moments more, she came, splashing my tongue with her juices as I continued licking."
+        m "As she started to wind down, she slowly rolled off of me, letting me sit up and meet her gaze."
+        $ renpy.pause (0.3)
+        play sound "fx/undress.ogg"
+        hide black
+        show adine giggle b
+        with dissolvemed
+        Ad "Thanks, I really needed that."
+        c "No problem. Now, about my turn?"
+        Ad normal b "Another time. It looks like the rain's stopped."
+        c "You owe me one, understand?"
+        Ad giggle b "Yeah, agreed. Here's my personal number. Let's meet again."
+        m "Adine scribbled her number down on some scrap paper and left it on the table."
+        hide adine with dissolve
+        play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/door/doorclose3.wav"]
+        m "After exchanging some final goodbyes, she went out the door, leaving me horny with no dragon to satisfy me."
+        $ renpy.pause(1.0)
         $ persistent.adine1skip = True
         $ persistent.headgear = headgear
         $ adinestatus = "good"
