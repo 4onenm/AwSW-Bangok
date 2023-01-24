@@ -434,7 +434,7 @@ label bangok_four_adine1:
                 $ adinemood -= 1
                 Ad annoyed b "You want me to masturbate?"
                 c "Well, not completely."
-                call angercheck
+                call bangok_four_adine1_angercheck
                 Ad disappoint b "Alright, give me a moment. I'm not used to having an audience."
                 stop music fadeout 1.0
                 show black with fade
@@ -470,6 +470,8 @@ label bangok_four_adine1:
             jump .poor_ending
         elif adinemood < 5:
             jump .med_ending
+        elif adinemood < 7:
+            jump .good_ending
         else:
             jump .best_ending
 
@@ -540,7 +542,7 @@ label bangok_four_adine1:
         $ adinescenesfinished = 1
         jump _mod_fixjmp
     
-    label .superb_ending:
+    label .best_ending:
         Ad think b "You really are horny, aren't you?"
         c "More than a little."
         Ad giggle b "You and me both, you really got me worked up."
