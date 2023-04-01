@@ -15,7 +15,7 @@ label bangok_four_annaxdamion:
     $ renpy.pause(0.8)
     c "(What is that...?)"
 
-    if (persistent.bangok_four_bangnokay or bangok_four_bangnokay):
+    if (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
         stop soundloop fadeout 1.0
         play sound "fx/steps/clean2.wav"
         show black with dissolvemed

@@ -42,7 +42,7 @@ label bangok_four_bryce3_replaylabel:
     show maverick normal behind bryce at Position(xpos=0.825)
     with Fade(0.5,0.5,1.0)
     play music "mx/hydrangea.ogg" fadein 2.0
-    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
         jump bangok_four_bangnokay_kill_replay
     jump bangok_four_bryce3_bottom_choice
 
@@ -54,7 +54,7 @@ label bangok_four_bryce3_skipmenu:
     menu:
         "Yes. Join the team-building exercise.":
             play sound "fx/system3.wav"
-            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
                 s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
             else:
                 s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
@@ -76,7 +76,7 @@ label bangok_four_bryce3_skipmenu:
 
 
 label bangok_four_bryce3_intro:
-    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
         c "Are you sure you don't want to stay for the best part, Zhong?"
         Br brow "What best part?"
         Sb disapproval flip "What are you talking about?"

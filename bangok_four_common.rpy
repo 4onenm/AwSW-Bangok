@@ -24,6 +24,35 @@ init python in bangok_four_common:
     PersistentConditionalFlip = md.PersistentConditionalFlip
     RefHFlip = md.RefHFlip
 
+    def bangnokay_quest_advance(bangnokay_four_quest):
+        if not bangnokay_four_quest:
+            if bangnokay_four_quest < 6:
+                bangnokay_four_quest += 1
+            else:
+                bangnokay_four_quest = 0
+                persistent.bangok_four_bangnokay = not persistent.bangok_four_bangnokay
+        else:
+            bangnokay_four_quest = 1
+        return bangnokay_four_quest
+
+
+    @renpy.pure
+    def bangnokay_quest_text(stage):
+        if not stage:
+            return _("Bang? No, Kay Mod Settings")
+        if stage < 2:
+            return _("No Bang, Kay?")
+        if stage < 3:
+            return _("We won't bang, okay?")
+        if stage < 4:
+            return _("Wait, no, no bang.")
+        if stage < 5:
+            return _("You're trying to turn this off?")
+        if stage < 6:
+            return _("But the foolish spirit!")
+        return _("Okay, fine. Next click.")
+
+
 
 init:
     define bangok_four_bangnokay = True
@@ -42,23 +71,27 @@ init:
         hover_sound "se/sounds/select.ogg"
 
     screen bangok_modsettings():
+        default bangok_four_bangnokay_quest=0
         tag smallscreen2
         modal True
         window id "bangok_modsettings" at popup2:
             style "smallwindow_big2"
-            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
-                textbutton "Bang? No, Kay Mod Settings":
+            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+                textbutton bangok_four_common.bangnokay_quest_text(bangok_four_bangnokay_quest):
                     yalign 0.06
                     xalign 0.5
                     text_size 44
-                    action SetField(persistent, 'bangok_four_bangnokay', False)
+                    action [
+                        SetField(persistent, 'bangok_four_bangnokay', (bangok_four_bangnokay_quest==6)!=bool(persistent.bangok_four_bangnokay)),
+                        SetScreenVariable('bangok_four_bangnokay_quest', ((bangok_four_bangnokay_quest+1)%7)),
+                    ]
                     style "bangok_four_switch"
             else:
                 textbutton "BangOk Mod Settings":
                     yalign 0.06
                     xalign 0.5
                     text_size 44
-                    action SetField(persistent, 'bangok_four_bangnokay', True)
+                    action MTSTogglePersistentBool('bangok_four_bangnokay')
                     style "bangok_four_switch"
 
 
@@ -71,7 +104,7 @@ init:
             else:
                 vbox:
                     align (0.5, 0.3)
-                    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
                         text "Cute Buttons:" xalign 0.5
                     else:
                         text "Fetishes:" xalign 0.5
@@ -79,18 +112,18 @@ init:
                             xalign 0.5
                             size 32
 
-                    grid ((bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay)+1)//2) 2:
+                    grid ((bangok_four_common.bangok_four.fetish_count(bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay))+1)//2) 2:
                         align (0.5,0.5)
                         transpose True
                         spacing 10
-                        for fetish in bangok_four_common.bangok_four.fetish_iter(bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                        for fetish in bangok_four_common.bangok_four.fetish_iter(bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                             vbox:
-                                add fetish.get_switch(bangok_four_bangnokay or persistent.bangok_four_bangnokay)
-                                showif bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+                                add fetish.get_switch(bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay))
+                                showif bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
                                     text "[fetish.clean_label]"
-                                showif not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                                showif not (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                                     text "[fetish.label]"
-                        if bangok_four_common.bangok_four.fetish_count(bangok_four_bangnokay or persistent.bangok_four_bangnokay) % 2 == 1:
+                        if bangok_four_common.bangok_four.fetish_count(bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)) % 2 == 1:
                             null
 
                 hbox:
@@ -107,13 +140,13 @@ init:
                         focus_mask None
                     text "Dangerous: Enable In-Development Scenes"
 
-                showif persistent.bangok_dev == True and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+                showif persistent.bangok_dev == True and not (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                     text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes.":
                         yalign 0.875
                         xalign 0.5
                         size 40
 
-            showif persistent.bangok_dev == True and main_menu and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+            showif persistent.bangok_dev == True and main_menu and not (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                 textbutton "[[Replay first-boot experience.]":
                     xalign 0.5 
                     yalign 1.1

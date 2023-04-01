@@ -33,6 +33,9 @@ label bangok_four_adine1_ToD_refused:
     jump _mod_fixjmp
 
 label bangok_four_adine1:
+    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+        jump bangok_four_adine1_return
+
     m "As I brought the topic up, I had in mind some..."
     $ headgear = True
     menu:

@@ -34,7 +34,7 @@ label bangok_four_anna4_replay_start:
     show anna smirk
     with dissolvemed
 
-    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
         jump bangok_four_bangnokay_kill_replay
 
     jump bangok_anon_anna4_start
@@ -52,7 +52,7 @@ s "Watch BangOk scene or skip to end?"
 menu:
     "Yes. I'd like to lewd Anna":
         play sound "fx/system3.wav"
-        if (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+        if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
             s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
             scene black with dissolvemed
             python:

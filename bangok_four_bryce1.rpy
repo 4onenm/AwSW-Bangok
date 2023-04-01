@@ -26,7 +26,7 @@ label bangok_four_bryce1_skipmenu:
     menu:
         "Yes. I would like to lewd Bryce.":
             play sound "fx/system3.wav"
-            if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
                 s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
             else:
                 s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
@@ -214,7 +214,7 @@ label bangok_four_bryce1_poke:
             c "On humans it kinda hangs out. I was just looking for..."
             Br "..."
             c "..."
-            if brycemood > 4 and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+            if brycemood > 4 and not (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                 Br "If I showed you, would you be interested in...{w=1.2}{nw}"
                 Br flirty "If I showed you, would you be interested in{fast} trying it out?"
                 menu:
@@ -241,7 +241,7 @@ label bangok_four_bryce1_poke:
                         Br normal "Thanks."
                         jump bangok_four_bryce1_nevermind
         "What you think.":
-            if brycemood < 6 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+            if brycemood < 6 or (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                 Br stern "Then you should leave."
                 c "..."
                 Br "Now."
@@ -263,14 +263,14 @@ label bangok_four_bryce1_poke:
             $ renpy.pause(0.8)
             play sound "fx/tableslap.wav"
             Br laugh "That works, I suppose."
-            if brycemood < 4 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+            if brycemood < 4 or (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                 show bryce stern with dissolve
             else:
                 show bryce smirk with dissolve
             Br "So, what, is that normal among humans?"
             c "I mean, we'd have clothes protecting it."
             Br brow "Right, all your layers."
-            if brycemood < 6 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+            if brycemood < 6 or (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                 Br stern "Well, I need to get home, you need to get home, let's just... focus on that."
                 c "I'll help you walk home."
                 $ renpy.pause(0.5)
@@ -321,7 +321,7 @@ label bangok_four_bryce1_apartment:
             c "You're drunk. I'm drunk. And you're... very attractive."
             c "What do you say?"
             $ renpy.pause (0.4)
-            if brycemood < 5 or (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+            if brycemood < 5 or (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
                 play sound "fx/cartslide.ogg"
                 hide bryce with dissolve
                 m "By the time I finished asking the question, Bryce was already fast asleep on his couch."
@@ -343,7 +343,7 @@ label bangok_four_bryce1_apartment:
         show bryce flirty dk with dissolve
 
     play sound "fx/undress.ogg"
-    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
         $ renpy.pause(0.8)
         jump bangok_four_bangnokay_kill_replay
     m "I struggled out of my clothes as fast as my lust-drunk state would allow."

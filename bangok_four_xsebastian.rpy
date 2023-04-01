@@ -56,7 +56,7 @@ label bangok_four_xsebastian_path1:
     Sb "D-Do you really want to...?"
     c "What can I say? You're an attractive dragon."
     $ renpy.pause(0.6)
-    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
         jump bangok_four_xsebastian_badnight
     m "He fell silent for a long moment. Then I felt something prod my butt through my pants."
     Sb "I..."
@@ -527,7 +527,7 @@ label bangok_four_xsebastian_path2:
     m "Sebastian, behind me, was like a space heater, shifting a little in his sleep, squeezing me close."
     m "His arm had tugged up my shirt, and in the small of my back, something moist prodded me."
     menu:
-        "[[Touch it.]" if (not _in_replay) and not (bangok_four_bangnokay or persistent.bangok_four_bangnokay):
+        "[[Touch it.]" if (not _in_replay) and not (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
             $ bangok_four_xsebastian_badtouch = True
             m "I didn't need my biology degree to figure out what it was, after our conversation earlier in the evening."
             m "Curiosity getting the better of me, I reached back, gently taking hold of his member and prying it away from my back."
@@ -640,7 +640,7 @@ label bangok_four_xsebastian_path2_1_1:
     Sb shy b dk "B-But... wait, you are?"
     c "I mean, at the very least we should compare. Our cultural exchange has already gone this far."
     Sb drop b dk "I..."
-    if bangok_four_bangnokay or persistent.bangok_four_bangnokay:
+    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
         jump bangok_four_xsebastian_badnight
     Sb shy b dk "I have to admit I'm curious. O-Obviously I've never seen a human's..."
     play sound "fx/zip.ogg"
