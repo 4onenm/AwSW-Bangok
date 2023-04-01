@@ -26,7 +26,7 @@ init python in bangok_four_common:
 
 
 init:
-    define bangok_four_bangnokay = False
+    define bangok_four_bangnokay = True
 
     # Settings menu
     style bangok_four_switch is image_button:
