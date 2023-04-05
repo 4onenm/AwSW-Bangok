@@ -4068,7 +4068,42 @@ label bangok_four_bryce3_mctop_mcgoes_sloppy:
         ease 0.8 rotate 20 xpos 0.93 ypos 1.3
     with None
     m "Bryce folded his legs, "
-    
+
+
+label bangok_four_bryce3_mctop_mouth:
+    show bryce at center with ease
+    m "I wandered back around to Bryce's front, eyeing his grinning, scaly lips."
+    c "Think you can use that tongue for something fun?"
+    Br laugh "Can I?"
+    show bryce flirty with dissolve
+    show bryce at Position(ypos=1.3) with ease
+    show bryce at Position(ypos=1.5) with ease
+    if bangok_four_playerhasdick == True:
+        m "Bryce lowered his head to my waist height, his lips forming a small grin before his kiss slipped all my length into the warmth of his tongue."
+    else:
+        m "Bryce lowered his head to my waist height, his lips forming a small grin before meeting my lower pair."
+        m "I felt his tongue slither inside me in a delicious exploration, lapping up my leaking juices as I moaned."
+    c "Ohhh. That's... perfect."
+    $ renpy.pause (0.5)
+    m "I bent my head to his kiss against my private parts, leaning on him with unsteady legs."
+    $ renpy.pause (0.5)
+    if bangok_four_playerhasdick == True:
+        m "After a moment Bryce pulled away, leaving my saliva-slicked malehood bobbing in the cold teeth of the night air."
+    else:
+        m "After a moment Bryce pulled away, leaving my saliva-slicked nethers quivering in the chill breeze."
+    $ renpy.pause (0.5)
+    c "D-Did I say I was done?"
+    Br laugh "No, but I don't want to knock you over!"
+    c "Oh."
+    Br normal "Besides, you can get a lot more use out of me if I'm not worried about jabbing you with my teeth."
+    if getattr(store,'bangok_four_bryce1_oralspot',None) is not None:
+        Br brow "You remember last time."
+        if bangok_four_bryce3_store.mavfirst == False:
+            Mv angry "..."
+    m "I mused for a shivering moment, not wanting to give up being on top of Bryce's tongue, but not wanting to be bit into."
+    jump todo_out_of_content_bangok_four_bryce3
+
+
 
 label todo_out_of_content_bangok_four_bryce3:
     play sound "fx/system3.wav"
