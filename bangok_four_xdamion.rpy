@@ -14,14 +14,14 @@ label bangok_four_xdamion_replay_start:
     scene facin2 at Pan ((128, 250), (128, 250), 0.0)
     show damion face
     with fade
-    if (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
+    if (bangok_four_common.bangnokay.check()):
         jump bangok_four_bangnokay_kill_replay
     jump bangok_four_xdamion_replay_merge
 
 label bangok_four_xdamion:
     c "[player_name], ambassador from humanity to dragonkind."
 
-    if (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
+    if (bangok_four_common.bangnokay.check()):
         Dm arrogant "Tchk, of course. Immediately with a big fancy title. This whole thing is so blown out of proportion, it makes me wonder how many coffees you had to deliver to be the one coming here."
         c "Hey, I'm nobody's suckup."
         Dm "You might look better doing some of that."

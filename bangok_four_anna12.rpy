@@ -33,7 +33,7 @@ label bangok_four_anna1_skipmenu:
     s "Bet with Anna for sex?"
     menu:
         "Yes. Bet with Anna for sex.":
-            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+            if bangok_four_common.bangnokay.check():
                 play sound "fx/system3.wav"
                 s "Oh, I'm afraid that isn't on the table. Better luck another time."
             else:
@@ -50,7 +50,7 @@ label bangok_four_anna1_winmenu:
             jump bangok_four_anna1_winmenu_return
         "Sex.":
             c "Let's say if I win{fast} you'll have sex with me."
-            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+            if bangok_four_common.bangnokay.check():
                 An disgust flip "What the fuck?"
                 An face flip "I don't know what it's like on your side of the portal, but you can't ask that kind of thing the first time you go for coffee with someone."
                 $ renpy.pause (0.5)
@@ -284,7 +284,7 @@ label bangok_four_anna2_romanticdate_unusualbutfun:
 
 label bangok_four_anna2_romanticdate_conclusion:
     if bangok_four_anna1_sexrequested == False:
-        if anna2mood > 4 and not (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
+        if anna2mood > 4 and not (bangok_four_common.bangnokay.check()):
             An sad c "I have to say, I'm surprised how well this evening went, considering."
             c "Well, I can't take all the credit."
             An normal c "You can take enough of it."
@@ -308,7 +308,7 @@ label bangok_four_anna2_romanticdate_conclusion:
                     An normal c "We have that saying too."
                     c "Well, we just ate, and your hunting prowess was quite the show..."
                     An face c "Was that really supposed to be a pickup line?"
-                    if anna2mood < 1 or (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
+                    if anna2mood < 1 or (bangok_four_common.bangnokay.check()):
                         c "You bet it was."
                         An disgust c "Fuck off."
                         An normal c "I agreed to a date, not anything more."
@@ -392,7 +392,7 @@ label bangok_four_anna2_apartment:
     show anna normal
     with dissolvemed
 
-    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if bangok_four_common.bangnokay.check():
         jump bangok_four_bangnokay_kill_replay
 
     if bangok_four_anna2.havestrapon == True:

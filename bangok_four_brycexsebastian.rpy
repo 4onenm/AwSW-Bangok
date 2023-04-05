@@ -8,7 +8,7 @@ label bangok_four_brycexsebastian:
     m "I returned to the police station, mulling over what had happened today in my head."
     play soundloop "fx/breathing.ogg" fadein 1.0
 
-    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if bangok_four_common.bangnokay.check():
         jump bangok_four_brycexsebastian_abort_merge
 
     m "Before I could enter Bryce's office, however, I heard the sound of heavy breathing from inside, along with quiet murmurs."

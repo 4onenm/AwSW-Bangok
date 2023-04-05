@@ -11,7 +11,7 @@ label bangok_four_adine4_shower_sceneselect:
 label bangok_four_adine4_shower_purring:
     stop soundloop fadeout 2.0
 
-    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if bangok_four_common.bangnokay.check():
         show adineshower at Pan ((00, 608), (400,0), 10.0) with None
         m "Suddenly, her expression changed as she looked over her shoulder."
         Ad think "Oh, are you done? You should take a step back if you don't want to get hit by the water."

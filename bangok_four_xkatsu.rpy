@@ -141,7 +141,7 @@ label bangok_four_xkatsu:
     stop soundloop fadeout 0.5
     Ka smile "That's enough."
     m "I set the scoop back inside, then shut the icebox."
-    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if bangok_four_common.bangnokay.check():
         jump bangok_four_xkatsu_wait
     Ka normal "Now, do you want to keep helping? Or do you want to wait in my sitting room for an hour?"
     m "I got the feeling that by \"helping\" I'd be a \"volunteer from his interested customer base.\""
@@ -155,7 +155,7 @@ label bangok_four_xkatsu_wait:
     $ bangok_four_xkatsu.unplayed = True
     $ renpy.pause(0.5)
     Ka exhausted "Ah."
-    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if bangok_four_common.bangnokay.check():
         Ka exhausted "Alright, good. Now go take a seat in my sitting room. Shouldn't be more than an hour."
         menu:
             "Can't I help?":
@@ -1480,20 +1480,20 @@ label bangok_four_xkatsu_ready:
     with dissolveslow
 
     if bangok_four_xkatsu.fill == 0:
-        if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+        if bangok_four_common.bangnokay.check():
             Ka exhausted "All done."
         else:
             Ka exhausted "It's not much. Would've been more with some more help."
         m "The buckets from before sat on the floor, along with a good amount of spilled crushed ice."
         m "The bottom half of one bucket was packed with what looked like a half pint of off-yellow, cream-substitute ice cream."
         menu:
-            "You made it in the bucket you came in?" if not (bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay)):
+            "You made it in the bucket you came in?" if not (bangok_four_common.bangnokay.check()):
                 Ka "It's my special seed ice cream. What did you expect? Some kind of rigorous machine purification? Pah!"
                 c "And why's it that nasty color?"
                 Ka "Mix-in ingredients to get the texture right. You'd know something about that if you'd stayed to help."
                 c "Ooo... kay."
             "Why's it that color?":
-                if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+                if bangok_four_common.bangnokay.check():
                     Ka "Mix-in ingredients to get the texture right. It's still what you'd expect."
                 else:
                     Ka "Mix-in ingredients to get the texture right. You'd know something about that if you'd stayed to help."

@@ -22,7 +22,7 @@ label bangok_four_bryce2_skipmenu:
     menu:
         "Yes. I would like to lewd Bryce's feet.":
             play sound "fx/system3.wav"
-            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+            if bangok_four_common.bangnokay.check():
                 s "Too bad.{cps=2}..{/cps}{w=1.0}{nw}"
             else:
                 s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
@@ -157,7 +157,7 @@ label bangok_four_bryce2_explorepaw:
     $ renpy.pause (0.5)
     Br brow flip "You know, I didn't invite you over just to let you give me massages. I'm supposed to be hosting. That means entertaining you, not the other way around."
     Br normal flip "I'm good on the massages if you are."
-    if persistent.nsfwtoggle or bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if persistent.nsfwtoggle and not bangok_four_common.bangnokay.check():
         menu:
             "Kiss his foot.":
                 $ renpy.pause (0.5)

@@ -61,7 +61,7 @@ label bangok_four_lorem4_feelbetter:
             $ renpy.pause (0.5)
             Lo "I don't..."
             $ renpy.pause (0.5)
-            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+            if bangok_four_common.bangnokay.check():
                 Lo relieved "[player_name], we just had a pizza party. Isn't it a little soon for a sleepover?"
                 c "What?"
                 c "I mean, that's not what I was suggesting..."

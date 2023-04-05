@@ -46,7 +46,7 @@ label bangok_four_xipsum_replay_start:
     scene black with dissolve
     play music "mx/snowflake.ogg" fadein 2.0
 
-    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if bangok_four_common.bangnokay.check():
         jump bangok_four_bangnokay_kill_replay
 
     call bangok_four_xipsum_gendercheck from bangok_four_xipsum_replay_start_gendercheck
@@ -59,7 +59,7 @@ label bangok_four_xipsum_lorem2_skipmenu:
     s "Would you take your clothes off for Ipsum?"
     menu:
         "Yes, and lewd him.":
-            if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+            if bangok_four_common.bangnokay.check():
                 play sound "fx/system3.wav"
                 s "I'm afraid that's not acceptable. Directing you to this scene's standard ending..."
             else:
@@ -101,7 +101,7 @@ label bangok_four_xipsum_takeemoff:
     Lo normal flip "If humans wear clothes like this, it's only appropriate to depict them as such."
     Ip think "Well [player_name], you did propose taking them off. What are the circumstances under which humans wear clothes versus not?"
     c "Exposing yourself around around other people is generally taboo, unless those other people are family or intended sexual partners."
-    if bool(bangok_four_bangnokay) != bool(persistent.bangok_four_bangnokay):
+    if bangok_four_common.bangnokay.check():
         Ip sad "What a shame."
         menu:
             "Yep.":
