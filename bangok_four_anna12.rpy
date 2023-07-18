@@ -22,11 +22,13 @@ init python in bangok_four_anna2:
     annacame = False
 
     tail = False
-    
+
     annacomment = ""
     doneoral = False
     fisting = False
-    
+
+    straponplayerreceiveoral = False
+
 
 label bangok_four_anna1_skipmenu:
     play sound "fx/system3.wav"
@@ -1968,17 +1970,23 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
         c "Pick first?"
         An smirk "Assume a position, human."
 
+    label .player_receiving_strapon_assume_position:
         menu:
-            "Get on your knees.":
-                show anna sad
-                show o2 at Pan((0, 350), (0, 350), 0.1)
+            "Get on your knees." if bangok_four_anna2.straponplayerreceiveoral == False:
+                $ bangok_four_anna2.straponplayerreceiveoral = True
+                show anna sad:
+                    ease 0.5 zoom 1.2
+                show o2 at Pan((0, 150), (0, 150), 0.1)
                 with ease
+                show anna sad:
+                    zoom 1.2
+                with None
                 m "As I got down and brought my face level with Anna's hips, I glanced up to see she had a somewhat confused, or perhaps thoughtful expression,{w=0.3}{nw}"
                 show anna smirk with dissolve
                 m "As I got down and brought my face level with Anna's hips, I glanced up to see she had a somewhat confused, or perhaps thoughtful expression, {fast}which was replaced by her usual bravado as quickly as I noticed it."
                 c "Is this alright?"
-                An "Oh it's fine, I was just thinking about the faux cum I made."
-                c "What about it?"
+                An "Oh it's fine, I was just thinking about something else."
+                c "What about?"
                 show anna face with dissolve
                 $ renpy.pause (0.3)
                 show anna smirk with dissolve
@@ -1990,27 +1998,100 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
                     m "Anna arched her back to angle the tip of her cock towards my face. As I placed my lips on her tip she pet my head with one of her claws."
                 An "If you need to come up for air give me a couple of taps alright?"
                 m "I nodded."
-                An "Good."
+                An smirk "Good."
                 if bangok_four_anna2.leash == True:
                     m "Anna reached between her legs with the leash and hooked the handle of it onto the tip of her tail. I was immediately yanked down the start of her length as she effortlessly tugged it with her hindquarters."
                     m "It wasn't enough to make me gag but it gave me a start. I glanced up at her again to see she had crossed her arms and was now looking down at me with a smug, domineering expression. I got her message and began to bob my head up and down, getting into a rhythm."
                 else:
                     m "Anna gently moved her hand to the back of my head and suddenly pushed my head down the start of her length in a rough but controlled manner."
                     m "It wasn't enough to make me gag but it gave me a start. I glanced up at her again to see she was now looking down at me with a smug, domineering expression. I got her message and began to bob my head up and down, getting into a rhythm."
-                m "There wasn't any taste to the cock itself, though that was better than the rubbery taste I imagined. I was surprised though to suddenly feel and taste a small amount of semi-sweet fluid coat my tongue. If I had to guess, Anna pumped a small amount of the faux cum she made into my mouth to imitate pre-cum."
+
+                if bangok_four_anna2.havefauxcum == True:
+                    m "There wasn't any taste to the cock itself, though that was better than the rubbery taste I imagined. I was surprised though to suddenly feel and taste a small amount of semi-sweet fluid coat my tongue. If I had to guess, Anna pumped a small amount of the faux cum she made into my mouth to imitate pre-cum."
+                else:
+                    m "There wasn't any taste to the cock itself, though that was better than the rubbery taste I imagined."
 
                 if bangok_four_anna2.position == "player_receiving_larger":
-                    An "Keep doing that, mammal. I want to see how far down you're able to take me."
+                    An smirk "Continue, mammal. I want to see how far down you're able to take me."
                 else:
-                    An "Keep doing that, mammal. I expect more effort out of you."
+                    An smirk "Continue, mammal. I expect better effort out of you."
                 menu:
                     "Use your hands.":
                         if bangok_four_anna2.position == "player_receiving_larger":
-                            m "I took my hands and began to pump the rest of her massive shaft as I sucked as much as I could without gagging or choking."
+                            m "I took my hands and began to pump the rest of the massive shaft as I sucked as much as I could without gagging or choking."
                         else:
                             m "I took my hand and pumped the lower half of her penis while sucking on the upper half."
                         m "Evidently, the double-ended nature of the strap-on was doing its work to pleasure Anna as well. She began to let out soft grunts and moans as the efforts on my end shifted and moved the cock on her end."
-                        jump todo_bangok_four_anna2_dildo_content
+                        An smirk "Mmm, there we go. Keep doing that."
+                        m "Initially, I was jerking the toy similarly to how I might an actual penis, but I realized that firmly grasping it and instead shifting it back and forth would result in a much more pleasurable experience for Anna."
+                        An bangok lipbite "Ohhh..."
+                        m "My experimentation was rewarded with a moan from Anna as she steadied herself and allowed me to continue what I was doing. With that, I picked up the pace and pumped the toy harder."
+                        An bangok blush "You're much better at this than I would've expected honestly, this is turning out rather nicely."
+                        An bangok lipbite "Just keep doing that with your hands..."
+                        m "Following her orders I continued. Although I couldn't move the toy by too much, I tried to fuck her with it deeply, striving for a deeper, more drawn out motion than a quicker and shallower one."
+                        if bangok_four_anna2.leash == True:
+                            m "Presumably, not wanting to be shown up, Anna gave a firm tug on the leash, inching me farther down her shaft."
+                        else:
+                            m "Presumably, not wanting to be shown up, Anna gave a strong shove against the back of my head, inching me farther down her shaft."
+                        m "Though I wasn't gagging, Anna's gesture significantly tested my abilities to hold my composure. Reflexively, I grabbed Anna's thighs to keep myself from going too far down as she continued."
+                        m "Her thighs were soft, but held strong muscles underneath, which was a pleasant contrast to the stiffness of the toy. Tempted by arousal, my hands wandered upward, and I found myself fondling her hindquarters. They were much softer than her thighs, but still had a large amount of muscle beneath them."
+                        m "Anna paused her thrusting and looked down at me with a playful smirk."
+                        An bangok blush "Like what you feel?"
+                        c "Mhm."
+                        An smirk "How about we move onto the main event then? These legs are good for a lot more than just physical inspection."
+                        menu:
+                            "Move on.":
+                                hide black with dissolve
+                                c "Well then let's move on so I can see for myself."
+                                An normal "Alright."
+                                # Return to the "Get on your knees" choice menu, remove the "Get on your knees" option.
+                                jump .player_receiving_strapon_assume_position
+                            "Finish the job.":
+                                pass
+                        c "I'm actually really enjoying this..."
+                        An "Well, if you insist..."
+                        An bangok blush "Give my thighs a couple of taps if you need me to let up, I might go a bit rougher."
+                        c "Gotcha."
+                        m "Anna readjusted her position before putting the faux cock back into my mouth. I put one of my hands back onto the shaft, going back to the same rhythm as before to pleasure her. My other hand went towards my own genitals to pleasure myself."
+                        m "My grip on the toy was quickly challenged as Anna thrusted roughly and deeply. I gagged slightly as the cock began to ram against the back of my throat."
+                        An bangok lipbite "Mmm there's some fun noises. Wouldn't mind hearing some more."
+                        m "The speed of Anna's thrusts increased, and I was finally forced to take my hand off of her shaft and place it on her thigh as the toy began to enter the most upper part of my throat."
+                        m "Involuntarily, I made more lewd gags and gurgles as Anna's thrusts increased in speed and grew steadily off rhythm. It was evident that we'd be reaching our peaks in not too long at this rate."
+                        An "Hope you're ready for this, cause it's gonna be a big one..."
+                        m "I braced myself for Anna's oncoming orgasm, nearing my own as well."
+                        play sound "fx/snarl.ogg"
+                        $ bangok_four_anna2.annacame = True 
+                        if bangok_four_anna2.havefauxcum == True:
+                            if bangok_four_anna2.leash == True:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully yanking my head as she came in my throat."
+                            else:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully pushing my head as she came in my throat."
+                            show white:
+                                alpha 0.0
+                                pause 1.0
+                                ease 0.5 alpha 1.0
+                                pause 1.5
+                                linear 3.0 alpha 0.0
+                            with dissolve
+                            m "I wasn't sure what to expect with the orgasm. But as I felt the warm fluid entering into my stomach, coupled with the sensation of the toy and Anna's presence, instinct took over. My mind blanked as a wave of ecstasy, euphoria, and warmth rushed over me, sending me over the edge as I released a strained and muffled moan."
+                            if persistent.bangok_inflation == True:
+                                m "I felt my stomach begin to distend outwards as Anna's unexpectedly large load began to settle and continue to gather inside of me. It became difficult to keep it all in, as very quickly I felt it spill out of my mouth, making breathing even more of an impossibility than it already was. Anna must have noticed because she abruptly pulled out and I coughed in relief."
+                            else:
+                                m "Anna leaned into the orgasm, forcing her cock to stay deep within me, as well as in her. Despite my orgasm having already passed, I felt some amount of rush from Anna's performance. Eventually though, I began to realize that I wasn't able to breathe, as did Anna evidently, as she quickly pulled the toy out of me."
+                        else:
+                            if bangok_four_anna2.leash == True:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully yanking my head as she moaned loudly and squeezed my head with her thighs."
+                            else:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully pushing my head as she moaned loudly and squeezed my head with her thighs."
+                            show white:
+                                alpha 0.0
+                                pause 1.0
+                                ease 0.5 alpha 1.0
+                                pause 1.5
+                                linear 3.0 alpha 0.0
+                            with dissolve
+                            m "I wasn't sure what to expect with the orgasm. But as I felt Anna's legs quiver from her orgasm, coupled with the sensation of the toy and her presence, instinct took over. My mind blanked as a wave of ecstasy, euphoria, and warmth rushed over me, sending me over the edge as I released a strained and muffled moan."
+                            m "Anna leaned into the orgasm, forcing her cock to stay deep within me, as well as in her. Despite my orgasm having already passed, I felt some amount of rush from Anna's performance. Eventually though, I began to realize that I wasn't able to breathe, as did Anna evidently, as she quickly pulled the toy out of me."
                     "Deepthroat.":
                         m "I took a deep breath and lowered my head further down her shaft, making a practiced effort to not gag as it began to obstruct and obtrude the back of my mouth and into my throat."
                         if bangok_four_anna2.position == "player_receiving_larger":
@@ -2018,7 +2099,96 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
                         else:
                             m "I pulled back to take another breath, I'd managed to get most of it, but there was a solid inch or two before I managed to hit the base."
                         m "Evidently, the double-ended nature of the strap-on was doing its work to pleasure Anna as well. She began to let out soft grunts and moans as the efforts on my end shifted and moved the cock on her end."
-                        jump todo_bangok_four_anna2_dildo_content
+                        An bangok lipbite "Mmm, there we go. Keep doing that."
+                        m "Anna raised her hips slightly so her cock slid along the back of my mouth before plunging back down again. This time far deeper into my throat. I had to concentrate hard to keep from choking or gagging as a mix of a moan and a gurgle escaped me. Anna didn't seem bothered by this at all. In fact, she seemed rather pleased by what she was hearing."
+                        if bangok_four_anna2.position == "player_receiving_larger":
+                            m "She returned my lewd exclamation with moans of her own as the strap-on pumped her as much as she did me. If I had to estimate, I was still just about three-fourths of the way down the shaft. Her sudden roughness, combined with her attitude, was getting me off. I reached down and began to pleasure myself as she continued."
+                        else:
+                            m "She returned my lewd exclamation with moans of her own as the strap-on pumped her as much as she did me. With her assistance I was now taking the full length, continuously pressing against the barrier. Her sudden roughness, combined with her attitude, was getting me off. I reached down and began to pleasure myself as she continued."
+                        m "The sensations of the toy in my throat made me feel like I was going to explode. The feeling of being dominated was exhilarating. Knowing that Anna was enjoying herself too made it that much more intense."
+                        m "This rhythm went on for a while as we relished the feeling, Anna eventually let up and gave me a moment to breathe. It was fairly clear we were both on our way to orgasming in not too long."
+                        hide black with dissolve
+                        An bangok blush "So, do you want to move on to the main event or do you want to keep doing this?"
+                        menu:
+                            "Move on.":
+                                c "As enjoyable as this is, I want to keep going with something else."
+                                An normal "Alright."
+                                # Return to the "Get on your knees" choice menu, remove the "Get on your knees" option.
+                                jump .player_receiving_strapon_assume_position
+                            "Finish the job.":
+                                pass
+                        c "I'm really enjoying this..."
+                        An smirk "Well, if you insist..."
+                        if bangok_four_anna2.leash == True:
+                            m "There was a moment of apprehension in me as Anna lined herself back up to continue pumping her cock into my mouth. The leash was still hooked around the tail-end of her tail. I knew what was coming, and looking up to see the wicked smirk on her face, she knew I wanted it."
+                        else:
+                            m "There was a moment of apprehension in me as Anna lined herself back up to continue pumping her cock into my mouth. I knew what was coming, and looking up to see the wicked smirk on her face, she knew I wanted it."
+                        An smirk "Remember, give me a few taps if you need me to let up." 
+                        show black with dissolve
+                        $ renpy.pause (0.5)
+                        m "She slowly began to move her hips again, letting me get used to the sensation. I could feel the tip of her cock tickling the back of my throat again as she thrust in and out of my mouth."
+                        m "Not wanting to keep her waiting I began to move further down her shaft. This earned a small moan from Anna as she thrust harder."
+                        An bangok lipbite "You're very good at this, I can feel you're putting your all into it."
+                        if bangok_four_anna2.leash == True:
+                            m "I swallowed reflexively as the cock sank into the back of my throat. Anna tousled my hair before assisting once again by pulling me further down with the leash."
+                        else:
+                            m "I swallowed reflexively as the cock sank into the back of my throat. Anna tousled my hair before assisting once again by pushing my head down with her claws."
+
+                        if bangok_four_anna2.position == "player_receiving_larger":
+                            m "Making it back down to the three-fourth mark, Anna gave a grunt as she forced the rest of the dick down, a slight burning sensation welling in my chest from how deep it was. She pressed against my face and started grinding her hips against me."
+                        else:
+                            m "Reaching the base, Anna gave a grunt as she pressed against my face and started grinding her hips against me."
+                        $ renpy.pause (0.8)
+                        m "I only lasted a few seconds before I had to start tapping on Anna's thigh. She pulled back and let me go quickly."
+                        An bangok blush "All good down there?"
+                        $ renpy.pause (0.5)
+                        m "After a few deep breaths I gave a nod and lowered my head again."
+                        m "Anna wasted no time and my face quickly met her hips once again as she continued fucking my face at an intense speed. With how fast she was going it was no doubt the two of us would reach our limit soon."
+                        m "She was breathing very heavily, almost growling as her humps grew less and less rhythmic."
+                        An bangok lipbite "Hope you're ready for all of this... I think,{w=0.8}{nw}"
+                        An orgasm "Hope you're ready for all of this... I think,{fast}I'm about..."
+                        play sound "fx/snarl.ogg"
+                        $ bangok_four_anna2.annacame = True 
+                        if bangok_four_anna2.havefauxcum == True:
+                            if bangok_four_anna2.leash == True:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully yanking my head to the base as she came in my throat and squeezed my head with her thighs."
+                            else:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully pushing my head to the base as she came in my throat and squeezed my head with her thighs."
+                            show white:
+                                alpha 0.0
+                                pause 1.0
+                                ease 0.5 alpha 1.0
+                                pause 1.5
+                                linear 3.0 alpha 0.0
+                            with dissolve
+                            m "I wasn't sure what to expect with the orgasm. But as I felt the warm fluid entering into my stomach, coupled with the sensation of the toy and Anna's presence, instinct took over. My mind blanked as a wave of ecstasy, euphoria, and warmth rushed over me, sending me over the edge as I released a strained and muffled moan."
+                            if persistent.bangok_inflation == True:
+                                m "I felt my stomach begin to distend outwards as Anna's unexpectedly large load began to settle and continue to gather inside of me. It became difficult to keep it all in, as very quickly I felt it spill out of my mouth, making breathing even more of an impossibility than it already was. Anna must have noticed because she abruptly pulled out and I coughed in relief."
+                            else:
+                                m "Anna leaned into the orgasm, forcing her cock to stay deep within me, as well as in her. Despite my orgasm having already passed, I felt some amount of rush from Anna's performance. Eventually though, I began to realize that I wasn't able to breathe, as did Anna evidently, as she quickly pulled the toy out of me."
+                        else:
+                            if bangok_four_anna2.leash == True:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully yanking my head to the base as she moaned loudly and squeezed my head with her thighs."
+                            else:
+                                m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully pushing my head to the base as she moaned loudly and squeezed my head with her thighs."
+                            show white:
+                                alpha 0.0
+                                pause 1.0
+                                ease 0.5 alpha 1.0
+                                pause 1.5
+                                linear 3.0 alpha 0.0
+                            with dissolve
+                            m "I wasn't sure what to expect with the orgasm. But as I felt Anna's legs quiver from her orgasm, coupled with the sensation of the toy and her presence, instinct took over. My mind blanked as a wave of ecstasy, euphoria, and warmth rushed over me, sending me over the edge as I released a strained and muffled moan."
+                            m "Anna leaned into the orgasm, forcing her cock to stay deep within me, as well as in her. Despite my orgasm having already passed, I felt some amount of rush from Anna's performance. Eventually though, I began to realize that I wasn't able to breathe, as did Anna evidently, as she quickly pulled the toy out of me."
+                hide white with dissolve
+                An sad "Everything alright down there?"
+                hide black with dissolvemed
+                m "I took a moment to catch my breath before giving her a thumbs up."
+                c "More than alright... that was amazing."
+                show anna normal with dissolve
+                m "Anna gave me small smile before slowly removing the now very slick strap-on and sitting down on the floor beside me."
+                # skip to either the scene where the player fucks anna, or the ending scene depending on who went first. The ending scene isn't written yet
+                jump todo_bangok_four_anna2_dildo_content
             "Lay on your back.":
                 if bangok_four_anna2.position == "player_receiving_larger":
                     m "I took a step towards the couch and got myself into a comfortable position on my back. Anna followed suit by placing herself in between my legs, the massive length of the strap-on stretching from the top of my thighs to the bottom of my chest."

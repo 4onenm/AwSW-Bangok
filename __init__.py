@@ -461,6 +461,16 @@ def add_scene_select():
             'bangok_four_anna2.boughtcondoms': True,
         }))
 
+    # Anna2 + Schlong
+    # fss.register_scene_select(bangok, "Anna + Schlong", 'bangok_four_anna2_apartment',
+    #     replay_scope=fss.extend_scope_by_dict({
+    #         'blood': True,
+    #         'annamood': 1,
+    #         'anna2mood': 4,
+    #         'bangok_four_anna2.boughtcondoms': True,
+    #         'bangok_four_anna2.havestrapon': True,
+    #     }))
+
     # Anna4
     fss.register_scene_select(bangok, "Anna4: A Very Anna Afternoon", 'bangok_four_anna4_replay_start',
         locked=lambda: not renpy.exports.seen_label('a4romance'))
@@ -526,7 +536,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2023-04-04-child_of_d45920e"
+    version = "2023-07-17-child_of_9a7edbc"
     author = "4onen"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
