@@ -1822,7 +1822,7 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
     menu:
         "I guess I can try using it first.":
             $ anna2mood += 1
-            $ bangok_four_anna2.position == "anna_strapon_receiving"
+            $ bangok_four_anna2.position = "anna_strapon_receiving"
             $ renpy.pause(0.5)
             An bangok blush "Excellent."
         "I guess I can try receiving.":
@@ -1921,8 +1921,8 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
 
     if bangok_four_anna2.position == "player_receiving_strapon":
         jump .player_receiving_strapon
-    elif bangok_four_anna2.position == "anna_receiving_strapon":
-        jump todo_bangok_four_anna2_dildo_content
+    elif bangok_four_anna2.position == "anna_strapon_receiving":
+        jump bangok_four_anna2_apartment_annaliesdown
     else: # dildo
         jump todo_bangok_four_anna2_dildo_content
 
