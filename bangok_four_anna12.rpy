@@ -123,7 +123,7 @@ label bangok_four_anna1_medending_nvl:
     n "After all, proposing a sex was my way of sticking it to her for being rude."
     n "Even though I lost the bet, she didn't seem to mind having sex with me, as long as she got what she wanted. Whether I would follow up on it was up to me, though."
     if bangok_four_malepartners + bangok_four_femalepartners < 1:
-        n "I hadn't tried anything with a dragon before. Would I even be able to get it up when the time came?"
+        n "I hadn't tried anything with a dragon before. Would I even be able to get aroused when the time came?"
     else:
         n "I had bed a dragon before, but Anna seemed like a whole new experience."
     jump bangok_four_anna1_medending_nvl_end
@@ -518,7 +518,7 @@ label bangok_four_anna2_apartment:
                         $ bangok_four_anna2.havecondoms = True
                         An normal "I did, but I assumed you'd do some shopping around to determine what's safe for you to use."
                         c "Oh. Well, how hard is it to make a safe condom? I'm sure it'll be fine."
-                        An "Your choice."
+                        An "If it hurts you, that was your choice."
                         m "She handed one over."
                     "I thought you would bring something.":
                         $ renpy.pause(0.5)
