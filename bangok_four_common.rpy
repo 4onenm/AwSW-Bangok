@@ -826,7 +826,7 @@ label bangok_four_mod_firstboot:
             show screen bangok_modsettings
         "No, I'll do it later from the settings menu.":
             pass
-    s "Recalculating arrival coordinates.{cps=2}..{/cps}"
+    s "Recalculating arrival coordinates.{cps=2}..{/cps} (Close all menus to continue.)"
     play sound "fx/system.wav"
     s "Calculations complete."
     s "The BangOk module has been added to your {i}settings{/i} menu under {i}Mod Settings.{/i} You may alter your coordinates at {i}any time{/i}, though doing so in the midst of certain... activities may cause timeline instability."
