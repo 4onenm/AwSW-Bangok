@@ -375,12 +375,31 @@ def xipsum2():
     )
 
 
+def xemera2(ml):
+    ( ml.find_label('emeramenu')
+        .search_say("Alright.")
+        .hook_to('bangok_anoney_xemera2_set_condition')
+    )
+
+    cond = make_dev('bangok_anoney_xemera2_set_condition == True')
+
+    ml.add_answ_machine_message(
+        'bangok_anoney_xemera2_answ_machine',
+        condition=cond,
+        chapters=[3],
+    )
+
+    ( ml.CharacterRoute('bangok_anoney_xemera2_emera',"Emera")
+        .add_date(condition=cond, jump='bangok_anoney_xemera2_emera', chapters=[3])
+        .build()
+    )
+
+
 def xkatsu():
     ( ml.find_label('katsuskip')
         .search_if('persistent.playedkatsu == False')
         .hook_to('bangok_four_xkatsu', condition='persistent.nsfwtoggle == True', return_link = False)
     )
-
 
 
 def xsebastian():
@@ -416,6 +435,7 @@ def link_scenes():
     xdamion()
     xipsum()
     xipsum2()
+    xemera2(ml)
     xkatsu()
     xsebastian()
     modsettings_firstboot()
@@ -536,7 +556,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2023-07-17-child_of_9a7edbc"
+    version = "2023-09-01-child_of_49399d4"
     author = "4onen"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]

@@ -78,6 +78,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 ### Resource credits:
 + `bg/in/apts/o_ceil.png`: An Anonymous contributor
 + `bg/in/apts/*`: 4onen, editing base-game assets
++ `bg/in/bangok/bangok_anoney_emeraroom_night.png`: `Anoney`
 + `bg/in/bangok/labdoor.png`: 4onen, editing base-game assets
 + `bg/in/bangok/officedoor.png`: 4onen, editing base-game assets
 + `bg/in/*`: 4onen, editing base-game assets
@@ -94,6 +95,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
     + Artist: [N1k0](https://www.furaffinity.net/user/n1k0) (Originals: https://www.furaffinity.net/view/48861688/ https://www.furaffinity.net/view/48861770/)
     + Layering, no cum, `excessive_cum` edits: 4onen
     + Balls edit: `Anonymous By Request`
++ `cg/bangok/xemera2/*`: `Anoney`
 + `cr/anna_*.png`: yoshisman8 from [mod-nsfw-anna](https://github.com/AWSW-Modding/AWSW-Modtools/tree/mod-nsfw-anna) (Used without permission; unable to contact.)
 + `cr/bangok/*.png`: 4onen
 + `cr/bangok/damion_pen_ballz.png`: `Anonymous By Request`
