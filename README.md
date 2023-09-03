@@ -80,8 +80,10 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `bg/in/apts/*`: 4onen, editing base-game assets
 + `bg/in/bangok/bangok_anoney_emeraroom_night.png`: `Anoney`
 + `bg/in/bangok/labdoor.png`: 4onen, editing base-game assets
++ `bg/in/bangok/library_corridor_night.png`: `Anoney`, editing base-game assets
 + `bg/in/bangok/officedoor.png`: 4onen, editing base-game assets
 + `bg/in/*`: 4onen, editing base-game assets
++ `cg/bangok/adineshower/*`: Jackwolf
 + `cg/lorem-x-ipsum_purpleroom.png`:
     + Linework: [Yaroul](https://www.furaffinity.net/user/Yaroul/) (Original: https://www.furaffinity.net/view/23028281/)
     + Comissioner: [haloudoval](https://www.furaffinity.net/user/haloudoval)

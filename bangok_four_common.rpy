@@ -164,6 +164,7 @@ init:
     image bangok_four_library night = im.Recolor("bg/in/bangok_library_night.png", 70, 70, 100, 255)
     image bangok_four_library outside night = im.Recolor("bg/out/town/town5.jpg", 60, 70, 100, 255)
 
+    image bangok_anoney_library_corridor_night = "bg/in/bangok/library_corridor_night.png"
     image bangok_anoney_emeraroom_night = "bg/in/bangok/bangok_anoney_emeraroom_night.png"
 
     image bangok_four_labdoor = "bg/in/bangok/labdoor.png"

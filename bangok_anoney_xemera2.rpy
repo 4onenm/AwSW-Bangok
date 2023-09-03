@@ -1,8 +1,9 @@
 init python:
     bangok_anoney_xemera2_set_condition = False
     bangok_anoney_xemera2_clean_arms = None
-    bangok_anoney_xemera2_remy_voyeur = None
     bangok_anoney_xemera2_refuse_participate = False
+    bangok_anoney_xemera2_lick_slit = None
+    bangok_four_xemera2_ws_mouth_unasked = True
 
 $ mp.emeraromance == True #must have done massage in xemera to proceed.
 
@@ -36,11 +37,11 @@ label bangok_anoney_xemera2_emera:
     m "The library was quiet this evening."
     c "(I guess everyone already has their late-night reading material.)"
     m "As I went past an isle, I saw Remy with his head buried in a large box, evidently searching for a trinket of some kind to further his research."
-    m "I continued towards the private area of the library where I had been before on my last visit."
+    m "I continued toward the private area of the library where I had been before on my last visit."
 
     scene black with dissolvemed
     $ renpy.pause (0.5)
-    scene corridor with dissolvemed
+    scene bangok_anoney_library_corridor_night with dissolvemed
 
     m "Finding the door with the name Minister for Culture and Arts on it, I knocked."
 
@@ -68,7 +69,7 @@ label bangok_anoney_xemera2_emera:
 
     Em "Hello [player_name]! It's so nice to see you again. I wasn't sure if you would have the time, considering the extensive police investigation at the moment."
 
-    c "Well I needed a break from the constant police work. It wasn't what I had intended to be my full time job when I stepped through the portal. Besides being an ambassador means experiencing the stories of all the dragons that make up society."
+    c "Well I needed a break from the constant police work. It wasn't what I had intended to be my full time job when I stepped through the portal. Besides, being an ambassador means experiencing the stories of all the dragons that make up society."
     Em ques b "I see. I am pleased that you would consider me one of the dragons to experience. All too many times I feel that I am brushed off as just another high-up, pompus, dismissive dragon that needs to pretty herself up with body paint and jewlery to make herself feel important."
 
     menu:
@@ -262,26 +263,41 @@ label bangok_anoney_xemera2_emera:
     c "(Or perhaps the dragons were created with such elasticity to be able to accomodate other dragon species, within reason.)"
     menu:
         "Lick.":
+            $ bangok_anoney_xemera2_lick_slit = True
             m "I bought my mouth close to her spread slit and started to run my tounge over what I could reach of the inner walls."
             c "(The texture of her walls were smooth as expected yet they also felt both dense and malleable, similar to a dense but compressible polymer.)"
             c "(The smell being this close to her was pungent. I could only imagine what effect it must have on a dragon with a higher sensitivity.)"
             m "Emera's legs gave an involuntry buck at the feeling of my toungue on her inner folds."
-            m "Emera moved her head around checking both sides incase her movements had innjured the ambasador."
+            m "Emera moved her head around checking both sides in case her movements had injured me."
             Em frown b "Sorry about that. I am not used to feeeling such a texture of your toungue on my sensitive area. You are not hurt?"
-            m "I shook my head as I continued to explore her slit."
         "Finger only.":
-            jump todo_bangok_anoney_xemera2_out_of_content
+            $ bangok_anoney_xemera2_lick_slit = True
+            m "I let my fingers roam the opening of her spread slit, massaging what I could reach of the inner walls without going more than a couple knuckles deep."
+            c "(The texture of her walls were smooth as expected yet they also felt both dense and malleable, similar to a dense but compressible polymer.)"
+            c "(The smell being this close to her was pungent. I could only imagine what effect it must have on a dragon with a higher sensitivity.)"
+            m "Emera's legs gave an involuntry buck at the feeling of my fingers on her inner folds."
+            m "She moved her head around, checking both sides in case her movements had injured me."
+            Em frown b "Sorry about that. I am not used to feeeling such a texture of your smooth fingers on my sensitive area. You are not hurt?"
+
+    m "I shook my head as I continued to explore her slit."
 
     Em ques b "Oh, I could just sit like this with you down there for ever. Have you perhaps had any more thoughts about becoming my assistant once all this ambassador business wraps up?"
     m "I pulled back from her slit to take a few breaths and answer her question."
-    c "I do not think it would be wise to do that. As much as it would be fascinating to learn more of dragon culture you have said before you wish to start a family."
+    c "I do not think it would be wise to do that. As much as it would be fascinating to learn more of dragon culture, you have said before you wish to start a family."
     c "I can't give you a family, and I would not want to come between you and your future mate, once you have found a suitable suitor."
-    m "I resumed my oral exploration of her slit. Her arousal was in full swing. My face was covered in her juices with the excess starting to drip and form a small puddle on the floor."
-    m "Emera took a deep breath and glanced at the ceiling, analysing my response no doubt having an internal argument over how to reply."
+    if bangok_anoney_xemera2_lick_slit:
+        m "I resumed my oral exploration of her slit. Her arousal was in full swing. My face was covered in her juices, with the excess starting to drip and form a small puddle on the floor."
+    else:
+        m "I resumed my exploration of her slit. Her arousal was in full swing. My hands were almost covered in her juices, with the excess starting to drip and form a small puddle on the floor."
+
+    m "Emera took a deep breath and glanced at the ceiling, analyzing my response and no doubt having an internal argument over how to reply."
     m "After a few moments she brought her head back down and exhaled with a sigh."
     Em "You are right of course. I am so used to getting what I want that I do not fully think through the consequences of my wants."
     stop soundloop fadeout 0.5      #stop purr sound, 58 seconds long, maybe change to loop if going to spend longer then min on this scene?
-    Em bangok blush b "I think I am ready enough to proceed, a desire has built further down my tunnel out of reach of that toungue of yours."
+    if bangok_anoney_xemera2_lick_slit:
+        Em bangok blush b "I think I am ready enough to proceed, a desire has built further down my tunnel out of reach of that toungue of yours."
+    else:
+        Em bangok blush b "I think I am ready enough to proceed, a desire has built further down my tunnel out of reach of those fingers of yours."
     scene black with dissolvemed
 
     $ renpy.pause (0.5)
@@ -291,21 +307,26 @@ label bangok_anoney_xemera2_emera:
     $ renpy.pause (3.0)
     play sound "sheet.wav"
     if persistent.bangok_cloacas == True:
-        m "Emera returned back to the mat, laying her head on her pillow, however unlike earlier, she lifted her rear and standing on her hind legs, spread wide to show the single vertical slit between them."
-        m "The scales around it glistening in the light that was definately not from scale shine. Clearly my foreplay had gotten her in the mood."
+        m "Emera returned back to the mat, laying her head on her pillow. Unlike earlier, she lifted her rear and stood on her hind legs, spread wide to show the single vertical slit between them."
+        m "The scales around it had a glisten in the light that was definitely not from scale shine. Clearly my foreplay had gotten her in the mood."
     else:
-        m "Emera returned back to the mat, laying her head on her pillow, however unlike earlier, she lifted her rear and standing on her hind legs, spread wide to show the two vertical slits between them."
-        m "The scales around the larger upper vent glistening in the light that was definately not from scale shine. Clearly my foreplay had gotten her in the mood."
+        m "Emera returned back to the mat, laying her head on her pillow. Unlike earlier, she lifted her rear and stood on her hind legs, spread wide to show her slit and ass between them."
+        m "The scales around the larger vent had a glisten in the light that was definitely not from scale shine. Clearly my foreplay had gotten her in the mood."
 
     m "Emera gestured with her paw to a cabinet behind me."
     Em normal b "You will find lube and other supplies you may need in there."
+    show black with dissolvemed
     play sound "fx/cabinet.ogg"
     m "I went to the cabinet that Emera indicated and opened the door."
 
-    if persistent.havetestresults == True:
-        Em ques b "I have seen your test results and the data said that there was no issue with our sexual compatability so using protection isn't strictly necessary."
-    else:
-        Em ques b "There is protection available if you want to use it, given I am an Earth dragon we are meant to be tough so I doubt I could catch anything from you."
+    # if persistent.havetestresults == True:
+    #     Em ques b "I have seen your test results. The data said that there was no issue with our sexual compatability, so using protection isn't strictly necessary."
+    # else:
+    #     Em ques b "There is protection available if you want to use it. Given I am an Earth dragon, we are meant to be tough, so I doubt I could catch anything from you."
+
+    Em ques b "There is protection available if you want to use it."
+    if bangok_anoney_xemera2_lick_slit:
+        Em laugh b "Though, given your oral exploration of my anatomy, I think we are well past that now."
 
     m "I had a look at the contents of the cabinet. There was a bottle of lube as well as a pack of smaller condoms. Stuffed in the back corner I could see what looked like pack of rubbers for large dragons."
 
@@ -314,117 +335,95 @@ label bangok_anoney_xemera2_emera:
             "Use protection":
                 m "I opened one of the small condom packets and rolled it over my dick."
                 $ bangok_anoney_xemera2_protection_dick = True
-                if chap2storehealth == True:
-                    menu:
-                        "Seeing the large condoms in the back reminded me of something I had thought earlier":
-                                $ bangok_anoney_xemera2_clean_arms = True
-                                play sound "fx/unwrap.ogg"
-                                m "Remembering seeing the size of the larger versions of dragon birth control in the grocery store. Realizing that things will probably get messy, I dug out 2 of the larger sized condoms from the back of the cabinet and then put them on my arms. They were ribbed part way down and should provide Emera even more pleasure"
-                                m "Grabbing the lube, I returned to Emera and knelt in front of her spread legs."
-                        "Just grab the lube":
-                                m "Grabbing the lube, I returned to Emera and knelt in front of her spread legs."
 
             "Go raw.":
-                if chap2storehealth == True:
-                    menu:
-                        "Seeing the large condoms in the back reminded me of something I had thought earlier":
-                            $ bangok_anoney_xemera2_clean_arms = True
-                            m "I decided not to bother with protection and was going to just grab the lube when I remembered seeing the size of the birth control at the grocery store."
-                            play sound "fx/unwrap.ogg"
-                            m "Given how things would probably get messy, I dug out 2 of the larger sized condoms from the back of the cabinet and then put them on my arms. They were ribbed part way down and should provide Emera even more pleasure"
-                        "Just grab the lube":
-                            m "Ignoring the condoms, I grabbed the lube and returned to Emera to kneel before her spread legs."
+                $ bangok_anoney_xemera2_protection_dick = False
     else:
+        m "I saw the pleasure stick that she referred to for pleasing herself on the shelf below."
+        c "(Maybe I could give that a try later...)"
+
+
+    if chap2storehealth == True:
         menu:
             "Seeing the large condoms in the back reminded me of something I had thought earlier":
-                if chap2storehealth == True:
                     $ bangok_anoney_xemera2_clean_arms = True
                     play sound "fx/unwrap.ogg"
-                    m "I remembered seeing the size of the larger dragon condoms in the grocery store and, realizing that things will probably get messy, I dug out 2 of the larger sized condoms from the back of the cabinet and then put them on my arms. They were ribbed part way down and should provide Emera even more pleasure"
-                    m "Grabbing the lube, I returned to Emera and knelt in front of her spread legs"
+                    m "I remembered seeing the size of the larger dragon condoms in the grocery store and, realizing that things will probably get messy, I dug out two of the larger sized condoms from the back of the cabinet and then put them on my arms. They were ribbed part way down and should provide Emera even more pleasure"
+                    m "Grabbing the lube, I returned to Emera and knelt in front of her spread legs."
             "Just grab the lube":
-                m "Grabbing the lube, I returned to Emera and knelt in front of her spread legs"
+                if bangok_anoney_xemera2_protection_dick:
+                    m "Grabbing the lube, I returned to Emera and knelt in front of her spread legs."
 
-        m "I saw the pleasure stick that she referred to when pleasing herself on the shelf below. perhaps I will try it out later."
-
+    if persistent.bangok_four_playerhasdick and (not bangok_anoney_xemera2_protection_dick) and (not bangok_anoney_xemera2_clean_arms):
+        m "Ignoring the condoms, I grabbed the lube and returned to Emera to kneel before her spread legs."
+    else:
+        m "Grabbing the lube, I returned to Emera and knelt in front of her spread legs"
 
 
     if persistent.bangok_cloacas == True:
-        m "Using my thumb and fingers to spread her slit, I squirted some of the lube into her cave, she let out a purring sound and shivered at the sensation of the cool lube in her enterence, however it quickly warmed up to her body temperature"
+        m "Using my thumb and fingers to spread her slit, I squirted some of the lube into her cave. She let out a purring sound and shivered at the sensation of the cool lube in her enterence, though it quickly warmed up to her body temperature."
     else:
-        m "Using my thumb and fingers to spread her upper slit, I squirted some of the lube into her cave, she let out a purring sound and shivered at the sensation of the cool lube in her enterence, however it quickly warmed up to her body temperature"
+        m "Using my thumb and fingers to spread her upper slit, I squirted some of the lube into her cave. She let out a purring sound and shivered at the sensation of the cool lube in her enterence, though it quickly warmed up to her body temperature."
 
     m "For good measure, I also squirted some lube into my hand then began to spread it around both my hands and arms."
 
     if bangok_anoney_xemera2_clean_arms == True:
         Em laugh b "Oh, I had forgotten that those were left in there."
-        Em ques b "I am most impressed with your initive and can't wait to feel those ribs."
+        Em ques b "I am most impressed with your initive and can't wait to feel that ribbing."
         Em laugh b "Now get that arm in me."
     else:
         Em laugh b "Well, looks like you are all prepared. Now get that arm in me."
 
-    if persistent.bangok_cloacas == True:
-        m "Folding my thumb into my arm and bringing my fingers to a point, I gently pushed my right arm into the her lubed slit."
-    else:
-        m "Folding my thumb into my arm and bringing my fingers to a point, I gently pushed my right arm into the her upper lubed slit."
+    m "Folding my thumb into my hand and bringing my fingers to a point, I gently pushed my right arm into the her lubed slit."
 
     if persistent.c4eggs == True:
-        m "I had seen some dragon eggs before at Raza's hideout and even though I had not directly seen her own eggs I had a feeling they would be larger then my hand."
+        m "I had seen some dragon eggs before at Raza's hideout and even though I had not directly seen her own eggs I had a feeling hers would be larger than my hand."
     else:
-        m "I had not seen dragon eggs before, however I had a feeling they would be larger then my hand."
+        m "I had not seen dragon eggs before, but I had a feeling hers would be larger than my hand."
     play sound "fx/varagrowl"
+    m "Emera let out a snarl at the feeling of my hand entering her. She was able to take my whole hand easily due to the size difference."
     if persistent.bangok_watersports == True:
-        m "Emera let out a snarl at the feeling of my hand entering her. She was able to take my whole hand easily due to the size difference."
         m "Just past the enterence on her upper wall I could feel an opening and guessed this was her urethra. I noted where it was to investigate it later."
-
-    else:
-        m "Emera let out a snarl at the feeling of my hand entering her. She was able to take my whole hand easily due to the size difference."
 
     m "I continued to feed my arm into her, gently rocking it in."
     m "There was plenty of lubrucation from her arousal as well the extra lube I had rubbed over my arm before entering."
-    m "I decided to ball my fingers into a fist to immitate the head of a dragons cock, Emera instantly let out a purr and shivered in pleasure."
+    m "I decided to ball my fingers into a fist to immitate the head of a dragon's cock.{w=0.1}{nw}"
+    play sound "fx/purr.ogg"
+    m "I decided to ball my fingers into a fist to immitate the head of a dragon's cock.{fast} Emera instantly let out a purr and shivered in pleasure."
 
     if bangok_anoney_xemera2_clean_arms == True:
-        m "My arm was slowly disappearing up to my elbow and there was still length in her tunnel yet, with the condom covering halfway up my upper arm it gave me a good indication of how much there was to her depths, by now the ribbed texture of the condom was starting to enter her."
-        Em laugh b "That feels amazing, it feels so much better to have something warm and living down there instead of awquardly trying to push in a poor substitute and the texture on the condom feels divine"
+        m "My arm slowly disappeared up to my elbow and there was still length in her tunnel yet. With the condom covering halfway up my upper arm it gave me a good indication of how much there would be to her depths. By now the ribbed texture of the condom was starting to enter her."
+        Em laugh b "That feels amazing, it feels so much better to have something warm and living down there instead of awkwardly trying to push in a poor substitute, and the texture on the condom feels divine."
     else:
         m "My arm was slowly disappearing up to my elbow and there was still length in her tunnel yet."
-        Em laugh b "That feels amazing, it feels so much better to have something warm and living down there instead of awquardly trying to push in a poor substitute"
+        Em laugh b "That feels amazing, it feels so much better to have something warm and living down there instead of awkwardly trying to push in a poor substitute."
 
     if persistent.bangok_cervpen == True:
-        m "After only another minute of slowly, gradually pushing, I finally reached the limit of her tunnel, beyond was her egg chamber."
+        m "After only another minute of slowly, gradually pushing, I finally reached the limit of her tunnel, beyond which was her egg chamber."
     else:
         m "After only another minute of slowly, gradually pushing, I finally reached the limit of her tunnel, with the majority of my arm inside her."
         Em frown b "Nngh. Yes, that is as deep as you can go."
 
-    m "Now i knew how much length I had to work with I slowly began to withdraw my now soaked arm from her tunnel. when most of my arm was out, I pushed it in again once more and set up a rhythm."
+    m "Now I knew how much length I had to work with I slowly began to withdraw my now soaked arm from her tunnel. when most of my arm was out, I pushed it in again once more and set up a rhythm."
     play soundloop "massage.ogg"
 
     $ renpy.pause (3.0)
 
-    if (bangok_four_xipsum.unplayed == False) and (bangok_four_xipsum_vag_and_ass == False):
-        c "I understand that part of your studies in culture, would also include the mating rituals of dragons. I have had the chance to have an encounter with a dragon with a pair of hemipeni. When mating happens are they both in use with one in each hole?"
-        Em frown b "Do you really need to know the answer now of all times?"
-        Em ques b "To satisfy your curisity; although it is unusual to find a dragon with such an ability."
-        Em ques b "There have been records indicating that they did indeed use both passageways inside the female, it was highly pleasurable for both parners."
+    if bangok_four_xipsum.unplayed == False:
+        if bangok_four_xipsum_vag_and_ass:
+            c "I understand that part of your studies in culture, would also include the mating rituals of dragons. I have had the chance to have an encounter with a dragon with a pair of hemipeni. When mating happens are they both in use with one in each hole?"
+            Em frown b "Do you really need to know the answer now of all times?"
+            Em ques b "To satisfy your curisity; although it is unusual to find a dragon with such an abnormality."
+        else:
+            c "I have had an encounter with a dragon that had 2 hemipeni and have had both passages filled. It was quite a heavenly experience."
+            Em ques b "Indeed? It is unusual to come across a dragon with such an abnormality."
+        Em ques b "However, there have been records indicating that they did indeed use both passageways to enter the female and that it was highly pleasurable for both partners."
         c "How would you feel about having an experiance similar to what is in your records?"
-        Em bangok blush b "you can do that?"
+        Em bangok blush b "You can do that?"
         menu:
-            "Let me work my magic":
+            "Let me work my magic.":
                 jump bangok_anoney_xemera2_double_fisting
-            "Actually on second thoughts, maybe it is best to carry on as planned":
-                jump bangok_anoney_xemera2_vaginal_only
-
-    elif (bangok_four_xipsum.unplayed == False) and (bangok_four_xipsum_vag_and_ass == True):
-        c "I have had an encounter with a dragon that had 2 hemipeni and have had both passages filled, It was quite a heavenly experience."
-        Em ques b "Indeed? It is unusual to come across a dragon with such a physiology."
-        Em "However, there have been records indicating that they did indeed use both passageways inside the female and that it was highly pleasurable for both parners."
-        c "How would you feel about having an experiance similar to what is in your records?"
-        Em bangok blush b "C-can you do that?"
-        menu:
-            "Let me work my magic":
-                jump bangok_anoney_xemera2_double_fisting
-            "Actually on second thoughts, maybe it is best to carry on as planned":
+            "On second thought, maybe it is best to carry on as planned.":
                 jump bangok_anoney_xemera2_vaginal_only
     else:
         jump bangok_anoney_xemera2_vaginal_only
@@ -432,10 +431,10 @@ label bangok_anoney_xemera2_emera:
 label bangok_anoney_xemera2_vaginal_only:
     if persistent.bangok_cervpen == True:
         m "Reforming my hand into a point again, I began to put pressure at the end of my stokes onto the centre of the rear wall of her tunnel"
-        Em bangok blush b "You need to go faster. Faster and harder, put your body into it."
+        Em bangok blush b "You need to go faster. Faster and harder. Put your body into it."
         stop soundloop
         play soundloop "fx/massage2.ogg"
-        m "Gradually I could feel the barrier yielding with a hole starting to open up"
+        m "Gradually I could feel the barrier yielding and a hole starting to open up."
         play sound "fx/varagrowl"
         Em "Don't stop now, [player_name]. Give it all you got!"
         m "Over the next few minutes the hole widened even more, until eventually my hand pushed through."
@@ -448,14 +447,14 @@ label bangok_anoney_xemera2_vaginal_only:
         play soundloop "massage2.ogg"
         m "I smoothly withdrew my arm until my fist was at her entrance and punched it through her tunnel back into her egg chamber."
         Em "More, More!"
-        m "I quickly pick up the pace pushing my arm deep each time, touching the egg with my knuckles."
+        m "I quickly picked up the pace, pushing my arm deep each time, touching the egg with my knuckles."
         $ renpy.pause(0.5)
         Em bangok orgasm b "I am almost there just need a few more fast strokes and..."
         stop soundloop fadeout 0.5
         $ renpy.pause (1.5)
         play sound "fx/bitescr.ogg"
         $ renpy.pause(0.8)
-        m "Emera quickly grabbed a cushion off her chair and quickly bit down to deaden her roar as I felt her tunnel tense up with pulsing waves travelling down to her egg chamber. The barrier once there had disappeared; the entrance had dilated completely"
+        m "Emera quickly grabbed a cushion off her chair and bit down to deaden her roar as I felt her tunnel tense up with pulsing waves travelling down to her egg chamber. The barrier once there had disappeared; the entrance had dilated completely"
     else:
         m "I began to move my fist around inside her, stimulating her walls around the entrance to her egg chamber"
         Em bangok blush b "You need to go faster. Faster and harder, put your body into it."
@@ -468,43 +467,48 @@ label bangok_anoney_xemera2_vaginal_only:
         Em bangok orgasm b "I am almost there just need a few more fast strokes and..."
         stop soundloop fadeout 0.5
         $ renpy.pause (1.5)
-        play sound "bitescr.ogg"
+        play sound "fx/bitescr.ogg"
         $ renpy.pause(0.8)
-        m "Emera quickly grabbed a cushion off her chair and quickly bit down to deaden her roar as I felt her tunnel tense up with pulsing waves travelling down to her egg chamber. The barrier that until a few moments ago was at the end of her tunnel rapidly disappeared; the entrance dilating completely."
+        m "Emera quickly grabbed a cushion off her chair and bit down to deaden her roar as I felt her tunnel tense up with pulsing waves travelling down to her egg chamber. The barrier that until a few moments ago was at the end of her tunnel rapidly disappeared, the entrance dilating completely."
 
     m "Her tunnel clenched so tight around my arm that I could no longer move it, her opening spraying copious amounts of lubrication all over my lower body and genitals."
 
     if persistent.bangok_watersports == True:
-        m "I suddenly felt a much warmer and wetter fluid surrounding my arm. Given the position Emera was standing, I was glad that it was moving further inside her."
+        m "I suddenly felt a much warmer and wetter fluid surrounding my arm. Given the position Emera was standing, I was glad that it was moving further inside her instead of streaming out onto the floor and embarassing her."
         m "She didn't mention that the laying hormones also made her lose control of her bladder, though it could be an evolutionary trait to provide more lubrucation for the egg."
-        m "I am glad I had removed my clothing and now appreciated why she performed this on an easy-to-clean mat."
+        m "I was equally glad I had removed my clothing and now appreciated why she performed this on an easy-to-clean mat."
 
     else:
-        m "I am glad that I had removed my clothing and now appreciated why she performed this on an easy to clean mat."
+        m "I am glad that I had removed my clothing and now appreciated why she performed this on an easy-to-clean mat."
 
-    m "After what felt like several minutes I felt her tunnel relaxing, however I could still feel pulses along the sides of her tunnel, however now they were going in the opposite direction."
+    m "After what felt like several minutes I felt her tunnel relaxing. Though I could still feel pulses along the sides of her tunnel, now they were going in the opposite direction."
     m "Emera was breathing heavily as she spoke to me again."
     Em bangok blush b "Thank you for that. You have done it. My egg is now going to be starting its journey out of me, and for the first time I can enjoy it."
     Em "You have already done so much for me by getting this far, but I would ask you to do more."
     Em "The hormones that are released to prepare to lay the egg severely limit any discomfort I would experiance from the egg passing out."
-    Em "There is something that I have always wanted to try after reading about it in our records, but have not been able to do, because of my lack of a parner and of a flexible enough tail."
+    Em "There is something that I have always wanted to try after reading about it in our records, but have not been able to do, because of my lack of a partner or flexible enough tail."
     Em "When the egg is travelling down my tunnel, are you able to stop it before it comes out and push it back?"
     c "If that is what you want."
     m "I pulled my arm back until just my hand remained inside and I could see the muscles around her groin area working to push the egg down her tunnel."
     m "The look of rapture on the dragon's face confirmed that she was as high as a stunt-performing flyer."
-    m "After a few moments I could feel the smooth oval end of her egg that was pressing on my fingers. I held the egg for a moment whict her contractions passed, then i drove my arm back into her slick cannal."
-    m "The copious lubrication meant it was easy to push the egg back in. I even went further then before given the enterence to her egg chamber was still dialated."
+    m "After a few moments I could feel the smooth oval end of her egg that was pressing on my fingers. I held the egg for a moment while her contractions passed, then I drove my arm back into her slick canal."
+    if persistent.bangok_cervpen == True:
+        m "The copious lubrication meant it was easy to push the egg back in. I pushed it back, deep inside her, until I could feel my hand slipping it through the still-dilated entrance to her egg chamber."
+    else:
+        m "The copious lubrication meant it was easy to push the egg back in. I even went further then before given the enterence to her egg chamber was still dialated."
+    play sound "fx/bitescr.ogg"
     m "It didn't appear to cause her any discomfort. In fact, there was another muffled roar as another set of bite marks were added to the same cushion used before."
-    m "I could feel her tunnel spasm around my arm, almost in confusion as the instinct to draw the male fluids to the egg chamber was competing with the signals from her egg chamber that is currently occupied and trying to evict the egg."
+    m "I could feel her tunnel spasm around my arm, almost in confusion as the instinct to draw the male fluids to the egg chamber was competing with the signals from her egg chamber that is currently occupied in trying to evict the egg."
     m "Some moments later, her tunnel again went limp and I moved my hand back to the beginning to prepare to go again."
     m "I repeated the operation five more times before my arm was starting to get tired. I removed it from her and finally allowed her body to expell her egg."
     $ renpy.pause (1.5)
     play sound "fx/bitescr.ogg"
     $ renpy.pause(0.8)
     play sound "breathing.ogg"
-    Em bangok orgasm b "(panting heavily) That was amazing, those old records were not wrong when they recorded their observations."
+    m "Emera panted heavily, her body still in the throws of her orgasms."
+    Em bangok orgasm b "That was amazing. Those old records were not wrong when they recorded their observations."
     play sound "fx/slurp.ogg"
-    m "I caught the egg in my hands as it fell from her slit. I was suprised by its weight and size, about as large as a melon. The color was a pale yellow, nearly matching her belly."
+    m "I caught the egg in my hands as it fell from her slit. I was suprised by its weight and size: about as large as a melon. The color was a pale yellow, nearly matching her belly."
     c "What will you do with the egg now?"
     Em ques b "Usually I donate it to a charity in the city. They have an anomynous drop off box here at the library."
     Em "They extract the contents of the egg, fill it with a dense foam then paint designs on the shell, with the eggs then sold as souvenirs, presents and the like."
@@ -512,22 +516,32 @@ label bangok_anoney_xemera2_vaginal_only:
     Em frown b "The level of pleasure that is had by both partners from encoraging the beginning of the cycle can fuel an addiction."
     Em "The concequences of which are seen in the large range of contraceptives, you must have seen them at the local grocery store and unfortunately in the unwanted fertilized eggs that are sometimes also left in the donation box."
     c "Really?"
-    Em normal b "Of course any eggs left in the box at the end of the day are checked by simply shining a light through them. Given the shells are slightly transleucent it is possible to tell if they are viable or not."
+    Em normal b "Of course any eggs left in the box at the end of the day are checked by simply shining a light through them. Given the shells are slightly transleucent, it is possible to tell if they are viable or not."
     m "I carefully placed the egg down onto the mat before it could slip out my hands."
-    c "Emera, there is something new i wish to try, you found the experiance of one of my arms inside you was amazing, now that you have layed your egg, how about both arms?"
-    Em laugh b "Let's try"
-    m "I knelt down against the wall facing her, bought my arms together and twined my fingers together."
-    c "you will need to do the work, i can't brace against you with both my arms inside"
+
+    menu:
+        "I wonder if I can fit both my arms in...":
+            pass
+        "Ask to be satisfied." if bangok_four_playerhasdick == True:
+            jump bangok_anoney_xemera2_satisfy_male
+        "Ask to borrow Emera's pleasure stick." if bangok_four_playerhasdick == False:
+            jump bangok_anoney_xemera2_satisfy_female
+        "Just finish up.":
+            jump bangok_anoney_xemera2_toweling_showercomment_conclusion
+    c "Emera, there is something new I wish to try. You found the experiance of one of my arms inside you was amazing. Now that you have laid your egg, how about both arms?"
+    Em laugh b "Let's try."
+    m "I pulled the mat over to a wall, then knelt down against the wall facing her, bought my arms together, and twined my fingers together."
+    c "You will need to do the work, I can't brace against you with both my arms inside."
     m "Emera backed up slowly until my clenched hands were under her tail."
     if persistent.bangok_cloacas == True:
-        m "I lined up my arms with her claoca, which was still swolen and spread from passing the egg."
+        m "I lined up my arms with her cloaca, which was still swollen and spread from passing the egg."
     else:
-        m "I lined up my arms with her vaginal slit, which was still swolen and spread from passing the egg."
+        m "I lined up my arms with her vaginal slit, which was still swollen and spread from passing the egg."
     $ renpy.pause (1.5)
     play sound "fx/varagrowl.ogg"
     m "Emera leaned back until she forced my hands into her slit."
-    Em blush b "Yes, you are in. Both your arms together will be larger then any dragon cock."
-    m "Emera continued to lean back pushing more and more of my arms into her"
+    Em blush b "Yes, I feel that now. Both your arms together will be larger then any dragon cock."
+    m "Emera continued to lean back, pushing more and more of my arms into her."
     Em "Gosh your arms are so big when pressed together like that."
     m "She continued to back up until my elbows entered her slit."
     play soundloop "fx/massage.ogg"
@@ -539,24 +553,24 @@ label bangok_anoney_xemera2_vaginal_only:
     play soundloop "fx/massage2" fadein 0.5
     m "Emera sped up but did not move as far, keeping my forearms within her warmth."
     Em "Almost there...., nearly at the end of my tumnnel, just a little further"
-    m "I can feel her tunnel starting to clamp down, Emera really had to put some effort into forcing me through her tunnel."
+    m "I can feel her tunnel starting to clamp down. Emera really had to put some effort into forcing me through her passage."
     play sound "breathing.ogg"
     $ renpy.pause (7.0)
     m "Finally Emera gave one last shove back and my arms reached the end of her tunnel."
     play sound "fx/roar2.ogg"
-    Em orgasm b "Words... can't.... feels.... so... full"
-    m "Her tunnel clamped down, hard. As i was trapped between a wall and a frozen in place, dragon in the throws of their longest orgasm they had ever experianced."
-    m "All i could do is wiggle my arms to prolong her pleasure."
-    m "a fresh flood of juices spurted out around my arms, coating my lower body in the fresh, warm liquid."
-    m "finally after what felt twice the length of her previous orgasms, her tunnel finally relaxes, her legs become weak and she tumbles to the mat on her side"
+    Em orgasm b "Words... so... full"
+    m "Her tunnel clamped down, hard. As I was trapped between her and a wall, frozen in place, I could do almost nothing but enjoy the sight of the dragon in the throes of the longest orgasm she had ever experianced."
+    m "I did what I could, which was to wiggle my arms to prolong her pleasure."
+    m "A fresh flood of juices spurted out around my arms, spattering my chest in the fresh, warm liquid."
+    m "Finally, after what felt twice the length of her previous orgasms, her tunnel finally relaxed, her legs become weak and she tumbled to the mat on her side, pulling me down too."
     play sound "breathing.ogg"
-    m "After 5 minuites of laying on the mat, my arms still within her vagina, they were starting to ache"
-    c "Emera, can you move forwards so i can pull my arms out."
-    Em blush b "Oh of course, sorry, i don't know what came over me, the pleasure was just so so good and then i just felt so weak, i couldn't continue standing."
-    m "she began to move forwards, slowly pulling my arms out of her slit, leaving a trail of her juices."
+    m "After minuites of laying on the mat, my arms still trapped within her passage, they were starting to ache."
+    c "Emera, could you move forwards so I can pull my arms out?"
+    Em blush b "Oh of course. Apologies, I don't know what came over me. The pleasure was just so, so very good and then I just felt so weak, I couldn't continue standing."
+    m "She began to move forward, slowly pulling my arms out of her slit, leaving a trail of her juices on the mat beneath them."
     play sound "fx/varagrowl"
-    m "she let out a snarl as my hands finally left her now thoughly abused slit."
-    Em "Words can not describe how good that felt."
+    m "She let out a snarl as my hands finally left her now thoughly abused slit."
+    Em "Words cannot describe how good that felt."
 
     menu:
         "Ask to be satisfied." if bangok_four_playerhasdick == True:
@@ -564,11 +578,13 @@ label bangok_anoney_xemera2_vaginal_only:
         "Ask to borrow Emera's pleasure stick." if bangok_four_playerhasdick == False:
             jump bangok_anoney_xemera2_satisfy_female
         "Just finish up.":
-            pass
+            jump bangok_anoney_xemera2_toweling_showercomment_conclusion
+
+label bangok_anoney_xemera2_toweling_showercomment_conclusion:
     play sound "fx/cabinet.ogg"
     $ renpy.pause (0.5)
     play sound "fx/rubb2.ogg"
-    m "Emera bought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until showering."
+    m "Emera bought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until we could both take showers."
 
     jump bangok_anoney_xemera2_conclusion
 
@@ -585,7 +601,7 @@ label bangok_anoney_xemera2_satisfy_male:
     show emera normal b
 
     c "Now that I have satisfied you, I wish to take care of myself. Given how large your reproductive passage is, I would like to try your other entrance."
-    Em bangok blush b "Of course my body is your's to use, after what you have done for me it is quite fair that you should also get some pleasure out of this"
+    Em bangok blush b "Of course ambasssador. My body is yours to use after what you have done for me. It is quite fair that you should also get some pleasure out of this."
 
     show emera bangok blush b flip:  #Trying to do something similar to the anna lays down in anna chapter 2, probably got this wrong.
         xanchor 0.5
@@ -597,26 +613,26 @@ label bangok_anoney_xemera2_satisfy_male:
         rotate -15
     with dissolve
     play sound "fx/leather.ogg"
-    m "I asked Emera to roll over onto her back and got up from the floor and went over to the fruit bowl on one of the cabinets. Selecting three firm fruits that were slightly larger then my hand I returned to Emera"
+    m "I asked Emera to roll over onto her back. Then I got up from the floor and went over to the fruit bowl on one of the cabinets. Selecting three firm fruits that were slightly larger then my hand I returned to Emera."
     show emera ques b flip
-    m "Emera rolled over onto her back and gave me a confused look until I spread apart the large slit that her egg had recently come out of, which was still very wet with the multiple orgasms she had earlier"
+    m "Emera, on her back, gave me a confused look until I spread apart the large slit that her egg had recently come out of, which was still very wet with the multiple orgasms she'd experienced earlier."
     show emera bangok blush b flip
-    m "I started to push the fruits up her tunnel, untill all three were in her passage."
+    m "I started to push the fruits into her tunnel, until all three were in her birthing passage."
 
     if persistent.bangok_cloacas == True:
-        m "I lay atop her, reached down to spread appart her cloaca, found the opening to her anal passage, then buried my lubed length within."
+        m "Then I lay atop her, reached down to spread appart her cloaca, found the opening to her anal passage, then buried my lubed length within."
     else:
-        m "I lay atop her, reached down to finding the lower slit leading to her anal passage, then buried my lubed length within."
+        m "Then I lay atop her, reached down to finding the lower slit leading to her anal passage, then buried my lubed length within."
     play soundloop "fx/flap1.ogg"
-    m "Our lower bodies were covered with the slippery mating fluids from her numerous orgasms, enabling me to slide my body over her scales as I thrust into her passage."
-    m "I could feel her vaginal passage clamping down on the fruit in her canal, the contractions against which which could then also be felt in her anal passage."
-    Em bangok blush b flip "Oh this is new, I have never thought of using food items in this way, or using my other tunnel for pleasure."
+    m "Our lower bodies were covered with the slippery mating fluids from her numerous orgasms, enabling me to slide my body quickly over her scales as I thrust into her anal passage."
+    m "I could feel her mating muscles clamping down on the fruit in her canal, the contractions against which then also slightly contracted her anal passage."
+    Em bangok blush b flip "Oh this is new, I have never thought of using food items in this way, or using my other tunnel for such..."
     m "I had been rock hard through the whole egg laying procedure, so I knew that I would not last long."
     m "I continued to thrust into her, the fruits in her tunnel moving around with the motion of my hips."
     play sound "fx/varagrowl"
-    m "The pressure of the fruits against the walls of her egg chamber causing her to moan in pleasure."
-    m "I could feel my orgasm building up, I was not going to last much longer."
-    stop soundloop  fadeout 0.5
+    m "The pressure of the fruits against the entryway of her egg chamber caused her to moan in pleasure."
+    m "I could feel my orgasm building up. I was not going to last much longer."
+    stop soundloop fadeout 0.5
     if bangok_anoney_xemera2_protection_dick == True:
         m "It was only a couple more thrusts until I blew my load, the condom containing my relitively small spurts compared to what a dragon would probably produce."
     else:
@@ -625,14 +641,14 @@ label bangok_anoney_xemera2_satisfy_male:
     $ renpy.pause (1.5)
     play sound "fx/bitescr.ogg"
     $ renpy.pause(0.8)
-    m "My last thrust, coupled with the movement from the fruits in her tunnel threw Emera into yet another orgasm, her lower passage tightened further around me, milking out of me a few extra spurts."
+    m "My last thrust, coupled with the movement from the fruits in her tunnel threw Emera into yet another orgasm. her lower passage tightened further around me, milking out of me a few extra spurts."
     m "Once her tunnel loosened up to allow me to pull out I got up from her underside and proceeded to reach into her vaginal passage to remove the fruit."
     show emera bangok blush b flip
     play sound "fx/varagrowl"
     m "Emera gave a moan each time her lips were stretched by their expulsion."
 
     if (bangok_anoney_xemera2_protection_dick == True) and (bangok_anoney_xemera2_clean_arms == True):
-            m "I reached down and quickly removed the condom from my shaft, then removed the ones on my arms, the rubbers had served their purpose in keeping me relatively clean."
+        m "I reached down and quickly removed the condom from my shaft, then removed the ones on my arms; the rubbers had served their purpose in keeping at least some of me relatively clean."
 
     elif bangok_anoney_xemera2_protection_dick == True:
 
@@ -640,30 +656,51 @@ label bangok_anoney_xemera2_satisfy_male:
 
     elif bangok_anoney_xemera2_clean_arms == True:
 
-        m "I reached down and quickly removed the condoms from my arms, the rubbers had served their purpose in keeping my arms clean."
+        m "I reached down and quickly removed the condoms from my arms; the rubbers had served their purpose in keeping at least some of me relatively clean."
 
     if (persistent.bangok_watersports == True) and (bangok_four_playerhasdick == True):
 
         m "Given that it had been several hours since I had visited a restroom, nature suddenly decided to make its call."
         c "(Oh crap what do I do?)"
         c "(I can't go outside the office to the washroom, not in this state.)"
-        c "(The last thing I want to do is accedently leave any evidance of our activities, especially with the hightened smell of the dragons.)"
+        c "(The last thing I want to do is accedently leave any evidence of our activities, especially with the hightened smell of the dragons.)"
         menu:
             "Don't think about it, just get cleaned up so you can go to the restroom.":
                 pass
 
             "Relieve yourself inside Emera.":
-                jump bangok_anoney_xemera2_relief
+                jump bangok_anoney_xemera2_ws_relief
 
-    play sound "fx/cabinet.ogg"
-    $ renpy.pause (0.5)
-    play sound "fx/rubb2.ogg"
-    m "Emera bought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until showering."
-    jump bangok_anoney_xemera2_conclusion
+    jump bangok_anoney_xemera2_toweling_showercomment_conclusion
 
 
-label bangok_anoney_xemera2_relief:
-    m "Remembering the discovery of where Emera's urethra is and hoping that her hormones would still prevent any discomfort, I decided to relieve myself inside the dragon's bladder."
+label bangok_anoney_xemera2_ws_relief:
+    c "Emera, I'm afraid I desparately need to use the restroom. I..."
+    Em bangok blush b flip "Oh, I understand. I have had to do the same thing myself after a particularly long session."
+    c "No, I mean I need to use the restroom now, and I don't think I should leave your office in this state."
+    Em ques b flip "Ah, I see. Well, I am awawre some dragons fetishize the practice of relieving themselves in their partner, and I have immunized myself to the thought."
+    Em laugh b flip "Experiencing it in practice is another matter, but I am willing to let you do so if you wish."
+    label .ws_menu:
+    menu:
+        "Ass." if not persistent.bangok_cloacas:
+            jump todo_bangok_anoney_xemera2_out_of_content
+        "Vagina." if not persistent.bangok_cloacas:
+            jump todo_bangok_anoney_xemera2_out_of_content
+        "Anal vent." if persistent.bangok_cloacas:
+            jump todo_bangok_anoney_xemera2_out_of_content
+        "Cloaca." if persistent.bangok_cloacas:
+            jump todo_bangok_anoney_xemera2_out_of_content
+        "Mouth." if bangok_four_xemera2_ws_mouth_unasked:
+            $ bangok_four_xemera2_ws_mouth_unasked = False
+            c "May I use your mouth?"
+            Em frown b flip "While I'm immunized to the thought, I highly doubt I'm immunized to the taste."
+            Em ques b flip "I'd prefer if you keep this far from my face."
+            jump .ws_menu
+        "Urethra.":
+            jump .urethra
+
+    label .urethra:
+    m "Remembering the discovery of where Emera's urethra was, and hoping that her hormones would still prevent any discomfort, I decided to relieve myself inside the dragon's bladder."
     m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
     if persistent.bangok_cloacas == True:
         m "Reaching back I spread her slit easily and found her urethra exactly where I had remembered it."
@@ -745,7 +782,7 @@ label bangok_anoney_xemera2_satisfy_female:
     m "It had been a while since I had felt this full, and it was only the head."
     m "I continued to take it in further. after about half of the way down I felt the head of the toy kiss my cervix."
 
-    if persistant.bangok_cervpen == True:
+    if persistent.bangok_cervpen == True:
         m "Knowing that I could take it further I continued to put pressure on my cervix, twinsting the toy slightly to dialate it."
         m "I could feel my cervix loosening up as i started to lightly thrust the toy a few inches back and forth."
         m "A few moments later and I felt the head pop therough and into my womb."
@@ -766,7 +803,7 @@ label bangok_anoney_xemera2_satisfy_female:
     m "I decided to just lay there fora while, toy still hanging out of my vagina and bask in the afterglow on the warm belly of Emera."
     Em "If everything is done, then we ought to clean up, it is already very late and you will probably be wanting to back to your appartment"
     play sound "fx/uncork.ogg"
-    if persistant.bangok_cervpen == True:
+    if persistent.bangok_cervpen == True:
         m "I gave a nod and reached down to gently tug the toy out of me, giving a sudder of pleasure as the head of the toy first left my womb, then stretched my lips."
     else:
         m "I gave a nod and reached down to gently tug the toy out of me, giving a sudder of pleasure as the head of the toy stretched my lips."
@@ -968,7 +1005,7 @@ label bangok_anoney_xemera2_conclusion:
 
     $ renpy.pause (0.5)
 
-    scene corridor
+    scene bangok_anoney_library_corridor_night with dissolvemed
 
     $ renpy.pause (3.3)
 
@@ -988,25 +1025,21 @@ label bangok_anoney_xemera2_conclusion:
 
     $ renpy.pause (3.3)
 
-    m "Soon I had returned home"
+    m "Soon I had returned home."
 
     if bangok_anoney_xemera2_massage_only == True:
-        m "After cooling off during the walk home, maybe I had made the wrong choice in refusing her offer."
-        c "(Emera did seem hearbroken when I had refused, If only my head wasn't so much of a mess with the police investigation and the responsibility I felt being an ambassador and what could have happened had something gone wrong)"
-        if chapter3unplayed == False:
-            c "(Ah well, it would be extremely irrisponsible of me to go back in time, even if i did know the coordinates to before this evenings events)"
-        else:
-            c "(Ah well, the portal is broken, even if i could figure out the coordinates to make it work in the first place)"
-        c "(Well time for bed, hopefully tomorrow will be a better day)"
-
+        m "After cooling off during the walk home, I thought maybe I had made the wrong choice in refusing her offer."
+        c "(Emera did seem hearbroken when I had refused. If only my head wasn't so much of a mess with the police investigation and the responsibility I feel being an ambassador. What could have happened had something had gone wrong?)"
+        c "(Ah well, it would be extremely irresponsible of me to go back in time for this non-emergency, even if I did know the coordinates to before this evening's events.)"
+        c "(Well, time for bed. Hopefully tomorrow will be a better day.)"
     elif (persistent.nsfwtoggle == False) or bangok_four_common.bangnokay.check():
         c "(I hadn't thought I would be paying Emera a return visit, but the evening was pleasent enough.)"
-        c "(It was nice to get to know her private side when I get the feeling that she can confide in me given my unique position as ammbassador.)"
-        c "(Well time for bed, lets see what tomorrow brings.)"
+        c "(It was nice to get to know her private side and to know that she can confide in me given my unique position as ammbassador.)"
+        c "(Well, time for bed. Lets see what tomorrow brings.)"
     else:
         c "(I hadn't even thought I would be paying Emera a return visit. Not only did I give her a massage, but I allowed her to experience pleasure she thought she would only be able to dream of.)"
-        c "(It was nice to get to know her private side when I get the feeling that she can confide in me given my unique position as ammbassador.)"
-        c "(Well time for bed, lets see what tomorrow brings.)"
+        c "(It was nice to get to know her private side and to know she can confide in me given my unique position as ammbassador.)"
+        c "(Well, time for bed, Lets see what tomorrow brings.)"
 
     call _mod_incc from bangok_anoney_xemera2_mod_incc
     jump _mod_fixjmp
