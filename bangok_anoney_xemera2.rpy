@@ -644,7 +644,7 @@ label bangok_anoney_xemera2_satisfy_male:
     m "My last thrust, coupled with the movement from the fruits in her tunnel threw Emera into yet another orgasm. her lower passage tightened further around me, milking out of me a few extra spurts."
     m "Once her tunnel loosened up to allow me to pull out I got up from her underside and proceeded to reach into her vaginal passage to remove the fruit."
     show emera bangok blush b flip
-    play sound "fx/varagrowl"
+    play sound "fx/varagrowl.ogg"
     m "Emera gave a moan each time her lips were stretched by their expulsion."
 
     if (bangok_anoney_xemera2_protection_dick == True) and (bangok_anoney_xemera2_clean_arms == True):
@@ -680,16 +680,18 @@ label bangok_anoney_xemera2_ws_relief:
     c "No, I mean I need to use the restroom now, and I don't think I should leave your office in this state."
     Em ques b flip "Ah, I see. Well, I am awawre some dragons fetishize the practice of relieving themselves in their partner, and I have immunized myself to the thought."
     Em laugh b flip "Experiencing it in practice is another matter, but I am willing to let you do so if you wish."
+    if bangok_anoney_xemera2_protection_dick == True:
+        m "I hurriedly grabbed another condom to use."
     label .ws_menu:
     menu:
         "Ass." if not persistent.bangok_cloacas:
-            jump todo_bangok_anoney_xemera2_out_of_content
+            jump .ass
         "Vagina." if not persistent.bangok_cloacas:
-            jump todo_bangok_anoney_xemera2_out_of_content
+            jump .vag
         "Anal vent." if persistent.bangok_cloacas:
-            jump todo_bangok_anoney_xemera2_out_of_content
+            jump .ass
         "Cloaca." if persistent.bangok_cloacas:
-            jump todo_bangok_anoney_xemera2_out_of_content
+            jump .vag
         "Mouth." if bangok_four_xemera2_ws_mouth_unasked:
             $ bangok_four_xemera2_ws_mouth_unasked = False
             c "May I use your mouth?"
@@ -699,39 +701,103 @@ label bangok_anoney_xemera2_ws_relief:
         "Urethra.":
             jump .urethra
 
+    label .ass:
+        c "May I use your ass?"
+        Em ques b flip "If you so desire."
+        if persistent.bangok_cloacas:
+            m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her anal vent."
+        else:
+            m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her ass."
+        show emera bangok blush b flip with dissolve
+        m "Emera had a bemused look on her face as I reached down with my other hand and pushed my now lubricated dick into her urethra."
+        play soundloop "fx/faucet1.ogg" fadein 1.0
+        queue soundloop "fx/faucet2.ogg"
+        if bangok_anoney_xemera2_protection_dick == True:
+            m "After adjusting my position to get both of us comfortable, I released my bladder into the reservoir of the fresh condom, inflating it with my urine in her rear."
+        else:
+            m "After adjusting my position to get both of us comfortable, I released my bladder into her rear, spraying away my cum with warm urine."
+        $ renpy.pause (0.5)
+        Em laugh b flip "Mmm. That feels... warm. Certainly far from unpleasant."
+        stop soundloop fadeout 2.0
+        if bangok_anoney_xemera2_protection_dick == True:
+            m "When I was done, I slowly slid my penis free of the condom, leaving its overfilled reservoir within her rear, clenched shut by her anal sphincter."
+        else:
+            play sound "fx/uncork.ogg"
+            m "When I was done, I quickly pulled out."
+        stop soundloop fadeout 2.0
+        jump .done
+
+    label .vag:
+        if persistent.bangok_cloacas:
+            c "May I use your vagina?"
+        else:
+            c "May I use your cloaca?"
+        show emera laugh b flip with dissolve
+        m "Emera's expression changed to one both flustered and curious."
+        Em bangok blush b "Well... I suppose. If you so desire."
+
+        if persistent.bangok_cloacas == True:
+            m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her cloaca."
+            m "Reaching back I spread her slit easily to slide myself fully in."
+        else:
+            m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
+            m "Reaching back I spread her vaginal slit easily to slide myself fully in."
+        jump todo_bangok_anoney_xemera2_out_of_content
+
     label .urethra:
-    m "Remembering the discovery of where Emera's urethra was, and hoping that her hormones would still prevent any discomfort, I decided to relieve myself inside the dragon's bladder."
-    m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
-    if persistent.bangok_cloacas == True:
-        m "Reaching back I spread her slit easily and found her urethra exactly where I had remembered it."
-    else:
-        m "Reaching back I spread her vaginal slit easily and found her urethra exactly where I had remembered it."
-    show emera ques b flip
-    m "Emera had a confused look on her face before I reached down with my other hand and pushed my now lubrucated dick into her urethra"
-    m "I was dreading her reaction incase she had too much discomfort, however after waiting a few moments without her expressing being in pain I felt relieved that her hormones must still be working."
-    Em normal b flip "That feels... odd I have never come across records that have shown that place to be penetrated, however given the larger size of dragons and not wanting to cause pain to a mate it is obvious why."
-    c "I appologise, Emera. I need to use the restroom, however given the mess I did not want to leave evidence of our activities so I wanted to relive myself into your bladder."
-    c "It doesn't hurt?"
-    Em bangok blush b flip "No.. as I said it just feels odd. I would not like to be mated down there, even Earth dragons are not completely resistant in areas not expected to be mated. However I do understand your concern in sharing my desire to keep this private so I will allow you to proceed."
-    m "I continued to press further in, the lube from her vagina helping to quicken the journey."
-    m "I came to her sphincter seperating the enterence to her bladder and gently put pressure until the head of my dick pushed through."
-    show emera normal b flip
-    $ renpy.pause (0.5)
-    show emera frown b flip with dissolve
-    play sound "fx/bubbles.ogg"
-    $ renpy.pause (3.5)
-    play sound "fx/uncork.ogg"
-    show emera normal b flip with dissolve
-    m "Emera let out a gasp and i could tell this was uncomfortable for her. I quickly released my own bladder and when I was done, quickly pulled out."
-    c "Sorry."
-    show emera laugh b flip
-    m "I felt her rest one of her front paws pat me on my shoulder and I just laid a while, enjoying the warmth of her body heat."
-    Em normal b flip "If everything is done, then we ought to clean up, it is already very late and you will probably be wanting to back to your appartment"
-    play sound "fx/cabinet.ogg"
-    $ renpy.pause (0.5)
-    play sound "fx/rubb2.ogg"
-    m "Emera bought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until showering."
-    jump bangok_anoney_xemera2_conclusion
+        m "Remembering the discovery of where Emera's urethra was, I hoped that her hormones would still prevent any discomfort as came up with my idea."
+        c "Maybe... since you're so much larger than I am, I could urinate into your bladder?"
+        Em laugh b flip "Why... I have never heard of such a thing."
+        Em bangok blush b flip "I cannot say I am displeased with the idea... I am curious to see how it would feel."
+        if persistent.bangok_cloacas == True:
+            m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her cloaca."
+            m "Reaching back I spread her slit easily and found her urethra exactly where I had remembered it."
+        else:
+            m "Emera was still laying on her back and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
+            m "Reaching back I spread her vaginal slit easily and found her urethra exactly where I had remembered it."
+        show emera ques b flip
+        if bangok_anoney_xemera2_protection_dick == True:
+            m "Emera had a bemused look on her face as I reached down with my other hand and pushed my now lubricated dick into her urethra."
+        else:
+            m "Emera had a bemused look on her face as I reached down with my other hand and pushed my condom-wrapped dick into her urethra."
+        m "I was dreading her reaction in case she faced too much discomfort, however after waiting a few moments without her expressing being in pain I felt relieved that her hormones must still be working."
+        Em normal b flip "That feels... odd. I have never come across records that have shown that place to be penetrated, however given the larger size of dragons and not wanting to cause pain to a mate it is obvious why."
+        c "It doesn't hurt?"
+        Em bangok blush b flip "No.. as I said it just feels odd. I would not like to be mated down there; even Earth dragons are not completely resistant in areas not expected to be mated. However I do want you to proceed."
+        m "I continued to press further in, the lube from her vagina helping to quicken the journey."
+        m "I came to her sphincter seperating the enterence to her bladder. I gently put pressure until the head of my dick pushed through."
+        show emera normal b flip
+        $ renpy.pause (0.5)
+        show emera frown b flip with dissolve
+        m "Emera let out a gasp. I could tell from her face this was at least mildly uncomfortable for her."
+
+        play soundloop "fx/faucet1.ogg" fadein 1.0
+        queue soundloop "fx/faucet2.ogg"
+        if bangok_anoney_xemera2_protection_dick == True:
+            m "I quickly released my bladder into the reservoir of the fresh condom, inflating it within her bladder, rushing to finish my business."
+        else:
+            m "I quickly released my own bladder inside her, rushing to finish my business."
+        $ renpy.pause (1.5)
+        stop soundloop fadeout 2.0
+
+        if bangok_anoney_xemera2_protection_dick == True:
+            m "When I was done, I quickly began to slide my penis free of the condom, leaving its overfilled reservoir within her bladder, clenched shut by her muscles."
+        else:
+            play sound "fx/uncork.ogg"
+            m "When I was done, I quickly pulled out."
+        show emera normal b flip with dissolve
+        jump .done
+
+    label .done:
+        $ renpy.pause (0.5)
+        show emera laugh b flip with dissolve
+        m "I felt her rest one of her front paws pat me on my shoulder and I just laid a while, enjoying the warmth of her body heat."
+        Em normal b flip "If everything is done, then we ought to clean up. It is already very late and you will probably be wanting to return to your apartment."
+        play sound "fx/cabinet.ogg"
+        $ renpy.pause (0.5)
+        play sound "fx/rubb2.ogg"
+        m "Emera bought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until showering."
+        jump bangok_anoney_xemera2_conclusion
 
 
 label bangok_anoney_xemera2_satisfy_female:
