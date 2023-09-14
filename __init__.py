@@ -461,6 +461,12 @@ def add_side_images():
     renpy.exports.image('side ipsum normal bangok heady', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_heady.png")))
     renpy.exports.image('side ipsum happy bangok heady', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_heady_grin.png")))
 
+    def clip_emera_side_image(composite):
+        return im.Flip(im.Scale(im.Crop(composite, (0,0,500,600)), 250,300), horizontal=True)
+
+    renpy.exports.image('side emera bangok blush b', clip_emera_side_image("cr/bangok/emera_bangok_blush_b.png"))
+    renpy.exports.image('side emera bangok orgasm b', clip_emera_side_image("cr/bangok/emera_bangok_orgasm_b.png"))
+
 def add_scene_select():
     import four_scene_select as fss
 
