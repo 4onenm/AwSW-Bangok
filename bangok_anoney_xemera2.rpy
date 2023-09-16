@@ -450,7 +450,7 @@ label bangok_anoney_xemera2_emera:
     $ renpy.pause (3.0)
 
     if bangok_four_xipsum.unplayed == False:
-        if bangok_four_xipsum_vag_and_ass:
+        if bangok_four_xipsum.vag_and_ass == True:
             c "I understand that part of your studies in culture would also include the mating rituals of dragons. I have had the chance to have an encounter with a dragon with hemipenes. When mating happens are they both in use with one in each hole?"
             Em frown b "Do you really need to know the answer now of all times?"
             Em ques b "To satisfy your curiosity; although it is unusual to find a dragon with such an abnormality."
@@ -821,11 +821,11 @@ label bangok_anoney_xemera2_ws_relief:
         play sound "fx/purr.ogg" 
         if persistent.bangok_cloacas == True:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her cloaca."
-            m "Emera's cloaca was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had and pushed inwards." 
+            m "Emera's cloaca was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had, and pushed inwards." 
         else:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
-            m "Emera's vagina was still spread wide from her earlier activities. I stuck my dick in the mess at her entrance, evidence from the many orgasms that Emera had and pushed inwards."
-            jump todo_bangok_anoney_xemera2_out_of_content
+            m "Emera's vagina was still spread wide from her earlier activities. I stuck my dick in the mess at her entrance, evidence from the many orgasms that Emera had, and pushed inwards."
+        jump todo_bangok_anoney_xemera2_out_of_content
 
 
     label .urethra:

@@ -17,6 +17,7 @@ init python in bangok_four_xipsum:
     playerpiss = False
 
     took_ipsum_both = False
+    vag_and_ass = False
 
 
 label bangok_four_xipsum_gendercheck:
@@ -1164,6 +1165,7 @@ label bangok_four_xipsum_bedroom_start:
         c "Uh. Up and down from there."
         Ip normal "I am aware. Just getting positioned."
         label bangok_four_xipsum_vag_and_ass:
+        $ bangok_four_xipsum.vag_and_ass = True
         m "One warm cockhead prodded my slick folds, while his other, colder, lubricated tip pressed against my pucker."
         show ipsum think with dissolve
         m "There, he paused a moment. I felt his fingers of one hand prodding around my perenium and both his cocks."
