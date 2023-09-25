@@ -825,7 +825,22 @@ label bangok_anoney_xemera2_ws_relief:
         else:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
             m "Emera's vagina was still spread wide from her earlier activities. I stuck my dick in the mess at her entrance, evidence from the many orgasms that Emera had, and pushed inwards."
-        jump todo_bangok_anoney_xemera2_out_of_content
+        show emera bangok blush b flip with dissolve
+        play soundloop "fx/faucet1.ogg" fadein 2.0
+        queue soundloop "fx/faucet2.ogg"
+        if bangok_anoney_xemera2_protection_dick == True:
+            m "After adjusting my position to get both of us comfortable, I released my bladder into the reservoir of the condom, filling it with my urine in the soft, warm confines of her canal."
+        else:
+            m "After adjusting my position to get both of us comfortable, I released my bladder into her vagina, spraying away my cum within her body."
+        $ renpy.pause (0.5)
+        Em laugh b flip "That is a... unique feeling. Warm and rather pleasurable."
+        stop soundloop fadeout 2.0
+        if bangok_anoney_xemera2_protection_dick == True:
+            m "When I was done, I slowly slid my penis free of the condom, leaving its reservoir filled with warm urine within her vagina."
+        else:
+            m "When I was done, I held my position for a few moments, savoring the feeling of Emera's insides' wet embrace."
+            m "Then I slowly pulled out, wiping my tip on her outer lips to clean myself off as best as possible given our circumstances."
+        jump .done
 
 
     label .urethra:
@@ -1212,8 +1227,3 @@ label bangok_anoney_xemera2_conclusion:
     scene black with dissolvemed
     call _mod_incc from bangok_anoney_xemera2_mod_incc
     jump _mod_fixjmp
-
-label todo_bangok_anoney_xemera2_out_of_content:
-    play sound "fx/system3.wav"
-    s "Out of content. Rollback and save, or prepare to crash."
-    $ renpy.error("TODO: Out of content.")
