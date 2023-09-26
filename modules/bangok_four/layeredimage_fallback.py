@@ -1,6 +1,6 @@
 # This file is a backport of common/00layeredimage.rpy from Ren'Py version 8.1.0.
 
-# This version of this file is the initial backport by 4onen,
+# This version of this file is the initial backport by 4onenm,
 #  which may not include fixes and features as maintained in MagmaLink.
 
 import renpy
