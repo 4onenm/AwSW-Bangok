@@ -4067,7 +4067,21 @@ label bangok_four_bryce3_mctop_mcgoes_sloppy:
         transform_anchor True
         ease 0.8 rotate 20 xpos 0.93 ypos 1.3
     with None
-    m "Bryce folded his legs, "
+    m "Bryce folded his forelegs leaning foward in the sand. I gave him a firm slap on the ass with my dick, smearing around Maverick's cum as I teased the plates around Bryce's asshole."
+    c "You're so stretched out. I could probably fit three or four of me in there."
+    Br laugh flip "I did warn you what it'd be like after Maverick went first!"
+    m "I slid my hips between Bryce's legs, and paused to run the tip of my dick along his asshole. The dragon shivered with anticipation."
+    Br "I'm all yours now. Have at."
+    m "With a grin, I pressed forward and thrust into Bryce's cum-slicked hole, feeling the ripples of his muscles as his stretched insides failed to squeeze around my much smaller cock."
+    Br laugh flip "Well, at least you're not nearly as big!"
+    m "I laughed along with him and started fucking Bryce properly, making lewd wet noises my crotch spattered with the cum leftover by Maverick."
+    m "Bryce's ass was hot around my cock. Even though it wasn't tight enough to caress my member from all sides, I enjoyed the sensation of rubbing one way, then another along the slickened walls of his rectum."
+    m "I pulled his rear closer, hugging his tail high as I pressed flush against his body with each thrust."
+    m "Bryce looked back at me with a pleased smirk as I gave fucking his sloppy ass my all."
+
+    m "We continued like this for quite some time. Bryce's chest rested on the sand, the elbows of his forelegs splayed out to give deeper penetration. Despite his earlier teasing, he was moaning softly at each delicious thrust into that warm, sticky, enveloping hole of his."
+    m "Struggling to reach around the dragon's strong legs with one hand, I instead slipped it between us, using my fingers to tease the slit from which his cockhead poked out. Bryce gave a shudder at this attention, and as he felt me begin to stroke him slowly..."
+    jump todo_out_of_content_bangok_four_bryce3
 
 
 label bangok_four_bryce3_mctop_mouth:
