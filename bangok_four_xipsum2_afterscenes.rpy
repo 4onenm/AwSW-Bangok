@@ -860,6 +860,24 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
         $ renpy.pause(1.2)
         play soundloop "fx/bangok_poundofsalt.ogg" fadein 1.0
         m "Then he stopped and, after a moment to recover and readjust his position, began to fuck me again."
+        $ renpy.pause(1.2)
+        m "He took more than his fair share of thrusts, punishing my ass for his friend's cheating so much that I could tell he was planning to finish."
+        stop soundloop fadeout 0.4
+        $ renpy.pause(0.4)
+        m "Slipping all the way out for a moment, he pumped the loose ring of my sphincter with his tip for a moment, then pushed up again with his entire length, twitching."
+        play sound "fx/extinguish.ogg"
+        m "More dragon cum invaded my insides, joining the pool that flooded my body."
+        $ renpy.pause(0.4)
+        m "He pulled out, then his friend swapped into my sloppy hole."
+        play sound "fx/rub1.ogg"
+        queue sound "fx/extinguish.ogg"
+        m "At the new stranger's third thrust, he slammed into me savagely, pushing every inch inside until his pulses of release spurt into his friend's."
+        if persistent.bangok_inflation == True:
+            m "I shivered, ecstacy and longing building like lava along my stretched belly, causing my own shaft to twitch in Ipsum's ass."
+            c "(D-Damn him...)"
+        m "The two who'd shared me plugged me back up, leaving my intestines saturated with the waste of their little game."
+        m "I waited, wondering who my next stranger would be."
+        m "The sizes and shapes of all their shafts"
         jump todo_out_of_content_bangok_four_xipsum_sharing3
     else:
         m "The one in my pussy followed, sliding partway out at someone's tug, before slipping the rest of the way under gravity and the slickness of my arousal alone."
