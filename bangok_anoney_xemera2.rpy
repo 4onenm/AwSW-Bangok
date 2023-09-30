@@ -204,11 +204,17 @@ label bangok_anoney_xemera2_emera:
     $ renpy.pause (1.5)
     play sound "fx/undress.ogg"
     Em laugh b "How exotic. I always wondered what was under the cloth layers that you wear."
-    Em ques b "I am sorry but we were not sent any information on gender identifying features; what form of genitalia do you...?"
+    if bangok_four_playerhasdick is None:
+        Em ques b "I am sorry but we were not sent any information on gender identifying features; what form of genitalia do you...?"
+    elif bangok_four_playerhasdick == True:
+        jump .male
+    elif bangok_four_playerhasdick == False:
+        jump .female
 
     menu:
-        "Male.":
+        "A penis.":
             $ bangok_four_playerhasdick = True
+            label .male:
             if persistent.bangok_cloacas == True:
                 Em mean b "Fascinating you have your mating tool just dangling out like that. It looks so small and shriveled and floppy. Do you not have a slit to protect it? And I do not see your anal vent either..."
                 c "We don't have cloacae, so our genitalia and anal openings are kept separate."
@@ -216,8 +222,9 @@ label bangok_anoney_xemera2_emera:
                 Em mean b "Fascinating you have your mating tool just dangling out like that. It looks so small and shriveled and floppy. Do you not have a slit to protect it?"
                 c "No, we do not have slits for our genitals."
 
-        "Female.":
+        "A vagina.":
             $ bangok_four_playerhasdick = False
+            label .female:
             if persistent.bangok_cloacas == True:
                 Em "Fascinating, but I believe I spotted two openings in between your legs?"
                 c "We don't have cloacae, so our genitalia and anal openings are kept separate."
