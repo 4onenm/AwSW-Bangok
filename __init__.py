@@ -305,6 +305,23 @@ def remy_c4postsections(ml):
         .link_behind_from('bangok_four_remy_c4postsections_epilogue_admin')
     )
 
+def remy4(ml):
+    kiss_choice = ( ml.find_label('remy4skip2')
+        .search_if()
+        .branch_else()
+        .search_menu("Look away.")
+    )
+    ( kiss_choice
+        .branch()
+        .search_say("Well, it's getting late, so I should probably go now.")
+        .link_from('bangok_four_remy4_canon_shouldprobablygo')
+    )
+    ( kiss_choice
+        .branch("Kiss him.")
+        .search_say("Maybe I shouldn't wear the tie anymore if this is what happens when I take it off.")
+        .hook_to('bangok_four_remy4_more', condition=make_dev('persistent.nsfwtoggle == True'))
+    )
+
 
 def xdamion(ml):
     ( ml.find_label('chap2facility')
@@ -437,6 +454,7 @@ def link_scenes(ml):
     bryce_x_sebastian(ml)
     lorem4(ml)
     remy_c4postsections(ml)
+    remy4(ml)
     xdamion(ml)
     xipsum(ml)
     xipsum2(ml)
@@ -568,11 +586,7 @@ def add_scene_select(ml):
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-<<<<<<< HEAD
     version = "2023-11-23-child_of_31dcc39"
-=======
-    version = "2023-09-29-child_of_69e0a46"
->>>>>>> 5d8cfb6 (common: Rearrange imports and remove unused to improve stability.)
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
