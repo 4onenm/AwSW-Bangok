@@ -1,3 +1,4 @@
+# pylint: disable=import-error
 from renpy.display.core import Displayable
 from renpy.display.layout import Null
 from renpy.display import im

@@ -3,9 +3,10 @@
 # This version of this file is the initial backport by 4onenm,
 #  which may not include fixes and features as maintained in MagmaLink.
 
+# pylint: disable=import-error
+
 import renpy
 from renpy.store import Transform, ConditionSwitch, Fixed, Null, config, Text, eval, At
-from collections import OrderedDict
 
 # This is the default value for predict_all given to conditions.
 predict_all = False

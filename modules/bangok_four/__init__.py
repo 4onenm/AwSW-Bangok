@@ -1,3 +1,4 @@
+# pylint: disable=import-error
 import renpy
 import renpy.display.im as im
 from renpy.display.behavior import ImageButton

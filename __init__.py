@@ -1,24 +1,21 @@
+# pylint: disable=import-error
 import renpy.exports
-import renpy.display.im as im
-from renpy.display.image import ImageReference
 
 from modloader import modinfo
 from modloader.modclass import Mod, loadable_mod
-
-import jz_magmalink as ml
 
 def make_dev(cond):
     return '('+cond+') and (persistent.bangok_dev == True)'
 
 
-def adine1():
+def adine1(ml):
     ( ml.find_label('nextsc')
         .search_say("Truth or dare.")
         .hook_to('bangok_four_adine1', condition=make_dev('persistent.nsfwtoggle == True'))
     )
 
 
-def adine4():
+def adine4(ml):
     ( ml.find_label('a4shower')
         .search_say("Is that... are you purring?")
         .hook_to('bangok_four_adine4_shower_purring', condition=('persistent.nsfwtoggle == True and bangok_four_playerhasdick != False'))
@@ -29,7 +26,7 @@ def adine4():
     )
 
 
-def anna12():
+def anna12(ml):
     # Anna1
     ml.find_label('_call_skiptut_7') \
         .search_menu("Yes. I want to skip ahead.") \
@@ -153,13 +150,13 @@ def anna12():
         .link_from('bangok_four_anna2_lab_normal_hookupover_end')
     )
 
-def anna4():
+def anna4(ml):
     ml.find_label("a4romance") \
         .search_menu("If you say so.").branch() \
         .search_say("Alright, alright. So fussy.") \
         .hook_to("bangok_anon_anna4_skipmenu", condition="persistent.nsfwtoggle == True")
 
-def anna_x_damion():
+def anna_x_damion(ml):
     ( ml.find_label('chap2facility')
         .search_say("(Reza was allegedly here at some point. Maybe I should ask Anna.)")
         .hook_to('bangok_four_annaxdamion', condition=("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
@@ -167,7 +164,7 @@ def anna_x_damion():
         .link_behind_from('bangok_four_annaxdamion_canon_questions')
     )
 
-def bryce1_afterparty():
+def bryce1_afterparty(ml):
     ml.find_label('_call_skiptut_8') \
         .search_menu("Yes. I want to skip ahead.") \
         .branch() \
@@ -200,7 +197,7 @@ def bryce1_afterparty():
         .link_from('bangok_four_bryce1_bryce2fix_end')
 
 
-def bryce2_feet():
+def bryce2_feet(ml):
 
     ( ml.find_label('_call_skiptut_6')
         .search_menu("Yes. I want to skip ahead.")
@@ -229,7 +226,7 @@ def bryce2_feet():
     )
 
 
-def bryce3_afterparty():
+def bryce3_afterparty(ml):
     ( ml.find_label('_call_skiptut_26')
         .search_menu("Yes. I want to skip ahead.")
         .branch()
@@ -269,7 +266,7 @@ def bryce3_afterparty():
     clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
 
-def bryce_x_sebastian():
+def bryce_x_sebastian(ml):
     ( ml.find_label('c3go')
         .search_python('renpy.pause (0.5)')
         .hook_to('bangok_four_brycexsebastian', condition=("(persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)"))
@@ -284,7 +281,7 @@ def kalinth_c3arc(ml):
     )
 
 
-def lorem4():
+def lorem4(ml):
     ( ml.find_label('lorem4skip')
         .search_say("You've made me feel a lot better, though.")
         .hook_to('bangok_four_lorem4_feelbetter', condition='persistent.nsfwtoggle==True')
@@ -300,7 +297,7 @@ def lorem4():
     )
 
 
-def remy_c4postsections():
+def remy_c4postsections(ml):
     ( ml.find_label('c4postsections')
         .search_say("I'll take care of the remaining tasks, so you can take the rest of the day off. I'm sure you have things to do other than helping the police department.")
         .hook_to('bangok_four_remy_c4postsections_sebintro', condition=make_dev('(persistent.nsfwtoggle == True) and (c4libraryavailable == True) and (remy3unplayed == False) and (remystatus == "good" or remystatus == "neutral")'))
@@ -309,7 +306,7 @@ def remy_c4postsections():
     )
 
 
-def xdamion():
+def xdamion(ml):
     ( ml.find_label('chap2facility')
         .search_say("And you are?")
         .hook_to('bangok_four_xdamion', condition=('(persistent.nsfwtoggle==True)'))
@@ -325,7 +322,7 @@ def xdamion():
     )
 
 
-def xipsum():
+def xipsum(ml):
     ( ml.find_label('lorem2')
         .search_if('persistent.lorem2skip == True')
         .branch()
@@ -368,7 +365,7 @@ def xipsum():
     )
 
 
-def xipsum2():
+def xipsum2(ml):
     ml.add_answ_machine_message('bangok_four_xipsum2_answ_machine', condition=make_dev('persistent.nsfwtoggle == True and bangok_four_xipsum.unplayed == False and (loremstatus == "good" or loremstatus == "neutral")'), chapters=[4])
 
     ( ml.find_label('chapter4chars2')
@@ -403,14 +400,14 @@ def xemera2(ml):
     )
 
 
-def xkatsu():
+def xkatsu(ml):
     ( ml.find_label('katsuskip')
         .search_if('persistent.playedkatsu == False')
         .hook_to('bangok_four_xkatsu', condition='persistent.nsfwtoggle == True', return_link = False)
     )
 
 
-def xsebastian():
+def xsebastian(ml):
     ( ml.find_label('sebastianskip')
         .search_menu("It's pretty cold.")
         .branch()
@@ -421,36 +418,36 @@ def xsebastian():
     )
 
 
-def modsettings_firstboot():
+def modsettings_firstboot(ml):
     ( ml.find_label('splashscreen')
         .search_python("renpy.pause(1.6, hard=True)")
         .hook_to('bangok_four_mod_firstboot', condition='persistent.bangok_four_menu_firstboot_complete != True')
     )
 
 
-def link_scenes():
-    adine1()
-    adine4()
-    anna12()
-    anna4()
-    anna_x_damion()
-    bryce1_afterparty()
-    bryce2_feet()
-    bryce3_afterparty()
-    bryce_x_sebastian()
-    kalinth_c3arc(ml)
-    lorem4()
-    remy_c4postsections()
-    xdamion()
-    xipsum()
-    xipsum2()
+def link_scenes(ml):
+    adine1(ml)
+    adine4(ml)
+    anna12(ml)
+    anna4(ml)
+    anna_x_damion(ml)
+    bryce1_afterparty(ml)
+    bryce2_feet(ml)
+    bryce3_afterparty(ml)
+    bryce_x_sebastian(ml)
+    lorem4(ml)
+    remy_c4postsections(ml)
+    xdamion(ml)
+    xipsum(ml)
+    xipsum2(ml)
     xemera2(ml)
-    xkatsu()
-    xsebastian()
-    modsettings_firstboot()
+    xkatsu(ml)
+    xsebastian(ml)
+    modsettings_firstboot(ml)
 
 
 def add_side_images():
+    import renpy.display.im as im
     def clip_anna_side_image(imagefile):
         return im.Flip(im.Scale(im.Crop(imagefile,(30,35,500,600)),250,300),horizontal=True)
 
@@ -476,7 +473,7 @@ def add_side_images():
     renpy.exports.image('side emera bangok blush b', clip_emera_side_image("cr/bangok/emera_bangok_blush_b.png"))
     renpy.exports.image('side emera bangok orgasm b', clip_emera_side_image("cr/bangok/emera_bangok_orgasm_b.png"))
 
-def add_scene_select():
+def add_scene_select(ml):
     import four_scene_select as fss
 
     bangok="BangOk"
@@ -571,7 +568,11 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
+<<<<<<< HEAD
     version = "2023-11-23-child_of_31dcc39"
+=======
+    version = "2023-09-29-child_of_69e0a46"
+>>>>>>> 5d8cfb6 (common: Rearrange imports and remove unused to improve stability.)
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
@@ -581,12 +582,13 @@ class BangOkMod(Mod):
         if modinfo.has_mod("Side Images"):
             add_side_images()
 
+        import jz_magmalink as ml
         ml.register_mod_settings(cls, screen='bangok_modsettings')
 
-        link_scenes()
+        link_scenes(ml)
 
         if modinfo.has_mod("Scene Select"):
-            add_scene_select()
+            add_scene_select(ml)
 
     @staticmethod
     def mod_complete():

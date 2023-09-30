@@ -1,3 +1,4 @@
+# pylint: disable=import-error
 import renpy.exports
 from renpy.exports import Displayable, render, Render, redraw, get_mouse_pos
 import pygame
