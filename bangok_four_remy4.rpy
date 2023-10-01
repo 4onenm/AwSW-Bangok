@@ -190,7 +190,24 @@ label bangok_four_remy4_tongue_path:
     c "So... different..."
     m "I groaned at the sensations he was causing, my body tensing up as he focused more of his attention on the sensitive underside of my cockhead."
     m "Then, eager for more, I guided him the rest of the way to my base, feeling his snout against my groin and his chin against my balls."
-    m "He licked at my shaft's full length, tasting every inch as he went down. When he had fully explored all that was in his mouth, he opened a little wider and"
+    m "He licked at my shaft's full length, tasting every inch as he went down. When he had fully explored all that was in his mouth, he opened a little wider and extended his tongue to begin gently exploring my balls."
+    c "Remy..."
+    m "I couldn't help but moan at the sight of him so intent on pleasing me like this. He looked up from what he was doing, his eyes full of concern for any discomfort I might be experiencing."
+    c "Don't stop."
+    m "Pushing and pulling him by his horns, I began to gently pump his scaly lips up and down my shaft with short, teasing strokes."
+    m "His tongue continued to trace lazy patterns along the underside of my member, causing me to squirm slightly in response and pant with need."
+    m "Wanting to draw this out, I pulled him off me completely, then set my saliva-slicked member atop his blushing snout."
+    m "He continued to try to explore me, licking and nibbling at my balls with his tongue and lips, then sucking them into his mouth and gently massaging them with his tongue."
+    m "Feeling my balls grow heavy with the need to release their contents, I decided to take matters into my own hands."
+    m "Gently pulling away from his mouth, I began to jack off my shaft, pausing every now and then as he gave the tip or my balls a lick with his tongue."
+    m "My body tensed up as I neared my climax, my breath coming in ragged, happy gasps as I tried to hold back."
+    m "But then I couldn't. With a groan of relief, I released my load into his mouth and onto his face, spurting gooey ropes of cum over his snout and tongue."
+    m "He froze up, blushing furiously as I graced his face with my appreciation."
+    m "Then, when I had run dry, he swirled what had landed in his mouth on his tongue, licking a little more from the tip of his snout."
+    Ry shy b "You... you taste a little saltier than we do."
+    # Kiss him
+    m "I laughed, then slipped forward off the couch to press my lips against his. Our tongues met, trading a little in my taste, and I hugged him tightly, his wings flapping helplessly as he struggled to escape my embrace."
+    m "When we finally broke the kiss, he was panting with need, face still glistening with some of my cum."
     jump todo_out_of_content_bangok_four_remy4
 
 
