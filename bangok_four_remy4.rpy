@@ -79,14 +79,7 @@ label bangok_four_remy4_more:
             $ renpy.pause (2.0)
             $ remystatus = "bad"
             $ remyscenesfinished = 4
-            if chapter4unplayed == False:
-                jump chapter4chars
-            elif chapter3unplayed == False:
-                jump chapter3chars
-            elif chapter2unplayed == False:
-                jump chapter2chars
-            else:
-                jump chapter1chars
+            jump _mod_fixjmp
 
 
     play sound "fx/kiss.wav"
@@ -173,9 +166,18 @@ label bangok_four_remy4_more:
             $ renpy.pause (0.5)
 
     if bangok_four_remy4_store.path == "tongue":
-        jump bangok_four_remy4_tongue_path
+        if bangok_four_playerhasdick == True:
+            if bangok_four_remy4_store.protection == True:
+                jump todo_out_of_content_bangok_four_remy4
+                # jump bangok_four_remy4_male_protected_tongue_path
+            else:
+                jump bangok_four_remy4_male_unprotected_tongue_path
+        else:
+                jump bangok_four_remy4_female_tongue_path
 
-label bangok_four_remy4_tongue_path:
+    jump todo_out_of_content_bangok_four_remy4
+
+label bangok_four_remy4_male_unprotected_tongue_path:
     m "Taking my own shaft in hand, I sat at the edge of the armchair at the end of the coffee table, pushing the table out of the way a little with my foot so Remy could better access my body."
     m "Rolling off the couch, Remy approached me slowly, his eyes never leaving mine as he lowered himself onto crossed forelegs on the carpet in front of me."
     m "He eyed my erection with trepidation, comparing my human member's size to his own draconic expectations. I couldn't help but chuckle a little at his adorable expression."
@@ -205,9 +207,103 @@ label bangok_four_remy4_tongue_path:
     m "He froze up, blushing furiously as I graced his face with my appreciation."
     m "Then, when I had run dry, he swirled what had landed in his mouth on his tongue, licking a little more from the tip of his snout."
     Ry shy b "You... you taste a little saltier than we do."
-    # Kiss him
-    m "I laughed, then slipped forward off the couch to press my lips against his. Our tongues met, trading a little in my taste, and I hugged him tightly, his wings flapping helplessly as he struggled to escape my embrace."
-    m "When we finally broke the kiss, he was panting with need, face still glistening with some of my cum."
+    menu:
+        "Kiss him":
+            m "I laughed, then slipped forward off the couch to press my lips against his. Our tongues met, trading a little in my taste, and I hugged him tightly, his wings flapping helplessly as he struggled to escape my embrace."
+            m "Tasting the mix of salty and sweet on his tongue, I knew I wanted more of him."
+            m "When we finally broke the kiss, he was panting with need, face still glistening with some of my cum."
+        "Compliment him":
+            c "That was amazing. You're amazing."
+            m "Embarrassed and yet pleased by my compliment, he looked away."
+            c "I hope I can do nearly as well."
+            m "He blushed harder and nodded."
+       "Taste your cum.":
+            m "Reaching forward, I scooped up some of the cum still clinging to his snout and brought it to my lips."
+            m "With a small nod of approval, I swallowed it down, savoring the flavor of our exchange."
+            c "Now I can compare with yours."
+    jump todo_out_of_content_bangok_four_remy4
+
+label bangok_four_remy4_female_tongue_path:
+    m "I sat at the edge of the armchair at the end of the coffee table, pushing the table out of the way a little with my foot so Remy could better access my body."
+    m "Rolling off the couch, Remy approached me slowly, his eyes never leaving mine as he lowered himself onto crossed forelegs on the carpet in front of me."
+    m "He eyed my vulva with trepidation, comparing my human opening's size to his own draconic expectations. I couldn't help but chuckle a little at his adorable expression."
+    Ry shy b "More tongue, you said?"
+    m "Lifting his chin with one hand, I gave his snout a soft pet with the other."
+    c "Yes, right down here."
+    m "Gently, I guided him down to my crotch, feeling his warm breath against my mons."
+    m "Then he moved forward himself, nestling his scaly snout between my thighs. My hips twitched at the contact, my breath catching as he began to explore my folds with his tongue."
+    m "His rough, hot tongue slid across my inner labia, tracing the outer surface of my vulva before delving deeper inside."
+    c "Remy..."
+    m "The sensation of his tongue sliding into me caused my body to respond almost immediately, my muscles tightening and my breath hitching as I tried to control my reactions."
+    m "His long, dexterous tongue lapped at my inner walls, discovering new places to tickle my nerves."
+    m "Feeling my body arch towards him, I reached down and guided his head further into place, wanting more."
+    m "He obliged, pressing his snout against my clit while continuing to lap at my juices. My body shivered with pleasure, my hips rising and falling to meet the rhythm of his tongue."
+    m "Every once in a while, he'd pull away, looking up at me, clearly seeking guidance on what I liked."
+    c "Keep going."
+    m "He resumed his ministrations, his tongue flicking and probing my most intimate areas, drawing more noises of pleasure from me."
+    m "As he focused more of his attention on my clitoris, my body convulsed, shuddering from the stimulation his tongue provided."
+    c "T-Too much."
+    m "He stopped, looking up from what he was doing, his eyes full of concern for any discomfort I might be experiencing."
+    c "No, I liked it. Just... slower."
+    m "He nodded, slowing his movements and focusing on the area around my clit instead of directly on it. Then, he returned to deeper exploration of my depths, using the flat part of his tongue to massage my insides."
+    m "I groaned, feeling my orgasm building within me."
+    m "Finally, I cried out in ecstasy, my body shaking uncontrollably as wave after wave of pleasure washed through me. Even as I came down from my peak, Remy kept licking, prolonging my pleasure until I begged him to stop."
+    m "I collapsed back against the chair, panting heavily as he retracted his snout from between my legs."
+    m "Blinking up at me, his snout shiny with my fluids, he blushed furiously."
+    m "After a moment, he pulled further away, cleaning his tongue on the roof of his mouth as I panted."
+    m "He looked embarrassed, but also pleased with the result of his efforts."
+    Ry shy b "How did that feel?"
+    menu:
+        "Kiss him":
+            m "I laughed, then slipped forward off the couch to press my lips against his. Our tongues met, trading a little in my taste, and I hugged him tightly, his wings flapping helplessly as he struggled to escape my embrace."
+            m "When we finally broke the kiss, he was panting with need, face still glistening with my fluids."
+        "Compliment him":
+            c "That was amazing. You're amazing."
+            m "Embarrassed and yet pleased by my compliment, he looked away."
+            c "I hope I can do nearly as well."
+            m "He blushed harder and nodded."
+       "Taste your fluids.":
+            m "Reaching forward, I spread some of the fluids still clinging to his snout onto my fingers, then brought it to my lips."
+            m "With a small nod of approval, I slurped it down, savoring the flavor of my own essence."
+            c "Now I can compare with yours."
+    jump todo_out_of_content_bangok_four_remy4
+
+label bangok_four_remy4_suck_him:
+    m "With a gentle push, I guided him to lie flat on his back."
+    m "The sight of his throbbing erection standing tall and proud made my heart skip a beat."
+    Ry shy b "Are you... going to...?"
+    c "If you want me to."
+    m "Wrapping my fingers around his shaft, I began to stroke him in time with the rhythm of his heartbeat, watching my fingers glide up and down his length over all his copious lubrication."
+    m "My own desire grew the more I saw the pleasure I caused him, his pupils dilating and tongue flickering against his upper lip."
+    m "Finally, I paused, looking up into his eyes and smiling as I spoke."
+    c "Ready?"
+    Ry smile b "Y-yes."
+    m "I pressed my lips against his tip, immediately savoring the sweet taste of his pre and the warmth of his body, his veins throbbing beneath my touch."
+    m "Swirling my tongue around his girth, I took in as much of him as I could, wanting to savor the moment and taste him properly."
+    m "He moaned softly, his hips twitching a little as his erection jerked with pleasure from my ministrations."
+    c "Keep going?"
+    Ry smile b "... Yes."
+    m "Nodding, I retreated from his tip, then settled into a slow rhythm of sucking and swallowing, bobbing my head in time to his heartbeat while maintaining eye contact with him throughout."
+    m "Every few moments, I glanced up to meet his gaze, smiling at him and giving him the occasional reassuring pat on his thigh."
+    m "Eventually, his body stiffened and he cried out softly, filling my throat with his hot seed. I choked, swallowing quickly as much as I could before pulling away entirely."
+    m "Collapsing beside him, I wiped the corner of my mouth with the back of my hand, laughing lightly at the absurdity of the situation."
+    m "He lay there beside me, panting heavily, his snout bright red where my cum had dripped from his nose and mouth."
+    Ry shy b "Did... did you enjoy it?"
+    m "Burying my head in my arm, I smiled."
+    c "Absolutely."
+    m "Our hearts pounded together, sweat covering our naked bodies in an intimate bond of shared lust and emotion."
+    Ry shy b "Can I... can I get inside of you now?"
+    m "Raising my head, I looked at him, seeing the vulnerability in his eyes and the eagerness in his voice."
+    c "Please."
+    m "He carefully positioned himself behind me, sliding a long, cool finger into my entrance."
+    m "I gasped, my body shivering from the sudden chill."
+    Ry shy b "Sorry... It's been so long, I forgot how cold it feels like this."
+    m "Shrugging, I turned to look at him with a grin."
+    c "Don't worry about it."
+    m "Positioning ourselves once more, I braced my arms and knees against the floor and waited for him to enter me."
+    m "Slowly, I felt the head of his penis press against my opening."
+    Ry shy b "Am I... am I hurting you?"
+    m "No,"
     jump todo_out_of_content_bangok_four_remy4
 
 
