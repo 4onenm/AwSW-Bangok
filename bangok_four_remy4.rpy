@@ -173,7 +173,7 @@ label bangok_four_remy4_more:
             else:
                 jump bangok_four_remy4_male_unprotected_tongue_path
         else:
-                jump bangok_four_remy4_female_tongue_path
+            jump bangok_four_remy4_female_tongue_path
 
     jump todo_out_of_content_bangok_four_remy4
 
@@ -217,7 +217,7 @@ label bangok_four_remy4_male_unprotected_tongue_path:
             m "Embarrassed and yet pleased by my compliment, he looked away."
             c "I hope I can do nearly as well."
             m "He blushed harder and nodded."
-       "Taste your cum.":
+        "Taste your cum.":
             m "Reaching forward, I scooped up some of the cum still clinging to his snout and brought it to my lips."
             m "With a small nod of approval, I swallowed it down, savoring the flavor of our exchange."
             c "Now I can compare with yours."
@@ -262,7 +262,7 @@ label bangok_four_remy4_female_tongue_path:
             m "Embarrassed and yet pleased by my compliment, he looked away."
             c "I hope I can do nearly as well."
             m "He blushed harder and nodded."
-       "Taste your fluids.":
+        "Taste your fluids.":
             m "Reaching forward, I spread some of the fluids still clinging to his snout onto my fingers, then brought it to my lips."
             m "With a small nod of approval, I slurped it down, savoring the flavor of my own essence."
             c "Now I can compare with yours."
