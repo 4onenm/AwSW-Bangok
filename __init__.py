@@ -276,6 +276,14 @@ def bryce_x_sebastian():
     )
 
 
+def kalinth_c3arc(ml):
+    ( ml.find_label('nohelp')
+        .search_say("Anyway, you can find all the files here. I'll leave the rest to you.")
+        .search_python('renpy.pause (0.3)')
+        .hook_to('bangok_four_kalinth_c3arc', condition=make_dev('persistent.nsfwtoggle == True'))
+    )
+
+
 def lorem4():
     ( ml.find_label('lorem4skip')
         .search_say("You've made me feel a lot better, though.")
@@ -430,6 +438,7 @@ def link_scenes():
     bryce2_feet()
     bryce3_afterparty()
     bryce_x_sebastian()
+    kalinth_c3arc(ml)
     lorem4()
     remy_c4postsections()
     xdamion()
@@ -562,7 +571,7 @@ def add_scene_select():
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2023-09-26-child_of_f0eb8e6"
+    version = "2023-11-23-child_of_31dcc39"
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]

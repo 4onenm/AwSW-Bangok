@@ -368,6 +368,135 @@ init:
     image emera bangok orgasm b = "cr/bangok/emera_bangok_orgasm_b.png"
     image emera bangok orgasm b flip = im.Flip("cr/bangok/emera_bangok_orgasm_b.png", horizontal=True)
 
+    image kalinth bangok normal blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok normal blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+    image kalinth bangok surprise = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+    )
+    image kalinth bangok surprise flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+    ),horizontal=True)
+    image kalinth bangok surprise blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok surprise blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+    image kalinth bangok smile = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+    )
+    image kalinth bangok smile flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+    ),horizontal=True)
+    image kalinth bangok smile blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok smile blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+    image kalinth bangok furtive blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (160,312),"cr/bangok/kalinth_furtiveeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok furtive blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (160,312),"cr/bangok/kalinth_furtiveeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+    image kalinth bangok smilewink blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (210,297),"cr/bangok/kalinth_leftclosedeye.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok smilewink blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (210,297),"cr/bangok/kalinth_leftclosedeye.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+    image kalinth bangok eyesclosed blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (157,297),"cr/bangok/kalinth_closedeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok eyesclosed blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (157,297),"cr/bangok/kalinth_closedeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+    image kalinth bangok smile eyesclosed blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (157,297),"cr/bangok/kalinth_closedeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok smile eyesclosed blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (157,297),"cr/bangok/kalinth_closedeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+    image kalinth bangok smile eyeslidded blush = im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (157,297),"cr/bangok/kalinth_liddedeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    )
+    image kalinth bangok smile eyeslidded blush flip = im.Flip(im.Composite(
+        (1134, 950),
+        (0,0),"cr/kalinth_normal.png",
+        (161,282),"cr/bangok/kalinth_browrelaxed.png",
+        (175,352),"cr/bangok/kalinth_smile.png",
+        (157,297),"cr/bangok/kalinth_liddedeyes.png",
+        (134,321),"cr/bangok/kalinth_blush.png",
+    ),horizontal=True)
+
     image lorem happy bangok shy = "cr/bangok/lorem_happy+blush.png"
     image lorem happy bangok shy flip = im.Flip("cr/bangok/lorem_happy+blush.png", horizontal=True)
     image lorem happy bangok shy2 = "cr/bangok/lorem_happy2+blush.png"
