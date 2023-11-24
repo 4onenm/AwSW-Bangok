@@ -1,6 +1,7 @@
 init python in bangok_four_kalinth:
-    have_number = False
-    protection = None
+    have_number = False # type: bool
+    protection = None # type: Optional[bool]
+    ws_position = None # type: Optional[Literal["mouth", "inside"]]
 
 label bangok_four_kalinth_c3arc_bangnokay:
     show kalinth at left with ease
@@ -150,7 +151,7 @@ label bangok_four_kalinth_c3arc_male:
 
     label bangok_four_kalinth_c3arc_male_position_menu:
     menu:
-        "Ask about protection." if bangok_four_kalinth.protection is None:
+        "Ask about protection." if bangok_four_kalinth.protection is None and bangok_four_kalinth.ws_position is None:
             c "Do you have any protection?"
             Kl bangok surprise blush flip "We're different species, so pregnancy isn't a concern."
             Kl bangok normal blush flip "But I do think I remember where Bryce keeps some condoms, if you'd like to use one."
@@ -169,10 +170,71 @@ label bangok_four_kalinth_c3arc_male:
                 "Go without.":
                     $ bangok_four_kalinth.protection = False
             jump bangok_four_kalinth_c3arc_male_position_menu
+        "Ask about a restroom." if persistent.bangok_watersports and (not bangok_four_kalinth.protection) and (not bangok_four_kalinth.ws_position):
+            m "Standing erect and nude next to her, I suddenly realized my bladder was rather full."
+            c "Er... I should probably use the restroom first."
+            Kl bangok surprise blush flip "Oh, wow. Your timing is worse than... well, never mind."
+            m "The look on her face was one of disappointment."
+            Kl bangok normal blush flip "I suppose I can wait a little longer."
+            Kl bangok smilewink blush flip "Unless you'd like to use me as a urinal?"
+            menu:
+                "Sure.":
+                    pass
+                "No thanks.":
+                    c "I'm not sure what that entails, but I think I'll pass."
+                    show kalinth normal flip with dissolve
+                    m "She pouted."
+                    Kl "Well, hurry back."
+                    show black with dissolve
+                    m "I threw my pants and shirt on haphazardly, struggling to fit my erection beneath my waistband, then hurried to the restrooms."
+                    m "A few minutes later I returned to the office."
+                    hide black
+                    show kalinth bangok furtive blush flip
+                    with dissolve
+                    Kl "Done ruining the mood?"
+                    c "Sorry."
+                    jump bangok_four_kalinth_c3arc_male_position_menu
+
+            c "I didn't think you'd be into something like that. Sure."
+            Kl bangok smile blush flip "Mm. Well, we don't want to make a mess on Bryce's floor. I could drink it down right now..."
+            Kl "Or if you're into it you could piss it into me while you're inside, leave me even more dripping wet between the legs..."
+            menu:
+                "Mouth, now.":
+                    $ bangok_four_kalinth.ws_position = "mouth"
+                    show kalinth:
+                        pause 0.5
+                        yanchor 1.0
+                        ease 0.5 yanchor 0.2
+                        yanchor 0.2
+                    with None
+                    m "I rested my hand on one side of her snout, then guided it down to my erection."
+                    m "She eagerly wrapped her scaly lips around me, but didn't slurp or suck as she waited for me to urinate into her mouth."
+                    m "It was a strange and exciting sensation... I could feel the heat from her breath against my shaft, and the wetness of her tongue as she waited for me to let go."
+                    show black with dissolve
+                    m "I closed my eyes, trying to relax, and let my bladder empty into her mouth, feeling the familiar rush of relief as my member began to disgorge a steady stream of piss against the back of Kalinth's throat."
+                    m "She swallowed it down eagerly, not once pulling away from me until I had finished."
+                    hide black
+                    show kalinth bangok smile eyesclosed blush flip
+                    with dissolve
+                    m "The sight of her swallowing every last drop left me with an erection that was even harder than before, and she seemed to be enjoying it as well from the way she licked her lips."
+                    Kl bangok smile blush flip "Mmm... you taste interesting."
+                    m "She gave my member a slow lick, from balls to tip, then stepped back with an amused smirk."
+                    show kalinth:
+                        yanchor 0.2
+                        ease 0.5 yanchor 1.0
+                        yanchor 1.0
+                    with None
+                    Kl "I've never tasted a human's piss before. Now I'm curious what your cum tastes like."
+                    c "I'm sure you'll find out soon enough."
+                "Inside.":
+                    $ bangok_four_kalinth.ws_position = "inside"
+                    c "Inside."
+                    m "I felt my erection twitch in anticipation."
+                    Kl bangok smile blush flip "Then let's get started."
+            jump bangok_four_kalinth_c3arc_male_position_menu
         "Let her take charge.":
             jump bangok_four_kalinth_c3arc_male_mcbottom
         "Take charge yourself.":
-            jump todo_out_of_content_bangok_four_kalinth
             jump bangok_four_kalinth_c3arc_male_mctop
         "Ask her to turn around.":
             jump bangok_four_kalinth_c3arc_male_doggy
@@ -223,27 +285,52 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
         ease 0.8 ypos 1.01
         ease 1.2 ypos 1.2
     with None
-    if persistent.bangok_cloacas:
-        m "Her breathing caught and she closed her eyes as her cloaca slid up to my tip again, then she began to lower herself down, enveloping my erection with the warmth of her draconic anatomy."
+    if bangok_four_kalinth.protection:
+        if persistent.bangok_cloacas:
+            m "Her breathing caught and she closed her eyes as her cloaca slid up to my tip again, then she began to lower herself down, enveloping my condom-wrapped erection with the warmth of her draconic anatomy."
+        else:
+            m "Her breathing caught and she closed her eyes as her labia slid up to my tip again, then she began to lower herself down, enveloping my condom-wrapped erection with the warmth of her draconic pussy."
     else:
-        m "Her breathing caught and she closed her eyes as her labia slid up to my tip again, then she began to lower herself down, enveloping my erection with the warmth of her draconic pussy."
+        if persistent.bangok_cloacas:
+            m "Her breathing caught and she closed her eyes as her cloaca slid up to my tip again, then she began to lower herself down, enveloping my erection with the warmth of her draconic anatomy."
+        else:
+            m "Her breathing caught and she closed her eyes as her labia slid up to my tip again, then she began to lower herself down, enveloping my erection with the warmth of her draconic pussy."
     c "Oh fuck."
     m "As she took every inch of me, I moaned."
     m "Her tail twitched with excitement, rubbing back and forth across the surface of the table."
     show kalinth bangok eyesclosed blush flip with dissolve
-    m "She paused for a moment on my lap, seemingly struggling to take things slow."
+    if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+        Kl "Mm. Now. Let your bladder go. Fill me up."
+        m "My erection throbbed within her warm, all-encompassing depths as I struggled to relax enough to begin peeing myself inside the dragoness."
+        m "I could feel the warmth of her insides around my cock, and it made it difficult to resist letting out a groan as she urged me on with gentle circling of her hips."
+        m "Finally, I began to let go."
+        m "The stream trickled at first, then began to jet out hard, spraying into her cloaca."
+        m "Kalinth moaned in pleasure, squeezing me to try to keep it all inside her."
+        Kl "Deep and warm..."
+        m "I didn't stop until my bladder was empty."
+    else:
+        m "She paused for a moment on my lap, seemingly struggling to take things slow."
     $ renpy.pause (0.5)
     show kalinth bangok eyesclosed blush flip:
         ease 1.2 ypos 1.18
         ease 1.2 ypos 1.2
         repeat
     with None
-    m "Then she began to gently thrust herself against me, her scaly lower lips rubbing over my member in the most delightful way imagineable."
-
-    if persistent.bangok_cloacas:
-        m "I grabbed onto the couch back tight as I felt Kalinth's cloaca enveloping me, gripping me tighter with every stroke."
+    if bangok_four_kalinth.protection:
+        m "Then she began to gently thrust herself against me, her scaly lower lips rubbing over the thin barrier between us in the most delightful way imagineable."
     else:
-        m "I grabbed onto the couch back tight as I felt Kalinth's passage enveloping me, gripping me tighter with every stroke."
+        m "Then she began to gently thrust herself against me, her scaly lower lips rubbing over my member in the most delightful way imagineable."
+
+    if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+        if persistent.bangok_cloacas:
+            m "I grabbed onto the couch back tight as I felt Kalinth's piss-stained cloaca enveloping me, gripping me tighter with every stroke."
+        else:
+            m "I grabbed onto the couch back tight as I felt Kalinth's piss-stained passage enveloping me, gripping me tighter with every stroke."
+    else:
+        if persistent.bangok_cloacas:
+            m "I grabbed onto the couch back tight as I felt Kalinth's cloaca enveloping me, gripping me tighter with every stroke."
+        else:
+            m "I grabbed onto the couch back tight as I felt Kalinth's passage enveloping me, gripping me tighter with every stroke."
     m "The heat radiating from her smooth scales was intoxicating."
     m "My hips twitched, desparate for more, but she seemed to enjoy this weighty but gentle slow thrusting so much that it was hard to bring myself to complain about it."
 
@@ -264,7 +351,19 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
 
     m "I groaned as Kalinth finally started fucking me in earnest, her tail whipping back and forth like a flag in the wind of our passion."
 
-    m "Her cloaca leaked copious lubrication around my shaft, making it slide in and out with ease as our mating point gave wetter and louder slaps against my groin."
+    if bangok_four_kalinth.protection:
+        if persistent.bangok_cloacas:
+            m "Her cloaca leaked copious lubrication around the condom, making my shaft slide in and out with ease as our mating point gave wetter and louder slaps against my groin."
+        else:
+            m "Her vagina leaked copious lubrication around the condom, making my shaft slide in and out with ease as our mating point gave wetter and louder slaps against my groin."
+    elif persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+        m "I couldn't tell the difference between my urine and her copious lubrication leaking from our mating point. My shaft slid in and out with ease as our groins made wetter and louder slaps against each other."
+        m "The smells of urine and sex filled the air."
+    else:
+        if persistent.bangok_cloacas:
+            m "Her cloaca leaked copious lubrication around my shaft, making it slide in and out with ease as our mating point gave wetter and louder slaps against my groin."
+        else:
+            m "Her vagina leaked copious lubrication around my shaft, making it slide in and out with ease as our mating point gave wetter and louder slaps against my groin."
 
     m "I tried to lift my hips a little, thrusting deeper into her, but I could do no better than her weight already pressing down on me."
 
@@ -292,7 +391,12 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
     m "She moaned, then buried herself on my erection to the hilt, her tail swishing wildly behind her as her passage spasmed and clenched around my shaft."
     Kl "Now!"
 
-    m "I complied with a moan of my own, feeling my orgasm surge forth into her kneading nethers."
+    if bangok_four_kalinth.protection:
+        m "I complied with a moan of my own, feeling my orgasm surge forth into the condom reservoir buried as deep in her kneading nethers."
+    elif persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+        m "I complied with a moan of my own, feeling my orgasm surge forth into her urine-slickened, kneading nethers."
+    else:
+        m "I complied with a moan of my own, feeling my orgasm surge forth into her kneading nethers."
     m "My member throbbed within her heat and wetness as she lay her body atop mine, resting her weight on my hips to force me as deep within her as I could be."
     show kalinth bangok smile eyesclosed blush flip:
         parallel:
@@ -308,7 +412,12 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
     $ renpy.pause(0.8)
     m "Then the dragoness began grinding herself against me in slow circles, savoring the feeling of the tail-end of my release still spurting slowly into her."
     $ renpy.pause(1.2)
-    m "My cum and her juices dribbled down between my thighs as my erection faded, leaving us just merely lying together with soiled groins."
+    if bangok_four_kalinth.protection:
+        m "Her juices dribbled down between my thighs as my erection faded, leaving us just merely lying together with soiled groins... though the condom still protected her depths from my seed.."
+    elif persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+        m "The slurry of our fluids dribbled down between my thighs as my erection faded, leaving us just merely lying together with soiled groins."
+    else:
+        m "My cum and her juices dribbled down between my thighs as my erection faded, leaving us just merely lying together with soiled groins."
 
     $ renpy.pause(0.8)
     m "After a few minutes had passed, Kalinth finally took a few deeper breaths than her panting afterglow."
@@ -323,6 +432,43 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
     m "I nodded, panting hard myself as I sat up."
 
     jump bangok_four_kalinth_c3arc_male_post_intimacy
+
+
+label bangok_four_kalinth_c3arc_male_mctop:
+    c "Actually, could you lie down? I'd like to be in control for this."
+    if persistent.bangok_cloacas:
+        m "Kalinth quickyl agreed. She lay across the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening draconic cloaca."
+    else:
+        m "Kalinth quickyl agreed. She lay across the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening wet lower lips, and her tailhole a short distance behind."
+    m "I couldn't help but stare at that gorgeous sight for a moment while the dragoness watched my every move with anticipation."
+
+    menu:
+        "Finger her.":
+            jump .finger
+        "Lick her.":
+            jump .lick
+        "Enter her.":
+            jump .enter
+
+    label .finger:
+        jump todo_out_of_content_bangok_four_kalinth
+
+    label .lick:
+        jump todo_out_of_content_bangok_four_kalinth
+
+    label .enter:
+        jump todo_out_of_content_bangok_four_kalinth
+
+        if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+            Kl "Don't hold back. Go ahead. Piss in me."
+            m "It took me a few moments to relax as I ground my crotch against hers, feeling my member move within her warm depths."
+            m "Then, at last, I felt the familiar rush of relief as I began to drain my full bladder into the dragoness below me."
+            m "She moaned and purred all the while, seeming even more turned on by this degrading act than I was."
+            m "As my hot jet of piss began to relax into a trickle, Kalinth's depths squeezed, soaking my member with my waste and her own fluids."
+            m "Then she spoke up again."
+            Kl "Keep going. Fuck me and cum inside and don't stop until you're empty."
+            m "I took her words as an invitation. With renewed vigor, I began thrusting into the dragoness"
+        jump todo_out_of_content_bangok_four_kalinth
 
 
 label bangok_four_kalinth_c3arc_male_doggy:
@@ -360,14 +506,17 @@ label bangok_four_kalinth_c3arc_male_doggy:
         Kl bangok smile eyeslidded blush flip "Oh, yes. So soft..."
         Kl bangok surprise blush flip "But please, don't tease for too long. I want you inside me."
         menu:
-            "Keep fingering her.":
-                pass
+            # "Keep fingering her.":
+            #     pass
             "Lick her.":
                 jump bangok_four_kalinth_c3arc_male_doggy.lick
             "Enter her.":
                 jump bangok_four_kalinth_c3arc_male_doggy.enter
 
-        jump todo_out_of_content_bangok_four_kalinth
+        # m "I continued to finger her, feeling her insides clench and unclench around my digits as she moaned and panted."
+        # Kl normal flip "A-Are you going to make me beg? Take me, please!"
+
+        # jump todo_out_of_content_bangok_four_kalinth
     
     label .lick:
         show kalinth:
@@ -415,12 +564,77 @@ label bangok_four_kalinth_c3arc_male_doggy:
 
         m "Kalinth was panting hard even before we really got started."
 
+        if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+            Kl "Mm. Now use me. Piss into me while you're fucking me."
+            
+            m "It was hard to relax enough to do so at first, but eventually the urge overcame my nerves and I felt myself starting to pee in her."
+            m "Warm liquid gushing forth from my tip and spraying Kalinth inside as she gasped with pleasure."
+            m "As I kept gently thrusting, some urine mixed with her copious juices squirted out around my penis, soaking my crotch and dribbling down my balls."
+            m "Eventually my bladder was empty, but my desire was not at all diminished. I thrust a little harder as the scent of sex and urine filled my nostrils from our dirty coupling."
+
+
         c "Is that good?"
         m "I enjoyed the sight of her tensing and untensing her muscles under me, becoming more worked up with each thrust."
         c "Do you like feeling a human take you like this?"
         Kl bangok smile eyeslidded blush flip "I knew it would feel good..."
+        show kalinth:
+            ease 0.5 ypos 1.2
+            block:
+                ease 0.8 ypos 1.15
+                ease 0.8 ypos 1.2
+                repeat
+        with None
+        m "I hugged her tail, hiking it up a little further so that, on my next thrust, I was able to push a little deeper inside, bringing us slightly closer together and eliciting another gasp from both me and the dragoness beneath me."
+        if bangok_four_kalinth.protection:
+            m "The feelings of her insides clenching around my condom-wrapped length were exquisite. I couldn't help but thrust a little harder and faster, eager to feel more of her."
+        if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+            m "The feelings of her piss-soaked insides clenching around my length were exquisite. I couldn't help but thrust a little harder and faster, eager to feel more of her."
+        else:
+            m "The feelings of her insides clenching around me were exquisite, and I couldn't help but thrust a little harder and faster, eager to feel more of her."
+        c "You have no idea how good."
+        m "Her expression was one of pure pleasure as she continued to pant, nuzzling the couch cushions while her tail writhed in my grasp with each of my thrusts."
+        m "The dragoness' passage was so very warm, flushing my body with heat and arousal as I slid myself in and out of her eager depths with increasingly wet slaps."
 
-    jump todo_out_of_content_bangok_four_kalinth
+        Kl bangok eyesclosed blush flip "Don't stop..."
+        m "She clung to the couch cushions as she arched her back, pushing her rear up against me as I continued to thrust into her."
+        Kl "Please don't stop. Ohhhh..."
+        m "I wasn't about to stop now. I looked down, admiring the ripples each of my hard and fast thrusts made over her rear."
+        m "Her cloaca tightened around me, her inner muscles clenching, and I closed my eyes as I lost myself in our lovemaking."
+        show black
+        with dissolvemed
+        $ renpy.pause (0.5)
+        if bangok_four_kalinth.protection:
+            m "In moments, the sensation of her climaxing passage was too much for me to bear and with a final grunt, I came into the condom's tip, spurting white ropes of human seed into the thin barrier protecting the dragoness' eager depths."
+        else:
+            m "In moments, the sensation of her climaxing passage was too much for me to bear and with a final grunt, I came inside her, spurting white ropes of human seed into the dragoness' eager depths."
+
+        m "I struggled to keep thrusting, per her request, my strength flagging as I carried us through our shared climaxes until finally I just lay on her tail, catching my breath."
+
+        show kalinth at Position(ypos=1.2)
+        hide black
+        with dissolveslow
+
+        m "Eventually, as my body began to recover its strength and the aftershocks in Kalinth's nethers subsided, I pulled out."
+        if not bangok_four_kalinth.protection:
+            if persistent.bangok_cloacas:
+                m "It wasn't long before I could see my seed oozing from her cloaca in small droplets."
+            else:
+                m "It wasn't long before I could see my seed oozing from her lower lips in small droplets."
+            if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+                m "I couldn't tell which of the other splaters of fluids on our crotches was my urine and which were her juices as they dribbled down our thighs."
+        
+        m "Like an overgrown cat, she stretched out on the couch, then rolled over with first her front half, then her lower body."
+        show kalinth bangok smile eyeslidded blush:
+            zoom 1.3
+            ease 0.8 ypos 1.1 zoom 1.2
+            ease 0.8 ypos 1.0 zoom 1.0
+            ypos 1.0 zoom 1.0
+        with None
+        m "She wriggled her hips, sliding her way a little further to get her rear off the armrest so she could lie down normally."
+        m "Then she sighed happily."
+        Kl "That was... even better than I'd imagined."
+        m "I smiled at her, still catching my breath."
+        jump bangok_four_kalinth_c3arc_male_post_intimacy
 
 
 label bangok_four_kalinth_c3arc_male_post_intimacy:
@@ -428,6 +642,22 @@ label bangok_four_kalinth_c3arc_male_post_intimacy:
     m "She dipped a dulled claw into her folds, teasing herself, before bringing it up to her scaly lips for a taste of our union."
     show kalinth bangok smile eyesclosed blush with dissolve
     m "She licked it clean, closing her eyes again."
+    if bangok_four_kalinth.protection:
+        Kl "Mmm... give me the condom? I'd like to taste you."
+        menu:
+            "Give her the condom.":
+                $ renpy.pause (0.5)
+                play sound "fx/chug.wav"
+                m "As soon as I handed her the condom, she popped it into her mouth and lifted the reservoir over her head, driving her tongue up the condom's shaft to lick out my cum from its reservoir."
+                m "I blushed as I watched her sinuous tongue work its magic."
+                m "She swallowed, then licked her lips."
+            "Throw it away.":
+                $ renpy.pause (0.5)
+                play sound "fx/clink3.ogg"
+                m "I pulled the condom off, then tossed it into the trash can."
+                c "Sorry, I'm not comfortable with that."
+                m "Kalinth gave a small pout, but didn't seem too upset."
+                Kl "Suit yourself."
     Kl "I don't think I'll be able to focus on any of my work for the rest of the night..."
     menu:
         "Help clean her up with your tongue.":
@@ -448,14 +678,30 @@ label bangok_four_kalinth_c3arc_male_post_intimacy:
     m "With an impish grin, I knelt next to where she lay on the couch."
     Kl bangok surprise blush "Oh? Willing to help me more at no benefit to yourself? No wonder Bryce keeps asking you for help with the investigations."
     c "There's some benefit there. But in both cases, let's just say the work is its own reward."
-    if persistent.bangok_cloacas:
-        m "Leaning over her cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to guage her reaction."
+    if bangok_four_kalinth.protection:
+        if persistent.bangok_cloacas:
+            m "Leaning over her soaked cloaca, my tongue flicked out to lick up a first teasing droplet to sample her well-churned juices and to guage her reaction."
+        else:
+            m "Leaning over her soaked pussy, my tongue flicked out to lick up a first teasing droplet to sample her well-churned juices and to guage her reaction."
+    elif persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+        if persistent.bangok_cloacas:
+            m "Leaning over her piss-soaked and cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our well-churned fluids and to guage her reaction."
+        else:
+            m "Leaning over her piss-soaked and cum-filled pussy, my tongue flicked out to lick up a first teasing droplet to sample our well-churned fluids and to guage her reaction."
     else:
-        m "Leaning over her cum-filled pussy, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to guage her reaction."
+        if persistent.bangok_cloacas:
+            m "Leaning over her cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to guage her reaction."
+        else:
+            m "Leaning over her cum-filled pussy, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to guage her reaction."
     Kl bangok smile eyeslidded blush "Mmm... yes."
     m "She sighed contentedly, then spread her legs a little wider with lustful eyes."
     Kl "I can't say no to help like this."
-    m "Eager to provide said help, I dove my tongue back into the dragoness' folds, tasting our mix of juices and semen as she gasped and moaned beneath me."
+    if bangok_four_kalinth.protection:
+        m "Eager to provide said help, I dove my tongue back into the dragoness' folds, tasting more of her slick arousal as she gasped and moaned beneath me."
+    elif persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
+        m "Eager to provide said help, I dove my tongue back into the dragoness' folds, soiling my face and tongue with our lustful waste and fluids as she gasped and moaned beneath me."
+    else:
+        m "Eager to provide said help, I dove my tongue back into the dragoness' folds, tasting our mix of juices and semen as she gasped and moaned beneath me."
     m "My hands were eager too, parting her labia for easier access to those extra teasing deeper folds that caused her muscles to clench and push out more of our mixed passions."
     Kl bangok smile eyeslidded blush "Oh, yes..."
     show kalinth:
@@ -555,6 +801,36 @@ label todo_out_of_content_bangok_four_kalinth:
 #     I shook my head, more than ready to accept her offer right now. "Let's go for it."
 
 #     "I assume you'll have to remove your..." She gestured to my clothes. I hurriedly began undressing, not wanting to keep the dragoness waiting. Once I was nude, my erect member exposed to the air of the room, she backed me up toward the armrest of the nearer of the two couches, smirking.
+
+#     ### Watersports variant
+
+#     Standing erect and nude next to her, I suddenly realized my bladder was rather full. "Er... I should probably use the restroom first."
+
+#     Kalinth blushed. "Oh, wow. Your timing is worse than... well, never mind." She pouted. "I suppose I can wait a little longer... unless you want to use me as a urinal?"
+
+#     "I didn't think you'd be into something like that," I admitted. Then I came to a decision. "Sure, why not? I could really use the relief."
+
+#     Smirking, Kalinth trod a little closer. "Mm. Well, we don't want to make a mess on Bryce's floor. I could drink it down right now, or if you're into it you could piss it into me while you're inside, leave me even more dripping wet between the legs..."
+
+#     My eyes widened at the prospect of doing something so taboo with this dragoness' body... but she was offering herself up for it.
+
+#     #### Piss in her mouth
+
+#     I rested my hand on one side of her snout, then guided it down to my erection. She eagerly wrapped her scaly lips around me, but didn't slurp or suck as she waited for me to urinate into her mouth. It was a strange and exciting sensation... I could feel the heat from her breath against my body while warm, moist air filled my urethra.
+
+#     I let my bladder go and felt the familiar rush of relief as my member began to disgorge a steady stream of piss against the back of Kalinth's throat. She swallowed it down eagerly, not once pulling away from me until I had finished urinating into her mouth. The sight of her swallowing every last drop left me with an erection that could have shattered diamonds, and she seemed to be enjoying the fun as well from the look on her face.
+
+#     "Mmm... you taste interesting," Kalinth said once my member stopped twitching. She gave my member a slow lick, from balls to tip, then stepped back with an amused smirk. "I've never tasted a human's piss before."
+
+#     "Well, that's certainly different," I said. "You don't mind?"
+
+#     Kalinth shook her head. "Not at all. No problem." She smirked. "Now are we going to fuck?"
+
+#     #### Piss into her pussy
+
+#     "Inside," I agreed, feeling my erection twitch with anticipation.
+
+#     She moved a little closer. "Then let's get started."
 
 #     ### Kalinth on top
 
