@@ -482,6 +482,20 @@ def add_side_images():
     renpy.exports.image('side emera bangok blush b', clip_emera_side_image("cr/bangok/emera_bangok_blush_b.png"))
     renpy.exports.image('side emera bangok orgasm b', clip_emera_side_image("cr/bangok/emera_bangok_orgasm_b.png"))
 
+    def clip_kalinth_side_image(composite):
+        return im.Flip(im.Scale(im.Crop(composite, (80,100,500,600)),250,300), horizontal=True)
+
+    renpy.exports.image('side kalinth bangok normal blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(134,321),"cr/bangok/kalinth_blush.png")))
+    renpy.exports.image('side kalinth bangok surprise', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png")))
+    renpy.exports.image('side kalinth bangok surprise blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (134,321),"cr/bangok/kalinth_blush.png")))
+    renpy.exports.image('side kalinth bangok smile', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175, 352), "cr/bangok/kalinth_smile.png")))
+    renpy.exports.image('side kalinth bangok smile blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175, 352), "cr/bangok/kalinth_smile.png", (134,321),"cr/bangok/kalinth_blush.png")))
+    renpy.exports.image('side kalinth bangok furtive blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(160, 312), "cr/bangok/kalinth_furtiveeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
+    renpy.exports.image('side kalinth bangok smilewink blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(175,352),"cr/bangok/kalinth_smile.png", (210, 297), "cr/bangok/kalinth_leftclosedeye.png", (134,321),"cr/bangok/kalinth_blush.png")))
+    renpy.exports.image('side kalinth bangok eyesclosed blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png", (157, 297), "cr/bangok/kalinth_closedeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
+    renpy.exports.image('side kalinth bangok smile eyesclosed blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175,352),"cr/bangok/kalinth_smile.png", (157, 297), "cr/bangok/kalinth_closedeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
+    renpy.exports.image('side kalinth bangok smile eyeslidded blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175,352),"cr/bangok/kalinth_smile.png", (157, 297), "cr/bangok/kalinth_liddedeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
+
 def add_scene_select(ml):
     import four_scene_select as fss
 
