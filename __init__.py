@@ -297,14 +297,6 @@ def lorem4(ml):
     )
 
 
-def remy_c4postsections(ml):
-    ( ml.find_label('c4postsections')
-        .search_say("I'll take care of the remaining tasks, so you can take the rest of the day off. I'm sure you have things to do other than helping the police department.")
-        .hook_to('bangok_four_remy_c4postsections_sebintro', condition=make_dev('(persistent.nsfwtoggle == True) and (c4libraryavailable == True) and (remy3unplayed == False) and (remystatus == "good" or remystatus == "neutral")'))
-        .search_say("When I returned to the living room, I suddenly found my strength leaving me and collapsed to the floor.")
-        .link_behind_from('bangok_four_remy_c4postsections_epilogue_admin')
-    )
-
 def remy4(ml):
     kiss_choice = ( ml.find_label('remy4skip2')
         .search_if()
@@ -453,7 +445,6 @@ def link_scenes(ml):
     bryce3_afterparty(ml)
     bryce_x_sebastian(ml)
     lorem4(ml)
-    remy_c4postsections(ml)
     remy4(ml)
     xdamion(ml)
     xipsum(ml)
@@ -553,15 +544,6 @@ def add_scene_select(ml):
         replay_scope=fss.extend_scope_by_dict({
             'lorem2mood': 8,
             'bangok_four_xipsum.loremin': True,
-        }))
-
-    # Remyc4postsections
-    fss.register_scene_select(bangok, "Remy's Tailplay Adventure", 'bangok_four_remy_c4postsections_replaystart',
-        locked=lambda: (not renpy.store.persistent.remy3skip) or (not renpy.store.persistent.bangok_dev),
-        replay_scope=fss.extend_scope_by_dict({
-            'bangok_four_remy_c4postsections_store.remy_tail_player': True,
-            'bangok_four_remy_c4postsections_store.remy_tail_remy': True,
-            'bangok_four_remy_c4postsections_store.remy_top': True,
         }))
 
     # xDamion

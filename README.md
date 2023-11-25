@@ -40,17 +40,13 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 <details>
 <summary>In-Development scene access guides</summary>
 
-
 + Adine1: When the player brings up Truth or Dare, think lascivious thoughts.
-
-+ Remy c4postsections: Complete Remy's first, second, and third scenes. Then *do not* deliver the PDA to him in the chapter 4 investigation. You can suggest to Sebastian when you speak with him that you could deliver the PDA, which will trigger the scene.
-
 + Bryce3 (Bryce + Maverick): Get to Bryce3, play through with high mood (or skip) until Zhong leaves, then be diplomatic about how you respond. (Don't be overeager, don't refuse.)
 + Bryce3 (Bryce + Sebastian + Maverick): See above, but also have previously completed xSebastian.
 + Kalinth c3arc: Visit Kalinth in the police archives during the Chapter 3 investigation.
-
 + Lorem4: Complete Lorem4, tell Lorem you don't mind, talk about making Lorem feel better.
 + Ipsum4 (Ipsum): Complete Lorem2's lewd scene with Ipsum, then reach Chapter 4 and check your answering machine. (This scene does not lock out other 4th date choices with other dragons.)
++ Remy4: Complete Remy's 4th date and keep going after kissing him.
 </details>
 <br/>
 
@@ -69,7 +65,6 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 ### Contribution credits:
 
 + `xsebastian` dialogue and blocking script contributed by `Dolkar` (Discord).
-+ `remyc4postsections` inspired and written by `saiginth renginalti` (Discord).
 + `anna2 strapon` written by `Anonymous By Request`
 + `anna4` written and coded by `An Anonymous contributor`
 + `bryce2` happy birthday `Kosmos` (Discord).
