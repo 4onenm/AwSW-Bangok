@@ -1232,7 +1232,6 @@ expressions = [
 
 def load_all_expressions():
     for e in expressions:
-        print("Loading BangOk expression: " + e.name)
         e.load()
 
 
