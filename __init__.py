@@ -455,47 +455,6 @@ def link_scenes(ml):
     modsettings_firstboot(ml)
 
 
-def add_side_images():
-    import renpy.display.im as im
-    def clip_anna_side_image(imagefile):
-        return im.Flip(im.Scale(im.Crop(imagefile,(30,35,500,600)),250,300),horizontal=True)
-
-    for expression in ["blush","orgasm","blushpalm","lipbite"]:
-        renpy.exports.image('side anna bangok %s'%expression, clip_anna_side_image('cr/anna_%s.png'%expression))
-
-    def clip_sebastian_side_image(imagefile):
-        return im.Flip(im.Scale(im.Crop(imagefile,(70,0,500,600)),250,300),horizontal=True)
-    
-    renpy.exports.image('side sebastian shy b sleep', clip_sebastian_side_image('cr/sebastian_shy_b_sleep.png'))
-
-    def clip_ipsum_side_image(composite):
-        return im.Flip(im.Scale(im.Crop(composite, (100,40,500,600)), 250,300), horizontal=True)
-
-    renpy.exports.image('side ipsum normal bangok blush', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_normal_blush.png")))
-    renpy.exports.image('side ipsum happy bangok blush', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_happy_blush.png")))
-    renpy.exports.image('side ipsum normal bangok heady', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_heady.png")))
-    renpy.exports.image('side ipsum happy bangok heady', clip_ipsum_side_image(im.Composite((650,800),(0,0),"cr/ipsum_sad.png",(0,0),"cr/bangok/ipsum_heady_grin.png")))
-
-    def clip_emera_side_image(composite):
-        return im.Flip(im.Scale(im.Crop(composite, (0,0,500,600)), 250,300), horizontal=True)
-
-    renpy.exports.image('side emera bangok blush b', clip_emera_side_image("cr/bangok/emera_bangok_blush_b.png"))
-    renpy.exports.image('side emera bangok orgasm b', clip_emera_side_image("cr/bangok/emera_bangok_orgasm_b.png"))
-
-    def clip_kalinth_side_image(composite):
-        return im.Flip(im.Scale(im.Crop(composite, (80,100,500,600)),250,300), horizontal=True)
-
-    renpy.exports.image('side kalinth bangok normal blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(134,321),"cr/bangok/kalinth_blush.png")))
-    renpy.exports.image('side kalinth bangok surprise', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png")))
-    renpy.exports.image('side kalinth bangok surprise blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (134,321),"cr/bangok/kalinth_blush.png")))
-    renpy.exports.image('side kalinth bangok smile', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175, 352), "cr/bangok/kalinth_smile.png")))
-    renpy.exports.image('side kalinth bangok smile blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175, 352), "cr/bangok/kalinth_smile.png", (134,321),"cr/bangok/kalinth_blush.png")))
-    renpy.exports.image('side kalinth bangok furtive blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(160, 312), "cr/bangok/kalinth_furtiveeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
-    renpy.exports.image('side kalinth bangok smilewink blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(175,352),"cr/bangok/kalinth_smile.png", (210, 297), "cr/bangok/kalinth_leftclosedeye.png", (134,321),"cr/bangok/kalinth_blush.png")))
-    renpy.exports.image('side kalinth bangok eyesclosed blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png", (157, 297), "cr/bangok/kalinth_closedeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
-    renpy.exports.image('side kalinth bangok smile eyesclosed blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175,352),"cr/bangok/kalinth_smile.png", (157, 297), "cr/bangok/kalinth_closedeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
-    renpy.exports.image('side kalinth bangok smile eyeslidded blush', clip_kalinth_side_image(im.Composite((580,700),(0,0),"cr/kalinth_normal.png",(161,282),"cr/bangok/kalinth_browrelaxed.png", (175,352),"cr/bangok/kalinth_smile.png", (157, 297), "cr/bangok/kalinth_liddedeyes.png", (134,321),"cr/bangok/kalinth_blush.png")))
-
 def add_scene_select(ml):
     import four_scene_select as fss
 
@@ -582,15 +541,18 @@ def add_scene_select(ml):
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2023-11-24-child_of_e51e4a2"
+    version = "2023-11-25-child_of_da33c9e"
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
 
     @classmethod
     def mod_load(cls):
+        from bangok_four.expressions import load_all_expressions, load_all_side_images
+
+        load_all_expressions()
         if modinfo.has_mod("Side Images"):
-            add_side_images()
+            load_all_side_images()
 
         import jz_magmalink as ml
         ml.register_mod_settings(cls, screen='bangok_modsettings')
