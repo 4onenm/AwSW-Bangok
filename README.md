@@ -1,3 +1,5 @@
+![A banner image stuffing a collection of characters featured in the mod into frame](repository-banner.png)
+
 An Angels with Scaly Wings lewd mod. Contributions welcome.
 
 ### USERS DOWNLOAD [HERE: https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/main.zip](https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/main.zip)
