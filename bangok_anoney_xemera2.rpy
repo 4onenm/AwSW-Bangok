@@ -965,19 +965,19 @@ label bangok_anoney_xemera2_satisfy_female:
         m "A few moments later and I felt the head pop through and into my womb."
 
     else:
-        m "This is as much as I can take, given the size of the toy."
+        m "This is as much as I could take, given the size of the toy."
         m "I started to lightly thrust the toy a few inches back and forth, getting used to the dildo."
 
     m "Emera put her hand on my belly and could feel the progress of the toy inside me."
     Em bangok blush b flip "I am impressed, it seems you have indeed had experience enough to take it."
-    c "Thank you"
+    c "Thank you."
     m "Now that my vagina had conformed to the dildo safely I laid fully on my back on Emera."
     play soundloop "fx/massage.ogg"
     m "The dragon continued to rub her hand over my belly, feeling the toy through my body."
     play sound ["fx/rub1.ogg", "fx/wipe.ogg", "fx/rub1.ogg", "fx/wipe.ogg", "fx/rub1.ogg"]
     $ renpy.pause (5.5)
     stop soundloop fadeout 0.5
-    m "After what felt like an age, but was probably only about five minutes my orgasm washed over me, I went limp as my body was consumed by euphoria."
+    m "After what felt like an age, but was probably only about five minutes, my orgasm washed over me. I went limp as my body was consumed by euphoria."
     m "I decided to just lay there for a while, toy still hanging out of my vagina and bask in the afterglow on the warm belly of Emera."
     Em "If everything is done, then we ought to clean up. It is already very late and you will probably be wanting to back to your apartment"
     if persistent.bangok_cervpen == True:
@@ -985,9 +985,9 @@ label bangok_anoney_xemera2_satisfy_female:
     else:
         m "I gave a nod and reached down to gently tug the toy out of me, giving a shudder of pleasure as the head of the toy stretched my lips."
     play sound "fx/uncork.ogg"
-    m "Emera took her toy off of me and stuck it in her mouth, licking it clean. afterwards she gave it back to me and I put it back into the cupboard"
+    m "Emera took her toy from my hand and stuck it in her mouth, licking it clean. Afterwards she gave it back to me to carry back to the cupboard."
     play sound "fx/cabinet.ogg"
-    m "Emera bought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until showering."
+    m "Emera brought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until showering."
     $ renpy.pause (0.5)
     play sound "fx/rub2.ogg"
     jump bangok_anoney_xemera2_conclusion
@@ -1198,12 +1198,12 @@ label bangok_anoney_xemera2_conclusion:
     $ renpy.pause (0.5)
 
     if (persistent.remy1played == True) and (remystatus == "good") or (remystatus == "neutral"):
-        m "As I left Emera's office and walked down the corridor I could see that the light was on Remy's office was on and faint sounds of a computer game could be made out."
-        m "I paused briefly outside the door and wondered if he is making progress on that RPG I accidentally broke."
+        m "As I left Emera's office and walked down the corridor I could see that the light was on Remy's office was on. I could hear the faint sounds of a computer game."
+        m "I paused briefly outside the door and wondered if he was making progress on that RPG I accidentally broke."
     else:
         m "As I left Emera's office and walked down the corridor I could see that there was a light on in the next office down."
         m "I paused briefly outside the door to read the door plaque:"
-        m "{size=+10}Head Archivist{/size}"
+        m "{size=+10}\"Head Archivist\"{/size}"
         m "I guessed this was probably Remy's office."
     play sound "fx/steps/clean2.wav"
     scene black with dissolvemed
@@ -1219,7 +1219,7 @@ label bangok_anoney_xemera2_conclusion:
 
     if bangok_anoney_xemera2_refuse_participate == True:
         m "After cooling off during the walk home, I thought maybe I had made the wrong choice in refusing her offer."
-        c "(Emera did seem heartbroken when I had refused. If only my head wasn't so much of a mess with the police investigation and the responsibility I feel being an ambassador. What could have happened?)"
+        c "(Emera did seem heartbroken when I had refused. If only my head wasn't so much of a mess with the police investigation and the responsibility I felt as an ambassador. What could have happened?)"
         c "(Ah well, it would be extremely irresponsible of me to go back in time for this non-emergency, even if I did know the coordinates to before this evening's events.)"
         c "(Well, time for bed. Hopefully tomorrow will be a better day.)"
     elif bangok_anoney_xemera2_massage_only == True:
