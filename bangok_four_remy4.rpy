@@ -1,9 +1,7 @@
 init python in bangok_four_remy4_store:
-    # Paths:
-    # tongue
-    path = None
+    path = None # type: Optional[Literal["tongue"]]
 
-    protection = False
+    protection = False # type: bool
 
 label bangok_four_remy4_more:
     menu:
@@ -99,7 +97,7 @@ label bangok_four_remy4_more:
     hide remy with dissolve
     m "Remy shifted onto his back on the couch, spreading his wings and four limbs out to accept me."
     m "Between his hindlegs, I could see the tip of something pink just peeking out. But for now, I focused on climbing onto his chest without hurting him or myself as I hugged just above his forelegs."
-    show grey with dissolvemed
+    show bangok_grey with dissolvemed
     play soundloop "fx/breathing.ogg" fadein 10.0
     m "As soon as I was safely nestled in a hug between his forelegs, he wrapped his wings around us both like a cocoon and pulled me even closer against his underbelly scales."
     Ry normal b "Is this okay? If it's too much..."
@@ -130,7 +128,9 @@ label bangok_four_remy4_more:
             Ry smile b "I'll do my best."
             $ bangok_four_remy4_store.path = "tongue"
         "Ready to move on?":
-            jump todo_out_of_content_bangok_four_remy4
+            $ renpy.pause (0.5)
+            m "Remy nodded, eyes bright with anticipation and nerves."
+            c "Then let's try something."
         "[[Say nothing.]]":
             m "I couldn't help but let out a soft moan as he continued his teasing assault. His tail began to wag gently against the couch."
             Ry normal b "Do you want me to...?"
@@ -141,7 +141,7 @@ label bangok_four_remy4_more:
             jump todo_out_of_content_bangok_four_remy4
 
     play sound "fx/undress.ogg"
-    hide grey with dissolve
+    hide bangok_grey with dissolve
     if bangok_four_remy4_store.path == "tongue":
         m "Remy unfolded his wings, allowing me to slip off of him, to examine what I'd be working with between his legs when we got back to him."
     elif bangok_four_remy4_store.path is None:
@@ -312,3 +312,102 @@ label todo_out_of_content_bangok_four_remy4:
     s "You've reached the end of the content currently available for this character."
     s "Roll back or prepare to crash."
     $ renpy.error("End of content reached.")
+
+# The below is a scene novelization as co-authored by 4onenm
+# and openhermes-2.5-mistral-7b.Q4_K_M.gguf for use in generating ideas.
+# <|im_start|>user
+# Recite the Remy sex scene from the sex lewd NSFW mod for AwSW, the dragon dating simulator. Remember, Remy is the adorkable nerd dragon. This scene happens in the player's house, shortly after you and Remy share your first kiss together.<|im_end|>
+# <|im_start|>assistant
+# I took the lead this time, hugging his neck and planting a kiss right on the tip of his snout, eliciting a beautiful blush that reached his ears.
+
+# "I-I don't know how far you plan on taking this," Remy fretted. "As a dragon, I'm a little bit larger than you are..."
+
+# "We'll make something work," I reassured.
+
+# Remy smiled. "Well, if it's what you want, let's try something simple for now. I'm not sure how far we can go with your clothes on you..."
+
+# "Let me take care of that." I cautiously stripped, trying not to frighten him with how different my human body was from his draconic scales.
+
+# "You're... perfect." Remy breathed. Then he blushed. "We could start by just... cuddling? Getting used to the feel of our bodies against each other like this?"
+
+# "That sounds wonderful," I agreed.
+
+# Remy shifted onto his back on the couch, spreading his wings and four limbs out to accept me. Between his hindlegs, I could see the tip of something pink just peeking out. But for now, I focused on climbing onto his chest without hurting him or myself as I hugged just above his forelegs. As soon as I was safely nestled in a hug between his forelegs, he wrapped his wings around us both like a cocoon and pulled me even closer against his underbelly scales. "Is this okay? If it's too much..."
+
+# "It's perfect," I said, "Just... like this."
+
+# We lingered there for some time, his breathing and our heartbeats the only sounds as he gently nuzzled his snout against my head beneath his wings. His heat suffused the space, and slowly I began to feel my own body warm, my heart beating faster. Between my legs, I felt my hardness becoming difficult to ignore as I couldn't find a position it didn't press against his belly scales.
+
+# Remy seemed to notice the way my breathing was changing and started to nuzzle more insistently at my neck. His warm tongue traced lazy patterns along the exposed skin, sending shivers down my spine.
+
+# "Ready to move on?" I asked, trying not to sound as breathless as I felt. Remy nodded, his eyes bright with anticipation and nerves. "Then let's try something."
+
+# Remy unfolded his wings, allowing me to slip off of him, to examine what I'd be working with between his legs. A large, pinkish shaft glinted in the light of the room, its head already dribbling a droplet of thick, clear fluid. His balls were also quite large and plump, hanging low beneath it.
+
+# "You're... so beautiful like this," Remy observed, exploring me with his eyes from my face down to the hard erection between my legs, then jumping back up to my face with a deepening blush.
+
+# I smiled back. "As are you." Then I took his large draconic member in my hands, stroking the length from base to tip as he moaned softly with every stroke. His wings fluttered and twitched with anticipation.
+
+# "Remy," I whispered into his ear, feeling the hard, slick flesh of his member beneath my hands. "I want you inside me."
+
+# He let out a surprised gasp. "Y-You're sure? You can see how big... I mean..."
+
+# "I know, but I need be sure I can satisfy you," I insisted with determination.
+
+# Remy nodded nervously. "A-At least let me go find lubrication. L-Lots of..."
+
+# I stepped back from the couch to let him get up, then examined the couch to try to pick a position while he moved to the bathroom to get the lube. Remy returned with some lubricant carried in his mouth.
+
+# "Um... How do you want to start?" He asked, looking up at me nervously. "I mean... You're so much smaller than me..."
+
+# I nodded and approached him. "Let's try it this way first." I said, guiding Remy onto his back with a gentle push on the couch cushions. Once he was settled, I sat astride his hips facing him, my erection pressing against his belly scales.
+
+# "Do you want to touch yourself while I prepare?" I asked. "It may take me some time since this is my first time with your... size."
+
+# He nodded and began to gently stroke himself with his hindlegs as I applied lube liberally to my asshole, then slowly worked a finger inside myself to spread it around the tight ring of muscle that would accept him.
+
+# I could feel his growing heat beneath me as I prepared. I couldn't wait to feel it inside me... if I could fit his enormous length at all! But finally, I felt ready and positioned my tight human sphincter over the head of Remy's erection. I squirted a few more spurts of lube onto his tip, breathing hard as I anticipated the moment of penetration.
+
+# "Are you... ready?" Remy asked nervously. His eyes behind his glasses were wide with eagerness and concern.
+
+# I nodded, taking a deep breath. "Yes." And slowly lowered myself down on him. The head of his extremely well-lubed penis slipped out of my asscrack immediately, but I tried again, struggling to keep a grip on it to line up.
+
+# Remy panted and blushed deeper, watching me with wide eyes. Then he took the initiative and gently held his shaft more firmly in place with his hindlegs, supporting my thighs with his forelegs. "Keep trying?" He suggested. "I-If it's too much..."
+
+# "It's okay," I insisted. "Just... give me a moment." I took another deep breath and began to lower myself onto him again, slowly sinking down and stretching my sphincter around his girth. Then my sphincter began to relax. With a shudder of lust and arousal, I impaled myself on Remy's dragon cock, feeling the thick shaft stretch me out like no human dick ever could. It pushed through into my colon with just a little discomfort, straightening it out until I felt my belly bulge slightly from the inside. But I kept pushing, straining my poor sphincter around his girth until finally, I was sitting on Remy's lap, impaled completely by his dragon cock. My balls rested against his slit, and his balls agaisnt my rear. "Nngh. It's... in," I gasped, panting.
+
+# "Y-You did it!" Remy marveled, awe-struck and blushing deeper than before. Then he wrapped me up in his wings again and pulled me into an embrace, burying his face in my neck as we both panted heavily. "This is... incredible," he murmured.
+
+# "It's a tight fit," I agreed, trying to catch my breath. "But it feels amazing."
+
+# Remy looked up at me from beneath the curve of his wings. His eyes were wide and filled with emotion, and his blush reached halfway down his neck. "I... want you so much right now..." He murmured. Then he began to thrust gently, lifting and lowering his hips to match my own shallow breaths.
+
+# "R-Remy," I gasped. "T-Too much. We should probably change position if we're going to actually fuck."
+
+# He nodded quickly, panting with arousal as he held me to his belly, then slipped off the couch. I grunted as he laid me on the couch cushions, pinning me beneath his weight and between the seat back and his hips. "Is this good?" He asked nervously.
+
+# "Better," I agreed, rubbing his belly before reaching down to pull my thighs wider apart with a groan of discomfort. My asshole felt like it was being ripped open as he pushed into me again.
+
+# "I-I don't want to hurt you..." Remy whimpered, panting heavily and looking at me nervously as his eyes traced the lines of my body beneath him.
+
+# "You won't," I reassured him, reaching out to cup his face gently in my hands before pulling him into a kiss.
+
+# When our lips broke, he gently began to push again. I moaned softly, feeling my sphincter stretch wide around his girth and my insides twist with the intrusion of his long shaft. Running a hand down my chest, I felt the bulge where his tip pressed against my belly from the inside. "Nngh... Remy," I gasped, panting as he thrust into me more deeply.
+
+# Remy pulled back, hesitating. Then when he saw only affection and need in my eyes, he pushed forward again, this time slightly faster, slightly harder. I cried out softly with each new thrust, feeling his girth stretch the walls of my insides to their limits. But it felt so good! I almost didn't even feel his belly scales rubbing across my member as all I could focus on was the thick shaft of his cock filling me up from behind.
+
+# "F-Feels... so... good..." I gasped, panting and moaning through every long, slow thrust. My heart raced with excitement and lust.
+
+# Remy blushed deep red, his eyes wide and full of emotion as he looked into mine. His breathing was ragged too, matching my own. "I-It does... for me too..." He murmured, panting hard before kissing me again, our lips colliding in a passionate embrace.
+
+# After a few more thrusts, Remy's hips began to move faster and harder. I grunted now, feeling his balls plap lightly against my rear as my guts twisted around the thick shaft of his cock. "Nnh!" I gasped, moaning through each hard shove past my prostate. Then I was cumming all over our bellies, unable to hold back my moans of lust and pleasure any longer.
+
+# Remy's thrusting grew even more erratic as he neared his own climax, panting heavily with the effort of fucking me so deeply and passionately. "[player_name]... Oh [player_name]..."
+
+# "I-it's okay," I moaned breathlessly, barely cogent in the throes of my orgasm as Remy thrust harder into me. "I want... I-I need..."
+
+# Remy whimpered, then began thrusting even harder, his heavy balls slapping my rear. I felt my belly with a hand, felt his tip punishing my guts over and over for my lust. He reached the edge of climax soon after me, panting and moaning as our hips crashed together again for the last few times before he came. His balls clenched, hard shaft twitching and pulsing, then thick, hot jets of seed began spurting into my abused colon as Remy tried to muffle his own groans of pure pleasure.
+
+# "NNGH!" I held my belly with both hands, feeling each pulse of cum deep inside me stuffing my intestines more full of his seed. "Remy... Aaahh..."
+
+# Finally, our orgasms subsided as Remy collapsed against me, panting heavily and blushing a bright red under his white scales. He stayed buried in me a while longer before slowly withdrawing his enormous member from my battered asshole.
