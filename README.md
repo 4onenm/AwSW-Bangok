@@ -96,6 +96,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
     + Layering, no cum, `excessive_cum` edits: 4onenm
     + Balls edit: `Anonymous By Request`
 + `cg/bangok/xemera2/*`: `Anoney`
++ `cg/bangok/remy4/*`: Generously produced and provided by `bicikliszelep`
 + `cr/anna_*.png`: yoshisman8 from [mod-nsfw-anna](https://github.com/AWSW-Modding/AWSW-Modtools/tree/mod-nsfw-anna) (Used without permission; unable to contact.)
 + `cr/bangok/*.png`: 4onenm
 + `cr/bangok/damion_pen_ballz.png`: `Anonymous By Request`

@@ -131,7 +131,7 @@ label bangok_four_remy4_more:
             $ renpy.pause (0.5)
             m "Remy nodded, eyes bright with anticipation and nerves."
             c "Then let's try something."
-        "[[Say nothing.]]":
+        "[[Say nothing.]":
             m "I couldn't help but let out a soft moan as he continued his teasing assault. His tail began to wag gently against the couch."
             Ry normal b "Do you want me to...?"
             c "Please..."
@@ -179,25 +179,43 @@ label bangok_four_remy4_more:
 
 label bangok_four_remy4_male_unprotected_tongue_path:
     m "Taking my own shaft in hand, I sat at the edge of the armchair at the end of the coffee table, pushing the table out of the way a little with my foot so Remy could better access my body."
-    m "Rolling off the couch, Remy approached me slowly, his eyes never leaving mine as he lowered himself onto crossed forelegs on the carpet in front of me."
+    play sound "fx/undress.ogg"
+    hide remy with dissolve
+    m "Remy pulled off his collar and set his glasses on the coffee table, out of harm's way."
+    show remy shy ud with dissolve
+    show remy:
+        xpos 0.5
+        ease 0.5 xpos 0.55
+        xpos 0.55
+        ypos 1.0
+        ease 1.0 ypos 1.45
+        ypos 1.45
+    m "Then, rolling off the couch, Remy approached me slowly, his eyes never leaving mine as he lowered himself onto crossed forelegs on the carpet in front of me."
     m "He eyed my erection with trepidation, comparing my human member's size to his own draconic expectations. I couldn't help but chuckle a little at his adorable expression."
-    Ry shy b "More tongue, you said?"
+    Ry shy ud "More tongue, you said?"
     m "Lifting his chin with one hand, I gave his snout a soft pet with the other."
     c "Yes, right down here."
-    m "Gently, I guided him down to my crotch, feeling his warm breath against my member as he hesitated again."
-    c "May I guide you with your horns?"
-    $ renpy.pause (0.8)
-    Ry shy b "Yes."
+    m "Gently, I guided him down to my crotch, feeling his warm breath against my member as he leaned into my hand."
+    Ry shy ud closed "Could you... guide me a little more? Grab my horns?"
+    c "Sure."
+    show remy:
+        pause 0.4
+        ypos 1.45
+        ease 0.4 ypos 1.5
+        ypos 1.5
     m "I took hold of his larger, higher horns, then tugged him closer. He took the invitation, accepting my fleshy tip between his scaly lips, then slathering it with attention from his tongue."
     c "So... different..."
     m "I groaned at the sensations he was causing, my body tensing up as he focused more of his attention on the sensitive underside of my cockhead."
+    scene black with dissolvemed
     m "Then, eager for more, I guided him the rest of the way to my base, feeling his snout against my groin and his chin against my balls."
+    scene bangok_four_remy4_cg tongue male unprotected at Pan((0,0), (720,488), 8.0) with dissolvemed
     m "He licked at my shaft's full length, tasting every inch as he went down. When he had fully explored all that was in his mouth, he opened a little wider and extended his tongue to begin gently exploring my balls."
     c "Remy..."
     m "I couldn't help but moan at the sight of him so intent on pleasing me like this. He looked up from what he was doing, his eyes full of concern for any discomfort I might be experiencing."
     c "Don't stop."
     m "Pushing and pulling him by his horns, I began to gently pump his scaly lips up and down my shaft with short, teasing strokes."
     m "His tongue continued to trace lazy patterns along the underside of my member, causing me to squirm slightly in response and pant with need."
+    show black with dissolve
     m "Wanting to draw this out, I pulled him off me completely, then set my saliva-slicked member atop his blushing snout."
     m "He continued to try to explore me, licking and nibbling at my balls with his tongue and lips, then sucking them into his mouth and gently massaging them with his tongue."
     m "Feeling my balls grow heavy with the need to release their contents, I decided to take matters into my own hands."
@@ -206,7 +224,7 @@ label bangok_four_remy4_male_unprotected_tongue_path:
     m "But then I couldn't. With a groan of relief, I released my load into his mouth and onto his face, spurting gooey ropes of cum over his snout and tongue."
     m "He froze up, blushing furiously as I graced his face with my appreciation."
     m "Then, when I had run dry, he swirled what had landed in his mouth on his tongue, licking a little more from the tip of his snout."
-    Ry shy b "You... you taste a little saltier than we do."
+    Ry shy ud "You... you taste a little saltier than we do."
     menu:
         "Kiss him":
             m "I laughed, then slipped forward off the couch to press my lips against his. Our tongues met, trading a little in my taste, and I hugged him tightly, his wings flapping helplessly as he struggled to escape my embrace."
