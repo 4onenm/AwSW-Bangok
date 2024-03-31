@@ -444,6 +444,7 @@ def link_scenes(ml):
     bryce2_feet(ml)
     bryce3_afterparty(ml)
     bryce_x_sebastian(ml)
+    kalinth_c3arc(ml)
     lorem4(ml)
     remy4(ml)
     xdamion(ml)
@@ -541,7 +542,7 @@ def add_scene_select(ml):
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2024-03-18-child_of_f4b5b54"
+    version = "2024-03-31-child_of_65c4e27"
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
