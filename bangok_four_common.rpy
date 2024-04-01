@@ -304,6 +304,24 @@ init:
     )
 
 
+    # Because "Requiem for Crimson Scales" redefines the base-game
+    #  Bryce dark sprites with the same names, now I have to do this
+    #  nonsense to prevent an "ambiguous image" error when
+    #  ATL is involved (e.g. Bryce1) 
+    image bryce angry dk bangok = im.Recolor("cr/bryce_angry.png", 70, 70, 100, 255)
+    image bryce brow dk bangok = im.Recolor("cr/bryce_brow.png", 70, 70, 100, 255)
+    image bryce brow dk flip bangok = im.Recolor("cr/bryce_brow_flip.png", 70, 70, 100, 255)
+    image bryce flirty dk bangok = im.Recolor("cr/bryce_flirty.png", 70, 70, 100, 255)
+    image bryce laugh dk bangok = im.Recolor("cr/bryce_laugh.png", 70, 70, 100, 255)
+    image bryce laugh dk flip bangok = im.Recolor("cr/bryce_laugh_flip.png", 70, 70, 100, 255)
+    image bryce normal dk bangok = im.Recolor("cr/bryce_normal.png", 70, 70, 100, 255)
+    image bryce normal dk flip bangok = im.Recolor("cr/bryce_normal_flip.png", 70, 70, 100, 255)
+    image bryce smirk dk bangok = im.Recolor("cr/bryce_smirk.png", 70, 70, 100, 255)
+    image bryce smirk dk flip bangok = im.Recolor("cr/bryce_smirk_flip.png", 70, 70, 100, 255)
+    image bryce stern dk bangok = im.Recolor("cr/bryce_stern.png", 70, 70, 100, 255)
+    image bryce stern dk flip bangok = im.Recolor("cr/bryce_stern_flip.png", 70, 70, 100, 255)
+
+
 label bangok_four_mod_firstboot:
     $ _skipping = False
     stop music
