@@ -190,6 +190,7 @@ label bangok_four_remy4_male_unprotected_tongue_path:
         ypos 1.0
         ease 1.0 ypos 1.45
         ypos 1.45
+    with None
     m "Then, rolling off the couch, Remy approached me slowly, his eyes never leaving mine as he lowered himself onto crossed forelegs on the carpet in front of me."
     m "He eyed my erection with trepidation, comparing my human member's size to his own draconic expectations. I couldn't help but chuckle a little at his adorable expression."
     Ry shy ud "More tongue, you said?"
@@ -203,6 +204,7 @@ label bangok_four_remy4_male_unprotected_tongue_path:
         ypos 1.45
         ease 0.4 ypos 1.5
         ypos 1.5
+    with None
     m "I took hold of his larger, higher horns, then tugged him closer. He took the invitation, accepting my fleshy tip between his scaly lips, then slathering it with attention from his tongue."
     c "So... different..."
     m "I groaned at the sensations he was causing, my body tensing up as he focused more of his attention on the sensitive underside of my cockhead."
@@ -243,13 +245,27 @@ label bangok_four_remy4_male_unprotected_tongue_path:
 
 label bangok_four_remy4_female_tongue_path:
     m "I sat at the edge of the armchair at the end of the coffee table, pushing the table out of the way a little with my foot so Remy could better access my body."
+    play sound "fx/undress.ogg"
+    hide remy with dissolve
+    m "Remy pulled off his collar and set his glasses on the coffee table, out of harm's way."
+    show remy shy ud with dissolve
+    show remy:
+        xpos 0.5
+        ease 0.5 xpos 0.55
+        xpos 0.55
+        ypos 1.0
+        ease 1.0 ypos 1.45
+        ypos 1.45
+    with None
     m "Rolling off the couch, Remy approached me slowly, his eyes never leaving mine as he lowered himself onto crossed forelegs on the carpet in front of me."
     m "He eyed my vulva with trepidation, comparing my human opening's size to his own draconic expectations. I couldn't help but chuckle a little at his adorable expression."
-    Ry shy b "More tongue, you said?"
+    Ry shy ud "More tongue, you said?"
     m "Lifting his chin with one hand, I gave his snout a soft pet with the other."
     c "Yes, right down here."
     m "Gently, I guided him down to my crotch, feeling his warm breath against my mons."
+    scene black with dissolvemed
     m "Then he moved forward himself, nestling his scaly snout between my thighs. My hips twitched at the contact, my breath catching as he began to explore my folds with his tongue."
+    scene bangok_four_remy4_cg tongue female at Pan((0,0), (720,588), 8.0) with dissolvemed
     m "His rough, hot tongue slid across my inner labia, tracing the outer surface of my vulva before delving deeper inside."
     c "Remy..."
     m "The sensation of his tongue sliding into me caused my body to respond almost immediately, my muscles tightening and my breath hitching as I tried to control my reactions."
@@ -260,17 +276,33 @@ label bangok_four_remy4_female_tongue_path:
     c "Keep going."
     m "He resumed his ministrations, his tongue flicking and probing my most intimate areas, drawing more noises of pleasure from me."
     m "As he focused more of his attention on my clitoris, my body convulsed, shuddering from the stimulation his tongue provided."
+    scene black with dissolve
     c "T-Too much."
     m "He stopped, looking up from what he was doing, his eyes full of concern for any discomfort I might be experiencing."
     c "No, I liked it. Just... slower."
+    scene bangok_four_remy4_cg tongue female at Pan((780,488), (720,588), 8.0) with dissolvemed
     m "He nodded, slowing his movements and focusing on the area around my clit instead of directly on it. Then, he returned to deeper exploration of my depths, using the flat part of his tongue to massage my insides."
     m "I groaned, feeling my orgasm building within me."
+    scene black with dissolve
     m "Finally, I cried out in ecstasy, my body shaking uncontrollably as wave after wave of pleasure washed through me. Even as I came down from my peak, Remy kept licking, prolonging my pleasure until I begged him to stop."
     m "I collapsed back against the chair, panting heavily as he retracted his snout from between my legs."
+    scene o4 at Pan((0, 150), (0, 250), 3) 
+    show remy shy ud:
+        xanchor 0.5
+        yanchor 1.0
+        xpos 0.5
+        ypos 1.65
+        linear 3.0 ypos 1.45
+        ypos 1.45
+    with dissolveslow
     m "Blinking up at me, his snout shiny with my fluids, he blushed furiously."
+    show remy shy ud:
+        ypos 1.45
+        ease 0.7 ypos 1.25
+        ypos 1.25
     m "After a moment, he pulled further away, cleaning his tongue on the roof of his mouth as I panted."
     m "He looked embarrassed, but also pleased with the result of his efforts."
-    Ry shy b "How did that feel?"
+    Ry shy ud "How did that feel?"
     menu:
         "Kiss him":
             m "I laughed, then slipped forward off the couch to press my lips against his. Our tongues met, trading a little in my taste, and I hugged him tightly, his wings flapping helplessly as he struggled to escape my embrace."

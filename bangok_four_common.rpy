@@ -274,6 +274,7 @@ init:
     image bangok_anoney_emera_presenting = "cg/bangok/xemera2/bangok_anoney_emera_presenting.png"
     image bangok_anoney_emeramassage_night = "cg/bangok/xemera2/bangok_anoney_emeramassage_night.png"
 
+    image bangok_four_remy4_cg tongue female = im.Scale("cg/bangok/remy4/Remy_oral_f.jpg", 3840,2160)
     image bangok_four_remy4_cg tongue male unprotected = im.Scale("cg/bangok/remy4/Remy_oral_m_crop.png", 2640,1568)
 
 
