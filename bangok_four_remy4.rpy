@@ -3,6 +3,22 @@ init python in bangok_four_remy4_store:
 
     protection = False # type: bool
 
+# == More Tongue path ==
+#  -> male unprotected
+#  -> male protected (TODO, just add a hint of player condom to unproteted and rewrite)
+#  -> female
+# Merge: kiss, compliment, taste
+# Remy turns around for the player to explore his other end
+# (Optional) Rimjob
+# (Optional) Sheath licking
+#   -> male, fuck Remy's ass
+#   -> both, handjob Remy while rimming
+#   -> both, handjob Remy while sheath licking
+#   -> female, another intro to getting fucked
+#   -> both, another intro to anal getting fucked
+# Merge: Splay out on the floor after completion, both on your back
+# Remy decides he doesn't want to go home that night (but leaves before you get up to get to work for the day.)
+
 label bangok_four_remy4_more:
     menu:
         "Ask if he wants to do more.":
@@ -241,7 +257,10 @@ label bangok_four_remy4_male_unprotected_tongue_path:
             m "Reaching forward, I scooped up some of the cum still clinging to his snout and brought it to my lips."
             m "With a small nod of approval, I swallowed it down, savoring the flavor of our exchange."
             c "Now I can compare with yours."
-    jump todo_out_of_content_bangok_four_remy4
+    
+    show o4 at Pan((0, 150), (0, 250), 3) with dissolve
+    show remy shy ud at Transform(xanchor=0.5, yanchor=0.0, xpos=0.5, ypos=1.0)
+    jump bangok_four_remy4_tongue_path_merge
 
 label bangok_four_remy4_female_tongue_path:
     m "I sat at the edge of the armchair at the end of the coffee table, pushing the table out of the way a little with my foot so Remy could better access my body."
@@ -316,7 +335,259 @@ label bangok_four_remy4_female_tongue_path:
             m "Reaching forward, I spread some of the fluids still clinging to his snout onto my fingers, then brought it to my lips."
             m "With a small nod of approval, I slurped it down, savoring the flavor of my own essence."
             c "Now I can compare with yours."
+    jump bangok_four_remy4_tongue_path_merge
+
+label bangok_four_remy4_tongue_path_merge:
+    show remy shy ud at center with ease
+    m "His hindlegs were a little unsteady as he got to his feet."
+    c "You've seen and tasted both ends of me now. What do you want to do next?"
+    Ry normal ud "It sounds like you're the one with something in mind."
+    menu:
+        "Turn around for me.":
+            $ renpy.pause (0.5)
+            jump bangok_four_remy4_turn_around
+        "I need you inside me.":
+            jump todo_out_of_content_bangok_four_remy4
+
+label bangok_four_remy4_turn_around:
+    show remy shy ud with dissolve
+    $ renpy.pause (0.3)
+    scene black with dissolvemed
+    $ renpy.pause (0.5)
+    scene bangok_four_remy4_cg bottom:
+        zoom 1.8
+        align (0.0,0.0)
+        linear 8.0 xalign 0.5 yalign 1.0
+        align (0.5,1.0)
+    with dissolvemed
+    $ renpy.pause (3.0)
+    m "Remy lay on his belly on the couch, setting his wings over the couch back and crossing his forelegs just in front of the armrest."
+    m "As I got on the couch behind him, he lifted his tail, revealing his tight, pink pucker winking out at me above his mostly-sheathed member."
+    m "Despite his efforts to remain still, a few drops of draconic precum dripped from his tip, landing on the couch cushion beneath him."
+    m "I couldn't help but reach out and touch his tail, feeling the soft scales and the warmth of his body beneath them."
+    Ry shy ud "It's not... too different for you, is it?"
+    menu:
+        "Maybe a little bit.":
+            c "But I'm more than willing to try."
+        "Not at all.":
+            c "You're just as you are, and I like you that way."
+        "It's gorgeous.":
+            $ renpy.pause (0.5)
+    m "I spread his cheeks apart, feeling the muscle in his quadrupedal legs tense beneath my touch."
+    Ry shy ud "Are you... going to...?"
+    menu:
+        "Lick his cloaca." if persistent.bangok_cloacas == True:
+            jump bangok_four_remy4_rimjob
+        "Lick his ass." if persistent.bangok_cloacas == False:
+            jump bangok_four_remy4_rimjob
+        "Lick his shaft's base.":
+            jump bangok_four_remy4_sheath_licking
+        "Stroke his tip.":
+            jump bangok_four_remy4_handjob
+
+label bangok_four_remy4_rimjob:
+    show bangok_four_remy4_cg bottom:
+        align (0.5, 1.0)
+        linear 2.0 align (0.625, 0.7)
+        align (0.625, 0.7)
+        zoom 2.0
+        linear 0.7 zoom 3.0
+    $ renpy.pause (0.5)
+    m "Unable to resist the winking invitation of his tight ring of flesh, I leaned in, giving it..."
     jump todo_out_of_content_bangok_four_remy4
+    show bangok_four_remy4_cg bottom:
+        linear 1.0 zoom 2.0
+        zoom 2.0
+    with None
+    m "Pulling back, I stroked Remy's shuddering flanks, trying to decide what to do next."
+    menu:
+        "Lick his shaft's base.":
+            jump bangok_four_remy4_sheath_licking
+        "Stroke his tip.":
+            jump bangok_four_remy4_handjob_late
+
+label bangok_four_remy4_sheath_licking:
+    show bangok_four_remy4_cg bottom:
+        linear 2.0 align 0.59
+        align 0.59
+    with None
+    $ renpy.pause (0.5)
+    m "Running my hands down his rear, I spread his mid-thighs wider, fully revealing the glistening slit from which his shaft peeked out."
+    show bangok_four_remy4_cg bottom:
+        zoom 2.0
+        linear 1.0 zoom 3.0
+        zoom 3.0
+    with None
+    m "Then I leaned in, placing my face right up that slit as I began to lick and suck on the fleshy bits within."
+    Ry shy ud "Mmmmnh."
+    m "Remy squirmed, panting harder as licked at his slit's slick contents."
+    m "I slowed, worried I was going too fast for him."
+    Ry shy ud leye "Keep going. Please."
+    m "Taking his words as encouragement, I continued to lick and suck at his sheath, feeling his member twitch and throb beneath my ministrations."
+    m "Then I dug a little deeper, sliding my tongue beneath his slit's fleshy folds while his shaft rubbed against my cheeks and chin."
+    $ renpy.pause (0.5)
+    Ry shy ud closed "Oh, [player_name]..."
+    $ renpy.pause (0.5)
+    menu:
+        "Stroke him while licking.":
+            $ renpy.pause (0.5)
+            m "Struggling to keep my position without faceplanting forehead-first into his slit, I brought my hands between his legs, wrapping my fingers around his slick shaft."
+            m "Remy whined, his body and dragonhood radiating heat and need, his length now fully unsheathed and throbbing with desire between my hands."
+            m "I began to stroke him slowly at first, then faster as I felt his hips twitching against my face, as if he wanted to thrust into my gentle strokes."
+            Ry shy ud leye "Nngh... [player_name], the couch... c-cushions..."
+            m "I could feel his precum dripping onto my fingers as I worked him, his twitching and moaning reaching a crescendo as he neared his peak."
+            menu:
+                "Save the cushions with my mouth.":
+                    jump todo_out_of_content_bangok_four_remy4
+                "Keep going.":
+                    m "Caring only about this moment here with him, I continued to stroke him, feeling his body stiffen and his breath catch as he came."
+                    Ry shy ud closed "[player_name]...!"
+                    m "His seed shot out in thick, hot ropes, splattering across my hands and arms and the couch beneath him as I continued to stroke him through his orgasm."
+                    m "Finally, he collapsed back against the couch, panting heavily, his eyes closed and his body shivering with the aftershocks of his climax."
+                    m "Then he finally opened his eyes and noticed the mess he'd made."
+                "Pull away.":
+                    show bangok_four_remy4_cg bottom:
+                        zoom 3.0
+                        linear 1.0 zoom 2.0
+                        zoom 2.0
+                    with None
+                    m "I dropped everything I was doing, pulling away in an attempt to save the couch cushions from his seed."
+                    m "I was too late."
+                    Ry shy ud closed "Nngh... [player_name]..."
+                    m "His twitching member spurted out thick, hot ropes of seed, splattering the couch cushion beneath his hindquarters."
+                    m "After a few moments of panting, shivering climax, he collapsed back against the couch, still panting heavily."
+            Ry shy ud "I'm sorry... I didn't mean to..."
+            Ry look ud "I messed even this up, I--"
+            menu:
+                "Cut him off by kissing him.":
+                    scene black with dissolve
+                    m "Before he could finish his sentence, I'd closed the distance to his snout and pressed my lips against his."
+                    m "He moaned softly, nuzzling his snout against my face as I kissed him."
+                    m "Then I pulled away, looking him in the eyes."
+                "Cut him off by licking his shaft.":
+                    show bangok_four_remy4_cg bottom:
+                        zoom 2.0
+                        linear 0.5 zoom 3.0
+                        zoom 3.0
+                    with None
+                    m "Before he could finish his sentence, I leaned in to kiss him on the one place I could most show there was no affection lost."
+                    Ry shy ud leye "Nnh..."
+                    m "He moaned softly, letting me continue to lavish him with attention for a few moments until I pulled away again."
+                    show black with dissolve
+                    $ renpy.pause (0.5)
+                "Comfort him.":
+                    show black with dissolve
+                    $ renpy.pause (0.5)
+            show bangok_four_remy4_cg bottom:
+                zoom 2.0
+                align (0.2, 0.5)
+            with dissolve
+            c "You didn't mess up anything. We'll clean it up together."
+            m "He looked at me, his eyes full of gratitude and relief."
+            show black with dissolve
+            m "Then, to my surprise, he launched off the couch and hugged me, heedless of how much heavier he was than me."
+            c "Remy!"
+            show o4 at Pan((0, 250), (0, 250), 0) with vpunch
+            jump bangok_four_remy4_floor_cuddle_conclusion
+        "Keep licking.":
+            $ renpy.pause (0.5)
+            m "Remy huffed harder, his body and dragonhood radiating heat and need, his length now fully unsheathed and throbbing with desire."
+            show bangok_four_remy4_cg bottom:
+                zoom 3.0
+                linear 1.0 zoom 3.2
+                zoom 3.2
+            with None
+            m "Then, grabbing his hips, I pulled myself a little closer, trying to get my tongue as deep into his slit as I could."
+            Ry shy ud leye "Nngh... [player_name], stop. That's... too much."
+            show bangok_four_remy4_cg bottom:
+                zoom 3.0
+                linear 1.0 zoom 3.0
+                linear 3.0 zoom 1.5
+            with None
+            m "Reluctantly, I pulled away, looking up at him with a question in my expression."
+            c "Are you okay?"
+            Ry shy ud "I liked it, but... it was a little too intense. At least all on its own."
+            m "His hindquarters shivered with need."
+            Ry normal ud "Let's try something else."
+        "Pull away.":
+            show bangok_four_remy4_cg bottom:
+                zoom 3.0
+                linear 1.0 zoom 1.5
+                zoom 1.5
+            with None
+            m "I pulled away, looking up at him with a grin."
+            m "Remy huffed, hidnquarters shivering with need."
+
+    menu:
+        "[[Stroke him.]":
+            jump bangok_four_remy4_handjob_late
+        "I want you inside me.":
+            jump todo_out_of_content_bangok_four_remy4
+
+label bangok_four_remy4_handjob:
+    show bangok_four_remy4_cg bottom:
+        linear 2.0 align 0.59
+        align 0.59
+    with None
+    $ renpy.pause (0.5)
+    m "Seeing his glistening tip and its leaking pre, I couldn't help but want it between my fingers."
+    show bangok_four_remy4_cg bottom:
+        zoom 2.0
+        linear 2.0 zoom 2.2
+        zoom 2.2
+    with None
+    m "Reaching down, I nudged his hindlegs a little further apart, then gently grasped his tip with one hand."
+    m "A shudder ran through Remy's rear, right up his tail, fluttering his wings."
+    m "Then I began to explore with my fingers, sliding them around the slick surface of his dragonhood's tip, caressing until I began to urge more from within his body."
+    Ry shy ud closed "Hahh..."
+    m "Remy hid his snout under a forepaw, panting as I began to stroke what of his shaft had emerged with one hand."
+    m "More slid out of its hiding place, giving further distance for my fingers to glide over his slick shaft's surface from his slit all the way to his tip."
+    m "Then it seemed I had coaxed all I could from him, and he began to huff with further need."
+    jump bangok_four_remy4_handjob_merge
+
+label bangok_four_remy4_handjob_late:
+    show bangok_four_remy4_cg bottom:
+        linear 2.0 align 0.59
+        align 0.59
+        zoom 2.0
+        linear 2.0 zoom 2.2
+        zoom 2.2
+    with None
+    $ renpy.pause (0.5)
+    m "I reached between his hindlegs, spreading them slightly further from his engorged, glistening dragonhood."
+    m "Then, gently, I began to caress his member with one hand, gliding my fingers over his slick shaft's surface from his slit all the way to his tip."
+    m "He huffed and moaned, heady with need."
+
+
+label bangok_four_remy4_handjob_merge:
+    m "I could feel his member twitching and throbbing beneath my touch, his hips shaking as he tried to thrust into my hand."
+    m "Deciding to oblige his desires, "
+
+
+label bangok_four_remy4_floor_cuddle_conclusion:
+    m "We lay on the floor together, his wings and tail wrapped around me as we cuddled and caught our breath in each others' embrace."
+    stop soundloop fadeout 5.0
+    $ renpy.pause (4.0)
+    m "As our breathing faded into quiet, I felt the rise and fall of his warm chest against my arm, and never wanted to let go."
+    m "Remy nuzzled the top of my head, then gave me a lick."
+    Ry shy ud "[player_name]..."
+    m "I looked up to meet his gaze."
+    Ry shy ud "Can I stay here, tonight?"
+    c "Of course."
+    scene black with dissolvemed
+    m "He smiled as he dipped his head to nuzzle me again, and it was the happiest smile I'd ever seen on his white-scaled face."
+    $ remystatus = "good"
+    $ mp.remyromance = True
+    $ mp.save()
+    hide remy with dissolve
+
+    stop music fadeout 2.0
+
+    $ renpy.pause (2.0)
+
+    $ remyscenesfinished = 4
+    jump _mod_fixjmp
+
 
 label bangok_four_remy4_suck_him:
     m "With a gentle push, I guided him to lie flat on his back."
