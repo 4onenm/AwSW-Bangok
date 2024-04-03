@@ -80,6 +80,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `bg/in/bangok/labdoor.png`: 4onenm, editing base-game assets
 + `bg/in/bangok/library_corridor_night.png`: `Anoney`, editing base-game assets
 + `bg/in/bangok/officedoor.png`: 4onenm, editing base-game assets
++ `bg/in/bangok/facin3_wall*`: 4onenm, editing base-game assets
 + `bg/in/*`: 4onenm, editing base-game assets
 + `cg/bangok/adineshower/*`: Jackwolf
 + `cg/lorem-x-ipsum_purpleroom.png`:
@@ -91,6 +92,11 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
     + Comissioner: [Argentum48](https://www.furaffinity.net/user/argentum48/)
     + Vaginal, belly, cum edits: 4onenm
     + Balls edit: `Anonymous By Request`
++ `cg/bangok/annaxdamion2/*`:
+    + Artist: [Aesyr](https://www.furaffinity.net/user/aesyr/) (Original: https://www.furaffinity.net/view/47526643/)
+    + Comissioner: [Argentum48](https://www.furaffinity.net/user/argentum48/)
+    + Vaginal, belly, cum edits: 4onenm
+    + Balls edit: `Anonymous By Request` (then edited by 4onenm)
 + `cg/bangok/brycexsebastian_office/*`:
     + Artist: [N1k0](https://www.furaffinity.net/user/n1k0) (Originals: https://www.furaffinity.net/view/48861688/ https://www.furaffinity.net/view/48861770/)
     + Layering, no cum, `excessive_cum` edits: 4onenm

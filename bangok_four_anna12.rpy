@@ -195,6 +195,8 @@ label bangok_four_anna2_nomorewaiting:
 
 label bangok_four_anna2_wantthisornot:
     An disgust "I just told you that I am, so get off my back. Do you want to fuck me or not?"
+    if bangok_four_xdamion_store.annaxdamion2_seen == True:
+        jump bangok_four_annaxdamion2_confrontation_choice
     jump bangok_four_anna2_wantthisornot_end
 
 label bangok_four_anna2_whatnow:

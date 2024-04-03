@@ -155,6 +155,15 @@ init:
     image bangok_four_bryce1_apartment night = "bg/in/apts/pad_night.png"
     image bangok_four_bryce1_apartment night ceiling = "bg/in/apts/pad_night_ceil.png"
 
+    image bangok_four_facin3_wall = "bg/in/bangok/facin3_wall.jpg"
+    image bangok_four_facin3_wall_vent = "bg/in/bangok/facin3_wall_vent.png"
+    image bangok_four_facin3_wall_vent dk = im.Recolor("bg/in/bangok/facin3_wall_vent.png", 60, 70, 100, 255)
+    image bangok_four_facin3_wall_vent track = bangok_four_common.TrackCursor(
+        "bg/in/bangok/facin3_wall_vent.png",
+        posxmin=-150, posxmax=-20,
+        posymin=-200, posymax=-20,
+    )
+
     image bangok_four_xipsum_bedroom normal = "bg/in/apts/ipsum_bedroom.png"
     image bangok_four_xipsum_bedroom_bed = "bg/in/apts/ipsum_bedroom_bed.png"
     image bangok_four_xipsum_bedroom ceiling = "bg/in/apts/ipsum_bedroom_ceiling.png"
@@ -215,6 +224,74 @@ init:
             None, None
         ),
     ])
+
+    image bangok_four_annaxdamion2 = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/annaxdamion2/base.jpg"),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_cloacas', None,
+            None, "cg/bangok/annaxdamion2/vaginal.png",
+        ),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_balls', "cg/bangok/annaxdamion2/damion_balls.png",
+            None, None,
+        ),
+        bangok_four_common.Attribute('bulge','bulge', "cg/bangok/annaxdamion2/bulge.png"),
+        bangok_four_common.Attribute('cum', 'cum',
+            "cg/bangok/annaxdamion2/cum.png",
+        ),
+        bangok_four_common.Attribute('cumnostril', 'cumnostril',
+            "cg/bangok/annaxdamion2/cumnostril.png",
+        ),
+        bangok_four_common.Attribute('annaeye', 'annaeyeclosed',
+            "cg/bangok/annaxdamion2/anna_eye_closed.png",
+        ),
+        bangok_four_common.Attribute('damioneye', 'damioneyelidded',
+            "cg/bangok/annaxdamion2/damion_eye_lidded.png",
+        ),
+        bangok_four_common.Attribute('damioneye', 'damioneyeclosed',
+            "cg/bangok/annaxdamion2/damion_eye_lidded.png",
+        ),
+    ])
+    image bangok_four_annaxdamion2 track stage1 = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2',)),
+        posxmin=-364, posxmax=0,
+        posymin=-533, posymax=0,
+    )
+    image bangok_four_annaxdamion2 track stage2 = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2','annaeyeclosed','damioneyelidded')),
+        posxmin=-364, posxmax=100,
+        posymin=-533, posymax=0,
+    )
+    image bangok_four_annaxdamion2 track stage3 bulge1 = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2','bulge','damioneyeclosed')),
+        posxmin=-364, posxmax=100,
+        posymin=-533, posymax=0,
+    )
+    image bangok_four_annaxdamion2 track stage3 bulge2 = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2','bulge','annaeyeclosed','damioneyeclosed','cum')),
+        posxmin=-364, posxmax=100,
+        posymin=-533, posymax=0,
+    )
+    image bangok_four_annaxdamion2 track stage3 bulge3 = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2','bulge','annaeyeclosed','damioneyelidded','cum','cumnostril')),
+        posxmin=-364, posxmax=100,
+        posymin=-533, posymax=0,
+    )
+    image bangok_four_annaxdamion2 track stage4 postbulge = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2','cum','cumnostril')),
+        posxmin=-364, posxmax=100,
+        posymin=-533, posymax=0,
+    )
+    image bangok_four_annaxdamion2 track stage3 = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2','damioneyeclosed', 'cum')),
+        posxmin=-364, posxmax=100,
+        posymin=-533, posymax=0,
+    )
+    image bangok_four_annaxdamion2 track stage4 = bangok_four_common.TrackCursor(
+        renpy.display.image.ImageReference(('bangok_four_annaxdamion2','cum')),
+        posxmin=-364, posxmax=100,
+        posymin=-533, posymax=0,
+    )
 
 
     image bangok_four_brycexsebastian = bangok_four_common.LayeredImage([
