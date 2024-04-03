@@ -58,6 +58,7 @@ Voyeurism scenes (accessible if the Voyeurism fetish flag is enabled)
 <summary>Voyeurism scene access guides</summary>
 
 + Anna x Damion: Visit the production facility during the Chapter 2 investigation.
++ Anna x Damion 2: During the start of Anna's 2nd date, look around the facility for her after an hour.
 + Bryce x Sebastian: Complete Chapter 3 as normal.
 </details>
 <br/>
