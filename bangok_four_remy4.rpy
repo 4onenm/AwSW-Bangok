@@ -7,6 +7,7 @@ init python in bangok_four_remy4_store:
 
     player_finished = False # type: bool
     remy_finished = False # type: bool
+    remy_pissed = False # type: bool
 
 # == No more tongue path ==
 # Remy is on his back on the couch
@@ -55,7 +56,7 @@ label bangok_four_remy4_more:
         show remy look b with dissolve
         m "To my confusion, Remy's face fell, sharply."
         Ry "[player_name], this is... only our third date, and we're different species. I'm certainly not ready for that yet."
-        Ry "It would also be very improper given your position as ambassador, and mine as liason."
+        Ry "It would also be very improper given your position as ambassador and mine as liason."
         c "Oh, well, I didn't mean--"
         Ry shy b "While I'm not... writing off the possibility, I think we should at least wait until the Reza situation is resolved."
         c "Okay, I understand."
@@ -520,18 +521,195 @@ label angok_four_remy4_atop_inside_anal:
                 m "He held me in place, throbbing cock hilted in my guts as his balls clenched against my ass and a shudder ran through his body."
             else:
                 m "He held me in place, throbbing cock hilted in my guts as a shudder ran through his body."
-            m "Then the base of his dragonhood pulsed, stretching my abused sphincter before his tip spurt the first hot gob of cum deep inside my body."
+            m "Then the base of his dragonhood pulsed, stretching my abused sphincter before his tip spurt the first hot stream of seed deep inside my body."
     m "I put a hand on my belly, panting happily as I felt the slight bulge of his tip and the warm spurts it was coating my insides with."
     if persistent.bangok_inflation == True:
-        m "Only, as I felt my intestines growing hotter and heavier with seed that was unable to escape around his thick shaft, I realized that our size difference could have more consequences than the tight fit of his member."
+        m "Only, as I felt my intestines growing hotter and heavier with seed, I realized that our size difference could have more consequences than the tight fit of his member."
+        m "He kept cumming, his seed unable to escape around his thick shaft stretching my sphincter taut."
         c "Remy!"
-        m "My guts gurgled, my belly expanding with Remy's enormous dragonload."
+        m "My guts gurgled, my belly stretching slowly with Remy's enormous dragonload."
+        if persistent.bangok_balls == True:
+            m "I strained, feeling my insides stretched to my limits to contain Remy's love and affection spilled into me as his balls finally relaxed against my rear and his member stopped pulsing inside me."
+        else:
+            m "I strained, feeling my insides stretched to my limits to contain Remy's love and affection spilled into me as his member finally stopped pulsing inside me."
+        Ry shy ud "O-Oh no. I couldn't-- Are you okay?"
+        m "I held my swollen belly, wobbling every breath as the thick, creamy dragon cum settled and pooled inside me."
+        menu:
+            "I think I'm going to be sick.":
+                m "Remy's face fell, so I expanded on what I meant immediately."
+                c "Remy, I love you, but I think I took that too far."
+                m "My intestines cramped around the heavy weight of his seed, causing me to wretch and gasp through the pain of being stretched so far with so much cum inside of me."
+            "I'm fine. Just... full.":
+                m "Remy put a forepaw on my belly, feeling the weight of his seed inside me."
+                Ry normal ud "Very full. And beautiful."
+                m "I smiled at him, then winced as my intestines cramped around the heavy weight of his seed."
+            "This feels amazing.":
+                m "I guided Remy's scaly forepaws to my belly, placing my hands over his while letting him feel and massage my stuffed insides through the taut skin of my abdomen."
+                Ry normal ud "So tight and warm and full... You're so beautiful."
+                Ry shy ud "It felt so good that I can barely think right now. Are you sure you're okay?"
+                m "I exhaled shakily as he slowly moved his forepaws up and down my belly in circular motions, massaging and squeezing the weight of his cum deep in my guts."
+                m "Then my intestines cramped around the heavy weight of his seed and I winced, only steadying myself by leaning on his forepaws."
+        c "Ow. H-Hold on."
+        if persistent.bangok_knot == True:
+            m "I tried to stand, to get off of him and get some relief, but my sphincter abruptly met resistance it couldn't stretch around."
+            m "A thick knot had formed at the base of his shaft, locking us together and sealing his seed inside me."
+            m "I groaned, the attempted movement causing my belly to gurgle and churn with the weight of his seed moving around his shaft."
+        else:
+            m "I tried to stand, to get off of him and get some relief, but my belly was too heavy and I sank the tiny distance I'd made back down his shaft, groaning as it churned my already full guts."
+    else:
+        m "He came far more than any human could, leaving a warm, seeping feeling deep inside me around the thick shaft of his dragonhood."
+        m "I could feel his member twitching and throbbing inside me, his heat suffusing my insides."
+        m "Then his climax gradually, finally, began to subside, leaving me with the warmth of his love and affection deep inside me."
+        m "I caught him blushing furiously as he looked down at our coupling point, then back up at me."
+        Ry shy ud "Was that... okay? I didn't hurt you, did I?"
+        menu:
+            "I'm fine. That was amazing.":
+                pass
+            "You were perfect.":
+                pass
+        m "I smiled at him, then winced as my intestines cramped around the thick heft of his shaft, still buried deep inside me."
+        c "Ow. H-Hold on."
+        if persistent.bangok_knot == True:
+            m "I tried to stand, to get off of him and get some relief, but my sphincter abruptly met resistance it couldn't stretch around."
+            m "A thick knot had formed at the base of his shaft, locking us together."
+            m "I groaned, the attempted movement reminding my body of the size of cock I'd just taken."
+        else:
+            m "I tried to stand, to get off of him and get some relief, but after all my exertions and my world-shaking orgasm, my legs were simply too tired to lift me."
+            m "I groaned, sinking back down his shaft the short distance I'd managed to move, feeling my insides complaining about the size of cock I'd just taken, now sliding through me again."
+    c "I... don't think I can move for a bit."
+    Ry shy ud "Oh. S-Sorry. I--"
+    if persistent.bangok_inflation == True:
+        m "Carefully, I leaned forward, laying my heavy belly down against his belly scales."
+        m "Then, when I was mostly laying down, I wrapped my arms around his neck in a tight embrace."
+    else:
+        m "I leaned forward, laying down on his belly as I wrapped my arms around his neck in a tight embrace."
+    c "You have nothing to be sorry for."
+    $ renpy.pause (1.0)
+    Ry shy ud "..."
+    if persistent.bangok_watersports == True:
+        jump angok_four_remy4_atop_inside_anal_ws_choice
+    else:
+        jump angok_four_remy4_atop_inside_anal_ending
+
+label angok_four_remy4_atop_inside_anal_ws_choice:
+    m "Despite my words, the silence felt decidedly tense from his side. I raised my head, giving him an inquisitive look."
+    Ry look ud "Is this a bad moment to realize I haven't used the bathroom since before arriving today?"
+    Ry shy ud "And you're lying on my bladder."
+    m "I blushed too, realizing that with his length stuck inside me, there was just one place he could urinate."
+    menu:
+        "Can you hold it?":
+            m "Remy's eyes widened, then he nodded."
+            Ry shy ud "I'll try."
+            jump angok_four_remy4_atop_inside_anal_ending
+        "That is the hottest and most ill-timed thing I've ever heard you say." if persistent.bangok_inflation == True:
+            $ renpy.pause (0.7)
+            Ry shy ud "Hot?!"
+            m "I chuckled, then winced as my belly cramped again around the weight of his seed."
+            c "Remy, I would be honored to be your urinal. I'm just... already so full."
+            Ry shy ud "I-- What?! No, I can't-- I mean, I wouldn't ask you to--"
+            m "He lapsed into silence for a few moments, blushing furiously."
+            Ry shy ud "Can you take it?"
+            m "He rubbed my bulging belly with a forepaw."
+            menu:
+                "I'll try. Go ahead. Piss in me.":
+                    pass
+                "I can't. It'd be too much. Can you hold it?":
+                    m "Remy's eyes widened, then he nodded."
+                    Ry shy ud "I'll try."
+                    jump angok_four_remy4_atop_inside_anal_ending
+        "Okay, go ahead. I can take it." :
+            $ renpy.pause (0.5)
+            if persistent.bangok_inflation == True:
+                Ry shy ud "I-I can't believe you're saying this. You're already so full. And what I'm asking you to do..."
+            else:
+                Ry shy ud "I-I can't believe you're saying this. I'm so embarrassed."
+            menu:
+                "I'd be honored to be your urinal.":
+                    $ renpy.pause (0.5)
+                "I'm not embarrassed." if persistent.bangok_inflation == False:
+                    $ renpy.pause (0.5)
+                "I wouldn't have said it if I didn't mean it.":
+                    $ renpy.pause (0.5)
+                "I want to feel you inside me in every way.":
+                    $ renpy.pause (0.5)
+                "If you've got to go, you've got to go.":
+                    $ renpy.pause (0.5)
+                "Okay, now I'm having second thoughts.":
+                    Ry shy ud "I'm sorry. I shouldn't have asked you to--"
+                    Ry shy ud "I'll try to hold it."
+                    jump angok_four_remy4_atop_inside_anal_ending
+            Ry shy ud "No, I--"
+            Ry shy ud "I--"
+            m "He lapsed into silence for a few moments, blushing furiously."
+        "I'd be honored to be your urinal.":
+            $ renpy.pause (0.5)
+            Ry shy ud "I-- What?! No, I can't-- I mean, I wouldn't ask you to--"
+            m "He lapsed into silence for a few moments, blushing furiously."
+            menu:
+                "I love you Remy. Every part of you.":
+                    $ renpy.pause (0.5)
+                "I want to feel you inside me in every way.":
+                    $ renpy.pause (0.5)
+                "I wouldn't have said it if I didn't mean it.":
+                    $ renpy.pause (0.5)
+                "Let's find out how much my body can take." if persistent.bangok_inflation == True:
+                    $ renpy.pause (0.5)
+            Ry shy ud "I-I can't believe you're saying this. You're already so full. And what I'm asking you to do..."
+            c "I want this, Remy."
+            Ry shy ud "I--"
+    Ry shy ud "..."
+    Ry shy ud "Thank you."
+    m "He leaned down, nuzzling his snout against my neck and shoulder as he tried to relax enough to let go."
+    m "After a few moments, he shuddered, and I felt the hot stream of his piss working its way up his enormous length still buried inside me."
+    play soundloop "fx/faucet1.ogg" fadein 1.0
+    queue soundloop "fx/faucet2.ogg"
+    if persistent.bangok_inflation == True:
+        m "With my guts already stuffed full of his seed, at first I couldn't even feel his piss coming out, as if he had hesitated at the last moment."
+        m "But then, as he groaned and relaxed, I began to feel the hot urine mixing with his seed, filling me up even more."
+        m "My belly gurgled again, swelling slowly still further as his cum was pushed deeper into me by the force of his urination."
+        m "Then the gurgling stopped, and I realized there was simply no more room in my taxed intestines for any more liquid."
+        c "Remy, I-- Urp!"
+        m "I belched, holding my cramping, straining belly as cum flooded my stomach, rising up my throat while his piss continued to fill me from the inside."
+        m "I couldn't breathe as I belched again, this time feeling heavy, creamy rivulets of cum dribble down my chin and chest."
+        Ry shy ud "Oh, [player_name]! I'm so sorry!"
+        m "I tried to speak, but the weight of his seed and piss inside me was too much, and I could only belch and gulp as I tried to keep from choking on the thick, creamy fluids."
+        stop soundloop fadeout 5.0
+        m "Remy's piss finally slowed, leaving me with a belly so full and heavy that I couldn't scarcely even think of moving."
+        m "All I knew was that I was too full to breathe, and that some of it was going to come up any moment."
+        Ry shy ud "[player_name]! I--"
+        menu:
+            "Vomit cum.":
+                m "I tried to hold it back, but the weight of his seed and piss inside me was too much."
+                m "I belched again, then vomited a thick, creamy stream of cum and piss all over Remy and couch."
+                m "I gasped, then belched again, feeling the weight of his seed and piss inside me shift and settle as I emptied my stomach of the thick, creamy fluids."
+                Ry look ud "Oh, [player_name]! [player_name], I didn't mean to-- Oh, [player_name]!"
+                m "With some of the pressure relieved, I caught a ragged breath."
+            "Kiss him.":
+                m "Utterly overwhelmed by the sensations of being stuffed so full of his seed and piss, I caught Remy's snout with a hand and pulled him down into a deep, passionate kiss."
+                m "And then the movement forced a torrent of cum up my throat, and I vomited a thick, creamy stream right into Remy's mouth."
+                m "He gasped, then swallowed, then kissed me back, his tongue sliding into my mouth to share the thick, creamy fluids with me."
+                m "As his tongue tried to explore down my throat, I gagged, then vomited again, the thick, creamy fluids spilling out of our locked mouths and down onto our chests, bellies, and the couch, despite his best efforts to swallow it all."
+                m "Then, finally, the pressure eased, and I caught a ragged breath."
+
     jump todo_out_of_content_bangok_four_remy4
 
 
-
-
-
+label angok_four_remy4_atop_inside_anal_ending:
+    show bangok_grey with dissolveslow
+    if persistent.bangok_knot == True:
+        m "He was silent for a long moment, then nuzzled his snout against my shoulder and back, returning the hug and cuddling me close as we waited for his knot to relax and release me."
+    else:
+        m "He was silent for a long moment, then nuzzled his snout against my shoulder and back, returning the hug and cuddling me close as we waited for me to recover enough to move."
+    scene black with dissolveslow
+    scene o4 at Pan((0,220), (0,250), 1)
+    m "It took some work for us to separate, requiring us to move over to an empty space on the floor to get the leverage we needed."
+    if persistent.bangok_inflation == True:
+        m "When we finally did, I felt a rush of relief as his seed began to pour out of my overstretched body, pooling on the floor beneath me."
+    if persistent.bangok_watersports == True and bangok_four_remy4_store.remy_pissed == False:
+        m "The moment we were separated, Remy rushed to the bathroom, leaving me to recover on my own for a few moments."
+    m "I felt wide open and empty without him inside me, but I was also relieved to have him out of me."
+    m "We collapsed together on the floor, panting and exhausted from our new exertions despite the cuddling rest we'd just had."
+    jump bangok_four_remy4_floor_cuddle_conclusion_late
 
 
 
@@ -912,6 +1090,7 @@ label bangok_four_remy4_bottom_handjob_merge:
 
 label bangok_four_remy4_floor_cuddle_conclusion:
     m "We lay on the floor together, his wings and tail wrapped around me as we cuddled and caught our breath in each others' embrace."
+    label bangok_four_remy4_floor_cuddle_conclusion_late:
     stop soundloop fadeout 5.0
     $ renpy.pause (4.0)
     m "As our breathing faded into quiet, I felt the rise and fall of his warm chest against my arm, and never wanted to let go."
