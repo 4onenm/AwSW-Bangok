@@ -444,12 +444,72 @@ label angok_four_remy4_atop_inside_anal:
     $ renpy.pause (2.0)
     m "Remy's eyes fluttered shut as I began to ride him, his breath coming in ragged gasps as he tried to hold back his own climax."
     m "His hips began to rock in time with my own, his member throbbing and twitching inside me as I tried to keep my own body from tensing up too much."
-    m "My gut was filled with the heat of his member, the stretch of his girth, and the pleasure of his insistent thrusts."
+    m "My body was filled with the heat of his member, the stretch of his girth, and the pleasure of his insistent thrusts."
+    Ry shy ud "Oh, [player_name]... [player_name]..."
     if bangok_four_playerhasdick == True:
         m "As my own member rubbed against his scaly belly, and his enormous dragonhood ground against something deep inside me, I couldn't help but groan with need."
     else:
         m "My nerves were alight with the pleasure of his member filling my insides, to the point I didn't even need to touch myself to feel the pleasure building."
         m "I groaned with need, trying to keep myself from rubbing my clit against his belly scales as I rode him."
+    $ renpy.pause (0.5)
+    c "Remy..."
+    Ry shy ud leye "[player_name], I...!"
+    m "His hips stilled as his body tensed, leaving only my tiring body to do the work."
+    m "I could feel him holding back, resisting growing urges as he gripped the couch armrest behind him with his forepaws."
+    menu:
+        "I've got you. Let me make you cum.":
+            m "Remy let out a wordlesss sound somewhere between a whine of desire and a sigh of relief."
+            m "I forced myself to keep up the pace, the lube squelching wetly between us in my happy abandon."
+            if persistent.bangok_balls == True:
+                m "Then I felt a change in Remy: a tensing of his muscles, a clenching in his balls and a new throbbing in his shaft."
+            else:
+                m "Then I felt a change in Remy: a tensing of his muscles and a new throbbing in his shaft."
+            m "I sank down to hilt Remy within me, almost losing myself again in the sensation of his member pressing against my belly from the inside."
+            Ry shy ud closed "Oh, [player_name]..."
+            m "With that final croon, I felt the first hot gob of cum spurt deep inside me, suffusing me with the heat of his climax."
+            show white with dissolve
+            if bangok_four_playerhasdick == True:
+                m "Mindless with pleasure, I stroked myself a few short times, then came all over our bellies, joining Remy in twitching, spurting climax."
+            else:
+                m "Mindless with pleasure, I slipped my fingers into my folds and came all over our bellies, joining Remy in twitching, spurting climax."
+            hide white with dissolveslow
+        "Don't hold back. Take me. Harder.":
+            Ry shy ud closed "I-I don't want to hurt--"
+            c "Please... I... I want...!"
+            m "I begged, nearing a peak of my own."
+            show bangok_four_remy4_cg top:
+                linear 1.0 yalign 0.0
+            with None
+            m "Growling, Remy put his forepaws on my shoulders, stopping me with his dragonhood buried to the hilt in my backdoor.{w} He tensed his tail."
+            show bangok_four_remy4_cg top:
+                linear 0.4 yalign 0.1
+                linear 0.7 yalign 0.0
+                repeat
+            with None
+            m "Then he began to buck his hips, his member throbbing and twitching inside me as he tried to hold back his own climax through the pleasure of taking my body."
+            m "Wet slaps filled the room of his hips agaisnt my rear. I couldn't help but moan at the sensations he was causing as my guts twisted around the thick shaft of his cock."
+            m "I gasped, moaning through each hard shove."
+            show white with dissolve
+            if bangok_four_playerhasdick == True:
+                m "Then I was cumming all over our bellies, unable to hold back any longer the clenching in my balls and the twitches and spurts of my exposed member as they slapped into his lower belly with every hard thrust."
+            else:
+                m "Then I was cumming all over our bellies, my labia slapping wetly against his lower belly with every hard thrust."
+            show bangok_four_remy4_cg top:
+                yalign 0.0
+            with None
+            Ry shy ud "[player_name]!"
+            hide white with dissolve
+            m "I came down from my climax right into the beginning of Remy's."
+            if persistent.bangok_balls == True:
+                m "He held me in place, throbbing cock hilted in my guts as his balls clenched against my ass and a shudder ran through his body."
+            else:
+                m "He held me in place, throbbing cock hilted in my guts as a shudder ran through his body."
+            m "Then the base of his dragonhood pulsed, stretching my abused sphincter before his tip spurt the first hot gob of cum deep inside my body."
+    m "I put a hand on my belly, panting happily as I felt the slight bulge of his tip and the warm spurts it was coating my insides with."
+    if persistent.bangok_inflation == True:
+        m "Only, as I felt my intestines growing hotter and heavier with seed that was unable to escape around his thick shaft, I realized that our size difference could have more consequences than the tight fit of his member."
+        c "Remy!"
+        m "My guts gurgled, my belly expanding with Remy's enormous dragonload."
     jump todo_out_of_content_bangok_four_remy4
 
 
