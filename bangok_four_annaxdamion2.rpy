@@ -21,6 +21,11 @@ label bangok_four_annaxdamion2:
     with dissolvemed
     m "The sun set as I walk, and the facility's lights dimmed to nearly nothing, leaving me alone and frustrated."
     c "(I'm not sure who the world record holder for \"most patient person\" is, but now I feel like a contender.)"
+    if (bangok_four_common.bangnokay.check()):
+        c "(It'd be wild if I caught a glimpse of her through a floor-height vent, wouldn't it?)"
+        c "(Or if I heard her voice echoing through the halls?)"
+        c "(Oh well. At this point I might as well go back to the lab.)"
+        jump bangok_four_annaxdamion2_abort_fade
     c "(Still no sign of--)"
     scene bangok_four_facin3_wall:
         yalign 0.8
@@ -40,6 +45,7 @@ label bangok_four_annaxdamion2:
                 scene black with dissolve
                 play sound "fx/steps/clean2.wav"
                 $ renpy.pause (1.0)
+                scene facin3 at Pan ((128, 250), (128, 250), 0.0) with dissolvemed
                 jump bangok_four_annaxdamion2_nosign_return
     scene bangok_four_facin3_wall:
         align (0.5,0.8)
