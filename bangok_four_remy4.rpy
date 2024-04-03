@@ -47,6 +47,22 @@ label bangok_four_remy4_more:
     Ry shy b "What do you mean?"
     c "Do you want to keep going?"
     Ry shy b "I..."
+    if (bangok_four_common.bangnokay.check()):
+        Ry shy b "More kissing? There is a certain novelty, but I'm not sure how many times we'll be able to explore that in one sitting."
+        c "What? No, like..."
+        m "I stared at Remy, not sure how the intelligent dragon could be so dense on this topic."
+        c "Do you want to have sex?"
+        show remy look b with dissolve
+        m "To my confusion, Remy's face fell, sharply."
+        Ry "[player_name], this is... only our third date, and we're different species. I'm certainly not ready for that yet."
+        Ry "It would also be very improper given your position as ambassador, and mine as liason."
+        c "Oh, well, I didn't mean--"
+        Ry shy b "While I'm not... writing off the possibility, I think we should at least wait until the Reza situation is resolved."
+        c "Okay, I understand."
+        show remy look b with dissolve
+        $ renpy.pause (1.0)
+        m "He gave me another hard look, as if to make sure I understood, before speaking again."
+        jump bangok_four_remy4_canon_shouldprobablygo
     m "I couldn't tell if it was my heartbeat or his I was hearing as he deliberated."
     $ renpy.pause (0.8)
     show remyrom at Pan((350, 326), (350, 320), 2.0) with fade
