@@ -167,15 +167,15 @@ def anna_x_damion(ml):
 def anna_x_damion2(ml):
     ( ml.find_label('anna2')
         .search_menu('Wait.')
-        .add_choice("Look for her.", jump='bangok_four_annaxdamion2',condition=make_dev('(chapter3unplayed == True) and (persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)'))
+        .add_choice("Look for her.", jump='bangok_four_annaxdamion2',condition='(chapter3unplayed == True) and (persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)')
         .branch()
         .search_say("(Still no sign of her, though.)")
         .link_from('bangok_four_annaxdamion2_nosign_return')
         .search_menu("You better be.")
-        .add_choice("Was sucking that Damion so much more important?", jump='bangok_four_annaxdamion2_confrontation',condition=make_dev('(bangok_four_xdamion_store.annaxdamion2_seen == True) and (persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)'))
+        .add_choice("Was sucking that Damion so much more important?", jump='bangok_four_annaxdamion2_confrontation',condition='(bangok_four_xdamion_store.annaxdamion2_seen == True) and (persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)')
         .branch()
         .search_say("I just told you that I am, so get off my back. Do you want this date now or not?")
-        .hook_to('bangok_four_annaxdamion2_confrontation_choice',condition=make_dev('(bangok_four_xdamion_store.annaxdamion2_seen == True) and (persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)'), return_link=False)
+        .hook_to('bangok_four_annaxdamion2_confrontation_choice',condition='(bangok_four_xdamion_store.annaxdamion2_seen == True) and (persistent.bangok_voyeurism == True) and (persistent.nsfwtoggle == True)', return_link=False)
     )
 
 def bryce1_afterparty(ml):
@@ -557,7 +557,7 @@ def add_scene_select(ml):
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2024-04-02-child_of_3b156f8"
+    version = "2024-04-02-child_of_a79d7ac"
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
