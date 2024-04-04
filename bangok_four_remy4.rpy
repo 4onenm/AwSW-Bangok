@@ -250,13 +250,17 @@ label bangok_four_remy4_top_climb_atop:
         m "His blush only seemed to deepen as he answered."
         Ry "In your bathroom, under the sink on the right."
         c "I'll go get it."
-        scene bath with Fade(0.5)
+        scene black with dissolve
+        $ renpy.pause (0.5)
+        scene bath with dissolve
         $ renpy.pause (0.5)
         play sound "fx/box.wav"
         m "The bottle of lube was exactly where he'd said. It seemed surprisingly large, until I remembered the size of dragonhoods it may need to be serving."
+        scene black with dissolve
+        $ renpy.pause (0.5)
         scene o4 at Pan((0,220), (0,250), 1)
         show remy shy ud
-        with Fade(0.5)
+        with dissolve
         m "I returned to the living room with the lube, finding Remy had placed his shirt collar and glasses on the coffee table, out of harm's way."
     else:
         # Protected should've already gotten the lube
@@ -298,13 +302,9 @@ label angok_four_remy4_top_climb_atop_late:
             Ry shy ud "I also don't want to hurt you."
             Ry look ud "Are you sure...?"
             menu:
-                "My pussy can take it.":
+                "My pussy wants to try." if bangok_four_playerhasdick == False:
                     $ bangok_four_remy4_store.path = "vaginal"
-                "My pussy wants to try.":
-                    $ bangok_four_remy4_store.path = "vaginal"
-                "My ass can take it.":
-                    $ bangok_four_remy4_store.path = "anal"
-                "My ass wants to try.":
+                "My ass wants to try." if bangok_four_playerhasdick == True:
                     $ bangok_four_remy4_store.path = "anal"
                 "I... No, maybe I'm not sure.":
                     Ry shy ud "That's ok!"
@@ -690,8 +690,40 @@ label angok_four_remy4_atop_inside_anal_ws_choice:
                 m "He gasped, then swallowed, then kissed me back, his tongue sliding into my mouth to share the thick, creamy fluids with me."
                 m "As his tongue tried to explore down my throat, I gagged, then vomited again, the thick, creamy fluids spilling out of our locked mouths and down onto our chests, bellies, and the couch, despite his best efforts to swallow it all."
                 m "Then, finally, the pressure eased, and I caught a ragged breath."
-
-    jump todo_out_of_content_bangok_four_remy4
+        c "F-Fuck... I'm so full..."
+        m "I held my bloated stomach, swooning from the sensations of being stuffed so full of his seed and piss, only able to stay upright thanks to his thick dragonhood still holding me in place."
+        Ry shy ud "I shouldn't have let myself get this pent up."
+        Ry look ud "With our size difference... m-maybe we should get you to a hospital..."
+        c "(I'm not even sure how we'd do that.)"
+        m "Gingerly, I leaned forward to hug him again, struggling to keep the contents of my overstretched body down."
+        c "I'm staying right here with you."       
+        Ry shy ud "..."
+    else:
+        m "His hot urine sprayed into my colon, washing away his cum until the two fluids had mixed into a thin slurry pooling in my guts."
+        m "I held my belly, panting from the heat now suffusing my body."
+        m "Feeling him use me like this, marking and soiling my insides as his in a way that would never truly wash out, I found my love and affection for Remy only redoubling."
+        stop soundloop fadeout 4.0
+        m "Remy's piss finally slowed, then stopped, leaving only a gentle dribbling sensation as the slurry of his cum and piss settled deep inside."
+        m "Remy, too, panted with relief, but even still he looked apologetic."
+        Ry shy ud "I'm so sorry, [player_name]. That was--"
+        Ry look ud "I don't want to sound weird, but..."
+        Ry shy ud "That felt so intimate and... good. It felt good for me."
+        menu:
+            "That's weird, Remy.":
+                Ry shy ud "I'm sorry. I didn't mean to--"
+                c "I don't think I want to do that again."
+                Ry shy ud "O-Okay. I'm sorry."
+            "It felt good for me too.":
+                Ry shy ud "That's... good."
+                Ry shy ud "..."
+                Ry shy ud "I'm out now, but would you want to try that again? Sometime?"
+                c "Maybe."
+            "I hope you're not too embarrassed.":
+                Ry shy ud "I'm not. I just... I don't know what to say."
+                c "That's okay. I said it was okay and I meant it. I'm not going to suddenly hold it against you now."
+                Ry shy ud "..."
+        m "Trying to show there were no hard feelings, I leaned forward to hug him again."
+    jump angok_four_remy4_atop_inside_anal_ending
 
 
 label angok_four_remy4_atop_inside_anal_ending:
@@ -703,10 +735,13 @@ label angok_four_remy4_atop_inside_anal_ending:
     scene black with dissolveslow
     scene o4 at Pan((0,220), (0,250), 1)
     m "It took some work for us to separate, requiring us to move over to an empty space on the floor to get the leverage we needed."
-    if persistent.bangok_inflation == True:
-        m "When we finally did, I felt a rush of relief as his seed began to pour out of my overstretched body, pooling on the floor beneath me."
     if persistent.bangok_watersports == True and bangok_four_remy4_store.remy_pissed == False:
         m "The moment we were separated, Remy rushed to the bathroom, leaving me to recover on my own for a few moments."
+    elif persistent.bangok_watersports == True and bangok_four_remy4_store.remy_pissed == True and persistent.bangok_inflation == True:
+        m "The moment we were separated, a torrent of cum and piss spilled out of my gaping ass, soaking Remy's crotch, my legs, and the floor."
+        m "I groaned and shuddered with relief, my stomach cramping as my muscles were finally allowed to push the excessive liquids out of me."
+    elif persistent.bangok_inflation == True:
+        m "When we finally did, I felt a rush of relief as his seed began to pour out of my overstretched body, pooling on the floor beneath me."
     m "I felt wide open and empty without him inside me, but I was also relieved to have him out of me."
     m "We collapsed together on the floor, panting and exhausted from our new exertions despite the cuddling rest we'd just had."
     jump bangok_four_remy4_floor_cuddle_conclusion_late
