@@ -362,6 +362,133 @@ label angok_four_remy4_atop_inside:
         jump angok_four_remy4_atop_inside_anal
 
 label angok_four_remy4_atop_inside_vaginal:
+    m "I took my lube-slicked fingers and reached between my legs, smearing some of the lube into my wet, ready folds."
+    m "My fingers slipped a little deeper and I tensed up, anticipating what was about to happen as spread lube around in my juices."
+    m "Remy's lube-slicked member beneath me twitched against my lower belly, and I could feel the heat of his body between my legs."
+    show bangok_four_remy4_cg top:
+        zoom 1.6
+        ease 0.5 zoom 2.0
+        zoom 2.0
+    with None
+    m "Then, prepared, I moved that last bit forward onto his belly and picked up his tip, trying to align it with my ready, waiting hole."
+    if bangok_four_remy4_store.protection == True:
+        m "Despite all my preparation, I felt my folds pressed flat, stretched wide by just the tip of his condom-wrapped draconic cockhead."
+    else:
+        m "Despite all my preparation, I felt my folds pressed flat, stretched wide by just the tip of his draconic cockhead."
+    m "He didn't seem to fit, feeling more like a fist pressed against my entrance rather than a penis."
+    m "I squirmed, desparate to feel him inside me, but unable to push past the feeling of his tip sliding around in my outer folds and no deeper."
+    Ry look ud "[player_name], I know you want to do this, but I'm so much larger than you are."
+    Ry shy ud "Please be careful, and safe, and-- Ooooh..."
+    m "I squeezed his cockhead just behind the tip, hard, pushing some more lube up toward his tip."
+    show bangok_four_remy4_cg top:
+        zoom 2.0
+        ease 0.5 zoom 1.9
+        zoom 1.9
+    with None
+    m "Then, with a gasp of effort, I pushed myself backward, finally managing to slip his slightly-squeezed tip into my tight, straining canal."
+    show black with dissolveslow
+    m "I closed my eyes. My outer folds stretched, his girth spreading me like no living being's ever before as I set my face down and just tried to adjust to having him inside."
+    m "I didn't need to take any more of him to know there was zero chance I'd fit his entire length in my lifetime. My dragon lover was simply too large."
+    hide black with dissolvemed
+    m "Torn, I looked up into Remy's deep blue eyes. I wanted to give him this part of me, wanted us both to share our intimacy this way, but I simply wasn't sure how enjoyable I could make it if I was bottoming out partway."
+    m "Remy's eyes held no judgement for my hesitation, just love, need, and concern."
+    menu:
+        "Give up.":
+            jump todo_out_of_content_bangok_four_remy4
+        "Keep going.":
+            pass
+    $ renpy.pause (0.5)
+    m "During my hesitation, I found I'd clenched up too tightly to move."
+    m "I found my voice, struggling not to sound like I was in any pain."
+    c "Pass the lube?"
+    show bangok_four_remy4_cg top:
+        xalign 0.5
+        linear 1.0 xalign 0.3
+        xalign 0.3
+    with None
+    m "Remy did so, and I held it up behind myself."
+    m "Blindly, I squirted some on my asscheeks, and on our coupling point, trying to make sure the way ahead was thoroughly lubed."
+    play sound "fx/box.wav"
+    show bangok_four_remy4_cg top:
+        xalign 0.3, 
+        linear 0.5 xalign 0.5
+        xalign 0.5
+        zoom 1.9
+        linear 4.0 zoom 1.5
+        zoom 1.5
+    with None
+    m "Then I dropped the lube bottle, braced myself against Remy's belly, and pushed."
+    c "Ohhhh..."
+    Ry shy ud closed "Nnngh..."
+    m "Slowly, my pussy began to slide and allow his girth through, my body almost beginning to relax as it realized the heights of pleasure this girth was about to bring me."
+    m "Within a few moments he was deeper than my pelvis, and I moved my hand down to feel a bulge pushing its way up my belly toward my navel."
+    Ry shy ud closed "Oh, [player_name]... [player_name]... You're so tight..."
+    m "I made undignified gasps with every little bit of progress I made, stretching my love canal around him like a too-small glove."
+    m "Then, abruptly, that fit stopped being so perfect."
+    show bangok_four_remy4_cg top:
+        yalign 0.0
+        linear 0.5 yalign 1.0
+        yalign 1.0
+    with None
+    c "F-Fuck!"
+    m "I lay on Remy's belly wincing, my whole lower body smarting from Remy's contact with my cervix."
+    Ry shy ud leye "Are you okay?"
+    m "I rubbed my belly, feeling his girth inside me as, for a moment, I swooned."
+    c "I... I will be okay."
+    Ry look ud "That wasn't a very convincing answer."
+    show black with dissolve
+    m "I set my head against his belly as my lower muscles cramped."
+    c "Still can't believe how big you are..."
+    hide black
+    show bangok_four_remy4_cg top:
+        yalign 0.0
+        linear 2.0 yalign 0.3
+        yalign 0.3
+    with dissolvemed
+    Ry look ud "Then maybe we should st-- sto-- oooh..."
+    Ry shy ud "Nnnngh..."
+    m "I slid my way up his length a good distance, legs shuddering with exertion and ecstacy running through my lower body."
+    c "Still think that?"
+    show bangok_four_remy4_cg top:
+        yalign 0.3
+        linear 2.0 yalign 0.0
+        linear 1.9 yalign 0.2
+        linear 1.8 yalign 0.0
+        linear 1.7 yalign 0.2
+        linear 1.6 yalign 0.2
+        linear 1.5 yalign 0.0
+        linear 1.4 yalign 0.2
+        linear 1.3 yalign 0.2
+        linear 1.2 yalign 0.0
+        linear 1.1 yalign 0.2
+        linear 1.0 yalign 0.2
+        linear 0.9 yalign 0.0
+        linear 0.8 yalign 0.2
+        linear 0.7 yalign 0.0
+        block:
+            linear 0.8 yalign 0.2
+            linear 0.7 yalign 0.0
+    with None
+    Ry shy ud closed "Nnn.....noooooooh... Don't... stop..."
+    m "As my taut lower lips slowly loosened, accepting their new fate, I gradually began to ride what of Remy, I could fit."
+    m "I pressed on his belly for support, legs shuddering with every movement as I spread myself around his enormous member."
+    if persistent.bangok_watersports == True:
+        m "Remy winced as I gradually approached a rhythm."
+        Ry shy ud leye "You're... pressing on my bladder..."
+        menu:
+            "[[Lean elsewhere.]":
+                pass
+            "Then empty it in me.":
+                $ renpy.pause (0.5)
+                Ry shy ud "What?!"
+                Ry shy ud "I don't..."
+                m "Too lost in the throes of my own arousal to discuss it with him, I pressed a little harder, taking his length deep in me."
+                c "Piss in me. Use me. F-Fuck Remy, I love you."
+
+
+
+
+
     jump todo_out_of_content_bangok_four_remy4
 
 label angok_four_remy4_atop_inside_anal:
