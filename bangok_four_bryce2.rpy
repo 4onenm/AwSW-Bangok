@@ -252,7 +252,7 @@ label bangok_four_bryce2_explorepaw:
     show black with dissolvemed
     play sound "fx/cartslide.ogg"
     m "Bryce settled on his back on his couch, the springs complaining under his weight."
-    m "I caught one of his hindlegs as he braced the other on the couch, quickly running my hands up to the object of interest on his hindleg."
+    m "I caught one of his hindlegs as he braced the other on the couch, quickly running my hands up to the object of interest at the end."
     m "Bryce's hindpaw was structured much like his forepaw, though I could feel a joint missing or moved where on his forepaw he could fold one toe over opposably."
     m "The foot, and leg muscles behind it, seemed more human than I expected, if I disregarded the scales, claws, and only three toes."
     if bangok_four_bryce2_store.forepaw_tickle == True:
@@ -517,7 +517,7 @@ label bangok_four_bryce2_footjob:
 
 
 label bangok_four_bryce2_worship:
-    m "Bryce splayed his hindlegs, welcoming me in to his crotch."
+    m "Bryce splayed his hindlegs, welcoming me into his crotch."
     if bangok_four_bryce2_store.player_came:
         m "My dribbled juices glistened on his plates, around a horizontal slit where I could see a small pinkish tip peeking from inside him."
         m "Then one of his legs wrapped around the back of my head, the side of his foot pressing against my cheek as he pulled me face-first against that slit, rubbing my own juices in my face, and my nose and mouth against his tip."
@@ -553,7 +553,10 @@ label bangok_four_bryce2_worship:
     $ renpy.pause (0.5)
     Br smirk "I wasn't really sure my legs could even hold you like this."
     m "His foot rubbed into my face, and heel into my back, as he tugged me up his shaft. Thick dragonflesh rubbed past my face as he brought my lips near to his tip."
-    m "Then his forepaws came down around my head, tugging me the last little distance to put his length just below my mouth, the rest rubbbing down my chest."
+    if persistent.bangok_balls == True:
+        m "Then his forepaws came down around my head, tugging me the last little distance to put his length just below my mouth, the rest rubbbing down my chest, right down to two heavy orbs against my ribs that had emerged from his slit."
+    else:
+        m "Then his forepaws came down around my head, tugging me the last little distance to put his length just below my mouth, the rest rubbbing down my chest."
     m "It also put his forepaws within range of my eager tongue."
     menu:
         "Lick his feet.":
@@ -569,6 +572,10 @@ label bangok_four_bryce2_worship:
     m "I took his tip into my mouth, tasting gloriously sweet drops of pre at the end of his draconic member, saturating my tongue with a different flavor thann the roughness of his hard scales, or the slick flesh of his length."
     m "I bobbed my head beneath his feet, rubbing his cock against my chest, eager for the result, to bring pleasure to the large dragon."
 
+    if persistent.bangok_balls == True:
+        m "His cock flexed beneath me, muscles straining, balls clenching as he held back his climax."
+    else:
+        m "His cock flexed beneath me, muscles straining as he held back his climax."
     Br pant "Ohhh. G-Getting close now."
     menu:
         "Let Bryce cream himself.":
