@@ -1198,10 +1198,31 @@ label bangok_four_remy4_rimjob:
         c "Makeshift dental dam. Unless you have an actual one around here."
         Ry shy ud "I don't think our species has any that would fit your face."
         m "Following my instructions, he opened the condom and unrolled it, then used his claws to rip through the ring at the base on one side before peeling it in half all the way up."
-        m "I took the sheet of rubber from him, moving back to his rear, then spread the lubed side over his pucker before leaning in..."
+        m "I took the sheet of rubber from him, moving back to his rear, then spread the lubed side over his pucker before leaning in with my face and licking."
     else:
         m "Unable to resist the winking invitation of his tight ring of flesh, I leaned in, giving it..."
-    jump todo_out_of_content_bangok_four_remy4
+    m "Remy shuddered beneath me as I teased his hole, my tongue flicking back and forth across his anal opening."
+    m "His muscles contracted under my tongue, and he let out a small moan of pleasure as he got into it."
+    Ry shy ud "This is so different. You're so soft..."
+    m "I could feel his body tense as I circled the rim of his ass with my tongue, making sure to take my time."
+    m "His breathing started getting heavier, his muscles growing more relaxed and his hips pushing back into me as he got used to the sensations."
+    m "I moved in further, pressing my lips against his rear entrance and gently suckling and nibbling on it."
+    Ry shy ud leye "You're so good... Oh, [player_name]..."
+    m "My hands wandered over his ass as he did his best to relax, using one to caress one buttcheek while the other explored higher, stroking his tail."
+    Ry shy ud closed "Mmmnh..."
+    if bangok_four_remy4_store.protection == True:
+        m "My tongue explored every little wrinkle of Remy's pucker, sliding over every little scale that bordered it through the material of the condom."
+        m "Then, finally, I gave his ass the kiss it so richly deserved. Gripping his hips, I pulled him back against my face as my tongue pushed a little of the condom into his ass, just enough to get inside and start licking properly."
+    else:
+        m "My tongue explored every little wrinkle of Remy's pucker, sliding over every little scale that bordered it."
+        m "Then, finally, I gave his ass the kiss it so richly deserved. Gripping his hips, I pulled him back against my face as my tongue pushed a little of the condom into his ass, just enough to get inside and start licking properly."
+    Ry shy ud "Oh, you're making that feel so good..."
+    if bangok_four_remy4_store.protection == True:
+        m "He was panting with pleasure, his claws gripping the armrest of the couch as I continued to eat out his ass through the dental dam. My hands were kneading his buttocks, my thumbs kneading the base of his tail."
+    else:
+        m "He was panting with pleasure, his claws gripping the armrest of the couch as I continued to eat out his ass. My hands were kneading his buttocks, my thumbs kneading the base of his tail."
+    m "We stayed like that for a while, Remy just letting me lick him until he couldn't take it anymore."
+    Ry shy ud closed "[player_name]... Please... I like this but I need more of you."
     show bangok_four_remy4_cg bottom:
         linear 1.0 zoom 2.0
         zoom 2.0
