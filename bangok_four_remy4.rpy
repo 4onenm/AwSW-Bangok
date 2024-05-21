@@ -1271,8 +1271,8 @@ label bangok_four_remy4_rimjob:
 
 label bangok_four_remy4_sheath_licking:
     show bangok_four_remy4_cg bottom:
-        linear 2.0 align 0.59
-        align 0.59
+        linear 2.0 align (0.59,0.59)
+        align (0.59,0.59)
     with None
     $ renpy.pause (0.5)
     m "Running my hands down his rear, I spread his mid-thighs wider, fully revealing the glistening slit from which his shaft peeked out."
@@ -1389,8 +1389,8 @@ label bangok_four_remy4_sheath_licking:
 
 label bangok_four_remy4_bottom_handjob:
     show bangok_four_remy4_cg bottom:
-        linear 2.0 align 0.59
-        align 0.59
+        linear 2.0 align (0.59,0.59)
+        align (0.59,0.59)
     with None
     $ renpy.pause (0.5)
     m "Seeing his glistening tip and its leaking pre, I couldn't help but want it between my fingers."
@@ -1410,8 +1410,8 @@ label bangok_four_remy4_bottom_handjob:
 
 label bangok_four_remy4_bottom_handjob_late:
     show bangok_four_remy4_cg bottom:
-        linear 2.0 align 0.59
-        align 0.59
+        linear 2.0 align (0.59,0.59)
+        align (0.59,0.59)
         zoom 2.0
         linear 2.0 zoom 2.2
         zoom 2.2
