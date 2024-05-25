@@ -5,7 +5,7 @@ An Angels with Scaly Wings lewd mod. Contributions welcome.
 
 ### USERS DOWNLOAD [HERE: https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/main.zip](https://github.com/4onenm/AwSW-Bangok/archive/refs/heads/main.zip)
 
-* If you need help modifying AwSW, see the **[Installation Instructions](INSTALLATION.md)**
+* If you need help installing mods in AwSW, see the **[Installation Instructions](INSTALLATION.md)**
 
 ### Mandatory Requirements:
 
@@ -14,8 +14,8 @@ An Angels with Scaly Wings lewd mod. Contributions welcome.
 
 ### Optional Requirements:
 
-+ **Scene Select**: [GitHub](https://github.com/4onen/AwSW-Scene-Select)
-  + Adds BangOk scenes to the scene selection menu."
++ **Scene Select (Incomplete)**: [GitHub](https://github.com/4onen/AwSW-Scene-Select)
+  + Adds BangOk scenes to the scene selection menu.
 
 ### Content:
 
