@@ -22,5 +22,8 @@ if __name__ == "__main__":
     for file in difference:
         print(str(file))
 
+    if not difference:
+        print("All files are credited!")
+
     import sys
     sys.exit(bool(difference))
