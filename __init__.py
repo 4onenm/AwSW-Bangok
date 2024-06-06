@@ -44,7 +44,7 @@ def anna12(ml):
         .search_menu("Alright, I'll finish my drink quietly, then, if that's what you'd prefer.") \
         .search_menu("I'm being cute and spontaneous?") \
         .search_say("What do you have in mind?") \
-        .hook_to('bangok_four_anna1_winmenu') \
+        .hook_to('bangok_four_anna1_winmenu', condition='persistent.nsfwtoggle == True') \
         .search_menu("If that's what you want, so be it.") \
         .link_from('bangok_four_anna1_winmenu_afterannablood')
 
