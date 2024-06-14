@@ -554,6 +554,36 @@ def add_scene_select(ml):
     fss.end_replay_at_ml_node(ml.find_label('bangok_four_xsebastian_todaywasgreat_return'))
 
 
+def load_translations(mod_name):
+    import io
+    import os
+    import os.path
+    translations_path = os.path.join(modinfo.get_mod_path(mod_name), "resource/tl")
+    # For each folder in the translations path, look for a `strings.py` file
+    # If there are any non-folder files in the translations path, print a warn.
+    if not os.path.exists(translations_path):
+        print("{}: No translations folder found at {}".format(mod_name, translations_path))
+        return
+    for folder in os.listdir(translations_path):
+        this_translation_path = os.path.join(translations_path, folder)
+        if not os.path.isdir(this_translation_path):
+            print("{} WARNING: {} is not a folder in {}".format(mod_name, folder, translations_path))
+            continue
+        strings_path = os.path.join(translations_path, folder, "strings.py")
+        if os.path.exists(strings_path):
+            try:
+                infile = io.open(strings_path, "rb")
+                compiled = compile(infile.read(), strings_path, 'exec')
+                infile.close()
+                exec(compiled)
+                print("{}: Loaded translations for {}".format(mod_name, folder))
+            except Exception as e:
+                print("{} ERROR: Exception in {}:".format(mod_name, strings_path))
+                print(e)
+    else:
+        print("{}: No translations found in {}".format(mod_name, translations_path))
+
+
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
@@ -578,6 +608,6 @@ class BangOkMod(Mod):
         if modinfo.has_mod("Scene Select"):
             add_scene_select(ml)
 
-    @staticmethod
-    def mod_complete():
-        pass
+    @classmethod
+    def mod_complete(cls):
+        load_translations(cls.name)

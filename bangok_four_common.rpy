@@ -83,18 +83,19 @@ init:
 
             if not persistent.nsfwtoggle:
                 vbox:
-                    text "This mod's content is primarily" xalign 0.5
-                    text "---- Not-Safe-For-Work ----" xalign 0.5
-                    text "Re-enable NSFW scenes or uninstall the mod." xalign 0.5
-                    text "This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made." xalign 0.5
+                    align (0.5, 0.3)
+                    text _("This mod's content is primarily") xalign 0.5
+                    text _("---- Not-Safe-For-Work ----") xalign 0.5
+                    text _("Re-enable NSFW scenes or uninstall the mod.") xalign 0.5
+                    text _("This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made.") xalign 0.5
             else:
                 vbox:
                     align (0.5, 0.3)
                     if bangok_four_common.bangnokay.bangnokay_raw:
-                        text "Cute Buttons:" xalign 0.5
+                        text _("Cute Buttons:") xalign 0.5
                     else:
-                        text "Fetishes:" xalign 0.5
-                        text "If you do not know what an option means, leave it deselected (or look it up at your own peril).":
+                        text _("Fetishes:") xalign 0.5
+                        text _("If you do not know what an option means, leave it deselected (or look it up at your own peril)."):
                             xalign 0.5
                             size 32
 
@@ -124,16 +125,16 @@ init:
                         action MTSTogglePersistentBool('bangok_dev')
                         style "bangok_four_switch"
                         focus_mask None
-                    text "Dangerous: Enable In-Development Scenes"
+                    text _("Dangerous: Enable In-Development Scenes")
 
                 showif persistent.bangok_dev == True and not (bangok_four_common.bangnokay.bangnokay_raw):
-                    text "In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes.":
+                    text _("In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes."):
                         yalign 0.875
                         xalign 0.5
                         size 40
 
             showif persistent.bangok_dev == True and main_menu and not (bangok_four_common.bangnokay.bangnokay_raw):
-                textbutton "[[Replay first-boot experience.]":
+                textbutton _("[[Replay first-boot experience.]"):
                     xalign 0.5 
                     yalign 1.1
                     action [Hide("bangok_modsettings"), Start("bangok_four_mod_firstboot")]
