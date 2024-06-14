@@ -537,7 +537,8 @@ def add_scene_select(ml):
 
     # xDamion
     fss.register_scene_select(bangok, "Improving Damion's Mood", 'bangok_four_xdamion_replay_start',
-        locked=lambda: (not renpy.store.persistent.metdamion))
+        locked=lambda: (not renpy.store.persistent.metdamion),
+        replay_scope=fss.extend_scope(chap2clues=False, blood=False, chap2damionquestions=0, chap2facreza=False))
 
     # xIpsum2
     fss.register_scene_select(bangok, "Something Stimulating with Ipsum", 'bangok_four_xipsum2_replay_start',
