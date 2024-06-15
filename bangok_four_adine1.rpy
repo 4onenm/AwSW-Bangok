@@ -46,7 +46,6 @@ label bangok_four_adine1:
             $ adinemood = 2 if adinemood > 0 else 2 + adinemood // 5
             if adinemood < 0:
                 jump bangok_four_adine1_ToD_refused
-    
 
     Ad normal b "What's that?"
     c "We keep asking each other questions, but if you don't want to answer one, you have to do whatever I tell you to, and vice versa."
@@ -79,7 +78,7 @@ label bangok_four_adine1:
             call bangok_four_adine1_angercheck
             Ad frustrated b "I'll take a dare."
             call .dare_table_1
-            
+
         "What's the smallest delivery you've ever had to make?":
             Ad think b "I was at a college party once. As the only flier, I was tasked with getting the condoms."
             c "Smallest delivery? Was it just the one box or were their dicks that small?"
@@ -485,7 +484,7 @@ label bangok_four_adine1:
         c "Sorry. Still friends?"
         Ad "We'll see. I'll leave you my number."
         hide adine with dissolve
-        m "Adine scribbled some numbers on a piece of scrap paper, then left without saying anything else." 
+        m "Adine scribbled some numbers on a piece of scrap paper, then left without saying anything else."
         stop music fadeout 2.0
         m "On her way out though, she looked back and shot me an exasperated look before lifting her tail, showing me her heavenly rear in full."
         play sound "fx/door/doorclose3.wav"
@@ -503,7 +502,7 @@ label bangok_four_adine1:
         c "I'd be lying if I said no."
         Ad annoyed b "Alright then."
         hide adine with dissolve
-        m "Without anotehr word, Adine turned around and lifted her tail high as can be, showing me her gorgeous posterior in all its glory."
+        m "Without another word, Adine turned around and lifted her tail high as can be, showing me her gorgeous posterior in all its glory."
         Ad giggle b "Enjoying the view?"
         c "I most certainly am, thank you."
         Ad normal b "Good, because it looks like the rain has stopped, which means it's time for me to go."
@@ -544,7 +543,7 @@ label bangok_four_adine1:
         $ adinestatus = "good"
         $ adinescenesfinished = 1
         jump _mod_fixjmp
-    
+
     label .best_ending:
         Ad think b "You really are horny, aren't you?"
         c "More than a little."
