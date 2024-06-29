@@ -119,14 +119,14 @@ label bangok_four_kalinth_c3arc:
     m "She gestured to my clothes."
 
     play sound "fx/undress.ogg"
-    m "I hurriedly began undressing, not wanting to keep the dragoness waiting."
+    m "I began undressing, not wanting to keep the dragoness waiting."
     if bangok_four_playerhasdick is None:
-        m "Once I was nude, my..."
+        m "As I removed my shirt, I could feel in my pants my..."
         menu:
-            "Once I was nude, my...{fast}"
-            "... erect member":
+            "As I removed my shirt, I could feel in my pants my...{fast}"
+            "... length hardening":
                 $ bangok_four_playerhasdick = True
-            "... lower lips":
+            "... lower lips slicken":
                 $ bangok_four_playerhasdick = False
     if bangok_four_playerhasdick:
         jump bangok_four_kalinth_c3arc_male
@@ -134,20 +134,147 @@ label bangok_four_kalinth_c3arc:
         jump bangok_four_kalinth_c3arc_female
 
 label bangok_four_kalinth_c3arc_female:
-    m "Once I was nude, my{fast} lower lips exposed to the air of the room, she stopped abruptly."
-    play sound "fx/system3.wav"
-    if persistent.bangok_dev:
-        s "It seems this scene still lacks a female player version."
+    m "As I removed my shirt, I could feel in my pants my lower lips slicken in anticipation of what was to come."
+    m "Kalinth moved closer, tail wagging slightly as she watched me remove my bra to reveal my breasts."
+    Kl bangok surprise blush flip "So that's what you've been hiding."
+    c "Oh, right, you're a reptile. You wouldn't have much familiarity with these."
+    m "I took hold of my chest, squeezing my breasts together for her to see."
+    c "We call these breasts, or mammaries if you prefer the technical term."
+    c "They produce milk for feeding babies, but they're also very sensitive."
+    Kl bangok smile blush flip "Can I touch you? You as a whole look so soft without scales or any fur besides what's atop your head."
+    c "Yeah, let's get used to each other before we go any further."
+    m "After a few moments of looking at each other and trying to decide how we'd fit together, we moved in for a hug."
+    show kalinth bangok smile blush flip:
+        zoom 1.0
+        ypos 1.0
+        ease 1.0 zoom 2.0 ypos 1.5
+        zoom 2.0 ypos 1.5
+    with None
+    $ renpy.pause (0.3)
+    show black with dissolve
+    m "My arms wrapped over her shoulders and wing joints, while her forelegs pulled the small of my back against her chest."
+    m "I could feel the heat of her body through her scales and the leathery texture of her wings as they gently folded around me."
+    c "Your scales are firmer than I thought they'd be, but they're not unpleasant. So smooth."
+    m "Kalinth hummed."
+    Kl bangok eyesclosed blush flip "And you're so warm and soft, letting so much of your body heat out."
+    Kl bangok smile eyesclosed blush flip "This explains a little Sebastian's old stories about using Mouflons as pillows, especially with those headrests on your chest."
+    m "Kalinth ran a forepaw up my back, up to my head to ruffle my hair."
+    Kl bangok smile flip "What is this called?"
+    c "Hair."
+    m "I nuzzled closer into her chest as she began to stroke my hair, straightening out the mussing she'd done a moment ago."
+    c "It's a little like fur, but it's not as thick or as soft."
+    c "Stroking it is considered affectionate in most human cultures, and you're doing a really good job of it."
+    m "She continued to stroke my hair, our chests moving together as we breathed."
+    m "Wanting to return some of the affection, I unclasped my hands behind her neck, gently rubbing her scales down over her neck and belly."
+    m "Kalinth hummed again. I could feel the vibrations through her chest."
+    Kl bangok smile eyesclosed blush flip "Don't stop that. It feels so nice..."
+    m "We stayed like that for a while, just enjoying each other's touch and warmth."
+    m "Then I began to work my hands down her body, exploring every bump in her scales, brushing my own breasts against her chest as I did."
+    Kl bangok blush flip "Let's see what you're hiding down below too..."
+    m "I felt her other strong forepaw slide down my back, then into the waistband of my pants, making me shiver."
+    m "She couldn't manage to get them down."
+    Kl normal flip "How do you get this... thing off?"
+    c "Oh, let me take care of that."
+    hide black with dissolve
+    m "I pulled back my arms and stepped back, getting enough room to reach down and undo the fastener of my pants."
+    m "I then left it to her to pull them down, revealing my panties."
+    Kl bangok surprise flip "Another thing? How many layers of clothes do you wear?"
+    m "Deftly, she slid one claw into the joint where my pelvis met my thigh, then pulled my panties down as well, finally revealing my glistening sex to her explorations."
+
+    if persistent.bangok_cloacas:
+        Kl bangok surprise blush flip "Oh... you're different down below too."
+        Kl bangok normal blush flip "Well, I suppose that's to be expected."
+        show kalinth bangok normal blush flip:
+            zoom 2.0
+            ypos 1.5
+            ease 1.0 zoom 1.0 ypos 1.0
+            zoom 1.0 ypos 1.0
+        with None
+        m "In the interest of fairness, Kalinth moved back and reached between her own legs, spreading her horizontal lower lips to show me her cloaca while I stepped out of my pants and panties."
+        c "You look different too. You have just one hole down there? That's interesting."
+        Kl "What's so special about it?"
+        c "I'm a biologist first, so I'm curious about the differences between our species."
+        c "But I'm also just curious... do males of your species ever accidentally stick it in the wrong part?"
+        Kl bangok furtive blush flip "..."
+        c "The part just peeking out, as well."
+        m "I spread my own lower lips, highlighting my delicate nub."
+        c "We call this the clitoris. It's usually the most stimulating part for human women."
+        c "But what feels nice for you?"
+        Kl bangok normal blush flip "I think you're making this more complicated than it needs to be."
+        c "Well, you're so much bigger than I am. I want to make sure I'm focusing on the right areas."
+        c "I've heard of human guys with smaller genitalia than just the nub above your urethra."
     else:
-        s "It seems this scene still lacks a female player version, yet somehow you managed to trigger it. Please report this to the mod author."
-    s "For now, you will receive Kalinth's phone number and be left with the police files."
-    $ bangok_four_kalinth.have_number = True
-    jump bangok_four_kalinth_c3arc_return
+        Kl bangok surprise blush flip "Oh... we're not so different after all."
+        c "In what sense? We could hardly be farther apart in terms of skin and skeletal morphology."
+        Kl bangok smile blush flip "I meant that you have a pussy just like me... and you're just as wet as I am."
+        show kalinth bangok normal blush flip:
+            zoom 2.0
+            ypos 1.5
+            ease 1.0 zoom 1.0 ypos 1.0
+            zoom 1.0 ypos 1.0
+        with None
+        m "In the interest of fairness, Kalinth moved back and reached between her own legs, spreading a vertical slit between her legs to show me her vagina while I stepped out of my pants and panties."
+        m "Within the outer slit formed by her scales, plump flesh formed into a vagina resembling a big plum with a little blueberry for her clitoris."
+        c "(Well, maybe \"little\" is the wrong word to describe that.)"
+        c "You're so much bigger than I am."
+        c "I've heard of human guys with smaller genitalia than just your clit."
+    Kl bangok furtive blush flip "Are human males really that small? My condolences..."
+    c "Not necessarily. Humans can generally get up to ten inches in length, though the average is usually just over half that."
+    c "For other primates, like gorillas, it's far, far less."
+    c "Most human women aren't fond of extra large sizes anyway. Reaching our cervix can be very painful."
+    if persistent.bangok_cervpen:
+        c "Though I can be different. Sometimes I do like it... very big."
+        Kl bangok normal blush flip "Oh my."
+    if bangok_four_malepartners > 1 or not getattr(renpy.store,"chap2storehealth",True):
+        c "From other dragons, I've seen human guys clearly got the short end of the stick."
+        Kl bangok surprise blush flip "So you're bisexual {i}and{/i} have already had sex with another dragon?"
+        Kl "Haven't you only been here... a week? A week and a half?"
+    if not getattr(renpy.store,"chap2storehealth",True):
+        c "I mean, er, I saw the condoms on sale at the store. Ones that could fit over my arm."
+        Kl bangok smile blush flip "Ah, that makes more sense."
+    else:
+        Kl "Are humans really that frisky?"
+        c "I think it's more that we're curious. We like to explore and experiment."
+        Kl bangok smile blush flip "Well, I suppose I can't fault you for that. I'm curious too. I want to see what you can do."
+
+    $ renpy.pause (0.5)
+
+    m "As the conversation trailed off, Kalinth gave a meaningful look toward the couch, flicking her tail back and forth."
+
+    menu:
+        "Should we use protection?":
+            $ renpy.pause (0.5)
+            Kl normal flip "We're whole different species... and the same sex. How would we get hatchlings?"
+            c "That's a fair point, but what about diseases? There's no telling with the difference in our biologies."
+            Kl normal flip "I suppose you're right. I know where Bryce keeps condoms, but we're facing a distinct lack of dental dams."
+            c "We can unravel a condom and use one of those as a makeshift dental dam."
+            c "(That makeshift protection won't be fantastic. Am I just overcomplicating things?)"
+            menu:
+                c "(That makeshift protection won't be fantastic. Am I just overcomplicating things?){fast}"
+                "Use protection.":
+                    c "I'd like to use one."
+                    Kl normal flip "Alright."
+                    hide kalinth with dissolve
+                    play sound "fx/rummage.wav"
+                    m "Kalinth rummaged through Bryce's desk, then set a box of condoms on top."
+                    m "She took one out between her lips, then slunk back over to me with a sultry look in her eyes."
+                    show kalinth bangok smile blush flip with dissolve
+                    c "Thanks."
+                    m "I took the condom from her lips, then tore it open and unrolled it dangling from my fingers."
+                    m "Holding it taut, I let her delicately puncture it with a claw, cutting open one side as much as she could so we could lay it flat."
+                    c "I think that's good enough."
+                    $ bangok_four_kalinth.protection = True
+                "Go without.":
+                    c "Nevermind. If you're not worried about it, I'm not either."
+        "Okay, let's get started.":
+            pass
+    jump todo_out_of_content_bangok_four_kalinth
 
 
 label bangok_four_kalinth_c3arc_male:
     show kalinth bangok smile blush flip with dissolve
-    m "Once I was nude, my{fast} erect member exposed to the air of the room, she backed me up toward the armrest of the nearer of the two couches, smirking."
+    m "As I removed my shirt, I could feel in my pants my length hardening."
+    m "Once I was nude, my erect member exposed to the air of the room, she backed me up toward the armrest of the nearer of the two couches, smirking."
 
     label bangok_four_kalinth_c3arc_male_position_menu:
     menu:
@@ -517,7 +644,7 @@ label bangok_four_kalinth_c3arc_male_doggy:
         # Kl normal flip "A-Are you going to make me beg? Take me, please!"
 
         # jump todo_out_of_content_bangok_four_kalinth
-    
+
     label .lick:
         show kalinth:
             ease 0.8 zoom 1.7
@@ -530,7 +657,7 @@ label bangok_four_kalinth_c3arc_male_doggy:
         Kl bangok smile eyeslidded blush flip "I almost don't want to make you stop. But we can't spend all night here..."
 
         m "She shifted as I kept going a little longer."
-        
+
         Kl bangok normal blush flip "Please, I want your length, not just your tongue."
 
         show kalinth:
@@ -748,7 +875,7 @@ label bangok_four_kalinth_c3arc_male_post_intimacy:
 
 
 label bangok_four_kalinth_c3arc_part_ways:
-    show kalinth normal at center with ease 
+    show kalinth normal at center with ease
     m "Kalinth rose from the couch, then got her claws on a scrap of paper."
     play sound "fx/scribblex.ogg"
     $ renpy.pause (0.5)
