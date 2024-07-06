@@ -1460,7 +1460,7 @@ label bangok_four_xipsum2_ionahole:
                 $ renpy.pause(0.5)
                 Ip happy bangok briefs "Feeling adventurous?"
                 c "Yeah. We'll give it a try."
-    
+
 
 
     m "I looked down at the two disks stuck to the inside of my briefs. "
@@ -1608,7 +1608,7 @@ label bangok_four_xipsum2_ionahole:
         if bangok_four_xipsum2_store.separate == False:
             Ip normal bangok blush flip "Mmh. Better."
             m "Spurred on by his encouragement, I pushed his penises slightly deeper into my mouth, swirling the heads around with my tongue."
-        elif bangok_four_xipsum2_store.protection == False: 
+        elif bangok_four_xipsum2_store.protection == False:
             m "The taste, texture, and slight twitching helped keep me from forgetting these were real, as he leaked small dollops of pre into my mouth."
         else:
             m "The texture and slight twitching helped keep me from forgetting that these were real."

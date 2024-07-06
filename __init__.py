@@ -32,7 +32,7 @@ def anna12(ml):
         .search_menu("Yes. I want to skip ahead.") \
         .branch() \
         .hook_to('bangok_four_anna1_skipmenu', condition='persistent.nsfwtoggle == True')
-    
+
     ml.find_label('_call_skiptut_7') \
         .search_menu("I see.") \
         .search_menu("What a lucky coincidence.") \
@@ -58,7 +58,7 @@ def anna12(ml):
         .hook_to('bangok_four_anna1_goodending_nvl',condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("Whether anything good would come of this, I wasn't sure, either.") \
         .link_from('bangok_four_anna1_goodending_nvl_end')
-        
+
     ml.find_label('anna1skip') \
         .search_say("I'm quite sure you will.") \
         .hook_to('bangok_four_anna1_medending', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
@@ -103,13 +103,13 @@ def anna12(ml):
         .branch() \
         .hook_to('bangok_four_anna2_nomorewaiting', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_menu("You better be.")
-    
+
     sorrymenu.branch("You better be.") \
         .search_python('renpy.pause (0.5)') \
         .hook_to('bangok_four_anna2_wantthisornot', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("I suppose so.") \
         .link_from('bangok_four_anna2_wantthisornot_end')
-    
+
     eveningmenu = sorrymenu \
         .hook_to('bangok_four_anna2_whatnow', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("I guess that's better than nothing.") \
@@ -124,7 +124,7 @@ def anna12(ml):
         .search_menu("That'd be wicked cool.") \
         .search_menu("You're a wild one, Anna.") \
         .search_menu("I can see your point. This was unusual, but fun.")
-    
+
     eveningmenu.branch("I can see your point. This was unusual, but fun.") \
         .search_say("I can see your point. This certainly isn't how I thought the evening would go, but it was pretty fun.") \
         .hook_to('bangok_four_anna2_romanticdate_unusualbutfun', condition='persistent.nsfwtoggle == True')
@@ -276,7 +276,7 @@ def bryce3_afterparty(ml):
 
     clothes_fix.search_say("Is it okay for you to sleep like this?") \
         .link_from('bangok_four_bryce3_oktosleep') \
-    
+
     clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
 

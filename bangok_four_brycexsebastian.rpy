@@ -152,7 +152,7 @@ label bangok_four_brycexsebastian:
         Br smirk "Oh."
         Br smirk "Not to be the bearer of bad news, but it looks like you're gonna need a little more practice."
 
-    
+
     show bangok_four_brycexsebastian_lickpanel:
         zoom 0.9
         xpos 200

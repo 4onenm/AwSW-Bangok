@@ -693,7 +693,7 @@ label bangok_four_kalinth_c3arc_male_doggy:
 
         if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
             Kl "Mm. Now use me. Piss into me while you're fucking me."
-            
+
             m "It was hard to relax enough to do so at first, but eventually the urge overcame my nerves and I felt myself starting to pee in her."
             m "Warm liquid gushing forth from my tip and spraying Kalinth inside as she gasped with pleasure."
             m "As I kept gently thrusting, some urine mixed with her copious juices squirted out around my penis, soaking my crotch and dribbling down my balls."
@@ -749,7 +749,7 @@ label bangok_four_kalinth_c3arc_male_doggy:
                 m "It wasn't long before I could see my seed oozing from her lower lips in small droplets."
             if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
                 m "I couldn't tell which of the other splaters of fluids on our crotches was my urine and which were her juices as they dribbled down our thighs."
-        
+
         m "Like an overgrown cat, she stretched out on the couch, then rolled over with first her front half, then her lower body."
         show kalinth bangok smile eyeslidded blush:
             zoom 1.3
@@ -1021,7 +1021,7 @@ label todo_out_of_content_bangok_four_kalinth:
 
 #     Eventually, as my body began to calm down and the aftershocks subsided, I pulled out of Kalinth, leaving a trail of semen in her now dripping cloaca. She gasped, panting heavily from our shared exertions as she opened her eyes again. "That was... even better than I'd imagined."
 
-#     I smiled at her, still catching my breath. 
+#     I smiled at her, still catching my breath.
 
 #     ### Kalinth doggystyle
 

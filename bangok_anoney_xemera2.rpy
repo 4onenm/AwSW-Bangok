@@ -353,7 +353,7 @@ label bangok_anoney_xemera2_emera:
     m "Emera gestured with her paw to a cabinet behind me."
     Em normal b "You will find lube and other supplies you may need in there."
     show black with dissolvemed
-    
+
     m "I went to the cabinet that Emera indicated and opened the door."
     play sound "fx/cabinet.ogg"
     # if persistent.havetestresults == True:
@@ -423,11 +423,11 @@ label bangok_anoney_xemera2_emera:
         m "I had seen some dragon eggs before at Raza's hideout and even though I had not directly seen her own eggs I had a feeling hers would be larger than my hand."
     else:
         m "I had not seen dragon eggs before, but I had a feeling hers would be larger than my hand."
-    
+
     m "Emera let out a snarl at the feeling of my hand entering her.{w=0.5}{nw}"
     play sound "fx/varagrowl.ogg"
     m "Emera let out a snarl at the feeling of my hand entering her.{fast} She was able to take my whole hand easily due to the size difference."
-    
+
     if persistent.bangok_watersports == True:
         m "Just past the entrance on her upper wall I could feel an opening and guessed this was her urethra. I noted where it was to investigate it later, if both of us desired."
 
@@ -526,7 +526,7 @@ label bangok_anoney_xemera2_vaginal_only:
         play sound "fx/bitescr.ogg"
         m "Emera quickly grabbed a cushion off her chair and bit down to deaden her roar.{fast} I felt her tunnel tense up with pulsing waves travelling down to her egg chamber. The barrier that until a few moments ago was at the end of her tunnel rapidly disappeared, the entrance dilating completely."
         $ renpy.pause(0.8)
-        
+
     m "Her tunnel clenched so tight around my arm that I could no longer move it,{w=0.8}{nw}"
     play sound "fx/spray.ogg"
     m "Her tunnel clenched so tight around my arm that I could no longer move it,{fast} her opening spraying copious amounts of lubrication all over my lower body."
@@ -704,7 +704,7 @@ label bangok_anoney_xemera2_satisfy_male:
         m "Then I lay atop her, reached down to spread apart her cloaca, found the opening to her anal passage, then buried my lubed length within."
     else:
         m "Then I lay atop her, reached down to finding the lower slit leading to her anal passage, then buried my lubed length within."
-    
+
     m "Our lower bodies were covered with the slippery mating fluids from her orgasms, enabling me to slide my body quickly over her scales as I thrust into her anal passage."
     play soundloop "fx/flap1.ogg"
     m "I could feel her mating muscles clamping down on the fruit in her canal, the contractions against which then also slightly contracted her anal passage."
@@ -729,7 +729,7 @@ label bangok_anoney_xemera2_satisfy_male:
     show emera bangok blush b flip
     play sound "fx/varagrowl.ogg"
     m "Emera gave a moan each time her lips were stretched by their expulsion."
-        
+
     if bangok_anoney_xemera2_clean_arms == True:
 
         m "I reached down and quickly removed the condoms from my arms; the rubbers had served their purpose in keeping at least some of me relatively clean."
@@ -787,15 +787,15 @@ label bangok_anoney_xemera2_ws_relief:
         c "May I use your ass?"
         Em ques b flip "If you so desire."
         m "Emera was still laying on her back{w=0.8}{nw}"
-        play sound "fx/purr.ogg" 
+        play sound "fx/purr.ogg"
         if persistent.bangok_cloacas:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her anal vent."
-            m "Emera's cloaca was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had." 
+            m "Emera's cloaca was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had."
             m "Once my dick was thoroughly coated in her juices, I pushed it into her anal vent."
 
         else:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her ass"
-            m "Emera's vagina was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had." 
+            m "Emera's vagina was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had."
             m "Once my dick was thoroughly coated in her juices, I reached down to spread her ass and pushed my dick into her hole."
         show emera bangok blush b flip with dissolve
         play soundloop "fx/faucet1.ogg" fadein 1.0
@@ -825,10 +825,10 @@ label bangok_anoney_xemera2_ws_relief:
         Em bangok blush b "Well... I suppose. If you so desire."
 
         m "Emera was still laying on her back{w=0.8}{nw}"
-        play sound "fx/purr.ogg" 
+        play sound "fx/purr.ogg"
         if persistent.bangok_cloacas == True:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her cloaca."
-            m "Emera's cloaca was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had, and pushed inwards." 
+            m "Emera's cloaca was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had, and pushed inwards."
         else:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
             m "Emera's vagina was still spread wide from her earlier activities. I stuck my dick in the mess at her entrance, evidence from the many orgasms that Emera had, and pushed inwards."
@@ -857,7 +857,7 @@ label bangok_anoney_xemera2_ws_relief:
         Em bangok blush b flip "I cannot say I am displeased with the idea... I am curious to see how it would feel."
         Em ques b flip "Proceed."
         m "Emera was still laying on her back{w=0.8}{nw}"
-        play sound "fx/purr.ogg" 
+        play sound "fx/purr.ogg"
         if persistent.bangok_cloacas == True:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her cloaca."
             m "Emera's cloaca was still spread wide from her earlier activities. Reaching back I spread her slit easily and found her urethra exactly where I had remembered it."
@@ -906,7 +906,7 @@ label bangok_anoney_xemera2_ws_relief:
         play sound "fx/rub2.ogg"
         m "Emera bought some towels out of another cupboard and we proceeded to dry ourselves as best as we could until showering."
         jump bangok_anoney_xemera2_conclusion
-    
+
 
 label bangok_anoney_xemera2_satisfy_female:
     scene black with dissolvemed
@@ -1192,7 +1192,7 @@ label bangok_anoney_xemera2_conclusion:
     play sound "fx/door/door_open.wav"
     $ renpy.pause (1.0)
     play sound "fx/door/close2.wav"
- 
+
     scene bangok_anoney_library_corridor_night with dissolvemed
 
     $ renpy.pause (0.5)

@@ -9,7 +9,7 @@ init python in bangok_four_xipsum:
     fuckertarget = None
     fuckeraction = None
     suckingipsum = False
-    
+
     playercame = False
 
     depth = None
@@ -116,7 +116,7 @@ label bangok_four_xipsum_takeemoff:
                 Lo relieved flip "Ipsum..."
                 Ip normal "Well, nevermind then."
         jump bangok_four_xipsum_unsatisfied
-        
+
     Ip happy "If that's all you need, I'd be quite interested in arranging that for you."
     Lo think flip "I don't think any members of [player_name]'s family are able to come over to our--"
     Lo shy flip "Oh."
@@ -782,7 +782,7 @@ label bangok_four_xipsum_bedroom_start:
                     m "Lorem pressed forward, his small size letting him enter my ass with nothing but a smooth slide."
                 else:
                     jump bangok_four_xipsum_impossible_loremin
-            
+
             if bangok_four_xipsum.fuckertarget == "ass" and bangok_four_xipsum.fuckeraction != "both":
                 m "My sphincter clenched around him, surprised and excited by the entry."
             elif bangok_four_xipsum.fuckertarget == "vag":
@@ -1045,7 +1045,7 @@ label bangok_four_xipsum_bedroom_start:
                         $ renpy.pause(0.8)
                         m "I swooned, the double-ended fucking and Lorem's tounging more than my brain could take. Each thrust of Ipsum's hips sent his other cock bouncing lewdly off my face or throat."
                         $ renpy.pause(1.0)
-                
+
                 if bangok_four_playerhasdick == True:
                     play sound "fx/extinguish.ogg"
                     m "I came first, blasting my load into the condom deep in the undulating depths of Lorem's throat."
@@ -1131,7 +1131,7 @@ label bangok_four_xipsum_bedroom_start:
         stop sound fadeout 0.5
 
 
-        
+
     show ipsum normal:
         zoom 1.8
         alignaround (0.5,0)
@@ -1296,7 +1296,7 @@ label bangok_four_xipsum_bedroom_start:
         hide black
         with dissolvemed
         m "Ipsum barely slowed, lubrication both natural and artificial leaving him sliding smoothly despite the clenching in my ass and passage."
-        m "He released his upper cock, letting it press more against the bottom of my pussy as he focused on getting as deep as he safely could." 
+        m "He released his upper cock, letting it press more against the bottom of my pussy as he focused on getting as deep as he safely could."
         stop soundloop fadeout 0.5
         play sound "fx/snarl.ogg" fadein 0.5
         show ipsum happy:
@@ -1925,7 +1925,7 @@ label bangok_four_xipsum_bedroom_start:
                         ease 0.3 ypos 0.46
                         repeat
                     with None
-                    
+
                     m "Bracing his hands against my chest, Ipsum lifted himself up, squeezing his knees in around me. Then he let himself drop a bit faster, angling his hips so my condom-enwrapped cock rubbed his inner walls."
                     m "I lay back, panting, our well-lubricated coupling now effortless pleasure for me as Ipsum took over everything, twin cocks slapping into my belly with every downward slide."
                     play soundloop "fx/rub2.ogg" fadein 1.0
@@ -1982,8 +1982,8 @@ label bangok_four_xipsum_bedroom_start:
                     hide black
                     with dissolvemed
                     m "I returned from my peak to the warmth of Ipsum's spent twin shafts resting on my stomach, and the suffusing warmth of my shaft limpening in his ass."
-                    
-                    
+
+
                     Ip "Does that satisfy our arrangement, ambassador?"
                     menu:
                         "I could go for another round...":
@@ -2009,7 +2009,7 @@ label bangok_four_xipsum_bedroom_start:
                     else:
                         m "Then he turned to fetch an empty metal tray off a table next to his fume hood."
                     jump bangok_four_xipsum_hisass_done
-                
+
                 label bangok_four_xipsum_hisass_top:
                     Ip happy "Of course."
                     $ renpy.pause(0.3)
@@ -2192,7 +2192,7 @@ label bangok_four_xipsum_bedroom_start:
 
     if bangok_four_xipsum.playerpiss == True:
         Ip sad "Now I'd better go get something to clean up the mess we've made."
-    
+
     $ renpy.pause(1.5)
 
     stop music fadeout 1.0

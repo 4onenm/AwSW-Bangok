@@ -181,7 +181,7 @@ label bangok_four_xsebastian_path1:
             m "I guided his cock into my mouth. He barely gave me a moment to enjoy the taste before he pressed his hips forward, burrowing his tip in my neck."
         m "I bucked my crotch into his face, the sensation of my throat being entered racheting up the sensations in my groin."
         m "He moaned back, evidently quickly approaching his peak as well."
-    
+
     if bangok_four_xsebastian_playerfirst == True:
         jump bangok_four_xsebastian_path1_1
     else:
@@ -656,7 +656,7 @@ label bangok_four_xsebastian_path2_1_1:
         $ renpy.pause(0.3)
         play sound2 "fx/undress.ogg"
         m "I tugged my pants down, enough that Sebastian could easily see my arousal."
-    
+
     m "Only neither of us could see anything."
     c "Oh, right, it's a bit dark. Should we relight one of the torches?"
     Sb drop b dk "No! S-Someone might see us."

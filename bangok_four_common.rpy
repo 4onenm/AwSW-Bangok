@@ -135,7 +135,7 @@ init:
 
             showif persistent.bangok_dev == True and main_menu and not (bangok_four_common.bangnokay.bangnokay_raw):
                 textbutton _("[[Replay first-boot experience.]"):
-                    xalign 0.5 
+                    xalign 0.5
                     yalign 1.1
                     action [Hide("bangok_modsettings"), Start("bangok_four_mod_firstboot")]
                     style "bangok_four_close"
@@ -152,7 +152,7 @@ init:
     image bangok_grey = renpy.display.imagelike.Solid("#808080")
 
     image bangok_anon_o_ceiling = "bg/in/apts/o_ceil.png"
-    
+
     image bangok_four_bryce1_apartment night = "bg/in/apts/pad_night.png"
     image bangok_four_bryce1_apartment night ceiling = "bg/in/apts/pad_night_ceil.png"
 
@@ -386,7 +386,7 @@ init:
     # Because "Requiem for Crimson Scales" redefines the base-game
     #  Bryce dark sprites with the same names, now I have to do this
     #  nonsense to prevent an "ambiguous image" error when
-    #  ATL is involved (e.g. Bryce1) 
+    #  ATL is involved (e.g. Bryce1)
     image bryce angry dk bangok = im.Recolor("cr/bryce_angry.png", 70, 70, 100, 255)
     image bryce brow dk bangok = im.Recolor("cr/bryce_brow.png", 70, 70, 100, 255)
     image bryce brow dk flip bangok = im.Recolor("cr/bryce_brow_flip.png", 70, 70, 100, 255)

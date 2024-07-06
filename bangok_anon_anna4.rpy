@@ -67,7 +67,7 @@ menu:
             play music "mx/anna4.ogg" fadein 2.0
             jump bangok_anon_anna4_start
 
-    "No. Skip to the end.":    
+    "No. Skip to the end.":
         s "As you wish.{cps=2}..{/cps}{w=1.0}{nw}"
         scene black with dissolvemed
         python:
@@ -77,7 +77,7 @@ menu:
             annastatus = "good"
             annascenesfinished = 4
         jump _mod_fixjmp
-        
+
 
 label bangok_anon_anna4_start:
 
@@ -90,7 +90,7 @@ m "Then as soon as we got to the bedroom, she pushed me onto the bed and wasted 
 play sound "fx/undress.ogg"
 if bangok_four_playerhasdick == None:
     m "She proceeded to take off my pants, then underwear to reveal…"
-    menu: 
+    menu:
         "My dick.":
             m "She proceeded to take off my pants, then underwear to reveal{fast} my dick."
             $ bangok_four_playerhasdick = True
@@ -120,7 +120,7 @@ An normal "The small amount of data I did get to look at from the tests I did on
 
 if bangok_four_playerhasdick == True:
     An "You obviously can't get me pregnant, and I don't have any STDs."
-else: 
+else:
     An "We obviously can't get each other pregnant, and I don't have any STDs."
 
 c "I'm pretty sure I don't have any either."
@@ -156,7 +156,7 @@ elif bangok_anon_anna4.anna4choices == 2:
     if bangok_four_playerhasdick == True: # If male and done two things jump to Anna riding the player
         An smirk "Alright, that's enough foreplay. Now the real fun can begin."
         jump bangok_anon_anna4_playerride
-    
+
     else: # If female and done two things Anna comments baced and what you did and lets you pick a thrid and final choice
         if bangok_anon_anna4.annaoral == True and bangok_anon_anna4.annafinger == True:
             An smirk "I'd say I'm satisfied with that. Now it's your turn."
@@ -171,7 +171,7 @@ elif bangok_anon_anna4.anna4choices == 2:
 
 elif bangok_anon_anna4.anna4choices == 3: # F/F excusive to get to this point
     m "Afterward, the two of us collapsed beside each other on the bed, basking in our afterglow."
-    jump bangok_anon_anna4_afterglow 
+    jump bangok_anon_anna4_afterglow
 
 else:
     pass
@@ -180,7 +180,7 @@ else:
 
 label bangok_anon_anna4_menu:
 
-menu: 
+menu:
     "Can I ride you?" if bangok_four_playerhasdick == True and bangok_anon_anna4.playerride == False:
         $ bangok_anon_anna4.playerride = True
         c "Can I ride you?"
@@ -331,7 +331,7 @@ menu:
             repeat
         $ renpy.pause (2.2)
         An bangok lipbite "Mmhh…"
-        
+
     "[[Let her.]":
         m "Her now doing this, I was even deeper inside her. My teeth just barely ghosting her slit, causing her to shudder."
         An "Nngh!"
@@ -431,7 +431,7 @@ menu:
 
     "[[Enjoy.]":
         pass
-    
+
 play soundloop "fx/rub2.ogg" fadein 1.5
 show anna:
     ease 0.75 ypos 1.52
@@ -543,7 +543,7 @@ c "Can I finger you?"
 if bangok_four_anna2.annacame == True:
     An smirk "Oh, I'll gladly go for a round two with your arm."
     show anna at Position(xpos=0.25) with ease
-    show anna bangok blush flip with dissolve 
+    show anna bangok blush flip with dissolve
     m "Anna got off the bed and stood next to it, gesturing for me to get up too."
     An "Kneel here, and brace your elbow on the bed this time."
     c "Yes ma'am."
@@ -611,7 +611,7 @@ if bangok_four_anna2.annacame == True:
         play sound "fx/snarl.ogg"
         m "Suddenly, Anna thrust herself down even harder, punching my hand through her cervix again. Her canal clamped down on my arm, she roared, and her tail slapped against the bed."
         $ renpy.pause (2.0)
-        show anna bangok lipbite with dissolve 
+        show anna bangok lipbite with dissolve
         $ renpy.pause(1.0)
         m "After her orgasm, Anna took a moment to rest and catch her breath."
         An smirk "I've said it before, but your arm really is something. I'm pretty sure I'll never get tired of doing that."
@@ -650,7 +650,7 @@ if bangok_four_anna2.annacame == True:
         play sound "fx/snarl.ogg"
         m "Suddenly, she thrust herself down even further. Her canal clamped down on my arm, she roared, and her tail slapped against the bed."
         $ renpy.pause (2.0)
-        show anna bangok lipbite with dissolve 
+        show anna bangok lipbite with dissolve
         $ renpy.pause(1.0)
         m "After her orgasm, Anna took a moment to rest and catch her breath."
         An smirk "I've said it before, but your arm really is something. I'm pretty sure I'll never get tired of doing that."
@@ -730,7 +730,7 @@ else:
     An bangok blush "Good."
     show anna bangok lipbite with dissolve
     show anna at Position(ypos=1.0) with ease
-    show anna at Position(ypos=1.04) with ease 
+    show anna at Position(ypos=1.04) with ease
     m "Anna lifted herself up, her clenching almost tugging my arm with her. Just before my fingers were about to leave, she reversed direction and pressed back down, fucking herself onto my hand as if it were a dildo."
     An "Ah!"
     if persistent.bangok_cervpen:
@@ -833,7 +833,7 @@ else:
         show anna bangok blushpalm at Position(ypos=1.03) with ease
         An "Thanks."
 
-    
+
 $ renpy.pause (0.5)
 show anna bangok blushpalm flip with dissolve
 show anna at Position(xpos=0.35, ypos=1.02) with ease
@@ -1081,7 +1081,7 @@ if persistent.bangok_cervpen:
         m "Anna continued to fuck me with her tail, and with her past my cervix and now fucking my womb, it was even more stimulating than before. Her being so deep, we reached a much thicker portion of her tail, which started to stretch my outermost lips, just short of the point of pain."
         m "I didn't know how much longer I could last, but it wasn't long."
         $ renpy.pause (4.0)
-     
+
     else:
         $ renpy.pause (1.0)
         show anna smirk with dissolve
@@ -1173,7 +1173,7 @@ else:
     $ renpy.pause (2.0)
 
 
-    
+
 scene black with fadequick
 $ renpy.pause (0.3)
 scene o at Pan((0, 250), (0, 250), 0.1)
@@ -1303,7 +1303,7 @@ if bangok_four_anna2.unplayed == False:
         An "Shut it."
     else:
         pass
-        
+
     $ renpy.pause (1.0)
     c "What made it so much better this time?"
     if bangok_four_anna1_sexrequested == True:
@@ -1353,4 +1353,3 @@ $ annascenesfinished = 4
 stop music fadeout 2.0
 $ renpy.pause (0.5)
 jump _mod_fixjmp
-

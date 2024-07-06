@@ -651,7 +651,7 @@ label bangok_four_xkatsu_help:
                 c "Oh yeah."
             else:
                 c "Sure."
-            
+
             show black with dissolvemed
             show katsu:
                 zoom 1.0
@@ -1400,7 +1400,7 @@ label bangok_four_xkatsu_underneath_mouth:
             $ renpy.pause(1.4)
             m "Back at his tip, I enveloped and sucked, enjoying the large beads of pre my actions had collected there. Then I popped the head back out of my mouth for a momentary breather, and to see if he had any more tips for treating his cock well."
             hide black with dissolvemed
-    
+
     if bangok_four_xkatsu.flavor == 3:
         Ka "If you still want it inside you... Not sure how much more I've got before it comes out."
         menu:
@@ -1746,7 +1746,7 @@ label bangok_four_xkatsu_ws_underneath:
                 m "Even despite his pressure, the seal wasn't perfect. Urine leaked from our coupling point, running down my cum-stained, loosened outer lips and dripping into the bowl below."
             else:
                 m "Even despite his pressure, the seal wasn't perfect. Urine leaked from our coupling point, running down my outer lips and dripping into the bowl below."
-            
+
             if bangok_four_xkatsu.playerstuffed == "mouth":
                 m "My guts gurglged, Katsuharu's piss flooding so deeply, I was sure it was meeting the cum I'd swallowed before."
                 if persistent.bangok_inflation == True:
@@ -1890,7 +1890,7 @@ label bangok_four_xkatsu_ws_underneath:
                     m "His balls slapped into my thighs, completing the seal as his stream of hot waste churned the contents of my womb into a defiling slurry."
                 else:
                     m "His thighs slapped into mine, completing the seal as his stream of hot waste churned the contents of my womb into a defiling slurry."
-                
+
                 if persistent.bangok_inflation == True:
                     m "Even without his entire length and load of cum stuffed into me, I wouldn't have had enough room."
                     m "My belly bloated further, enough I was sure I couldn't stand up, let alone walk."
@@ -1913,7 +1913,7 @@ label bangok_four_xkatsu_ws_underneath:
                     m "Even without the added volume of his cum in his waste slurry, I wouldn't have had enough room."
                     m "My belly bloated further, enough I was sure I couldn't walk until I'd drained of all he'd defiled my sacred temple with."
                     m "I was a stationary tank of his hot fluids and, as I felt myself expanding with his pissload stretching my deepest center, that was all I wanted to be."
-            else: 
+            else:
                 m "He pushed right up to my limit, forcing his piss through my innermost gate until his tip kissed my cervix and his defiling liquid gift jetted directly into my womb."
                 if persistent.bangok_inflation == True:
                     if bangok_four_xkatsu.playerstuffed:
@@ -2047,4 +2047,3 @@ label bangok_four_xkatsu_ending:
     scene black with dissolveslow
     $ renpy.pause (1.0)
     jump _mod_fixjmp
-

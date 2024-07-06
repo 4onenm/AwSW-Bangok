@@ -886,7 +886,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
         $ renpy.pause (1.0)
         m "Then the cock in my ass was removed fully, and two new dragons began lining up with my holes."
         $ bangok_four_malepartners += 2
-        
+
         $ renpy.pause (0.5)
         play soundloop "fx/bangok_poundofsalt.ogg" fadein 0.5
         $ renpy.pause (0.5)
@@ -905,7 +905,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
                 $ renpy.pause (0.5)
                 m "Throwing rational thought to the wind, I decided I didn't care which of them won. I just wanted to be used and filled."
                 m "I spasmed around both cocks, lost in the hedonism of the double penetration."
-                
+
                 show white with dissolve
                 m "Then I came, squeezing down hard, but unable to stop the merciless fucking with my abused, blissed-out muscles."
                 stop soundloop fadeout 1.5

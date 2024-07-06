@@ -85,7 +85,7 @@ class _BangOkFetish():
 
     @property
     def images(self):
-        return 
+        return
 
 _fetish_registy = set()
 

@@ -174,7 +174,7 @@ label bangok_four_bryce3_intro:
         "Sounds fun.":
             $ bryce3mood -= 1
             Mv angry "We're not here for your kind's enjoyment. Can't--"
-    
+
     show sebastian disapproval flip with dissolve
     Br stern "I thought you agreed to keep this civil. Getting angry about things we're trying to leave out of tonight doesn't qualify in my book."
     if bryce3mood < 1:
@@ -313,7 +313,7 @@ label bangok_four_bryce3_intro:
             Br "I don't give a damn about the condoms tonight."
             Br laugh "Gotta clean myself up later anyway."
             Br normal "But if either of you want 'em."
-            
+
     if bangok_four_bryce3_store.mc_bottom == True:
         Br normal "So [player_name], normally we'd just go at it without protection. But I'm guessing you weren't expecting two dragonloads tonight, so if you'd like us to use them..."
         menu:
@@ -561,7 +561,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
         Sb drop "[player_name] isn't Maverick's ex, Bryce."
     if not persistent.bangok_cervpen:
         c "Humans can't do that. I definitely can't."
-        jump bangok_four_bryce3_mcbottom_mav_bryce_mp_nocervpen 
+        jump bangok_four_bryce3_mcbottom_mav_bryce_mp_nocervpen
     menu:
         "I want it all.":
             if bangok_four_bryce3_store.sebastian_in == True:
@@ -964,7 +964,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_top_mav:
             m "Abruptly, Maverick slammed me into his hips, hilting me as deep as he could go, spearing my womb and stretching my vagina around his dragonhood like a toy. The violent thrust pushed me up Bryce's cock a distance I could feel."
         play sound "fx/dragonpain.wav"
         $ renpy.pause(1.0)
-        
+
         if bangok_four_bryce3_store.protection == True:
             m "Maverick's condom's tip bloated in my womb, flooded with his seed, expanding to fill my most sacred place. His cock twitched and pulsed against my stretched canal and dilated cervix, dragging out my peak as he poured into me."
             scene black with dissolvemed
@@ -1368,7 +1368,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_finishes:
     m "Bryce nuzzled into my hair."
     $ renpy.pause(1.2)
     c "You, ah... You can pull out now."
-    
+
     $ renpy.pause(0.8)
     Br brow "..."
     $ renpy.pause(0.8)
@@ -1399,7 +1399,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_finishes:
                 else:
                     m "The thick cum inside me pooled around my hole, eager for the moment when it turned from a taut barrier into a gaping escape route."
 
-            
+
 
             if persistent.bangok_inflation == True and bangok_four_bryce3_store.protection == True and bangok_four_bryce3_store.brycebroke == False:
                 play sound "fx/uncork.ogg"
@@ -1489,7 +1489,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_knotted:
             m "A dribble of Maverick's cum, leaking from inside my loosened passage, ran down over my thigh."
     else:
         Br "..."
-    
+
     $ renpy.pause (1.2)
     $ bangok_four_bryce3_store.knotted = True
     $ bangok_four_bryce3_store.unplayed = False
@@ -1558,7 +1558,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_knotted_epilogue:
     m "He draped my clothes loosely over me, helping protect me from the bite of the chill night air."
 
     Br normal "I'll take care of the trash. After that, my place is closer."
-    
+
     menu:
         "Thanks.":
             show bryce normal with dissolve
@@ -1632,7 +1632,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_gets_player_off:
                         Br brow "Oh?"
                         Br smirk "Alright."
                         m "He twitched his cock, tugging harder at my pressured backdoor."
-                        
+
                         play sound "fx/bubbles.ogg"
                         play sound2 "fx/spray.ogg"
                         $ bangok_four_bryce3_store.brycebroke = True
@@ -1752,7 +1752,7 @@ label bangok_four_bryce3_mcbottom_train:
                 repeat
         with None
         $ renpy.pause(0.8)
-        
+
         if bangok_four_bryce3_store.sebtarget == "ass":
             m "I leaned forward into the sand, the hard assfucking already more than I'd imagined I'd get from this BBQ, and yet still only the first act."
         else:
@@ -2390,7 +2390,7 @@ label bangok_four_bryce3_mcbottom_train:
             label bangok_four_bryce3_mcbottom_train_bryce_condom_pullout_success:
             stop sound fadeout 1.0
             m "I slumped back down as it spilled clear, too exhausted and empty to move."
-        
+
         if (bangok_four_bryce3_store.protection == False) or (bangok_four_bryce3_store.brycebroke == True):
             if bangok_four_bryce3_store.brycetarget == "vag":
                 m "Bryce pulled out all the way, my tight cervix keeping most of his load packed deep within me, but for a slow dribble out into my cunt."
@@ -2753,7 +2753,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                     else:
                         m "The massive shaft in my ass plugged Bryce's seed in as Maverick's condom tip ballooned outward into it."
                         m "My intestines gurgled as Bryce's load flowed around the balloon of Maverick's seed, until I was packed solid, my belly left bloated as a pressurized tank of Bryce's cum."
-            else: # Bryce protected, so protection==True 
+            else: # Bryce protected, so protection==True
                 if persistent.bangok_watersports == True and bangok_four_bryce3_store.mavws == True:
                     # mavbroke must be true
                     m "The massive shaft in my ass plugged Maverick's piss and cum in, forcing the hot load far into my intestines as still more pulses jetted from his tip."
@@ -2823,7 +2823,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                 m "Maverick's cum jetted into my saturated inner temple, layering over his piss to thoroughly defile my deepest center."
                 if persistent.bangok_inflation == True:
                     m "My womb, already distended by his massive shaft and urine, was forced to expand further around his seed."
-                    m "My belly visibly bloated, pregnant with cum and piss as Maverick used my deepest recesses as nothing but a toilet for his fluids." 
+                    m "My belly visibly bloated, pregnant with cum and piss as Maverick used my deepest recesses as nothing but a toilet for his fluids."
         else:
             if bangok_four_bryce3_store.protection == False:
                 # Unprotected 2nd load
@@ -3153,7 +3153,7 @@ label bangok_four_bryce3_mctop:
     with None
     show bryce smirk flip at right with dissolve
     m "Bryce wandered a few steps away from his basket of supplies, then lifted his tail to expose his hindquarters."
-    
+
     if bangok_four_bryce3_store.sebastian_in == True:
         Br "Sebastian? I know you want to keep things short."
         Br smirk flip "Plus, it's not like you're leaving anyone sloppy seconds."
@@ -3443,7 +3443,7 @@ label bangok_four_bryce3_mctop_mavgoes:
         xpos 0.55
     with ease
     m "Maverick stepped over him, bending Bryce's tail back against his underbelly. I could now see Maverick's shaft emerging, thick and long enough to be visible between his hindlegs even with him standing normally."
-    
+
     if bangok_four_bryce3_store.mc_bottom == False:
         show bryce stern flip with dissolve
         m "Then Bryce's face fell."
@@ -3816,7 +3816,7 @@ label bangok_four_bryce3_mctop_mavgoes_climax:
         $ renpy.pause (0.3)
         show bryce pant flip:
             pos (0.94, 1.3)
-        with ease 
+        with ease
         $ renpy.pause (0.3)
         if persistent.bangok_watersports == True and (bangok_four_bryce3_store.mavws == True) and bangok_four_bryce3_store.mavbroke == False and bangok_four_bryce3_store.mc_bottom == False:
             if persistent.bangok_inflation == True:
@@ -3842,7 +3842,7 @@ label bangok_four_bryce3_mctop_mavgoes_climax:
         m "After a few secocnds, the two of them had finished their climaxes, panting over Bryce's neck and back."
         show bryce pant flip:
             pos (0.94, 1.3)
-        with ease 
+        with ease
         $ renpy.pause (0.3)
         if persistent.bangok_inflation == True:
             m "Bryce tugged himself forward with his forelegs and Maverick's thick, seed-slicked shaft began to slide free with a veritable waterfall of cum from Bryce's dilated tailhole, running down his legs, shaft, and underbelly."

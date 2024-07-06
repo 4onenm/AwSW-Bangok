@@ -25,7 +25,7 @@ init python in bangok_four_remy4_store:
 #  -> female
 # Merge: kiss, compliment, taste
 # if remy_finished: Conclude. Else: Remy's Reear
-    
+
 # == Remy's Rear == Remy turns around for the player to explore his other end
 # (Optional) Rimjob (TODO: Need a contributor for this)
 # (Optional) Sheath licking (+climax jump over fuckings)
@@ -410,7 +410,7 @@ label angok_four_remy4_atop_inside_vaginal:
     m "Blindly, I squirted some on my asscheeks, and on our coupling point, trying to make sure the way ahead was thoroughly lubed."
     play sound "fx/box.wav"
     show bangok_four_remy4_cg top:
-        xalign 0.3, 
+        xalign 0.3,
         linear 0.5 xalign 0.5
         xalign 0.5
         zoom 1.9
@@ -476,7 +476,7 @@ label angok_four_remy4_atop_inside_vaginal:
         m "Remy winced as I gradually approached a rhythm."
         Ry shy ud leye "You're... pressing on my bladder..."
         menu:
-            "[[Lean elsewhere.]":
+            "[[Press elsewhere.]":
                 pass
             "Then empty it in me.":
                 $ renpy.pause (0.5)
@@ -570,7 +570,7 @@ label angok_four_remy4_atop_inside_anal:
     m "Blindly, I squirted some on my asscheeks, and on our coupling point, trying to make sure the way ahead was thoroughly lubed."
     play sound "fx/box.wav"
     show bangok_four_remy4_cg top:
-        xalign 0.3, 
+        xalign 0.3,
         linear 0.5 xalign 0.5
         xalign 0.5
         zoom 1.9
@@ -901,7 +901,7 @@ label angok_four_remy4_atop_inside_anal_ws_choice:
         Ry look ud "With our size difference... m-maybe we should get you to a hospital..."
         c "(I'm not even sure how we'd do that.)"
         m "Gingerly, I leaned forward to hug him again, struggling to keep the contents of my overstretched body down."
-        c "I'm staying right here with you."       
+        c "I'm staying right here with you."
         Ry shy ud "..."
     elif bangok_four_remy4_store.protection == True:
         m "With his condom already stuffed full of his seed, at first I couldn't even feel his piss coming out, as if he had hesitated at the last moment."
@@ -1090,7 +1090,7 @@ label bangok_four_remy4_male_tongue_path:
                 m "Reaching forward, I scooped up some of the cum still clinging to his snout and brought it to my lips."
                 m "With a small nod of approval, I swallowed it down, savoring the flavor of our exchange."
                 c "Now I can compare with yours."
-    
+
     show o4 at Pan((0, 150), (0, 250), 3) with dissolve
     show remy shy ud at Transform(xanchor=0.5, yanchor=0.0, xpos=0.5, ypos=1.0)
     jump bangok_four_remy4_tongue_path_merge
@@ -1138,7 +1138,7 @@ label bangok_four_remy4_female_tongue_path:
     scene black with dissolve
     m "Finally, I cried out in ecstasy, my body shaking uncontrollably as wave after wave of pleasure washed through me. Even as I came down from my peak, Remy kept licking, prolonging my pleasure until I begged him to stop."
     m "I collapsed back against the chair, panting heavily as he retracted his snout from between my legs."
-    scene o4 at Pan((0, 150), (0, 250), 3) 
+    scene o4 at Pan((0, 150), (0, 250), 3)
     show remy shy ud:
         xanchor 0.5
         yanchor 1.0

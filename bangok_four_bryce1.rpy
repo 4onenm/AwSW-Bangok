@@ -546,7 +546,7 @@ label bangok_four_bryce1_f_tonguefuck:
     else:
         c "Ah!"
         m "My entire belly twinged, electrified as the tip of his tongue just barely flicked my cervix, the inner gate to my womb."
-    
+
     if bangok_four_bryce1_oralspot == "wall":
         m "I slid a little further down the wall, getting so incredibly close. I wanted him just a little deeper."
     else:
@@ -602,7 +602,7 @@ label bangok_four_bryce1_f_tonguefuck:
     show bryce flirty dk bangok with dissolve
     show bryce normal dk bangok at Position(ypos=1.3) with ease
     m "Shooting me a wink, he withdrew completely."
-    
+
     if bangok_four_bryce1_oralspot == "wall":
         m "My legs could barely hold me up against the wall. My mind was a scattered mess."
     else: # couch
@@ -1097,7 +1097,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
             $ bangok_four_bryce1_playerstuffed = True
 
     $ renpy.pause(0.8)
-    
+
     if bangok_four_bryce1.knotpos != "in" or bangok_four_bryce1.fuckwomb == True:
         show bangok_four_bryce_underside_large:
             ease 1.0 ypos -2.0
@@ -1215,7 +1215,7 @@ label bangok_four_bryce1_f_fuck_postwomb:
             m "I moaned, body numb but for the feeling of bryce pissing in my innermost temple until every surface inside was seeping in his urine."
         if persistent.bangok_inflation == True:
             m "I looked clearly pregnant now, belly bulging upward with a blob of fluid and man meat."
-        
+
         stop soundloop fadeout 1.5
         m "Bryce worked his way back down to look me in the eyes."
         show bangok_four_bryce_underside_large at Position(yanchor='top',ypos=-0.7) with ease
@@ -1452,7 +1452,7 @@ label bangok_four_bryce1_m2:
                             c "I suppose I'm not."
                             Br "..."
                             m "He didn't stop me as I leaned in closer."
-            
+
             if bangok_four_bryce1_protected:
                 m "Leaning over Bryce's belly and hindlegs, I gripped Bryce's shaft around the condom lightly near the base. I wasn't quite sure how rough I could be with it, with him being a different species."
             else:
@@ -1525,7 +1525,7 @@ label bangok_four_bryce1_m2:
                         m "Slightly salty, the moistness came from some kind of lubricating agent already on his shaft. "
                     "Human fluids." if persistent.bangok_cloacas and bangok_four_bryce1_position_picka=="ptop" and not bangok_four_bryce1_protected_a:
                         m "Thanks to his shaft and ass sharing the same hole on his body, I could taste some of the result of my fucking him on his cock. That combined with his natural taste was an incomprable pallete."
-            
+
             m "As I sucked in my cheeks, making a vacuum in my mouth around his head, Bryce kicked one of his legs into the air."
             Br laugh dk flip bangok "That! That's it!"
             m "I bobbed my head up, then down the short distance I could manage, trying to keep my seal."
@@ -1766,7 +1766,7 @@ label bangok_four_bryce1_m2:
                     Br smirk dk flip bangok "D-Don't. Gotta take a shower after this anyway, clean that tip off. You too, probably."
                 m "When I released his cock completely, it sank partway back into his body, just barely peeking out from his slit."
 
-            
+
             if not bangok_four_bryce1_playercame and not bangok_four_bryce1_protected and not (persistent.bangok_watersports == True and bangok_four_bryce1_wstiming == "after"):
                 play sound "fx/cartslide.ogg"
                 show bryce normal dk bangok at center with dissolve
@@ -1776,7 +1776,7 @@ label bangok_four_bryce1_m2:
                     m "I patted my belly."
                 else:
                     m "Bryce rolled off the couch, then turned to face me. I got up off my knees."
-            
+
             if not bangok_four_bryce1_playercame:
                 Br flirty dk bangok "That's me. Now how about you?"
                 menu:
@@ -2160,7 +2160,7 @@ label bangok_four_bryce1_m2:
                 else:
                     m "Bryce came, prying my legs further apart as he jerked to a stop, coming a few inches short of hilting while he coated my insides white."
 
-            
+
             if bangok_four_playerhasdick == True:
                 if not bangok_four_bryce1_playercame:
                     m "The twitching of his spurting cock pressed up against the pleasure button inside me. Before I could form coherent words, I, too, was over my edge and cumming onto both our chests."
@@ -2172,7 +2172,7 @@ label bangok_four_bryce1_m2:
                     m "My anal passage spasmed back around him, the sensation of his spurts filling me combined with his size and the rough fucking enough to push me over the edge."
                 else:
                     m "My anal passage spasmed back around him, the sensation of his spurts filling me combined with his size and the rough fucking enough to push me over the edge yet again."
-                
+
             $ bangok_four_bryce1_playercame = True
 
             if persistent.bangok_inflation == True:
@@ -2218,7 +2218,7 @@ label bangok_four_bryce1_m2:
                         m "The dam inside me burst, Bryce's additional pissload just a little more than the condom could take."
                         $ bangok_four_bryce1_playerstuffed = True
                     m "I moaned, suffused with the feeling of fluid bubbling and sloshing within my innards to make room as yet more was drained in."
-                    
+
                     stop soundloop fadeout 1.5
                     if bangok_four_bryce1_protected == True:
                         m "My belly pressed up against his, visibly rotund for all to see with Bryce's cum and piss as he used my guts like a urinal, my protection stripped away."
@@ -2239,7 +2239,7 @@ label bangok_four_bryce1_m2:
                 Br flirty dk bangok "Sure did fill you up, huh?"
                 m "I couldn't answer as I lay basking under the warm fluid result of our coitus."
 
-            
+
             if persistent.bangok_watersports and persistent.bangok_inflation and bangok_four_bryce1_protected:
                 $ brycemood += 1
                 Br flirty dk bangok "Mm. I think the condom broke."
@@ -2289,14 +2289,14 @@ label bangok_four_bryce1_m2:
                             Br normal dk bangok "Not much to be done about it now. We might as well sleep it off."
                             jump bangok_four_bryce1_tiedsleep
                     Br stern dk bangok "Not much to be done about it now. We might as well sleep it off."
-                    
+
                     if persistent.bangok_watersports == True:
                         c "That's easy for you to say, without an ass stuffed full of dragon cum, piss, and cock."
                     else:
                         c "That's easy for you to say, without an ass stuffed full of dragon dick and cum."
 
 
-            
+
                 label bangok_four_bryce1_tiedsleep:
                 scene black with dissolveslow
                 m "Bryce slumped on top of me on the couch, unable to do much else with our hips tied together."
@@ -2747,7 +2747,7 @@ label bangok_four_bryce1_m2:
                 jump bangok_four_bryce1_bothdone
             else:
                 Br flirty dk bangok "That's you. Now how about me?"
-                
+
                 if bangok_four_bryce1_protected == True:
                     m "I pulled out first, considering my options as I tugged off and tied up my condom. My head was clearer, but I also felt lightheaded from the effort I'd just expended."
                 else:
@@ -3032,7 +3032,7 @@ label bangok_four_bryce1_m2:
                         pass
             show bryce at Position(ypos=1.51) with ease
             m "Pressing forward, he enveloped my entire cock in his mouth with one smooth motion, bumping up against my pelvis. I barely got a moment to enjoy the sensation, though, as..."
-            
+
             play sound "fx/impact3.ogg"
             show bryce brow dk bangok at Position(ypos=1.2)
             show bangok_four_bryce1_apartment night at Pan((0,120), (0,120), 0.0)
@@ -3115,7 +3115,7 @@ label bangok_four_bryce1_m2:
                     m "That was all the endurance I had left."
                 "I-I'm close!":
                     pass
-            
+
             play sound "fx/extinguish.ogg"
             show black with dissolve
             if bangok_four_bryce1_protected == True:
@@ -3373,7 +3373,7 @@ label bangok_four_bryce1_morningcouch:
             #         Br stern "Why would you make this up?"
             #         c ""
             #     "That was amazing.":
-            #         
+            #
             c "That was amazing."
             $ brycemood += 1
             if brycemood > 2:
@@ -3617,7 +3617,7 @@ label bangok_four_bryce1_morningcouch:
                 Br flirty "Is that so?"
             "[[Say nothing.]":
                 pass
-        
+
         Br brow "Thing is, I don't normally take relationships this fast. Not even when I plan for them to be one-night-stands."
         c "So it takes you two nights to have a one-night stand?"
         Br normal "Usually, yeah. That drinking contest was an especially stupid idea for me to propose, especially to you."

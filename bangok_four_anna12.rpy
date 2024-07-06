@@ -640,7 +640,7 @@ label bangok_four_anna2_apartment_annaliesdown:
     m "Now in this position, I could clearly make out her single vertical slit, hidden on a slight mound between her legs."
     if persistent.bangok_cloacas == False:
         m "A small rosebud winked up at me from an inch or two further down."
-        
+
     $ bangok_four_anna2.unplayed = False
     $ bangok_four_femalepartners += 1
 
@@ -674,7 +674,7 @@ label bangok_four_anna2_apartment_annaliesdown:
             An "Vagina. Let's not regress to slang terminology around here."
             An bangok blush "And I'm sorry to say it doesn't fit in my anus without lube, which I didn't bring, nor did I see in your restroom."
             c "Oh."
-    
+
     $ bangok_four_anna2.finger = False
     m "I stepped in closer, reaching out to caress her opening."
     m "After a few moments, I slowly pressed two fingers inside, continuing my small, gentle circles with the rest of my hand. Anna's legs shuddered slightly, where they were sticking up in the air."
@@ -789,7 +789,7 @@ label bangok_four_anna2_apartment_annaliesdown:
         $ renpy.pause(0.8)
         play sound "fx/tableslap.wav"
         play sound2 "fx/snarl.ogg"
-        $ bangok_four_anna2.annacame = True 
+        $ bangok_four_anna2.annacame = True
         show anna bangok orgasm:
             xpos 0.8
         with hpunch
@@ -1071,7 +1071,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             stop soundloop fadeout 0.5
             play sound "fx/tableslap.wav"
             play sound2 "fx/snarl.ogg"
-            $ bangok_four_anna2.annacame = True 
+            $ bangok_four_anna2.annacame = True
             show anna bangok orgasm flip:
                 ease 0.3 ypos 1.07
             with None
@@ -1219,11 +1219,11 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
             show anna bangok orgasm with dissolve
             show black with fadequick
             play sound "fx/snarl.ogg"
-            $ bangok_four_anna2.annacame = True 
+            $ bangok_four_anna2.annacame = True
             m "Anna let out another muffled roar, shoving her own hand into her mouth to try to keep from being too loud."
             $ renpy.pause (0.8)
             hide black
-            show anna bangok lipbite 
+            show anna bangok lipbite
             with dissolvemed
             m "After a long moment, Anna's canal relaxed its grip and she dropped her arms to her sides, releasing me."
             $ renpy.pause (0.5)
@@ -1523,7 +1523,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
 
             label bangok_four_anna2_apartment_vaganal_merge:
             play soundloop "fx/rub2.ogg" fadein 2.0
-            
+
             if anna2mood < 0:
                 show anna sad with dissolve
             else:
@@ -1848,7 +1848,7 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
                 jump bangok_four_anna2_apartment_nodick
             jump bangok_four_anna2_apartment_annaliesdown
 
-    
+
     An bangok blush "This has another fun feature if you're interested. Faux cum."
     if bangok_four_anna2.position in ["anna_strapon_receiving","player_receiving_strapon"]:
         c "For in me or for in you?"
@@ -2062,7 +2062,7 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
                         An "Hope you're ready for this, cause it's gonna be a big one..."
                         m "I braced myself for Anna's oncoming orgasm, nearing my own as well."
                         play sound "fx/snarl.ogg"
-                        $ bangok_four_anna2.annacame = True 
+                        $ bangok_four_anna2.annacame = True
                         if bangok_four_anna2.havefauxcum == True:
                             if bangok_four_anna2.leash == True:
                                 m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully yanking my head as she came in my throat."
@@ -2125,7 +2125,7 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
                             m "There was a moment of apprehension in me as Anna lined herself back up to continue pumping her cock into my mouth. The leash was still hooked around the tail-end of her tail. I knew what was coming, and looking up to see the wicked smirk on her face, she knew I wanted it."
                         else:
                             m "There was a moment of apprehension in me as Anna lined herself back up to continue pumping her cock into my mouth. I knew what was coming, and looking up to see the wicked smirk on her face, she knew I wanted it."
-                        An smirk "Remember, give me a few taps if you need me to let up." 
+                        An smirk "Remember, give me a few taps if you need me to let up."
                         show black with dissolve
                         $ renpy.pause (0.5)
                         m "She slowly began to move her hips again, letting me get used to the sensation. I could feel the tip of her cock tickling the back of my throat again as she thrust in and out of my mouth."
@@ -2150,7 +2150,7 @@ label bangok_four_anna2_apartment_strapon_consideringmenu:
                         An bangok lipbite "Hope you're ready for all of this... I think,{w=0.8}{nw}"
                         An orgasm "Hope you're ready for all of this... I think,{fast}I'm about..."
                         play sound "fx/snarl.ogg"
-                        $ bangok_four_anna2.annacame = True 
+                        $ bangok_four_anna2.annacame = True
                         if bangok_four_anna2.havefauxcum == True:
                             if bangok_four_anna2.leash == True:
                                 m "Anna gave a few more deep humps before announcing her orgasm with a roar, forcefully yanking my head to the base as she came in my throat and squeezed my head with her thighs."

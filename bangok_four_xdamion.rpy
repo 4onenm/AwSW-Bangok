@@ -355,7 +355,7 @@ label bangok_four_xdamion_fuck:
             else:
                 m "Sealing his slit against my taut outer lips, he twitched and pulsed, then released his jets of seed onto my spasming walls."
 
-            
+
             hide white with dissolvemed
 
             $ renpy.pause (0.5)
@@ -432,7 +432,7 @@ label bangok_four_xdamion_ws_fuck:
     Dm face bangok ws "Before you arrived, I was trying to stave off having to go to the bathroom, to complete what I was working on."
     Dm "Had I not needed to go, I probably wouldn't have answered your incessant knocking at all."
     Dm arrogant bangok ws "But since you're so eager to taste dragon cock, you might as well clean it up while you're down there."
-    
+
     if bangok_four_playerhasdick is None:
         m "Looking down at his exotic, piss-stained penis, I felt a welling of heat in my groin..."
         menu:
