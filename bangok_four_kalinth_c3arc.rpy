@@ -2,6 +2,7 @@ init python in bangok_four_kalinth:
     have_number = False # type: bool
     protection = None # type: Optional[bool]
     ws_position = None # type: Optional[Literal["mouth", "inside"]]
+    kalinth_ws_position = None # type: Optional[Literal["mouth", "surprise"]]
 
 label bangok_four_kalinth_c3arc_bangnokay:
     show kalinth at left with ease
@@ -268,7 +269,183 @@ label bangok_four_kalinth_c3arc_female:
                     c "Nevermind. If you're not worried about it, I'm not either."
         "Okay, let's get started.":
             pass
+
+    m "We moved over to the couch, but neither of us sat down as we caught each others' gazes."
+    Kl "I'm not quite sure... would you prefer to take the lead, or should I?"
+    menu:
+        "Let her make the next move.":
+            jump todo_out_of_content_bangok_four_kalinth
+        "Ask her to turn around.":
+            m "Placing a hand on her smooth belly, I gave her a gentle rub."
+            c "Can you lay down on the sofa for me?"
+            jump bangok_four_kalinth_c3arc_female_mctop
+
+label bangok_four_kalinth_c3arc_female_mctop:
+    play sound "fx/undress.ogg"
+    show kalinth bangok smile blush with dissolve
+    if persistent.bangok_cloacas:
+        m "Kalinth quickly agreed. She lay back on the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening draconic cloaca."
+    else:
+        m "Kalinth quickly agreed. She lay back on the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening wet lower lips, and her tailhole a short distance behind."
+    m "I couldn't help but stare at that gorgeous sight for a moment while the dragoness watched my every move with anticipation."
+
+    m "As I approached her from her rear, I couldn't help but gaze at her puffy, exposed lower lips."
+    m "Wanting to make sure she was fully ready, I chose to start with my fingers."
+    m "Sliding them inside her, I felt the heat of her insides and the slickness of her arousal coating my digits as they parted her labia."
+    m "Kalinth gasped, breath shuddering as I touched her."
+    Kl bangok eyeslidded blush "Please, don't tease for too long. I want to feel more of you."
+
+    m "I knelt down on the couch, straddling her tail to get a better view from right above her gorgeous underside."
+    m "Then I leaned down, hugging her tail against me, curling my legs around it until I felt it slithering and struggling against my belly."
+    Kl bangok surprise "What are you doing?"
+    m "Her tail moved a little more against me, and Kalinth seemed to relax into my taking control."
+    Kl bangok smile eyeslidded blush "Oh, don't stop... You feel so soft there."
+    m "With my position on the couch now firmly in place, I spread her thighs a little to take hold of her labia, gently squeezing those lower lips together like a burger."
+    if bangok_four_kalinth.protection:
+        m "I spread the makeshift dental dam over that juicy patty, wrapping it for the customer's convenience."
+        m "Then I lowered my face to said burger, inhaling the sweet scent of her arousal."
+        m "The burger analogy broke down as I took a bite with the wrapper still on."
+        m "I nuzzled lightly with the tip of my tongue the gap between buns as she shuddered beneath my hands and mouth."
+    else:
+        m "Then I lowered my face to said burger,then I found just how wet she was for me already as I inhaled the sweet scent of her arousal."
+        m "It was intoxicating and only heightened the taste of her as I took a bite of her burger."
+        m "I nuzzled lightly with the tip of my tongue at the gap between the buns, lapping up her juices liberally as she shuddered beneath my hands and mouth."
+    m "Kalinth moaned, her tail twitching with excitement as I continued to nibble at her outer entrance."
+    $ renpy.pause (0.5)
+    Kl bangok normal blush "I almost don't want to make you stop... but we can't spend all night here. Other responsibilities..."
+    $ renpy.pause (0.5)
+    m "She shifted as I continued for a little longer before pulling back."
+    m "Hearing her reluctant voice, I decided to move past the teasing and get to the main course."
+    if bangok_four_kalinth.protection:
+        m "I parted her soft buns beneath the dental dam, exposing through the slightly transparent material the damp blue depths, with her clitoris poking back at me."
+    else:
+        m "I parted her soft buns, revealing her damp blue depths within, with her clitoris looking back at me."
+    c "Don't worry, I'll make sure to satisfy you quickly."
+
+    m "Kalinth chuckled."
+    Kl bangok normal blush "You sound quite conf--"
+    m "I lowered myself further down now to nuzzle my whole face into her warm folds."
+    if bangok_four_kalinth.protection:
+        m "I pressed my tongue out against the dental dam, lapping at the entrance of her tight canal as best I could and quickly smearing my own face with my saliva as she softly squeezed down on me."
+    else:
+        m "I lapped at the entrance to her tight canal as she softly squeezed down on me."
+    Kl bangok eyesclosed blush "...{fast}fident..."
+    m "Kalinth shuddered, her tail twitching against my belly as I heard her give a soft, encouraging moan."
+    if bangok_four_kalinth.protection:
+        m "I continued my work upward, leaving her depths both to get a breath and to begin to stimulate the area around her urethra and clitoris."
+    else:
+        m "I continued my work upward, circling her urethra with my tongue, leaving her depths both to get a breath and to begin to stimulate her clitoris just a little."
+        m "I dipped back down for a moment, though, as I felt her release a little gush more of her sweet, sweet nectar in my mouth."
+
+        if persistent.bangok_watersports:
+            show kalinth bangok normal blush with dissolve
+            m "I got a glimpse up at Kalinth's face as she shifted uncomfortably. Noticing I had noticed, she explained."
+            Kl normal "I'm sorry for bringing this up now... but I was so in the mood that I forgot I needed to go to the bathroom."
+            Kl bangok furtive blush "You're making me really excited... Do you want to stop? Because, you know..."
+            m "I raised my head, my face dripping with her slick draconic juices, and thought about what she was saying."
+            menu:
+                "Can you hold it in?":
+                    Kl "I... think I can. I will try to hold it in. Just don't go {i}too fast{/i} on me. You could say I'm ready and armed."
+                    c "(That's not exactly reassuring...)"
+                    menu:
+                        c "(That's not exactly reassuring...){fast}"
+                        "[[Giggle.]":
+                            m "I couldn't help myself. The thought of being suddenly interrupted later seemed so funny."
+                            m "Kalinth joined in."
+                            Kl bangok smile blush "Well, I suppose that means it wouldn't be the worst thing if I fail?"
+                            c "No, but please give it a try."
+                            $ bangok_four_kalinth.kalinth_ws_position = "surprise"
+                        "Okay, let's keep going.":
+                            $ bangok_four_kalinth.kalinth_ws_position = "surprise"
+                        "Can you hold it in, please?":
+                            show kalinth normal with dissolve
+                            m "Kalinth huffs."
+                            Kl "Alright. I'll put a little more effort into it."
+                            c "Thanks."
+                "Don't worry about it. If you need to, go.":
+                    Kl smile blush "Oh, thank you. I thought you would be understanding. But please do continue you felt great down there."
+                    $ bangok_four_kalinth.kalinth_ws_position = "surprise"
+                "I think I'd enjoy that.":
+                    $ bangok_four_kalinth.kalinth_ws_position = "mouth"
+                    Kl smile blush "Oh good. I had thought you might be into it, given you're kinky enough to have sex across species..."
+                    show black:
+                        alpha 0.5
+                    with dissolve
+                    m "I spread her puffy lips apart again, then plunged my face back down into her depths, searching for her urethra with my tounge."
+                    m "When I found it I pushed my face forward, giving it a kiss as my nose rubbed against her clit."
+                    Kl eyeslidded blush "You really want this, don't you? I'll help you out a little bit."
+                    show black:
+                        alpha 1.0
+                    with dissolve
+                    m "I felt her strong arms on my head, pushing me further into her crotch. I sucked down a full breath through my nose before I was immersed in her nethers, then suckled on her piss-hole."
+                    Kl eyesclosed blush "Ohh..."
+                    m "I closed my eyes and let the warm trickle enter my mouth. It wasn't nearly as bitter nor sour as I had feared."
+                    play soundloop "fx/faucet1.ogg"
+                    queue soundloop "fx/faucet2.ogg"
+                    m "Then the trickle turned into a stream..."
+                    m "Then the trickle turned into a stream...{fast} then into a whole river, filling my mouth completely as I struggled to swallow it all."
+                    Kl bangok smile eyeslidded blush "Feeling good down there?"
+                    m "I gagged, but covered it over with a thumbs-up."
+                    c "(Why did I do this? It's like a pre-flare beer drinking competition...)"
+                    c "(I always wondered how those guys managed to swallow gallons.)"
+                    m "Lacking any other choice as the pressure in my mouth increased, I stopped swallowing in individual gulps, my throat instead opening up to let the stream flow down into my stomach."
+                    if persistent.bangok_inflation:
+                        $ renpy.pause (3.0)
+                        m "Her urine was filling my stomach to an alarming degree, but I couldn't stop it."
+                        $ renpy.pause (3.0)
+                        m "I could feel my stomach beginning to stretch, my body struggling to contain the liquid as it continued to flow down my throat."
+                        c "(How much more is there?!)"
+                    Kl bangok eyesclosed blush "Hold on... I'm nearly finished..."
+                    stop soundloop fadeout 5.0
+                    m "Finally, I felt her river turning back into a trickle. I swallowed the last of hurriedly, trying to clear my mouth to take a breath as soon as I could."
+                    if persistent.bangok_inflation:
+                        c "(Ugh, is my belly sloshing? I don't know if I can keep this down...)"
+                    m "After I gave her urethra one last lick to suck up the last of her urine, her hands finally released me."
+                    hide black with dissolve
+                    m "I popped up, gasping for air."
+                    m "It took me a few moments to recover and be certain none of it came back up. To my surprise, I noticed that between the two of us, I hadn't spilled a drop."
+                    c "(I guess a spill like that would have been awkward to explain...)"
+                    Kl bangok smile blush "Thank you. I really needed that."
+                    menu:
+                        "My pleasure.":
+                            Kl "All that? Well, I'm glad you enjoyed it."
+                        "How much did you drink? Was that intentional?!":
+                            Kl "Nothing out of the ordinary, no. I was just emptying my bladder."
+                            if persistent.bangok_inflation:
+                                m "I held my slightly distended belly, feeling the liquid sloshing around from my sitting up. Then my insides gurgled as it began seeping deeper into my guts."
+                                c "(That bladder must have been huge...)"
+                        "For that, now it's my turn.":
+                            jump todo_out_of_content_bangok_four_kalinth
+                        "[[Say nothing.]":
+                            Kl bangok normal blush "I'm sorry. I didn't mean to make you uncomfortable."
+                            if persistent.bangok_inflation:
+                                m "I held my slightly distended belly, feeling the liquid sloshing around from my sitting up. Then my insides gurgled as it began seeping deeper into my guts."
+                            Kl "I was just... emptying my bladder. I didn't realize quite how much that would be for you."
+                            Kl "Although, you handled it very well for your size."
+                            if persistent.bangok_inflation:
+                                c "(I don't feel like I did... Urgh...)"
+                    m "I took a deep breath, then let it out slowly, settling the volume of liquid inside me."
+                    m "Then I looked down at Kalinth's nethers, still glistening with her arousal and ready for me to explore."
+                    c "Let's keep going."
+            m "I dipped back down, nestling my face back into her folds, then working my way up her inner surfaces again."
+        # Watersports interlude 1 end
+
+    m "Then I reached the top and popped her blueberry into my mouth."
+    m "Knowing its sensitivity for humans, I was extra careful here, giving it only the gentlest swirl with my tongue."
+    m "Kalinth moaned in response, her wings fluttered, and she wrapped me around with her hindlegs and grabbed my head with her forepaws."
+    Kl bangok eyesclosed blush "Whatever you're doing, don't stop..."
+    m "I felt her forepaws ruffle my hair as I continued my actions."
+    if bangok_four_kalinth.protection:
+        jump todo_out_of_content_bangok_four_kalinth
+    else:
+        m "Her warmth and the subtle pebbling of her labia scales felt incredible on my face, her slickness only emphasizing the contrast of her scales and inner flesh."
+        Kl bangok smile eyeslidded blush flip "You're making me really wet... Ohh don't forget to breathe..."
+
     jump todo_out_of_content_bangok_four_kalinth
+
+
+
+
 
 
 label bangok_four_kalinth_c3arc_male:
@@ -362,6 +539,7 @@ label bangok_four_kalinth_c3arc_male:
         "Let her take charge.":
             jump bangok_four_kalinth_c3arc_male_mcbottom
         "Take charge yourself.":
+            c "Actually, could you lie down? I'd like to be in control for this."
             jump bangok_four_kalinth_c3arc_male_mctop
         "Ask her to turn around.":
             jump bangok_four_kalinth_c3arc_male_doggy
@@ -562,11 +740,10 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
 
 
 label bangok_four_kalinth_c3arc_male_mctop:
-    c "Actually, could you lie down? I'd like to be in control for this."
     if persistent.bangok_cloacas:
-        m "Kalinth quickyl agreed. She lay across the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening draconic cloaca."
+        m "Kalinth quickly agreed. She lay across the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening draconic cloaca."
     else:
-        m "Kalinth quickyl agreed. She lay across the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening wet lower lips, and her tailhole a short distance behind."
+        m "Kalinth quickly agreed. She lay across the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening wet lower lips, and her tailhole a short distance behind."
     m "I couldn't help but stare at that gorgeous sight for a moment while the dragoness watched my every move with anticipation."
 
     menu:
@@ -574,10 +751,16 @@ label bangok_four_kalinth_c3arc_male_mctop:
             jump .finger
         "Lick her.":
             jump .lick
-        "Enter her.":
+        "Enter her." if bangok_four_playerhasdick == True:
             jump .enter
 
     label .finger:
+        m "As I approached her from behind, I couldn't help but gaze at her puffy, exposed lower lips."
+        m "Wanting to make sure she was fully ready, I chose to start with my fingers."
+        m "Sliding them inside her, I felt the heat of her insides and the slickness of her arousal coating my digits as they parted her labia."
+        m "Kalinth gasped, breath shuddering as I touched her."
+        Kl bangok smile eyeslidded blush flip "Oh, yes. So soft..."
+        Kl bangok eyeslidded blush flip "Please, don't tease for too long. I want to feel more of you."
         jump todo_out_of_content_bangok_four_kalinth
 
     label .lick:
@@ -899,199 +1082,3 @@ label todo_out_of_content_bangok_four_kalinth:
     play sound "fx/system3.wav"
     s "Out of content. Rollback and save, or prepare to crash."
     $ renpy.error("TODO: Out of content.")
-
-# The below is the original novelization of the scene as co-authored by 4onenm
-# and openhermes-2.5-mistral-7b.Q4_K_M.gguf
-# python:
-#     """
-#     <|im_start|>user
-#     Recite the Kalinth sex scene from the sex lewd NSFW mod for AwSW, the dragon dating simulator. Remember, you've just met this police archivist a few minutes ago, and the dragoness' primary interest in you is that you're a human.<|im_end|>
-#     <|im_start|>assistant
-#     "Anyway, you can find all the files here. I'll leave the rest to you." Kalinth said, before moving back toward the office door, tail swishing as she hurried a little.
-
-#     I notice, though, she lingered in the doorway instead of leaving. After a few hesitant steps toward the collected files, I found myself looking back.
-
-#     Noticing my attention, she closed the door, then cleared her throat. "There... is something else."
-
-#     "Oh? What's that?" I asked, still unsure what to expect from this dragoness.
-
-#     "Well," she said, shifting nervously on her feet and casting a furtive glance around her boss' office, despite him being out for the next several hours. "I've been reading all the reports on your kind thus far, and... there's something I'm interested in trying. Only if you are interested, of course."
-
-#     "I think I'd have to know what it is first," I replied, wanting to be absolutely sure she was taking this where I suspected. "What do you want to try?"
-
-#     Kalinth trod closer. "Absolutely feel free to say no if it's too far, but I thought... perhaps you and I could share a bit of casual intimacy." She glanced down at my crotch, making her intentions clear. Her tail twitched as she waited for my answer, the end swishing back and forth across the floor.
-
-#     I gave her a smile. "That sounds like fun," I agreed. "Right here in Bryce's office, though?"
-
-#     "I don't think we'll be disturbed here for a while," she said with a wink. "This office has also seen plenty of use by various members of the department, so it's not like this is anything new. But I can also give you my number for another day, if you prefer."
-
-#     I shook my head, more than ready to accept her offer right now. "Let's go for it."
-
-#     "I assume you'll have to remove your..." She gestured to my clothes. I hurriedly began undressing, not wanting to keep the dragoness waiting. Once I was nude, my erect member exposed to the air of the room, she backed me up toward the armrest of the nearer of the two couches, smirking.
-
-#     ### Watersports variant
-
-#     Standing erect and nude next to her, I suddenly realized my bladder was rather full. "Er... I should probably use the restroom first."
-
-#     Kalinth blushed. "Oh, wow. Your timing is worse than... well, never mind." She pouted. "I suppose I can wait a little longer... unless you want to use me as a urinal?"
-
-#     "I didn't think you'd be into something like that," I admitted. Then I came to a decision. "Sure, why not? I could really use the relief."
-
-#     Smirking, Kalinth trod a little closer. "Mm. Well, we don't want to make a mess on Bryce's floor. I could drink it down right now, or if you're into it you could piss it into me while you're inside, leave me even more dripping wet between the legs..."
-
-#     My eyes widened at the prospect of doing something so taboo with this dragoness' body... but she was offering herself up for it.
-
-#     #### Piss in her mouth
-
-#     I rested my hand on one side of her snout, then guided it down to my erection. She eagerly wrapped her scaly lips around me, but didn't slurp or suck as she waited for me to urinate into her mouth. It was a strange and exciting sensation... I could feel the heat from her breath against my body while warm, moist air filled my urethra.
-
-#     I let my bladder go and felt the familiar rush of relief as my member began to disgorge a steady stream of piss against the back of Kalinth's throat. She swallowed it down eagerly, not once pulling away from me until I had finished urinating into her mouth. The sight of her swallowing every last drop left me with an erection that could have shattered diamonds, and she seemed to be enjoying the fun as well from the look on her face.
-
-#     "Mmm... you taste interesting," Kalinth said once my member stopped twitching. She gave my member a slow lick, from balls to tip, then stepped back with an amused smirk. "I've never tasted a human's piss before."
-
-#     "Well, that's certainly different," I said. "You don't mind?"
-
-#     Kalinth shook her head. "Not at all. No problem." She smirked. "Now are we going to fuck?"
-
-#     #### Piss into her pussy
-
-#     "Inside," I agreed, feeling my erection twitch with anticipation.
-
-#     She moved a little closer. "Then let's get started."
-
-#     ### Kalinth on top
-
-#     I sat back on the couch armrest, letting the assertive dragon archivist take charge. She reared up, resting her forelegs over my shoulders as her spread rear legs revealed her glistening cloaca, searching with her hips for my shaft. Then, pressing my back against the couch's back, she began to tease her cloaca open with my tip, grinding against my erection without letting it in.
-
-#     "Ohhhh," I groaned as the dragoness rubbed herself against me. Her tail swished behind her, making a faint rustling sound with each movement. "Are you going to make me wait like this? I don't know how long I can take it."
-
-#     Kalinth chuckled at that, my face against her fine underbelly scales before she pushed off a little to look me in the eye. "I'll let you inside eventually," she promised with a wink. "But first I just want to feel you all over me down there before..." Her breathing caught and she closed her eyes as her cloaca slid up to my tip again, then she began to lower herself down, enveloping my erection with the warmth of her draconic anatomy.
-
-#     "Oh fuck," I moaned as she took every inch, her tail twitching with excitement. The dragoness paused for a moment, seemingly struggling to take things slow, before she began to gently thrust herself against me, her scaly lower lips rubbing over my member in the most delightful way imaginable.
-
-#     I grabbed onto the couch back tight as I felt Kalinth's cloaca enveloping me, gripping me tighter with every stroke. The heat radiating from her smooth scales was intoxicating. My hips twitched, desperate for more, but she seemed to enjoy this weighty but gentle slow thrusting so much that it was hard to bring myself to complain about it. It wasn't until she moaned loudly and began thrusting even faster that I finally knew the moment had come when she was ready for something more forceful.
-
-#     I groaned as Kalinth finally started fucking me in earnest, her tail whipping back and forth like a flag in the wind of our passion. Her cloaca leaked copious lubrication around my shaft, making it slide in and out with ease as our mating point gave wetter and louder slaps against my groin. I tried to lift my hips a little, thrusting deeper into her, but I could do no better than her weight already pressing down on me. Still, the motion caused her to hug me to her chest again, bringing us closer together in the throes of our passion.
-
-#     "Don't cum just yet," Kalinth whispered hoarsely as she rode me harder and faster, each stroke seeming more desperate than before. "I want... I need..." She moaned, then buried herself on my erection to the hilt, her tail swishing wildly behind her as her passage spasmed and clenched around my shaft. "Now!"
-
-#     I complied with a moan of my own, feeling my orgasm surge forth into her kneading nethers. My member throbbed within her heat and wetness as she lay her body atop mine, resting her weight on my hips to force me as deep within her as I could be. Then the dragoness began grinding herself against me in slow circles, savoring the feeling of the tail-end of my release still spurting slowly into her. My cum and her juices dribbled down between my thighs as my erection faded, leaving us just merely lying together with soiled groins.
-
-#     "Oh... wow," she panted after a few minutes had passed, finally rolling off of me to lie down on the couch properly, while I continued to splay across the armrest and seat back. "That was... even better than I'd imagined."
-
-#     I nodded, panting hard myself as I sat up.
-
-#     ### Player on top
-
-#     "Actually, could you lie down?" I suggested, pointing at the couch. "I'd like to be in control for this."
-
-#     Kalinth quickly agreed. She lay across the couch, her tail swishing and wings fluttering as she settled into a comfortable position and spread her legs to reveal her glistening draconic cloaca. I couldn't help but stare at that sight. The dragoness watched my every move with anticipation.
-
-#     #### Finger her
-
-#     Wanting to make sure she was ready, I chose to start with my fingers. As I approached her, I could smell the sweet scent of her arousal on the air. Carefully, I parted her labia and found just how wet she was for me already. With some gentle stroking around her entrance, I teased her with what was to come.
-
-#     Kalinth gasped, breath shuddering as I touched her. "Oh, yes," she hissed, "so soft... But please, don't tease for too long. I want you inside me."
-
-#     #### Tongue her
-
-#     I couldn't help but wonder how the juices around that gorgeous hole tasted, so I knelt on the floor next to her groin and parted her labia with my thumbs, inhaling the sweet scent of her arousal. It was intoxicating and only heightened the taste of her entrance when I did begin to lick and suck lightly at the edges, gathering up first what had leaked onto her scales before teasingly working my way inside.
-
-#     Kalinth gasped, breath shuddering as I licked her. "Oh, yes," she hissed, "I almost don't want to make you stop. But we can't spend all night here..."
-
-#     #### Enter her
-
-#     I moved closer, my erection throbbing in response to the sight of the open, wet passage. She was inviting me to enter her like this? My heart pounded as my fingers brushed against the scales of her legs as I straddled her tail, taking my position. I took a deep breath, then slowly lowered myself down into her.
-
-#     Her warm cloaca enveloped my member as I pushed inside. Kalinth moaned softly, her wings fluttering faster with excitement. Once I was fully seated within her, she arched her back, purring loudly.
-
-#     "Is that good?" I asked, enjoying the look on her face as she reacted to my entry. "Do you like feeling a human inside you?"
-
-#     "I knew this would feel good," Kalinth replied, still panting from just my slide into her body.
-
-#     As I began to thrust, I closed my eyes, gasping myself from the warmth of the dragoness' cloaca around me. "You have no idea how good," I replied between breaths, thrusting into the dragoness.
-
-#     Her expression was one of pure pleasure. "Mmm... yes," she managed around a gasp, claws digging into the couch fabric as I brought our hips together with increasingly wet slaps.
-
-#     I could feel the dampness growing from her entrance as we continued to couple, and it only fueled my desire for more. I began thrusting faster, harder, driving myself deeper into the dragoness' willing body. Her tail lashed in time with each of my thrusts, keeping rhythm with our lovemaking as she breathed louder and louder.
-
-#     "Don't stop," Kalinth begged, her voice breathy but insistent. "Please don't stop. Ohhhh..."
-
-#     I wasn't about to stop now. She clutched at me tightly, pulling me closer even as her cloaca tightened around my member, her inner muscles clenching. The sensation was too much for me to bear and with a final grunt, I came inside her, spurting white ropes of human seed into the dragoness' waiting passage. Her muscles milked every drop from me but, per her request, I continued thrusting through our shared climaxes.
-
-#     Eventually, as my body began to calm down and the aftershocks subsided, I pulled out of Kalinth, leaving a trail of semen in her now dripping cloaca. She gasped, panting heavily from our shared exertions as she opened her eyes again. "That was... even better than I'd imagined."
-
-#     I smiled at her, still catching my breath.
-
-#     ### Kalinth doggystyle
-
-#     I patted the armrest of the couch. "Do you want me to bend you over this...?" I trailed off, realizing that, as she was already approaching me on all fours, there wasn't much bending over to be done.
-
-#     She seemed to understand what I meant, though. "That works," Kalinth replied with a grin before lying down over the end of the couch, with her hindlegs hanging over the armrest. She lifted her tail, exposing between her spread legs her glistening cloaca already soaked and waiting for me. "I'm ready whenever you are."
-
-#     #### Finger her from behind
-
-#     As I approached her from behind, I couldn't help but look at her open, wet entrance. My cock twitched in response. Wanting to make sure she was good and ready, I chose to start with my fingers. Sliding them inside her, I felt the heat of her insides, the slickness of her arousal coating my digits as they parted her labia.
-
-#     Kalinth gasped, breath shuddering as I touched her. "Oh, yes," she hissed, "so soft... But please, don't tease for too long. I want you inside me."
-
-#     #### Tongue her from behind
-
-#     I couldn't help but wonder how the juices around that gorgeous hole tasted, so I knelt on the floor between her hindlegs, spreading her thighs with my hands for easier access. Parting her labia with the index finger of one hand, I found just how wet she was for me already. I inhaled the sweet scent of her arousal. It was intoxicating and only heightened the taste of her as I began to tease her entrance lightly with the tip of my tongue, lapping up her juices liberally as she shuddered beneath my hands and mouth.
-
-#     Kalinth gasped, breath shuddering as I licked her. "Oh, yes," she hissed, "I almost don't want to make you stop. But we can't spend all night here..."
-
-#     Reluctantly I got back to my feet.
-
-#     #### Enter her from behind
-
-#     My erection throbbed in response to the sight of the eager dragoness before me and her beautiful rear framing her wet, open passage. I ran my hands over her scaly flanks, feeling the muscle beneath as she arched her back in anticipation. My heart pounded with lust as I lined up our bodies, then slid myself into her from behind, entering her eager cloaca.
-
-#     She moaned loudly, claws digging into the couch fabric and wings rustling softly under me as I began to thrust inside of her. Kalinth was panting hard even before we really got started.
-
-#     "Is that good?" I asked, enjoying the sight of her tensing and untensing her muscles, becoming more worked up with each thrust. "Do you like feeling a human take you like this?"
-
-#     "I knew it would feel good," Kalinth replied, twisting her neck to give me a happy look with lidded eyes.
-
-#     I hugged her tail, hiking it up a little further so that, on my next thrust, I was able to push a little deeper inside, bringing us slightly closer together and eliciting another gasp from both me and the dragoness beneath me. "You have no idea how good," I replied between breaths, thrusting into the dragoness.
-
-#     Her expression was one of pure pleasure as she continued to pant, nuzzling the couch cushions while her tail writhed in my grasp with each of my thrusts. The dragoness' passage was so very warm, flushing my body with heat and arousal as I slid myself in and out of her eager depths with increasingly wet slaps.
-
-#     "Don't stop," Kalinth begged, clinging to the couch cushions as she arched her back under me. "Please don't stop. Ohhhh..."
-
-#     I wasn't about to stop now. I looked down, admiring the ripples each of my hard and fast thrusts made over her rear. Her cloaca tightened around me, her inner muscles clenching, and I closed my eyes as I lost myself in our lovemaking. In moments, the sensation of her climaxing passage was too much for me to bear and with a final grunt, I came inside her, spurting white ropes of human seed into the dragoness' eager depths. I struggled to keep thrusting, per her request, my strength flagging as I carried us through our shared climaxes until finally I just lay on her tail, catching my breath.
-
-#     Eventually, as my body began to recover its strength and the aftershocks in Kalinth's nethers subsided, I pulled out. It wasn't long before I could see my seed oozing from her cloaca in small droplets.
-
-#     Like an overgrown cat, she rolled over on the couch with first her front half, then her lower body, then wriggled her way a little further to get her rear off the armrest so she could lie down normally. Then she sighed happily. "That was... even better than I'd imagined."
-
-#     I smiled at her, still catching my breath.
-
-#     ### Post-intimacy
-
-#     "Well, I aim to please," I said with a wink.
-
-#     She dipped a dulled claw into her folds, teasing herself, before bringing it up to her scaly lips for a taste of our union. She licked it clean, closing her eyes again. "I don't think I'll be able to focus on any of my work for the rest of the night..."
-
-#     With an impish grin, I knelt next to where she lay on the couch.
-
-#     "Oh, willing to help me more at no benefit to yourself?" she asked. "No wonder Bryce keeps asking you for help with investigations."
-
-#     "There's some benefit there," I admitted. "But in both cases, let's just say the work is its own reward." Leaning over her cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to guage her reaction.
-
-#     Kalinth sighed contentedly at that, then looked back at me with lustful eyes. "I can't say no to free help like this."
-
-#     Eager to provide said help, I dove my tongue back into the dragoness' folds, tasting our mix of juices and semen as she gasped and moaned beneath me. My hands were eager too, parting her labia for easier access to those extra teasing deeper folds that caused her muscles to clench and push out more of our mixed passions.
-
-#     "Oh yes," Kalinth hissed again, crossing her hindlegs over my head. "You're going to make me cum again..."
-
-#     I continued my ministrations, eager to see if I could bring the dragoness off a second time so soon after she'd already climaxed with me. Her breathing was growing louder and faster as my tongue explored her insides and outside, lapping up every drop of our combined fluids and teasing all those sensitive areas that made her moan and whimper.
-
-#     "I think... I think I'm..." Kalinth whispered hoarsely, panting heavily beneath me. Then, abruptly, her legs clamped down, pinning my face in place as she arched her back again. She wrapped her forepaws around her own muzzle, muffling her moans of passion and pleasure with a strangled cry, bucking against the couch as another climax washed over her body.
-
-#     Juices from her passage flooded my tongue, soaking my face, but I continued to lap them up eagerly, drinking in every last drop while she clutched me to her entrance. The dragoness eventually, seemingly reluctantly, relaxed her legs to let me breathe again, though she still draped her legs over my shoulders, rubbing my back gently.
-
-#     As I finally sat back on my haunches, panting and sweaty from the hotbox held to my face, Kalinth grinned down at me. "I've got to get you my number."
-
-#     "I guess you do," I agreed, wiping off my face with an arm. "And a towel, if you know where one is?"
-#     """
