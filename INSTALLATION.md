@@ -38,23 +38,11 @@
 
 ## Everything Else
 
-The Steam Workshop for Angels with Scaly Wings is only available on Windows. If you are using a different platform, you will need to download the mods from their sources and install them manually. A manual installation of the modtools is required, but not described here. See the [modtools' installation instructions](https://awsw-modding.github.io/AWSW-Modtools/installation.html) for more on getting to that point.
+The Steam Workshop for Angels with Scaly Wings is only available with automatic installation on Windows. If you are using a different platform, you will need to install mods manually. 
 
-1. Download and install the modtools (Not covered here)
-2. Download MagmaLink from the links in our README
-    * Extract the zip
-        * Ensure the extracted folder contains an `__init__.py` file along with other files and folders. It should not be a single folder inside another folder.
-    * Move the extracted folder to the `mods` folder in the game directory, next to the `core` mod.
-3. Download CRAP from the links in our README
-    * Extract the zip
-        * Ensure the extracted folder contains an `__init__.py` file along with other files and folders. It should not be a single folder inside another folder.
-    * Move the extracted folder to the `mods` folder in the game directory, next to the `core` mod.
-4. Download BangOk from the USERS download link in the README
-    * Extract the zip
-        * Ensure the extracted folder contains files like `__init__.py`. It should not be a single folder inside another folder.
-    * Move the extracted folder to the `mods` folder in the game directory, next to the `core` mod.
-5. Enjoy
-    * Launch the game. You should immediately see a NSFW toggle screen and a "BangOk"-specific new player message from System. These only appear on your first boot of the mod.
+Some assistance for Linux (and SteamOS) users is provided [here](./INSTALLATION_LINUX.md), but it is not as step-by-step as the Windows instructions. If you are using a different platform, e.g. MacOS, you will need to adapt the Linux instructions to your platform.
+
+No Nintendo Switch modding support is available at this time.
 
 ## Troubleshooting
 
@@ -86,4 +74,4 @@ Mods generally do not conflict with each other. When they do, frequently one aut
 
 # Development Installation
 
-If you wish to install BangOk for development purposes, simply clone the repository into the `game/mods` directory. The game should safely ignore the `.git` folder and load the mod as normal. If you are developing a mod that depends on BangOk, you should add BangOk as a dependency in your mod's `__init__.py` file. This will ensure that the game will not attempt to load your mod until BangOk is loaded. (Do note that none of BangOk's API is stable, though, so try to focus on the modtools' NSFW toggle instead.)
+If you wish to install BangOk for development purposes, simply clone this repository into the `game/mods` directory. The game should safely ignore the `.git` folder and load the mod as normal. If you are developing a mod that depends on BangOk, you should add BangOk as a dependency in your mod's `__init__.py` file. This will ensure that the game will not attempt to load your mod until BangOk is loaded. (Do note that none of BangOk's API is stable, though, so try to focus on the modtools' NSFW toggle instead.)
