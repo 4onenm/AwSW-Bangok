@@ -1093,6 +1093,7 @@ label bangok_four_xipsum_bedroom_start:
                 window hide
                 nvl clear
                 if renpy.has_label('loremEX2kitchen'):
+                    call loremmod_common_init
                     jump loremEX2kitchen
                 $ renpy.pause(1.0)
                 $ loremstatus = "good"
