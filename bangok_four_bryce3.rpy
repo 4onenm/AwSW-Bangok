@@ -4233,8 +4233,10 @@ label bangok_four_bryce3_mctop_mouth:
     $ renpy.pause (0.5)
     m "I bent my head to his kiss against my private parts, leaning on him with unsteady legs."
     $ renpy.pause (0.5)
+    show bryce smirk with dissolve
+    show bryce at Position(ypos=1.3, xpos=0.7) with ease
     if bangok_four_playerhasdick == True:
-        m "After a moment Bryce pulled away, leaving my saliva-slicked malehood bobbing in the cold teeth of the night air."
+        m "After a moment Bryce pulled away, leaving my saliva-slicked manhood bobbing in the cold teeth of the night air."
     else:
         m "After a moment Bryce pulled away, leaving my saliva-slicked nethers quivering in the chill breeze."
     $ renpy.pause (0.5)
@@ -4247,8 +4249,67 @@ label bangok_four_bryce3_mctop_mouth:
         if bangok_four_bryce3_store.mavfirst == False:
             Mv angry "..."
     m "I mused for a shivering moment, not wanting to give up being on top of Bryce's tongue, but not wanting to be bit into."
-    jump todo_out_of_content_bangok_four_bryce3
-
+    c "What if you flipped over, onto your back?"
+    Br flirty "Sounds like it'd work."
+    Br laugh "Give me a second here..."
+    show bryce stern:
+        rotate 0 ypos 1.3 xpos 0.7
+        ease 0.5 ypos 1.6
+        ease 0.7 rotate 75 ypos 1.8 xpos 0.6
+        rotate 75 ypos 1.8 xpos 0.6
+    with None
+    $ renpy.pause(1.0)
+    m "Bryce flipped onto his back, settling his horns into the sand, leaving his own erect member on full display."
+    Br smirk "How's that?"
+    c "Definitely enjoying the view."
+    show bryce flirty:
+        ypos 1.8
+        ease 0.5 ypos 1.9
+        ypos 1.9
+    with dissolve
+    m "I straddled Bryce's neck on my knees, bringing my groin back in range of his snout, and his licks."
+    c "Mmnph."
+    if bangok_four_playerhasdick == True:
+        m "I leaned in, allowing Bryce's scaly lips to pull my whole length into the heat of his mouth."
+    else:
+        m "I leaned in, allowing Bryce's scaly lips to dig into my damp folds as his tongue dug up into my nethers."
+    m "I held his head, struggling to keep from thrusting myself down onto him as he explored my genitalia, spreading a warmth through me that repelled the chill air."
+    Br pantflirt "Hah..."
+    m "Bryce exhaled into, then inhaled from my crotch, eagerly working his tongue to bring me closer and closer to my peak."
+    c "F-Fuck, almost there..."
+    Br smirk "Mmmh."
+    m "Humming into my groin, I heard a hint of what almost sounded like chuckling at my growing need."
+    if bangok_four_playerhasdick == True:
+        menu:
+            "Will you be laughing with a mouthful of cum?" if bangok_four_bryce3_store.protection == False:
+                show bryce laugh with dissolve
+                m "Bryce did, in fact, laugh at my statement, the vibrations carried through his tongue the last I could take as I began to release into his warm mouth."
+            "[[Groan.]":
+                show bryce flirty with dissolve
+                m "Unable to do anything but appreciate his attentions, I came, releasing into his warm mouth."
+            "You feel s-so good...":
+                show bryce flirty with dissolve
+                m "Bryce hummed again, the feeling right against my pelvis as he redoubled his efforts, pushing me over the brink."
+        play sound "fx/extinguish.ogg"
+        show black with dissolve
+        if bangok_four_bryce3_store.protection == True:
+            m "My manhood throbbed within the grip of his tongue, filling my condom with a heavy bubble of my release."
+        else:
+            m "My manhood spurt past his tongue, hitting the roof of his mouth and back of his throat with sticky ropes of my cum."
+            m "Bryce sucked eagerly, swallowing every drop I had to give."
+        show bryce smirk
+        hide black
+        with dissolvemed
+        m "He nuzzled my crotch a little as my spent member slipped out between his lips."
+    else:
+        jump todo_out_of_content_bangok_four_bryce3
+    Br "Satisfied?"
+    c "More than."
+    hide bryce with dissolve
+    m "I stumbled back off of Bryce, allowing him to climb to his feet and toss Maverick a wink."
+    show bryce flirty flip at right with dissolve
+    Br "So, Maverick, if you want your turn now?"
+    jump bangok_four_bryce3_mctop_mavgoes
 
 
 label todo_out_of_content_bangok_four_bryce3:
