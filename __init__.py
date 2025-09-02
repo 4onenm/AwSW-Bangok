@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # pylint: disable=import-error
 import renpy.exports
 
@@ -154,7 +155,7 @@ def anna3(ml):
     ( ml.find_label('anna3')
         .search_say("Well, what's next?", depth=400)
         .hook_to('bangok_four_anna3_orifices', condition='(persistent.nsfwtoggle == True) and (bangok_four_anna2.unplayed == False)', return_link=False)
-        .search_say("To be fair, I haven’t heard of anyone I’ve been in contact with getting any strange diseases thus far.")
+        .search_say(u"To be fair, I haven’t heard of anyone I’ve been in contact with getting any strange diseases thus far.")
         .link_from('bangok_four_anna3_orifices_end')
         .search_say("As in... intimately close.")
         .hook_to('bangok_four_anna3_intimately_close', condition='(persistent.nsfwtoggle == True) and ((bangok_four_malepartners > 0) or (bangok_four_femalepartners > 0))', return_link=True)
