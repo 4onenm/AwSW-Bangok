@@ -4065,8 +4065,85 @@ label bangok_four_bryce3_mctop_mcgoes_ass:
     c "Just give me a second. Gotta get lined up."
     m "I slid my hips between Bryce's legs, pausing to get a good grip on his tail and lean on him so I wouldn't fall over. The dragon shivered with anticipation."
     Br "I'm all yours now. Have at."
-    m "I pressed forward, pushing into Bryce's rear. His muscles squeezed, not anywhere close to tight around my penetration, but feeling enamored to have me visiting anyway."
-    Br laugh flip "That's nice. Ah, man. I forget sometimes size can be a bit much."
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
+        m "I remembered what I'd said before, after Bryce's suggestion we might need to relieve ourselves on or in him."
+        menu:
+            "Piss in the condom while inside him." if bangok_four_playerhasdick and bangok_four_bryce3_store.protection == True:
+                m "I pressed forward, pushing into Bryce's rear. His muscles squeezed, not anywhere close to tight around my penetration, but feeling enamored to have me visiting anyway."
+                Br laugh flip "That's nice. Ah, man. I forget sometimes size can be a bit much."
+                c "I've got fun other than size."
+                play soundloop "fx/faucet1.ogg" fadein 0.5
+                queue soundloop "fx/faucet2.ogg"
+                m "I let go with a groan of pleasure as I felt the jet of piss race down my hard member, through his sphincter, and into the reservoir of my condom I'd just pushed inside him."
+                Br smirk flip "You've got what that's not size?"
+                Br flirty flip "Oh, are you taking me up on that offer to take a leak back there?"
+                stop soundloop fadeout 2.0
+                m "I did an experimental stroke as I emptied the last of my bladder inside him, feeling the balloon of piss I left drag and squish within his warm, squeezing depths."
+                Br pantflirt flip "Damn, that does feel good."
+                c "No kidding."
+            "Piss in his ass." if bangok_four_playerhasdick and bangok_four_bryce3_store.protection == False:
+                label bangok_four_bryce3_mctop_mcgoes_ass_ws_inside:
+                m "I pressed forward, pushing into Bryce's rear. His muscles squeezed, not anywhere close to tight around my penetration, but feeling enamored to have me visiting anyway."
+                Br laugh flip "That's nice. Ah, man. I forget sometimes size can be a bit much."
+                c "I've got fun other than size."
+                play soundloop "fx/faucet1.ogg" fadein 0.5
+                queue soundloop "fx/faucet2.ogg"
+                m "I let go with a groan of pleasure as I felt the jet of piss race down my hard member, through his sphincter, and into his warm, squeezing depths."
+                show bryce pantflirt flip with dissolve
+                m "Bryce responded immediately, gasping, then clenching around my urinating manhood, even as I felt his inner walls slickening from my urine soaking in."
+                stop soundloop fadeout 2.0
+                m "I did an experimental stroke as I emptied the last of my bladder inside him, feeling rivulets of my piss leaking out around my member and running down my balls, as well as down his scales."
+                Br flirty flip "Glad you took me up on that offer to take a leak back there."
+            "Piss on his hindquarters." if bangok_four_playerhasdick and bangok_four_bryce3_store.protection == False:
+                c "Finally a free urinal, huh?"
+                Br laugh flip "Oh, is that what you want to do first?"
+                # I don't think Maverick can be gone yet.
+                Mv angry "Really? You'll jump directly to degrading him to that degree?"
+                Br brow flip "C'mon, Maverick. We're just having fun."
+                Br smirk flip "Inside or outside is fine with me tonight, if it's fine with you, Maverick."
+                m "Maverick's face fought with itself for a moment. When he answered, he didn't look pleased with his decision."
+                Mv normal "Do whatever you want."
+                menu:
+                    "Piss on Bryce.":
+                        c "Too hot not to."
+                        Br laugh flip "Can't say I disagree."
+                        show bryce flirty flip with dissolve
+                        if persistent.bangok_cloacas == True:
+                            m "Taking hold of my hard manhood in one hand, I use the other to brace against his tail, aiming right for the back of the slit where his own hard member emerged."
+                        else:
+                            m "Taking hold of my hard manhood in one hand, I use the other to brace against his tail, aiming right for the the slit where I knew his ass lay."
+                        play soundloop "fx/faucet1.ogg" fadein 0.5
+                        queue soundloop "fx/faucet2.ogg"
+                        m "Then I let go, pissing a stream of urine right out onto the police chief's quivering scaly backside."
+                        m "Piss backsplattered everywhere, droplets reaching as high as my hand on his tail as I emptied myself all over his hard hindquarters, watching my fluids run down his legs and drain into the sand in rivulets."
+                        stop soundloop fadeout 2.0
+                        m "The best part was watching his own member twitch with need as my warm urine streamed down it, then dribbled from the end."
+                        Br smirk flip "Was that a satisfactory urinal experience?"
+                        Br flirty flip "Made one hell of a mess, if smell is anything to go by."
+                        c "I think I did."
+                        m "I stepped forward, sand squishing a little as I lined myself for what came next with this messy ass."
+                        m "I pressed forward, pushing into Bryce's rear. His muscles squeezed, not anywhere close to tight around my piss-stained penetration, but feeling enamored to have me visiting anyway."
+                        Br laugh flip "Damn, you're kinky, huh? And you feel a hell of a lot better than too-big back there."
+                        Mv normal "..."
+                        Br smirk flip "No, not you, Maverick. I meant in general, y'know?"
+                    "Piss inside instead.":
+                        c "Alright. How about I try to make sure all of my mess ends up inside our urinal?"
+                        Br laugh "I like that idea even better."
+                        jump bangok_four_bryce3_mctop_mcgoes_ass_ws_inside
+                    "Just fuck ass.":
+                        c "Ah, fuck it. I'm just gonna hold it."
+                        Br stern flip "C'mon, really?"
+                        c "If it means everyone having a good time, including Maverick? Yeah."
+                        c "Now how about you arch your back a bit more and get ready?"
+                        show bryce smirk flip with dissolve
+                        jump bangok_four_bryce3_mctop_mcgoes_ass_nows
+            "Enjoy things as they are.":
+                label bangok_four_bryce3_mctop_mcgoes_ass_nows:
+                $ renpy.pause (0.5)
+                $ bangok_four_bryce3_store.brycews = None
+    else:
+        m "I pressed forward, pushing into Bryce's rear. His muscles squeezed, not anywhere close to tight around my penetration, but feeling enamored to have me visiting anyway."
+        Br laugh flip "That's nice. Ah, man. I forget sometimes size can be a bit much."
     m "I huffed in appreciation of his warm rear clenching around me, then began to fuck Bryce properly."
     show bryce laugh flip:
         xpos 0.63
@@ -4074,7 +4151,12 @@ label bangok_four_bryce3_mctop_mcgoes_ass:
         ease 0.6 xpos 0.62
         repeat
     $ renpy.pause(0.8)
-    if bangok_four_bryce3_store.protection == True:
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
+        if bangok_four_bryce3_store.protection == True:
+            m "Slick, wet noises came from where our hips met as my urine sloshed inside of him, running back along my member and beginning to leak out around my crotch to splatter between our hips."
+        else:
+            m "Slick, wet noises came from where our hips met as some more urine leaked out around my manhood, running down our legs and staining our hedonistic coitus."
+    elif bangok_four_bryce3_store.protection == True:
         m "Slick, wet noises came from where our hips met as the small amount of lubrication on my condom smeared around."
     elif persistent.bangok_cloacas == True:
         m "Slick, wet noises came from where our hips met as his wet cloaca squished out a small amount of fluid against my deep thrusts."
@@ -4224,27 +4306,146 @@ label bangok_four_bryce3_mctop_mouth:
     show bryce flirty with dissolve
     show bryce at Position(ypos=1.3) with ease
     show bryce at Position(ypos=1.5) with ease
+
     if bangok_four_playerhasdick == True:
         m "Bryce lowered his head to my waist height, his lips forming a small grin before his kiss slipped all my length into the warmth of his tongue."
     else:
         m "Bryce lowered his head to my waist height, his lips forming a small grin before meeting my lower pair."
         m "I felt his tongue slither inside me in a delicious exploration, lapping up my leaking juices as I moaned."
     c "Ohhh. That's... perfect."
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
+        m "I remembered what I'd said before, after Bryce's suggestion we might need to relieve ourselves on or in him."
+        m "What I was feeling was already exceptional, but I wondered if I could make it a bit more fun, and a bit more messy, for both of us."
+        menu:
+            "Piss in the condom." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.protection == True:
+                c "I... think I might take that leak here..."
+                play soundloop "fx/faucet1.ogg" fadein 0.5
+                queue soundloop "fx/faucet2.ogg"
+                m "Groaning, I let my bladder go, jetting the warm contents of my bladder into the rubber that protected my length from his tongue's attentions."
+                m "Bryce inhaled, slurping all the more eagerly at my member as the condom reservoir filled and sloshed with my urination."
+                stop soundloop fadeout 2.0
+                m "As I finished, the condom stretched and tugged around my cockhead, struggling to contain the fluid bubble as Bryce tugged and sucked."
+            "Piss down his throat." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.protection == False:
+                c "I... think I might take that leak here..."
+                label bangok_four_bryce3_mctop_mouth_ws_throat:
+                play soundloop "fx/faucet1.ogg" fadein 0.5
+                queue soundloop "fx/faucet2.ogg"
+                m "Groaning, I let my bladder go, jetting the warm contents of my bladder right onto his slurping tongue."
+                m "Bryce inhaled, then chuckled, bringing his tongue up to the tip of my member and swirling my piss around in his mouth, as if savoring my piss."
+                stop soundloop fadeout 2.0
+                m "I didn't have all that much to give him, but he gulped it down eagerly, licking and slurping deeply into my crotch all the more after I was done."
+            "Splatter his mouth like a urinal." if bangok_four_bryce3_store.protection == False:
+                m "Smiling to myself at the kinky idea, I run my hands down his face, slipping my fingers into the sides of his mouth and feeling his teeth."
+                show bryce brow with dissolve
+                c "Think you could open up? I think I need to take a leak in this beach's urinal."
+                show bryce flirty with dissolve
+                m "Bryce shot me what I had to assume was a grin, even with his face still buried in my crotch."
+                label bangok_four_bryce3_mctop_mouth_ws_urinal:
+                show bryce laugh at Position(ypos=1.4) with ease
+                m "Then he opened his mouth wide, backing off slightly, letting me hold his mouth open with my hands."
+                play soundloop "fx/faucet1.ogg" fadein 0.5
+                queue soundloop "fx/faucet2.ogg"
+                if bangok_four_playerhasdick == True:
+                    m "I let go with a groan of pleasure as I feel the jet of piss race down my hard member and enter his mouth unaimed."
+                    m "The stream splattered all over the roof of his mouth, droplets landing everywhere inside, even hitting my hands as I hold him agape."
+                    m "The bulk of my piss runs straight down to his throat, forcing him to swallow."
+                    stop soundloop fadeout 2.0
+                    m "Even still, I can see his tongue lash about, trying to taste the mess before it's gone, to spread it around everywhere."
+                    show bryce flirty at Position(ypos=1.5) with ease
+                    m "As soon as I let him, his mouth closes around my member again, suckling as if he can draw out more, even as I feel his snout rub some of the splattered urine into my crotch."
+                else: # bangok_four_playerhasdick == False:
+                    m "I let go with a groan of pleasure as I feel the jet of piss reach my folds, then spray into his mouth unaimed."
+                    m "Equal parts run down my vulva onto his lower set of teeth and chin as spray to the back of his mouth, thoroughly splattering even my hands as I hold him agape."
+                    m "The bulk of my piss runs straight down to his throat, forcing him to swallow."
+                    stop soundloop fadeout 2.0
+                    m "Even still, I can see his tongue lash about, trying to taste the mess before it's gone, to spread it around everywhere."
+                    show bryce flirty at Position(ypos=1.5) with ease
+                    m "As soon as I let him, his lips seal to my crotch again, suckling as if he can draw out more, even as I feel his snout rub some of the splattered urine into my crotch."
+            "Pull out and shower his face." if bangok_four_bryce3_store.protection == False:
+                m "Smiling to myself at the kinky idea, I run my hands down his face, holding him steady for a moment."
+                c "I know you said you were against making a mess of our beach environments, but, fuck, do you think I could piss on your face out here?"
+                Mv angry "Really? You'll jump directly to degrading him to that degree?"
+                show bryce brow at Position(ypos=1.3) with ease
+                m "Bryce pulled back his head, giving me a look that didn't seem like refusal, but didn't seem immediately okay with it either."
+                Br "I'm not against it... but if that's a problem for you, Maverick, then we're not doing it."
+                m "Maverick's face fought with itself for a moment. When he answered, he didn't look pleased with his decision."
+                Mv normal "Do whatever you want."
+                menu:
+                    "Piss on Bryce.":
+                        c "Too hot not to."
+                        Br laugh "Can't say I disagree."
+                        show bryce flirty with dissolve
+                        show bryce at Position(ypos=1.52) with ease
+                        m "Grinning, Bryce bent low again, coming up to nuzzle against my crotch."
+                        play soundloop "fx/faucet1.ogg" fadein 0.5
+                        queue soundloop "fx/faucet2.ogg"
+                        show bryce laugh with dissolve
+                        if bangok_four_playerhasdick == True:
+                            m "In a few moments my bladder lets go, a hot stream of my piss jetting of my member and across his face, splattering against his brow and forcing him to close his eyes."
+                            m "In moments it's running back down his snout, over the sides of his face, and dripping from his chin."
+                            m "His tongue sneaks out, licking his lips to try to capture just some of my mess as I soak his scales, the tip flicking some of it onto my balls as if to get back at me a little for dominating his face so completely."
+                        else:
+                            m "In a few moments my bladder lets go, hot piss spurting through my folds and across his face, forcing him to close his eyes."
+                            m "In moments it has soaked the top of his snout, running over the sides of his face and dripping from his chin."
+                            m "His tongue sneaks out, licking his lips to try to capture just some of my mess as I soak his scales, the tip flicking some of it up into my folds as if to get back at me a little for dominating his face so completely."
+                        stop soundloop fadeout 2.0
+                        c "So damn hot, glistening in the moonlight with my piss running down your chin and neck."
+                        show bryce pantflirt at Position(ypos=1.4) with ease
+                        Br "Can honestly say that's not a line I ever expected to hear."
+                        show bryce at Position(ypos=1.5) with ease
+                        m "Before I can say something more, Bryce moved, tongue digging into my crotch while his piss-stained snout smeared some of my mess into my groin."
+                        m "He inhaled deeply of the mess I'd marked him with, of my nethers. I felt weak at the knees even before fully registering his tongue's continued attentions."
+                    "Piss in his mouth instead.":
+                        c "Alright. How about this. You open up wide and I use your mouth like the urinal you were offering."
+                        Br laugh "I like that idea even better."
+                        jump bangok_four_bryce3_mctop_mouth_ws_urinal
+                    "Let him drink it out." if bangok_four_playerhasdick == True:
+                        c "Alright. Start sucking again, and I'll give you something to drink, huh?"
+                        Br laugh "I had plenty before..."
+                        Br flirty "But I suppose one more mouthful won't hurt."
+                        show bryce at Position(ypos=1.5) with ease
+                        m "Bryce got low again, tongue digging into my crotch and helping pull me into his mouth once more."
+                        jump bangok_four_bryce3_mctop_mouth_ws_throat
+                    "Just fuck his face.":
+                        c "Ah, fuck it. I'm just gonna hold it."
+                        Br stern "C'mon, really?"
+                        c "If it means everyone having a good time, including Maverick? Yeah."
+                        c "Now how about you start sucking me again?"
+                        show bryce flirty at Position(ypos=1.5) with ease
+                        m "Bryce chuckled as he got low again, tongue digging into my crotch and helping pull me into his mouth once more."
+            "Enjoy things as they are.":
+                $ renpy.pause (0.5)
+                m "I rubbed his face, gasping at the lashing of his tongue around my crotch, but held my bladder."
+                $ bangok_four_bryce3_store.brycews = None
     $ renpy.pause (0.5)
     m "I bent my head to his kiss against my private parts, leaning on him with unsteady legs."
     $ renpy.pause (0.5)
     show bryce smirk with dissolve
     show bryce at Position(ypos=1.3, xpos=0.7) with ease
-    if bangok_four_playerhasdick == True:
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
+        if bangok_four_playerhasdick == True:
+            if bangok_four_bryce3_store.protection == True:
+                m "After a moment Bryce pulled away, letting the urine-filled balloon at the end of my condom hang heavily from my painfully erect member."
+            else:
+                m "After a moment Bryce pulled away, leaving my saliva- and urine-slicked manhood bobbing in the cold teeth of the night air."
+        else:
+            m "After a moment Bryce pulled away, leaving my hot, urine-soaked and saliva-slicked nethers quivering in the chill breeze."
+    elif bangok_four_playerhasdick == True:
         m "After a moment Bryce pulled away, leaving my saliva-slicked manhood bobbing in the cold teeth of the night air."
     else:
-        m "After a moment Bryce pulled away, leaving my saliva-slicked nethers quivering in the chill breeze."
+        m "After a moment Bryce pulled away, leaving my hot, saliva-slicked nethers quivering in the chill breeze."
     $ renpy.pause (0.5)
     c "D-Did I say I was done?"
     Br laugh "No, but I don't want to knock you over!"
     c "Oh."
     Br normal "Besides, you can get a lot more use out of me if I'm not worried about jabbing you with my teeth."
-    if getattr(store,'bangok_four_bryce1_oralspot',None) is not None:
+    if bangok_four_bryce3_store.protection == True and bangok_four_playerhasdick == True and persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
+        Br flirty "Or that big ol' pissload you've got hanging there."
+        c "Should I change condoms?"
+        Br laugh "Yeah, if you don't want me to pop it accidentally."
+        m "Removing the old condom, I tied it off and tossed it aside, then jogged to the basket of supplies for a new one."
+        m "Returning, I put the new one into place."
+    elif getattr(store,'bangok_four_bryce1_oralspot',None) is not None:
         Br brow "You remember last time."
         if bangok_four_bryce3_store.mavfirst == False:
             Mv angry "..."
@@ -4279,6 +4480,7 @@ label bangok_four_bryce3_mctop_mouth:
     c "F-Fuck, almost there..."
     Br smirk "Mmmh."
     m "Humming into my groin, I heard a hint of what almost sounded like chuckling at my growing need."
+    $ bangok_four_bryce3_store.mc_came = True
     if bangok_four_playerhasdick == True:
         menu:
             "Will you be laughing with a mouthful of cum?" if bangok_four_bryce3_store.protection == False:
@@ -4302,6 +4504,13 @@ label bangok_four_bryce3_mctop_mouth:
         with dissolvemed
         m "He nuzzled my crotch a little as my spent member slipped out between his lips."
     else:
+        menu:
+            "Fuck his tongue.":
+                show bryce laugh with dissolve
+                m "Either to "
+                jump todo_out_of_content_bangok_four_bryce3
+            "Let him finish you.":
+                jump todo_out_of_content_bangok_four_bryce3
         jump todo_out_of_content_bangok_four_bryce3
     Br "Satisfied?"
     c "More than."
