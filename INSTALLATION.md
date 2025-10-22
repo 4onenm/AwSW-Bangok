@@ -46,6 +46,40 @@ No Nintendo Switch modding support is available at this time.
 
 ## Troubleshooting
 
+### Help! My game won't launch anymore!
+
+This is a common issue with AwSW Steam Workshop modding, due to a race condition in the Steam Workshop implementation. When the list of personas is retrieved for the in-game mod browser, each one retrieved has a small chance of getting stuck waiting for something that will never happen, preventing the game from starting.
+
+The simplest found fix as of AwSW ver 1.17 (which breaks the in-game mod browser) is to prevent the at-startup loading of Steam personas.
+
+Steps:
+
+1. Open Steam
+2. Right click Angels with Scaly Wings in your Library
+3. Manage > Browse Local Files
+4. Click down into the `game` folder
+5. Click down into the `modloader` folder
+6. Using Notepad or any other _plain_ text editor, open the file `__init__.py`. (Your file explorer might show it as only `__init__`.) If double-clicking doesn't work, you can open notepad and drag the file into the notepad window to open it.
+7. Get to line 243 of the file. (Notepad should tell you what line your text cursor is on in the lower left, with the text "Ln 243")
+
+   It, and the two lines above it, should look like this:
+   ```
+    if has_steam():
+        steammgr = get_instance()
+        steammgr.CachePersonas()
+   ```
+8. Add a `#` character anywhere before the text begins on line 243. Once done, the same spot should look something like this:
+   ```
+    if has_steam():
+        steammgr = get_instance()
+        # steammgr.CachePersonas()
+   ```
+9. Save the file.
+10. Using Task Manager or any other method, check no copies of the game are running in the background.
+11. Launch the game.
+
+If you reinstall the game, uninstall the modloader, or validate your game files, you may need to re-do this procedure.
+
 ### I don't have a "Mods" button on the main menu
 
 If the "Mods" button does not appear on the main menu, then the modtools are not installed correctly. No mod will work without this, and installing any mods before the modtools may break the game. Try uninstalling and reinstalling the modtools. You may need to Verify Game Files.
