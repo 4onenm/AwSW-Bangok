@@ -28,7 +28,7 @@
     * If you see a folder inside the BangOk folder, move the contents of that folder up one level.
 7. Install BangOk into the game
     * Open Steam
-    * Right click Angels
+    * Right click Angels with Scaly Wings in your Library
     * Manage > Browse Local Files
     * Click down into the `game` folder
     * Click down into the `mods` folder
@@ -46,18 +46,30 @@ No Nintendo Switch modding support is available at this time.
 
 ## Troubleshooting
 
-* If the "Mods" button does not appear on the main menu, then the modtools are not installed correctly. No mod will work without this, and installing any mods before the modtools may break the game.
-* If upon installing a mod you see a white screen with black text, this means the game crashed during startup. Carefully review the text. Often there will be a line explicitly stating what went wrong.
-    * Example: `Failed resolving dependencies of the mod "Mod A": Cannot find a mod "Mod B".`
-        * This tells you that Mod A needs Mod B installed for it to work, but Mod B was not found.
-        * In this case uninstall Mod A, install Mod B and ensure it is working (that it appears in the Mods menu,) then reinstall Mod A.
-* If the "Mods" list does not show the Magmalink or CRAP mods, then they are not installed correctly.
-    * First, try restarting the game.
-    * If that does not work, try unsubscribing and resubscribing to the mods. Make sure Steam actually begins a download when you do this.
-    * If that does not work, see if the mods have been downloaded to `<STEAM INSTALL DIRECTORY>/steamapps/workshop/content/571880`. There you should see numbered folders for each mod you have _subscribed_ to. If you cannot find Magmalink or CRAP among those numbered folders, then Steam has not downloaded them.
-    * If the mods are downloaded, but not showing up in the game, you can attempt to manually copy the numbered folders from the workshop directory to the game's `mods` directory.
-        * This is not recommended, as it bypasses mod signature verification and may allow malicious mods to run.
-* If a "NSFW Toggle" button does not appear on the main menu after installing BangOk, then you do not have any NSFW mods installed in the game. This means BangOk is not properly installed. Ensure it is in the correct location and is not in a folder inside a folder.
+### I don't have a "Mods" button on the main menu
+
+If the "Mods" button does not appear on the main menu, then the modtools are not installed correctly. No mod will work without this, and installing any mods before the modtools may break the game. Try uninstalling and reinstalling the modtools. You may need to Verify Game Files.
+
+### I see a white screen with black text when I try to launch the game
+
+If upon installing a mod you see a white screen with black text, this means the game crashed during startup. Carefully review the text. Often there will be a line explicitly stating what went wrong.
+
+* Example: `Failed resolving dependencies of the mod "Mod A": Cannot find a mod "Mod B".`
+  * This tells you that Mod A needs Mod B installed for it to work, but Mod B was not found.
+  * In this case uninstall Mod A, install Mod B and ensure it is working, (that is, that it appears in the Mods menu,) then reinstall Mod A.
+
+### I don't see MagmaLink/CRAP in the "Mods" list
+If the "Mods" list does not show the Magmalink or CRAP mods, then they are not installed correctly.
+
+* First, try restarting the game.
+* If that does not work, try unsubscribing and resubscribing to the mods. Make sure Steam actually begins a download when you do this.
+* If that does not work, see if the mods have been downloaded to `<STEAM INSTALL DIRECTORY>/steamapps/workshop/content/571880`. There you should see numbered folders for each mod you have _subscribed_ to. If you cannot find Magmalink or CRAP among those numbered folders, then Steam has not downloaded them.
+* If the mods are downloaded, but not showing up in the game, you can attempt to manually copy the numbered folders from the workshop directory to the game's `mods` directory.
+    * This is not recommended, as it bypasses mod signature verification and may allow malicious mods to run.
+
+### I don't see the "NSFW Toggle" button
+
+If a "NSFW Toggle" button does not appear on the main menu after installing BangOk, then you do not have any NSFW mods installed in the game. This means BangOk is not properly installed. Ensure it is in the correct location and is not in a folder inside a folder.
 
 # Uninstallation
 
