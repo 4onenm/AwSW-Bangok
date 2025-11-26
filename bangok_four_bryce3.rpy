@@ -4173,14 +4173,18 @@ label bangok_four_bryce3_mctop_mcgoes_ass:
             Br laugh flip "Yeah you are, huh?"
         "[[Slap his ass.]":
             $ renpy.pause (0.5)
-            # TODO: Sound
+            play sound "fx/slap1.wav"
             show bryce flirty flip
             m "Bryce clenched a little tighter around me after the slap against his heavy scales."
             Br laugh flip "What? I do something wrong?"
             c "T-That didn't hurt you, did it?"
             Br flirty flip "Nah, just different. Not a bad different, though."
-            # TODO: Sound
             $ renpy.pause (0.5)
+            play sound "fx/silence.ogg"
+            queue sound "fx/silence.ogg"
+            queue sound "fx/silence.ogg"
+            queue sound "fx/silence.ogg"
+            queue sound "fx/slap1.wav"
             m "Experimentally, I gave him another slap on the ass, harder. This time, he didn't clench nearly as much."
             Br laugh flip "I'm not gonna stop ya, but that's not doing much for me."
         "Sure am.":
