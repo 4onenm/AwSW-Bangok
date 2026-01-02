@@ -1379,7 +1379,7 @@ label bangok_four_remy4_sheath_licking:
                 zoom 1.5
             with None
             m "I pulled away, looking up at him with a grin."
-            m "Remy huffed, hidnquarters shivering with need."
+            m "Remy huffed, hindquarters shivering with need."
 
     menu:
         "[[Stroke him.]":

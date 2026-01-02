@@ -288,7 +288,7 @@ label bangok_four_lorem4_maleplayer:
         m "No. Once we get going a little more, and I get more aroused, I should get fully hard."
         $ renpy.pause (0.5)
     else:
-        Lo think bangok peek "Ipsum mentioned something about bloodflow arousal, since you're a mamalian species."
+        Lo think bangok peek "Ipsum mentioned something about bloodflow arousal, since you're a mammalian species."
     Lo "Maybe I could get you harder with my hands?"
     $ bangok_four_lorem4_store.protection = None
     label bangok_four_lorem4_maleplayer_startingposition:
@@ -363,9 +363,9 @@ label bangok_four_lorem4_maleplayer_handjobstart:
         ease 0.5 zoom 1.2
     with ease
     if bangok_four_lorem4_store.protection == True:
-        m "Lorem leaned further forward, balancing one hand against my hips while stroking their other down my condom-wrapped legnth."
+        m "Lorem leaned further forward, balancing one hand against my hips while stroking their other down my condom-wrapped length."
     else:
-        m "Lorem leaned further forward, balancing one hand against my hips while stroking their other down my slightly soft legnth."
+        m "Lorem leaned further forward, balancing one hand against my hips while stroking their other down my slightly soft length."
     m "Not yet hard enough for the stroke, my cock twisted and bent back a little in their hand."
     show lorem shy bangok peek:
         ypos 1.05
@@ -670,7 +670,7 @@ label bangok_four_lorem4_maleplayer_ride:
         $ renpy.pause(0.5)
         m "After a few long moments they began to sink down onto me, pressing their impossibly tight slit taught against my tip."
         show lorem scared with dissolve
-        m "The protruding tip of their dragonhood pressed against my head, blocking my entry as the rest of their snatch failed to stretch to accomodate."
+        m "The protruding tip of their dragonhood pressed against my head, blocking my entry as the rest of their snatch failed to stretch to accommodate."
         Lo "Nngh! T-Too big!"
         show lorem relieved bangok peek with dissolve
         $ renpy.pause(0.3)
@@ -884,11 +884,11 @@ label bangok_four_lorem4_maleplayer_ride:
 
     if persistent.bangok_inflation == True:
         if bangok_four_lorem4_store.protection == True:
-            m "My load felt larget than normal, cum bloating my condom's reservoir and flowing back around my head until I could almost see it in Lorem's lower body."
+            m "My load felt larger than normal, cum bloating my condom's reservoir and flowing back around my head until I could almost see it in Lorem's lower body."
         elif persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
-            m "My load felt larget than normal, cum mixing with the piss in Lorem's tight passage to form a slurry, which Lorem forced into their bloated womb with a long, slow downward thrust."
+            m "My load felt larger than normal, cum mixing with the piss in Lorem's tight passage to form a slurry, which Lorem forced into their bloated womb with a long, slow downward thrust."
         else:
-            m "My load felt larget than normal, cum packing the end of Lorem's tight passage full, before it was forced into expanding their womb with one last long, slow downward thrust."
+            m "My load felt larger than normal, cum packing the end of Lorem's tight passage full, before it was forced into expanding their womb with one last long, slow downward thrust."
         m "They rubbed their full belly, catching their breath."
 
     $ renpy.pause (0.4)
@@ -1155,7 +1155,7 @@ label bangok_four_lorem4_maleplayer_carry:
         if bangok_four_lorem4_store.protection == True:
             m "I came, jetting pulse after pulse of my seed into my condom as I hilted myself in Lorem's womb."
             if persistent.bangok_inflation == True:
-                m "It was more than the room Lorem had left. As my hot spurts bloated the condom reservoir, Lorem's tight innermost space, already stretched around my head, had to expand further to acccept my load."
+                m "It was more than the room Lorem had left. As my hot spurts bloated the condom reservoir, Lorem's tight innermost space, already stretched around my head, had to expand further to accept my load."
                 m "Their cock rubbed in their own seed between their slightly-bloated belly and mine."
         elif persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
             m "I came, jetting pulse after pulse of my seed against the deepest recesses of Lorem's defiled sacred center."
@@ -1165,7 +1165,7 @@ label bangok_four_lorem4_maleplayer_carry:
         else:
             m "I came, jetting pulse after pulse of my seed against the deepest recesses of Lorem's womb."
             if persistent.bangok_inflation == True:
-                m "It was more than the room Lorem had left. As my hot spurts shifted and flowed around my obstructing cockhead, Lorem's tight innermost space, already stretched around me, had to expand further to acccept my load."
+                m "It was more than the room Lorem had left. As my hot spurts shifted and flowed around my obstructing cockhead, Lorem's tight innermost space, already stretched around me, had to expand further to accept my load."
                 m "Their cock rubbed in their own seed, between their slightly-bloated belly and mine."
         m "Their grip on my neck limpened further, leaving their weight hanging almost solely from my arms and shaft, as our orgasms reached their end."
 
@@ -1291,7 +1291,7 @@ label bangok_four_lorem4_maleplayer_carry:
                 m "Their gasps and little noises as they were forced to expand slightly around my liquid gifts were exquisite."
             else:
                 m "I came, my twitching length stringing rope after rope of sticky seed across Lorem's innermost gate."
-                m "It was more than the room Lorem had left. As my hot spurts packed what little space remainend in their passage, I felt it leaking deeper, into their womb, until that small space, too, was filled."
+                m "It was more than the room Lorem had left. As my hot spurts packed what little space remained in their passage, I felt it leaking deeper, into their womb, until that small space, too, was filled."
                 m "Their cock rubbed in their own seed, between their slightly-bloated belly and mine."
         else:
             if bangok_four_lorem4_store.protection == True:
@@ -1301,7 +1301,7 @@ label bangok_four_lorem4_maleplayer_carry:
                 $ renpy.pause (0.5)
                 show lorem shy bangok erect at center behind black with dissolve
             elif persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
-                m "I came, my twitching length stringing rope after rope of sticky seed across Lorem's piss-stainend innermost gate."
+                m "I came, my twitching length stringing rope after rope of sticky seed across Lorem's piss-stained innermost gate."
             else:
                 m "I came, my twitching length stringing rope after rope of sticky seed across Lorem's innermost gate."
 
@@ -1454,7 +1454,7 @@ label bangok_four_lorem4_maleplayer_toy:
                     ypos 1.21
                 with ease
                 Lo "OUGH!"
-                m "My hips coming down from my thrust stopped abruptly against the couch cusion, ramming me further inside Lorem, past the obstruction, until their slick slit met my base, and their twitching shaft lay on my belly."
+                m "My hips coming down from my thrust stopped abruptly against the couch cushion, ramming me further inside Lorem, past the obstruction, until their slick slit met my base, and their twitching shaft lay on my belly."
                 $ renpy.pause (0.5)
                 m "Enjoying the tight wetness stretched around my length, it took me a few moments to realize what I'd pushed through."
             "Ease in.":
@@ -1494,7 +1494,7 @@ label bangok_four_lorem4_maleplayer_toy:
                         $ renpy.pause (0.8)
                         m "I gently eased Lorem back down, sliding slowly back to their inner gate."
                         show lorem think hard blush with dissolve
-                        m "Lorem squirmed, inner walls undulating around my length spasmatically as I gently pulled their depths up against my hard insertion."
+                        m "Lorem squirmed, inner walls undulating around my length spasmodically as I gently pulled their depths up against my hard insertion."
                         Lo normal blush eyes "Mnh!"
                         Lo shy "I-I, ah--!"
                         Lo blush "Nngh--"
@@ -1688,7 +1688,7 @@ label bangok_four_lorem4_maleplayer_toy:
                     ease 0.15 ypos 1.21
                     repeat
                 with None
-                m "Nearing my peak, I lifed Lorem off just a bit more, so that their stretched cervix closed around my tip and I got to spread it around me anew."
+                m "Nearing my peak, I lifted Lorem off just a bit more, so that their stretched cervix closed around my tip and I got to spread it around me anew."
                 m "Lorem twitched and shook, inner walls undulating around me, bringing me right up to my edge."
 
         label bangok_four_lorem4_maleplayer_toy_cerv_pen_orgasm:
@@ -1706,7 +1706,7 @@ label bangok_four_lorem4_maleplayer_toy:
                 m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft to spurt over the piss defiling their womb."
         else:
             if bangok_four_lorem4_store.protection == True:
-                m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft that spurt into my conndom's reservoir, nestled in the depths of their womb."
+                m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft that spurt into my condom's reservoir, nestled in the depths of their womb."
                 if persistent.bangok_inflation == True:
                     m "Squished against their womb's rear wall, my cum flowed back around my head, until it felt like my condom was expanding to fill all room in the small space."
             else:
@@ -1732,7 +1732,7 @@ label bangok_four_lorem4_maleplayer_toy:
             else:
                 m "Their piss-stained canal squelched lewdly around my cockhead, becoming coated with my waste as they moaned around my shaft."
         else:
-            m "Our mating poinnt squelched slightly with each pull down, becominng coated in our coital juices as they moaned around my shaft."
+            m "Our mating point squelched slightly with each pull down, becoming coated in our coital juices as they moaned around my shaft."
 
         m "It was all I could do not to pull them down further or too fast, as their tight hole quickly had me approaching my peak."
         m "They stretched taut around my tip with with each lift up, the clenching of their entrance squeezing in a way better than any real sex toy."
@@ -1760,11 +1760,11 @@ label bangok_four_lorem4_maleplayer_toy:
 
                     if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
                         if persistent.bangok_inflation == True:
-                            m "My tip pressed right into the back of their womb, surrounded with the piss I'd filled them with, while their cervix and canal squeezed eratically around the lower half of my shaft like some kind of large, wet, living cock ring."
+                            m "My tip pressed right into the back of their womb, surrounded with the piss I'd filled them with, while their cervix and canal squeezed erratically around the lower half of my shaft like some kind of large, wet, living cock ring."
                         else:
-                            m "My tip pressed right into the back of their womb, while their cervix and canal squeezed eratically around the lower half of my shaft like some kind of large, piss-stained living cock ring."
+                            m "My tip pressed right into the back of their womb, while their cervix and canal squeezed erratically around the lower half of my shaft like some kind of large, piss-stained living cock ring."
                     else:
-                        m "My tip pressed right into the back of their womb, while their cervix and canal squeezed eratically around the lower half of my shaft like some kind of large, wet, living cock ring."
+                        m "My tip pressed right into the back of their womb, while their cervix and canal squeezed erratically around the lower half of my shaft like some kind of large, wet, living cock ring."
 
                     m "Then, trying to lift them slightly, the sensation of their womb and canal all sliding around my shaft proved too much for me, too."
                     jump bangok_four_lorem4_maleplayer_toy_cerv_pen_orgasm
@@ -1869,7 +1869,7 @@ label bangok_four_lorem4_maleplayer_toy:
             if persistent.bangok_inflation == True:
                 m "I lifted Lorem's stuffed womb off my length and they gasped. A slick flow of my fluids followed my head, soaking into their stretched canal."
             else:
-                m "I lifted Lorem's innnermost gate off my length and they gasped. A slow drip of my fluids followed my head, dribbling down into their stretched canal."
+                m "I lifted Lorem's innermost gate off my length and they gasped. A slow drip of my fluids followed my head, dribbling down into their stretched canal."
             Lo sleep blush "Ohhh..."
     else:
         hide lorem with dissolve
@@ -1915,7 +1915,7 @@ label bangok_four_lorem4_femaleplayer:
     Lo "Toy?"
     c "Do you have something you use for your female side when Ipsum is not available?"
     Lo "Oh you mean a pleasure stick. Yes I do have one of those, but it's at home, and if I am going home to get it then it would be too late to come back."
-    c "So that is what dragons call them. I'll remember that. I was not able to bring any of my own through the portal, but I believe I can make a temperary one for tonight."
+    c "So that is what dragons call them. I'll remember that. I was not able to bring any of my own through the portal, but I believe I can make a temporary one for tonight."
     c "Would you like that?"
     Lo think bangok peek "You can?"
     $ renpy.pause (0.5)
@@ -1924,7 +1924,7 @@ label bangok_four_lorem4_femaleplayer:
     c "Great, give me a few minutes and I will be back."
     m "I went into the pantry, opened one of the top cupboards, and had a rummage in the box of vegetables that had been left by Remy when I had first moved in."
     m "Finding a cucumber with a similar size and length to smaller toys back home, I put the vegetable box back in the cupboard."
-    m "Going into the nearby kitchen, I remembered the small toolbox under the sink that had a few basic tools for maintaince and took out a screwdriver."
+    m "Going into the nearby kitchen, I remembered the small toolbox under the sink that had a few basic tools for maintenance and took out a screwdriver."
     m "Using the screwdriver, I made a hole through the core of the fruit, then set it aside for later."
     if persistent.bangok_inflation == True:
         m "I found a large sized pan, filled it with water and placed it on the stove. I turned on the stove and set it to boil."
@@ -1934,14 +1934,14 @@ label bangok_four_lorem4_femaleplayer:
     m "We have some time before the improvised pleasure stick will be ready."
     menu:
         "Get Lorem ready for the toy":
-            c "Let me get you ready for the toy. I can stil see you are pretty tense from earlier. You should be relaxed to enjoy it."
+            c "Let me get you ready for the toy. I can still see you are pretty tense from earlier. You should be relaxed to enjoy it."
             m "Lorem gave a nod."
             Lo "Thank you [player_name]."
             c "I will be turning you upside down, it is just easier to get to your parts given you are small."
             Lo "Go ahead, I am used to it when Ipsum does the same."
             m "Lorem had turned himself around on the couch, their legs resting against the back of the couch."
             m "Stopping in front of Lorem, I reached down and picked up the dragon under their calves."
-            m "Sitting back on the couch, I put Lorem's legs on my shoulders, theire hands were on my legs doing a headstand."
+            m "Sitting back on the couch, I put Lorem's legs on my shoulders, their hands were on my legs doing a headstand."
             m "Now that I had a closeup view of their groin, I could see what I was working with."
             if persistent.bangok_cloacas == True:
                 if (bangok_four_malepartners > 0) and (bangok_four_femalepartners == 0):
@@ -1952,7 +1952,7 @@ label bangok_four_lorem4_femaleplayer:
                     m "Having been with both female and male dragons, I saw that Lorem had a vertical slit like a female. It was longer then what would be considered normal for their size, though as it had to hold both their male and female parts as well as anal passage it would need to be longer. Their dick was poking out of the top of their slit, the lower part slightly parted to give a small peek at the passages inside."
                 else:
                     m "Given this was to be my first intimate moment with a dragon, I did not have a reference as to what a normal cloaca would look like. I saw that Lorem had a vertical slit. Their dick was poking out of the top of their slit, the lower part slightly parted to give a small peek at the passages inside."
-                m "I bought my hands up to Lorem's slit, placing my thumbs on either side above their dick and pulled their cloaocal lips apart."
+                m "I bought my hands up to Lorem's slit, placing my thumbs on either side above their dick and pulled their cloacal lips apart."
                 m "I could see their vaginal passage to the lower end, taking up the majority of the slit, their much smaller anal vent was at the top end."
             else:
                 m "Lorem's vagina was directly below their penis, which was sticking out like a large clit would in a human. their vaginal lips were spread open slightly due to their penis, giving a peek of their passageway beyond. A bit further down towards their tail was their anus."
@@ -1972,7 +1972,7 @@ label bangok_four_lorem4_femaleplayer:
             m "I sat back down and hugged the small dragon to my chest being careful of their wings, enjoying the warmth."
             m "One hand was on their back, the other on the back of their head, rubbing in small circles."
             m "Lorem went limp in my arms and began to purr, enjoying the affection. All the stress that had been pent up leading to the revelation this evening left the small dragon."
-            m "They could tempererally forget the prejudice that was unjustified and enjoy this evening alone with a human that did not think any less of them even having known their secret."
+            m "They could temporally forget the prejudice that was unjustified and enjoy this evening alone with a human that did not think any less of them even having known their secret."
             m "And no Ipsum to get in the way to 'study' them either."
 
     Lo "Thank you for this, [player_name]. It has been so long that anyone truly appreciated me for what I am. I know now that no matter what other dragons think at least someone is out there that accepts me for me."
@@ -1988,13 +1988,13 @@ label bangok_four_lorem4_femaleplayer:
         m "I was sure that, in case of a hankering diplomat, some form of protection would be available in case of sexual interludes. A brief search around the apartment revealed an ample supply of condoms had been left, including many sizes able to accommodate any dragon."
     m "I fished out one of the larger condoms and opened the packet."
     m "I pulled the central bulb with one hand and rolled the condom out, forming a long rubber sleave."
-    m "Holding the enterence to the condom wide with one hand, I used my other to carefully pour the hot mixture into the condom."
+    m "Holding the entrance to the condom wide with one hand, I used my other to carefully pour the hot mixture into the condom."
     if persistent.bangok_inflation == True:
         m "The lower half of the condom was full of the fake cum."
         if bangok_four_bryce1_unplayed == False:
             m "The load in the condom reminded me how productive Bryce had been."
     else:
-        m "About a quater of the condom was full of the fake cum."
+        m "About a quarter of the condom was full of the fake cum."
     m "Retrieving the now warmed cucumber from the pan, I used the screwdriver again to carefully push the outer rim of the condom up the hole I had made earlier until it poked through the top."
     m "Pulling the rim of the condom back around the outside of the cucumber the substitute pleasure stick was ready, complete with fake cum in the filled condom hanging below."
     m "I returned to the living room, holding the toy."
@@ -2005,15 +2005,15 @@ label bangok_four_lorem4_femaleplayer:
             "Remind him this might be once-in-a-lifetime.":
                 c "You did want to the experience of taking a human cock right?"
                 Lo "O.. O.. Of course but..."
-                c "Then the full lenth of it you will take."
+                c "Then the full length of it you will take."
                 Lo "Yes I will do it."
                 $ bangok_four_lorem4_store.cerv_pen = True
                 c "Good. I promise it will be worth it."
 
             "Let Lorem choose.":
-                c "Lets wait until you have it in you before making that choice, I promise that it will increase the pleasuer you will feel."
+                c "Lets wait until you have it in you before making that choice, I promise that it will increase the pleasure you will feel."
                 c "And you will get the satisfaction of haven taken what would be a full length of a human."
-                m "Lorrem nodded, some of the aprehensiveness he was showing when seeing the toy lessoning."
+                m "Lorem nodded, some of the apprehensiveness he was showing when seeing the toy lessoning."
                 $ bangok_four_lorem4_store.cerv_pen = False
     else:
         c "That is perfectly fine. This will be just about you, for now so let me know when you are happy with the depth."
@@ -2052,11 +2052,11 @@ label bangok_four_lorem4_femaleplayer:
     $ bangok_four_femalepartners += 1
     if persistent.bangok_cloacas == True:
         m "Lorem got on my legs and put their arms on my shoulders. Taking the toy below their spread legs with one hand, I glided my other hand to the base of their erect shaft and found the slit of their cloaca."
-        m "I used my thumb and first finger to spread the lower part of the slit wide and brought the head of the toy to the wet enterence to push into their already slick passage."
+        m "I used my thumb and first finger to spread the lower part of the slit wide and brought the head of the toy to the wet entrance to push into their already slick passage."
     else:
         m "Lorem got on my legs and put their arms on my shoulders. Taking the toy below their spread legs with one hand, I glided my other hand to the base of their erect shaft and feeling slightly lower found the wet opening of their vagina."
-        m "I used my thumb and first finger to spread the slit wide and brought the head of the toy to the wet enterence to push into their already slick passage."
-    m "I began to push the toy in with relitive ease. Their relaxed passage spread as the toy continued pushing further inside, their arousal coating the toy in their fluids."
+        m "I used my thumb and first finger to spread the slit wide and brought the head of the toy to the wet entrance to push into their already slick passage."
+    m "I began to push the toy in with relative ease. Their relaxed passage spread as the toy continued pushing further inside, their arousal coating the toy in their fluids."
     m "Lorem gave a buck with their legs and took more of the toy inside."
     Lo normal blush "It's bigger than my own pleasure stick at home."
     c "In a good way, or...?"
@@ -2071,7 +2071,7 @@ label bangok_four_lorem4_femaleplayer:
     else:
         Lo "That is my cervix. I can't take any more."
     m "I started to get into a rhythm, moving my hand either backwards or forwards depending on what direction their hips were going."
-    m "Their passage had started to relax, having adjusted to the length of the toy that was currently in their dephs, although a good half remained outside their slit."
+    m "Their passage had started to relax, having adjusted to the length of the toy that was currently in their depths, although a good half remained outside their slit."
 
     if bangok_four_lorem4_store.cerv_pen == True:
         menu:
@@ -2094,7 +2094,7 @@ label bangok_four_lorem4_femaleplayer:
                 m "Their hips continued to come down and with my hand firmly pushing the toy, there was only one place the toy could go."
                 m "Ramming the toy further inside Lorem, past the obstruction, until their slick slit met my hands holding the bottom of the toy, and their twitching shaft lay on my belly."
                 $ renpy.pause (0.5)
-                m "Reflexively, Lorem bought their legs together, their tunnel clammpng tight around the toy inside, trying to stop the penetration that had already happened."
+                m "Reflexively, Lorem bought their legs together, their tunnel clamping tight around the toy inside, trying to stop the penetration that had already happened."
                 m "Their front claws were digging slightly into my shoulders, though the claws were blunt enough they only left slight marks."
                 m "After a few seconds, their legs relaxed, the grip on my shoulders lessoning as the dragon let out a few deep breaths. The discomfort of the penetration dulling and giving rise to pleasure."
 
@@ -2109,7 +2109,7 @@ label bangok_four_lorem4_femaleplayer:
                     ease 2.0 ypos 1.21
                     ypos 1.21
                 with None
-                m "Then, gradually, I began to move my hand further down the toy, slightly incrasing the length that went into their passage."
+                m "Then, gradually, I began to move my hand further down the toy, slightly increasing the length that went into their passage."
                 show lorem sleep blush with dissolve
                 Lo "O-Ohh... I-Is the toy getting longer?--"
                 Lo scared "OH!"
@@ -2133,7 +2133,7 @@ label bangok_four_lorem4_femaleplayer:
                 $ renpy.pause (0.8)
                 m "I gently pushed back into their passage, sliding slowly to their inner gate."
                 show lorem think hard blush with dissolve
-                m "Lorem squirmed, inner walls undulating around my length spasmatically as I gently thrust up against the barrier that was slowly starting to give."
+                m "Lorem squirmed, inner walls undulating around my length spasmodically as I gently thrust up against the barrier that was slowly starting to give."
                 Lo normal blush eyes "Mnh!"
                 Lo shy "I-I, ah--!"
                 Lo blush "Nngh--"
@@ -2186,7 +2186,7 @@ label bangok_four_lorem4_femaleplayer:
             ypos 1.19
         with ease
         m "Lorem panted, inner walls squeezing rhythmically as the toy was pulled almost completely out."
-        m "Then I pushed back up taking them to their requested deph, my hand stopping the toy before it hit their cervix."
+        m "Then I pushed back up taking them to their requested depth, my hand stopping the toy before it hit their cervix."
         show lorem happy bangok shy2:
             ease 0.3 ypos 1.2
         with None
@@ -2198,8 +2198,8 @@ label bangok_four_lorem4_femaleplayer:
             repeat
         with None
         play soundloop "fx/rub2.ogg" fadein 1.5
-        m "We both began to speed up our thrusts, their passage having stretched and become adapted to the size of and deph of the toy."
-        m "Their enterence squelched slightly with each thrust, becoming coated in their coital juices as they moaned around the penetration."
+        m "We both began to speed up our thrusts, their passage having stretched and become adapted to the size of and depth of the toy."
+        m "Their entrance squelched slightly with each thrust, becoming coated in their coital juices as they moaned around the penetration."
         Lo bangok aheago2 "Aaahn!"
         if (persistent.bangok_cervpen == True) and (bangok_four_lorem4_store.cerv_pen = False):
             Lo aheago1 "D-Deeper!"
@@ -2225,7 +2225,7 @@ label bangok_four_lorem4_femaleplayer:
         else:
             label bangok_four_lorem4_femaleplayer_toy_no_pen:
             Lo bangok aheago1 "F-Faster!"
-            m "we sped our thrusts even more, the now thourighly slick toy making my hand slip, struggling to hold back from thrusting deeper than they were comfortable with."
+            m "we sped our thrusts even more, the now thoroughly slick toy making my hand slip, struggling to hold back from thrusting deeper than they were comfortable with."
             m "Both of us panted aloud, Lorem teetering on the verge of their respective peak."
             stop soundloop fadeout 0.2
             play sound "fx/rub1.ogg"
@@ -2252,9 +2252,9 @@ label bangok_four_lorem4_femaleplayer:
         m "At the same time I reached my other hand down to the condom full of the still warm fake cum and began to squeeze it, forcing the cum up through the toy and into their passage at the end of each thrust."
         m "Lorem let out another growl as their orgasm continued, their dick still pulsing against my chest, though no more seed came out."
         if persistent.bangok_inflation == True:
-            m "I continued to squeeze more of the fake cum from the condom, swelling their lower belly as the fake cum was forced through their cervix with the thusts of the toy and the contractions of their passage. A small amount had started to dribble around their clenched slit, their womb struggling to hold it all."
+            m "I continued to squeeze more of the fake cum from the condom, swelling their lower belly as the fake cum was forced through their cervix with the thrusts of the toy and the contractions of their passage. A small amount had started to dribble around their clenched slit, their womb struggling to hold it all."
         else:
-            m "I finished pushing in the last of the fake cum that I had made. Given the depth of the toy, I was sure some fake cum had been forced deeper into them with the thusts of the toy and the contractions in their passage. A few dribbles could be seen around the end of the toy, their clenched slit ensuring the vast majority was held within their depths."
+            m "I finished pushing in the last of the fake cum that I had made. Given the depth of the toy, I was sure some fake cum had been forced deeper into them with the thrusts of the toy and the contractions in their passage. A few dribbles could be seen around the end of the toy, their clenched slit ensuring the vast majority was held within their depths."
     $ renpy.pause (0.8)
     if persistent.bangok_inflation == True:
         Lo shy "T-Thanks."
@@ -2272,7 +2272,7 @@ label bangok_four_lorem4_femaleplayer:
                     if persistent.bangok_cloacas == True:
                         m "Lorem let out another shudder from the increasing pressure on their womb as the end of the toy popped into them fully, their slit clamping down afterwards, keeping the toy inside."
                     else:
-                        m "Lorem let out another shudder from the increasing pressure on their womb as the end of the toy popped into them fully, the enterence to their vagina clamping down afterwards, keeping the toy inside."
+                        m "Lorem let out another shudder from the increasing pressure on their womb as the end of the toy popped into them fully, the entrance to their vagina clamping down afterwards, keeping the toy inside."
                     jump bangok_four_lorem4_femaleplayer_choices
         else:
             m "They let out a little gasp, inner walls clenching around the toy that was still lodged with them, the end of the toy kissing their cervix and helping plug their stuffed womb."

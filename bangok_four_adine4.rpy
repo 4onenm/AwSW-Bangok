@@ -53,7 +53,7 @@ label bangok_four_adine4_shower_purring:
     m "She looked nervous, though that was to be expected given her request."
     if bangok_four_playerhasdick is None:
         menu:
-            m "To reassure her, I started removing my clothes and tossing them out of range of the shower, lettinng my..."
+            m "To reassure her, I started removing my clothes and tossing them out of range of the shower, letting my..."
             "...erection pop into view.":
                 $ bangok_four_playerhasdick = True
                 pass
@@ -145,7 +145,7 @@ label bangok_four_adine4_shower_purring:
     label .adine_presents_rear:
     $ bangok_four_femalepartners += 1
     m "Adine rolled her eyes, though her amused smile betrayed her mock indignation."
-    Ad annoyed "Well, I suppose I owe you that much, since I so cruelly decieved you into stripping naked for me."
+    Ad annoyed "Well, I suppose I owe you that much, since I so cruelly deceived you into stripping naked for me."
     m "It was a glorious sight to behold, the different colors perfectly framing a pussy and anus that were begging to be ravaged."
     m "I almost lost track of time, but after a few moments Adine's voice broke the silence."
     Ad think "Well? Are you just going to stare all day or are you going to teach me how humans do it?"
@@ -164,7 +164,7 @@ label bangok_four_adine4_shower_purring:
     m "Or maybe I was bigger than I gave myself credit for. Her hole was enjoyably tight, and her haphazard moans indicated that she was getting off as much as I was."
     c "You're tighter than I thought a dragon would- nnnf, be, given your size."
     Ad think "I don't do- annh, do this often."
-    m "Unable to talk through the moaning anymore, we went back to spechlessly enjoying each others' company."
+    m "Unable to talk through the moaning anymore, we went back to speechlessly enjoying each others' company."
     m "The steady thrusts of my hips slowly consumed my thoughts as I put all of my effort into plowing the angel in my hands."
     m "My grasp on her flank tightened as I drew closer and closer to my orgasm. I was ready far sooner than I had hoped, but the shower head was washing off all lubricant, letting both of us feel each thrust more... stickily."
     m "At least I wasn't alone. Adine was looking back at me expectantly. She was ready too."

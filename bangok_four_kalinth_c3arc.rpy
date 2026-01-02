@@ -371,7 +371,7 @@ label bangok_four_kalinth_c3arc_female_mctop:
                     show black:
                         alpha 0.5
                     with dissolve
-                    m "I spread her puffy lips apart again, then plunged my face back down into her depths, searching for her urethra with my tounge."
+                    m "I spread her puffy lips apart again, then plunged my face back down into her depths, searching for her urethra with my tongue."
                     m "When I found it I pushed my face forward, giving it a kiss as my nose rubbed against her clit."
                     Kl eyeslidded blush "You really want this, don't you? I'll help you out a little bit."
                     show black:
@@ -622,9 +622,9 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
         repeat
     with None
     if bangok_four_kalinth.protection:
-        m "Then she began to gently thrust herself against me, her scaly lower lips rubbing over the thin barrier between us in the most delightful way imagineable."
+        m "Then she began to gently thrust herself against me, her scaly lower lips rubbing over the thin barrier between us in the most delightful way imaginable."
     else:
-        m "Then she began to gently thrust herself against me, her scaly lower lips rubbing over my member in the most delightful way imagineable."
+        m "Then she began to gently thrust herself against me, her scaly lower lips rubbing over my member in the most delightful way imaginable."
 
     if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
         if persistent.bangok_cloacas:
@@ -637,7 +637,7 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
         else:
             m "I grabbed onto the couch back tight as I felt Kalinth's passage enveloping me, gripping me tighter with every stroke."
     m "The heat radiating from her smooth scales was intoxicating."
-    m "My hips twitched, desparate for more, but she seemed to enjoy this weighty but gentle slow thrusting so much that it was hard to bring myself to complain about it."
+    m "My hips twitched, desperate for more, but she seemed to enjoy this weighty but gentle slow thrusting so much that it was hard to bring myself to complain about it."
 
     show kalinth bangok smile eyesclosed blush flip:
         ease 1.2 ypos 1.18
@@ -685,7 +685,7 @@ label bangok_four_kalinth_c3arc_male_mcbottom:
     m "Still, the motion caused her to hug me to her chest again, bringing us closer together in the throes of our passion."
 
     Kl bangok smile eyeslidded blush flip "Don't cum just yet..."
-    m "She rode me harder and faster, each stroke seeming more desparate than the one before."
+    m "She rode me harder and faster, each stroke seeming more desperate than the one before."
     $ renpy.pause (0.5)
     Kl "I want..."
     Kl bangok eyesclosed blush flip "I need..."
@@ -812,7 +812,7 @@ label bangok_four_kalinth_c3arc_male_doggy:
         m "As I approached her from behind, I couldn't help but gaze at her puffy, exposed lower lips."
         m "Wanting to make sure she was fully ready, I chose to start with my fingers."
         m "Sliding them inside her, I felt the heat of her insides and the slickness of her arousal coating my digits as they parted her labia."
-        m "Kalinth gasped, breath shdudering as I touched her."
+        m "Kalinth gasped, breath shuddering as I touched her."
         Kl bangok smile eyeslidded blush flip "Oh, yes. So soft..."
         Kl bangok surprise blush flip "But please, don't tease for too long. I want you inside me."
         menu:
@@ -931,7 +931,7 @@ label bangok_four_kalinth_c3arc_male_doggy:
             else:
                 m "It wasn't long before I could see my seed oozing from her lower lips in small droplets."
             if persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
-                m "I couldn't tell which of the other splaters of fluids on our crotches was my urine and which were her juices as they dribbled down our thighs."
+                m "I couldn't tell which of the other splatters of fluids on our crotches was my urine and which were her juices as they dribbled down our thighs."
 
         m "Like an overgrown cat, she stretched out on the couch, then rolled over with first her front half, then her lower body."
         show kalinth bangok smile eyeslidded blush:
@@ -990,19 +990,19 @@ label bangok_four_kalinth_c3arc_male_post_intimacy:
     c "There's some benefit there. But in both cases, let's just say the work is its own reward."
     if bangok_four_kalinth.protection:
         if persistent.bangok_cloacas:
-            m "Leaning over her soaked cloaca, my tongue flicked out to lick up a first teasing droplet to sample her well-churned juices and to guage her reaction."
+            m "Leaning over her soaked cloaca, my tongue flicked out to lick up a first teasing droplet to sample her well-churned juices and to gauge her reaction."
         else:
-            m "Leaning over her soaked pussy, my tongue flicked out to lick up a first teasing droplet to sample her well-churned juices and to guage her reaction."
+            m "Leaning over her soaked pussy, my tongue flicked out to lick up a first teasing droplet to sample her well-churned juices and to gauge her reaction."
     elif persistent.bangok_watersports and bangok_four_kalinth.ws_position == "inside":
         if persistent.bangok_cloacas:
-            m "Leaning over her piss-soaked and cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our well-churned fluids and to guage her reaction."
+            m "Leaning over her piss-soaked and cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our well-churned fluids and to gauge her reaction."
         else:
-            m "Leaning over her piss-soaked and cum-filled pussy, my tongue flicked out to lick up a first teasing droplet to sample our well-churned fluids and to guage her reaction."
+            m "Leaning over her piss-soaked and cum-filled pussy, my tongue flicked out to lick up a first teasing droplet to sample our well-churned fluids and to gauge her reaction."
     else:
         if persistent.bangok_cloacas:
-            m "Leaning over her cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to guage her reaction."
+            m "Leaning over her cum-filled cloaca, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to gauge her reaction."
         else:
-            m "Leaning over her cum-filled pussy, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to guage her reaction."
+            m "Leaning over her cum-filled pussy, my tongue flicked out to lick up a first teasing droplet to sample our combined taste and to gauge her reaction."
     Kl bangok smile eyeslidded blush "Mmm... yes."
     m "She sighed contentedly, then spread her legs a little wider with lustful eyes."
     Kl "I can't say no to help like this."

@@ -420,7 +420,7 @@ label bangok_anoney_xemera2_emera:
     m "Folding my thumb into my hand and bringing my fingers to a point, I gently pushed my right arm into her lubed slit."
 
     if persistent.c4eggs == True:
-        m "I had seen some dragon eggs before at Raza's hideout and even though I had not directly seen her own eggs I had a feeling hers would be larger than my hand."
+        m "I had seen some dragon eggs before at Reza's hideout and even though I had not directly seen her own eggs I had a feeling hers would be larger than my hand."
     else:
         m "I had not seen dragon eggs before, but I had a feeling hers would be larger than my hand."
 
@@ -830,7 +830,7 @@ label bangok_anoney_xemera2_ws_relief:
             m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly to reinsert my hardening dick into her cloaca."
             m "Emera's cloaca was still spread wide from her earlier activities. I stuck my dick in the mess at her vaginal entrance, evidence from the many orgasms that Emera had, and pushed inwards."
         else:
-            m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly, and this time stuck my dick insie her vagina."
+            m "Emera was still laying on her back{fast} and gave a purr as I got back on to rest on her belly, and this time stuck my dick inside her vagina."
             m "Emera's vagina was still spread wide from her earlier activities. I stuck my dick in the mess at her entrance, evidence from the many orgasms that Emera had, and pushed inwards."
         show emera bangok blush b flip with dissolve
         play soundloop "fx/faucet1.ogg" fadein 2.0
@@ -874,7 +874,7 @@ label bangok_anoney_xemera2_ws_relief:
         c "It doesn't hurt?"
         Em bangok blush b flip "No. As I said it just feels odd. I would not like to be mated down there; even Earth dragons are not completely resistant in areas not expected to be mated. However I do want you to continue."
         m "I continued to press further in, the lube from her vagina helping to quicken the journey."
-        m "I came to her sphincter seperating the entrance to her bladder. I gently put pressure until the head of my dick pushed through."
+        m "I came to her sphincter separating the entrance to her bladder. I gently put pressure until the head of my dick pushed through."
         show emera normal b flip
         $ renpy.pause (0.5)
         show emera frown b flip with dissolve
@@ -1089,7 +1089,7 @@ label bangok_anoney_xemera2_double_fisting:
     Em "There is something that I have always wanted to try after reading about it in our records, but have not been able to do, because of my lack of a partner and of a flexible enough tail."
     Em "When the egg is travelling down my tunnel, are you able to stop it before it comes out and push it back?"
     m "I started to pull my arm out of her anal passage When I felt her muscles clamp down hard on my arm."
-    Em "Please can you leave it in? I want to see how it feels expeling the egg with my lower passage filled. If I like it in the future, maybe I shall leave my pleasure stick in there whilst I lay my egg."
+    Em "Please can you leave it in? I want to see how it feels expelling the egg with my lower passage filled. If I like it in the future, maybe I shall leave my pleasure stick in there whilst I lay my egg."
     c "If that is what you want."
     m "I pulled back my arm that was in her vagina until just my hand remained inside, and I could see and feel the muscles around her groin area working to push the egg down her tunnel."
     m "I could feel those same contractions mirrored in her anal passage as her muscles squeezed my arm."

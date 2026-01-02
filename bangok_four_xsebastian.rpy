@@ -76,7 +76,7 @@ label bangok_four_xsebastian_path1:
         if persistent.bangok_inflation == True:
             m "Beneath his shaft a heavy, hand-filling pair of balls lay, slightly damp as if they'd just emerged from his slit with his dragonhood."
         else:
-            m "Beneath his shaft a pair of balls comprable in size to a human's lay, slightly damp as if they'd just emerged from his slit with his dragonhood."
+            m "Beneath his shaft a pair of balls comparable in size to a human's lay, slightly damp as if they'd just emerged from his slit with his dragonhood."
     m "Sebastian thrust back slightly against my explorations."
     menu:
         "I'll just use my hands, okay?":
@@ -107,7 +107,7 @@ label bangok_four_xsebastian_path1:
             m "His shaft did not bend to make the passage into my throat."
             m "I came up coughing."
             hide black with dissolve
-            Sb "You aren't realy going to be able to work my baculum that way."
+            Sb "You aren't really going to be able to work my baculum that way."
             menu:
                 "Your what?":
                     Sb "My penis bone."
@@ -179,7 +179,7 @@ label bangok_four_xsebastian_path1:
             m "I guided his cock into my mouth. He barely gave me a moment to enjoy the taste before he pressed his hips forward, burrowing his tip in my neck and slapping his balls forward into my face."
         else:
             m "I guided his cock into my mouth. He barely gave me a moment to enjoy the taste before he pressed his hips forward, burrowing his tip in my neck."
-        m "I bucked my crotch into his face, the sensation of my throat being entered racheting up the sensations in my groin."
+        m "I bucked my crotch into his face, the sensation of my throat being entered ratcheting up the sensations in my groin."
         m "He moaned back, evidently quickly approaching his peak as well."
 
     if bangok_four_xsebastian_playerfirst == True:

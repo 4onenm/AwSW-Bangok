@@ -238,14 +238,14 @@ label bangok_four_xdamion_fuck:
             else:
                 if persistent.bangok_cervpen == True:
                     if persistent.bangok_cloacas == True:
-                        Dm "There's a good slut. I'm gonnna paint your cloaca white. Maybe even your womb, too."
+                        Dm "There's a good slut. I'm gonna paint your cloaca white. Maybe even your womb, too."
                     else:
-                        Dm "There's a good slut. I'm gonnna paint your vagina white. Maybe even your womb, too."
+                        Dm "There's a good slut. I'm gonna paint your vagina white. Maybe even your womb, too."
                 else:
                     if persistent.bangok_cloacas == True:
-                        Dm "There's a good slut. I'm gonnna paint your cloaca white."
+                        Dm "There's a good slut. I'm gonna paint your cloaca white."
                     else:
-                        Dm "There's a good slut. I'm gonnna paint your vagina white."
+                        Dm "There's a good slut. I'm gonna paint your vagina white."
 
             menu:
                 "W-Wait, protection!":
@@ -344,14 +344,14 @@ label bangok_four_xdamion_fuck:
             with None
 
             if persistent.bangok_inflation == True and persistent.bangok_cervpen == True:
-                m "Punching through my innner gate and stretching my outer lips taut, he twitched and pulsed, then released his jets of seed directly into my sacred temple."
+                m "Punching through my inner gate and stretching my outer lips taut, he twitched and pulsed, then released his jets of seed directly into my sacred temple."
                 m "Rope after rope of cum layered over my innermost walls, until I could feel the thick load sliding and pooling, then pressing my filled womb outward."
                 m "I moaned, belly expanding slightly as his spurts finally came to an end."
             elif persistent.bangok_inflation == True:
                 m "Sealing his slit against my taut outer lips, he twitched and pulsed, then released jets of seed that packed the end of my canal, layering over my inner walls until no room remained but my womb."
                 m "Then the jets of seed forced themselves deeper, spurting over my innermost walls and seeping through my filled tubes until my sacred temple was thoroughly marked by him."
             elif persistent.bangok_cervpen == True:
-                m "Punching through my innner gate and stretching my outer lips taut, he twitched and pulsed, then released his jets of seed directly into my sacred temple. The cum layered over my innermost walls, marking my innermost walls."
+                m "Punching through my inner gate and stretching my outer lips taut, he twitched and pulsed, then released his jets of seed directly into my sacred temple. The cum layered over my innermost walls, marking my innermost walls."
             else:
                 m "Sealing his slit against my taut outer lips, he twitched and pulsed, then released his jets of seed onto my spasming walls."
 
@@ -476,7 +476,7 @@ label bangok_four_xdamion_ws_fuck:
             queue soundloop "fx/faucet2.ogg"
             m "Hot liquid jetted into my throat, almost faster than I would have been able to swallow."
             m "My mouth was coated in the dirty tang, his thick cock left coated with golden waste after leaking inside himself."
-            m "His slit rubbed piss he'd dribbled into the rest of my face, leaving my nose thick with the unmistakeable scent, while a drop of golden evidence squeezed out to run down my chin."
+            m "His slit rubbed piss he'd dribbled into the rest of my face, leaving my nose thick with the unmistakable scent, while a drop of golden evidence squeezed out to run down my chin."
             Dm face "{i}Fuck{/i} how I wish I could do {i}this{/i} to that bitch."
             if persistent.bangok_inflation == True:
                 m "I felt ill, like I had swallowed a pitcher full. He'd filled my stomach nearly to capacity with his waste, but still more was coming."
@@ -594,7 +594,7 @@ label bangok_four_xdamion_ws_fuck:
                     m "He changed his grip as his twitching slowed, putting a hand under my chin."
                     Dm normal "Swallow."
                     if persistent.bangok_inflation == True:
-                        m "I gagged and choked, my piss-filled stomach struggling to accomodate the added gulps of seed."
+                        m "I gagged and choked, my piss-filled stomach struggling to accommodate the added gulps of seed."
                         m "It sank heavy and hot into my belly of piss, spurt after spurt until I wasn't sure I'd be able to keep Damion's fluids down when he pulled out."
                     else:
                         $ renpy.pause (0.8)
@@ -657,7 +657,7 @@ label bangok_four_xdamion_ws_fuck:
                 m "Then, his lips still to mine, I felt a hot jet spray into my sacred temple, defiling the walls with his liquid waste."
                 m "I melted into his grasp, the warmth in my deepest center spreading and suffusing my body with the knowledge I was his to use as he pleased, to piss in how he wanted."
                 if persistent.bangok_inflation == True:
-                    m "My womb wasn't even enough to contain his pissload. His urine saturated my tubes and pressed back against my dilated cervix, seeping into my passage and bloating my sacred temple with sacrelidge as he used me as his toilet."
+                    m "My womb wasn't even enough to contain his pissload. His urine saturated my tubes and pressed back against my dilated cervix, seeping into my passage and bloating my sacred temple with sacrilege as he used me as his toilet."
             else:
                 m "Then, his lips still to mine, I felt a hot jet against my inner walls, defiling my passage with his liquid waste."
                 m "I melted into his grasp, the warmth in my love canal spreading and suffusing my body with the knowledge I was his to use as he pleased, to piss in how he wanted."
@@ -717,13 +717,13 @@ label bangok_four_xdamion_ws_fuck:
 
 
             if persistent.bangok_inflation == True and persistent.bangok_cervpen == True:
-                m "Punching through my innner gate and stretchinng my outer lips taut, he twitched and pulsed, then released his jets of seed into the urine already filling my womb."
+                m "Punching through my inner gate and stretching my outer lips taut, he twitched and pulsed, then released his jets of seed into the urine already filling my womb."
                 m "I mewled, the sludge of cum and piss pressuring my belly outward until I looked slightly pregnant, while the spasming of my internal muscles ensured every inch of my inner walls were fully defiled."
             elif persistent.bangok_inflation == True:
                 m "Sealing his slit against my taut outer lips, he twitched and pulsed, then released jets of seed that packed the end of my canal, layering over my piss-stained walls until no room remained but my womb."
                 m "Then the jets of seed forced themselves deeper, becoming a thinner sludge as they mixed with the piss bloating my sacred temple to expand me further, until I looked slightly pregnant."
             elif persistent.bangok_cervpen == True:
-                m "Punching through my innner gate and stretchinng my outer lips taut, he twitched and pulsed, then released his jets of seed into my urine-stained womb, spraying his wasted cum over the sacrelidge coating my innermost walls to further stain my deepest center."
+                m "Punching through my inner gate and stretching my outer lips taut, he twitched and pulsed, then released his jets of seed into my urine-stained womb, spraying his wasted cum over the sacrilege coating my innermost walls to further stain my deepest center."
             else:
                 m "Sealing his slit against my taut outer lips, he twitched and pulsed, then released his jets of seed into my urine-stained passage, spraying his wasted cum over my inner walls to further stain my used canal."
 
@@ -852,7 +852,7 @@ label bangok_four_xdamion_cleanup:
         m "Hesitantly I slipped from the lab bench, my legs weak from my recent rough fucking, then sank to my knees before him."
         if persistent.bangok_watersports == True and bangok_four_xdamion_store.position in ["vaginalws","wombws"]:
             if persistent.bangok_inflation == True:
-                m "My heavy, few-month pregancy of cum and piss nearly put me off balance as I, and it, settled."
+                m "My heavy, few-month pregnancy of cum and piss nearly put me off balance as I, and it, settled."
             Dm arrogant bangok ws "Good slut."
             m "His cock hung before me, slathered in our coital juices and traces of his piss."
         else:
