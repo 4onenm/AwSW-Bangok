@@ -1701,7 +1701,7 @@ label bangok_four_lorem4_maleplayer_toy:
         if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
             if persistent.bangok_inflation == True:
                 m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft to add to the piss inflating their womb."
-                m "Spurt after spurt travelled up, until the liquid in their womb felt like a thick slurry and I felt their belly pressing back slightly against my hands on their hips."
+                m "Spurt after spurt traveled up, until the liquid in their womb felt like a thick slurry and I felt their belly pressing back slightly against my hands on their hips."
             else:
                 m "I pulled Lorem to my base and came, pushing pulses of seed up my twitching shaft to spurt over the piss defiling their womb."
         else:
@@ -1800,16 +1800,16 @@ label bangok_four_lorem4_maleplayer_toy:
         if persistent.bangok_watersports == True and bangok_four_lorem4_store.player_pissed == "vag":
             m "I came just after them, twitching and spurting into their urine-flooded depths as they sprayed sticky white ropes across my chest."
             if persistent.bangok_inflation == True:
-                m "I could feel the pulses of my seed travelling up my length under my fingers before spurting out against their piss-stained innermost gate, packing solid their canal and tubes until it felt like they were expanding with my slurry of fluids."
+                m "I could feel the pulses of my seed traveling up my length under my fingers before spurting out against their piss-stained innermost gate, packing solid their canal and tubes until it felt like they were expanding with my slurry of fluids."
             else:
-                m "I could feel the pulses of my seed travelling up my length under my fingers before spurting out against their piss-stained innermost gate, coating their whole passage in my slurry of fluids."
+                m "I could feel the pulses of my seed traveling up my length under my fingers before spurting out against their piss-stained innermost gate, coating their whole passage in my slurry of fluids."
         else:
             if bangok_four_lorem4_store.protection == True:
                 m "I came just after them, twitching and spurting into my condom inside them as they sprayed sticky white ropes across my chest."
                 if persistent.bangok_inflation == True:
                     m "Squished against their canal's innermost gate, my cum flowed back around my head, until it felt like my condom was expanding to fill all room in the small space."
             else:
-                m "I could feel the pulses of my seed travelling up my length under my fingers before spurting out against their innermost gate, coating their whole passage in my appreciation of their feminine parts."
+                m "I could feel the pulses of my seed traveling up my length under my fingers before spurting out against their innermost gate, coating their whole passage in my appreciation of their feminine parts."
                 if persistent.bangok_inflation == True:
                     m "With so little space, and so much taken up by my malehood, my cum had nowhere to go but deeper inside them, packing their womb and tubes with my seed."
         $ renpy.pause (0.3)

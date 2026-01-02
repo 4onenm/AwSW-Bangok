@@ -179,13 +179,13 @@ label bangok_four_xipsum2_ipsum_sharing3:
         m "I thrust, uselessly, from the simultaneous fucking of my ass and shaft. I couldn't force myself any further into what was already attached to my hips."
 
     if bangok_four_xipsum2_store.protection == True:
-        m "Finally, the one in my ass stopped, pulses of his load travelling up his length to fill his condom's reservoir."
+        m "Finally, the one in my ass stopped, pulses of his load traveling up his length to fill his condom's reservoir."
         m "I sighed as it slid out, taking its load with it, only to then feel a new head prodding at my weakened sphincter."
         $ bangok_four_malepartners += 1
         c "Ah-h!"
         m "This one stretched me wider. As it sank in, I realized it was going deeper, too."
     else:
-        m "Finally, the one in my ass stopped, packets of his load travelling up his length to spray out into my rear."
+        m "Finally, the one in my ass stopped, packets of his load traveling up his length to spray out into my rear."
         if persistent.bangok_inflation == True:
             m "Pulse after pulse spurt into me, leaving my ass feeling heavy and full."
         m "I sighed as it slid out, feeling its load settle inside me, only to then feel a new head prodding at my weakened sphincter."

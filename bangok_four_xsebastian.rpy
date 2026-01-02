@@ -468,7 +468,7 @@ label bangok_four_xsebastian_path1_2:
         play sound "fx/extinguish.ogg"
         show black with fadequick
         m "I thundered into him, pressing his legs wide before blasting inside."
-        m "In my hand, his cock twitched too, a meagre dribble compared to his last go, but an orgasm nonetheless."
+        m "In my hand, his cock twitched too, a meager dribble compared to his last go, but an orgasm nonetheless."
         show sebastian shy b sleep dk with dissolve
         hide black
         with dissolveslow

@@ -2503,7 +2503,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                     m "I moaned as I felt my belly grow still further, the fresh urine pouring in stretching me even larger than before."
             stop soundloop fadeout 0.5
             m "Maverick finished in me faster than Bryce had. Even still, I writhed in ecstacy, the pressure feeling like he'd pissed even more than Bryce had."
-            m "I had to wonder at how lucky I was, travelling to another world to get to serve as a urinal for these magnificent beasts."
+            m "I had to wonder at how lucky I was, traveling to another world to get to serve as a urinal for these magnificent beasts."
             Mv nice "Satisfied?"
             m "I nodded languidly, his hot urine suffusing my whole body with warmth."
 
@@ -2555,7 +2555,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             Br laugh "Man. I really have to not buy that brand again."
             menu:
                 "Are you kidding me?":
-                    Mv angry "You asked us to engage in risky behaviour pissing in it."
+                    Mv angry "You asked us to engage in risky behavior pissing in it."
                     Br normal "Condoms aren't really designed for it. It's a little on you, [player_name]."
                     $ renpy.pause(0.8)
                     c "Fine."
@@ -3319,7 +3319,7 @@ label bangok_four_bryce3_mctop:
             play sound "fx/uncork.ogg"
             m "Sebastian's blob of cum followed, condom reservoir inflated to larger than my fist as it popped free of Bryce's hindquarters."
         else:
-            m "His meagre cumload wrapped in its condom reservoir plopped free of Bryce, making Sebastian's shaft bob and wiggle."
+            m "His meager cumload wrapped in its condom reservoir plopped free of Bryce, making Sebastian's shaft bob and wiggle."
         show sebastian drop flip:
             xpos 0.49
         with ease
@@ -3485,7 +3485,7 @@ label bangok_four_bryce3_mctop_mavgoes:
         with ease
         m "Then Maverick pushed his tip into Bryce's ass, still pissing."
         Br pant flip "Haaahhh!"
-        m "I watched, mesmerised as Maverick held his position. I could still hear the stream of liquid pooling inside Bryce."
+        m "I watched, mesmerized as Maverick held his position. I could still hear the stream of liquid pooling inside Bryce."
         stop soundloop fadeout 0.8
         $ renpy.pause(0.8)
         m "Finally, Maverick ran dry. He switched to feeding Bryce's ass cockflesh instead."
