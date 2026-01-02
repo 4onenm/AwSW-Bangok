@@ -40,6 +40,26 @@ init python in bangok_four_common:
             return _("But the foolish spirit!")
         return _("Okay, fine. Next click.")
 
+    # Per https://hbslick.com/7116/opinion/colorism-in-modern-media/
+    # The Monk skin tone scale.
+    # (Pure white added to provide a "grayscale"-like for Homestuck fans.)
+    # ("None" means the player should not appear in scenes. If they do, load SKIN_COLOR_SENTINEL to punish the player for mucking with fate.)
+    SKIN_COLOR_SENTINEL = "#ff00dc"
+    SKIN_COLORS = [
+        None,
+        "#ffffff",
+        "#f6ede4",
+        "#f3e7db",
+        "#f7ead0",
+        "#eadaba",
+        "#d7bd96",
+        "#a07e56",
+        "#825c43",
+        "#604134",
+        "#3a312a",
+        "#292420",
+    ]
+
 
 
 init:
@@ -60,12 +80,20 @@ init:
         default bangok_four_bangnokay_quest=0
         tag smallscreen2
         modal True
-        window id "bangok_modsettings" at popup2:
-            style "smallwindow_big2"
+        window id "bangok_modsettings":
+            add "image/ui/ingame_menu_bg3.png" xalign 0.5 yalign 0.1 at alpha_dissolve
+
+            imagebutton: # Close button
+                align (0.9,0.05)
+                idle "image/ui/close_idle.png"
+                hover "image/ui/close_hover.png"
+                action [Hide("bangok_modsettings"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")]
+                style "bangok_four_smallwindowclose"
+            
+            # Title
             if bangok_four_common.bangnokay.check():
                 textbutton bangok_four_common.bangnokay_quest_text(bangok_four_bangnokay_quest):
-                    yalign 0.06
-                    xalign 0.5
+                    align (0.5, 0.05)
                     text_size 44
                     action [
                         Function(bangok_four_common.bangnokay.set_bangnokay, (bangok_four_bangnokay_quest<6)),
@@ -74,23 +102,23 @@ init:
                     style "bangok_four_switch"
             else:
                 textbutton "BangOk Mod Settings":
-                    yalign 0.06
-                    xalign 0.5
+                    align (0.5, 0.05)
                     text_size 44
                     action Function(bangok_four_common.bangnokay.set_bangnokay, True)
                     style "bangok_four_switch"
 
+            vbox:
+                xalign 0.5
+                yanchor 0.0
+                ypos 0.2
 
-            if not persistent.nsfwtoggle:
-                vbox:
-                    align (0.5, 0.3)
+                if not persistent.nsfwtoggle:
                     text _("This mod's content is primarily") xalign 0.5
                     text _("---- Not-Safe-For-Work ----") xalign 0.5
                     text _("Re-enable NSFW scenes or uninstall the mod.") xalign 0.5
                     text _("This mod does not guarantee all NSFW content is inaccessible\nwhile NSFW scenes are disabled, though an attempt was made.") xalign 0.5
-            else:
-                vbox:
-                    align (0.5, 0.3)
+                else:
+                    xalign 0.5
                     if bangok_four_common.bangnokay.bangnokay_raw:
                         text _("Cute Buttons:") xalign 0.5
                     else:
@@ -100,7 +128,7 @@ init:
                             size 32
 
                     grid ((bangok_four_common.bangok_four.fetish_count(bangok_four_common.bangnokay.bangnokay_raw)+1)//2) 2:
-                        align (0.5,0.5)
+                        xalign 0.5
                         transpose True
                         spacing 10
                         for fetish in bangok_four_common.bangok_four.fetish_iter(bangok_four_common.bangnokay.bangnokay_raw):
@@ -113,40 +141,46 @@ init:
                         if bangok_four_common.bangok_four.fetish_count(bangok_four_common.bangnokay.bangnokay_raw) % 2 == 1:
                             null
 
-                hbox:
-                    xalign 0.5
-                    yalign 0.8
-                    spacing 20
-                    imagebutton:
-                        idle im.Scale("ui/nsfw_chbox-unchecked.png", 55, 55)
-                        hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 55, 55), 64, 64, 64)
-                        selected_idle im.Scale("ui/nsfw_chbox-checked.png", 55, 55)
-                        selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 55, 55), 64, 64, 64)
-                        action MTSTogglePersistentBool('bangok_dev')
-                        style "bangok_four_switch"
-                        focus_mask None
-                    text _("Dangerous: Enable In-Development Scenes")
+                    # text _("Player appearance:") xalign 0.5
+                    # if persistent.bangok_four_skin_color:
+                    #     fixed:
+                    #         xysize (12*55, 55)
+                    #         xalign 0.5
+                    #         add Solid(getattr(persistent, 'bangok_four_skin_color', bangok_four_common.SKIN_COLOR_SENTINEL))
+                    # else:
+                    #     text _("Disabled. Images with MC not shown.") xalign 0.5
+                    # hbox:
+                    #     xalign 0.5
+                    #     for color in bangok_four_common.SKIN_COLORS:
+                    #         imagebutton:
+                    #             xysize (55,55)
+                    #             idle Solid(color or "#ff0000")
+                    #             # hover im.Recolor(Solid(color), 128, 128, 128)
+                    #             action MTSSetPersistent('bangok_four_skin_color', color)
+                    #             style "bangok_four_switch"
+                    #             focus_mask None
 
-                showif persistent.bangok_dev == True and not (bangok_four_common.bangnokay.bangnokay_raw):
-                    text _("In-Development scenes may not have conclusions, and {i}will{/i} have paths leading to crashes."):
-                        yalign 0.875
-                        xalign 0.5
-                        size 40
+                    hbox:
+                        spacing 20
+                        imagebutton:
+                            idle im.Scale("ui/nsfw_chbox-unchecked.png", 55, 55)
+                            hover im.Recolor(im.Scale("ui/nsfw_chbox-unchecked.png", 55, 55), 64, 64, 64)
+                            selected_idle im.Scale("ui/nsfw_chbox-checked.png", 55, 55)
+                            selected_hover im.Recolor(im.Scale("ui/nsfw_chbox-checked.png", 55, 55), 64, 64, 64)
+                            action MTSTogglePersistentBool('bangok_dev')
+                            style "bangok_four_switch"
+                            focus_mask None
+                        text _("Dangerous: Enable In-Development Scenes")
+                        showif main_menu and not (bangok_four_common.bangnokay.bangnokay_raw):
+                            textbutton _("[[Replay first-boot experience.]"):
+                                action [Hide("bangok_modsettings"), Start("bangok_four_mod_firstboot")]
+                                style "bangok_four_close"
 
-            showif persistent.bangok_dev == True and main_menu and not (bangok_four_common.bangnokay.bangnokay_raw):
-                textbutton _("[[Replay first-boot experience.]"):
-                    xalign 0.5
-                    yalign 1.1
-                    action [Hide("bangok_modsettings"), Start("bangok_four_mod_firstboot")]
-                    style "bangok_four_close"
+                    showif persistent.bangok_dev == True and not (bangok_four_common.bangnokay.bangnokay_raw):
+                        text _("In-Development scenes may not have conclusions and {i}will{/i} have paths leading to crashes."):
+                            size 32
 
-            imagebutton:
-                idle "image/ui/close_idle.png"
-                hover "image/ui/close_hover.png"
-                action [Hide("bangok_modsettings"), Show("_ml_mod_settings"), Play("audio", "se/sounds/close.ogg")]
-                hovered Play("audio", "se/sounds/select.ogg")
-                style "bangok_four_smallwindowclose"
-                at nav_button
+
 
     # Locations
     image bangok_grey = renpy.display.imagelike.Solid("#808080")
