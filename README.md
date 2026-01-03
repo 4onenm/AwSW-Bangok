@@ -87,6 +87,9 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `bg/in/bangok/facin3_wall*`: 4onenm, editing base-game assets
 + `bg/in/*`: 4onenm, editing base-game assets
 + `cg/bangok/adineshower/*`: Jackwolf
++ `cg/bangok/adineshower/adineshowerbj*`:
+    + Artist: [Oldagar](https://e621.net/posts?tags=oldagar) (Original: https://e621.net/posts/5963291)
+    + Skin color alteration support: 4onenm
 + `cg/lorem-x-ipsum_purpleroom.png`:
     + Linework: [Yaroul](https://www.furaffinity.net/user/Yaroul/) (Original: https://www.furaffinity.net/view/23028281/)
     + Comissioner: [haloudoval](https://www.furaffinity.net/user/haloudoval)
