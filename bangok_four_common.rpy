@@ -82,8 +82,7 @@ init:
         tag smallscreen2
         modal True
         window id "bangok_modsettings":
-            add "image/ui/ingame_menu_bg3.png" xalign 0.5 yalign 0.1 at alpha_dissolve
-
+            background Solid("#ffffff00")
             imagebutton: # Close button
                 align (0.9,0.05)
                 idle "image/ui/close_idle.png"
@@ -181,6 +180,7 @@ init:
                         text _("In-Development scenes may not have conclusions and {i}will{/i} have paths leading to crashes."):
                             size 32
 
+    image bangok_four_ingame_menu_bg3 = "image/ui/ingame_menu_bg3.png"
 
 
     # Locations
@@ -459,10 +459,14 @@ label bangok_four_mod_firstboot:
     s "Would you like to configure these coordinates now, or accept the most-vanilla, most human-like defaults?"
     menu:
         "Yes, I'd like to configure my BangOk fetishes now.":
+            s "Recalculating arrival coordinates.{cps=2}..{/cps} (Close all menus and click to continue.)"
+            show bangok_four_ingame_menu_bg3
             show screen bangok_modsettings
+            with dissolve
+            pause
         "No, I'll do it later from the settings menu.":
             pass
-    s "Recalculating arrival coordinates.{cps=2}..{/cps} (Close all menus to continue.)"
+    hide bangok_four_ingame_menu_bg3 with dissolve
     play sound "fx/system.wav"
     s "Calculations complete."
     s "The BangOk module has been added to your {i}settings{/i} menu under {i}Mod Settings.{/i} You may alter your coordinates at {i}any time{/i}, though doing so in the midst of certain... activities may cause timeline instability."
