@@ -6,6 +6,11 @@
 init python in bangok_four_xdamion_store:
     annaxdamion2_seen = False
 
+label bangok_four_annaxdamion2_sceneselect:
+    scene black with dissolve
+    $ renpy.pause (0.5)
+    play sound "fx/steps/clean2.wav"
+    $ renpy.pause (0.5)
 
 label bangok_four_annaxdamion2:
     c "(The facility isn't {i}that{/i} big. She must be around here somewhere, right?)"

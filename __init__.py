@@ -501,6 +501,27 @@ def add_voyeurism_scene_select(ml, fss):
         .search_say("After looking for anyone who might see her, Anna rushed down the hall, toward the restroom.")
     )
 
+    # annaxdamion2
+    fss.register_scene_select(
+        bangok,
+        "Voyeur: Anna x Damion 2",
+        "bangok_four_annaxdamion2_sceneselect",
+        locked=lambda: (not renpy.exports.seen_label('bangok_four_annaxdamion2')) or (not renpy.store.persistent.bangok_voyeurism),
+    )
+    fss.end_replay_at_ml_node(ml
+        .find_label('bangok_four_annaxdamion2_abort_fade')
+    )
+    fss.end_replay_at_ml_node(ml
+        .find_label('bangok_four_annaxdamion2_nosign_return')
+    )
+    fss.end_replay_at_ml_node(ml
+        .find_label('bangok_four_annaxdamion2')
+        .search_say( "I stared, dumbfounded that Anna kept me waiting so she could suck this dragon's dick instead of honoring our agreement.")
+        .search_menu("Go home.")
+        .branch()
+        .search_python()
+    )
+
     # brycexsebastian
     fss.register_scene_select(
         bangok,
