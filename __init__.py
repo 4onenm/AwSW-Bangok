@@ -482,11 +482,22 @@ def link_scenes(ml):
     xsebastian(ml)
     modsettings_firstboot(ml)
 
+bangok="BangOk"
+
+def add_voyeurism_scene_select(ml, fss):
+    fss.register_scene_select(
+        bangok,
+        "Voyeur: Bryce x Sebastian Office Bonding",
+        "bangok_four_brycexsebastian_sceneselect",
+        locked=lambda: (not renpy.exports.seen_label('bangok_four_brycexsebastian')) or (not renpy.store.persistent.bangok_voyeurism),
+    )
+    fss.end_replay_at_ml_node(ml
+        .find_label('bangok_four_brycexsebastian_abort_merge')
+        .search_say("I must have dozed off in a chair, as what felt like a few minutes later, Sebastian was nudging me awake and guiding me to Bryce's office.")
+    )
 
 def add_scene_select(ml):
     import four_scene_select as fss
-
-    bangok="BangOk"
 
     fss.register_scene_select_cateogry(bangok, nsfw=True)
 
@@ -565,6 +576,8 @@ def add_scene_select(ml):
         locked=lambda: not renpy.store.persistent.sebastianplayed,
         replay_scope=fss.extend_scope(mcwon=False))
     fss.end_replay_at_ml_node(ml.find_label('bangok_four_xsebastian_todaywasgreat_return'))
+
+    add_voyeurism_scene_select(ml, fss)
 
 
 def load_translations(mod_name):

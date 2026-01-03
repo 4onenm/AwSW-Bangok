@@ -4,6 +4,10 @@
 #  -sports (nor any mention thereof) is to be
 #  added to this scene.
 
+label bangok_four_brycexsebastian_sceneselect:
+    scene black with dissolve
+    $ renpy.pause (0.5)
+
 label bangok_four_brycexsebastian:
     m "I returned to the police station, mulling over what had happened today in my head."
     play soundloop "fx/breathing.ogg" fadein 1.0
