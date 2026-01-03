@@ -104,6 +104,8 @@ label bangok_four_adine4_shower_purring:
     Ad think "I hope you won't be disappointed. I've read tips on how to do this from a magazine, but this would be my first time putting them in practice."
     m "I shook my head and rubbed her cheek reassuringly."
     c "Not a problem, I have full confidence you'll do wonderfully Adine."
+    if persistent.bangok_four_skin_color:
+        show bangok_four_adine4showerxplayer at Pan((1920, 0), (1100,550), 15.0) with dissolveslow
     m "She playfully nudged me to the ground, before quickly putting her muzzle to use, taking my erection in her mouth and letting her tongue wander along its length."
     c "That eager huh?"
     m "She glared at me in mock indignation, but kept quiet as her oversized maw worked up and down, eliciting gentle huffs and moans from my lips."
@@ -118,12 +120,14 @@ label bangok_four_adine4_shower_purring:
     menu:
         "Grab her head and cum in her mouth.":
             $ renpy.pause (0.5)
+            hide bangok_four_adine4showerxplayer with dissolve
             play sound "fx/extinguish.ogg"
             m "I wrapped both arms around the dragon's head and pulled it down, drawing a shocked gasp from my partner as I flooded her mouth with seed."
             m "There was no resistance however, and she swallowed it as wave after wave of fluids coated her tongue."
             m "After I had been licked dry, Adine's efforts for herself came to fruition, as she squirted into the wall from her own climax, her head reeling back in a loud moan."
         "Lean back and enjoy it.":
             $ renpy.pause (0.5)
+            hide bangok_four_adine4showerxplayer with dissolve
             play sound "fx/extinguish.ogg"
             m "I let myself fall backwards, thrusting my hips up as I came. Just before the first drop shot out however, Adine pulled her maw back to let the off-white spunk coat her face."
             m "The water from the showerhead rinsed it off as quickly as it came out, cleaning both of us of the seed as it erupted."

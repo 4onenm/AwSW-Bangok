@@ -21,6 +21,7 @@ init python in bangok_four_common:
     Condition = md.layeredimage.Condition
     PersistentConditionalLayer = md.PersistentConditionalLayer
     PersistentConditionalComposite = md.PersistentConditionalComposite
+    PersistentRecolorDisplayable = md.PersistentRecolorDisplayable
 
     import bangok_four.bangnokay as bangnokay
 
@@ -42,12 +43,11 @@ init python in bangok_four_common:
 
     # Per https://hbslick.com/7116/opinion/colorism-in-modern-media/
     # The Monk skin tone scale.
-    # (Pure white added to provide a "grayscale"-like for Homestuck fans.)
+    # Pure black added for those who just want to focus on the in-game characters.
     # ("None" means the player should not appear in scenes. If they do, load SKIN_COLOR_SENTINEL to punish the player for mucking with fate.)
-    SKIN_COLOR_SENTINEL = "#ff00dc"
+    SKIN_COLOR_SENTINEL = "#ff0000"
     SKIN_COLORS = [
         None,
-        "#ffffff",
         "#f6ede4",
         "#f3e7db",
         "#f7ead0",
@@ -58,6 +58,7 @@ init python in bangok_four_common:
         "#604134",
         "#3a312a",
         "#292420",
+        "#000000",
     ]
 
 
@@ -141,24 +142,24 @@ init:
                         if bangok_four_common.bangok_four.fetish_count(bangok_four_common.bangnokay.bangnokay_raw) % 2 == 1:
                             null
 
-                    # text _("Player appearance:") xalign 0.5
-                    # if persistent.bangok_four_skin_color:
-                    #     fixed:
-                    #         xysize (12*55, 55)
-                    #         xalign 0.5
-                    #         add Solid(getattr(persistent, 'bangok_four_skin_color', bangok_four_common.SKIN_COLOR_SENTINEL))
-                    # else:
-                    #     text _("Disabled. Images with MC not shown.") xalign 0.5
-                    # hbox:
-                    #     xalign 0.5
-                    #     for color in bangok_four_common.SKIN_COLORS:
-                    #         imagebutton:
-                    #             xysize (55,55)
-                    #             idle Solid(color or "#ff0000")
-                    #             # hover im.Recolor(Solid(color), 128, 128, 128)
-                    #             action MTSSetPersistent('bangok_four_skin_color', color)
-                    #             style "bangok_four_switch"
-                    #             focus_mask None
+                    text _("Player appearance:") xalign 0.5
+                    if persistent.bangok_four_skin_color:
+                        fixed:
+                            xysize (12*55, 55)
+                            xalign 0.5
+                            add Solid(getattr(persistent, 'bangok_four_skin_color', bangok_four_common.SKIN_COLOR_SENTINEL))
+                    else:
+                        text _("Disabled. Images with MC not shown.") xalign 0.5
+                    hbox:
+                        xalign 0.5
+                        for color in bangok_four_common.SKIN_COLORS:
+                            imagebutton:
+                                xysize (55,55)
+                                idle Solid(color or bangok_four_common.SKIN_COLOR_SENTINEL)
+                                # hover im.Recolor(Solid(color), 128, 128, 128)
+                                action MTSSetPersistent('bangok_four_skin_color', color)
+                                style "bangok_four_switch"
+                                focus_mask None
 
                     hbox:
                         spacing 20
@@ -228,6 +229,17 @@ init:
     # CGs
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
+
+    image bangok_four_adine4showerxplayer = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/adineshower/adineshowerbj_reexport.jpg"),
+        bangok_four_common.Always(
+            bangok_four_common.PersistentRecolorDisplayable(
+                "cg/bangok/adineshower/adineshowerbj_mc_cutout.png",
+                "bangok_four_skin_color",
+                bangok_four_common.SKIN_COLOR_SENTINEL,
+            ),
+        ),
+    ])
 
     image bangok_four_annaxdamion = bangok_four_common.LayeredImage([
         bangok_four_common.Always("cg/bangok/annaxdamion_lab/base.png"),
