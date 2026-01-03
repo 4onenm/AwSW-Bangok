@@ -103,7 +103,7 @@ label bangok_four_xipsum2_ipsum_sharing3:
         m "I set the phone down, trying to keep my balance as I was startled by the sensation."
         m "Then spurts of lube fell across my front and rear entrances, followed by a rough, scaly hand rubbing it in, slipping inside my folds to spread it."
     else:
-        m "I felt the cold air of someplace elese on my cock and asshole, abruptly leaving me feeling completely nude, despite the tight birefs around my hips."
+        m "I felt the cold air of someplace else on my cock and asshole, abruptly leaving me feeling completely nude, despite the tight briefs around my hips."
         m "I set the phone down, trying to keep my balance as I was startled by the sensation."
         if bangok_four_xipsum2_store.protection == True:
             m "Then I felt a condom somewhat roughly unrolled down my cock, followed by spurts of lube across my ass and cock and a rough scaly hand pumping me and rubbing it in."
@@ -179,13 +179,13 @@ label bangok_four_xipsum2_ipsum_sharing3:
         m "I thrust, uselessly, from the simultaneous fucking of my ass and shaft. I couldn't force myself any further into what was already attached to my hips."
 
     if bangok_four_xipsum2_store.protection == True:
-        m "Finally, the one in my ass stopped, pulses of his load travelling up his length to fill his condom's reservoir."
+        m "Finally, the one in my ass stopped, pulses of his load traveling up his length to fill his condom's reservoir."
         m "I sighed as it slid out, taking its load with it, only to then feel a new head prodding at my weakened sphincter."
         $ bangok_four_malepartners += 1
         c "Ah-h!"
         m "This one stretched me wider. As it sank in, I realized it was going deeper, too."
     else:
-        m "Finally, the one in my ass stopped, packets of his load travelling up his length to spray out into my rear."
+        m "Finally, the one in my ass stopped, packets of his load traveling up his length to spray out into my rear."
         if persistent.bangok_inflation == True:
             m "Pulse after pulse spurt into me, leaving my ass feeling heavy and full."
         m "I sighed as it slid out, feeling its load settle inside me, only to then feel a new head prodding at my weakened sphincter."
@@ -239,7 +239,7 @@ label bangok_four_xipsum2_ipsum_sharing3:
         m "The tip spread me open, stretching out the folds in my entrance and leaving me taut and full."
         m "Even the fucking of my asshole came to a faltering stop, as if the person engaged in that activity was looking over to watch what this cock would do to me."
         m "I could see the slightest bulge running up my belly, as I was forced open by this large shaft, inch by maddening inch."
-        m "Squirming in ecstacy, I pressed the briefs into my crotch, wondering how far this cock could go on."
+        m "Squirming in ecstasy, I pressed the briefs into my crotch, wondering how far this cock could go on."
         if persistent.bangok_cervpen == True and bangok_four_xipsum2_sharing3_store.sharing3_cervpen == True:
             if bangok_four_xipsum2_store.protection == False:
                 m "Like a plunger in a syringe, the cock scraped all the cum deposited before it off my walls, pressing it through my cervix in a lewd spray."
@@ -318,15 +318,15 @@ label bangok_four_xipsum2_ipsum_sharing3:
         else:
             m "His condom reservoirs rested inside me, leaving my holes completed, rather than empty."
 
-        m "I wanted to lie there and bask, but I could hear noise coming from the phone's reciever."
+        m "I wanted to lie there and bask, but I could hear noise coming from the phone's receiver."
         if bangok_four_xipsum2_store.protection == False and persistent.bangok_inflation == True:
             m "Struggling to sitting upright, I felt the heavy loads of fluid inside me shift, then begin to drain despite the cocks still in me, puddling in the briefs beneath me, and passing through to the other side."
-            m "I managed to reach onto the top of the table and pull down the phone reciever."
+            m "I managed to reach onto the top of the table and pull down the phone receiver."
             Ip happy bangok blush "O-Oh! H-Hah, I thought... well, you must be pretty full over there."
             Ip normal bangok blush "Want me to see if a couple of the others will volunteer to be larger plugs?"
             c "I... I'm good, thanks."
         else:
-            m "Struggling to sitting upright, I managed to reach onto the top of the table and pull down the phone reciever."
+            m "Struggling to sitting upright, I managed to reach onto the top of the table and pull down the phone receiver."
             Ip normal bangok blush "[player_name], whenever you'd like to respond, that'd be good."
             c "H-Here."
             Ip happy "Excellent!"
@@ -415,24 +415,24 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary:
             play soundloop "fx/faucet2.ogg" fadein 1.0
             m "Then I felt it twitch back, and a hot stream of liquid began to jet into my colon"
             c "(Agh. I-Ipsum...)"
-            m "I flushed with embarassment as he used my ass as a urinal, pissing in me from afar as I stood in my living room."
+            m "I flushed with embarrassment as he used my ass as a urinal, pissing in me from afar as I stood in my living room."
         else:
             play sound "fx/extinguish.ogg"
             m "Then I felt it twitch back, and begin to pulse sticky ropes of cum into my colon."
             c "(Agh. I-Ipsum...)"
-            m "I flushed with embarassment as he used my ass as a cumdump, dumping his load in me from afar as I stood unsatisfied in my living room."
+            m "I flushed with embarrassment as he used my ass as a cumdump, dumping his load in me from afar as I stood unsatisfied in my living room."
     else:
         m "I waited by the phone, trying not to think about the cocks inside me, as every shift in my weight caused me to clench down on them a little."
         if persistent.bangok_watersports:
             play soundloop "fx/faucet2.ogg" fadein 1.0
             m "Then I felt them twitch back, and twin hot streams of liquid began to jet into my front and rear."
             c "(Agh. I-Ipsum...)"
-            m "I flushed with embarassment as he used me as a living urinal, pissing in me from afar as I stood in my living room."
+            m "I flushed with embarrassment as he used me as a living urinal, pissing in me from afar as I stood in my living room."
         else:
             play sound "fx/extinguish.ogg"
             m "Then I felt it twitch back, and begin to pulse sticky ropes of cum into my front and rear."
             c "(Agh. I-Ipsum...)"
-            m "I flushed with embarassment as he used my holes as a cumdump, dumping his load in me from afar as I stood unsatisfied in my living room."
+            m "I flushed with embarrassment as he used my holes as a cumdump, dumping his load in me from afar as I stood unsatisfied in my living room."
     $ renpy.pause(0.8)
     play sound "fx/phonering.ogg"
     $ renpy.pause(0.8)
@@ -441,14 +441,14 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary:
 
     if persistent.bangok_watersports:
         if bangok_four_playerhasdick == True:
-            m "The phone finally rang, and I yanked it off the reciever the stream of liquid flowing into me came to an end."
+            m "The phone finally rang, and I yanked it off the receiver the stream of liquid flowing into me came to an end."
         else:
-            m "The phone finally rang, and I yanked it off the reciever as the streams of liquid flowing into me came to an end."
+            m "The phone finally rang, and I yanked it off the receiver as the streams of liquid flowing into me came to an end."
     else:
         if bangok_four_playerhasdick == True:
-            m "The phone finally rang, and I yanked it off the reciever the pulses of seed flowing into me came to an end."
+            m "The phone finally rang, and I yanked it off the receiver the pulses of seed flowing into me came to an end."
         else:
-            m "The phone finally rang, and I yanked it off the reciever as the pulses of seed flowing into me came to an end."
+            m "The phone finally rang, and I yanked it off the receiver as the pulses of seed flowing into me came to an end."
 
     c "I-Ipsum?"
 
@@ -532,7 +532,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary:
 
     if bangok_four_playerhasdick == True:
         if persistent.bangok_watersports == True:
-            m "As I stood for an embarassed moment, I could feel Ipsum's ass shifting around my cock as he went about his day in his lab."
+            m "As I stood for an embarrassed moment, I could feel Ipsum's ass shifting around my cock as he went about his day in his lab."
             m "There was more than enough in my bladder to give him more than he'd given me, to at least force him through a taste of what he was putting me through."
             menu:
                 "Retaliate.":
@@ -541,7 +541,7 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary:
                     c "(Let's see how you like it.)"
                     play soundloop "fx/faucet2.ogg" fadein 2.0
                     m "I let go, only able to manage a trickle at first, then pushing until I was pissing hard and fast in Ipsum's ass."
-                    m "I could imagine him standing there, flushed and embarassed by his coworkers as someone used {i}him{/i} as a urinal."
+                    m "I could imagine him standing there, flushed and embarrassed by his coworkers as someone used {i}him{/i} as a urinal."
                     m "Unfortunately, like the stranger who'd just pissed in my ass, I realized too late I was pissing into someone standing upright."
                     stop soundloop fadeout 2.0
                     m "My warm liquid waste formed a puddle where Ipsum's ass squeezed my length, squelching lewdly about my cock as he moved."
@@ -578,19 +578,19 @@ label bangok_four_xipsum2_ipsum_sharing3_unsanitary:
 
 label bangok_four_xipsum2_ipsum_sharing3_unsanitary_assup:
     $ renpy.pause (0.5)
-    m "After a few moments consideration, I sat on the edge of the tub, then lay back with my head toward the facuet, keeping my ass up on the smooth curve of the back-reclining portion."
+    m "After a few moments consideration, I sat on the edge of the tub, then lay back with my head toward the faucet, keeping my ass up on the smooth curve of the back-reclining portion."
 
     m "As I was arranging my legs, I was interrupted by the slow slide of Ipsum's cock plug being pulled gradually from my ass, out to the tip."
 
     if bangok_four_playerhasdick == True:
         m "Then the tip popped out, and was replaced with another stranger's cockhead."
         m "I grunted as it entered, stretching me slightly larger than a human's would, the dragon's slit juices barely enough to lubricate his entry."
-        m "Then the cock kept coming, sinking in inch by maddenning inch, until until a horizontal slit between hard plates rested against my rear."
+        m "Then the cock kept coming, sinking in inch by maddening inch, until until a horizontal slit between hard plates rested against my rear."
     else:
         m "Then the cock plugging my pussy was dragged out the same way. Spotting what he really wanted, the guy shoved Ipsum's cock roughly back into my ass, then dragged out the one in my pussy entirely."
         m "Then I felt this stranger's cockhead at my front entrance."
         m "I grunted as it entered, stretching my entrance slightly more than a human's would."
-        m "Then the cock kept coming, sinking in inch by maddenning inch, until until a horizontal slit between hard plates rested against my folds."
+        m "Then the cock kept coming, sinking in inch by maddening inch, until until a horizontal slit between hard plates rested against my folds."
     $ bangok_four_malepartners += 1
 
     if persistent.bangok_watersports == True:

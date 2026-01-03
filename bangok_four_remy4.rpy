@@ -12,8 +12,8 @@ init python in bangok_four_remy4_store:
 # == No more tongue path ==
 # Remy is on his back on the couch
 # (Optional) Handjob Remy's shaft (no climax -- he asks for more and/or to satisfy you)
-# (Optional) Lick Remys shaft (no climax -- he asks for more and/or to satisfy you)
-# (Optional) Frotting / Hotddogging (+climax jump over fuckings)
+# (Optional) Lick Remy's shaft (no climax -- he asks for more and/or to satisfy you)
+# (Optional) Frotting / Hotdogging (+climax jump over fuckings)
 #  -> male assfuck
 #  -> female vaginal receive
 #  -> both anal receive
@@ -21,10 +21,10 @@ init python in bangok_four_remy4_store:
 
 # == More Tongue path ==
 #  -> male unprotected
-#  -> male protected (TODO, just add a hint of player condom to unproteted and rewrite)
+#  -> male protected (TODO, just add a hint of player condom to unprotected and rewrite)
 #  -> female
 # Merge: kiss, compliment, taste
-# if remy_finished: Conclude. Else: Remy's Reear
+# if remy_finished: Conclude. Else: Remy's Rear
 
 # == Remy's Rear == Remy turns around for the player to explore his other end
 # (Optional) Rimjob (TODO: Need a contributor for this)
@@ -56,7 +56,7 @@ label bangok_four_remy4_more:
         show remy look b with dissolve
         m "To my confusion, Remy's face fell, sharply."
         Ry "[player_name], this is... only our third date, and we're different species. I'm certainly not ready for that yet."
-        Ry "It would also be very improper given your position as ambassador and mine as liason."
+        Ry "It would also be very improper given your position as ambassador and mine as liaison."
         c "Oh, well, I didn't mean--"
         Ry shy b "While I'm not... writing off the possibility, I think we should at least wait until the Reza situation is resolved."
         c "Okay, I understand."
@@ -217,7 +217,7 @@ label bangok_four_remy4_more:
             if bangok_four_playerhasdick == True:
                 m "When Remy returned, he was carrying an alarmingly large bottle of lube in his mouth and pushing two boxes of condoms in front of him with his forepaws."
             else:
-                m "When Remy returned, he was carrying an alarmingly large bottle of lube in his mouth and pushing a boxe of condoms in front of him with his forepaws."
+                m "When Remy returned, he was carrying an alarmingly large bottle of lube in his mouth and pushing a box of condoms in front of him with his forepaws."
             Ry "Now, where were we?"
         "Continue.":
             $ renpy.pause (0.5)
@@ -376,7 +376,7 @@ label angok_four_remy4_atop_inside_vaginal:
     else:
         m "Despite all my preparation, I felt my folds pressed flat, stretched wide by just the tip of his draconic cockhead."
     m "He didn't seem to fit, feeling more like a fist pressed against my entrance rather than a penis."
-    m "I squirmed, desparate to feel him inside me, but unable to push past the feeling of his tip sliding around in my outer folds and no deeper."
+    m "I squirmed, desperate to feel him inside me, but unable to push past the feeling of his tip sliding around in my outer folds and no deeper."
     Ry look ud "[player_name], I know you want to do this, but I'm so much larger than you are."
     Ry shy ud "Please be careful, and safe, and-- Ooooh..."
     m "I squeezed his cockhead just behind the tip, hard, pushing some more lube up toward his tip."
@@ -587,7 +587,7 @@ label angok_four_remy4_atop_inside_anal:
     m "I could feel his member twitching and throbbing inside me, his heat suffusing my insides as I tried to adjust to the feeling of him filling me up."
     m "Remy's eyes were closed, his mouth open in a silent gasp of pleasure as he tried to hold back his own reactions."
     if bangok_four_playerhasdick == True:
-        m "Then, finally, I fely my balls ghost over his scaly slit and, with a final grunt of effort, I pushed myself down into his lap."
+        m "Then, finally, I felt my balls ghost over his scaly slit and, with a final grunt of effort, I pushed myself down into his lap."
     else:
         m "Then, finally, I felt my mons ghost over his scaly belly and, with a final grunt of effort, I pushed myself down into his lap."
     if persistent.bangok_balls == True:
@@ -650,7 +650,7 @@ label angok_four_remy4_atop_inside_anal:
     m "I could feel him holding back, resisting growing urges as he gripped the couch armrest behind him with his forepaws."
     menu:
         "I've got you. Let me make you cum.":
-            m "Remy let out a wordlesss sound somewhere between a whine of desire and a sigh of relief."
+            m "Remy let out a wordless sound somewhere between a whine of desire and a sigh of relief."
             m "I forced myself to keep up the pace, the lube squelching wetly between us in my happy abandon."
             if persistent.bangok_balls == True:
                 m "Then I felt a change in Remy: a tensing of his muscles, a clenching in his balls and a new throbbing in his shaft."
@@ -685,7 +685,7 @@ label angok_four_remy4_atop_inside_anal:
                 repeat
             with None
             m "Then he began to buck his hips, his member throbbing and twitching inside me as he tried to hold back his own climax through the pleasure of taking my body."
-            m "Wet slaps filled the room of his hips agaisnt my rear. I couldn't help but moan at the sensations he was causing as my guts twisted around the thick shaft of his cock."
+            m "Wet slaps filled the room of his hips against my rear. I couldn't help but moan at the sensations he was causing as my guts twisted around the thick shaft of his cock."
             m "I gasped, shuddering through each hard shove."
             show white with dissolve
             if bangok_four_playerhasdick == True:
@@ -1052,7 +1052,7 @@ label bangok_four_remy4_male_tongue_path:
         m "He looked up at me, then lavished my shaft with all the more attention, his tongue and lips working in tandem to bring me to the edge."
         c "Oh, Remy...!"
         show black with dissolve
-        m "With a groan of relief, I released my load into his mouth, puffing up the condom's reservoir with my meagre human load."
+        m "With a groan of relief, I released my load into his mouth, puffing up the condom's reservoir with my meager human load."
         m "Remy kept licking, but blushed furiously as I held his face to my crotch and pumped the last of my cum into the condom."
         m "Then, when I had run dry, he gently gripped the condom with his lips, pulling it off my member before plucking it from his mouth and setting it aside."
         menu:
@@ -1379,7 +1379,7 @@ label bangok_four_remy4_sheath_licking:
                 zoom 1.5
             with None
             m "I pulled away, looking up at him with a grin."
-            m "Remy huffed, hidnquarters shivering with need."
+            m "Remy huffed, hindquarters shivering with need."
 
     menu:
         "[[Stroke him.]":
