@@ -8,6 +8,12 @@ init python in bangok_four_xdamion_store:
     unplayed = True
     peek_window = False
 
+label bangok_four_annaxdamion_sceneselect:
+    scene black with dissolve
+    $ renpy.pause (0.5)
+    play sound "fx/steps/clean2.wav"
+    $ renpy.pause (0.5)
+    c "(Let's see Anna at her lab to ask questions about Reza's visit...)"
 
 label bangok_four_annaxdamion:
     play soundloop "fx/bangok_poundofsalt.ogg" fadein 2.0

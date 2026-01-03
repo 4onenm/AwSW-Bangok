@@ -485,6 +485,23 @@ def link_scenes(ml):
 bangok="BangOk"
 
 def add_voyeurism_scene_select(ml, fss):
+    # annaxdamion
+    fss.register_scene_select(
+        bangok,
+        "Voyeur: Anna x Damion Lab Pressure",
+        "bangok_four_annaxdamion_sceneselect",
+        locked=lambda: (not renpy.exports.seen_label('bangok_four_annaxdamion')) or (not renpy.store.persistent.bangok_voyeurism),
+    )
+    fss.end_replay_at_ml_node(ml
+        .find_label('bangok_four_annaxdamion_abort_merge')
+        .search_say("I returned, eventually, to a properly-shut lab door.")
+    )
+    fss.end_replay_at_ml_node(ml
+        .find_label('bangok_four_annaxdamion')
+        .search_say("After looking for anyone who might see her, Anna rushed down the hall, toward the restroom.")
+    )
+
+    # brycexsebastian
     fss.register_scene_select(
         bangok,
         "Voyeur: Bryce x Sebastian Office Bonding",
