@@ -37,6 +37,14 @@ init python in bangok_four_remy4_store:
 # Merge: Splay out on the floor after completion, both on your back
 # Remy decides he doesn't want to go home that night (but leaves before you get up to get to work for the day.)
 
+label bangok_four_remy4_more_sceneselect:
+    scene black with dissolve
+    $ renpy.pause (0.5)
+    Ry "Maybe I shouldn't wear the tie anymore if this is what happens when I take it off."
+
+    # scene ...background
+    show remy normal b with dissolve
+
 label bangok_four_remy4_more:
     menu:
         "Ask if he wants to do more.":
@@ -196,6 +204,7 @@ label bangok_four_remy4_more:
         m "Remy unfolded his wings, allowing me to slip off of him, to examine what I'd be working with between his legs when we got back to him."
     elif bangok_four_remy4_store.path is None:
         m "Remy unfolded his wings, allowing me to slip off of him, to examine what I'd be working with between his legs."
+    stop soundloop fadeout 10.0
     show remy shy b with dissolve
     if persistent.bangok_balls == True:
         m "A large, pinkish shaft glinted in the light of the room, its head already dribbling a droplet of thick, clear fluid. His balls were also quite large and plump, hanging low beneath it."
@@ -587,7 +596,7 @@ label angok_four_remy4_atop_inside_anal:
     m "I could feel his member twitching and throbbing inside me, his heat suffusing my insides as I tried to adjust to the feeling of him filling me up."
     m "Remy's eyes were closed, his mouth open in a silent gasp of pleasure as he tried to hold back his own reactions."
     if bangok_four_playerhasdick == True:
-        m "Then, finally, I fely my balls ghost over his scaly slit and, with a final grunt of effort, I pushed myself down into his lap."
+        m "Then, finally, I felt my balls ghost over his scaly slit and, with a final grunt of effort, I pushed myself down into his lap."
     else:
         m "Then, finally, I felt my mons ghost over his scaly belly and, with a final grunt of effort, I pushed myself down into his lap."
     if persistent.bangok_balls == True:
@@ -866,6 +875,7 @@ label angok_four_remy4_atop_inside_anal_ws_choice:
     Ry shy ud "Thank you."
     m "He leaned down, nuzzling his snout against my neck and shoulder as he tried to relax enough to let go."
     m "After a few moments, he shuddered, and I felt the hot stream of his piss working its way up his enormous length still buried inside me."
+    $ bangok_four_remy4_store.remy_pissed = True
     play soundloop "fx/faucet1.ogg" fadein 1.0
     queue soundloop "fx/faucet2.ogg"
     if persistent.bangok_inflation == True:
@@ -969,7 +979,7 @@ label angok_four_remy4_atop_inside_anal_ending:
     else:
         m "He was silent for a long moment, then nuzzled his snout against my shoulder and back, returning the hug and cuddling me close as we waited for me to recover enough to move."
     scene black with dissolveslow
-    scene o4 at Pan((0,220), (0,250), 1)
+    scene o4 at Pan((0,220), (0,250), 1) with dissolveslow
     m "It took some work for us to separate, requiring us to move over to an empty space on the floor to get the leverage we needed."
     if persistent.bangok_watersports == True and bangok_four_remy4_store.remy_pissed == False:
         m "The moment we were separated, Remy rushed to the bathroom, leaving me to recover on my own for a few moments."
@@ -1424,8 +1434,7 @@ label bangok_four_remy4_bottom_handjob_late:
 
 label bangok_four_remy4_bottom_handjob_merge:
     m "I could feel his member twitching and throbbing beneath my touch, his hips shaking as he tried to thrust into my hand."
-    m "Deciding to oblige his desires, "
-
+    m "Deciding to oblige his desires,"
     jump todo_out_of_content_bangok_four_remy4
 
 

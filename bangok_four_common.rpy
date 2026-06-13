@@ -229,7 +229,6 @@ init:
     # CGs
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
-
     image bangok_four_adine4showerxplayer = bangok_four_common.LayeredImage([
         bangok_four_common.Always("cg/bangok/adineshower/adineshowerbj_reexport.jpg"),
         bangok_four_common.Always(
@@ -399,7 +398,16 @@ init:
     image bangok_anoney_emeramassage_night = "cg/bangok/xemera2/bangok_anoney_emeramassage_night.png"
 
     image bangok_four_remy4_cg tongue female = im.Scale("cg/bangok/remy4/Remy_oral_f.jpg", 3840,2160)
-    image bangok_four_remy4_cg tongue male unprotected = im.Scale("cg/bangok/remy4/Remy_oral_m_crop.jpg", 2640,1568)
+    image bangok_four_remy4_cg tongue male unprotected = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/remy4/Remy_oral_m.jpg"),
+        bangok_four_common.Always(
+            bangok_four_common.PersistentRecolorDisplayable(
+                "cg/bangok/remy4/Remy_oral_m_mccutout.png",
+                "bangok_four_skin_color",
+                bangok_four_common.SKIN_COLOR_SENTINEL,
+            ),
+        ),
+    ])
     image bangok_four_remy4_cg bottom = "cg/bangok/remy4/remy_bottom.jpg"
     image bangok_four_remy4_cg top = "cg/bangok/remy4/remy_4_top.jpg"
 

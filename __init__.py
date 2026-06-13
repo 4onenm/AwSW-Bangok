@@ -596,6 +596,14 @@ def add_scene_select(ml):
             'bangok_four_xipsum.loremin': True,
         }))
 
+    # Remy4
+    fss.register_scene_select(
+        bangok,
+        "Remy4: Doing More",
+        'bangok_remy4_more_sceneselect',
+        locked=lambda: not renpy.store.persistent.remy4skip,
+    )
+
     # xDamion
     fss.register_scene_select(bangok, "Improving Damion's Mood", 'bangok_four_xdamion_replay_start',
         locked=lambda: (not renpy.store.persistent.metdamion),
