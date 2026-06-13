@@ -300,7 +300,10 @@ label bangok_four_kalinth_c3arc_female_mctop:
     Kl bangok surprise "What are you doing?"
     m "Her tail moved a little more against me, and Kalinth seemed to relax into my taking control."
     Kl bangok smile eyeslidded blush "Oh, don't stop... You feel so soft there."
-    m "With my position on the couch now firmly in place, I spread her thighs a little to take hold of her labia, gently squeezing those lower lips together like a burger."
+    if persistent.bangok_cloacas:
+        m "With my position on the couch now firmly in place, I spread her thighs a little to take hold of her lower lips, gently squeezing the outer part of her cloaca together like a burger."
+    else:
+        m "With my position on the couch now firmly in place, I spread her thighs a little to take hold of her labia, gently squeezing those lower lips together like a burger."
     if bangok_four_kalinth.protection:
         m "I spread the makeshift dental dam over that juicy patty, wrapping it for the customer's convenience."
         m "Then I lowered my face to said burger, inhaling the sweet scent of her arousal."
@@ -438,8 +441,11 @@ label bangok_four_kalinth_c3arc_female_mctop:
     if bangok_four_kalinth.protection:
         jump todo_out_of_content_bangok_four_kalinth
     else:
-        m "Her warmth and the subtle pebbling of her labia scales felt incredible on my face, her slickness only emphasizing the contrast of her scales and inner flesh."
-        Kl bangok smile eyeslidded blush flip "You're making me really wet... Ohh don't forget to breathe..."
+        if persistent.bangok_cloacas:
+            m "Her warmth and the subtle pebbling of her cloacal felt incredible on my face, her slickness only emphasizing the contrast of her outer scales and inner flesh."
+        else:
+            m "Her warmth and the subtle pebbling of her labia felt incredible on my face, her slickness only emphasizing the contrast of her outer scales and inner flesh."
+        Kl bangok smile eyeslidded blush "You're making me really wet... Ohh... Don't forget to breathe..."
 
     jump todo_out_of_content_bangok_four_kalinth
 
