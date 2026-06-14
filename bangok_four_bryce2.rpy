@@ -203,7 +203,7 @@ label bangok_four_bryce2_explorepaw:
                 jump bangok_four_bryce2_canon_jerk_ending
             "Apologize.":
                 c "I'm sorry. I thought you were into the foot stuff, and maybe my comment earlier was a little out of line..."
-                Br brow "I mean, maybe I was, but after the insult it felt weird, even with your complimennts on my muscles."
+                Br brow "I mean, maybe I was, but after the insult it felt weird, even with your compliments on my muscles."
                 show bryce at center with ease
                 m "I moved away, giving Bryce some space."
                 c "Alright. Other topics..."
@@ -282,7 +282,7 @@ label bangok_four_bryce2_hindpaw_menu:
                 Br smirk "H-Huh. That's a feeling."
                 m "I let his claw go."
                 c "Good feeling?"
-                Br smirk "Pretty good, yeah. Just, like, the little bit of contact around the tip of my toe, base of the claw. Dunnno how to describe it."
+                Br smirk "Pretty good, yeah. Just, like, the little bit of contact around the tip of my toe, base of the claw. Dunno how to describe it."
             "Lick the pad." if bangok_four_bryce2_store.hindpaw_lick == False:
                 $ renpy.pause (0.5)
                 $ bangok_four_bryce2_store.hindpaw_lick = True
@@ -361,7 +361,7 @@ label bangok_four_bryce2_footjob:
             m "Then he gently began to move, his slickened feet moving easily up until he was just gripping my tip, then back down to press on both sides of my rock-hard shaft."
         else:
             m "I pressed his feet together around my length, toes toward my tip, feeling the just-slightly-rough texture of his soles squeezing in around my privates."
-            m "Then he gently begann to move, his textured pads scraping over my rock-hard shaft in a way that left my knees weak from the overstimulation."
+            m "Then he gently began to move, his textured pads scraping over my rock-hard shaft in a way that left my knees weak from the overstimulation."
         m "As he pushed back down, the force of his feet bumping my pelvis almost put me just past off-balance, only caught by his quick thinking to tug me forward again with his toes gripped around my tip."
         c "O-Ow! H-Hey, don't rip it off!"
         Br laugh "Sorry."
@@ -403,7 +403,7 @@ label bangok_four_bryce2_footjob:
                     m "The feeling was exquisite. I kneaded the top of his feet, pressing his heels into my pelvis as he squeezed them around the bottom of my shaft."
                 else:
                     m "Tugging his feet slightly apart, I opened a small hole between the arches of his feet, then thrust down and in."
-                    m "The flat pads of his feet were more than smooth enough, the slight rougness sending sparks up my length. I kneaded the top of his feet, pressing his heels into my pelvis as he squeezed them around the bottom of my shaft."
+                    m "The flat pads of his feet were more than smooth enough, the slight roughness sending sparks up my length. I kneaded the top of his feet, pressing his heels into my pelvis as he squeezed them around the bottom of my shaft."
                 play soundloop "fx/rub2.ogg" fadein 0.5
                 $ renpy.pause (0.5)
                 m "I began to thrust for real, fucking between his feet pads as his tail lashed and he chuckled."
@@ -463,7 +463,7 @@ label bangok_four_bryce2_footjob:
         m "Then, abruptly, I felt his other foot at the small of my back, tugging me forward onto his foot harder, such that two of his toe knuckles fit into my outer folds at the same time."
         c "H-Hah!"
         Br flirty "I think I found a way to help."
-        m "I swooned, legs weak as he held me in place to rub his scaly, bumpy toe knuckles over my slick slit himself. The stimulation was so much, I worried I'd fall over before reachinng my peak."
+        m "I swooned, legs weak as he held me in place to rub his scaly, bumpy toe knuckles over my slick slit himself. The stimulation was so much, I worried I'd fall over before reaching my peak."
         c "W-Wait."
         if bangok_four_bryce2_store.cumlube == True:
             m "I turned his foot back to his pad, the sticky surface's slick surface more than enough stimulation as he held me in place to slide his food over my arousal, some of my weight resting on him."
@@ -554,9 +554,9 @@ label bangok_four_bryce2_worship:
     Br smirk "I wasn't really sure my legs could even hold you like this."
     m "His foot rubbed into my face, and heel into my back, as he tugged me up his shaft. Thick dragonflesh rubbed past my face as he brought my lips near to his tip."
     if persistent.bangok_balls == True:
-        m "Then his forepaws came down around my head, tugging me the last little distance to put his length just below my mouth, the rest rubbbing down my chest, right down to two heavy orbs against my ribs that had emerged from his slit."
+        m "Then his forepaws came down around my head, tugging me the last little distance to put his length just below my mouth, the rest rubbing down my chest, right down to two heavy orbs against my ribs that had emerged from his slit."
     else:
-        m "Then his forepaws came down around my head, tugging me the last little distance to put his length just below my mouth, the rest rubbbing down my chest."
+        m "Then his forepaws came down around my head, tugging me the last little distance to put his length just below my mouth, the rest rubbing down my chest."
     m "It also put his forepaws within range of my eager tongue."
     menu:
         "Lick his feet.":
@@ -569,7 +569,7 @@ label bangok_four_bryce2_worship:
             pass
 
     $ renpy.pause (0.5)
-    m "I took his tip into my mouth, tasting gloriously sweet drops of pre at the end of his draconic member, saturating my tongue with a different flavor thann the roughness of his hard scales, or the slick flesh of his length."
+    m "I took his tip into my mouth, tasting gloriously sweet drops of pre at the end of his draconic member, saturating my tongue with a different flavor than the roughness of his hard scales, or the slick flesh of his length."
     m "I bobbed my head beneath his feet, rubbing his cock against my chest, eager for the result, to bring pleasure to the large dragon."
 
     if persistent.bangok_balls == True:
@@ -621,7 +621,7 @@ label bangok_four_bryce2_worship:
             $ renpy.pause (0.5)
             if bangok_four_bryce2_store.bryce_came == "outside":
                 if persistent.bangok_inflation == True:
-                    m "I caught the puddle on Bryce's belly before it could dribble down to the ccouch, collecting with a hand until I could get my face in position to start licking up his cum."
+                    m "I caught the puddle on Bryce's belly before it could dribble down to the couch, collecting with a hand until I could get my face in position to start licking up his cum."
                     m "Bryce's belly plates moved beneath my lapping tongue as he lay back and enjoyed my work, while his sticky forepaws awaited my ministrations."
                     m "Finished enough with his belly I didn't think what was left would run anywhere, I took Bryce's front feet and held them next to each other, lapping up with my already cream-covered tongue."
                 else:

@@ -157,7 +157,7 @@ elif bangok_anon_anna4.anna4choices == 2:
         An smirk "Alright, that's enough foreplay. Now the real fun can begin."
         jump bangok_anon_anna4_playerride
 
-    else: # If female and done two things Anna comments baced and what you did and lets you pick a thrid and final choice
+    else: # If female and done two things Anna comments baced and what you did and lets you pick a third and final choice
         if bangok_anon_anna4.annaoral == True and bangok_anon_anna4.annafinger == True:
             An smirk "I'd say I'm satisfied with that. Now it's your turn."
 
@@ -169,7 +169,7 @@ elif bangok_anon_anna4.anna4choices == 2:
             c "I might be able to as well…"
             An "What will it be then?"
 
-elif bangok_anon_anna4.anna4choices == 3: # F/F excusive to get to this point
+elif bangok_anon_anna4.anna4choices == 3: # F/F exclusive to get to this point
     m "Afterward, the two of us collapsed beside each other on the bed, basking in our afterglow."
     jump bangok_anon_anna4_afterglow
 
@@ -736,7 +736,7 @@ else:
     if persistent.bangok_cervpen:
         m "We came up against resistance almost immediately, but this one came from within her."
     else:
-        m "She paused, taking a momnent to adjust."
+        m "She paused, taking a moment to adjust."
 
     show anna smirk with dissolve
     m "A glance back from her showed in her face. Whatever this felt like for her, it was a good feeling."
@@ -821,7 +821,7 @@ else:
         show anna bangok lipbite with dissolve
         $ renpy.pause (1.0)
         An smirk "Phew… Now, that was something."
-        m "As Anna remeined hilted on my forearm, I felt a resistance deep inside her, one I assumed she wouldn't be trying to play with."
+        m "As Anna remained hilted on my forearm, I felt a resistance deep inside her, one I assumed she wouldn't be trying to play with."
         $ renpy.pause (2.0)
         show anna bangok lipbite with dissolve
         show anna:

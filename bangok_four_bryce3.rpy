@@ -611,7 +611,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
             Sb drop "Are you okay, [player_name]? You, ah, made a lot of noise when Maverick went in."
         else:
             Br smirk "Cock to cock in you."
-        m "I slid a hand between my belly and Maverick's hard plates, feeling the contour of his cock through my skin and womb. Most of the pain at my innermost gate was gone, blanketed under a statickey feeling of arousal at every twitch in Maverick's length."
+        m "I slid a hand between my belly and Maverick's hard plates, feeling the contour of his cock through my skin and womb. Most of the pain at my innermost gate was gone, blanketed under a staticky feeling of arousal at every twitch in Maverick's length."
         c "That... was... incredible."
         Br laugh "Was it, now?"
         Br flirty "You know the fucking comes next, right?"
@@ -654,7 +654,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp:
         if bangok_four_bryce3_store.sebtarget == "throat":
             m "Pushing lightly against each of Maverick's thrusts, Sebastian worked to the back of my mouth, then began gently holding himself in place as I was shoved to take him in my throat, slightly deeper each time."
         else:
-            m "Pushing lightly agaisnt each of Maverick's thrusts, Sebastian explored the nooks and crannies of my mouth, brushing over, under, and around my tongue as I tried my best to suck him with all the mindblowing sensations in my lower half."
+            m "Pushing lightly against each of Maverick's thrusts, Sebastian explored the nooks and crannies of my mouth, brushing over, under, and around my tongue as I tried my best to suck him with all the mindblowing sensations in my lower half."
 
 
         $ renpy.pause (1.2)
@@ -770,7 +770,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
         if persistent.bangok_knot == True:
             m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. Both of them avoided slamming all the way inside me as they worked their way over their now-inevitable peaks."
         else:
-            m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. With Bryce's paw on my shoulder, both of them bottomed out, sheathing inside me in prepearation for their now-inevitable peaks."
+            m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. With Bryce's paw on my shoulder, both of them bottomed out, sheathing inside me in preparation for their now-inevitable peaks."
     else:
         if persistent.bangok_knot == True:
             m "Bryce's tail wrapped around Maverick's, slowing the rough pace but for a last few thrusts. Both of them avoided slamming all the way inside me as they worked their way over their now-inevitable peaks."
@@ -879,7 +879,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_twin_climax:
                     m "I burped as I was packed solid from stem to stern, my belly left bloated as nothing but these dragons' toilet for urine and seed."
             else:
                 if bangok_four_bryce3_store.protection == True:
-                    m "I felt the warm bubbles of their condoms' reservoirs expand, mixing piss with cum to make tantalizingly desacrated baubles of slurry."
+                    m "I felt the warm bubbles of their condoms' reservoirs expand, mixing piss with cum to make tantalizingly desecrated baubles of slurry."
                 else:
                     m "Piss sloshed over the ropes of seed already coating my deepest recesses, mixing and flowing together into a thick painting of wanton lust on my innermost walls."
 
@@ -1390,7 +1390,7 @@ label bangok_four_bryce3_mcbottom_mav_bryce_mp_bryce_finishes:
             scene stars at Pan((0, 0), (0, 20), 20.0) with dissolvemed
             play sound "fx/undress.ogg"
             m "After a frustrated huff, Bryce rolled onto his back, lifting me up off the sand."
-            m "Working his cold forlegs under my shoulders, Bryce tugged me back, yanking my dilated pucker up against his knot."
+            m "Working his cold forelegs under my shoulders, Bryce tugged me back, yanking my dilated pucker up against his knot."
             c "Nngh! A-Ah! F-Fuuuu--"
             m "Millimeter by millimeter I stretched wider around his thick, unyielding knot."
             if persistent.bangok_inflation == True:
@@ -1770,7 +1770,7 @@ label bangok_four_bryce3_mcbottom_train:
                 Sb shy "G-Glad you're having fun."
             "[[Thrust back.]":
                 pass
-        m "Putting some of his weight on my shoulders, Sebastain leaned forward, increasing the depth of shaft he moved with each thrust, all but pulling out of me with each withdrawl before spearing all the way back down."
+        m "Putting some of his weight on my shoulders, Sebastian leaned forward, increasing the depth of shaft he moved with each thrust, all but pulling out of me with each withdrawal before spearing all the way back down."
         if bangok_four_bryce3_store.sebtarget == "vag":
             m "My inner walls spasmed, kneading at his cock when they could, before rapidly losing their hold and being left with the ghost of sensation."
 
@@ -2036,7 +2036,7 @@ label bangok_four_bryce3_mcbottom_train:
             #     c "I think so."
             #     Br stern "Clearly we're not trying that again."
 
-        m "He'd clearly pushed a little too far forward on his balance, as the rest of his shaft slid inside me in one long, electrifying, maddenning slide."
+        m "He'd clearly pushed a little too far forward on his balance, as the rest of his shaft slid inside me in one long, electrifying, maddening slide."
     elif bangok_four_bryce3_store.brycetarget == "ass":
         m "He slid smoothly now that he was in, the lube I'd applied earlier doing its job. His thick, meaty pillar filled out my hole."
 
@@ -2503,7 +2503,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
                     m "I moaned as I felt my belly grow still further, the fresh urine pouring in stretching me even larger than before."
             stop soundloop fadeout 0.5
             m "Maverick finished in me faster than Bryce had. Even still, I writhed in ecstacy, the pressure feeling like he'd pissed even more than Bryce had."
-            m "I had to wonder at how lucky I was, travelling to another world to get to serve as a urinal for these magnificent beasts."
+            m "I had to wonder at how lucky I was, traveling to another world to get to serve as a urinal for these magnificent beasts."
             Mv nice "Satisfied?"
             m "I nodded languidly, his hot urine suffusing my whole body with warmth."
 
@@ -2555,7 +2555,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             Br laugh "Man. I really have to not buy that brand again."
             menu:
                 "Are you kidding me?":
-                    Mv angry "You asked us to engage in risky behaviour pissing in it."
+                    Mv angry "You asked us to engage in risky behavior pissing in it."
                     Br normal "Condoms aren't really designed for it. It's a little on you, [player_name]."
                     $ renpy.pause(0.8)
                     c "Fine."
@@ -2634,7 +2634,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
 
             # Using mavbroke to indicate maverick has pissed inside so I don't have to think about yet another variable
             $ bangok_four_bryce3_store.mavbroke = True
-            m "Finally, he lifted his paw from my shoulderblades, releasing me from my service to his cock. I gasped as I slumped to the ground, thanking my lucky stars I'd avoided that internal organ rearrangement."
+            m "Finally, he lifted his paw from my shoulder blades, releasing me from my service to his cock. I gasped as I slumped to the ground, thanking my lucky stars I'd avoided that internal organ rearrangement."
             scene beachx at Pan ((300, 0), (300, 0), 0.0) with hpunch
             jump bangok_four_bryce3_mcbottom_train_bryce_takeover_mav_turn
 
@@ -2852,7 +2852,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
     $ renpy.pause (1.0)
     m "As Maverick came down from his peak, his breathing was hot and wet above me."
     if bangok_four_bryce3_store.mavtarget == "vag" and bangok_four_bryce3_store.protection == True:
-        m "Finally, he lifted his paw from my shoulderblades, releasing me from my service to his cock."
+        m "Finally, he lifted his paw from my shoulder blades, releasing me from my service to his cock."
         Br stern "..."
         Br brow "[player_name]? Are you okay?"
         menu:
@@ -2863,7 +2863,7 @@ label bangok_four_bryce3_mcbottom_train_mav_turn:
             "E-Everything hurts.":
                 Br stern "I think I can see that."
     else:
-        m "Finally, he lifted his paw from my shoulderblades, releasing me from my service to his cock, even if it was still buried deep within my body."
+        m "Finally, he lifted his paw from my shoulder blades, releasing me from my service to his cock, even if it was still buried deep within my body."
         Br stern "..."
         Br brow "[player_name]? Are you okay?"
         menu:
@@ -3319,7 +3319,7 @@ label bangok_four_bryce3_mctop:
             play sound "fx/uncork.ogg"
             m "Sebastian's blob of cum followed, condom reservoir inflated to larger than my fist as it popped free of Bryce's hindquarters."
         else:
-            m "His meagre cumload wrapped in its condom reservoir plopped free of Bryce, making Sebastian's shaft bob and wiggle."
+            m "His meager cumload wrapped in its condom reservoir plopped free of Bryce, making Sebastian's shaft bob and wiggle."
         show sebastian drop flip:
             xpos 0.49
         with ease
@@ -3485,7 +3485,7 @@ label bangok_four_bryce3_mctop_mavgoes:
         with ease
         m "Then Maverick pushed his tip into Bryce's ass, still pissing."
         Br pant flip "Haaahhh!"
-        m "I watched, mesmerised as Maverick held his position. I could still hear the stream of liquid pooling inside Bryce."
+        m "I watched, mesmerized as Maverick held his position. I could still hear the stream of liquid pooling inside Bryce."
         stop soundloop fadeout 0.8
         $ renpy.pause(0.8)
         m "Finally, Maverick ran dry. He switched to feeding Bryce's ass cockflesh instead."
@@ -3833,7 +3833,7 @@ label bangok_four_bryce3_mctop_mavgoes_climax:
         m "Bryce pressed his face into the sand, and I saw his shaft twitching out thin, slick ropes against his underbelly and the sand in the fucking dragons' shadow."
 
         show maverick nice flip with dissolve
-        m "After a few secocnds, the two of them had finished their climaxes, panting over Bryce's neck and back."
+        m "After a few seconds, the two of them had finished their climaxes, panting over Bryce's neck and back."
         show bryce pant flip:
             pos (0.94, 1.3)
         with ease
@@ -4060,7 +4060,7 @@ label bangok_four_bryce3_mctop_mcgoes_ass:
         ease 0.8 rotate 25 xpos 0.63 ypos 1.25
         xpos 0.63 ypos 1.25 rotate 25
     with None
-    m "Bryce folded his forelegs leaning foward in the sand. I gave him a firm slap on the ass with my dick."
+    m "Bryce folded his forelegs leaning forward in the sand. I gave him a firm slap on the ass with my dick."
     Br flirty flip "Trying to tickle me back there?"
     c "Just give me a second. Gotta get lined up."
     m "I slid my hips between Bryce's legs, pausing to get a good grip on his tail and lean on him so I wouldn't fall over. The dragon shivered with anticipation."
@@ -4285,7 +4285,7 @@ label bangok_four_bryce3_mctop_mcgoes_sloppyass:
         transform_anchor True
         ease 0.8 rotate 20 xpos 0.93 ypos 1.3
     with None
-    m "Bryce folded his forelegs leaning foward in the sand. I gave him a firm slap on the ass with my dick, smearing around Maverick's cum as I teased the plates around Bryce's asshole."
+    m "Bryce folded his forelegs leaning forward in the sand. I gave him a firm slap on the ass with my dick, smearing around Maverick's cum as I teased the plates around Bryce's asshole."
     c "You're so stretched out. I could probably fit three or four of me in there."
     Br laugh flip "I did warn you what it'd be like after Maverick went first!"
     m "I slid my hips between Bryce's legs, and paused to run the tip of my dick along his asshole. The dragon shivered with anticipation."

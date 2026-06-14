@@ -367,7 +367,7 @@ label bangok_four_anna2_romanticdate_conclusion:
                 menu:
                     "You bet I would.":
                         if nofood == True:
-                            An "Blood makes you lose your apetite, but not your sex drive? Creep."
+                            An "Blood makes you lose your appetite, but not your sex drive? Creep."
                         else:
                             An "Too bad."
                     "Okay, maybe not...":
@@ -737,7 +737,7 @@ label bangok_four_anna2_apartment_annaliesdown:
         else:
             m "Holding the strapping meant to keep it in her out of the way, I fit the tip of the larger end of the toy to her lips."
         show anna bangok lipbite with dissolve
-        m "It speared her open wide, taking a bit of force to slide, but Anna seemed only further aroused by stretching to accomodate it."
+        m "It speared her open wide, taking a bit of force to slide, but Anna seemed only further aroused by stretching to accommodate it."
         m "Even still, she ran out of lubrication around the halfway point on the toy's larger end, her scaly lips tugging inward with it as I failed to slide it any deeper."
         An bangok blush "In and out. Obviously."
         c "You're completely {i}sure{/i} this thing fits in you?"
@@ -785,7 +785,7 @@ label bangok_four_anna2_apartment_annaliesdown:
             ease 0.15 xpos 0.81
             repeat
         with None
-        m "I pulled and pushed another time, then again. The toy sank ever-so-slightly deeper, but it apparently still wasn't enough for the insatiable dragonness."
+        m "I pulled and pushed another time, then again. The toy sank ever-so-slightly deeper, but it apparently still wasn't enough for the insatiable dragoness."
         $ renpy.pause(0.8)
         play sound "fx/tableslap.wav"
         play sound2 "fx/snarl.ogg"
@@ -1191,11 +1191,11 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     An smirk "What's wrong? The weak human ambassador isn't strong enough?"
                     c "(That's it!)"
                     if persistent.bangok_cervpen:
-                        m "Adusting myself forward a little, I pulled my dragon-wrapped hand back, then pushed again, transferring the force between my shoulders to pull my arm up into her crotch. With the new angle, I was applying more force at her cervix."
+                        m "Adjusting myself forward a little, I pulled my dragon-wrapped hand back, then pushed again, transferring the force between my shoulders to pull my arm up into her crotch. With the new angle, I was applying more force at her cervix."
                         show anna bangok orgasm with dissolve
                         m "It spread around my hand like her outermost opening had."
                     else:
-                        m "Adusting myself forward a little, I pulled my dragon-wrapped hand back, then pushed again, transferring the force between my shoulders to pull my arm up into her crotch. With the new angle, I took her to my elbow."
+                        m "Adjusting myself forward a little, I pulled my dragon-wrapped hand back, then pushed again, transferring the force between my shoulders to pull my arm up into her crotch. With the new angle, I took her to my elbow."
                         show anna bangok orgasm with dissolve
                 "I'll try pushing first...":
                     m "I leaned more of the weight of my upper body onto my arm, pressing on her gate."
@@ -1403,7 +1403,7 @@ label bangok_four_anna2_apartment_male_nostrapon_startingmenu:
                     An normal "I should note, you're lucky I get around as much as I do. Grabbing my horns like that could have resulted in a painful surprise with someone less experienced."
                     label bangok_four_anna2_apartment_hornincident_description:
                     c "What do you mean?"
-                    An sad "It's a sensitive area. There's a biological drive to keep them from getting ripped off our heads, so using them to control our head's motion is... undesireable."
+                    An sad "It's a sensitive area. There's a biological drive to keep them from getting ripped off our heads, so using them to control our head's motion is... undesirable."
                     An bangok blush "Unless we see it coming. But that's not for everybody."
                     c "I see."
                 else:
@@ -1644,7 +1644,7 @@ label bangok_four_anna2_apartment_harvest:
                             "Refuse.":
                                 $ anna2mood -= 1
                                 stop music fadeout 2.0
-                                c "I don't care. You're not keeping samples of my cum like some sick souveneir."
+                                c "I don't care. You're not keeping samples of my cum like some sick souvenir."
                                 An disgust "Fine."
                                 An sad "In that case, I've fulfilled my end completely. Expect a call from me when I have a spot in the lab."
                                 label bangok_four_anna2_apartment_abruptdeparture:

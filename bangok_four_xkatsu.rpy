@@ -590,7 +590,7 @@ label bangok_four_xkatsu_help:
                                     ease 0.7 zoom 3.0 xpos 1.1
                                 show kitchen:
                                     ease 0.7 zoom 3.4 xpos 0.8
-                                m "I dropped my face to the floor, putting hand on my belly. I could feel the pulses in my passage translating directly to an expansion, milimeters at a time, making me look over two months pregnant with his extra dose of cream."
+                                m "I dropped my face to the floor, putting hand on my belly. I could feel the pulses in my passage translating directly to an expansion, millimeters at a time, making me look over two months pregnant with his extra dose of cream."
                                 $ bangok_four_xkatsu.playerstuffed = "vag"
                                 m "Eventually the pulses stopped, leaving me noticeably heavier than before. At first, I wasn't sure I'd be able to get up again."
                                 show katsu excited at Position(xpos=0.53, ypos=1.0) with ease
@@ -808,7 +808,7 @@ label bangok_four_xkatsu_get_underneath:
         zoom 1.7
     with easeinright
     m "Katsuharu's footsteps returned. I heard a squeeze bottle plunger, then cold gel spilled on one of my cheeks and into my crack."
-    m "I shuffled forward sligthly from the sensation, my legs bumping into the freezing metal of the outer bucket."
+    m "I shuffled forward slightly from the sensation, my legs bumping into the freezing metal of the outer bucket."
     c "H-Hey! That's pretty cold!"
     play sound "fx/box.wav"
     $ renpy.pause(0.5)
@@ -890,7 +890,7 @@ label bangok_four_xkatsu_underneath_ass:
         repeat
     with None
     m "Without further warning, Katsuharu pulled back, cockflesh dragging on my sphincter until he plunged back inside to the same depth."
-    m "I slid backward a little with his first pull before catching myself. The feeling of his soft dick compressing to squeeze back and forth through my hole was completely new to me, and maddenning in sensation."
+    m "I slid backward a little with his first pull before catching myself. The feeling of his soft dick compressing to squeeze back and forth through my hole was completely new to me, and maddening in sensation."
     $ renpy.pause(1.0)
     Ka exhausted "You slid a bit. Need you to move forward if we're going to fill the bucket."
     menu:
@@ -933,7 +933,7 @@ label bangok_four_xkatsu_underneath_ass:
         m "Sticky ropes spattered across my chest and the ground, forced from me by the unyielding fucking even as my ass clenched around Katsuharu."
         hide black with dissolvemed
     else:
-        m "His thrusts forced me forward and downward, brushing the front of my lips against the cold metal, oh so maddenningly close to my clit."
+        m "His thrusts forced me forward and downward, brushing the front of my lips against the cold metal, oh so maddeningly close to my clit."
         m "I spread my legs slightly and lowered myself still further, rutting against the inner bucket's lip with each of Katsuharu's entries into my ass."
         m "I barely lasted a few more thrusts."
         show katsu excited with dissolve
@@ -1024,7 +1024,7 @@ label bangok_four_xkatsu_underneath_ass:
 
 label bangok_four_xkatsu_underneath_vag:
     m "I pushed, parting my lubed-up lips around his massive tip."
-    m "Taking that as a sign, he pushed forward, soft cockfleash spreading my canal like a hand filling a glove."
+    m "Taking that as a sign, he pushed forward, soft cockflesh spreading my canal like a hand filling a glove."
     show katsu excited:
         ease 1.5 ypos 1.04
     with None
@@ -1059,7 +1059,7 @@ label bangok_four_xkatsu_underneath_vag:
                     ease 1.3 xpos 0.495 ypos 1.05
                 with None
                 m "He applied more pressure oh-so-gradually, leaning weight on his shaft with a slow ease that spoke to countless years of experience."
-                m "The pressure on my innermost gate increased, the ache increasing in step as his tip burrowed milimeters deeper, squeezed by a hole out of reach of humans."
+                m "The pressure on my innermost gate increased, the ache increasing in step as his tip burrowed millimeters deeper, squeezed by a hole out of reach of humans."
                 menu:
                     "S-Stop!":
                         $ renpy.pause(0.5)
@@ -1203,7 +1203,7 @@ label bangok_four_xkatsu_underneath_vag:
                     m "I shoved the bucket aside, putting my face to the floor as I moaned around his deep cream filling."
 
                 if persistent.bangok_inflation == True:
-                    m "My womb was packed solid with nothing but him. As yet more pulses poured inside, my belly was forced to acommodate, expanding past two months, then the first trimester."
+                    m "My womb was packed solid with nothing but him. As yet more pulses poured inside, my belly was forced to accommodate, expanding past two months, then the first trimester."
                     $ bangok_four_xkatsu.playerstuffed = "vag"
                     m "By the time his fluid injection began to slow, my navel reached out to kiss the cold floor where the bucket had been."
 
@@ -1748,7 +1748,7 @@ label bangok_four_xkatsu_ws_underneath:
                 m "Even despite his pressure, the seal wasn't perfect. Urine leaked from our coupling point, running down my outer lips and dripping into the bowl below."
 
             if bangok_four_xkatsu.playerstuffed == "mouth":
-                m "My guts gurglged, Katsuharu's piss flooding so deeply, I was sure it was meeting the cum I'd swallowed before."
+                m "My guts gurgled, Katsuharu's piss flooding so deeply, I was sure it was meeting the cum I'd swallowed before."
                 if persistent.bangok_inflation == True:
                     m "It was beyond anything I could drink without the assistance of his shaft. I expanded, the fluid bulge in my belly growing to a nearly painful degree, enough that I was sure I couldn't walk."
             else:
@@ -1829,7 +1829,7 @@ label bangok_four_xkatsu_ws_underneath:
                 m "It was beyond anything I could have drunk from my other end. My guts gurgled as he forced the fluid bulge in my belly to grow to a nearly painful degree, enough that I was sure I couldn't walk."
         elif bangok_four_xkatsu.playerstuffed == "mouth":
             m "I moaned, heat suffusing my body as his bladder emptied into my upper colon, leaving a quickly-growing, deep, hot pool in my guts."
-            m "My guts gurglged, Katsuharu's piss flooding so deeply, I was sure it was meeting the cum I'd swallowed before."
+            m "My guts gurgled, Katsuharu's piss flooding so deeply, I was sure it was meeting the cum I'd swallowed before."
             if persistent.bangok_inflation == True:
                 m "It was beyond anything I could have drunk from my other end. My guts gurgled as he forced the fluid bulge in my belly to grow to a nearly painful degree, enough that I was sure I couldn't walk."
         else:
@@ -1856,7 +1856,7 @@ label bangok_four_xkatsu_ws_underneath:
             if bangok_four_xkatsu.playerstuffed in ["ass", "mouth"]:
                 m "Then Katsuharu pulled out faster than I expected, leaving my packed guts roiling as the fluid attempted to follow him. His cock hit the mixing bowl with a lewd smack, followed by a small fountain of his cum and piss, lasting only a second or two."
             else:
-                m "Then Katsuharu pulled out faster than I expected, leaving my packed guts roiling as the fluid attempted to follow him. His cock hit the mixing bowl with a lewd smack, followed by a small slpatter of his piss."
+                m "Then Katsuharu pulled out faster than I expected, leaving my packed guts roiling as the fluid attempted to follow him. His cock hit the mixing bowl with a lewd smack, followed by a small splatter of his piss."
         else:
             m "Katsuharu pulled out faster than I expected, his cock striking the mixing bowl with a lewd smack, leaving my piss-stained ass clenching at open air."
 
@@ -2004,7 +2004,7 @@ label bangok_four_xkatsu_ending:
     menu:
         "You gave your cart to Emera, but said you're leaving town..." if bangok_four_xkatsu.getcart == True:
             $ bangok_four_xkatsu.getcart = False
-            Ka normal "Well, I'll be busy most of tonight making more of my usual flavors for whenver the minister lets me know I can retrieve my cart."
+            Ka normal "Well, I'll be busy most of tonight making more of my usual flavors for whenever the minister lets me know I can retrieve my cart."
             c "Does she know how to contact you?"
             Ka exhausted "I told you she's a connoisseur, did I not?"
             c "Oh. Oh, you mean..."

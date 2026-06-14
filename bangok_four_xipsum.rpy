@@ -465,7 +465,7 @@ label bangok_four_xipsum_loremdone:
             $ bangok_four_xipsum.mood -= 1
             $ renpy.pause (0.5)
             c "I better not find out years from now you cloned kids of me."
-            Ip sad "We're not much past artifical eggs. I don't think an artifical womb for a live-birth mammal is within our technology."
+            Ip sad "We're not much past artificial eggs. I don't think an artificial womb for a live-birth mammal is within our technology."
             Ip think "How long would the gestation period even be?"
             c "Nine months."
             Ip normal "Much too long for our technologies. So no; you won't be hearing about any cloned humans."
@@ -514,7 +514,7 @@ label bangok_four_xipsum_bedroom_start:
         ease 1.0 xpos 0.9 zoom 1.0 ypos 1.0
     m "As Ipsum went over to his desk, I looked around the rest of the room."
     c "Quite the aesthetic."
-    Ip happy "Like it? {w=0.5}Blackout curtains and an RGB bulb let me switch things up whenver I feel like. It's also extremely useful for more photosensitive experiments."
+    Ip happy "Like it? {w=0.5}Blackout curtains and an RGB bulb let me switch things up whenever I feel like. It's also extremely useful for more photosensitive experiments."
     c "And today you're feeling purple?"
     Ip think flip "Yes. Is that a problem?"
     m "I shrugged."
@@ -872,7 +872,7 @@ label bangok_four_xipsum_bedroom_start:
                     jump bangok_four_xipsum_impossible_loremin
             elif bangok_four_xipsum.fuckeraction == "oral":
                 if bangok_four_xipsum.fuckertarget == "vag":
-                    m "Lorem prodded around my vagina, searching for soemthing to provide me more stimulation."
+                    m "Lorem prodded around my vagina, searching for something to provide me more stimulation."
                     m "He found it in my front wall, sliding back over my clit. I arched my back in response."
                     if bangok_four_xipsum.suckingipsum == True:
                         m "I let go of Ipsum's cocks for a moment to give him a warning, my saliva smearing on my face."
@@ -995,7 +995,7 @@ label bangok_four_xipsum_bedroom_start:
                     m "I let Ipsum's cock out of my mouth, looking down at an embarrassed Lorem."
                 Lo shy "... I..."
                 menu:
-                    "Nothing to be embarassed about.":
+                    "Nothing to be embarrassed about.":
                         python in bangok_four_xipsum:
                             renpy.pause(0.5)
                         c "Premature ejaculation happens. It's not a big deal."
@@ -1043,7 +1043,7 @@ label bangok_four_xipsum_bedroom_start:
                         m "Utterly lost in the sensations of fucking at my other end, I didn't notice enough to gag as my nose pressed into his crotch, Ipsum bottoming out in my throat."
                         m "He pulled back out a moment later, picking up Lorem's rapid pace."
                         $ renpy.pause(0.8)
-                        m "I swooned, the double-ended fucking and Lorem's tounging more than my brain could take. Each thrust of Ipsum's hips sent his other cock bouncing lewdly off my face or throat."
+                        m "I swooned, the double-ended fucking and Lorem's tonguing more than my brain could take. Each thrust of Ipsum's hips sent his other cock bouncing lewdly off my face or throat."
                         $ renpy.pause(1.0)
 
                 if bangok_four_playerhasdick == True:
@@ -1169,7 +1169,7 @@ label bangok_four_xipsum_bedroom_start:
         $ bangok_four_xipsum.vag_and_ass = True
         m "One warm cockhead prodded my slick folds, while his other, colder, lubricated tip pressed against my pucker."
         show ipsum think with dissolve
-        m "There, he paused a moment. I felt his fingers of one hand prodding around my perenium and both his cocks."
+        m "There, he paused a moment. I felt his fingers of one hand prodding around my perineum and both his cocks."
         $ renpy.pause(0.8)
         c "Something wrong?"
         Ip think "I'm estimating how deep I can safely go."
@@ -1225,7 +1225,7 @@ label bangok_four_xipsum_bedroom_start:
             Ip normal "There?"
             c "O-Oh yes!"
             Ip "I'll see what I can do."
-        m "Despite an uninteligible protest from my lips, he removed his hand from my nethers and instead used it to adjust his own."
+        m "Despite an unintelligible protest from my lips, he removed his hand from my nethers and instead used it to adjust his own."
         show ipsum normal:
             ease 1.0 ypos 0.59
         with None
@@ -1398,7 +1398,7 @@ label bangok_four_xipsum_bedroom_start:
                 show ipsum normal:
                     ease 2.0 ypos 0.58
                 with None
-                m "My asshole spread, admitting both tips, then slowly even more. It felt bizzare, having hy hole spread by two bulges rather than one. The elongation of my ass was unlike any other fucking I'd had, size irregardless."
+                m "My asshole spread, admitting both tips, then slowly even more. It felt bizarre, having hy hole spread by two bulges rather than one. The elongation of my ass was unlike any other fucking I'd had, size irregardless."
                 $ renpy.pause(1.0)
                 c "Ha. Oh. W-Wow."
                 $ renpy.pause(0.5)
@@ -1705,7 +1705,7 @@ label bangok_four_xipsum_bedroom_start:
                 label bangok_four_xipsum_one_cock_ass_fuck:
                 m "One of his cold, lubricated shafts he pushed down, into the small gap between my crack and his bedcovers. The other he pressed right up against my pucker."
                 show ipsum think with dissolve
-                m "There, he paused a moment. I felt his fingers of one hand prodding around my perenium and both of his cocks."
+                m "There, he paused a moment. I felt his fingers of one hand prodding around my perineum and both of his cocks."
                 $ renpy.pause(0.8)
                 c "Something wrong?"
                 Ip think "I'm estimating how deep I can safely go."

@@ -111,7 +111,7 @@ label bangok_four_adine1:
             c "Not really. This place is actually really comfortable for a human."
             Ad "Do you really not know anyone at all that would miss you?"
             c "No, everyone I did know has gone their own way. On the other hand, there are plenty plenty of dragons I'd like to know better."
-            Ad giggle b "Fair enoough. Let's move on."
+            Ad giggle b "Fair enough. Let's move on."
 
     menu:
         "Do the goggles stay on in the bedroom?":
