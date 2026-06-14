@@ -290,6 +290,40 @@ def bryce3_afterparty(ml):
 
     clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
+def bryce4(ml):
+    ( ml.find_label('bryce4skip')
+        .search_if('brycestatus == "good"')
+        .branch()
+        .search_say("I'm not surprised. They can set the mood for a romantic evening.")
+        .hook_to('bangok_four_bryce4_bangnokay', condition=('(persistent.nsfwtoggle == True) and (bangok_four_common.bangnokay.check())'), return_link=False)
+    )
+
+    ohmy = ( ml.find_label('b4romance')
+        .search_menu("Accept.")
+        .branch()
+        .search_say("Oh my.")
+        .link_from('bangok_four_bryce4_acceptreturn')
+    )
+    ( ohmy
+        .search_say("Mmm-hmmm.")
+        .link_from('bangok_four_bryce4_skipsize')
+    )
+    ( ohmy
+        .search_say("No, that was fine. Don't stop.")
+        .hook_to(
+            'bangok_four_bryce4_skipsize',
+            return_link=False,
+            condition='(persistent.nsfwtoggle == True) and ((bangok_four_bryce3_store.unplayed == False) or (bangok_four_bryce2_unplayed == False) or (bangok_four_bryce1_unplayed == False))',
+        )
+    )
+    ( ohmy
+        .search_say("Alright.")
+        .hook_to(
+            "bangok_four_bryce4_intro",
+            return_link = True,
+            condition=make_dev('(persistent.nsfwtoggle == True)'),
+        )
+    )
 
 def bryce_x_sebastian(ml):
     ( ml.find_label('c3go')
@@ -470,6 +504,7 @@ def link_scenes(ml):
     bryce1_afterparty(ml)
     bryce2_feet(ml)
     bryce3_afterparty(ml)
+    bryce4(ml)
     bryce_x_sebastian(ml)
     kalinth_c3arc(ml)
     lorem4(ml)
@@ -585,6 +620,14 @@ def add_scene_select(ml):
                                     'bangok_four_xsebastian_unplayed': False,
                                     'bangok_four_bryce3_store.sebastian_in': True,
                                 }))
+
+    # Bryce4
+    fss.register_scene_select(
+        bangok,
+        "Bryce4: Romantic Evening",
+        'bangok_four_bryce4_replaylabel',
+        locked=lambda: (not renpy.store.persistent.bryce4skip) or (not renpy.store.persistent.bangok_dev),
+    )
 
     # Lorem2
     fss.register_scene_select(bangok, "Arrangement with Ipsum", 'bangok_four_xipsum_replay_start',
