@@ -4,7 +4,7 @@ init python in bangok_four_bryce4_store:
 label bangok_four_bryce4_bangnokay:
     Br smirk "Yeah, romantic is a way they could go."
     Br normal "Speaking of, you know, when you slept over last time and we shared the couch, I took it as a sign."
-    Br "Did that mean anything to you? Or was that just two firends sharing a couch that was clearly too small for two people who just wanted to stay friends?"
+    Br "Did that mean anything to you? Or was that just two friends sharing a couch that was clearly too small for two people who just wanted to stay friends?"
 
     menu:
         "It didn't mean what you thought it meant.":
@@ -23,7 +23,7 @@ label bangok_four_bryce4_bangnokay:
             Br laugh "I am. Just maybe overthinking a little."
         "I was thinking about sex with you all that night.":
             $ renpy.pause (0.5)
-            jump banogk_four_bryce4_bangnokay_rejection
+            jump bangok_four_bryce4_bangnokay_rejection
 
     menu:
         "Yeah, overthinking can be a pain.":
@@ -34,7 +34,7 @@ label bangok_four_bryce4_bangnokay:
             $ renpy.pause (0.5)
             Br brow "Ah, closer how?"
             c "Maybe I get another bottle of wine, see where the evening takes us..."
-            jump banogk_four_bryce4_bangnokay_rejection
+            jump bangok_four_bryce4_bangnokay_rejection
 
 label bangok_four_bryce4_bangnokay_rejection:
     Br stern "Oh, uh..."
@@ -76,7 +76,7 @@ label bangok_four_bryce4_replaylabel:
             c "Seriously, is this how you dragons date?"
             $ renpy.end_replay()
         "Accept.":
-            jump bangok_four_bryce4_acceptreturn
+            jump bangok_four_bryce4_accept_return
 
 label bangok_four_bryce4_intro:
     # c "No, that was fine. Don't stop."

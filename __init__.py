@@ -94,7 +94,7 @@ def anna12(ml):
     )
 
     # Anna2
-    sorrymenu = ml.find_label('anna2') \
+    sorry_menu = ml.find_label('anna2') \
         .search_menu("Go home.") \
         .branch() \
         .hook_to('bangok_four_anna2_nomorewaiting', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
@@ -105,13 +105,13 @@ def anna12(ml):
         .hook_to('bangok_four_anna2_nomorewaiting', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_menu("You better be.")
 
-    sorrymenu.branch("You better be.") \
+    sorry_menu.branch("You better be.") \
         .search_python('renpy.pause (0.5)') \
         .hook_to('bangok_four_anna2_wantthisornot', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("I suppose so.") \
         .link_from('bangok_four_anna2_wantthisornot_end')
 
-    eveningmenu = sorrymenu \
+    evening_menu = sorry_menu \
         .hook_to('bangok_four_anna2_whatnow', condition='bangok_four_anna1_sexrequested == True and persistent.nsfwtoggle == True', return_link=False) \
         .search_say("I guess that's better than nothing.") \
         .link_from('bangok_four_anna2_alley') \
@@ -126,11 +126,11 @@ def anna12(ml):
         .search_menu("You're a wild one, Anna.") \
         .search_menu("I can see your point. This was unusual, but fun.")
 
-    eveningmenu.branch("I can see your point. This was unusual, but fun.") \
+    evening_menu.branch("I can see your point. This was unusual, but fun.") \
         .search_say("I can see your point. This certainly isn't how I thought the evening would go, but it was pretty fun.") \
         .hook_to('bangok_four_anna2_romanticdate_unusualbutfun', condition='persistent.nsfwtoggle == True')
 
-    eveningmenu.search_say("We should probably leave before that senile has-been wakes up from his evening nap.") \
+    evening_menu.search_say("We should probably leave before that senile has-been wakes up from his evening nap.") \
         .hook_to('bangok_four_anna2_romanticdate_conclusion', condition='persistent.nsfwtoggle == True') \
         .search_say("Yeah, let's go.") \
         .link_behind_from('bangok_four_anna2_romanticdate_conclusion_end')
@@ -286,9 +286,9 @@ def bryce3_afterparty(ml):
     )
 
     clothes_fix.search_say("Is it okay for you to sleep like this?") \
-        .link_from('bangok_four_bryce3_oktosleep') \
+        .link_from('bangok_four_bryce3_ok_to_sleep') \
 
-    clothes_fix.hook_to('bangok_four_bryce3_oktosleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
+    clothes_fix.hook_to('bangok_four_bryce3_ok_to_sleep', return_link=False, condition=make_dev('(persistent.nsfwtoggle == True) and (bangok_four_bryce3_store.unplayed == False) and (bangok_four_bryce3_store.mc_bottom == True)'))
 
 def bryce4(ml):
     ( ml.find_label('bryce4skip')
@@ -298,25 +298,25 @@ def bryce4(ml):
         .hook_to('bangok_four_bryce4_bangnokay', condition=('(persistent.nsfwtoggle == True) and (bangok_four_common.bangnokay.check())'), return_link=False)
     )
 
-    ohmy = ( ml.find_label('b4romance')
+    oh_my = ( ml.find_label('b4romance')
         .search_menu("Accept.")
         .branch()
         .search_say("Oh my.")
-        .link_from('bangok_four_bryce4_acceptreturn')
+        .link_from('bangok_four_bryce4_accept_return')
     )
-    ( ohmy
+    ( oh_my
         .search_say("Mmm-hmmm.")
-        .link_from('bangok_four_bryce4_skipsize')
+        .link_from('bangok_four_bryce4_skip_size')
     )
-    ( ohmy
+    ( oh_my
         .search_say("No, that was fine. Don't stop.")
         .hook_to(
-            'bangok_four_bryce4_skipsize',
+            'bangok_four_bryce4_skip_size',
             return_link=False,
             condition='(persistent.nsfwtoggle == True) and ((bangok_four_bryce3_store.unplayed == False) or (bangok_four_bryce2_unplayed == False) or (bangok_four_bryce1_unplayed == False))',
         )
     )
-    ( ohmy
+    ( oh_my
         .search_say("Alright.")
         .hook_to(
             "bangok_four_bryce4_intro",
@@ -572,7 +572,9 @@ def add_voyeurism_scene_select(ml, fss):
 def add_scene_select(ml):
     import four_scene_select as fss
 
-    fss.register_scene_select_cateogry(bangok, nsfw=True)
+    # Fixed a typo in scene select interface, but some people might be on the old version.
+    register_category = getattr(fss, "register_scene_select_category", getattr(fss, "register_scene_select_cateogry"))
+    register_category(bangok, nsfw=True)
 
     # Adine4
     fss.register_scene_select(bangok, "Adine in the Shower", 'bangok_four_adine4_shower_sceneselect',
@@ -687,9 +689,9 @@ def load_translations(mod_name):
         strings_path = os.path.join(translations_path, folder, "strings.py")
         if os.path.exists(strings_path):
             try:
-                infile = io.open(strings_path, "rb")
-                compiled = compile(infile.read(), strings_path, 'exec')
-                infile.close()
+                in_file = io.open(strings_path, "rb")
+                compiled = compile(in_file.read(), strings_path, 'exec')
+                in_file.close()
                 exec(compiled)
                 print("{}: Loaded translations for {}".format(mod_name, folder))
             except Exception as e:
