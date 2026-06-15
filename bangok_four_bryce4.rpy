@@ -238,7 +238,24 @@ label bangok_four_bryce4_intro:
     else:
         m "Some bits of sand clung to the bottom, telling me he had been outside someplace."
 
-    m "He set the basket down on the coffee table, next to the still-sealed wine bottle, then shot me a wink."
+    m "He set the basket down on the coffee table, next to the still-sealed wine bottle, then flicked the bottle with a claw."
+    Br brow "I'm not exactly into this wine for its taste, but instead for what it does."
+    Br smirk "How about we skip to the even more fun parts, by drinking it with our other end?"
+    m "I snorted."
+    c "You want the wine bottle in your butt?"
+    Br laugh "Mine, yours, who cares? It sounds funny."
+    c "And messy."
+    Br smirk "We could be as messy as we want in your bathtub..."
+    m "He tipped the wine bottle toward the basket, glancing over his shoulder toward my bathroom."
+    menu:
+        "Wanton debauchery in the shower it is.":
+            $ renpy.pause (0.5)
+            jump bangok_four_bryce4_shower_intro
+        "Just come back over to the couch.":
+            show bryce normal with dissolve
+            c "Let's pick up where we left off."
+
+    # TODO: Couch scene continues, shower scene branches to another file.
 
 
 
