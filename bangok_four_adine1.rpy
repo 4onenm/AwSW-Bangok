@@ -1,3 +1,6 @@
+init python:
+    bangok_four_adine1choice_sexual = False
+
 label bangok_four_adine1_angercheck:
     if adinemood < 0:
         $ renpy.pop_call()
@@ -135,7 +138,7 @@ label bangok_four_adine1:
                 "Just one of those things, huh?":
                     c "I guess that's just one of the things you never think about, huh?"
                     Ad think b "Yeah, I guess so."
-            Ad normal b "It's my turn now. What do you like most about dragons?"
+            Ad normal b "It's my turn now."
         "What would you do if you were invisible for a day?":
             Ad think b "Invisible, huh?"
             Ad think b "That's not easy to answer. My main hobby is flying, and I want people to be able to see that."
@@ -147,7 +150,6 @@ label bangok_four_adine1:
             Ad "It's actually underground, and nobody's allowed in except for a team of archaeologists. I think it may have a lot of secrets and answers about the portal and what it's doing here."
             c "Interesting. I'd actually want to check that out myself."
             $ renpy.pause (0.5)
-            Ad normal b "What do you like most about dragons?"
         "Are you a top, or a bottom?":
             Ad think b "You mean in the bedroom? Why would you be interested in that?"
             c "Was just curious, I don't think I could figure it out just by watching you casually."
@@ -172,7 +174,85 @@ label bangok_four_adine1:
                 "Maybe one day.":
                     c "Maybe you'll get a chance one day."
                     Ad "Indeed. Until then, it's my turn."
-            Ad normal b "What do you like most about dragons?"
+
+    Ad think b "You know, I was thinking of asking what you'd do if you knew the world was about to end."
+    Ad giggle b "But I think I can already guess your answer."
+    menu:
+        "Enjoy life to the fullest until the last moment.":
+            $ renpy.pause (0.5)
+            Ad annoyed b "Don't tell me. \"Going out with a bang.\""
+            Ad think b "I almost feel like that interruption was just for the pun."
+            menu:
+                "I actually do mean enjoying life, not as a sex pun.":
+                    $ renpy.pause (0.5)
+                    Ad think b "Interesting."
+                    $ bangok_four_adine1choice_sexual = False
+                "Your pun. But I probably would make love with someone.": 
+                    $ renpy.pause (0.5)
+                    Ad normal b "That was what I'd originally thought."
+                    $ bangok_four_adine1choice_sexual = True
+            $ adine1choice = "fullest"
+            $ mp.worldend = "fullest"
+            $ mp.save()
+        "Say my last goodbyes and hope for the best.":
+            $ adinemood += 1
+            $ renpy.pause (0.5)
+            Ad think b "An optimist until the very end. I like that."
+            menu:
+                "What else could we do in a situation like that?":
+                    $ renpy.pause (0.5)
+                    $ bangok_four_adine1choice_sexual = False
+                "And by last goodbyes, of course I mean sex with those I love.":
+                    $ adinemood -= 2
+                    $ renpy.pause (0.5)
+                    Ad annoyed b "You didn't have to be so specific."
+                    $ bangok_four_adine1choice_sexual = True
+            show adine normal b with dissolve
+            $ adine1choice = "goodbyes"
+            $ mp.worldend = "goodbyes"
+            $ mp.save()
+        "Stay outside and watch it all unfold before my eyes.":
+            $ renpy.pause (0.5)
+            show adine think b with dissolve
+            Ad "That would be quite a show, huh."
+            show adine normal b with dissolve
+            $ adine1choice = "outside"
+            $ mp.worldend = "outside"
+            $ mp.save()
+        "Hide in a bunker deep underground.":
+            $ renpy.pause (0.5)
+            show adine think b with dissolve
+            Ad "I'm not sure if I could do that. I don't like tight, enclosed spaces."
+            menu:
+                "It's the best chance of living to see another day.":
+                    $ renpy.pause (0.5)
+                    Ad normal b "That doesn't really move the needle for me."
+                    $ bangok_four_adine1choice_sexual = False
+                "I'd like to see your tight, enclosed spaces.":
+                    $ renpy.pause (0.5)
+                    $ adinemood -= 1
+                    Ad annoyed b "That's just awful. Why--"
+                    show adine think b with dissolve
+                    $ renpy.pause (0.5)
+                    Ad think b "I don't understand how you can even get in the mood in a situation like that. Not knowing if you'd live or die, possibly being in your tomb."
+                    call bangok_four_adine1_angercheck
+                    c "Okay, my bad. Let's move on."
+                    $ bangok_four_adine1choice_sexual = True
+            $ adine1choice = "bunker"
+            $ mp.worldend = "bunker"
+            $ mp.save()
+
+
+    c "So, my turn?"
+    Ad annoyed b "No!"
+    Ad think b "I told you I was thinking of asking, and that I could guess."
+    Ad giggle b "But I didn't phrase anything as a question."
+    c "I..."
+    c "Hey, that's not fair. That means you got a free answer out of me."
+    Ad giggle b "You interrupted me, so..."
+    c "Fine. What's your {i}real{/i} question?"
+    Ad think b "Mm..."
+    Ad normal b "What do you like most about dragons?"
 
     menu:
         "I've done nothing but stare at dragon ass since I got here.":
@@ -198,7 +278,7 @@ label bangok_four_adine1:
                     $ renpy.pause (0.5)
                     Ad annoyed "I may not like perverts, but I still prefer an honest pervert."
 
-        "You're all graceful in their own way.":
+        "You're all graceful in your own way.":
             $ adinemood += 1
             Ad think b "How so?"
             c "Well, look at winged dragons such as yourself. You can swiftly soar through the air, rising high as you deftly ride the currents."
@@ -589,6 +669,8 @@ label bangok_four_adine1:
         m "After exchanging some final goodbyes, she went out the door, leaving me horny with no dragon to satisfy me."
         $ renpy.pause(1.0)
         $ persistent.adine1skip = True
+        $ persistent.adine1choice = adine1choice
+        $ peersistent.bangok_four_adine1choice_sexual = bangok_four_adine1choice_sexual
         $ persistent.headgear = headgear
         $ adinestatus = "good"
         $ adinescenesfinished = 1
