@@ -1,5 +1,6 @@
 init python:
     bangok_four_adine1choice_sexual = False
+    bangok_four_adine1_fuck_me_unchosen = True
 
 label bangok_four_adine1_angercheck:
     if adinemood < 0:
@@ -24,7 +25,7 @@ label bangok_four_adine1_abruptexit:
 label bangok_four_adine1_ToD_refused:
     Ad think b "Honestly I kinda hate you. Is it still raining outside?"
     m "The storm hadn't stopped, though it had lessened slightly."
-    c "Not really, so you should stay--"
+    c "It's still going, so you should stay--"
     Ad disappoint b "Nah, good enough. I'll be leaving now."
     hide adine with dissolve
     $ renpy.pause (0.3)
@@ -74,6 +75,7 @@ label bangok_four_adine1:
 
         "How tight are you, and how often do you fuck?":
             $ adinemood -= 1
+            $ renpy.pause (0.5)
             Ad frustrated b "What the fuck? What kind of question is that?"
             c "A direct one. Is it well worn, or are you still-"
             Ad annoyed b "Fuck you, I don't think that's even worthy of a response."
@@ -83,6 +85,7 @@ label bangok_four_adine1:
             call .dare_table_1
 
         "What's the smallest delivery you've ever had to make?":
+            $ renpy.pause (0.5)
             Ad think b "I was at a college party once. As the only flier, I was tasked with getting the condoms."
             c "Smallest delivery? Was it just the one box or were their dicks that small?"
             Ad annoyed b "There were only five of them, plus me. I don't know about their size though."
@@ -118,6 +121,7 @@ label bangok_four_adine1:
 
     menu:
         "Do the goggles stay on in the bedroom?":
+            $ renpy.pause (0.5)
             Ad think b "Why are you asking that of all things?"
             c "I'm just curious, I haven't seen you without them on."
             Ad annoyed b "I don't think it's any of your business really."
@@ -140,6 +144,7 @@ label bangok_four_adine1:
                     Ad think b "Yeah, I guess so."
             Ad normal b "It's my turn now."
         "What would you do if you were invisible for a day?":
+            $ renpy.pause (0.5)
             Ad think b "Invisible, huh?"
             Ad think b "That's not easy to answer. My main hobby is flying, and I want people to be able to see that."
             c "Well, with this question it's more about what kind of mischief you'd get up to if you couldn't get caught, like a crime or public masturbation."
@@ -151,6 +156,7 @@ label bangok_four_adine1:
             c "Interesting. I'd actually want to check that out myself."
             $ renpy.pause (0.5)
         "Are you a top, or a bottom?":
+            $ renpy.pause (0.5)
             Ad think b "You mean in the bedroom? Why would you be interested in that?"
             c "Was just curious, I don't think I could figure it out just by watching you casually."
             Ad giggle b "Well if you insist, I'm actually a switch. I think."
@@ -279,6 +285,7 @@ label bangok_four_adine1:
                     Ad annoyed "I may not like perverts, but I still prefer an honest pervert."
 
         "You're all graceful in your own way.":
+            $ renpy.pause (0.5)
             $ adinemood += 1
             Ad think b "How so?"
             c "Well, look at winged dragons such as yourself. You can swiftly soar through the air, rising high as you deftly ride the currents."
@@ -313,10 +320,12 @@ label bangok_four_adine1:
             Ad "That's a very good question. Which you won't get an answer to; I'll take a dare on this one."
             call .dare_table_2
         "What is the highest you've flown?":
+            $ renpy.pause (0.5)
             Ad think b "I'm not sure. Pretty high, I think. Turns out you lose confidence quickly when everything below you looks like an ant farm and have nothing to focus on except how fast you can drop."
             c "Imagine that, I can't see why anyone would be scared of terminal velocity."
             Ad giggle b "You just reminded me of how hard it can be to convey tone through text. I've had to re-read lines in a few of my books because the author didn't tell me a character was being sarcastic."
         "Have you ever tried sleeping upside down?":
+            $ renpy.pause (0.5)
             $ adinemood += 1
             Ad think b "That sounds ridiculous. Why would I ever do that?"
             c "There's a flying mammal species on Earth that does that. You kinda remind me of them."
@@ -324,6 +333,7 @@ label bangok_four_adine1:
             c "Wait, that's what they're called on Earth too. Weird."
             Ad giggle b "Well I'm glad I remind you of them then, they're pretty cute."
         "Have you ever peed mid-flight?" if persistent.bangok_watersports:
+            $ renpy.pause (0.5)
             Ad annoyed b"Ugh, don't remind me. Yeah, once. Thankfully I was far from town and there was nobody below me."
             c "So you have. What was it like?"
             Ad think b "Less messy than doing it on the ground, but it just didn't feel right. Like \"Hey you should be doing this down there\" and all."
@@ -332,21 +342,24 @@ label bangok_four_adine1:
     Ad normal b "Okay, from the dragons you've met here so far, who do you fancy the most?"
 
     menu:
-        "You":
+        "You.":
+            $ renpy.pause (0.5)
             $ adinemood += 1
             Ad giggle b "Me? S-sorry, but isn't it a bit early for that?"
             c "Maybe, but you're the one who's left the best impression so far."
             Ad normal b "Well thanks. Maybe one day."
-        "Remy" if remyscenesfinished > 0 and remystatus in ["neutral","good"] and not remydead:
+        "Remy." if remyscenesfinished > 0 and remystatus in ["neutral","good"] and not remydead:
+            $ renpy.pause (0.5)
             $ adinemood += 1
             Ad think b "Him huh? Thanks actually. He needs someone to look out for him."
             c "What makes you say that exactly?"
             Ad normal b "Nothing in particular, I'm just worried about him is all."
-        "Bryce" if brycescenesfinished > 0 and brycestatus in ["neutral","good"] and not brycedead:
+        "Bryce." if brycescenesfinished > 0 and brycestatus in ["neutral","good"] and not brycedead:
+            $ renpy.pause (0.5)
             Ad giggle b "He really is quite the pick, huh?"
             c "So strong, so loyal, and so charming."
             Ad normal b "And with the strongest liver for miles, I hear." ## Did you do that on purpose? "Miles"?
-        "Anna" if annascenesfinished > 0 and annastatus in ["neutral","good"] and not annadead:
+        "Anna." if annascenesfinished > 0 and annastatus in ["neutral","good"] and not annadead:
             $ adinemood -= 1
             Ad annoyed b "I don't know what you see in her if I'm being honest."
             c "What do you mean?"
@@ -354,15 +367,17 @@ label bangok_four_adine1:
             c "I know, she's rough around the edges, but I just think there's more to her than that."
             Ad frustrated b "What's that supposed to-- {w=0.5}{nw}"
             Ad annoyed b "What's that supposed to-- {fast}Nevermind. I don't want to talk about this."
-        "Lorem" if loremscenesfinished > 0 and loremstatus in ["neutral","good"] and not loremdead:
+        "Lorem." if loremscenesfinished > 0 and loremstatus in ["neutral","good"] and not loremdead:
+            $ renpy.pause (0.5)
             Ad think b "Sorry, I don't know that name. Who is it?"
             c "Cute delivery flyer, blue scales."
             Ad "Actually I think I've run into him a few times, never got his name though."
-        "Too early to tell":
+        "Too early to tell.":
+            $ renpy.pause (0.5)
             Ad normal b "Yeah, that makes sense. You haven't been here that long."
             c "I just want to wait until it feels right."
             Ad think b "Honestly, I feel the same way. You can't really force these things."
-        "Take dare":
+        "[[Take dare.]":
             Ad giggle b "About time!"
             Ad think b "Hmm, what am I going to do with you?"
             if adinemood < 3:
@@ -398,16 +413,23 @@ label bangok_four_adine1:
 
     menu:
         "If I dared you to fuck me, would you?":
-            Ad giggle b "Well that's awful forward of you."
-            c "Perhaps, but definitely something I'd like to know."
-            Ad normal b "Why don't you try it and find out?"
+            $ renpy.pause (0.5)
+            if adinemood < 2:
+                Ad annoyed b "You know what? I'm not going to answer that."
+                Ad think b "Think carefully about your dare."
+            else:
+                Ad giggle b "Well that's awful forward of you."
+                c "Perhaps, but definitely something I'd like to know."
+                Ad normal b "Probably too forward, but let's pretend I didn't answer. Maybe we can find a middle ground. Dare me something else."
         "Turn the tables. Who are you most interested in?":
+            $ renpy.pause (0.5)
             Ad giggle b "Oh no you don't. I'm taking a dare on this one."
             c "Works just fine for me."
         "Do you use your tail as a phone often?":
+            $ renpy.pause (0.5)
             Ad think b "I-- What? What's that supposed to mean?"
             c "You know, it's vaguely phone-shaped. Do you ever just use it as a phone?"
-            Ad disappoint b "I genuinely have no idea how to answer that. I'll take a dare."
+            Ad disappoint b "I genuinely have no idea how to answer that. I... I guess I take a dare?"
     jump .dare_table_3
 
     label .dare_table_1:
@@ -457,7 +479,7 @@ label bangok_four_adine1:
                         s "You got Adine to strip naked. Wow."
                     elif True:
                         s "You got Adine to strip naked. Interesting way of asking her to take off her headgear."
-                Ad normal "Anyways, let me just put these back on quick, I've grown so used to their weight I notice when they're off instead of the other way around."
+                Ad normal "Anyways, let me just put these back on quick, I've grown so used to their weight I notice when they're off, instead of the other way around."
                 show black with fade
                 play sound "fx/undress.ogg"
                 $ renpy.pause(1.0)
@@ -527,37 +549,66 @@ label bangok_four_adine1:
                 hide black with fade
                 Ad "Sorry, I guess I got a bit carried away."
                 c "I'm not complaining. Feeling a bit pent up?"
+                play music "mx/serene.ogg"
                 Ad "Just a bit, I'll take care of that when I get home."
         return
 
     label .dare_table_3:
         menu:
             "Let me see that butt of yours.":
-                jump .ending
+                $ renpy.pause (0.5)
+                jump .rump_ending
             "I'd like to see your rump, if that's not too much.":
-                jump .ending
+                $ renpy.pause (0.5)
+                jump .rump_ending
             "Go streaking naked outside!":
+                $ renpy.pause (0.5)
+                $ adinemood += 1
                 Ad think b "Wait, but for my headgear, I'm already naked..."
                 c "I didn't think this through."
-                Ad "Oh! I just noticed, it stopped raining!"
-                c "I guess it's time for you to head out then, huh?"
-                Ad "I suppose so."
-                Ad giggle b "By the way, you don't have to order anything if you want me to come over again. Here's my private number."
-                c "Thanks, I'll keep that in mind."
-                Ad "Bye!"
+                Ad normal b "Oh! I just noticed, it stopped raining!"
+                c "So that's how you're going to play it."
+                Ad giggle b "I'm just following your dare."
+                if adinemood >= 8:
+                    $ persistent.bangok_four_adine1choice_sexual = bangok_four_adine1choice_sexual
+                show adine normal b with dissolve
+                jump bangok_four_adine1_normal_ending_return
+            "Fuck me." if bangok_four_adine1_fuck_me_unchosen:
+                $ bangok_four_adine1_fuck_me_unchosen = False
+                $ adinemood -= 1
+                call bangok_four_adine1_angercheck
+                $ renpy.pause (0.5)
+                if adinemood < 2:
+                    jump .poor_rump_ending
+                elif adinemood >= 8:
+                    jump .best_ending
+                Ad annoyed b "It's our first date."
+                menu:
+                    "So?":
+                        $ adinemood -= 2
+                        Ad frustrated b "\"So?\" Are you kidding me?"
+                        c "What?"
+                        call bangok_four_adine1_angercheck
+                        $ adinemood = -1
+                        jump bangok_four_adine1_normal_ending_return
+                    "Sorry, too far":
+                        $ renpy.pause (0.5)
+                Ad think b "No kidding."
+                c "I'll pick a different dare."
+        jump .dare_table_3
 
 
-    label .ending:
+    label .rump_ending:
         if adinemood < 2:
-            jump .poor_ending
+            jump .poor_rump_ending
         elif adinemood < 5:
-            jump .med_ending
+            jump .med_rump_ending
         elif adinemood < 7:
-            jump .good_ending
-        else:
-            jump .best_ending
+            jump .good_rump_ending
+        # else:
+        jump .best_ending
 
-    label .poor_ending:
+    label .poor_rump_ending:
         Ad annoyed b "That's your dare? Seriously?"
         c "Well, will you?"
         Ad annoyed b "Looks like it's stopped raining. I'll be heading home then."
@@ -575,7 +626,7 @@ label bangok_four_adine1:
         $ adinescenesfinished = 1
         jump _mod_fixjmp
 
-    label .med_ending:
+    label .med_rump_ending:
         Ad think b "Hmm, is that your dare?"
         c "It is. I'd like to see it."
         Ad giggle b "You really are a perverted one huh?"
@@ -599,7 +650,7 @@ label bangok_four_adine1:
         m "We exchanged goodbyes, and just like that she left the building, leaving me aroused."
         jump _mod_fixjmp
 
-    label .good_ending:
+    label .good_rump_ending:
         Ad giggle b "My, such a forward demand. I like it."
         c "So?"
         hide adine with dissolve
@@ -607,9 +658,11 @@ label bangok_four_adine1:
         Ad disappoint b "I'll admit, I got a bit horny hanging around here. Just a shame this is the first date."
         c "I wouldn't mind helping you out, you know."
         Ad giggle b "That's a tempting offer. And I mean that, I want to."
-        Ad disappoint b "But this is the first date, I have to tease you with something!"
+        Ad disappoint b "But this is the first date. I have to tease you with something!"
         c "True. Maybe another day, then."
-        Ad normal b "In the mean time, do you have this memorized? You'll need that to masturbate to."
+
+    label .good_rump_ending_completion:
+        Ad normal b "In the meantime, do you have this memorized? You'll need that to masturbate to."
         c "Oh absolutely, I'd never forgot that."
         Ad giggle b "Good, because it looks like it's stopped raining. I have to go home and also masturbate."
         $ renpy.pause (1.0)
@@ -618,11 +671,7 @@ label bangok_four_adine1:
         m "After exchanging goodbyes with me, Adine started heading out the door. Though, on her way out, she moved her tail out of the way again and smirked back at me, teasing me further."
         play sound "fx/door/doorclose3.wav"
         $ renpy.pause(2.0)
-        $ persistent.adine1skip = True
-        $ persistent.headgear = headgear
-        $ adinestatus = "good"
-        $ adinescenesfinished = 1
-        jump _mod_fixjmp
+        jump .good_ending_stats
 
     label .best_ending:
         Ad think b "You really are horny, aren't you?"
@@ -630,7 +679,28 @@ label bangok_four_adine1:
         Ad giggle b "You and me both, you really got me worked up."
         c "So?"
         Ad normal b "I'll do you one better. Lay down and let me do my thing, no effort needed on your part."
-        ## Implement the eject sequence here for if the player doesn't want to fuck Adine, unless the opening counted as the eject sequence.
+        menu:
+            "Accept.":
+                jump .best_ending_accept
+            "Reject.":
+                $ renpy.pause (0.5)
+                jump .best_ending_reject
+
+    label .best_ending_reject:
+        Ad think b "Oh..."
+        Ad annoyed b "I know you're right. We shouldn't play around on a first date."
+        Ad giggle b "But you've been so naughty, I can't believe you're all talk."
+        c "Not all talk, but I'm not ready to go that far."
+        show adine think b with dissolve
+        m "Adine shifted uncomfortably, thighs rubbing together."
+        Ad "Well, I guess I should at least complete the dare..."
+        hide adine with dissolve
+        m "Adine turned around, curling her tail upwards, bringing the crescent at the end back to spread her visibly damp slit."
+        Ad disappoint b "This is the first date. I have to tease you with something!"
+        c "I'm not sure that's quite how it works."
+        jump .good_rump_ending_completion
+
+    label .best_ending_accept:
         stop music fadeout 2.0
         play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/undress.ogg"]
         show black with dissolve
@@ -668,9 +738,12 @@ label bangok_four_adine1:
         play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/door/doorclose3.wav"]
         m "After exchanging some final goodbyes, she went out the door, leaving me horny with no dragon to satisfy me."
         $ renpy.pause(1.0)
+        jump .good_ending_stats
+
+    label .good_ending_stats:
         $ persistent.adine1skip = True
         $ persistent.adine1choice = adine1choice
-        $ peersistent.bangok_four_adine1choice_sexual = bangok_four_adine1choice_sexual
+        $ persistent.bangok_four_adine1choice_sexual = bangok_four_adine1choice_sexual
         $ persistent.headgear = headgear
         $ adinestatus = "good"
         $ adinescenesfinished = 1

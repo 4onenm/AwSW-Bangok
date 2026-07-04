@@ -13,6 +13,8 @@ def adine1(ml):
     ( ml.find_label('nextsc')
         .search_say("Truth or dare.")
         .hook_to('bangok_four_adine1', condition=make_dev('persistent.nsfwtoggle == True'))
+        .search_say("Yeah, that's great.")
+        .link_behind_from('bangok_four_adine1_normal_ending_return')
     )
 
 
