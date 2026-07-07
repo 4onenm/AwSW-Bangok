@@ -455,6 +455,41 @@ init:
     image bryce stern dk flip bangok = im.Recolor("cr/bryce_stern_flip.png", 70, 70, 100, 255)
 
 
+
+
+    image bangok_kept_adine1 = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/adine1/adine_date1_bg.png"),
+   
+        bangok_four_common.Attribute('happy', 'happy',
+            "cg/bangok/adine1/adine_base_happy.png",
+        ),
+        bangok_four_common.Attribute('angry', 'angry',
+            "cg/bangok/adine1/adine_base_angry.png",
+        ),
+        bangok_four_common.Attribute('worried', 'worried',
+            "cg/bangok/adine1/adine_base_worried.png",
+        ),
+        bangok_four_common.Attribute('neutral', 'neutral',
+            "cg/bangok/adine1/adine_base_neutral.png",
+        ),
+        bangok_four_common.Attribute('blush', 'blush',
+            "cg/bangok/adine1/adine_extra_blush.png",
+        ),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_cloacas', "cg/bangok/adine1/adine_extra_cloaca.png",
+            None, None,
+        ),
+        bangok_four_common.Attribute('aroused', 'aroused',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas', "cg/bangok/adine1/adine_extra_cloaca_aroused.png",
+                None, "cg/bangok/adine1/adine_extra_aroused.png",
+            ),
+        ),
+    ])
+
+
+
+
 label bangok_four_mod_firstboot:
     $ _skipping = False
     stop music

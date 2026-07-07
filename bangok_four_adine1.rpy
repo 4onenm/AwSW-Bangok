@@ -617,6 +617,9 @@ label bangok_four_adine1:
         hide adine with dissolve
         m "Adine scribbled some numbers on a piece of scrap paper, then left without saying anything else."
         stop music fadeout 2.0
+        scene black with dissolvemed
+        $ renpy.pause (0.5)
+        scene bangok_kept_adine1 angry
         m "On her way out though, she looked back and shot me an exasperated look before lifting her tail, showing me her heavenly rear in full."
         play sound "fx/door/doorclose3.wav"
         $ renpy.pause(0.5)
@@ -633,6 +636,9 @@ label bangok_four_adine1:
         c "I'd be lying if I said no."
         Ad annoyed b "Alright then."
         hide adine with dissolve
+        scene black with dissolvemed
+        $ renpy.pause (0.5)
+        scene bangok_kept_adine1 neutral
         m "Without another word, Adine turned around and lifted her tail high as can be, showing me her gorgeous posterior in all its glory."
         Ad giggle b "Enjoying the view?"
         c "I most certainly am, thank you."
@@ -654,6 +660,10 @@ label bangok_four_adine1:
         Ad giggle b "My, such a forward demand. I like it."
         c "So?"
         hide adine with dissolve
+        scene black with dissolvemed
+        $ renpy.pause (0.5)
+        scene bangok_kept_adine1 happy:
+            xzoom 0.5 yzoom 0.5
         m "Adine answered my question by turning around and curling her tail upwards, bringing the crescent at the end back to spread her visibly damp slit."
         Ad disappoint b "I'll admit, I got a bit horny hanging around here. Just a shame this is the first date."
         c "I wouldn't mind helping you out, you know."
