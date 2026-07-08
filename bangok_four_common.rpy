@@ -490,13 +490,30 @@ init:
     image bangok_kept_adine1_above = bangok_four_common.LayeredImage([
 
         bangok_four_common.Always("cg/bangok/adine1/ceiling.png"),
-        
+
         bangok_four_common.Always("cg/bangok/adine1/adine_above.png"),
+
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_cloacas', "cg/bangok/adine1/adine_above_extra_cloaca.png",
+            None, None,
+        ),
+        bangok_four_common.Attribute('blush', 'blush',
+            "cg/bangok/adine1/adine_above_extra_blush.png",
+        ),
+
+        bangok_four_common.Attribute('aroused', 'aroused',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas', None,
+                None, "cg/bangok/adine1/adine_above_extra_aroused.png",
+            ),
+        ),
+        bangok_four_common.Attribute('squirt', 'squirt',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas', "cg/bangok/adine1/adine_above_extra_cloaca_squirt.png",
+                None, "cg/bangok/adine1/adine_above_extra_squirt.png",
+            ),
+        ),
    
-        #bangok_four_common.PersistentConditionalLayer(
-        #    'bangok_cloacas', "cg/bangok/adine1/adine_extra_cloaca.png",
-        #    None, None,
-        #),
     ])
 
 

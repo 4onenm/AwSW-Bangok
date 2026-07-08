@@ -773,24 +773,32 @@ label bangok_four_adine1:
         
         m "After a few moments passing all too soon, Adine began to buck her hips on impulse, seemingly close to orgasm."
         play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/varagrowl.ogg"]
-        show bangok_kept_adine1_above:
+        show bangok_kept_adine1_above aroused squirt blush:
             block:
                 ease 0.3 pos (0.5, 0.72)
                 ease 0.15 pos (0.5, 0.68)
                 repeat
+
         m "And after a few moments more, she came, splashing my tongue with her juices as I continued licking."
-        show bangok_kept_adine1_above:
-            ease 1.0 pos (0.5, 0.7)
+        show bangok_kept_adine1_above aroused squirt blush:
+            ease 3.0 pos (0.5, 0.7)
         $ renpy.pause (1.0)
-        show bangok_kept_adine1_above:
-            ease 2.1 zoom 0.9 pos (0.5, 0.55)
+        show bangok_kept_adine1_above aroused blush with dissolve:
+        show bangok_kept_adine1_above aroused blush:
+            ease 2.0 zoom 1.05 pos (0.5, 0.6)
         with ease
-        $ renpy.pause (2.1)
+        $ renpy.pause (2.0)
+
 
         m "As she started to wind down, she slowly rolled off of me, letting me sit up and meet her gaze."
         $ renpy.pause (0.3)
+        show bangok_kept_adine1_above aroused blush:
+            ease 2.0 zoom 0.85 pos (0.5, 0.5)
+        with ease
+        $ renpy.pause (2.0)
+        
         play sound "fx/undress.ogg"
-        hide bangok_kept_adine1_above with dissolvemed
+        hide bangok_kept_adine1_above aroused blush with dissolvemed
         $ renpy.pause (0.5)
         hide black
         show adine giggle b
