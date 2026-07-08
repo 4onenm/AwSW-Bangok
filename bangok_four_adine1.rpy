@@ -542,15 +542,24 @@ label bangok_four_adine1:
                 Ad disappoint b "Alright, give me a moment. I'm not used to having an audience."
                 stop music fadeout 1.0
                 show black with fade
-                $ renpy.pause (1.5)
+                m "With that, she raised her tail and inserted two claws into her slit for me to see. I could see her push them in deeper, slowly."
                 $ adinemood += 2
+                show bangok_kept_adine1 neutral aroused with dissolvemed:
+                    align (0.5, 0.5)
+                $ renpy.pause (1.0)
                 Ad giggle b "Mnnf, there we-- gosh, am I that wet already?"
                 Ad "Oh yeah, that's more like it! I-- W-wait!"
-                hide black with fade
+                show bangok_kept_adine1 happy aroused blush with dissolve:
                 Ad "Sorry, I guess I got a bit carried away."
                 c "I'm not complaining. Feeling a bit pent up?"
-                play music "mx/serene.ogg"
                 Ad "Just a bit, I'll take care of that when I get home."
+                if persistent.bangok_cloacas == True:
+                    m "With that she slid her claws out of her cloaca, sitting back down and resuming our game, albeit with shakier legs and a faint flush on her snout."
+                else:
+                    m "With that she slid her claws out of her pussy, sitting back down and resuming our game, albeit with shakier legs and a faint flush on her snout."
+                hide bangok_kept_adine1 with fade
+                hide black with fade
+                play music "mx/serene.ogg"
         return
 
     label .dare_table_3:
@@ -619,9 +628,12 @@ label bangok_four_adine1:
         stop music fadeout 2.0
         scene black with dissolvemed
         $ renpy.pause (0.5)
-        scene bangok_kept_adine1 angry
+        show bangok_kept_adine1 angry with dissolvemed:
+            align (0.5, 0.5)
+        $ renpy.pause (1.0)
         m "On her way out though, she looked back and shot me an exasperated look before lifting her tail, showing me her heavenly rear in full."
         play sound "fx/door/doorclose3.wav"
+        scene o2 at Pan((0, 250), (0, 250), 0.1) with fade
         $ renpy.pause(0.5)
         m "Then, just like that, she was gone. I was just relieved that she had seemingly forgiven me, at least a little bit."
         $ persistent.adine1skip = True
@@ -635,14 +647,19 @@ label bangok_four_adine1:
         Ad giggle b "You really are a perverted one huh?"
         c "I'd be lying if I said no."
         Ad annoyed b "Alright then."
-        hide adine with dissolve
         scene black with dissolvemed
         $ renpy.pause (0.5)
-        scene bangok_kept_adine1 neutral
+        show bangok_kept_adine1 neutral with dissolvemed:
+            align (0.5, 0.5)
+        $ renpy.pause (1.0)
         m "Without another word, Adine turned around and lifted her tail high as can be, showing me her gorgeous posterior in all its glory."
+        show bangok_kept_adine1 happy
         Ad giggle b "Enjoying the view?"
         c "I most certainly am, thank you."
+        show bangok_kept_adine1 neutral
         Ad normal b "Good, because it looks like the rain has stopped, which means it's time for me to go."
+        $ renpy.pause (1.0)
+        scene o2 at Pan((0, 250), (0, 250), 0.1) with fade
         show adine normal b with dissolve
         m "Adine wrote a string of numbers on a scrap of paper and slid it to me."
         Ad "Here, no need to order food if you want to stare at me again."
@@ -659,25 +676,30 @@ label bangok_four_adine1:
     label .good_rump_ending:
         Ad giggle b "My, such a forward demand. I like it."
         c "So?"
-        hide adine with dissolve
         scene black with dissolvemed
         $ renpy.pause (0.5)
-        scene bangok_kept_adine1 happy:
-            xzoom 0.5 yzoom 0.5
+        show bangok_kept_adine1 happy aroused with dissolvemed:
+            align (0.5, 0.5)
+        $ renpy.pause (1.0)
         m "Adine answered my question by turning around and curling her tail upwards, bringing the crescent at the end back to spread her visibly damp slit."
+        show bangok_kept_adine1 happy aroused blush with dissolvemed:
         Ad disappoint b "I'll admit, I got a bit horny hanging around here. Just a shame this is the first date."
         c "I wouldn't mind helping you out, you know."
         Ad giggle b "That's a tempting offer. And I mean that, I want to."
+        show bangok_kept_adine1 worried aroused:
         Ad disappoint b "But this is the first date. I have to tease you with something!"
         c "True. Maybe another day, then."
+        show bangok_kept_adine1 happy aroused blush:
 
     label .good_rump_ending_completion:
         Ad normal b "In the meantime, do you have this memorized? You'll need that to masturbate to."
         c "Oh absolutely, I'd never forgot that."
-        Ad giggle b "Good, because it looks like it's stopped raining. I have to go home and also masturbate."
-        $ renpy.pause (1.0)
+        Ad giggle b "Good, because it looks like it's stopped raining. I have to go home and take care of myself as well!"
         m "Finally, she let her tail down, the top dripping slightly on my floor as she grabbed some paper and scrawled her phone number on." ## The "top" of what?
         stop music fadeout 1.0
+        $ renpy.pause (1.0)
+        scene o2 at Pan((0, 250), (0, 250), 0.1) with fade
+        $ renpy.pause (1.0)
         m "After exchanging goodbyes with me, Adine started heading out the door. Though, on her way out, she moved her tail out of the way again and smirked back at me, teasing me further."
         play sound "fx/door/doorclose3.wav"
         $ renpy.pause(2.0)
