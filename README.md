@@ -74,7 +74,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `anna2 strapon` written by `Anonymous By Request`
 + `anna4` written and coded by `An Anonymous contributor`
 + `bryce2` happy birthday `Kosmos` (Discord).
-+ `adine1` written by `Jackwolf` (Discord).
++ `adine1` written by `Jackwolf` (Discord) art made and implemented by `Kepteyn` (Discord).
 + `adine4` written by `Jackwolf` (Discord).
 
 ### Resource credits:
@@ -86,6 +86,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `bg/in/bangok/officedoor.png`: 4onenm, editing base-game assets
 + `bg/in/bangok/facin3_wall*`: 4onenm, editing base-game assets
 + `bg/in/*`: 4onenm, editing base-game assets
++ `cg/bangok/adine1/*`: Kepteyn
 + `cg/bangok/adineshower/*`: Jackwolf
 + `cg/bangok/adineshower/adineshowerbj*`:
     + Artist: [Oldagar](https://e621.net/posts?tags=oldagar) (Original: https://e621.net/posts/5963291)
