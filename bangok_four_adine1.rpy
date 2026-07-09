@@ -739,13 +739,14 @@ label bangok_four_adine1:
 
     label .best_ending_accept:
         stop music fadeout 2.0
-        play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/undress.ogg"]
         show black with dissolve
         $ renpy.pause(0.4)
+        play sound "fx/bed.ogg"
+        show bangok_anon_o_ceiling at Pan((0,360), (0,120), 1.5) with dissolvemed
         m "Without thinking about it, I obediently got on my back and waited patiently for Adine to approach."
-        show bangok_kept_adine1_above with dissolvemed:
-            zoom 0.8 anchor (0.5, 0.5) pos (0.5, 0.5)
-        with ease
+        show bangok_kept_adine1_above:
+            zoom 1.0 align (0.5, 0.4) rotate 180
+        with dissolvemed
         
         m "As promised, she offered more than just flashing me her rear. She sat on my chest and looked down into my eyes, her wet slit rubbing against me."
         m "As our gazes met, and a blush covered her face, she spoke in a low, gentle tone."
@@ -753,9 +754,15 @@ label bangok_four_adine1:
         c "Good enough."
         c "Why, thinking of teaching me what dragon tastes like?"
         Ad giggle b "You owe me that much for getting me worked up like this."
+        play sound "fx/undress.ogg"
+        hide bangok_kept_adine1_above
+        with dissolve
+        $ renpy.pause (0.1)
         show bangok_kept_adine1_above:
-            ease 2.1 zoom 1.2 pos (0.5, 0.7)
-        with ease
+            zoom 1.5 align (0.5, 0.3)
+            ease 2.1 zoom 1.8 pos (0.5, 0.5)
+            zoom 1.8 pos (0.5, 0.5)
+        with dissolve
         $ renpy.pause (2.1)
 
         m "She stood up and turned around. I had plenty of chance to protest if I so chose, but I opted not to. Instead, I closed my eyes and opened my arms as she plopped her rump on my nose, her soaking wet dragon snatch within reach of my tongue."
@@ -767,38 +774,39 @@ label bangok_four_adine1:
         m "I couldn't respond through the dragon ass in my face, but a couple of reassuring pats on her hips gave all the assurance needed."
         show bangok_kept_adine1_above:
             block:
-                ease 0.5 pos (0.5, 0.72)
-                ease 0.3 pos (0.5, 0.68)
+                ease 0.5 pos (0.5, 0.52)
+                ease 0.3 pos (0.5, 0.48)
                 repeat
         
         m "After a few moments passing all too soon, Adine began to buck her hips on impulse, seemingly close to orgasm."
         play sound ["fx/silence.ogg","fx/silence.ogg","fx/silence.ogg","fx/varagrowl.ogg"]
         show bangok_kept_adine1_above aroused squirt blush:
             block:
-                ease 0.3 pos (0.5, 0.72)
-                ease 0.15 pos (0.5, 0.68)
+                ease 0.3 pos (0.5, 0.52)
+                ease 0.15 pos (0.5, 0.48)
                 repeat
 
         m "And after a few moments more, she came, splashing my tongue with her juices as I continued licking."
         show bangok_kept_adine1_above aroused squirt blush:
-            ease 3.0 pos (0.5, 0.7)
+            ease 3.0 pos (0.5, 0.5)
         $ renpy.pause (1.0)
         show bangok_kept_adine1_above aroused blush with dissolve:
+        $ renpy.pause (0.5)
         show bangok_kept_adine1_above aroused blush:
-            ease 2.0 zoom 1.05 pos (0.5, 0.6)
-        with ease
+            ease 2.0 zoom 1.0 pos (0.5, 0.3)
         $ renpy.pause (2.0)
 
 
         m "As she started to wind down, she slowly rolled off of me, letting me sit up and meet her gaze."
         $ renpy.pause (0.3)
         show bangok_kept_adine1_above aroused blush:
-            ease 2.0 zoom 0.85 pos (0.5, 0.5)
-        with ease
+            ease 2.0 zoom 0.85 pos (0.5, 0.3)
         $ renpy.pause (2.0)
         
         play sound "fx/undress.ogg"
-        hide bangok_kept_adine1_above aroused blush with dissolvemed
+        hide bangok_anon_o_ceiling
+        hide bangok_kept_adine1_above aroused blush
+        with dissolvemed
         $ renpy.pause (0.5)
         hide black
         show adine giggle b

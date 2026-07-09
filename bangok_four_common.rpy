@@ -229,6 +229,60 @@ init:
     # CGs
     image bangok_four_xipsum_afterglow = "cg/lorem-x-ipsum_purpleroom.png"
 
+    image bangok_kept_adine1 = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/adine1/adine_date1_bg.png"),
+        bangok_four_common.Attribute('happy', 'happy',
+            "cg/bangok/adine1/adine_base_happy.png",
+        ),
+        bangok_four_common.Attribute('angry', 'angry',
+            "cg/bangok/adine1/adine_base_angry.png",
+        ),
+        bangok_four_common.Attribute('worried', 'worried',
+            "cg/bangok/adine1/adine_base_worried.png",
+        ),
+        bangok_four_common.Attribute('neutral', 'neutral',
+            "cg/bangok/adine1/adine_base_neutral.png",
+        ),
+        bangok_four_common.Attribute('blush', 'blush',
+            "cg/bangok/adine1/adine_extra_blush.png",
+        ),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_cloacas', "cg/bangok/adine1/adine_extra_cloaca.png",
+            None, None,
+        ),
+        bangok_four_common.Attribute('aroused', 'aroused',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas', "cg/bangok/adine1/adine_extra_cloaca_aroused.png",
+                None, "cg/bangok/adine1/adine_extra_aroused.png",
+            ),
+        ),
+    ])
+
+    image bangok_kept_adine1_above = bangok_four_common.LayeredImage([
+        bangok_four_common.Always("cg/bangok/adine1/adine_above.png"),
+        bangok_four_common.PersistentConditionalLayer(
+            'bangok_cloacas', "cg/bangok/adine1/adine_above_extra_cloaca.png",
+            None, None,
+        ),
+        bangok_four_common.Attribute('blush', 'blush',
+            "cg/bangok/adine1/adine_above_extra_blush.png",
+        ),
+        bangok_four_common.Attribute('aroused', 'aroused',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas', None,
+                None, "cg/bangok/adine1/adine_above_extra_aroused.png",
+            ),
+        ),
+        bangok_four_common.Attribute('squirt', 'squirt',
+            bangok_four_common.PersistentConditionalDisplayable(
+                'bangok_cloacas', "cg/bangok/adine1/adine_above_extra_cloaca_squirt.png",
+                None, "cg/bangok/adine1/adine_above_extra_squirt.png",
+            ),
+        ),
+   
+    ])
+
+
     image bangok_four_adine4showerxplayer = bangok_four_common.LayeredImage([
         bangok_four_common.Always("cg/bangok/adineshower/adineshowerbj_reexport.jpg"),
         bangok_four_common.Always(
@@ -453,69 +507,6 @@ init:
     image bryce smirk dk flip bangok = im.Recolor("cr/bryce_smirk_flip.png", 70, 70, 100, 255)
     image bryce stern dk bangok = im.Recolor("cr/bryce_stern.png", 70, 70, 100, 255)
     image bryce stern dk flip bangok = im.Recolor("cr/bryce_stern_flip.png", 70, 70, 100, 255)
-
-
-
-
-    image bangok_kept_adine1 = bangok_four_common.LayeredImage([
-        bangok_four_common.Always("cg/bangok/adine1/adine_date1_bg.png"),
-   
-        bangok_four_common.Attribute('happy', 'happy',
-            "cg/bangok/adine1/adine_base_happy.png",
-        ),
-        bangok_four_common.Attribute('angry', 'angry',
-            "cg/bangok/adine1/adine_base_angry.png",
-        ),
-        bangok_four_common.Attribute('worried', 'worried',
-            "cg/bangok/adine1/adine_base_worried.png",
-        ),
-        bangok_four_common.Attribute('neutral', 'neutral',
-            "cg/bangok/adine1/adine_base_neutral.png",
-        ),
-        bangok_four_common.Attribute('blush', 'blush',
-            "cg/bangok/adine1/adine_extra_blush.png",
-        ),
-        bangok_four_common.PersistentConditionalLayer(
-            'bangok_cloacas', "cg/bangok/adine1/adine_extra_cloaca.png",
-            None, None,
-        ),
-        bangok_four_common.Attribute('aroused', 'aroused',
-            bangok_four_common.PersistentConditionalDisplayable(
-                'bangok_cloacas', "cg/bangok/adine1/adine_extra_cloaca_aroused.png",
-                None, "cg/bangok/adine1/adine_extra_aroused.png",
-            ),
-        ),
-    ])
-
-    image bangok_kept_adine1_above = bangok_four_common.LayeredImage([
-
-        bangok_four_common.Always("cg/bangok/adine1/ceiling.png"),
-
-        bangok_four_common.Always("cg/bangok/adine1/adine_above.png"),
-
-        bangok_four_common.PersistentConditionalLayer(
-            'bangok_cloacas', "cg/bangok/adine1/adine_above_extra_cloaca.png",
-            None, None,
-        ),
-        bangok_four_common.Attribute('blush', 'blush',
-            "cg/bangok/adine1/adine_above_extra_blush.png",
-        ),
-
-        bangok_four_common.Attribute('aroused', 'aroused',
-            bangok_four_common.PersistentConditionalDisplayable(
-                'bangok_cloacas', None,
-                None, "cg/bangok/adine1/adine_above_extra_aroused.png",
-            ),
-        ),
-        bangok_four_common.Attribute('squirt', 'squirt',
-            bangok_four_common.PersistentConditionalDisplayable(
-                'bangok_cloacas', "cg/bangok/adine1/adine_above_extra_cloaca_squirt.png",
-                None, "cg/bangok/adine1/adine_above_extra_squirt.png",
-            ),
-        ),
-   
-    ])
-
 
 
 
