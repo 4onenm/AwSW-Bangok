@@ -97,7 +97,7 @@ label bangok_four_adine1:
 
     menu:
         "World peace.":
-            c "More than anything, I'd want there to be peace on Earth"
+            c "More than anything, I'd want there to be peace on Earth."
             Ad "A noble wish, albeit a bit generic."
             c "Generic as it may be, I think it'd just feel a lot better."
             Ad think b "True, conflict brings nothing but pain for everyone involved."
@@ -301,10 +301,10 @@ label bangok_four_adine1:
             c "Not much about them honestly. Humans are more agile, and I just really like how they look."
             Ad "Fair enough, I guess you'd prefer your own species. Still, some dragons have wings to fly, right?"
             c "Yeah, but I always found wings a bit ugly, they remind me of bats."
-            Ad sad "Geez, you didn't have to say it like that."
+            Ad sad b "Geez, you didn't have to say it like that."
             c "Shit, right, I'm sorry, I didn't-"
             call bangok_four_adine1_angercheck
-            Ad sad "it's your turn, right?"
+            Ad sad b "it's your turn, right?"
             c "Yeah, it is."
 
     c "Alright, my question."
@@ -334,7 +334,7 @@ label bangok_four_adine1:
             Ad giggle b "Well I'm glad I remind you of them then, they're pretty cute."
         "Have you ever peed mid-flight?" if persistent.bangok_watersports:
             $ renpy.pause (0.5)
-            Ad annoyed b"Ugh, don't remind me. Yeah, once. Thankfully I was far from town and there was nobody below me."
+            Ad annoyed b "Ugh, don't remind me. Yeah, once. Thankfully I was far from town and there was nobody below me."
             c "So you have. What was it like?"
             Ad think b "Less messy than doing it on the ground, but it just didn't feel right. Like \"Hey you should be doing this down there\" and all."
             c "Yeah, fair enough."
@@ -382,7 +382,7 @@ label bangok_four_adine1:
             Ad think b "Hmm, what am I going to do with you?"
             if adinemood < 3:
                 c "Anything you want."
-                Ad disappoint b "I really have no clue"
+                Ad disappoint b "I really have no clue."
                 c "Should put a pin in this?"
                 Ad think b "Yeah, let's do your turn next."
             else:
@@ -599,8 +599,9 @@ label bangok_four_adine1:
                         c "What?"
                         call bangok_four_adine1_angercheck
                         $ adinemood = -1
+                        Ad frustrated b "I think I need to go."
                         jump bangok_four_adine1_normal_ending_return
-                    "Sorry, too far":
+                    "Sorry, too far.":
                         $ renpy.pause (0.5)
                 Ad think b "No kidding."
                 c "I'll pick a different dare."

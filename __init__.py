@@ -706,7 +706,7 @@ def load_translations(mod_name):
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2026-07-09-child_of_99e43d2"
+    version = "2026-07-11-child_of_7f3fedd"
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]
