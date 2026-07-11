@@ -12,7 +12,7 @@ def make_dev(cond):
 def adine1(ml):
     ( ml.find_label('nextsc')
         .search_say("Truth or dare.")
-        .hook_to('bangok_four_adine1', condition=make_dev('persistent.nsfwtoggle == True'))
+        .hook_to('bangok_four_adine1', condition=('persistent.nsfwtoggle == True'))
         .search_say("Yeah, that's great.")
         .link_behind_from('bangok_four_adine1_normal_ending_return')
     )
@@ -706,7 +706,7 @@ def load_translations(mod_name):
 @loadable_mod
 class BangOkMod(Mod):
     name = "BangOk"
-    version = "2026-07-11-child_of_7f3fedd"
+    version = "2026-07-11-child_of_0be2b32"
     author = "4onenm"
     nsfw = True
     dependencies = ["MagmaLink", "CRAP", "?Side Images",  "?Scene Select"]

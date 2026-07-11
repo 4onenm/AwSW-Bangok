@@ -29,6 +29,7 @@ Currently, there are lewd scenes released for Adine, Anna, Bryce, Damion, Sebast
 <details>
 <summary>Released scene access guides</summary>
 
++ Adine1: When the player brings up Truth or Dare, think lascivious thoughts.
 + Adine4: Go along with with what she wants in the shower.
 + Anna2: During Anna1, bet for sex instead of a date OR during Anna2, do extremely well. (After betting for sex in Anna1, the original Anna2 date is still available if you say you're hungry.)
 + Anna4: Do Anna’s fourth date normally, picking the romance option, and a menu will appear with the choice to watch or skip the scene. (Doing the Anna2 scene beforehand will alter some dialogue/scene options.)
@@ -45,7 +46,6 @@ In-development scenes (accessible via a menu flag and full of bugs) include: Rem
 <details>
 <summary>In-Development scene access guides</summary>
 
-+ Adine1: When the player brings up Truth or Dare, think lascivious thoughts.
 + Bryce3 (Bryce + Maverick): Get to Bryce3, play through with high mood (or skip) until Zhong leaves, then be diplomatic about how you respond. (Don't be overeager, don't refuse.)
 + Bryce3 (Bryce + Sebastian + Maverick): See above, but also have previously completed xSebastian.
 + Kalinth c3arc: Visit Kalinth in the police archives during the Chapter 3 investigation.
@@ -74,7 +74,7 @@ If you'd like to re-access the "Bang? No, Kay" 2022 April Fools, click the heade
 + `anna2 strapon` written by `Anonymous By Request`
 + `anna4` written and coded by `An Anonymous contributor`
 + `bryce2` happy birthday `Kosmos` (Discord).
-+ `adine1` written by `Jackwolf` (Discord) art made and implemented by `Kepteyn` (Discord).
++ `adine1` written by `Jackwolf` (Discord), art made and implemented by `Kepteyn` (Discord).
 + `adine4` written by `Jackwolf` (Discord).
 
 ### Resource credits:

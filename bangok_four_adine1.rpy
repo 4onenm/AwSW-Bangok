@@ -23,7 +23,7 @@ label bangok_four_adine1_abruptexit:
     jump _mod_fixjmp
 
 label bangok_four_adine1_ToD_refused:
-    Ad think b "Honestly I kinda hate you. Is it still raining outside?"
+    Ad think b "Honestly I kinda can't stand you. Is it still raining outside?"
     m "The storm hadn't stopped, though it had lessened slightly."
     c "It's still going, so you should stay--"
     Ad disappoint b "Nah, good enough. I'll be leaving now."
