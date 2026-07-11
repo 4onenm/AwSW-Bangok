@@ -3408,9 +3408,9 @@ label bangok_four_bryce3_mctop_mcgoes:
     m "Walking over to Bryce, I considered my options."
     menu:
         m "Walking over to Bryce, I considered my options{fast}..."
-        "Fuck Bryce's ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == False:
+        "Fuck Bryce's rear." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == False:
             jump bangok_four_bryce3_mctop_mcgoes_ass
-        "Fuck Bryce's gaping, sloppy ass." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == True:
+        "Fuck Bryce's gaping, sloppy rear." if bangok_four_playerhasdick == True and bangok_four_bryce3_store.mavfirst == True:
             jump bangok_four_bryce3_mctop_mcgoes_sloppyass
         "Fuck Bryce's mouth." if bangok_four_playerhasdick == True:
             jump bangok_four_bryce3_mctop_mouth
@@ -4278,20 +4278,57 @@ label bangok_four_bryce3_mctop_mcgoes_sloppyass:
         transform_anchor True
         ease 0.8 rotate 20 xpos 0.93 ypos 1.3
     with None
-    m "Bryce folded his forelegs leaning forward in the sand. I gave him a firm slap on the ass with my dick, smearing around Maverick's cum as I teased the plates around Bryce's asshole."
+    if persistent.bangok_cloacas == True:
+        m "Bryce folded his forelegs leaning forward in the sand. I gave him a firm slap on the ass with my dick, smearing around Maverick's cum as I teased the plates around Bryce's cloaca."
+    else:
+        m "Bryce folded his forelegs leaning forward in the sand. I gave him a firm slap on the ass with my dick, smearing around Maverick's cum as I teased the plates around Bryce's asshole."
     c "You're so stretched out. I could probably fit three or four of me in there."
     Br laugh flip "I did warn you what it'd be like after Maverick went first!"
-    m "I slid my hips between Bryce's legs, and paused to run the tip of my dick along his asshole. The dragon shivered with anticipation."
+    m "I slid my hips between Bryce's legs, and paused to run the tip of my dick along spread rim. The dragon shivered with anticipation."
     Br "I'm all yours now. Have at."
     m "With a grin, I pressed forward, thrusting into Bryce's cum-slicked hole, feeling the ripples of his muscles as his stretched insides failed to squeeze around my much smaller cock."
     Br laugh flip "Well, at least you're not nearly as big!"
-    m "I laughed along with him and started fucking Bryce properly, making lewd wet noises my crotch spattered with the cum leftover by Maverick."
-    m "Bryce's ass was hot around my cock. Even though it wasn't tight enough to caress my member from all sides, I enjoyed the sensation of rubbing one way, then another along the slickened walls of his rectum."
-    m "I pulled his rear closer, hugging his tail high as I pressed flush against his body with each thrust."
-    m "Bryce looked back at me with a pleased smirk as I gave fucking his sloppy ass my all."
+    m "I laughed along with him and started fucking Bryce properly, making lewd wet noises as my crotch spattered with the cum leftover by Maverick."
+    m "Bryce's rear was hot around my cock. Even though it wasn't tight enough to caress my member from all sides, I enjoyed the sensation of rubbing one way, then another along his slickened inner walls."
+    m "I pulled his hips closer, hugging his tail high as I pressed flush against his body with each thrust."
+    m "Bryce looked back at me with a pleased smirk as I gave fucking his sloppy behind my all."
 
-    m "We continued like this for quite some time. Bryce's chest rested on the sand, the elbows of his forelegs splayed out to give deeper penetration. Despite his earlier teasing, he was moaning softly at each delicious thrust into that warm, sticky, enveloping hole of his."
-    m "Struggling to reach around the dragon's strong legs with one hand, I instead slipped it between us, using my fingers to tease the slit from which his cockhead poked out. Bryce gave a shudder at this attention, and as he felt me begin to stroke him slowly..."
+    m "We continued like this for quite some time. Bryce's chest rested on the sand, the elbows of his forelegs splayed out to give deeper penetration. Despite his earlier teasing, he was huffing softly at each delicious thrust into that warm, sticky, mess of a rear."
+    menu:
+        "Want me to stroke you?":
+            $ renpy.pause (0.5)
+            Br normal flip "Don't know if I've got another orgasm in me, but I won't say no."
+            m "Struggling to reach around the dragon's strong legs, I instead slipped one hand between us, using my fingers to tease the slit from which his cockhead poked out."
+            m "Bryce gave a shudder at this attention, and as he felt me begin to stroke him slowly, I could feel his cum-splattered depths begin to grip my lesser girth a little better."
+        "Mind if I slap your ass?":
+            $ renpy.pause (0.5)
+            Br smirk flip "If you like it."
+            $ renpy.pause (0.2)
+            play sound "fx/hit2.ogg"
+            $ renpy.pause (0.2)
+            show bryce pantflirt
+            $ renpy.pause (0.6)
+            m "In time with my next thrust, I brought my hand down hard on Bryce's scaly hindquarters."
+            m "I could feel his fat and muscle respond to the impact, but more than that his sticky, used rear managed to clench around my girth."
+            c "Fuck yes, I like it."
+            $ renpy.pause (0.5)
+            play sound "fx/hit2.ogg"
+            $ renpy.pause (0.2)
+            show bryce laugh
+            $ renpy.pause (0.6)
+            m "I enjoyed Bryce's cum-stained depths for a few more thrusts, then brought my hand down again, getting his slackening inner muscles back in line for my enjoyment."
+        "[[Squeeze his thighs together.]":
+            m "Adjusting my grip on his scales, I squeezed his meaty rear more tightly, using their mass to try to squeeze his loose hole a little better around me."
+            m "It wasn't perfect, as his rougher outer scales chafed a bit at the base of my length, but the added tightness around my tip was worth it."
+    c "Mmnh, you're a lot to appreciate."
+    Br flirty flip "I'm glad you think so."
+    m "Groaning, I felt my pace becoming a little more erratic, the heat building up in my nethers."
+    play sound "fx/extinguish.ogg"
+    show black with dissolve
+    if persistent.bangok_cloacas == True:
+        m "Then, with a final thrust, I came in Bryce's messy..."
+    else:
+        m "Then, with a final thrust, I came in Bryce's messy..."
     jump todo_out_of_content_bangok_four_bryce3
 
 
