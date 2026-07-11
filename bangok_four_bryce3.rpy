@@ -4001,8 +4001,6 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
 
     $ bangok_four_bryce3_store.mc_came = True
 
-    # menu:
-    #     "Cum.":
     play sound "fx/extinguish.ogg"
     show black with dissolve
     if bangok_four_playerhasdick == True:
@@ -4012,11 +4010,6 @@ label bangok_four_bryce3_mctop_mavgoes_spitroast:
             m "My legs went weak, leaving more of my weight to rest on Bryce's jaw as his exploring tongue milked my twitching cock against the roof of his mouth, drawing out every drop of cum I could muster into his needy gullet."
     else:
         m "My legs went weak, leaving more of my weight to rest on Bryce's jaw as I clenched down hard on his exploring tongue, squeezing our coital juices out of my passage and into his mouth."
-    #     "Grab Bryce's horns and cum.":
-    #         jump todo_out_of_content_bangok_four_bryce3
-    #     "Ask to grab Bryce's horns.":
-    #         jump todo_out_of_content_bangok_four_bryce3
-
 
     hide black with dissolveslow
 
@@ -4511,11 +4504,29 @@ label bangok_four_bryce3_mctop_mouth:
         menu:
             "Fuck his tongue.":
                 show bryce laugh with dissolve
-                m "Either to "
-                jump todo_out_of_content_bangok_four_bryce3
+                m "Giving into my needs, I shifted my knees in the sand, pushing my crotch further into his mouth."
+                m "Bryce's tongue slithered even deeper into my passage, stimulating all my recesses."
+                play sound "fx/extinguish.ogg"
+                show black with dissolve
+                m "Moaning, I came, my juices mixing with his saliva to run down my thighs and into his mouth."
+                m "Bryce held most of his head still, moving only his tongue as he lavished me through my climax."
+                m "Spent, I shifted back onto his neck, smearing some of our lovemaking on his plates as I caught my breath."
             "Let him finish you.":
-                jump todo_out_of_content_bangok_four_bryce3
-        jump todo_out_of_content_bangok_four_bryce3
+                show bryce flirty with dissolve
+                m "Fully in the flow, he nuzzled a little forward, circling his tongue through my folds."
+                m "My back arched as I reached the very edge, teetering on going over, but not quite getting there as Bryce slowed and teased."
+                c "B-Bryce! F-Fah... Please..."
+                show bryce laugh with dissolve
+                m "With one last chuckle, Bryce picked up his pace and ghosted his tongue near my most sensitive nub, finally pushing me over."
+                play sound "fx/extinguish.ogg"
+                show black with dissolve
+                m "Moaning, I came, my juices mixing with his saliva to run down my thighs and into his mouth."
+                m "Bryce nuzzled my thighs, focusing his tongue work on my opening as he lapped up my release."
+                m "Finally, he nudged me off his snout, urging my shaking legs back until I was sitting on his neck, smearing some of our lovemaking on his plates as I caught my breath."
+        hide black
+        show bryce smirk:
+            ypos 1.8
+        with dissolvemed
     Br "Satisfied?"
     c "More than."
     hide bryce with dissolve
