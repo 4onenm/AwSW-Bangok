@@ -3833,7 +3833,7 @@ label bangok_four_bryce3_mctop_mavgoes_climax:
         m "Bryce pressed his face into the sand, and I saw his shaft twitching out thin, slick ropes against his underbelly and the sand in the fucking dragons' shadow."
 
         show maverick nice flip with dissolve
-        m "After a few seconds, the two of them had finished their climaxes, panting over Bryce's neck and back."
+        m "After a few seconds, the two of them had finished their climaxes. Maverick panted over Bryce's neck and back."
         show bryce pant flip:
             pos (0.94, 1.3)
         with ease
@@ -4107,7 +4107,7 @@ label bangok_four_bryce3_mctop_mcgoes_ass:
                             m "Taking hold of my hard manhood in one hand, I use the other to brace against his tail, aiming right for the the slit where I knew his ass lay."
                         play soundloop "fx/faucet1.ogg" fadein 0.5
                         queue soundloop "fx/faucet2.ogg"
-                        m "Then I let go, pissing a stream of urine right out onto the police chief's quivering scaly backside."
+                        m "Then I let go, pissing a stream of urine right out onto the police chief's quivering, scaly backside."
                         m "Piss backsplattered everywhere, droplets reaching as high as my hand on his tail as I emptied myself all over his hard hindquarters, watching my fluids run down his legs and drain into the sand in rivulets."
                         stop soundloop fadeout 2.0
                         m "The best part was watching his own member twitch with need as my warm urine streamed down it, then dribbled from the end."
@@ -4286,8 +4286,56 @@ label bangok_four_bryce3_mctop_mcgoes_sloppyass:
     Br laugh flip "I did warn you what it'd be like after Maverick went first!"
     m "I slid my hips between Bryce's legs, and paused to run the tip of my dick along spread rim. The dragon shivered with anticipation."
     Br "I'm all yours now. Have at."
-    m "With a grin, I pressed forward, thrusting into Bryce's cum-slicked hole, feeling the ripples of his muscles as his stretched insides failed to squeeze around my much smaller cock."
-    Br laugh flip "Well, at least you're not nearly as big!"
+    if persistent.bangok_watersports == True and bangok_four_bryce3_store.brycews == "before":
+        m "I remembered what I'd said before, after Bryce's suggestion we might need to relieve ourselves on or in him."
+        menu:
+            "Piss in his ass.":
+                m "With a grin, I pressed forward, thrusting into Bryce's stained, dilated hole, feeling the ripples of his muscles as his stretched insides failed to squeeze around my much smaller cock."
+                Br laugh flip "Well, at least you're not nearly as big!"
+                c "I've got fun other than size."
+                play soundloop "fx/faucet1.ogg" fadein 0.5
+                queue soundloop "fx/faucet2.ogg"
+                m "I let go with a groan of pleasure as I felt the jet of piss race down my hard member, spurting out into his sticky hole."
+                show bryce pantflirt flip with dissolve
+                if persistent.bangok_inflation == True:
+                    m "Bryce responded immediately, gasping, muscles twitching loosely against my urinating manhood, even as I felt his depths full of Maverick's mess begin to backfill with mine."
+                else:
+                    m "Bryce responded immediately, gasping, muscles twitching loosely against my urinating manhood, even as I felt his sticky walls begin to slicken with my urine."
+                stop soundloop fadeout 2.0
+                m "I did an experimental stroke as I emptied the last of my bladder inside him, leading to a slosh of cum and piss mess gushing out around my member and running down my thighs and his."
+                Br flirty flip "Glad you took me up on that offer to take a leak back there."
+            "Piss on his hindquarters.":
+                c "Finally a free urinal, huh?"
+                Br laugh flip "Oh, is that what you want to do first?"
+                show bryce flirty flip with dissolve
+                if persistent.bangok_cloacas == True:
+                    m "Taking hold of my hard manhood in one hand, I use the other to brace against his tail, aiming for the clenching gap at the back of the slit where his own hard member emerged."
+                else:
+                    m "Taking hold of my hard manhood in one hand, I use the other to brace against his tail, aiming the clenching gap under his tail."
+                play soundloop "fx/faucet1.ogg" fadein 0.5
+                queue soundloop "fx/faucet2.ogg"
+                m "Then I let go, showering down the existing mess caking the police chief's quivering, scaly backside."
+                m "Piss backsplattered everywhere when I missed his hole, droplets reaching as high as my hand on his tail as I emptied myself all over his hard hindquarters."
+                if persistent.bangok_inflation == True:
+                    m "But when I don't miss, my stream finds the mess already inside him, burbling as it replaces some of what's already leaked out, before sloshing back out itself as his muscles respond."
+                else:
+                    m "But when I don't miss, my stream splashes Bryce's stained guts, soaking them with a second male's fluids."
+                stop soundloop fadeout 2.0
+                m "The best part was watching his own member twitch as my warm urine dribbled down to it, then dripped from the end."
+                Br smirk flip "Was that a satisfactory urinal experience?"
+                Br flirty flip "Made one hell of a mess, if smell is anything to go by."
+                c "I think I did."
+                m "I stepped forward, now-wetter sand squishing a little as I lined myself for what came next with this messy ass."
+                m "With a grin, I pressed forward, thrusting into Bryce's piss-stained hole, feeling the ripples of his muscles as his stretched insides failed to squeeze around my much smaller cock."
+                Br laugh flip "Damn, you're kinky, huh? And you feel a hell of a lot better than too-big back there."
+            "Enjoy things as they are.":
+                $ renpy.pause (0.5)
+                $ bangok_four_bryce3_store.brycews = None
+                jump bangok_four_bryce3_mctop_mcgoes_sloppyass_nows
+    else:
+        label bangok_four_bryce3_mctop_mcgoes_sloppyass_nows:
+        m "With a grin, I pressed forward, thrusting into Bryce's cum-slicked hole, feeling the ripples of his muscles as his stretched insides failed to squeeze around my much smaller cock."
+        Br laugh flip "Well, at least you're not nearly as big!"
     m "I laughed along with him and started fucking Bryce properly, making lewd wet noises as my crotch spattered with the cum leftover by Maverick."
     m "Bryce's rear was hot around my cock. Even though it wasn't tight enough to caress my member from all sides, I enjoyed the sensation of rubbing one way, then another along his slickened inner walls."
     m "I pulled his hips closer, hugging his tail high as I pressed flush against his body with each thrust."
@@ -4306,7 +4354,7 @@ label bangok_four_bryce3_mctop_mcgoes_sloppyass:
             $ renpy.pause (0.2)
             play sound "fx/hit2.ogg"
             $ renpy.pause (0.2)
-            show bryce pantflirt
+            show bryce pantflirt flip
             $ renpy.pause (0.6)
             m "In time with my next thrust, I brought my hand down hard on Bryce's scaly hindquarters."
             m "I could feel his fat and muscle respond to the impact, but more than that his sticky, used rear managed to clench around my girth."
@@ -4314,7 +4362,7 @@ label bangok_four_bryce3_mctop_mcgoes_sloppyass:
             $ renpy.pause (0.5)
             play sound "fx/hit2.ogg"
             $ renpy.pause (0.2)
-            show bryce laugh
+            show bryce laugh flip
             $ renpy.pause (0.6)
             m "I enjoyed Bryce's cum-stained depths for a few more thrusts, then brought my hand down again, getting his slackening inner muscles back in line for my enjoyment."
         "[[Squeeze his thighs together.]":
@@ -4326,11 +4374,24 @@ label bangok_four_bryce3_mctop_mcgoes_sloppyass:
     play sound "fx/extinguish.ogg"
     show black with dissolve
     if persistent.bangok_cloacas == True:
-        m "Then, with a final thrust, I came in Bryce's messy..."
+        m "Then, with a final squelch of my thighs against Bryce's scaly hindquarters, I came in Bryce's messy cloaca, spurting ropes of my warm cum into his already-sticky depths."
     else:
-        m "Then, with a final thrust, I came in Bryce's messy..."
-    jump todo_out_of_content_bangok_four_bryce3
+        m "Then, with a final squelch of my thighs against Bryce's scaly hindquarters, I came in Bryce's messy asshole, spurting ropes of my warm cum into his already-sticky depths."
+    show bryce laugh flip with dissolve
+    m "Bryce exhaled happily, laying his chin down on the sand as I finished in his hindquarters."
+    hide black with dissolveslow
+    Br smirk flip "Had fun?"
+    m "Pulling out, some of the mess Maverick and I left dribbled down my shaft into the sand."
+    if persistent.bangok_cloacas == True:
+        m "Bryce's cloaca clenched, but it still hadn't recovered completely, letting me spot the glint of wet cum inside."
+    else:
+        m "Bryce's ass clenched, but it still hadn't recovered completely, letting me spot the glint of wet cum inside."
 
+    hide bryce with dissolve
+    m "After a few moments, Bryce stretched out his tail and forepaws, grunting as he arched his back, giving me one last even better look at his used hole."
+    show bryce normal with dissolve
+    m "Then he stood up, taking a look around."
+    jump bangok_four_bryce3_canon_trash
 
 label bangok_four_bryce3_mctop_mouth:
     show bryce at center with ease
@@ -4444,9 +4505,10 @@ label bangok_four_bryce3_mctop_mouth:
                         c "Ah, fuck it. I'm just gonna hold it."
                         Br stern "C'mon, really?"
                         c "If it means everyone having a good time, including Maverick? Yeah."
-                        c "Now how about you start sucking me again?"
+                        c "Now how about you start licking me again?"
                         show bryce flirty at Position(ypos=1.5) with ease
                         m "Bryce chuckled as he got low again, tongue digging into my crotch and helping pull me into his mouth once more."
+                        $ bangok_four_bryce3_store.brycews = None
             "Enjoy things as they are.":
                 $ renpy.pause (0.5)
                 m "I rubbed his face, gasping at the lashing of his tongue around my crotch, but held my bladder."
@@ -4566,14 +4628,14 @@ label bangok_four_bryce3_mctop_mouth:
         with dissolvemed
     Br "Satisfied?"
     c "More than."
+    if bangok_four_bryce3_store.mavfirst == False:
+        hide bryce with dissolve
+        m "I stumbled back off of Bryce, allowing him to climb to his feet and toss Maverick a wink."
+        show bryce flirty flip at right with dissolve
+        Br "So, Maverick, if you want your turn now?"
+        jump bangok_four_bryce3_mctop_mavgoes
     hide bryce with dissolve
-    m "I stumbled back off of Bryce, allowing him to climb to his feet and toss Maverick a wink."
-    show bryce flirty flip at right with dissolve
-    Br "So, Maverick, if you want your turn now?"
-    jump bangok_four_bryce3_mctop_mavgoes
-
-
-label todo_out_of_content_bangok_four_bryce3:
-    play sound "fx/system3.wav"
-    s "Out of content. Rollback and save, or prepare to crash."
-    $ renpy.error("TODO: Out of content.")
+    m "After a moment, Bryce stretched out his tail and forepaws, grunting as he arched his back, before standing up."
+    show bryce normal with dissolve
+    m "He looked around."
+    jump bangok_four_bryce3_canon_trash
