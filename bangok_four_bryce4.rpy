@@ -46,7 +46,7 @@ label bangok_four_bryce4_bangnokay_rejection:
     c "I see."
     Br smirk "I don't hold it against you, though."
     Br "I'm not surprised you can't resist my pinnacle of masculinity."
-    c "See, that right there sounds like an innuendo."
+    c "See, that right there sounds like an innuendo for your--"
     Br laugh "Heck, I'm not too good at this."
     show bryce normal with dissolve
     jump b4jump
@@ -101,7 +101,7 @@ label bangok_four_bryce4_intro:
     menu:
         "That's a little forward.":
             $ renpy.pause (0.5)
-            Br smirk "Says the one who stood in the doorway ogling my crotch for a while."
+            Br smirk "Says the one who stood in that doorway ogling my crotch for a while."
             c "You're the one who put it on display."
             Br laugh "Yeah, and you said you liked what you saw."
             c "I did."
@@ -236,7 +236,7 @@ label bangok_four_bryce4_intro:
     if bangok_four_bryce3_store.unplayed == False:
         m "Some sand clung to the bottom, telling me it was the same basket from the BBQ."
     else:
-        m "Some bits of sand clung to the bottom, telling me he had been outside someplace."
+        m "Some bits of sand clung to the bottom, telling me it had been outside someplace."
 
     m "He set the basket down on the coffee table, next to the still-sealed wine bottle, then flicked the bottle with a claw."
     Br brow "I'm not exactly into this wine for its taste, but instead for what it does."
